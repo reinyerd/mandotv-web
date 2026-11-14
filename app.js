@@ -46,6 +46,32 @@
     });
   });
 
+
+  // Inclinación 3D del teléfono siguiendo el mouse (solo con mouse; en pantallas táctiles queda el flotado).
+  var escaparate = document.querySelector('.escaparate');
+  var inclinador = document.getElementById('inclinador');
+  if (escaparate && inclinador && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var reducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var max = reducido ? 4 : 12; // grados
+    var pendiente = null;
+    escaparate.addEventListener('pointermove', function (e) {
+      var r = escaparate.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      if (pendiente) cancelAnimationFrame(pendiente);
+      pendiente = requestAnimationFrame(function () {
+        inclinador.classList.add('siguiendo');
+        inclinador.style.setProperty('--ry', (x * max * 2).toFixed(2) + 'deg');
+        inclinador.style.setProperty('--rx', (-y * max * 1.4).toFixed(2) + 'deg');
+      });
+    });
+    escaparate.addEventListener('pointerleave', function () {
+      inclinador.classList.remove('siguiendo');
+      inclinador.style.setProperty('--rx', '0deg');
+      inclinador.style.setProperty('--ry', '0deg');
+    });
+  }
+
   // Entrada escalonada de cada sección al aparecer en pantalla.
   var piezas = document.querySelectorAll('.aparece');
   if (!('IntersectionObserver' in window)) {

@@ -390,19 +390,8 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   background: rgba(12, 12, 20, .52);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   backdrop-filter: blur(22px) saturate(180%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.28),
-    inset 0 -1px 0 rgba(255,255,255,.06),
-    0 10px 30px -12px rgba(20, 0, 30, .55),
-    0 2px 6px rgba(0,0,0,.12);
+  box-shadow: 0 10px 30px -12px rgba(20, 0, 30, .55), 0 2px 6px rgba(0,0,0,.12);
   transition: transform .35s cubic-bezier(.2,.8,.2,1), background-color .35s, box-shadow .35s;
-}
-/* Borde de luz: más brillante arriba a la izquierda y abajo a la derecha, como el vidrio de iOS */
-.tienda::before {
-  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; z-index: 1; pointer-events: none;
-  background: linear-gradient(135deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.12) 32%, rgba(255,255,255,.04) 60%, rgba(255,255,255,.4) 100%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude;
 }
 /* Reflejo interior suave, sin corte duro */
 .tienda::after {
@@ -411,7 +400,7 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   background: radial-gradient(closest-side, rgba(255,255,255,.22), rgba(255,255,255,0));
   transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .35s;
 }
-.tienda:hover { transform: translateY(-2px) scale(1.02); background: rgba(12, 12, 20, .62); box-shadow: inset 0 1px 0 rgba(255,255,255,.38), inset 0 -1px 0 rgba(255,255,255,.08), 0 16px 36px -14px rgba(20,0,30,.65), 0 3px 8px rgba(0,0,0,.14); }
+.tienda:hover { transform: translateY(-2px) scale(1.02); background: rgba(12, 12, 20, .62); box-shadow: 0 16px 36px -14px rgba(20,0,30,.65), 0 3px 8px rgba(0,0,0,.14); }
 .tienda:hover::after { transform: translateX(55%); }
 .tienda:active { transform: scale(.97); }
 .tienda:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
@@ -422,3 +411,21 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .tienda { background: rgba(12,12,20,.88); } }
 @media (max-width: 560px) { .tiendas li { flex: 1 1 calc(50% - 12px); } .tienda { flex: 1; } .tienda span { font-size: 17px; } }
 @media (prefers-reduced-motion: reduce) { .tienda, .tienda::after { transition: none; } }
+
+
+/* Teléfono del inicio: inclinación 3D que sigue al mouse (escritorio) */
+.escaparate { perspective: 1200px; }
+.inclinador {
+  position: relative; z-index: 2; transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .5s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+.inclinador.siguiendo { transition: transform .12s linear; }
+
+/* Con "reducir movimiento" el teléfono sigue flotando, pero más lento y con menos recorrido */
+@keyframes flotar-suave { 0%, 100% { transform: rotate(var(--inclinacion)) translateY(0); } 50% { transform: rotate(var(--inclinacion)) translateY(-7px); } }
+@media (prefers-reduced-motion: reduce) {
+  .telefono { animation: flotar-suave 9s ease-in-out infinite !important; }
+  .inclinador { transition: transform .8s ease !important; }
+}
