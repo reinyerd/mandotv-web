@@ -342,3 +342,21 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .panel-correo-aviso { min-height: 1.5em; margin-top: 12px !important; font-weight: 600; text-align: center; }
 .panel-correo-cerrar { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--suave); font-size: 24px; line-height: 1; cursor: pointer; color: var(--tinta); }
 @keyframes panel-entra { from { opacity: 0; transform: translateY(16px) scale(.97); } }
+
+/* Páginas por marca */
+.migas { margin-top: clamp(24px, 4vw, 48px); font-weight: 600; font-size: 16px; }
+.migas a { text-decoration: none; }
+.migas a:hover { text-decoration: underline; }
+.cabecera-pagina .migas + h1 { margin-top: 12px; }
+.cabecera-pagina .acciones { margin-top: 28px; }
+.cabecera-pagina .nota { font-size: 16px; }
+.documento .lista-funciones { padding: 0; margin: 8px 0 0; gap: 20px; }
+.documento .lista-funciones b { font-size: 24px; }
+.documento .lista-funciones span { font-size: 18px; }
+.marcas-enlaces { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; padding: 0; list-style: none; }
+.marcas-enlaces a { display: inline-block; text-decoration: none; font-weight: 700; padding: 12px 18px; border-radius: 999px; background: var(--suave); transition: background-color .2s, transform .15s; }
+.marcas-enlaces a:hover { background: var(--tinta); color: var(--papel); }
+.marcas-enlaces a:active { transform: scale(.97); }
+.pie-marcas { margin-top: 28px; }
+.pie-marcas a { background: rgba(255, 255, 255, .1); color: var(--papel); }
+.pie-marcas a:hover { background: var(--papel); color: var(--tinta); }
