@@ -52,7 +52,7 @@
   var inclinador = document.getElementById('inclinador');
   if (escaparate && inclinador && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     var reducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var max = reducido ? 4 : 12; // grados
+    var max = reducido ? 9 : 12; // grados
     var pendiente = null;
     escaparate.addEventListener('pointermove', function (e) {
       var r = escaparate.getBoundingClientRect();

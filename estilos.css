@@ -423,9 +423,9 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 }
 .inclinador.siguiendo { transition: transform .12s linear; }
 
-/* Con "reducir movimiento" el teléfono sigue flotando, pero más lento y con menos recorrido */
-@keyframes flotar-suave { 0%, 100% { transform: rotate(var(--inclinacion)) translateY(0); } 50% { transform: rotate(var(--inclinacion)) translateY(-7px); } }
+/* El teléfono del inicio flota igual aunque el sistema pida "reducir movimiento" (decisión del fundador:
+   es un movimiento lento y pequeño, solo en el producto). El resto de animaciones sí se reducen. */
 @media (prefers-reduced-motion: reduce) {
-  .telefono { animation: flotar-suave 9s ease-in-out infinite !important; }
+  .telefono { animation: flotar 6s ease-in-out infinite !important; }
   .inclinador { transition: transform .8s ease !important; }
 }
