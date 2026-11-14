@@ -1,0 +1,8 @@
+{
+  "version_minima": { "android": 1, "ios": 1, "windows": 1, "macos": 1 },
+  "funciones_pro": [],
+  "dias_max_sin_verificar": 30,
+  "tiendas": {
+    "android": "https://play.google.com/store/apps/details?id=app.mandotv.mando"
+  }
+}
