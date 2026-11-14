@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es" class="sin-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mando TV: el control de tu televisor en el teléfono</title>
+  <meta name="description" content="Mando TV convierte tu teléfono o computador en el control de tu televisor LG, Samsung, Roku o Android TV, por WiFi. Gratis, sin anuncios y sin cuentas.">
+  <meta name="theme-color" content="#e0457b">
+  <link rel="canonical" href="https://mandotv.app/">
+  <meta property="og:title" content="Mando TV: el control de tu televisor en el teléfono">
+  <meta property="og:description" content="LG, Samsung, Roku y Android TV por WiFi. Gratis, sin anuncios y sin cuentas.">
+  <meta property="og:url" content="https://mandotv.app/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="oculto" href="#contenido">Saltar al contenido</a>
+
+  <div class="escena" id="inicio">
+    <div class="contenedor">
+      <header class="barra">
+        <a class="logo" href="./" aria-label="Mando TV, inicio">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><rect x="7" y="1" width="20" height="32" rx="10" fill="#0d0f17"/><circle cx="17" cy="12" r="5" fill="#fff"/><rect x="13" y="22" width="8" height="3" rx="1.5" fill="#fff"/></svg>
+          Mando TV
+        </a>
+        <nav aria-label="Principal">
+          <a href="#funciones">Qué hace</a>
+          <a href="#precio">Precio</a>
+          <a href="soporte.html">Ayuda</a>
+          <a class="boton-barra" href="#contacto">Contacto</a>
+        </nav>
+      </header>
+
+      <main id="contenido">
+        <div class="panel">
+          <div class="escaparate">
+            <p class="gigante" aria-hidden="true">MANDO</p>
+            <div class="sombra-suelo" aria-hidden="true"></div>
+            <div class="telefono" data-ui id="telefono" role="img" aria-label="La app Mando TV abierta en un teléfono, con la cruceta, el botón OK y los botones de volumen y canal.">
+              <div class="pantalla" aria-hidden="true">
+                <div class="isla"></div>
+                <div class="app">
+                  <div class="app-cabecera">
+                    <div>
+                      <div class="app-tv" id="app-tv">TV LG</div>
+                      <div class="app-estado">Conectado</div>
+                    </div>
+                    <div class="encender"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 7a8 8 0 1 0 11.4 0"/></svg></div>
+                  </div>
+                  <div class="fila-teclas">
+                    <div class="tecla vidrio">Entradas</div>
+                    <div class="tecla vidrio">Inicio / Menú</div>
+                    <div class="tecla vidrio">Atrás</div>
+                  </div>
+                  <div class="cruceta vidrio">
+                    <span class="flecha arriba"></span><span class="flecha abajo"></span>
+                    <span class="flecha izq"></span><span class="flecha der"></span>
+                    <div class="ok">OK</div>
+                  </div>
+                  <div class="balancines">
+                    <div class="balancin vidrio"><b>+</b><small>VOL</small><b>−</b></div>
+                    <div class="balancin vidrio"><b>+</b><small>CH</small><b>−</b></div>
+                  </div>
+                  <div class="pestanas vidrio">
+                    <span class="activa">Control</span><span>Touchpad</span><span>Teclado</span><span>Apps</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ficha">
+            <h1>El control de tu TV</h1>
+            <p class="bajada">Mando TV convierte tu teléfono o tu computador en el control remoto de tu televisor, por WiFi. Sin cables, sin cuentas y sin anuncios.</p>
+
+            <p class="precio"><strong>Gratis</strong><span>Pro con pago único, sin suscripción</span></p>
+
+            <div class="etiqueta-grupo">
+              <span id="marca-etiqueta">Elige tu televisor</span>
+              <div class="flechas">
+                <button type="button" id="anterior" aria-label="Marca anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <button type="button" id="siguiente" aria-label="Marca siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+              </div>
+            </div>
+            <div class="marcas" role="group" aria-labelledby="marca-etiqueta">
+              <button type="button" data-marca="lg" aria-pressed="true">LG</button>
+              <button type="button" data-marca="samsung" aria-pressed="false">Samsung</button>
+              <button type="button" data-marca="roku" aria-pressed="false">Roku</button>
+              <button type="button" data-marca="android" aria-pressed="false">Android TV</button>
+            </div>
+            <p class="nota" id="marca-nota" aria-live="polite">LG con webOS: se conecta en segundos y también lo enciende.</p>
+
+            <div class="etiqueta-grupo"><span id="tema-etiqueta">Elige el aspecto</span></div>
+            <div class="temas" role="group" aria-labelledby="tema-etiqueta">
+              <button type="button" class="punto" data-tema="oscuro" aria-pressed="true" aria-label="Oscuro"></button>
+              <button type="button" class="punto" data-tema="claro" aria-pressed="false" aria-label="Claro"></button>
+              <small id="tema-nombre">Oscuro</small>
+            </div>
+
+            <div class="acciones">
+              <a class="boton" href="mailto:hola@mandotv.app?subject=Av%C3%ADsame%20cuando%20salga%20Mando%20TV&amp;body=Hola%2C%20quiero%20saber%20cuando%20Mando%20TV%20est%C3%A9%20en%20la%20tienda.%20Mi%20televisor%20es%3A%20">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+                Avísame cuando salga
+              </a>
+              <a class="boton claro" href="#funciones">Ver qué hace</a>
+            </div>
+            <p class="nota">Pronto en iPhone, Android, Windows y Mac.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <section id="funciones" aria-labelledby="t-funciones">
+      <h2 class="titulo-seccion aparece" id="t-funciones">Todo lo del control, y más</h2>
+      <p class="intro aparece">Lo que haces con el control de siempre, más lo que con él cuesta: escribir, moverte rápido por los menús y cambiar de entrada sin buscar botones.</p>
+      <div class="funciones">
+        <ul class="lista-funciones">
+          <li class="aparece"><b>Botones grandes y claros</b><span>Cruceta, OK, Atrás, Inicio, volumen, canales y silencio, con su nombre siempre visible.</span></li>
+          <li class="aparece"><b>Touchpad</b><span>Desliza el dedo para moverte por los menús, o usa el puntero en los televisores que lo tienen.</span></li>
+          <li class="aparece"><b>Teclado del teléfono</b><span>Busca en YouTube o escribe una contraseña del WiFi sin pasar letra por letra.</span></li>
+          <li class="aparece"><b>Abre tus apps</b><span>Netflix, YouTube y las demás apps del televisor, con un toque.</span></li>
+          <li class="aparece"><b>Entradas y sonido</b><span>Cambia a HDMI, TV en vivo o la consola. En LG eliges si suena el TV o la barra de sonido.</span></li>
+          <li class="aparece"><b>Enciende el televisor</b><span>Si está apagado, Mando TV lo enciende por la red y se conecta solo.</span></li>
+          <li class="aparece"><b>A tu gusto</b><span>Claro u oscuro, el color de fondo que prefieras, vibración y control moderno o clásico.</span></li>
+        </ul>
+        <div class="piezas" data-ui aria-label="Partes de la app">
+          <div class="pieza aparece" role="img" aria-label="Touchpad de la app: se desliza el dedo para moverse por los menús.">
+            <h3 aria-hidden="true">Touchpad</h3>
+            <div class="touchpad vidrio" aria-hidden="true"><span class="dedo"></span>Desliza para moverte</div>
+          </div>
+          <div class="pieza aparece" role="img" aria-label="Teclado de la app escribiendo una búsqueda.">
+            <h3 aria-hidden="true">Teclado</h3>
+            <div class="teclado vidrio" aria-hidden="true">documentales de volcanes<span class="cursor"></span></div>
+          </div>
+          <div class="pieza aparece" role="img" aria-label="Selector de entradas con HDMI 1 elegido.">
+            <h3 aria-hidden="true">Entradas</h3>
+            <div class="entradas" aria-hidden="true"><span class="vidrio">TV en vivo</span><span class="sel">HDMI 1</span><span class="vidrio">HDMI 2</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="franja">
+    <div class="contenedor">
+      <section id="como" aria-labelledby="t-como">
+        <h2 class="titulo-seccion aparece" id="t-como">Listo en un minuto</h2>
+        <p class="intro aparece">No necesitas crear una cuenta ni instalar nada en el televisor.</p>
+        <ol class="pasos">
+          <li class="aparece"><b>Misma red WiFi</b><p>El teléfono y el televisor tienen que estar en la misma red de tu casa.</p></li>
+          <li class="aparece"><b>Toca tu televisor</b><p>Mando TV lo encuentra solo. Si no aparece, escribes su dirección IP.</p></li>
+          <li class="aparece"><b>Acepta en la pantalla</b><p>La primera vez el televisor pide permiso. Lo aceptas una vez y queda guardado.</p></li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <section id="precio" aria-labelledby="t-precio">
+      <h2 class="titulo-seccion aparece" id="t-precio">Gratis de verdad</h2>
+      <p class="intro aparece">El control completo es gratis y sin anuncios. Pro es un pago único para quien quiera más, sin suscripción.</p>
+      <div class="planes">
+        <div class="plan aparece">
+          <h3>Gratis</h3>
+          <p class="cuanto">0 pesos, para siempre</p>
+          <ul>
+            <li>Control completo: botones, touchpad y teclado</li>
+            <li>Apps, entradas y encendido por red</li>
+            <li>LG, Samsung, Roku y Android TV</li>
+            <li>Sin anuncios y sin cuentas</li>
+          </ul>
+        </div>
+        <div class="plan pro aparece">
+          <h3>Pro</h3>
+          <p class="cuanto">Pago único, precio al lanzar</p>
+          <ul>
+            <li>Todo lo de Gratis</li>
+            <li>Control por voz</li>
+            <li>Más estilos y personalización</li>
+            <li>Ayudas a que Mando TV siga creciendo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" aria-labelledby="t-privacidad">
+      <div class="promesa">
+        <div>
+          <h2 class="titulo-seccion aparece" id="t-privacidad">Tu casa es tuya</h2>
+          <p class="intro aparece">Mando TV habla con tu televisor dentro de tu red WiFi y con nadie más. No tenemos servidores que guarden lo que haces.</p>
+          <p class="aparece"><a href="privacidad.html">Lee la política de privacidad completa</a></p>
+        </div>
+        <ul>
+          <li class="aparece">Sin cuentas ni registro</li>
+          <li class="aparece">Sin anuncios ni rastreadores</li>
+          <li class="aparece">Las llaves de conexión se guardan cifradas en tu teléfono</li>
+          <li class="aparece">Lo que escribes va directo al televisor y no se guarda</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="preguntas" aria-labelledby="t-preguntas">
+      <h2 class="titulo-seccion aparece" id="t-preguntas">Preguntas rápidas</h2>
+      <div class="preguntas">
+        <details class="aparece"><summary>¿Con qué televisores funciona?</summary><p>Con televisores LG con webOS, Samsung con Tizen (2016 en adelante), Roku y Android TV o Google TV (Sony, TCL, Philips, Xiaomi, Chromecast con Google TV y otros).</p></details>
+        <details class="aparece"><summary>¿Necesito internet?</summary><p>Solo la red WiFi de tu casa. Mando TV se comunica directo con el televisor, sin pasar por internet.</p></details>
+        <details class="aparece"><summary>¿Puede encender el televisor?</summary><p>Sí, por la red de tu casa, si el televisor tiene activado el encendido por red. En la <a href="soporte.html#encender">página de ayuda</a> te decimos dónde activarlo en cada marca.</p></details>
+        <details class="aparece"><summary>¿Cuándo sale?</summary><p>Estamos terminando las pruebas con familias reales. Escríbenos y te avisamos el día que esté en la tienda.</p></details>
+      </div>
+      <p class="aparece"><a href="soporte.html">Ver toda la ayuda</a></p>
+    </section>
+
+    <section id="contacto" aria-labelledby="t-contacto">
+      <h2 class="titulo-seccion aparece" id="t-contacto">Escríbenos</h2>
+      <div class="contacto">
+        <div>
+          <p class="intro aparece">¿Tu televisor no aparece, tienes una idea o quieres probar Mando TV antes que nadie? Respondemos en español.</p>
+          <p class="aparece"><a class="correo" href="mailto:hola@mandotv.app">hola@mandotv.app</a></p>
+        </div>
+        <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Enviar un correo</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-enlaces">
+        <nav aria-label="Pie de página">
+          <a href="soporte.html">Ayuda</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
+        </nav>
+        <span>Hecho en Chile</span>
+      </div>
+      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+      <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
