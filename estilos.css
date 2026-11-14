@@ -377,3 +377,18 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .enlace-cookies { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 .enlace-cookies:hover { text-decoration: underline; }
 @media (max-width: 560px) { .aviso-cookies-botones { width: 100%; } .aviso-cookies .boton { flex: 1; justify-content: center; } }
+
+/* Botones de tiendas ("Próximamente"; se cambiarán por las insignias oficiales con enlace al publicar) */
+.tiendas { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.tienda {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--tinta); color: var(--papel);
+  padding: 9px 16px 9px 13px; border-radius: 12px; min-height: 52px;
+  transition: transform .2s;
+}
+.tienda:hover { transform: translateY(-2px); }
+.tienda svg { width: 24px; height: 24px; flex: none; }
+.tienda span { display: flex; flex-direction: column; font-weight: 700; font-size: 17px; line-height: 1.1; letter-spacing: -.01em; }
+.tienda small { font-weight: 500; font-size: 11px; letter-spacing: .01em; opacity: .85; }
+.tiendas + .nota { margin-top: 12px; }
+@media (max-width: 560px) { .tienda { flex: 1 1 calc(50% - 10px); } }
