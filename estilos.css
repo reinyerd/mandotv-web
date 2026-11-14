@@ -378,38 +378,42 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .enlace-cookies:hover { text-decoration: underline; }
 @media (max-width: 560px) { .aviso-cookies-botones { width: 100%; } .aviso-cookies .boton { flex: 1; justify-content: center; } }
 
-/* Botones de tiendas: negro brillante satinado, como vidrio pulido.
+/* Botones de tiendas: insignia negra brillante de vidrio (reflejo marcado en la mitad superior, borde plateado).
    Mientras la app no esté publicada abren "Avísame cuando salga"; al publicar, cambiar href por el de cada tienda. */
 .tiendas { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.tiendas li { display: flex; }
 .tienda {
   position: relative; overflow: hidden; isolation: isolate;
-  display: inline-flex; align-items: center; gap: 11px; text-decoration: none;
-  color: #fff; padding: 10px 18px 10px 14px; border-radius: 14px; min-height: 56px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.06) 46%, rgba(255,255,255,0) 50%, rgba(255,255,255,.04) 100%),
-    linear-gradient(180deg, #2a2d36 0%, #0b0c11 55%, #000 100%);
+  display: inline-flex; align-items: center; gap: 12px; text-decoration: none;
+  color: #fff; padding: 9px 20px 9px 14px; border-radius: 12px; min-height: 58px;
+  background: linear-gradient(180deg, #3a3a3a 0%, #111 50%, #000 51%, #0a0a0a 100%);
+  border: 1px solid #000;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.35),
-    inset 0 -1px 0 rgba(255,255,255,.08),
-    inset 0 0 0 1px rgba(255,255,255,.10),
-    0 10px 22px -10px rgba(0,0,0,.65),
-    0 2px 4px rgba(0,0,0,.25);
+    inset 0 0 0 1px rgba(255,255,255,.55),   /* filo plateado */
+    inset 0 1px 0 1px rgba(255,255,255,.35),
+    0 8px 18px -8px rgba(0,0,0,.75),
+    0 2px 3px rgba(0,0,0,.35);
   transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s;
 }
-/* Brillo que cruza el botón al pasar el cursor */
-.tienda::after {
-  content: ""; position: absolute; inset: -40% auto -40% -60%; width: 45%; z-index: -1;
-  background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,.28) 50%, transparent 100%);
-  transform: skewX(-18deg) translateX(0); transition: transform .7s cubic-bezier(.2,.8,.2,1);
+/* Reflejo de vidrio: la mitad de arriba más clara con corte nítido, como las insignias clásicas */
+.tienda::before {
+  content: ""; position: absolute; left: 2px; right: 2px; top: 2px; height: 48%; z-index: -1;
+  border-radius: 10px 10px 40% 40% / 10px 10px 14px 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.16) 60%, rgba(255,255,255,.08) 100%);
 }
-.tienda:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 0 0 1px rgba(255,255,255,.14), 0 16px 28px -12px rgba(0,0,0,.7), 0 3px 6px rgba(0,0,0,.25); }
+/* Destello que cruza el botón al pasar el cursor */
+.tienda::after {
+  content: ""; position: absolute; inset: -40% auto -40% -60%; width: 40%; z-index: -1;
+  background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,.35) 50%, transparent 100%);
+  transform: skewX(-18deg); transition: transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.tienda:hover { transform: translateY(-2px); box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), inset 0 1px 0 1px rgba(255,255,255,.45), 0 14px 24px -10px rgba(0,0,0,.8), 0 3px 5px rgba(0,0,0,.35); }
 .tienda:hover::after { transform: skewX(-18deg) translateX(420%); }
 .tienda:active { transform: translateY(0) scale(.98); }
 .tienda:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-.tienda svg { width: 26px; height: 26px; flex: none; filter: drop-shadow(0 1px 0 rgba(0,0,0,.4)); }
-.tienda span { display: flex; flex-direction: column; font-weight: 700; font-size: 18px; line-height: 1.1; letter-spacing: -.01em; text-shadow: 0 1px 0 rgba(0,0,0,.45); }
-.tienda small { font-weight: 500; font-size: 11px; letter-spacing: .01em; opacity: .85; }
+.tienda svg { width: 30px; height: 30px; flex: none; filter: drop-shadow(0 1px 1px rgba(0,0,0,.5)); }
+.tienda span { display: flex; flex-direction: column; font-weight: 600; font-size: 21px; line-height: 1.05; letter-spacing: -.015em; text-shadow: 0 1px 1px rgba(0,0,0,.6); }
+.tienda small { font-weight: 500; font-size: 11px; letter-spacing: .02em; opacity: .9; }
 .tiendas + .nota { margin-top: 12px; }
-.tiendas li { display: flex; }
-@media (max-width: 560px) { .tiendas li { flex: 1 1 calc(50% - 12px); } .tienda { flex: 1; } }
+@media (max-width: 560px) { .tiendas li { flex: 1 1 calc(50% - 12px); } .tienda { flex: 1; } .tienda span { font-size: 18px; } }
 @media (prefers-reduced-motion: reduce) { .tienda::after { display: none; } }
