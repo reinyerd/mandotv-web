@@ -17,25 +17,39 @@
   var botones = document.querySelectorAll('[data-marca]');
   var tema = document.querySelector('meta[name="theme-color"]');
 
-  function elegir(id) {
-    if (!marcas[id] || id === actual) return;
-    actual = id;
+  var reducir = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pendiente = null;
+
+  function aplicar(id) {
     var m = marcas[id];
     raiz.style.setProperty('--marca', m.color);
     if (tema) tema.setAttribute('content', m.color);
     nombreTv.textContent = m.tv;
     nota.textContent = m.nota;
+  }
+
+  // Cambio de marca con giro: el teléfono se pone de canto, cambia la marca y el color, y vuelve de frente.
+  function elegir(id) {
+    if (!marcas[id] || id === actual) return;
+    actual = id;
     botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.marca === id)); });
-    telefono.classList.remove('cambiando');
+    if (reducir) { aplicar(id); return; }
+    clearTimeout(pendiente);
+    telefono.classList.remove('girando-entrada');
     void telefono.offsetWidth; // reinicia la animación
-    telefono.classList.add('cambiando');
+    telefono.classList.add('girando-salida');
+    pendiente = setTimeout(function () {
+      aplicar(id);
+      telefono.classList.remove('girando-salida');
+      void telefono.offsetWidth;
+      telefono.classList.add('girando-entrada');
+    }, 320);
   }
 
   // Muestra que sirve para todas las marcas: rota sola hasta que el visitante elige una.
   var rotacion = null;
-  var sinMovimiento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function detenerRotacion() { if (rotacion) { clearInterval(rotacion); rotacion = null; } }
-  if (!sinMovimiento) rotacion = setInterval(function () { mover(1); }, 3500);
+  if (!reducir) rotacion = setInterval(function () { mover(1); }, 3500);
 
   botones.forEach(function (b) { b.addEventListener('click', function () { detenerRotacion(); elegir(b.dataset.marca); }); });
   function mover(paso) { elegir(orden[(orden.indexOf(actual) + paso + orden.length) % orden.length]); }
