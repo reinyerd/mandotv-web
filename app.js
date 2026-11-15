@@ -17,7 +17,7 @@
   var botones = document.querySelectorAll('[data-marca]');
   var tema = document.querySelector('meta[name="theme-color"]');
 
-  // Decisión del fundador: la rotación de marcas y el giro del teléfono funcionan siempre, aunque el sistema pida
+  // Decisión del fundador: la rotación de marcas y el cambio animado del teléfono funcionan siempre, aunque el sistema pida
   // reducir movimiento (son movimientos cortos y solo en el producto, igual que la flotación).
   var reducir = false;
   var pendiente = null;
@@ -30,22 +30,26 @@
     nota.textContent = m.nota;
   }
 
-  // Cambio de marca con giro: el teléfono se pone de canto, cambia la marca y el color, y vuelve de frente.
-  function elegir(id) {
+  // Cambio de marca como vitrina: el teléfono sale hacia un lado, cambian la marca y el color, y el nuevo entra
+  // por el lado contrario. "Siguiente" (y la rotación automática) sale por la izquierda y entra por la derecha;
+  // "Anterior" al revés, para que la dirección coincida con la flecha.
+  var clases = ['sale-izq', 'sale-der', 'entra-der', 'entra-izq'];
+  function elegir(id, haciaAtras) {
     if (!marcas[id] || id === actual) return;
+    if (haciaAtras === undefined) haciaAtras = orden.indexOf(id) < orden.indexOf(actual);
     actual = id;
     botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.marca === id)); });
     if (reducir) { aplicar(id); return; }
     clearTimeout(pendiente);
-    telefono.classList.remove('girando-entrada');
+    telefono.classList.remove.apply(telefono.classList, clases);
     void telefono.offsetWidth; // reinicia la animación
-    telefono.classList.add('girando-salida');
+    telefono.classList.add(haciaAtras ? 'sale-der' : 'sale-izq');
     pendiente = setTimeout(function () {
       aplicar(id);
-      telefono.classList.remove('girando-salida');
+      telefono.classList.remove.apply(telefono.classList, clases);
       void telefono.offsetWidth;
-      telefono.classList.add('girando-entrada');
-    }, 320);
+      telefono.classList.add(haciaAtras ? 'entra-izq' : 'entra-der');
+    }, 260);
   }
 
   // Muestra que sirve para todas las marcas: rota sola hasta que el visitante elige una.
@@ -54,9 +58,20 @@
   if (!reducir) rotacion = setInterval(function () { mover(1); }, 3500);
 
   botones.forEach(function (b) { b.addEventListener('click', function () { detenerRotacion(); elegir(b.dataset.marca); }); });
-  function mover(paso) { elegir(orden[(orden.indexOf(actual) + paso + orden.length) % orden.length]); }
+  function mover(paso) { elegir(orden[(orden.indexOf(actual) + paso + orden.length) % orden.length], paso < 0); }
   document.getElementById('anterior').addEventListener('click', function () { detenerRotacion(); mover(-1); });
   document.getElementById('siguiente').addEventListener('click', function () { detenerRotacion(); mover(1); });
+
+  // En Windows la app ya está en Microsoft Store: el botón principal la descarga. En los demás aparatos sigue "Avísame".
+  var principal = document.getElementById('boton-principal');
+  var ua = navigator.userAgent;
+  if (principal && /Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) {
+    principal.href = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct';
+    principal.target = '_blank';
+    principal.rel = 'noopener';
+    principal.querySelector('svg').innerHTML = '<path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/>';
+    document.getElementById('boton-principal-texto').textContent = 'Descargar gratis para Windows';
+  }
 
   var nombreTema = document.getElementById('tema-nombre');
   document.querySelectorAll('[data-tema]').forEach(function (p) {

@@ -78,7 +78,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css?v=18">
+  <link rel="stylesheet" href="estilos.css?v=19">
 </head>
 <body>
   <a class="oculto" href="#contenido">Saltar al contenido</a>
@@ -165,9 +165,9 @@
             </div>
 
             <div class="acciones">
-              <a class="boton" href="mailto:hola@mandotv.app?subject=Av%C3%ADsame%20cuando%20salga%20Mando%20TV&amp;body=Hola%2C%20quiero%20saber%20cuando%20Mando%20TV%20est%C3%A9%20en%20la%20tienda.%20Mi%20televisor%20es%3A%20">
+              <a class="boton" id="boton-principal" href="mailto:hola@mandotv.app?subject=Av%C3%ADsame%20cuando%20salga%20Mando%20TV&amp;body=Hola%2C%20quiero%20saber%20cuando%20Mando%20TV%20est%C3%A9%20en%20la%20tienda.%20Mi%20televisor%20es%3A%20">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
-                Avísame cuando salga
+                <span id="boton-principal-texto">Avísame cuando salga</span>
               </a>
               <a class="boton claro" href="#funciones">Ver qué hace</a>
             </div>
@@ -282,7 +282,7 @@
         <details class="aparece"><summary>¿Necesito internet para usar el control remoto?</summary><p>Solo la red WiFi de tu casa. Mando TV se comunica directo con el televisor, sin pasar por internet.</p></details>
         <details class="aparece"><summary>¿Mando TV puede encender el televisor?</summary><p>Sí, por la red de tu casa, si el televisor tiene activado el encendido por red. En la <a href="soporte.html#encender">página de ayuda</a> te decimos dónde activarlo en cada marca.</p></details>
         <details class="aparece"><summary>¿Mando TV es gratis?</summary><p>Sí. El control completo es gratis y sin anuncios. Pro es un pago único opcional, sin suscripción.</p></details>
-        <details class="aparece"><summary>¿Cuándo sale?</summary><p>Estamos terminando las pruebas con familias reales. Escríbenos y te avisamos el día que esté en la tienda.</p></details>
+        <details class="aparece"><summary>¿Dónde lo descargo?</summary><p>Ya está en <a href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener">Microsoft Store</a> para Windows. Pronto llega a iPhone, iPad, Android y Mac: <a href="#contacto">escríbenos</a> y te avisamos el día que esté en tu tienda.</p></details>
       </div>
       <p class="aparece"><a href="soporte.html">Ver toda la ayuda</a></p>
     </section>
@@ -321,7 +321,7 @@
     </div>
   </footer>
 
-  <script src="app.js?v=10" defer></script>
+  <script src="app.js?v=11" defer></script>
   <script src="correo.js?v=3" defer></script>
   <script src="/cookies.js?v=1" defer></script>
   <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
