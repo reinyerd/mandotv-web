@@ -17,7 +17,9 @@
   var botones = document.querySelectorAll('[data-marca]');
   var tema = document.querySelector('meta[name="theme-color"]');
 
-  var reducir = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Decisión del fundador: la rotación de marcas y el giro del teléfono funcionan siempre, aunque el sistema pida
+  // reducir movimiento (son movimientos cortos y solo en el producto, igual que la flotación).
+  var reducir = false;
   var pendiente = null;
 
   function aplicar(id) {
