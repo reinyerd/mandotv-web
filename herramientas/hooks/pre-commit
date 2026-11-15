@@ -1,6 +1,7 @@
 #!/bin/sh
 # Antes de cada commit: actualiza la versión de css, js e imágenes en todas las páginas (ver herramientas/versionar.py).
 cd "$(git rev-parse --show-toplevel)" || exit 1
-cambiadas=$(python -I herramientas/versionar.py | tr -d "") || { echo "versionar.py falló"; exit 1; }
-[ -n "$cambiadas" ] && echo "$cambiadas" | while read -r f; do git add -- "$f"; done
+cambiadas=$(python -I herramientas/versionar.py) || { echo "versionar.py falló"; exit 1; }
+# Python en Windows termina las líneas con \r\n: se quita el \r para que git encuentre los archivos.
+printf '%s\n' "$cambiadas" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git add -- "$f"; done
 exit 0
