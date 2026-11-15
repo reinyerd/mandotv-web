@@ -107,7 +107,7 @@ MARCAS = [
     ]),
 ]
 
-LOGO = '<svg viewBox="0 0 34 34" aria-hidden="true"><rect x="7" y="1" width="20" height="32" rx="10" fill="#0d0f17"/><circle cx="17" cy="12" r="5" fill="#fff"/><rect x="13" y="22" width="8" height="3" rx="1.5" fill="#fff"/></svg>'
+LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
 
 def otras(actual):
     return '\n'.join(f'          <li><a href="/{m["slug"]}/">Control remoto para {m["nombre"]}</a></li>' for m in MARCAS if m is not actual)
@@ -226,6 +226,11 @@ def pagina(m):
         </nav>
         <span>Hecho en Chile</span>
       </div>
+      <ul class="marcas-enlaces pie-marcas" aria-label="Guías">
+        <li><a href="/guias/encender-tv-lg-con-el-celular/">Encender TV LG con el celular</a></li>
+        <li><a href="/guias/control-remoto-samsung-sin-control/">Samsung sin control</a></li>
+        <li><a href="/guias/conectar-celular-al-tv-por-wifi/">Celular como control por WiFi</a></li>
+      </ul>
       <p class="pie-gigante" aria-hidden="true">MANDO</p>
       <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
     </div>
