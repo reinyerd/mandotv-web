@@ -53,9 +53,27 @@
   }
 
   // Muestra que sirve para todas las marcas: rota sola hasta que el visitante elige una.
+  // Se pausa mientras el visitante mira o toca el teléfono o las marcas (mouse, dedo o teclado) y cuando el
+  // teléfono no está a la vista (bajó por la página o cambió de pestaña); sigue sola al volver.
   var rotacion = null;
+  var mirando = false;
+  var aLaVista = true;
   function detenerRotacion() { if (rotacion) { clearInterval(rotacion); rotacion = null; } }
-  if (!reducir) rotacion = setInterval(function () { mover(1); }, 3500);
+  if (!reducir) rotacion = setInterval(function () {
+    if (mirando || !aLaVista || document.hidden) return;
+    mover(1);
+  }, 3500);
+  [document.querySelector('.escaparate'), document.querySelector('.marcas')].forEach(function (zona) {
+    if (!zona) return;
+    zona.addEventListener('pointerenter', function () { mirando = true; });
+    zona.addEventListener('pointerleave', function () { mirando = false; });
+    zona.addEventListener('focusin', function () { mirando = true; });
+    zona.addEventListener('focusout', function () { mirando = false; });
+  });
+  if ('IntersectionObserver' in window && document.querySelector('.escaparate')) {
+    new IntersectionObserver(function (e) { aLaVista = e[0].isIntersecting; }, { threshold: 0.3 })
+      .observe(document.querySelector('.escaparate'));
+  }
 
   botones.forEach(function (b) { b.addEventListener('click', function () { detenerRotacion(); elegir(b.dataset.marca); }); });
   function mover(paso) { elegir(orden[(orden.indexOf(actual) + paso + orden.length) % orden.length], paso < 0); }
