@@ -409,7 +409,11 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .tienda small { font-weight: 500; font-size: 11px; letter-spacing: 0; opacity: .78; }
 .tiendas + .nota { margin-top: 12px; }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .tienda { background: rgba(12,12,20,.88); } }
-@media (max-width: 560px) { .tiendas li { flex: 1 1 calc(50% - 12px); } .tienda { flex: 1; } .tienda span { font-size: 17px; } }
+@media (max-width: 560px) {
+  .tiendas li { flex: 1 1 calc(50% - 12px); } .tienda { flex: 1; } .tienda span { font-size: 17px; }
+  /* El botón que queda solo en la última fila ocupa todo el ancho: su contenido va centrado */
+  .tiendas li:last-child:nth-child(odd) .tienda { justify-content: center; padding-inline: 16px; }
+}
 @media (prefers-reduced-motion: reduce) { .tienda, .tienda::after { transition: none; } }
 
 
