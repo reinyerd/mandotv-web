@@ -3,6 +3,7 @@
   "funciones_pro": [],
   "dias_max_sin_verificar": 30,
   "tiendas": {
-    "android": "https://play.google.com/store/apps/details?id=app.mandotv.mando"
+    "android": "https://play.google.com/store/apps/details?id=app.mandotv.mando",
+    "windows": "https://apps.microsoft.com/detail/9N3D7T1DP2SW"
   }
 }
