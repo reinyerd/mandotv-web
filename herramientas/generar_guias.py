@@ -6,6 +6,7 @@ SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
 FECHA = '2026-11-15'
 TIENDA = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct'
+TIENDA_APPLE = 'https://apps.apple.com/app/id6834927348'
 
 MARCAS_ENLACES = [
   ('control-remoto-samsung', 'Control remoto Samsung'),
@@ -80,11 +81,12 @@ GUIAS = [
     faq=[
       ('¿Necesito internet para usar el celular como control?', 'Necesitas que el celular y el TV estén en la misma red WiFi. Mando TV se conecta directo a tu TV por esa red.'),
       ('¿Por qué no aparece mi TV en la lista?', 'Revisa que el TV esté encendido y que el celular no esté usando datos móviles ni otra red WiFi. Algunos routers tienen una red de invitados que separa los equipos.'),
-      ('¿Puedo usar Mando TV desde iPhone o Android?', 'Ya está en Microsoft Store para Windows. Pronto llega a iPhone, Android y Mac.'),
+      ('¿Puedo usar Mando TV desde iPhone o Android?', 'Sí en iPhone y iPad: ya está en App Store. También en Microsoft Store para Windows. Pronto llega a Android y Mac.'),
     ]),
 ]
 
 LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
+APPLE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>'
 MS_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg>'
 
 def otras(actual):
@@ -171,11 +173,12 @@ def pagina(g):
 {extra}
 
       <h2 id="mando-tv">Hazlo con Mando TV</h2>
-      <p>Mando TV es un control remoto universal para tu televisor. Es gratis y sin anuncios, y no pide cuenta. Descárgalo para Windows:</p>
+      <p>Mando TV es un control remoto universal para tu televisor. Es gratis y sin anuncios, y no pide cuenta. Descárgalo para iPhone, iPad o Windows:</p>
       <ul class="tiendas" aria-label="Descargar Mando TV">
+        <li><a class="tienda" href="{TIENDA_APPLE}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store">{APPLE_SVG}<span><small>Descárgalo en</small>App Store</span></a></li>
         <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store">{MS_SVG}<span><small>Descárgalo en</small>Microsoft Store</span></a></li>
       </ul>
-      <p class="nota">Pronto en iPhone, Android y Mac.</p>
+      <p class="nota">Pronto en Android y Mac.</p>
       {marcas}
 
       <h2 id="preguntas">Preguntas frecuentes</h2>

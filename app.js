@@ -80,10 +80,17 @@
   document.getElementById('anterior').addEventListener('click', function () { detenerRotacion(); mover(-1); });
   document.getElementById('siguiente').addEventListener('click', function () { detenerRotacion(); mover(1); });
 
-  // Botón principal "Descargar gratis": en Windows abre Microsoft Store; en los demás aparatos baja a las tiendas.
+  // Botón principal "Descargar gratis": en iPhone y iPad abre App Store, en Windows abre Microsoft Store;
+  // en los demás aparatos baja a las tiendas.
   var principal = document.getElementById('boton-principal');
   var ua = navigator.userAgent;
-  if (principal && /Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) {
+  var esIpad = /iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (principal && (esIpad || /iPhone|iPod/.test(ua))) {
+    principal.href = 'https://apps.apple.com/app/id6834927348';
+    principal.target = '_blank';
+    principal.rel = 'noopener';
+    document.getElementById('boton-principal-texto').textContent = esIpad ? 'Descargar gratis para iPad' : 'Descargar gratis para iPhone';
+  } else if (principal && /Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) {
     principal.href = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct';
     principal.target = '_blank';
     principal.rel = 'noopener';
