@@ -80,14 +80,13 @@
   document.getElementById('anterior').addEventListener('click', function () { detenerRotacion(); mover(-1); });
   document.getElementById('siguiente').addEventListener('click', function () { detenerRotacion(); mover(1); });
 
-  // En Windows la app ya está en Microsoft Store: el botón principal la descarga. En los demás aparatos sigue "Avísame".
+  // Botón principal "Descargar gratis": en Windows abre Microsoft Store; en los demás aparatos baja a las tiendas.
   var principal = document.getElementById('boton-principal');
   var ua = navigator.userAgent;
   if (principal && /Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) {
     principal.href = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct';
     principal.target = '_blank';
     principal.rel = 'noopener';
-    principal.querySelector('svg').innerHTML = '<path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/>';
     document.getElementById('boton-principal-texto').textContent = 'Descargar gratis para Windows';
   }
 
