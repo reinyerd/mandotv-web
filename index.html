@@ -78,7 +78,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css?v=17">
+  <link rel="stylesheet" href="estilos.css?v=18">
 </head>
 <body>
   <a class="oculto" href="#contenido">Saltar al contenido</a>
@@ -204,11 +204,11 @@
           </div>
           <div class="pieza aparece" role="img" aria-label="Teclado de la app escribiendo una búsqueda.">
             <h3 aria-hidden="true">Teclado</h3>
-            <div class="teclado vidrio" aria-hidden="true">documentales de volcanes<span class="cursor"></span></div>
+            <div class="teclado vidrio" aria-hidden="true"><span id="texto-teclado">documentales de volcanes</span><span class="cursor"></span></div>
           </div>
-          <div class="pieza aparece" role="img" aria-label="Selector de entradas con HDMI 1 elegido.">
+          <div class="pieza aparece" role="img" aria-label="Selector de entradas: TV en vivo, HDMI 1 y HDMI 2.">
             <h3 aria-hidden="true">Entradas</h3>
-            <div class="entradas" aria-hidden="true"><span class="vidrio">TV en vivo</span><span class="sel">HDMI 1</span><span class="vidrio">HDMI 2</span></div>
+            <div class="entradas" id="entradas-demo" aria-hidden="true"><span class="vidrio">TV en vivo</span><span class="sel">HDMI 1</span><span class="vidrio">HDMI 2</span></div>
           </div>
         </div>
       </div>
@@ -321,7 +321,7 @@
     </div>
   </footer>
 
-  <script src="app.js?v=9" defer></script>
+  <script src="app.js?v=10" defer></script>
   <script src="correo.js?v=3" defer></script>
   <script src="/cookies.js?v=1" defer></script>
   <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->

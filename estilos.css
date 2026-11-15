@@ -254,7 +254,8 @@ section { padding: clamp(80px, 12vw, 180px) 0 0; }
 .teclado { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: 16px; font-size: 17px; }
 .teclado .cursor { width: 2px; height: 20px; background: currentColor; animation: parpadeo 1s steps(1) infinite; }
 .entradas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.entradas span { padding: 14px 6px; border-radius: 14px; text-align: center; font-weight: 600; font-size: 15px; }
+.entradas span { padding: 14px 6px; border-radius: 14px; text-align: center; font-weight: 600; font-size: 15px; transition: background-color .35s, color .35s, transform .35s; }
+.entradas .sel { transform: scale(1.04); }
 .entradas .sel { background: #f4f6fa; color: #0b0d16; }
 
 /* Cómo se conecta: bloque de color de marca a todo lo ancho */
@@ -458,6 +459,11 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
    es un movimiento lento y pequeño, solo en el producto). El resto de animaciones sí se reducen. */
 @media (prefers-reduced-motion: reduce) {
   .telefono { animation: flotar 6s ease-in-out infinite !important; }
+  /* Demostraciones del producto: Windows con animaciones desactivadas también las ve (decisión del fundador). */
+  .touchpad .dedo { animation: deslizar 3.2s ease-in-out infinite !important; }
+  .teclado .cursor { animation: parpadeo 1s steps(1) infinite !important; }
+  .sombra-suelo { animation: sombra 6s ease-in-out infinite !important; }
+  .entradas span { transition-duration: .35s !important; }
   .telefono.girando-salida { animation: giro-salida .32s cubic-bezier(.55, 0, .9, .45) forwards !important; }
   .telefono.girando-entrada { animation: giro-entrada .5s cubic-bezier(.15, .75, .25, 1), flotar 6s ease-in-out .5s infinite !important; }
   .escena, .franja, .pantalla::before, .ok, .pie-gigante, .cabecera-pagina { transition-duration: .6s !important; }

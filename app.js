@@ -94,6 +94,38 @@
     });
   }
 
+  // Demostración del teclado: escribe búsquedas letra por letra, las borra y escribe la siguiente.
+  var textoTeclado = document.getElementById('texto-teclado');
+  if (textoTeclado) {
+    var frases = ['documentales de volcanes', 'música para cocinar', 'partido de fútbol en vivo', 'película de Navidad'];
+    var f = 0, n = frases[0].length, borrando = true;
+    (function escribir() {
+      var frase = frases[f];
+      if (borrando) {
+        n--;
+        if (n <= 0) { borrando = false; f = (f + 1) % frases.length; frase = frases[f]; }
+      } else {
+        n++;
+        if (n >= frase.length) { borrando = true; textoTeclado.textContent = frase; setTimeout(escribir, 2200); return; }
+      }
+      textoTeclado.textContent = frase.slice(0, Math.max(n, 0));
+      setTimeout(escribir, borrando ? 35 : 75);
+    })();
+  }
+
+  // Demostración de entradas: va cambiando sola entre TV en vivo, HDMI 1 y HDMI 2.
+  var entradasDemo = document.getElementById('entradas-demo');
+  if (entradasDemo) {
+    var opciones = entradasDemo.querySelectorAll('span');
+    var elegida = 1;
+    setInterval(function () {
+      elegida = (elegida + 1) % opciones.length;
+      opciones.forEach(function (o, i) {
+        o.className = i === elegida ? 'sel' : 'vidrio';
+      });
+    }, 1800);
+  }
+
   // Entrada escalonada de cada sección al aparecer en pantalla.
   var piezas = document.querySelectorAll('.aparece');
   if (!('IntersectionObserver' in window)) {
