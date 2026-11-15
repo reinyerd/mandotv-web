@@ -6,10 +6,10 @@
     lg: { color: '#e0457b', tv: 'TV LG', nota: 'LG con webOS: se conecta en segundos y también lo enciende.' },
     samsung: { color: '#3d7bff', tv: 'TV Samsung', nota: 'Samsung con Tizen: aceptas una vez en el televisor y listo.' },
     roku: { color: '#a77bff', tv: 'Roku', nota: 'Roku: televisores y reproductores, sin emparejar nada.' },
-    android: { color: '#2fbf8f', tv: 'Android TV', nota: 'Android TV y Google TV: escribes el código que muestra la pantalla.' }
+    android: { color: '#2fbf8f', tv: 'Google TV', nota: 'Google TV y Android TV (Sony, TCL, Philips, Xiaomi y más): escribes el código que muestra la pantalla.' }
   };
-  var orden = ['lg', 'samsung', 'roku', 'android'];
-  var actual = 'lg';
+  var orden = ['samsung', 'lg', 'roku', 'android'];
+  var actual = 'samsung';
   var raiz = document.documentElement;
   var telefono = document.getElementById('telefono');
   var nombreTv = document.getElementById('app-tv');
@@ -31,10 +31,16 @@
     telefono.classList.add('cambiando');
   }
 
-  botones.forEach(function (b) { b.addEventListener('click', function () { elegir(b.dataset.marca); }); });
+  // Muestra que sirve para todas las marcas: rota sola hasta que el visitante elige una.
+  var rotacion = null;
+  var sinMovimiento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function detenerRotacion() { if (rotacion) { clearInterval(rotacion); rotacion = null; } }
+  if (!sinMovimiento) rotacion = setInterval(function () { mover(1); }, 3500);
+
+  botones.forEach(function (b) { b.addEventListener('click', function () { detenerRotacion(); elegir(b.dataset.marca); }); });
   function mover(paso) { elegir(orden[(orden.indexOf(actual) + paso + orden.length) % orden.length]); }
-  document.getElementById('anterior').addEventListener('click', function () { mover(-1); });
-  document.getElementById('siguiente').addEventListener('click', function () { mover(1); });
+  document.getElementById('anterior').addEventListener('click', function () { detenerRotacion(); mover(-1); });
+  document.getElementById('siguiente').addEventListener('click', function () { detenerRotacion(); mover(1); });
 
   var nombreTema = document.getElementById('tema-nombre');
   document.querySelectorAll('[data-tema]').forEach(function (p) {

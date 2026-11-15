@@ -1,7 +1,7 @@
 /* Mando TV: estilos de la web. Un solo archivo, sin dependencias. */
 :root {
-  --marca: #e0457b;          /* cambia con la marca de TV elegida */
-  --marca-oscura: #b8325f;
+  --marca: #3d7bff;          /* cambia con la marca de TV elegida */
+  --marca-oscura: #2a5fd6;
   --tinta: #0d0f17;
   --papel: #ffffff;
   --suave: #f3f4f8;
@@ -40,7 +40,7 @@ a { color: inherit; }
 }
 .logo { display: flex; align-items: center; gap: 10px; font-family: var(--titular); font-weight: 900;
   font-stretch: 75%; font-size: 26px; letter-spacing: -.02em; text-decoration: none; }
-.logo svg { width: 34px; height: 34px; }
+.logo img { width: 34px; height: 34px; border-radius: 9px; }
 .barra nav { display: flex; gap: clamp(12px, 3vw, 32px); align-items: center; }
 .barra nav a { text-decoration: none; font-weight: 600; font-size: 16px; }
 .barra nav a:hover { text-decoration: underline; text-underline-offset: 4px; }

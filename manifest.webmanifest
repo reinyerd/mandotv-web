@@ -7,7 +7,7 @@
   "background_color": "#e0457b",
   "theme_color": "#e0457b",
   "icons": [
-    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icono.svg?v=2", "sizes": "any", "type": "image/svg+xml" },
     { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
   ]
 }
