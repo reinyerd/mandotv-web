@@ -83,6 +83,28 @@ GUIAS = [
       ('¿Por qué no aparece mi TV en la lista?', 'Revisa que el TV esté encendido y que el celular no esté usando datos móviles ni otra red WiFi. Algunos routers tienen una red de invitados que separa los equipos.'),
       ('¿Puedo usar Mando TV desde iPhone o Android?', 'Sí en iPhone y iPad: ya está en App Store. También en Microsoft Store para Windows. Pronto llega a Android y Mac.'),
     ]),
+  dict(slug='guias/controlar-el-tv-desde-el-pc', corto='Controlar el TV desde el PC',
+    titulo='Cómo controlar el TV desde el PC con Windows (gratis) | Mando TV',
+    desc='Usa tu computador con Windows como control remoto del TV Samsung, LG, Roku o Google TV por WiFi. Botones, teclado y apps con Mando TV, gratis y sin anuncios.',
+    h1='Cómo controlar el TV desde el PC con Windows',
+    intro='Si pasas el día frente al computador, no necesitas buscar el control: Mando TV para Windows maneja tu televisor Samsung, LG, Roku, Google TV o Android TV por la red WiFi de tu casa. Sirve para cambiar de app, subir el volumen o escribir en YouTube con el teclado del PC.',
+    pasos=[
+      'Descarga Mando TV gratis desde Microsoft Store en tu computador con Windows 10 u 11.',
+      'Revisa que el computador y el TV estén en la misma red (WiFi o cable, pero del mismo router).',
+      'Abre Mando TV: tu televisor aparece solo en la lista. Tócalo o haz clic en él.',
+      'Acepta la conexión en la pantalla del TV la primera vez (en Google TV y Android TV escribe el código que muestra el TV).',
+      'Listo: usa los botones, el touchpad o el teclado para escribir en el buscador del TV.',
+    ],
+    extra=[
+      ('Atajos del teclado del PC (Pro)', 'Con Mando TV Pro manejas el TV con el teclado del computador: flechas para moverte, Enter para OK, Retroceso o Esc para volver, + y − para el volumen, M para silenciar y Espacio para pausar.'),
+      ('Mini control siempre encima (Pro)', 'Deja una ventana pequeña con el control siempre visible mientras trabajas o juegas en el PC.'),
+    ],
+    marca=None,
+    faq=[
+      ('¿Necesito un cable o Bluetooth para controlar el TV desde el PC?', 'No. Mando TV se conecta por la red de tu casa: basta con que el PC y el TV estén en el mismo router.'),
+      ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, TCL, Philips, Xiaomi y otros).'),
+      ('¿Cuánto cuesta?', 'El control completo es gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como los atajos del teclado y el mini control.'),
+    ]),
 ]
 
 LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
