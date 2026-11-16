@@ -8,31 +8,6 @@
     "funciones_pro":  [
 
                       ],
-    "pro":  {
-                "funciones":  [
-                                  "touchpad",
-                                  "voz",
-                                  "apps",
-                                  "entradas",
-                                  "favoritas",
-                                  "control_clasico",
-                                  "salida_audio",
-                                  "colores",
-                                  "apagar_todos",
-                                  "rutinas",
-                                  "temporizador",
-                                  "recientes",
-                                  "accesos_rapidos",
-                                  "negro_puro",
-                                  "copia_seguridad",
-                                  "teclado_pc",
-                                  "mini_control"
-                              ],
-                "plataformas":  [
-                                    "android",
-                                    "ios"
-                                ]
-            },
     "dias_max_sin_verificar":  30,
     "tiendas":  {
                     "android":  "https://play.google.com/store/apps/details?id=app.mandotv.mando",
