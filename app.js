@@ -95,6 +95,10 @@
     principal.target = '_blank';
     principal.rel = 'noopener';
     document.getElementById('boton-principal-texto').textContent = 'Descargar gratis para Windows';
+  } else if (principal && /Android/.test(ua)) {
+    // Android está en prueba anticipada en Google Play: baja a los dos pasos para unirse.
+    principal.href = '#android';
+    document.getElementById('boton-principal-texto').textContent = 'Probar gratis en Android';
   }
 
   var nombreTema = document.getElementById('tema-nombre');
