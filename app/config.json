@@ -1,9 +1,42 @@
 {
-  "version_minima": { "android": 1, "ios": 1, "windows": 1, "macos": 1 },
-  "funciones_pro": [],
-  "dias_max_sin_verificar": 30,
-  "tiendas": {
-    "android": "https://play.google.com/store/apps/details?id=app.mandotv.mando",
-    "windows": "https://apps.microsoft.com/detail/9N3D7T1DP2SW"
-  }
+    "version_minima":  {
+                           "android":  1,
+                           "ios":  1,
+                           "windows":  1,
+                           "macos":  1
+                       },
+    "funciones_pro":  [
+
+                      ],
+    "pro":  {
+                "funciones":  [
+                                  "touchpad",
+                                  "voz",
+                                  "apps",
+                                  "entradas",
+                                  "favoritas",
+                                  "control_clasico",
+                                  "salida_audio",
+                                  "colores",
+                                  "apagar_todos",
+                                  "rutinas",
+                                  "temporizador",
+                                  "recientes",
+                                  "accesos_rapidos",
+                                  "negro_puro",
+                                  "copia_seguridad",
+                                  "teclado_pc",
+                                  "mini_control"
+                              ],
+                "plataformas":  [
+                                    "android",
+                                    "ios"
+                                ]
+            },
+    "dias_max_sin_verificar":  30,
+    "tiendas":  {
+                    "android":  "https://play.google.com/store/apps/details?id=app.mandotv.mando",
+                    "ios":  "https://apps.apple.com/app/id6834927348",
+                    "windows":  "https://apps.microsoft.com/detail/9N3D7T1DP2SW"
+                }
 }
