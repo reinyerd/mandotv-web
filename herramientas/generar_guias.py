@@ -81,7 +81,7 @@ GUIAS = [
     faq=[
       ('¿Necesito internet para usar el celular como control?', 'Necesitas que el celular y el TV estén en la misma red WiFi. Mando TV se conecta directo a tu TV por esa red.'),
       ('¿Por qué no aparece mi TV en la lista?', 'Revisa que el TV esté encendido y que el celular no esté usando datos móviles ni otra red WiFi. Algunos routers tienen una red de invitados que separa los equipos.'),
-      ('¿Puedo usar Mando TV desde iPhone o Android?', 'Sí en iPhone y iPad: ya está en App Store. También en Microsoft Store para Windows. Pronto llega a Android y Mac.'),
+      ('¿Puedo usar Mando TV desde iPhone o Android?', 'Sí en iPhone y iPad: ya está en App Store. También en Microsoft Store para Windows. Pronto llega a Android.'),
     ]),
   dict(slug='guias/controlar-el-tv-desde-el-pc', corto='Controlar el TV desde el PC',
     titulo='Cómo controlar el TV desde el PC con Windows (gratis) | Mando TV',
@@ -201,6 +201,30 @@ GUIAS = [
     ]),
 ]
 
+
+GUIAS_PIE = [
+  ('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular'),
+  ('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original'),
+  ('conectar-celular-al-tv-por-wifi', 'Cómo conectar el celular al TV por WiFi'),
+  ('controlar-el-tv-desde-el-pc', 'Cómo controlar el TV desde el PC con Windows'),
+  ('roku-no-responde-al-celular', 'Roku no responde al celular (error 403)'),
+  ('el-celular-no-encuentra-el-tv', 'El celular no encuentra el TV'),
+  ('android-tv-codigo-de-emparejamiento', 'Android TV pide un código de emparejamiento'),
+  ('perdi-el-control-del-roku', 'Perdí el control del Roku'),
+]
+MARCAS_PIE = [
+  ('control-remoto-samsung', 'Control remoto Samsung'),
+  ('control-remoto-lg', 'Control remoto LG'),
+  ('control-remoto-roku', 'Control remoto Roku'),
+  ('control-remoto-android-tv', 'Control remoto Android TV'),
+]
+
+def pie_marcas():
+    li = [f'        <li><a href="/{s}/">{n}</a></li>' for s, n in MARCAS_PIE]
+    li.append('        <li><a href="/guias/">Todas las guías</a></li>')
+    li += [f'        <li><a href="/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
+    return '      <ul class="marcas-enlaces pie-marcas" aria-label="Marcas y guías">\n' + '\n'.join(li) + '\n      </ul>\n'
+
 LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
 APPLE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>'
 MS_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg>'
@@ -208,17 +232,19 @@ MS_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1
 def otras(actual):
     return '\n'.join(f'        <li><a href="/{g["slug"]}/">{html.escape(g["h1"])}</a></li>' for g in GUIAS if g is not actual)
 
+ORG = {"@type": "Organization", "@id": URL + "/#org", "name": "Mando TV", "url": URL + "/"}
+
 def pagina(g):
     e = html.escape
     url = f'{URL}/{g["slug"]}/'
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": "es",
        "datePublished": g.get("fecha", FECHA), "dateModified": g.get("fecha", FECHA), "mainEntityOfPage": url, "image": URL + "/social.png",
-       "author": {"@type": "Organization", "name": "Mando TV", "url": URL + "/"},
-       "publisher": {"@type": "Organization", "name": "Mando TV", "url": URL + "/"}},
+       "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
+      ORG,
       {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/"},
-        {"@type": "ListItem", "position": 2, "name": "Guías", "item": URL + "/soporte.html#guias"},
+        {"@type": "ListItem", "position": 2, "name": "Guías", "item": URL + "/guias/"},
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
@@ -234,6 +260,7 @@ def pagina(g):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6834927348">
   <title>{e(g["titulo"])}</title>
   <meta name="description" content="{e(g["desc"])}">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -269,7 +296,7 @@ def pagina(g):
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
         </nav>
       </header>
-      <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/soporte.html#guias">Guías</a> / <span>{e(g["corto"])}</span></nav>
+      <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/guias/">Guías</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{e(g["intro"])}</p>
       <div class="acciones">
@@ -294,7 +321,7 @@ def pagina(g):
         <li><a class="tienda" href="{TIENDA_APPLE}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store">{APPLE_SVG}<span><small>Descárgalo en</small>App Store</span></a></li>
         <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store">{MS_SVG}<span><small>Descárgalo en</small>Microsoft Store</span></a></li>
       </ul>
-      <p class="nota">Pronto en Android y Mac.</p>
+      <p class="nota">Pronto en Android.</p>
       {marcas}
 
       <h2 id="preguntas">Preguntas frecuentes</h2>
@@ -305,6 +332,7 @@ def pagina(g):
       <h2 id="otras">Otras guías</h2>
       <ul>
 {otras(g)}
+        <li><a href="/guias/">Todas las guías</a></li>
         <li><a href="/soporte.html">Ayuda y soporte</a></li>
       </ul>
     </div>
@@ -322,7 +350,7 @@ def pagina(g):
         </nav>
         <span>Hecho en Chile</span>
       </div>
-      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+{pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
       <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
     </div>
   </footer>
@@ -333,6 +361,111 @@ def pagina(g):
 </body>
 </html>
 '''
+
+def indice():
+    e = html.escape
+    url = f'{URL}/guias/'
+    titulo = 'Guías para controlar tu TV con el celular | Mando TV'
+    desc = 'Guías paso a paso para usar tu celular o PC como control remoto del TV: encender el TV, conectar por WiFi y solucionar problemas en Samsung, LG, Roku y Android TV.'
+    ld = {"@context": "https://schema.org", "@graph": [
+      ORG,
+      {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/"},
+        {"@type": "ListItem", "position": 2, "name": "Guías", "item": url}]},
+      {"@type": "CollectionPage", "name": "Guías para usar tu celular como control remoto del TV", "description": desc, "url": url, "inLanguage": "es",
+       "publisher": {"@id": URL + "/#org"},
+       "mainEntity": {"@type": "ItemList", "itemListElement": [
+         {"@type": "ListItem", "position": n, "name": g["h1"], "url": f'{URL}/{g["slug"]}/'} for n, g in enumerate(GUIAS, 1)]}}]}
+    lista = '\n'.join(f'        <li><a href="/{g["slug"]}/">{e(g["h1"])}</a>: {e(g["desc"])}</li>' for g in GUIAS)
+    return f"""<!doctype html>
+<html lang="es" style="--marca: #3d7bff">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6834927348">
+  <title>{e(titulo)}</title>
+  <meta name="description" content="{e(desc)}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3d7bff">
+  <link rel="canonical" href="{url}">
+  <meta property="og:site_name" content="Mando TV">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{url}">
+  <meta property="og:title" content="{e(titulo)}">
+  <meta property="og:description" content="{e(desc)}">
+  <meta property="og:image" content="{URL}/social.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/icono.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css?v=12">
+  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+</head>
+<body>
+  <div class="cabecera-pagina">
+    <div class="contenedor">
+      <header class="barra">
+        <a class="logo" href="/" aria-label="Mando TV, inicio">
+          {LOGO}
+          Mando TV
+        </a>
+        <nav aria-label="Principal">
+          <a href="/#funciones">Qué hace</a>
+          <a href="/soporte.html">Ayuda</a>
+          <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
+        </nav>
+      </header>
+      <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <span>Guías</span></nav>
+      <h1>Guías para usar tu celular como control remoto del TV</h1>
+      <p>Pasos simples para conectar, encender y arreglar el control de tu televisor Samsung, LG, Roku o Android TV con Mando TV.</p>
+    </div>
+  </div>
+
+  <main class="contenedor">
+    <div class="documento">
+      <h2 id="guias">Todas las guías</h2>
+      <ul>
+{lista}
+      </ul>
+
+      <h2 id="marcas">Control remoto por marca</h2>
+      <ul>
+{chr(10).join(f'        <li><a href="/{s}/">{e(n)}</a></li>' for s, n in MARCAS_ENLACES)}
+        <li><a href="/soporte.html">Ayuda y soporte</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-enlaces">
+        <nav aria-label="Pie de página">
+          <a href="/">Inicio</a>
+          <a href="/soporte.html">Ayuda</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
+          <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
+        </nav>
+        <span>Hecho en Chile</span>
+      </div>
+{pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+      <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
+    </div>
+  </footer>
+  <script src="/correo.js?v=3" defer></script>
+  <script src="/cookies.js?v=1" defer></script>
+  <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "3a3f0250e4b04d5884b033b9a94302b4"}}'></script>
+</body>
+</html>
+"""
+
+os.makedirs(os.path.join(SITIO, 'guias'), exist_ok=True)
+open(os.path.join(SITIO, 'guias', 'index.html'), 'w', encoding='utf-8', newline='\n').write(indice())
+print('ok guias/ (índice)')
 
 for g in GUIAS:
     d = os.path.join(SITIO, *g['slug'].split('/'))

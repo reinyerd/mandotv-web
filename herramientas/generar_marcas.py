@@ -29,7 +29,8 @@ MARCAS = [
       ('¿Necesito el Magic Remote para usar Mando TV?', 'Solo la primera vez, para aceptar el permiso en la pantalla. Después puedes usar solo el celular.'),
       ('¿Mando TV reemplaza a LG ThinQ?', 'Para manejar el televisor, sí: no necesitas cuenta de LG ni registrar el TV. Mando TV se conecta directo por tu WiFi.'),
       ('¿Puedo encender mi TV LG desde el celular?', 'Sí, si activas "Encender TV con móvil" en el televisor y te conectaste una vez con el TV encendido.'),
-    ]),
+    ],
+    guias=[('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular')]),
   dict(slug='control-remoto-samsung', nombre='Samsung', corto='Samsung', color='#3d7bff',
     titulo='Control remoto para TV Samsung en tu celular, gratis | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Samsung con Tizen, por WiFi. Botones, touchpad, teclado y apps. Gratis, sin anuncios y sin cuenta Samsung.',
@@ -54,7 +55,8 @@ MARCAS = [
       ('Rechacé el permiso por error, ¿qué hago?', 'En el televisor ve a Ajustes, General, Administrador de dispositivos externos, Administrador de conexión de dispositivos, y cambia Mando TV a permitido.'),
       ('¿Mando TV reemplaza a SmartThings?', 'Para manejar el televisor, sí, y sin cuenta Samsung. Mando TV se conecta directo por tu WiFi.'),
       ('¿Funciona con televisores Samsung antiguos?', 'Funciona con los Samsung con Tizen, de 2016 en adelante. Los modelos anteriores usan otro sistema que todavía no soportamos.'),
-    ]),
+    ],
+    guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original')]),
   dict(slug='control-remoto-roku', nombre='Roku', corto='Roku', color='#a77bff',
     titulo='Control remoto para Roku en tu celular, gratis | Mando TV',
     desc='Usa tu celular o tu PC como control remoto de tu Roku TV o reproductor Roku, por WiFi. Botones, teclado, canales, entradas y encendido. Gratis y sin anuncios.',
@@ -79,7 +81,8 @@ MARCAS = [
       ('¿Funciona con el Roku Express o el Streaming Stick?', 'Sí. Todos los reproductores Roku y los televisores Roku TV se manejan igual.'),
       ('Mando TV no encuentra mi Roku, ¿qué hago?', 'Revisa que estén en la misma red WiFi y que el "Control por apps móviles" del Roku no esté desactivado. También puedes agregarlo escribiendo su dirección IP.'),
       ('¿Necesito cuenta de Roku?', 'No. Mando TV se conecta directo por tu WiFi.'),
-    ]),
+    ],
+    guias=[('roku-no-responde-al-celular', 'Roku no responde al celular: solución al error 403'), ('perdi-el-control-del-roku', 'Perdí el control del Roku: cómo usar el celular')]),
   dict(slug='control-remoto-android-tv', nombre='Android TV y Google TV', corto='Android TV', color='#2fbf8f',
     titulo='Control remoto para Android TV y Google TV en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu Google TV o Android TV (Sony, TCL, Xiaomi, Chromecast), por WiFi. Botones, teclado y apps. Gratis y sin anuncios.',
@@ -102,10 +105,35 @@ MARCAS = [
     encender='Depende del fabricante. Busca "Wake on LAN", "Encender por red" o "Activación remota" en los ajustes de red o de energía. Algunos modelos no lo traen.',
     faq=[
       ('¿Funciona con el Chromecast con Google TV?', 'Sí, se empareja con el código de 6 caracteres que aparece en la pantalla.'),
-      ('¿En qué se diferencia de la app de Google TV?', 'Mando TV no necesita cuenta de Google, funciona también desde Windows y Mac, y maneja además televisores LG, Samsung y Roku desde la misma app.'),
+      ('¿En qué se diferencia de la app de Google TV?', 'Mando TV no necesita cuenta de Google, funciona también desde Windows, y maneja además televisores LG, Samsung y Roku desde la misma app.'),
       ('El código no aparece en la pantalla, ¿qué hago?', 'Cierra Mando TV, vuelve a abrirla y toca el televisor otra vez. Revisa que el TV no esté en modo de ahorro de energía profundo.'),
-    ]),
+    ],
+    guias=[('android-tv-codigo-de-emparejamiento', 'Android TV pide un código para conectar el celular')]),
 ]
+
+
+GUIAS_PIE = [
+  ('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular'),
+  ('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original'),
+  ('conectar-celular-al-tv-por-wifi', 'Cómo conectar el celular al TV por WiFi'),
+  ('controlar-el-tv-desde-el-pc', 'Cómo controlar el TV desde el PC con Windows'),
+  ('roku-no-responde-al-celular', 'Roku no responde al celular (error 403)'),
+  ('el-celular-no-encuentra-el-tv', 'El celular no encuentra el TV'),
+  ('android-tv-codigo-de-emparejamiento', 'Android TV pide un código de emparejamiento'),
+  ('perdi-el-control-del-roku', 'Perdí el control del Roku'),
+]
+MARCAS_PIE = [
+  ('control-remoto-samsung', 'Control remoto Samsung'),
+  ('control-remoto-lg', 'Control remoto LG'),
+  ('control-remoto-roku', 'Control remoto Roku'),
+  ('control-remoto-android-tv', 'Control remoto Android TV'),
+]
+
+def pie_marcas():
+    li = [f'        <li><a href="/{s}/">{n}</a></li>' for s, n in MARCAS_PIE]
+    li.append('        <li><a href="/guias/">Todas las guías</a></li>')
+    li += [f'        <li><a href="/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
+    return '      <ul class="marcas-enlaces pie-marcas" aria-label="Marcas y guías">\n' + '\n'.join(li) + '\n      </ul>\n'
 
 LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
 
@@ -123,15 +151,14 @@ def pagina(m):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in m["faq"]]}]}
     funciones = '\n'.join(f'        <li><b>{e(t)}</b><span>{e(d)}</span></li>' for t, d in m['funciones'])
     pasos = '\n'.join(f'          <li>{e(p)}</li>' for p in m['pasos'])
+    guias_marca = '\n'.join(f'        <li><a href="/guias/{s}/">{e(n)}</a></li>' for s, n in m['guias'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in m['faq'])
-    asunto = f'Avísame cuando salga Mando TV ({m["corto"]})'
-    from urllib.parse import quote
-    mailto = f'mailto:hola@mandotv.app?subject={quote(asunto)}&amp;body={quote("Hola, quiero saber cuando Mando TV esté en la tienda. Mi televisor es: ")}'
     return f'''<!doctype html>
 <html lang="es" style="--marca: {m["color"]}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6834927348">
   <title>{e(m["titulo"])}</title>
   <meta name="description" content="{e(m["desc"])}">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -176,10 +203,10 @@ def pagina(m):
       </div>
       <ul class="tiendas" id="tiendas" aria-label="Disponible en las tiendas">
         <li><a class="tienda" href="https://apps.apple.com/app/id6834927348" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Descárgalo en</small>App Store</span></a></li>
-        <li><a class="tienda" href="mailto:hola@mandotv.app?subject=Av%C3%ADsame%20cuando%20Mando%20TV%20salga%20en%20Google%20Play&amp;body=Hola%2C%20quiero%20saber%20cuando%20Mando%20TV%20est%C3%A9%20disponible%20en%20Android%20%28Google%20Play%29.%20Mi%20televisor%20es%3A%20" aria-label="Próximamente en Google Play: avísame cuando salga"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Próximamente en</small>Google Play</span></a></li>
+        <li><a class="tienda" href="/#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small>Google Play</span></a></li>
         <li><a class="tienda" href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg><span><small>Descárgalo en</small>Microsoft Store</span></a></li>
       </ul>
-      <p class="nota">iPhone, iPad, Android, Windows y Mac. Gratis y sin anuncios.</p>
+      <p class="nota">iPhone, iPad, Android y Windows. Gratis y sin anuncios.</p>
     </div>
   </div>
 
@@ -206,6 +233,12 @@ def pagina(m):
 {faq}
       </div>
 
+      <h2 id="guias">Guías de {e(m["corto"])}</h2>
+      <ul>
+{guias_marca}
+        <li><a href="/guias/">Todas las guías para controlar el TV con el celular</a></li>
+      </ul>
+
       <h2 id="otras">Otras marcas</h2>
       <p>Mando TV maneja todas estas marcas desde la misma app:</p>
       <ul>
@@ -226,12 +259,7 @@ def pagina(m):
         </nav>
         <span>Hecho en Chile</span>
       </div>
-      <ul class="marcas-enlaces pie-marcas" aria-label="Guías">
-        <li><a href="/guias/encender-tv-lg-con-el-celular/">Encender TV LG con el celular</a></li>
-        <li><a href="/guias/control-remoto-samsung-sin-control/">Samsung sin control</a></li>
-        <li><a href="/guias/conectar-celular-al-tv-por-wifi/">Celular como control por WiFi</a></li>
-      </ul>
-      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+{pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
       <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
     </div>
   </footer>
