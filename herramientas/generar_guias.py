@@ -48,7 +48,7 @@ GUIAS = [
       'Revisa que el TV esté conectado a tu WiFi y que el celular esté en la misma red.',
       'Abre Mando TV en el celular. Tu TV Samsung aparece solo en la lista. Tócalo.',
       'El TV pide aceptar la conexión. En la mayoría de los modelos se acepta con los botones físicos del TV o con el joystick de atrás.',
-      'Listo, ya puedes usar el celular como control: botones, touchpad, teclado y apps.',
+      'Listo, ya puedes usar el celular como control. Los botones y el teclado son gratis; el touchpad y las apps son función Pro.',
       'Para encenderlo la próxima vez desde el celular, ve a Configuración > General > Red > Configuración experta y activa "Encender con dispositivo móvil".',
     ],
     extra=[
@@ -69,7 +69,7 @@ GUIAS = [
       'Conecta el celular y el TV a la misma red WiFi.',
       'Abre Mando TV. Tu televisor aparece solo en la lista. Tócalo.',
       'Acepta la conexión según tu marca (abajo está el detalle de cada una).',
-      'Usa los botones, el touchpad o el teclado del celular para manejar el TV.',
+      'Usa los botones o el teclado del celular para manejar el TV. El touchpad es una función Pro.',
     ],
     extra=[
       ('Samsung', 'El TV pregunta si permites la conexión. Acéptala en la pantalla la primera vez. Funciona con Tizen, de 2016 en adelante. Para encenderlo desde el celular, activa "Encender con dispositivo móvil" en Configuración > General > Red > Configuración experta.'),
@@ -85,7 +85,7 @@ GUIAS = [
     ]),
   dict(slug='guias/controlar-el-tv-desde-el-pc', corto='Controlar el TV desde el PC',
     titulo='Cómo controlar el TV desde el PC con Windows (gratis) | Mando TV',
-    desc='Usa tu computador con Windows como control remoto del TV Samsung, LG, Roku o Google TV por WiFi. Botones, teclado y apps con Mando TV, gratis y sin anuncios.',
+    desc='Usa tu PC con Windows como control remoto del TV Samsung, LG, Roku o Google TV por WiFi. Botones y teclado gratis; apps y atajos del PC con Pro.',
     h1='Cómo controlar el TV desde el PC con Windows',
     intro='Si pasas el día frente al computador, no necesitas buscar el control: Mando TV para Windows maneja tu televisor Samsung, LG, Roku, Google TV o Android TV por la red WiFi de tu casa. Sirve para cambiar de app, subir el volumen o escribir en YouTube con el teclado del PC.',
     pasos=[
@@ -93,7 +93,7 @@ GUIAS = [
       'Revisa que el computador y el TV estén en la misma red (WiFi o cable, pero del mismo router).',
       'Abre Mando TV: tu televisor aparece solo en la lista. Tócalo o haz clic en él.',
       'Acepta la conexión en la pantalla del TV la primera vez (en Google TV y Android TV escribe el código que muestra el TV).',
-      'Listo: usa los botones, el touchpad o el teclado para escribir en el buscador del TV.',
+      'Listo: usa los botones o el teclado para escribir en el buscador del TV. El touchpad es una función Pro.',
     ],
     extra=[
       ('Atajos del teclado del PC (Pro)', 'Con Mando TV Pro manejas el TV con el teclado del computador: flechas para moverte, Enter para OK, Retroceso o Esc para volver, + y − para el volumen, M para silenciar y Espacio para pausar.'),
@@ -103,7 +103,7 @@ GUIAS = [
     faq=[
       ('¿Necesito un cable o Bluetooth para controlar el TV desde el PC?', 'No. Mando TV se conecta por la red de tu casa: basta con que el PC y el TV estén en el mismo router.'),
       ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, TCL, Philips, Xiaomi y otros).'),
-      ('¿Cuánto cuesta?', 'El control completo es gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como los atajos del teclado y el mini control.'),
+      ('¿Cuánto cuesta?', 'Los botones, el teclado y el encendido por red son gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como el touchpad, las apps, los atajos del teclado del PC y el mini control.'),
     ]),
   # Páginas de rescate (2026-11-17): problemas reales que reportaron los testers. Cada una lleva pasos propios.
   dict(slug='guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',
@@ -209,7 +209,7 @@ GUIAS = [
       'Abre Mando TV y toca tu televisor en la lista (Samsung, LG, Roku o Android TV).',
       'Si el TV está apagado, toca Encender. Funciona si el televisor tiene activado el encendido por red; si nunca lo activaste, enciéndelo esta vez con el botón del propio TV y actívalo para la próxima.',
       'Enciende la consola. Si tienes activado HDMI-CEC (el truco de más abajo), el televisor cambia solo a su entrada.',
-      'Si no cambia solo, toca Entradas en Mando TV y elige el HDMI donde está la consola (HDMI 1, HDMI 2...).',
+      'Si no cambia solo, toca Entradas en Mando TV (función Pro) y elige el HDMI donde está la consola (HDMI 1, HDMI 2...).',
       'Para el volumen, usa los botones grandes de la app mientras juegas.',
     ],
     extra=[
@@ -340,7 +340,7 @@ def pagina(g):
 {extra}
 
       <h2 id="mando-tv">Hazlo con Mando TV</h2>
-      <p>Mando TV es un control remoto universal para tu televisor. Es gratis y sin anuncios, y no pide cuenta. Descárgalo para iPhone, iPad o Windows:</p>
+      <p>Mando TV es un control remoto universal para tu televisor. Descárgalo gratis, sin anuncios y sin cuenta. Pro es un pago único opcional, sin suscripción. Para iPhone, iPad o Windows:</p>
       <ul class="tiendas" aria-label="Descargar Mando TV">
         <li><a class="tienda" href="{TIENDA_APPLE}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store">{APPLE_SVG}<span><small>Descárgalo en</small>App Store</span></a></li>
         <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store">{MS_SVG}<span><small>Descárgalo en</small>Microsoft Store</span></a></li>

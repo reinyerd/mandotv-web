@@ -7,16 +7,16 @@ URL = 'https://mandotv.app'
 MARCAS = [
   dict(slug='control-remoto-lg', nombre='LG', corto='LG', color='#e0457b',
     titulo='Control remoto para TV LG en tu celular, gratis | Mando TV',
-    desc='Usa tu celular o PC como control remoto de tu TV LG con webOS, por WiFi. Botones, puntero, teclado, apps y encendido. Gratis, sin anuncios y sin el control.',
+    desc='Tu celular o PC como control remoto de tu TV LG con webOS, por WiFi. Botones, teclado y encendido gratis; puntero, apps y entradas con Pro.',
     h1='Control remoto para TV LG',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Smart TV LG con webOS, por la red WiFi de tu casa. Sirve si perdiste el control, si se le acabaron las pilas o si simplemente quieres escribir más rápido.',
     compat='Smart TV LG con sistema webOS (la mayoría de los modelos LG Smart TV desde 2014). Funciona con televisores LED, NanoCell, QNED y OLED.',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, canales, silencio y reproducción.'),
-      ('Puntero como el Magic Remote', 'Mueve la flecha por la pantalla con el dedo, igual que con el control mágico de LG.'),
+      ('Puntero como el Magic Remote (Pro)', 'Mueve la flecha por la pantalla con el dedo, igual que con el control mágico de LG.'),
       ('Teclado', 'Escribe en YouTube, Netflix o el navegador del TV con el teclado de tu celular.'),
-      ('Apps y entradas', 'Abre tus apps y cambia a HDMI, TV en vivo, AirPlay o Screen Share.'),
-      ('Salida de audio', 'Cambia entre los parlantes del TV y tu barra de sonido.'),
+      ('Apps y entradas (Pro)', 'Abre tus apps y cambia a HDMI, TV en vivo, AirPlay o Screen Share.'),
+      ('Salida de audio (Pro)', 'Cambia entre los parlantes del TV y tu barra de sonido.'),
       ('Encender el TV', 'Si está apagado, Mando TV lo enciende por la red y se conecta solo.'),
     ],
     pasos=[
@@ -33,15 +33,15 @@ MARCAS = [
     guias=[('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular')]),
   dict(slug='control-remoto-samsung', nombre='Samsung', corto='Samsung', color='#3d7bff',
     titulo='Control remoto para TV Samsung en tu celular, gratis | Mando TV',
-    desc='Usa tu celular o PC como control remoto de tu TV Samsung con Tizen, por WiFi. Botones, touchpad, teclado y apps. Gratis, sin anuncios y sin cuenta Samsung.',
+    desc='Usa tu celular o PC como control remoto de tu TV Samsung con Tizen, por WiFi. Botones, teclado y encendido gratis; touchpad y apps con Pro. Sin anuncios.',
     h1='Control remoto para TV Samsung',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Smart TV Samsung, por la red WiFi de tu casa. No necesitas cuenta Samsung ni registrar el televisor.',
     compat='Smart TV Samsung con sistema Tizen, modelos 2016 en adelante (series como Crystal UHD, QLED, Neo QLED, The Frame y OLED).',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Volver, Inicio, volumen, canales, silencio y fuente.'),
-      ('Touchpad', 'Desliza el dedo para moverte por los menús sin buscar flechas.'),
+      ('Touchpad (Pro)', 'Desliza el dedo para moverte por los menús sin buscar flechas.'),
       ('Teclado', 'Escribe búsquedas y contraseñas con el teclado de tu celular.'),
-      ('Apps', 'Abre Netflix, YouTube, Prime Video y tus otras apps con un toque.'),
+      ('Apps (Pro)', 'Abre Netflix, YouTube, Prime Video y tus otras apps con un toque.'),
       ('Encender el TV', 'Si está apagado, Mando TV lo enciende por la red y se conecta solo.'),
       ('Sin cuenta', 'Se conecta directo por tu WiFi, sin pasar por internet.'),
     ],
@@ -59,15 +59,15 @@ MARCAS = [
     guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original')]),
   dict(slug='control-remoto-roku', nombre='Roku', corto='Roku', color='#a77bff',
     titulo='Control remoto para Roku en tu celular, gratis | Mando TV',
-    desc='Usa tu celular o tu PC como control remoto de tu Roku TV o reproductor Roku, por WiFi. Botones, teclado, canales, entradas y encendido. Gratis y sin anuncios.',
+    desc='Tu celular o PC como control remoto de tu Roku TV o reproductor Roku por WiFi. Botones, teclado y encendido gratis; canales y entradas con Pro.',
     h1='Control remoto para Roku',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Roku, por la red WiFi de tu casa. Funciona con televisores Roku TV y con los reproductores Roku que se conectan al HDMI.',
     compat='Televisores Roku TV (TCL, Hisense, Philips, Sharp, JVC y otros) y reproductores Roku (Express, Streaming Stick, Ultra).',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio, repetir y reproducción.'),
       ('Teclado', 'Escribe búsquedas en los canales de Roku con el teclado de tu celular.'),
-      ('Canales', 'Abre Netflix, YouTube y tus otros canales de Roku con un toque.'),
-      ('Entradas', 'En Roku TV, cambia a HDMI, antena o AV desde la app.'),
+      ('Canales (Pro)', 'Abre Netflix, YouTube y tus otros canales de Roku con un toque.'),
+      ('Entradas (Pro)', 'En Roku TV, cambia a HDMI, antena o AV desde la app.'),
       ('Encender el TV', 'En televisores Roku TV con inicio rápido, Mando TV lo enciende desde el celular.'),
       ('Sin emparejar', 'Roku no pide código: lo tocas en la lista y listo.'),
     ],
@@ -85,15 +85,15 @@ MARCAS = [
     guias=[('roku-no-responde-al-celular', 'Roku no responde al celular: solución al error 403'), ('perdi-el-control-del-roku', 'Perdí el control del Roku: cómo usar el celular')]),
   dict(slug='control-remoto-android-tv', nombre='Android TV y Google TV', corto='Android TV', color='#2fbf8f',
     titulo='Control remoto para Android TV y Google TV en tu celular | Mando TV',
-    desc='Usa tu celular o PC como control remoto de tu Google TV o Android TV (Sony, TCL, Xiaomi, Chromecast), por WiFi. Botones, teclado y apps. Gratis y sin anuncios.',
+    desc='Tu celular o PC como control de Google TV o Android TV (Sony, TCL, Xiaomi) por WiFi. Botones, teclado y encendido gratis; touchpad y apps con Pro.',
     h1='Control remoto para Android TV',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Android TV o Google TV, por la red WiFi de tu casa. También en iPhone y en Windows.',
     compat='Televisores con Android TV o Google TV (Sony, TCL, Philips, Xiaomi, Hisense y otros), Chromecast con Google TV, Google TV Streamer y Nvidia Shield.',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio y reproducción.'),
-      ('Touchpad', 'Desliza el dedo para moverte rápido por los menús de Google TV.'),
+      ('Touchpad (Pro)', 'Desliza el dedo para moverte rápido por los menús de Google TV.'),
       ('Teclado', 'Escribe búsquedas y contraseñas con el teclado de tu celular.'),
-      ('Apps', 'Abre YouTube, Netflix, Disney+ y tus otras apps con un toque.'),
+      ('Apps (Pro)', 'Abre YouTube, Netflix, Disney+ y tus otras apps con un toque.'),
       ('Encender el TV', 'En los modelos con encendido por red, Mando TV lo enciende y se conecta solo.'),
       ('iPhone, Android y PC', 'Funciona igual desde cualquier celular o computador.'),
     ],
@@ -207,7 +207,7 @@ def pagina(m):
         <li><a class="tienda" href="/#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small>Google Play</span></a></li>
         <li><a class="tienda" href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg><span><small>Descárgalo en</small>Microsoft Store</span></a></li>
       </ul>
-      <p class="nota">iPhone, iPad, Android y Windows. Gratis y sin anuncios.</p>
+      <p class="nota">iPhone, iPad, Android y Windows. Descarga gratis y sin anuncios. Pro es un pago único, sin suscripción.</p>
     </div>
   </div>
 
