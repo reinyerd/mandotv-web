@@ -121,6 +121,7 @@ GUIAS_PIE = [
   ('el-celular-no-encuentra-el-tv', 'El celular no encuentra el TV'),
   ('android-tv-codigo-de-emparejamiento', 'Android TV pide un código de emparejamiento'),
   ('perdi-el-control-del-roku', 'Perdí el control del Roku'),
+  ('encender-tv-y-hdmi-de-la-consola-sin-control', 'Encender el TV y pasar al HDMI de la consola sin control'),
 ]
 MARCAS_PIE = [
   ('control-remoto-samsung', 'Control remoto Samsung'),

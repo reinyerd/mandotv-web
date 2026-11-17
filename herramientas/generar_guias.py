@@ -199,6 +199,29 @@ GUIAS = [
       ('¿Y el volumen?', 'En un Roku TV el celular sube y baja el volumen. En un reproductor Roku conectado por HDMI depende del televisor: en muchos funciona y en otros no.'),
       ('¿Tengo que crear una cuenta?', 'No. Mando TV no pide cuenta y además controla televisores Samsung, LG y Android TV desde la misma app.'),
     ]),
+  dict(slug='guias/encender-tv-y-hdmi-de-la-consola-sin-control', corto='TV y consola sin control', fecha='2026-11-17',
+    titulo='Cambiar al HDMI de la consola sin el control del TV',
+    desc='Llegó el día de jugar y no aparece el control del TV. Enciende el televisor y pasa al HDMI de tu PS5 o Xbox desde el celular, sin anuncios.',
+    h1='Cómo encender el TV y cambiar al HDMI de la consola sin el control',
+    intro='El estreno de GTA VI, la consola lista y el control del televisor perdido entre los cojines. Pasa más de lo que parece. Con Mando TV el celular enciende el televisor y lo cambia al HDMI de tu PlayStation o Xbox, por el WiFi de tu casa.',
+    pasos=[
+      'Conecta el celular al mismo WiFi que el televisor.',
+      'Abre Mando TV y toca tu televisor en la lista (Samsung, LG, Roku o Android TV).',
+      'Si el TV está apagado, toca Encender. Funciona si el televisor tiene activado el encendido por red; si nunca lo activaste, enciéndelo esta vez con el botón del propio TV y actívalo para la próxima.',
+      'Enciende la consola. Si tienes activado HDMI-CEC (el truco de más abajo), el televisor cambia solo a su entrada.',
+      'Si no cambia solo, toca Entradas en Mando TV y elige el HDMI donde está la consola (HDMI 1, HDMI 2...).',
+      'Para el volumen, usa los botones grandes de la app mientras juegas.',
+    ],
+    extra=[
+      ('El truco gratis: que la consola cambie el TV sola', 'La PS5 y la Xbox pueden encender el televisor y pasarlo a su HDMI apenas se encienden, gracias a HDMI-CEC. En la PS5 está en Configuración > Sistema > HDMI > Activar Enlace de dispositivos HDMI. En la Xbox, en Configuración > General > Opciones de TV y pantalla > Control de dispositivos. En el televisor tiene otro nombre según la marca: Anynet+ en Samsung, SIMPLINK en LG y Control de dispositivos HDMI o BRAVIA Sync en otras.'),
+      ('Si es un Roku TV', 'El botón físico del televisor, casi siempre abajo al centro o detrás, lo enciende. Desde ahí el celular hace el resto.'),
+    ],
+    marca=None,
+    faq=[
+      ('¿Mando TV tiene algo que ver con GTA VI?', 'No. Mando TV no está afiliado a Rockstar Games ni a Take-Two. Solo te ayuda a que no te quedes sin jugar por no encontrar el control del televisor.'),
+      ('¿Cambiar de entrada HDMI es gratis?', 'La lista de entradas es parte de Mando TV Pro, un pago único sin suscripción. Gratis puedes encender el TV, usar las flechas, OK y el volumen, y dejar que la consola cambie la entrada sola con HDMI-CEC.'),
+      ('¿Sirve con cualquier televisor?', 'Con televisores Samsung, LG, Roku y Android TV conectados al mismo WiFi. Si el tuyo es de otra marca, el truco de HDMI-CEC igual te sirve.'),
+    ]),
 ]
 
 
@@ -211,6 +234,7 @@ GUIAS_PIE = [
   ('el-celular-no-encuentra-el-tv', 'El celular no encuentra el TV'),
   ('android-tv-codigo-de-emparejamiento', 'Android TV pide un código de emparejamiento'),
   ('perdi-el-control-del-roku', 'Perdí el control del Roku'),
+  ('encender-tv-y-hdmi-de-la-consola-sin-control', 'Encender el TV y pasar al HDMI de la consola sin control'),
 ]
 MARCAS_PIE = [
   ('control-remoto-samsung', 'Control remoto Samsung'),
