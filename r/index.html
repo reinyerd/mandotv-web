@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es" style="--marca: #8e5cf7">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Una rutina de Mando TV para tu televisor | Mando TV</title>
+  <meta name="description" content="Alguien te compartió una rutina de Mando TV: varios pasos para tu televisor con un solo toque. Ábrela en la app.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#8e5cf7">
+  <meta property="og:site_name" content="Mando TV">
+  <meta property="og:title" content="Te compartieron una rutina de Mando TV">
+  <meta property="og:description" content="Varios pasos para tu televisor con un solo toque. Ábrela en Mando TV, el control remoto universal gratis y sin anuncios.">
+  <meta property="og:image" content="https://mandotv.app/social.png?v=cf023f807e">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3ac0c31292">
+  <link rel="icon" href="/icono.svg?v=1a26271c80" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css?v=3f80cc3658">
+  <style>
+    .rutina-tarjeta { background: #fff; color: #0f1115; border-radius: 22px; padding: 22px 22px 18px; margin-top: 22px; box-shadow: 0 18px 40px rgba(15, 17, 21, .22); max-width: 560px; }
+    .rutina-tarjeta small { display: block; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .6; }
+    .rutina-tarjeta h2 { margin: 4px 0 12px; font-size: clamp(1.6rem, 6vw, 2.2rem); overflow-wrap: anywhere; }
+    .rutina-tarjeta ol { margin: 0; padding-left: 1.4em; }
+    .rutina-tarjeta li { padding: 6px 0; overflow-wrap: anywhere; }
+    .rutina-tarjeta li + li { border-top: 1px solid rgba(15, 17, 21, .08); }
+    .rutina-error { margin-top: 22px; max-width: 560px; }
+    .copiado { margin-left: 10px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="cabecera-pagina">
+    <div class="contenedor">
+      <header class="barra">
+        <a class="logo" href="/" aria-label="Mando TV, inicio">
+          <img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">
+          Mando TV
+        </a>
+        <nav aria-label="Principal">
+          <a href="/#funciones">Qué hace</a>
+          <a href="/soporte.html">Ayuda</a>
+        </nav>
+      </header>
+      <h1>Te compartieron una rutina</h1>
+      <p>Una rutina hace varias cosas en tu televisor con un solo toque: cambiar a HDMI, abrir una app, ajustar el volumen y más.</p>
+
+      <div class="rutina-tarjeta" id="tarjeta" hidden>
+        <small>Rutina</small>
+        <h2 id="nombre"></h2>
+        <ol id="pasos"></ol>
+      </div>
+      <div class="rutina-error" id="error" hidden>
+        <p><strong>Este enlace de rutina no se puede leer.</strong> Puede que se haya cortado al copiarlo. Pide a quien te lo mandó que lo vuelva a enviar.</p>
+      </div>
+
+      <div class="acciones" id="acciones" hidden>
+        <button type="button" class="boton" id="copiar">Copiar enlace</button>
+        <a class="boton claro" href="#descargar">Descargar Mando TV</a>
+        <span class="copiado" id="copiado" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+
+  <main class="contenedor">
+    <div class="documento">
+      <h2 id="como">Cómo guardarla en tu celular</h2>
+      <ol>
+        <li>Copia este enlace con el botón "Copiar enlace".</li>
+        <li>Abre Mando TV y entra al control de tu televisor.</li>
+        <li>Toca "+ Rutina" y luego "Pegar enlace de una rutina".</li>
+        <li>Revisa los pasos y toca Guardar. Desde ahí la rutina queda como un botón en el control.</li>
+      </ol>
+      <p class="nota">Las rutinas son parte de Mando TV Pro. El enlace solo lleva el nombre y los pasos: nunca datos de tu televisor ni de tu red.</p>
+
+      <h2 id="descargar">Descarga Mando TV</h2>
+      <p>Mando TV es un control remoto universal para Samsung, LG, Roku y Android TV. Es gratis, sin anuncios y no pide cuenta.</p>
+      <ul class="tiendas" aria-label="Descargar Mando TV">
+        <li><a class="tienda" href="https://apps.apple.com/app/id6834927348" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Descárgalo en</small>App Store</span></a></li>
+        <li><a class="tienda" href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg><span><small>Descárgalo en</small>Microsoft Store</span></a></li>
+      </ul>
+      <p class="nota">Pronto en Android y Mac.</p>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-enlaces">
+        <nav aria-label="Pie de página">
+          <a href="/">Inicio</a>
+          <a href="/soporte.html">Ayuda</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
+        </nav>
+        <span>Hecho en Chile</span>
+      </div>
+      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+      <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
+    </div>
+  </footer>
+  <script>
+    // Lee la rutina del fragmento (#...), que nunca se envía a ningún servidor. Se muestra solo con textContent.
+    (function () {
+      var MAX_TEXTO = 4000, MAX_NOMBRE = 24, MAX_PASO = 80, MAX_PASOS = 10;
+      var prohibidos = /[\u0000-\u001F\u007F-\u009F‪-‮⁦-⁩]/;
+      function leer(hash) {
+        try {
+          var t = (hash || '').replace(/^#/, '');
+          if (!t || t.length > MAX_TEXTO || !/^[A-Za-z0-9_-]+=*$/.test(t)) return null;
+          t = t.replace(/=+$/, '').replace(/-/g, '+').replace(/_/g, '/');
+          while (t.length % 4) t += '=';
+          var bin = atob(t), bytes = new Uint8Array(bin.length);
+          for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          var d = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+          if (!d || d.v !== 1 || typeof d.n !== 'string' || !Array.isArray(d.p)) return null;
+          if (prohibidos.test(d.n) || d.p.some(function (x) { return typeof x !== 'string' || prohibidos.test(x); })) return null;
+          var nombre = d.n.trim();
+          var pasos = d.p.map(function (x) { return x.trim(); }).filter(Boolean);
+          if (!nombre || nombre.length > MAX_NOMBRE || !pasos.length || pasos.length > MAX_PASOS) return null;
+          if (pasos.some(function (x) { return x.length > MAX_PASO; })) return null;
+          return { nombre: nombre, pasos: pasos };
+        } catch (e) { return null; }
+      }
+      // Si cambia solo el fragmento (otro enlace en la misma pestaña), se vuelve a leer desde cero.
+      window.addEventListener('hashchange', function () { location.reload(); });
+      var r = leer(location.hash);
+      if (!r) { document.getElementById('error').hidden = false; return; }
+      document.getElementById('nombre').textContent = r.nombre;
+      var ol = document.getElementById('pasos');
+      r.pasos.forEach(function (p) { var li = document.createElement('li'); li.textContent = p; ol.appendChild(li); });
+      document.getElementById('tarjeta').hidden = false;
+      document.getElementById('acciones').hidden = false;
+      document.title = 'Rutina "' + r.nombre + '" | Mando TV';
+      var aviso = document.getElementById('copiado');
+      document.getElementById('copiar').addEventListener('click', function () {
+        var enlace = location.href;
+        var listo = function () { aviso.textContent = 'Enlace copiado'; };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(enlace).then(listo, function () { aviso.textContent = 'Copia el enlace de la barra de direcciones'; });
+        } else { aviso.textContent = 'Copia el enlace de la barra de direcciones'; }
+      });
+    })();
+  </script>
+</body>
+</html>
