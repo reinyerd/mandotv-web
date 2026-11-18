@@ -387,6 +387,13 @@ EN_GEMELOS = {
   'guias/cambiar-entrada-hdmi-sin-control': 'en/guides/change-hdmi-input-without-remote',
   'guias/android-tv-sin-control-remoto': 'en/guides/android-tv-without-remote',
   'guias/encender-tv-lg-con-el-celular': 'en/guides/turn-on-lg-tv-with-phone',
+  'guias/control-remoto-samsung-sin-control': 'en/guides/samsung-tv-without-remote',
+  'guias/conectar-celular-al-tv-por-wifi': 'en/guides/connect-phone-to-tv-wifi',
+  'guias/controlar-el-tv-desde-el-pc': 'en/guides/control-tv-from-pc',
+  'guias/roku-no-responde-al-celular': 'en/guides/roku-remote-app-not-working',
+  'guias/el-celular-no-encuentra-el-tv': 'en/guides/phone-cant-find-tv',
+  'guias/android-tv-codigo-de-emparejamiento': 'en/guides/android-tv-pairing-code',
+  'guias/perdi-el-control-del-roku': 'en/guides/lost-roku-remote',
 }
 
 def alternos_en(slug):

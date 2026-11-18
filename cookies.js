@@ -45,7 +45,7 @@
     aviso.setAttribute('aria-label', EN ? 'Cookie notice' : 'Aviso de cookies');
     aviso.innerHTML = EN
       ? '<p><b>Can we count your visits with cookies?</b> We use Google Analytics to see which pages are read ' +
-        'and improve the site. It only turns on if you accept. <a href="/privacidad.html#cookies">Learn more (in Spanish)</a></p>' +
+        'and improve the site. It only turns on if you accept. <a href="/en/privacy.html#cookies">Learn more</a></p>' +
         '<div class="aviso-cookies-botones">' +
         '<button type="button" class="boton" data-eleccion="si">Accept</button>' +
         '<button type="button" class="boton" data-eleccion="no">Decline</button>' +
