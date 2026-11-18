@@ -7,7 +7,7 @@
 #   - Gratis y Pro: docs/PRO.md y funcionesProPorDefecto en lib/core/licencia.dart.
 # Fire TV sale en la app 1.0.8. Poner True SOLO cuando la 1.0.8 esté publicada en las tiendas y volver a generar
 # (python -I herramientas/generar_en.py .). Con False no se genera la guía de Fire TV ni se promete en ninguna página.
-FIRE_TV_PUBLICADO = False
+FIRE_TV_PUBLICADO = True
 
 FREE_PRO = ('The arrows, OK, Back, Home, volume, channels, number keys, keyboard and power on or off are free. '
             'The touchpad, the apps and inputs lists, voice commands and routines are part of Mando TV Pro, '
