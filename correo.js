@@ -3,22 +3,29 @@
 // Al pulsarlo mostramos un panel con: abrir Gmail, abrir la app de correo o copiar la dirección.
 (function () {
   var panel, asunto, cuerpo, enlaceApp, enlaceGmail, aviso;
+  var EN = document.documentElement.lang === 'en';
+  var T = EN
+    ? { titulo: 'Write to us', es: 'Our email is', gmail: 'Open in Gmail', app: 'Open my email app', copiar: 'Copy address',
+        cerrar: 'Close', copiada: 'Address copied. Paste it into your email.', copia: 'Copy the address: hola@mandotv.app' }
+    : { titulo: 'Escríbenos', es: 'Nuestro correo es', gmail: 'Abrir en Gmail', app: 'Abrir mi app de correo',
+        copiar: 'Copiar dirección', cerrar: 'Cerrar', copiada: 'Dirección copiada. Pégala en tu correo.',
+        copia: 'Copia la dirección: hola@mandotv.app' };
 
   function crearPanel() {
     panel = document.createElement('dialog');
     panel.className = 'panel-correo';
     panel.setAttribute('aria-labelledby', 'panel-correo-titulo');
     panel.innerHTML =
-      '<h2 id="panel-correo-titulo">Escríbenos</h2>' +
-      '<p>Nuestro correo es</p>' +
+      '<h2 id="panel-correo-titulo">' + T.titulo + '</h2>' +
+      '<p>' + T.es + '</p>' +
       '<p class="panel-correo-dir">hola@mandotv.app</p>' +
       '<div class="panel-correo-acciones">' +
-      '<a class="boton" id="pc-gmail" target="_blank" rel="noopener">Abrir en Gmail</a>' +
-      '<a class="boton claro" id="pc-app">Abrir mi app de correo</a>' +
-      '<button type="button" class="boton claro" id="pc-copiar">Copiar dirección</button>' +
+      '<a class="boton" id="pc-gmail" target="_blank" rel="noopener">' + T.gmail + '</a>' +
+      '<a class="boton claro" id="pc-app">' + T.app + '</a>' +
+      '<button type="button" class="boton claro" id="pc-copiar">' + T.copiar + '</button>' +
       '</div>' +
       '<p class="panel-correo-aviso" id="pc-aviso" aria-live="polite"></p>' +
-      '<button type="button" class="panel-correo-cerrar" id="pc-cerrar" aria-label="Cerrar">×</button>';
+      '<button type="button" class="panel-correo-cerrar" id="pc-cerrar" aria-label="' + T.cerrar + '">×</button>';
     document.body.appendChild(panel);
     enlaceGmail = panel.querySelector('#pc-gmail');
     enlaceApp = panel.querySelector('#pc-app');
@@ -29,18 +36,18 @@
   }
 
   function copiar() {
-    var listo = function () { aviso.textContent = 'Dirección copiada. Pégala en tu correo.'; };
+    var listo = function () { aviso.textContent = T.copiada; };
     if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText('hola@mandotv.app').then(listo, function () { aviso.textContent = 'Copia la dirección: hola@mandotv.app'; });
+      navigator.clipboard.writeText('hola@mandotv.app').then(listo, function () { aviso.textContent = T.copia; });
     } else {
-      aviso.textContent = 'Copia la dirección: hola@mandotv.app';
+      aviso.textContent = T.copia;
     }
   }
 
   function abrir(href) {
     if (!panel) crearPanel();
     var url = new URL(href);
-    asunto = url.searchParams.get('subject') || 'Hola Mando TV';
+    asunto = url.searchParams.get('subject') || (EN ? 'Hello Mando TV' : 'Hola Mando TV');
     cuerpo = url.searchParams.get('body') || '';
     enlaceApp.href = href;
     enlaceGmail.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=hola@mandotv.app&su=' +

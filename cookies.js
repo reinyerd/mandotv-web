@@ -7,6 +7,7 @@
   var CLAVE = 'mandotv-cookies'; // 'si' | 'no'
   var cargado = false;
   var aviso;
+  var EN = document.documentElement.lang === 'en';
 
   function leer() { try { return localStorage.getItem(CLAVE); } catch (e) { return null; } }
   function guardar(v) { try { localStorage.setItem(CLAVE, v); } catch (e) { /* sin almacenamiento: se vuelve a preguntar */ } }
@@ -41,14 +42,20 @@
     aviso = document.createElement('div');
     aviso.className = 'aviso-cookies';
     aviso.setAttribute('role', 'region');
-    aviso.setAttribute('aria-label', 'Aviso de cookies');
-    aviso.innerHTML =
-      '<p><b>¿Nos dejas contar tus visitas con cookies?</b> Usamos Google Analytics para saber qué páginas se leen ' +
-      'y mejorar la web. Solo se activa si aceptas. <a href="/privacidad.html#cookies">Más información</a></p>' +
-      '<div class="aviso-cookies-botones">' +
-      '<button type="button" class="boton" data-eleccion="si">Aceptar</button>' +
-      '<button type="button" class="boton" data-eleccion="no">Rechazar</button>' +
-      '</div>';
+    aviso.setAttribute('aria-label', EN ? 'Cookie notice' : 'Aviso de cookies');
+    aviso.innerHTML = EN
+      ? '<p><b>Can we count your visits with cookies?</b> We use Google Analytics to see which pages are read ' +
+        'and improve the site. It only turns on if you accept. <a href="/privacidad.html#cookies">Learn more (in Spanish)</a></p>' +
+        '<div class="aviso-cookies-botones">' +
+        '<button type="button" class="boton" data-eleccion="si">Accept</button>' +
+        '<button type="button" class="boton" data-eleccion="no">Decline</button>' +
+        '</div>'
+      : '<p><b>¿Nos dejas contar tus visitas con cookies?</b> Usamos Google Analytics para saber qué páginas se leen ' +
+        'y mejorar la web. Solo se activa si aceptas. <a href="/privacidad.html#cookies">Más información</a></p>' +
+        '<div class="aviso-cookies-botones">' +
+        '<button type="button" class="boton" data-eleccion="si">Aceptar</button>' +
+        '<button type="button" class="boton" data-eleccion="no">Rechazar</button>' +
+        '</div>';
     aviso.addEventListener('click', function (e) {
       var b = e.target.closest('[data-eleccion]');
       if (!b) return;
