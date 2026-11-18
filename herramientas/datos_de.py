@@ -428,7 +428,7 @@ GUIAS = [
     ],
     extra=[
       ('So erkennst du, ob das dein Problem ist', 'Das Zeichen ist eindeutig: Dein Handy sieht den Roku in der Liste und verbindet sich, aber nichts passiert, wenn du eine Taste antippst. Intern antwortet der Roku mit Fehler 403, was „verboten“ bedeutet. Mando TV erkennt das beim Verbinden und zeigt dir genau diese Schritte auf dem Bildschirm.'),
-      ('Standard oder Aktiviert, was wähle ich?', 'Standard reicht: Es akzeptiert Befehle aus deinem Heimnetzwerk, und das braucht eine Fernbedienung. Permissiv ist offener und nur in ungewöhnlichen Netzwerken nötig.'),
+      ('Standard oder Aktiviert, was wähle ich?', 'Beides funktioniert: Mando TV braucht nur Befehle aus deinem Heimnetzwerk. Steht die Option auf Deaktiviert (bei neuerer Software Eingeschränkt), reagiert der Roku nicht auf Apps.'),
       ('Wenn du die Roku Fernbedienung nicht hast', 'Steht die Einstellung auf Deaktiviert, lässt sie sich nur mit der echten Roku Fernbedienung ändern. Leihe dir eine aus, um es einmal zu ändern; danach kannst du alles mit deinem Handy machen. Lies auch [Roku Fernbedienung verloren](@roku-lost).'),
     ],
     marca='roku',
