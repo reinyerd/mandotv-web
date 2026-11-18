@@ -63,7 +63,7 @@ class Idioma:
     def cabecera(self, titulo, desc, url, clave, color, tipo, ld):
         U = self.U
         return f'''<!doctype html>
-<html lang="{self.cod}" style="--marca: {color}">
+<html lang="{I.CODIGO_LANG[self.cod]}" style="--marca: {color}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -155,7 +155,7 @@ class Idioma:
           {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Mando TV", "item": URL + self.home},
             {"@type": "ListItem", "position": 2, "name": m['h1'], "item": url}]},
-          {"@type": "FAQPage", "inLanguage": self.cod, "mainEntity": [
+          {"@type": "FAQPage", "inLanguage": I.CODIGO_LANG[self.cod], "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in m['faq']]}]}
         funciones = '\n'.join(f'        <li><b>{e(t)}</b><span>{e(x)}</span></li>' for t, x in m['funciones'])
         pasos = '\n'.join(f'          <li>{e(p)}</li>' for p in m['pasos'])
@@ -218,17 +218,17 @@ class Idioma:
         U = self.U
         url = URL + self.r(g['clave'])
         ld = {"@context": "https://schema.org", "@graph": [
-          {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": self.cod,
+          {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": I.CODIGO_LANG[self.cod],
            "datePublished": FECHA, "dateModified": FECHA, "mainEntityOfPage": url, "image": URL + "/social.png",
            "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
           ORG,
-          {"@type": "HowTo", "name": g["h1"], "description": g["desc"], "inLanguage": self.cod,
+          {"@type": "HowTo", "name": g["h1"], "description": g["desc"], "inLanguage": I.CODIGO_LANG[self.cod],
            "step": [{"@type": "HowToStep", "position": n, "text": self.plano(p)} for n, p in enumerate(g["pasos"], 1)]},
           {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": U['inicio'], "item": URL + self.home},
             {"@type": "ListItem", "position": 2, "name": U['g_guias'], "item": URL + self.r('guias')},
             {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
-          {"@type": "FAQPage", "inLanguage": self.cod, "mainEntity": [
+          {"@type": "FAQPage", "inLanguage": I.CODIGO_LANG[self.cod], "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
         pasos = '\n'.join(f'        <li>{self.fmt(p)}</li>' for p in g['pasos'])
         extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{self.fmt(p)}</p>' for t, p in g['extra'])
@@ -294,7 +294,7 @@ class Idioma:
         gd = {g['clave']: g['desc'] for g in d.GUIAS}
         ld = {"@context": "https://schema.org", "@graph": [
           ORG,
-          {"@type": "CollectionPage", "name": titulo, "description": desc, "url": url, "inLanguage": self.cod,
+          {"@type": "CollectionPage", "name": titulo, "description": desc, "url": url, "inLanguage": I.CODIGO_LANG[self.cod],
            "publisher": {"@id": URL + "/#org"},
            "mainEntity": {"@type": "ItemList", "itemListElement": [
              {"@type": "ListItem", "position": n, "name": t, "url": URL + self.r(k)}

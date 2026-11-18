@@ -642,12 +642,12 @@ for g in GUIAS:
 
 
 # ---------------------------------------------------------------------------------------------------------------
-# Versiones en otros idiomas de la guía de la consola (2026-11-17): /en/guides/... y /pt/guias/...
-# Textos escritos para cada idioma (no son traducción literal). hreflang entre es, en y pt, en las tres páginas.
+# Versiones en otros idiomas de la guía de la consola (2026-11-17): /en/guides/... (las demás: generar_idiomas.py)
+# Textos escritos para cada idioma (no son traducción literal). hreflang de idiomas_sitio.py.
 # ---------------------------------------------------------------------------------------------------------------
 GPLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>'
 
-ALT_CONSOLA = idiomas_sitio.alternos('console')  # es, en, pt (+ de, fr cuando estén activos)
+ALT_CONSOLA = idiomas_sitio.alternos('console')  # todas las gemelas activas
 
 UI = {
   'en': dict(lang='en', locale='en_US', inicio='Home', ayuda='Help', contacto='Contact', ver='See the steps', bajar='Download free',
@@ -660,16 +660,6 @@ UI = {
     aviso='Mando TV is not affiliated with LG, Samsung, Roku or Google. Brands named belong to their owners and are mentioned only to show compatibility.',
     migas_inicio='Home', pie='Footer', principal='Main', ruta='Breadcrumb', aria_desc='Download Mando TV', privacidad='Privacy',
     guia_nombre='Guide'),
-  'pt': dict(lang='pt-BR', locale='pt_BR', inicio='Início', ayuda='Ajuda', contacto='Contato', ver='Ver os passos', bajar='Baixar grátis',
-    pasos='Passo a passo', hazlo='Faça com o Mando TV', faq='Perguntas frequentes', idiomas='Este guia em outros idiomas',
-    nombres={'es': 'Español', 'en': 'English', 'pt': 'Português (Brasil)'},
-    tiendas='O Mando TV é um controle remoto universal para a sua TV. Baixe grátis, sem anúncios e sem conta. O Pro é uma compra única opcional, sem assinatura. Para iPhone, iPad, Windows e Android:',
-    apple_aria='Baixar o Mando TV grátis na App Store', ms_aria='Baixar o Mando TV grátis na Microsoft Store',
-    gp_aria='Teste antecipado do Mando TV no Google Play para Android', descarga='Baixe na', anticipada='Teste antecipado no',
-    nota='Android: teste antecipado grátis no Google Play. <a href="/#android">Participe em dois passos</a> e nos ajude a chegar à loja.',
-    aviso='O Mando TV não é afiliado à LG, Samsung, Roku nem Google. As marcas citadas pertencem aos seus donos e aparecem só para indicar compatibilidade.',
-    migas_inicio='Início', pie='Rodapé', principal='Principal', ruta='Caminho', aria_desc='Baixar o Mando TV', privacidad='Privacidade',
-    guia_nombre='Guia'),
 }
 
 I18N = [
@@ -696,30 +686,6 @@ I18N = [
       ('Is switching the HDMI input free?', 'The inputs list is part of Mando TV Pro, a one-time purchase with no subscription. For free you can turn the TV on, use the arrows, OK and volume, and let the console switch the input by itself with HDMI-CEC.'),
       ('Will it work with my TV?', 'It works with Samsung, LG, Roku and Android TV sets on the same Wi-Fi network. If yours is another brand, the HDMI-CEC trick can still help.'),
       ('Can I use it to play GTA VI (GTA 6) on PS5 or Xbox?', 'Mando TV does not touch the console or the game. It only gets the TV turned on and on the right HDMI input so you can sit down and play.'),
-    ]),
-  dict(idioma='pt', slug='pt/guias/ligar-tv-e-hdmi-do-console-sem-controle', corto='TV e console sem controle', fecha='2026-11-17',
-    titulo='Sem controle da TV? Ligar e mudar para o HDMI do console',
-    desc='Dia de jogar GTA VI e o controle da TV sumiu? Ligue a TV e mude para o HDMI do PS5 ou Xbox pelo celular. Grátis e sem anúncios.',
-    h1='Como ligar a TV e mudar para o HDMI do console sem o controle',
-    intro='Dia de lançamento de GTA VI, o console pronto e o controle da TV sumiu no meio das almofadas. Acontece mais do que parece. Com o Mando TV, o celular liga a TV e muda para a entrada do seu PlayStation ou Xbox, pelo Wi-Fi da sua casa.',
-    pasos=[
-      'Conecte o celular ao mesmo Wi-Fi da TV.',
-      'Abra o Mando TV e toque na sua TV na lista (Samsung, LG, Roku ou Android TV).',
-      'Se a TV estiver desligada, toque em Ligar. Funciona se a TV estiver com a ativação pela rede ligada. Se você nunca ativou isso, ligue a TV desta vez pelo botão da própria TV e ative para a próxima.',
-      'Ligue o console. Se o HDMI-CEC estiver ativado (veja o truque grátis abaixo), a TV muda sozinha para a entrada dele.',
-      'Se não mudar, toque em Entradas no Mando TV (recurso Pro) e escolha o HDMI onde o console está ligado: HDMI 1, HDMI 2 e assim por diante.',
-      'Para o volume, use os botões grandes do app enquanto você joga.',
-    ],
-    extra=[
-      ('O truque grátis: deixe o console mudar a TV sozinho', 'O PS5 e o Xbox conseguem ligar a TV e mudar para a entrada HDMI deles assim que ligam, graças ao HDMI-CEC. No PS5 fica em Configurações > Sistema > HDMI > Ativar vínculo de dispositivo HDMI. No Xbox, abra Configurações > Geral > Opções de TV e vídeo e procure a opção de controle de dispositivos. Na TV, o recurso tem outro nome conforme a marca: Anynet+ na Samsung, SIMPLINK na LG e BRAVIA Sync ou controle HDMI em outras.'),
-      ('Se a TV ficar em outra tela', 'Se o console está ligado mas a TV continua na antena ou em um app, ela não mudou de entrada. Pelo celular, toque em Entradas (Pro) e escolha o HDMI do console. Sem o Pro, use as setas e o OK para chegar às entradas da TV, ou o botão da própria TV, e escolha o HDMI. O número é o da porta onde você ligou o cabo do console.'),
-      ('Se for uma Roku TV', 'O botão físico da TV, quase sempre embaixo no centro ou atrás, liga o aparelho. Dali o celular faz o resto.'),
-    ],
-    faq=[
-      ('O Mando TV tem alguma relação com GTA VI?', 'Não. O Mando TV não é afiliado à Rockstar Games nem à Take-Two. Ele só ajuda você a não perder a hora de jogar por não achar o controle da TV.'),
-      ('Trocar a entrada HDMI é grátis?', 'A lista de entradas faz parte do Mando TV Pro, uma compra única, sem assinatura. De graça você liga a TV, usa as setas, o OK e o volume, e deixa o console trocar a entrada sozinho com o HDMI-CEC.'),
-      ('Funciona com a minha TV?', 'Funciona com TVs Samsung, LG, Roku e Android TV no mesmo Wi-Fi. Se a sua for de outra marca, o truque do HDMI-CEC ainda pode ajudar.'),
-      ('Dá para usar para jogar GTA VI (GTA 6) no PS5 ou no Xbox?', 'O Mando TV não mexe no console nem no jogo. Ele só deixa a TV ligada e na entrada HDMI certa para você sentar e jogar.'),
     ]),
 ]
 

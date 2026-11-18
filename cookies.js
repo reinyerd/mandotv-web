@@ -7,7 +7,7 @@
   var CLAVE = 'mandotv-cookies'; // 'si' | 'no'
   var cargado = false;
   var aviso;
-  // Textos del aviso por idioma (<html lang>): es por defecto; en, de y fr con tabla propia.
+  // Textos del aviso por idioma (<html lang>): es por defecto; en, de, fr, pt e it con tabla propia.
   var TEXTOS = {
     es: { aria: 'Aviso de cookies', titulo: '¿Nos dejas contar tus visitas con cookies?',
           texto: 'Usamos Google Analytics para saber qué páginas se leen y mejorar la web. Solo se activa si aceptas.',
@@ -20,7 +20,10 @@
           url: '/de/datenschutz.html#cookies', mas: 'Mehr erfahren', si: 'Akzeptieren', no: 'Ablehnen' },
     fr: { aria: 'Avis sur les cookies', titulo: 'Pouvons-nous compter vos visites avec des cookies ?',
           texto: "Nous utilisons Google Analytics pour savoir quelles pages sont lues et améliorer le site. Il ne s'active que si vous acceptez.",
-          url: '/fr/confidentialite.html#cookies', mas: 'En savoir plus', si: 'Accepter', no: 'Refuser' }
+          url: '/fr/confidentialite.html#cookies', mas: 'En savoir plus', si: 'Accepter', no: 'Refuser' },
+    pt: { aria: 'Aviso de cookies', titulo: 'Você deixa a gente contar as suas visitas com cookies?',
+          texto: 'Usamos o Google Analytics para saber quais páginas são lidas e melhorar o site. Ele só é ativado se você aceitar.',
+          url: '/pt/privacidade.html#cookies', mas: 'Saiba mais', si: 'Aceitar', no: 'Recusar' }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 

@@ -8,7 +8,7 @@
     roku: { color: '#a77bff', tv: 'Roku', nota: 'Roku: televisores y reproductores, sin emparejar nada.' },
     android: { color: '#2fbf8f', tv: 'Google TV', nota: 'Google TV y Android TV (Sony, TCL, Philips, Xiaomi y más): escribes el código que muestra la pantalla.' }
   };
-  // Páginas en otros idiomas (/en/, /de/, /fr/): mismos textos del escaparate en cada idioma. La página en español no cambia.
+  // Páginas en otros idiomas (/en/, /de/, /fr/, /pt/, /it/): mismos textos del escaparate en cada idioma. La página en español no cambia.
   // Se elige por <html lang>; con un idioma sin tabla (es) quedan los textos en español de arriba.
   var TEXTOS = {
     en: {
@@ -43,6 +43,17 @@
       ipad: 'Télécharger gratuitement pour iPad', iphone: 'Télécharger gratuitement pour iPhone', windows: 'Télécharger gratuitement pour Windows', android: 'Essayer gratuitement sur Android',
       claro: 'Clair', oscuro: 'Sombre',
       frases: ['documentaires sur les volcans', 'musique pour cuisiner', 'match de foot en direct', 'film de Noël']
+    },
+    pt: {
+      marcas: {
+        lg: ['TV LG', 'LG com webOS: a conexão leva segundos e ela também pode ligar a TV.'],
+        samsung: ['TV Samsung', 'Samsung com Tizen: você aceita uma vez na TV e pronto.'],
+        roku: ['Roku', 'Roku: TVs e aparelhos, sem precisar parear nada.'],
+        android: ['Google TV', 'Google TV e Android TV (Sony, TCL, Philips, Xiaomi e outras): você digita o código que aparece na tela.']
+      },
+      ipad: 'Baixar grátis para iPad', iphone: 'Baixar grátis para iPhone', windows: 'Baixar grátis para Windows', android: 'Testar grátis no Android',
+      claro: 'Claro', oscuro: 'Escuro',
+      frases: ['documentários sobre vulcões', 'música para cozinhar', 'jogo de futebol ao vivo', 'filme de Natal']
     }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || null;

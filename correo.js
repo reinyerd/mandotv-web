@@ -3,7 +3,7 @@
 // Al pulsarlo mostramos un panel con: abrir Gmail, abrir la app de correo o copiar la dirección.
 (function () {
   var panel, asunto, cuerpo, enlaceApp, enlaceGmail, aviso;
-  // Textos por idioma (<html lang>): es por defecto; en, de y fr con tabla propia.
+  // Textos por idioma (<html lang>): es por defecto; en, de, fr, pt e it con tabla propia.
   var TEXTOS = {
     es: { titulo: 'Escríbenos', es: 'Nuestro correo es', gmail: 'Abrir en Gmail', app: 'Abrir mi app de correo',
           copiar: 'Copiar dirección', cerrar: 'Cerrar', copiada: 'Dirección copiada. Pégala en tu correo.',
@@ -16,7 +16,10 @@
           copia: 'Kopiere die Adresse: hola@mandotv.app', asunto: 'Hallo Mando TV' },
     fr: { titulo: 'Écrivez-nous', es: 'Notre adresse e-mail est', gmail: 'Ouvrir dans Gmail', app: 'Ouvrir mon application de messagerie',
           copiar: "Copier l'adresse", cerrar: 'Fermer', copiada: "Adresse copiée. Collez-la dans votre e-mail.",
-          copia: "Copiez l'adresse : hola@mandotv.app", asunto: 'Bonjour Mando TV' }
+          copia: "Copiez l'adresse : hola@mandotv.app", asunto: 'Bonjour Mando TV' },
+    pt: { titulo: 'Escreva para a gente', es: 'Nosso e-mail é', gmail: 'Abrir no Gmail', app: 'Abrir meu app de e-mail',
+          copiar: 'Copiar endereço', cerrar: 'Fechar', copiada: 'Endereço copiado. Cole no seu e-mail.',
+          copia: 'Copie o endereço: hola@mandotv.app', asunto: 'Olá Mando TV' }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 
