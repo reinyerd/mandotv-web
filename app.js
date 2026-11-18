@@ -54,6 +54,17 @@
       ipad: 'Baixar grátis para iPad', iphone: 'Baixar grátis para iPhone', windows: 'Baixar grátis para Windows', android: 'Testar grátis no Android',
       claro: 'Claro', oscuro: 'Escuro',
       frases: ['documentários sobre vulcões', 'música para cozinhar', 'jogo de futebol ao vivo', 'filme de Natal']
+    },
+    it: {
+      marcas: {
+        lg: ['TV LG', 'LG con webOS: si collega in pochi secondi e può anche accendere la TV.'],
+        samsung: ['TV Samsung', 'Samsung con Tizen: accetti una volta sulla TV e hai finito.'],
+        roku: ['Roku', 'Roku: televisori e dispositivi, senza nulla da associare.'],
+        android: ['Google TV', 'Google TV e Android TV (Sony, TCL, Philips, Xiaomi e altre): inserisci il codice che compare sullo schermo.']
+      },
+      ipad: 'Scarica gratis per iPad', iphone: 'Scarica gratis per iPhone', windows: 'Scarica gratis per Windows', android: 'Prova gratis su Android',
+      claro: 'Chiaro', oscuro: 'Scuro',
+      frases: ['documentari sui vulcani', 'musica per cucinare', 'partita di calcio in diretta', 'film di Natale']
     }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || null;

@@ -19,7 +19,10 @@
           copia: "Copiez l'adresse : hola@mandotv.app", asunto: 'Bonjour Mando TV' },
     pt: { titulo: 'Escreva para a gente', es: 'Nosso e-mail é', gmail: 'Abrir no Gmail', app: 'Abrir meu app de e-mail',
           copiar: 'Copiar endereço', cerrar: 'Fechar', copiada: 'Endereço copiado. Cole no seu e-mail.',
-          copia: 'Copie o endereço: hola@mandotv.app', asunto: 'Olá Mando TV' }
+          copia: 'Copie o endereço: hola@mandotv.app', asunto: 'Olá Mando TV' },
+    it: { titulo: 'Scrivici', es: 'Il nostro indirizzo e-mail è', gmail: 'Apri in Gmail', app: 'Apri la mia app di posta',
+          copiar: 'Copia indirizzo', cerrar: 'Chiudi', copiada: "Indirizzo copiato. Incollalo nella tua e-mail.",
+          copia: "Copia l'indirizzo: hola@mandotv.app", asunto: 'Ciao Mando TV' }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 

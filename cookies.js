@@ -23,7 +23,10 @@
           url: '/fr/confidentialite.html#cookies', mas: 'En savoir plus', si: 'Accepter', no: 'Refuser' },
     pt: { aria: 'Aviso de cookies', titulo: 'Você deixa a gente contar as suas visitas com cookies?',
           texto: 'Usamos o Google Analytics para saber quais páginas são lidas e melhorar o site. Ele só é ativado se você aceitar.',
-          url: '/pt/privacidade.html#cookies', mas: 'Saiba mais', si: 'Aceitar', no: 'Recusar' }
+          url: '/pt/privacidade.html#cookies', mas: 'Saiba mais', si: 'Aceitar', no: 'Recusar' },
+    it: { aria: 'Avviso sui cookie', titulo: 'Possiamo contare le tue visite con i cookie?',
+          texto: "Usiamo Google Analytics per sapere quali pagine vengono lette e migliorare il sito. Si attiva solo se accetti.",
+          url: '/it/privacy.html#cookies', mas: 'Maggiori informazioni', si: 'Accetta', no: 'Rifiuta' }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 
