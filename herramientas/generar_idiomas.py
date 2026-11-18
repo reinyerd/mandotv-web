@@ -79,7 +79,7 @@ class Idioma:
   <meta property="og:url" content="{url}">
   <meta property="og:title" content="{e(titulo)}">
   <meta property="og:description" content="{e(desc)}">
-  <meta property="og:image" content="{URL}/social.png">
+  <meta property="og:image" content="{URL}/social-{self.cod}.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" href="/icono.svg" type="image/svg+xml">
@@ -219,7 +219,7 @@ class Idioma:
         url = URL + self.r(g['clave'])
         ld = {"@context": "https://schema.org", "@graph": [
           {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": I.CODIGO_LANG[self.cod],
-           "datePublished": FECHA, "dateModified": FECHA, "mainEntityOfPage": url, "image": URL + "/social.png",
+           "datePublished": FECHA, "dateModified": FECHA, "mainEntityOfPage": url, "image": URL + f"/social-{self.cod}.png",
            "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
           ORG,
           {"@type": "HowTo", "name": g["h1"], "description": g["desc"], "inLanguage": I.CODIGO_LANG[self.cod],

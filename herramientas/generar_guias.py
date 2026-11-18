@@ -20,7 +20,7 @@ MARCAS_ENLACES = [
 
 GUIAS = [
   dict(slug='guias/encender-tv-lg-con-el-celular', corto='Encender TV LG con el celular',
-    titulo='Cómo encender tu TV LG con el celular (paso a paso) | Mando TV',
+    titulo='Cómo encender tu TV LG con el celular | Mando TV',
     desc='Aprende a encender tu TV LG con el celular por WiFi: activa "Encender TV con móvil" en el televisor y usa Mando TV. Paso a paso, gratis y sin anuncios.',
     h1='Cómo encender el TV LG con el celular',
     intro='Se puede, pero primero hay que activar una opción en el televisor. Una vez hecho, tu celular enciende el TV LG por la red WiFi, sin el control remoto. Son cinco minutos y lo haces una sola vez.',
@@ -42,7 +42,7 @@ GUIAS = [
       ('¿Funciona con el celular con datos móviles?', 'No. El celular y el TV deben estar en la misma red WiFi.'),
     ]),
   dict(slug='guias/control-remoto-samsung-sin-control', corto='TV Samsung sin control',
-    titulo='¿Perdiste el control del TV Samsung? Usa tu celular | Mando TV',
+    titulo='¿Perdiste el control Samsung? Usa tu celular | Mando TV',
     desc='Si perdiste el control de tu TV Samsung o no funciona, usa tu celular como control remoto por WiFi. Pasos simples con Mando TV, gratis y sin anuncios.',
     h1='Control remoto Samsung sin el control original',
     intro='Si perdiste el control del TV Samsung o dejó de funcionar, puedes usar tu celular como control por WiFi. Sirve en televisores Samsung con Tizen, de 2016 en adelante.',
@@ -64,7 +64,7 @@ GUIAS = [
       ('¿Funciona con mi Samsung antiguo?', 'Funciona con televisores Samsung con Tizen, de 2016 en adelante.'),
     ]),
   dict(slug='guias/conectar-celular-al-tv-por-wifi', corto='Celular como control por WiFi',
-    titulo='Cómo usar el celular como control remoto del TV por WiFi | Mando TV',
+    titulo='Celular como control remoto del TV por WiFi | Mando TV',
     desc='Conecta tu celular al TV por WiFi y úsalo de control remoto en Samsung, LG, Roku y Google TV. Pasos para cada marca con Mando TV, gratis y sin anuncios.',
     h1='Cómo conectar el celular al TV por WiFi para usarlo de control',
     intro='Solo necesitas que el celular y el TV estén en la misma red WiFi y una app de control. Mando TV encuentra tu televisor solo y funciona con Samsung, LG, Roku, Google TV y Android TV.',
@@ -87,7 +87,7 @@ GUIAS = [
       ('¿Puedo usar Mando TV desde iPhone o Android?', 'Sí en iPhone y iPad: ya está en App Store. También en Microsoft Store para Windows. Pronto llega a Android.'),
     ]),
   dict(slug='guias/controlar-el-tv-desde-el-pc', corto='Controlar el TV desde el PC',
-    titulo='Cómo controlar el TV desde el PC con Windows (gratis) | Mando TV',
+    titulo='Controlar el TV desde el PC con Windows (gratis) | Mando TV',
     desc='Usa tu PC con Windows como control remoto del TV Samsung, LG, Roku o Google TV por WiFi. Botones y teclado gratis; apps y atajos del PC con Pro.',
     h1='Cómo controlar el TV desde el PC con Windows',
     intro='Si pasas el día frente al computador, no necesitas buscar el control: Mando TV para Windows maneja tu televisor Samsung, LG, Roku, Google TV o Android TV por la red WiFi de tu casa. Sirve para cambiar de app, subir el volumen o escribir en YouTube con el teclado del PC.',
@@ -110,8 +110,8 @@ GUIAS = [
     ]),
   # Páginas de rescate (2026-11-17): problemas reales que reportaron los testers. Cada una lleva pasos propios.
   dict(slug='guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',
-    titulo='Roku no responde al celular: solución al error 403 | Mando TV',
-    desc='Tu celular se conecta al Roku pero las teclas no hacen nada. Activa "Control por apps móviles" en el Roku en 5 pasos y vuelve a usar el celular como control.',
+    titulo='Roku no responde al celular: error 403 | Mando TV',
+    desc='Tu celular se conecta al Roku pero las teclas no hacen nada. Activa "Control por apps móviles" en el Roku en 5 pasos.',
     h1='Roku no responde al control del celular: la solución',
     intro='Si tu celular encuentra el Roku y se conecta, pero ninguna tecla hace nada, casi siempre es un ajuste del propio Roku que bloquea las apps de control. En las versiones recientes de Roku viene más restringido. Se arregla en un minuto desde el menú del Roku.',
     pasos=[
@@ -133,7 +133,7 @@ GUIAS = [
       ('¿Es seguro dejarlo en Predeterminado?', 'Sí. Solo acepta órdenes de aparatos conectados a la red de tu casa.'),
     ]),
   dict(slug='guias/el-celular-no-encuentra-el-tv', corto='El celular no encuentra el TV', fecha='2026-11-17',
-    titulo='El celular no encuentra el TV: 6 cosas que revisar | Mando TV',
+    titulo='El celular no encuentra el TV: 6 cosas a revisar | Mando TV',
     desc='Si la app no encuentra tu TV o se corta al conectar, revisa el WiFi, la VPN y el permiso de red local. Paso a paso para Samsung, LG, Roku y Android TV.',
     h1='El celular no encuentra el TV: qué revisar',
     intro='Abres la app de control y la lista sale vacía, o el TV aparece pero se corta al conectar. Casi siempre es la red, no el televisor. Revisa estos puntos en orden: el primero resuelve la mayoría de los casos.',
@@ -157,7 +157,7 @@ GUIAS = [
       ('¿Sirve el Bluetooth o el infrarrojo?', 'Mando TV usa solo WiFi. No necesita Bluetooth ni que el celular tenga infrarrojo.'),
     ]),
   dict(slug='guias/android-tv-codigo-de-emparejamiento', corto='Código de Android TV', fecha='2026-11-17',
-    titulo='Android TV pide un código para conectar el celular | Mando TV',
+    titulo='Android TV pide un código de emparejamiento | Mando TV',
     desc='Tu Android TV o Google TV muestra un código de 6 caracteres al conectar el celular. Cómo escribirlo, qué hacer si no aparece o si dice que es incorrecto.',
     h1='Android TV pide un código para conectar el celular: qué hacer',
     intro='La primera vez que conectas el celular a un Android TV o Google TV, el televisor muestra un código de 6 caracteres en la pantalla. Es normal y pasa una sola vez: sirve para que nadie más controle tu TV. Aquí está cómo escribirlo y qué hacer si no aparece.',
@@ -180,7 +180,7 @@ GUIAS = [
       ('¿Es seguro?', 'Sí. El código demuestra que estás frente al TV: sin verlo en la pantalla nadie puede emparejarse.'),
     ]),
   dict(slug='guias/perdi-el-control-del-roku', corto='Perdí el control del Roku', fecha='2026-11-17',
-    titulo='Perdí el control del Roku: usa tu celular por WiFi | Mando TV',
+    titulo='Perdí el control del Roku: usa tu celular | Mando TV',
     desc='Si perdiste el control del Roku, tu celular lo reemplaza por WiFi. Pasos simples, y qué hacer si cambiaste de router y el Roku quedó sin conexión.',
     h1='Perdí el control del Roku: cómo usar el celular',
     intro='Si se te perdió el control del Roku o dejó de funcionar, el celular lo reemplaza, siempre que el Roku siga conectado a tu WiFi. Y si cambiaste de WiFi o de router, también hay una salida.',
@@ -533,7 +533,7 @@ def indice():
     e = html.escape
     url = f'{URL}/guias/'
     titulo = 'Guías para controlar tu TV con el celular | Mando TV'
-    desc = 'Guías paso a paso para usar tu celular o PC como control remoto del TV: encender el TV, conectar por WiFi y solucionar problemas en Samsung, LG, Roku y Android TV.'
+    desc = 'Guías paso a paso para usar tu celular o PC como control remoto del TV: encender el TV, conectar por WiFi y resolver problemas en Samsung, LG y Roku.'
     ld = {"@context": "https://schema.org", "@graph": [
       ORG,
       {"@type": "BreadcrumbList", "itemListElement": [
@@ -697,7 +697,7 @@ def pagina_idioma(g):
     lang = u['lang']
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": lang,
-       "datePublished": g["fecha"], "dateModified": g["fecha"], "mainEntityOfPage": url, "image": URL + "/social.png",
+       "datePublished": g["fecha"], "dateModified": g["fecha"], "mainEntityOfPage": url, "image": URL + f"/social-{g['idioma']}.png",
        "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
       ORG,
       howto(g["h1"], g["desc"], lang, g["pasos"]),
@@ -727,7 +727,7 @@ def pagina_idioma(g):
   <meta property="og:url" content="{url}">
   <meta property="og:title" content="{e(g["titulo"])}">
   <meta property="og:description" content="{e(g["desc"])}">
-  <meta property="og:image" content="{URL}/social.png">
+  <meta property="og:image" content="{URL}/social-{g["idioma"]}.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" href="/icono.svg" type="image/svg+xml">
