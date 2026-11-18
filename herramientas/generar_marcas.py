@@ -30,7 +30,7 @@ MARCAS = [
       ('¿Mando TV reemplaza a LG ThinQ?', 'Para manejar el televisor, sí: no necesitas cuenta de LG ni registrar el TV. Mando TV se conecta directo por tu WiFi.'),
       ('¿Puedo encender mi TV LG desde el celular?', 'Sí, si activas "Encender TV con móvil" en el televisor y te conectaste una vez con el TV encendido.'),
     ],
-    guias=[('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular')]),
+    guias=[('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular'), ('perdi-el-control-del-lg', 'Perdí el control del TV LG: cómo usar el celular'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
   dict(slug='control-remoto-samsung', nombre='Samsung', corto='Samsung', color='#3d7bff',
     titulo='Control remoto para TV Samsung en tu celular, gratis | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Samsung con Tizen, por WiFi. Botones, teclado y encendido gratis; touchpad y apps con Pro. Sin anuncios.',
@@ -56,7 +56,7 @@ MARCAS = [
       ('¿Mando TV reemplaza a SmartThings?', 'Para manejar el televisor, sí, y sin cuenta Samsung. Mando TV se conecta directo por tu WiFi.'),
       ('¿Funciona con televisores Samsung antiguos?', 'Funciona con los Samsung con Tizen, de 2016 en adelante. Los modelos anteriores usan otro sistema que todavía no soportamos.'),
     ],
-    guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original')]),
+    guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
   dict(slug='control-remoto-roku', nombre='Roku', corto='Roku', color='#a77bff',
     titulo='Control remoto para Roku en tu celular, gratis | Mando TV',
     desc='Tu celular o PC como control remoto de tu Roku TV o reproductor Roku por WiFi. Botones, teclado y encendido gratis; canales y entradas con Pro.',
@@ -108,7 +108,7 @@ MARCAS = [
       ('¿En qué se diferencia de la app de Google TV?', 'Mando TV no necesita cuenta de Google, funciona también desde Windows, y maneja además televisores LG, Samsung y Roku desde la misma app.'),
       ('El código no aparece en la pantalla, ¿qué hago?', 'Cierra Mando TV, vuelve a abrirla y toca el televisor otra vez. Revisa que el TV no esté en modo de ahorro de energía profundo.'),
     ],
-    guias=[('android-tv-codigo-de-emparejamiento', 'Android TV pide un código para conectar el celular')]),
+    guias=[('android-tv-codigo-de-emparejamiento', 'Android TV pide un código para conectar el celular'), ('android-tv-sin-control-remoto', 'Android TV sin control remoto: cómo usarlo desde el celular')]),
 ]
 
 
@@ -122,6 +122,10 @@ GUIAS_PIE = [
   ('android-tv-codigo-de-emparejamiento', 'Android TV pide un código de emparejamiento'),
   ('perdi-el-control-del-roku', 'Perdí el control del Roku'),
   ('encender-tv-y-hdmi-de-la-consola-sin-control', 'Encender el TV y pasar al HDMI de la consola sin control'),
+  ('perdi-el-control-del-tv', 'Perdí el control del TV'),
+  ('perdi-el-control-del-lg', 'Perdí el control del TV LG'),
+  ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI sin control'),
+  ('android-tv-sin-control-remoto', 'Android TV sin control remoto'),
 ]
 MARCAS_PIE = [
   ('control-remoto-samsung', 'Control remoto Samsung'),

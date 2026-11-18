@@ -200,10 +200,14 @@ GUIAS = [
       ('¿Tengo que crear una cuenta?', 'No. Mando TV no pide cuenta y además controla televisores Samsung, LG y Android TV desde la misma app.'),
     ]),
   dict(slug='guias/encender-tv-y-hdmi-de-la-consola-sin-control', corto='TV y consola sin control', fecha='2026-11-17',
-    titulo='Cambiar al HDMI de la consola sin el control del TV',
-    desc='Llegó el día de jugar y no aparece el control del TV. Enciende el televisor y pasa al HDMI de tu PS5 o Xbox desde el celular, sin anuncios.',
+    titulo='Encender el TV y cambiar a HDMI sin control (PS5, Xbox)',
+    desc='¿Día de jugar GTA VI y sin control del TV? Enciende la tele y pasa al HDMI de tu PS5 o Xbox desde el celular. Gratis y sin anuncios.',
+    modificada='2026-11-17',
+    alternos={'es': URL + '/guias/encender-tv-y-hdmi-de-la-consola-sin-control/',
+              'en': URL + '/en/guides/turn-on-tv-console-hdmi-without-remote/',
+              'pt': URL + '/pt/guias/ligar-tv-e-hdmi-do-console-sem-controle/'},
     h1='Cómo encender el TV y cambiar al HDMI de la consola sin el control',
-    intro='El estreno de GTA VI, la consola lista y el control del televisor perdido entre los cojines. Pasa más de lo que parece. Con Mando TV el celular enciende el televisor y lo cambia al HDMI de tu PlayStation o Xbox, por el WiFi de tu casa.',
+    intro='El estreno de GTA VI (o GTA 6, como lo buscan muchos), la consola lista y el control del televisor perdido entre los cojines. Pasa más de lo que parece. Con Mando TV el celular enciende el televisor y lo cambia al HDMI de tu PlayStation o Xbox, por el WiFi de tu casa.',
     pasos=[
       'Conecta el celular al mismo WiFi que el televisor.',
       'Abre Mando TV y toca tu televisor en la lista (Samsung, LG, Roku o Android TV).',
@@ -215,12 +219,117 @@ GUIAS = [
     extra=[
       ('El truco gratis: que la consola cambie el TV sola', 'La PS5 y la Xbox pueden encender el televisor y pasarlo a su HDMI apenas se encienden, gracias a HDMI-CEC. En la PS5 está en Configuración > Sistema > HDMI > Activar Enlace de dispositivos HDMI. En la Xbox, en Configuración > General > Opciones de TV y pantalla > Control de dispositivos. En el televisor tiene otro nombre según la marca: Anynet+ en Samsung, SIMPLINK en LG y Control de dispositivos HDMI o BRAVIA Sync en otras.'),
       ('Si es un Roku TV', 'El botón físico del televisor, casi siempre abajo al centro o detrás, lo enciende. Desde ahí el celular hace el resto.'),
+      ('Si el TV se queda en otra pantalla', 'Si la consola está encendida pero el televisor sigue en la antena o en una app, el TV no cambió de entrada. Con el celular, toca Entradas (función Pro) y elige el HDMI de la consola. Sin Pro, usa las flechas y OK para llegar a las entradas del TV, o el botón del propio televisor, y elige el HDMI. El número es el del puerto donde enchufaste el cable de la consola.'),
+      ('Más ayuda', 'Si no sabes por dónde empezar, mira [Perdí el control del TV](/guias/perdi-el-control-del-tv/). Para solo cambiar de entrada, está la guía [Cambiar la entrada HDMI del TV sin control remoto](/guias/cambiar-entrada-hdmi-sin-control/).'),
     ],
     marca=None,
     faq=[
       ('¿Mando TV tiene algo que ver con GTA VI?', 'No. Mando TV no está afiliado a Rockstar Games ni a Take-Two. Solo te ayuda a que no te quedes sin jugar por no encontrar el control del televisor.'),
       ('¿Cambiar de entrada HDMI es gratis?', 'La lista de entradas es parte de Mando TV Pro, un pago único sin suscripción. Gratis puedes encender el TV, usar las flechas, OK y el volumen, y dejar que la consola cambie la entrada sola con HDMI-CEC.'),
       ('¿Sirve con cualquier televisor?', 'Con televisores Samsung, LG, Roku y Android TV conectados al mismo WiFi. Si el tuyo es de otra marca, el truco de HDMI-CEC igual te sirve.'),
+      ('¿Sirve para jugar GTA VI o GTA 6 en PS5 y Xbox?', 'Mando TV no toca la consola ni el juego. Solo deja el televisor encendido y en el HDMI correcto para que te sientes a jugar.'),
+      ('¿Y si el TV no se enciende desde el celular?', 'Enciéndelo esta vez con el botón del propio TV y activa el encendido por red para la próxima. La guía de tu marca explica dónde está ese ajuste.'),
+    ]),
+  dict(slug='guias/perdi-el-control-del-tv', corto='Perdí el control del TV', fecha='2026-11-17',
+    titulo='Perdí el control del TV: qué hacer ahora (paso a paso)',
+    desc='¿Perdiste el control del TV? Enciéndelo con su botón y úsalo desde el celular. Pasos para LG, Samsung, Roku y Android TV. Gratis y sin anuncios.',
+    h1='Perdí el control del TV: qué puedo hacer',
+    intro='Pasa en todas las casas: el control no aparece justo cuando quieres ver algo. La buena noticia es que tu celular puede hacer de control, por el WiFi de la casa. Aquí está lo que tienes que hacer, en orden.',
+    pasos=[
+      'Enciende el TV con su botón físico. Casi siempre está abajo, al centro, o detrás en una esquina. A veces es un botón solo y a veces un joystick pequeño.',
+      'Conecta el celular al mismo WiFi que el TV.',
+      'Descarga Mando TV, que es gratis y no pide cuenta, y ábrela. Tu TV aparece solo en la lista. Tócalo.',
+      'Acepta la conexión según tu marca. En LG y Samsung el TV muestra un aviso: se acepta con el botón o el joystick del propio TV. En Android TV y Google TV escribes un código de 6 caracteres que sale en la pantalla. En Roku no pide nada.',
+      'Listo. Las flechas, OK, Atrás, Inicio, el volumen, los canales y el teclado son gratis.',
+      'Para la próxima vez, activa el encendido por red en el TV (más abajo está la guía de tu marca) y lo enciendes desde el celular sin tocar el TV.',
+    ],
+    extra=[
+      ('Elige la guía de tu marca', 'LG: [Perdí el control del TV LG](/guias/perdi-el-control-del-lg/). Samsung: [Control remoto Samsung sin el control original](/guias/control-remoto-samsung-sin-control/). Roku: [Perdí el control del Roku](/guias/perdi-el-control-del-roku/). Android TV y Google TV: [Android TV sin control remoto](/guias/android-tv-sin-control-remoto/).'),
+      ('Si el TV no enciende con el botón', 'Antes de buscar otro control, revisa que el cable esté bien enchufado y que el enchufe de la pared tenga corriente. Si el botón del TV no hace nada, el problema es del televisor y no del control.'),
+      ('Si el control solo dejó de funcionar', 'Prueba con pilas nuevas. Para saber si todavía manda señal, apúntalo a la cámara del celular y aprieta un botón: en muchos celulares se ve una luz morada en la pantalla. Si la luz sale y el TV no responde, el sensor del TV puede estar tapado.'),
+      ('Si cambiaste de router y el TV quedó sin WiFi', 'Sin control es más difícil conectarlo a la red nueva. Lo más fácil es conectar el TV con un cable de red al router. También puedes crear una red WiFi con el mismo nombre y la misma clave de antes: el TV suele conectarse solo a ella.'),
+      ('Lo gratis y lo Pro', 'Encender, apagar, flechas, OK, volumen, canales, números y teclado son gratis. El touchpad, la lista de apps, la lista de entradas, la voz y las rutinas son de Mando TV Pro, un pago único sin suscripción.'),
+    ],
+    marca=None,
+    faq=[
+      ('¿Puedo encender el TV con el celular si nunca lo conecté antes?', 'Esta primera vez, enciéndelo con el botón del TV. Después de conectar el celular y activar el encendido por red en el TV, ya puedes encenderlo desde la app.'),
+      ('¿Necesito comprar un control nuevo?', 'No necesariamente. Con Mando TV tienes botones, volumen, teclado y encendido gratis. Si igual prefieres uno físico, busca el modelo exacto de tu TV.'),
+      ('¿Funciona si el TV no tiene WiFi?', 'No. El celular y el TV tienen que estar en la misma red WiFi. Un TV que no es smart no se puede controlar con Mando TV.'),
+    ]),
+  dict(slug='guias/perdi-el-control-del-lg', corto='Perdí el control del TV LG', fecha='2026-11-17',
+    titulo='Perdí el control del TV LG: cómo usar el celular',
+    desc='¿Sin el control de tu TV LG? Enciéndelo con el botón, acepta el aviso y usa el celular de control por WiFi. Sin cuenta LG y sin anuncios.',
+    h1='Perdí el control del TV LG: cómo usar el celular',
+    intro='Si perdiste el Magic Remote o el control del TV LG dejó de funcionar, el celular lo reemplaza por WiFi. Sirve en los LG con webOS, que son casi todos los Smart TV LG desde 2014. No necesitas cuenta LG ni la app ThinQ.',
+    pasos=[
+      'Enciende el TV con el botón de abajo, bajo el logo de LG, o el que está detrás. En muchos modelos funciona como joystick: se presiona para abrir el menú y se mueve para elegir.',
+      'Conecta el celular al mismo WiFi que el TV.',
+      'Abre Mando TV y toca tu TV LG en la lista.',
+      'El TV muestra un aviso pidiendo permiso. Acéptalo con el joystick o el botón del TV. Si ya habías conectado ese celular antes, no lo vuelve a pedir.',
+      'Listo. Las flechas, OK, Atrás, Inicio, volumen, canales y teclado son gratis. El puntero, la lista de apps y la de entradas son función Pro.',
+      'Con la app conectada, entra en Configuración con las flechas y OK, y activa "Encender TV con móvil". La guía [Cómo encender el TV LG con el celular](/guias/encender-tv-lg-con-el-celular/) dice dónde está.',
+    ],
+    extra=[
+      ('Si el TV no muestra el aviso', 'Puede que el permiso ya esté guardado, o que el celular esté en otra red. Revisa que los dos estén en el mismo WiFi y que la VPN esté apagada. Si el TV no aparece en la lista, mira [El celular no encuentra el TV](/guias/el-celular-no-encuentra-el-tv/).'),
+      ('Si el TV quedó sin WiFi', 'Conecta el TV con un cable de red al router: lo usa solo. O crea una red WiFi con el mismo nombre y la misma clave de antes, porque el TV suele conectarse solo a ella.'),
+      ('Si el TV quedó en otra entrada', 'Con el celular, toca Entradas (función Pro) y elige el HDMI. Más detalles en [Cambiar la entrada HDMI del TV sin control remoto](/guias/cambiar-entrada-hdmi-sin-control/).'),
+    ],
+    marca=('control-remoto-lg', 'Control remoto para TV LG'),
+    faq=[
+      ('¿Necesito el Magic Remote para usar Mando TV?', 'Solo hace falta algo para aceptar el aviso la primera vez, y sirve el botón o el joystick del propio TV. Después usas solo el celular.'),
+      ('¿Necesito la app LG ThinQ?', 'No. Mando TV se conecta directo por tu WiFi y no pide cuenta de LG.'),
+      ('¿Puedo apagar y encender el TV LG desde el celular?', 'Apagar sí. Para encender necesitas haber activado "Encender TV con móvil" en el televisor y haberte conectado una vez con el TV encendido.'),
+    ]),
+  dict(slug='guias/cambiar-entrada-hdmi-sin-control', corto='Cambiar HDMI sin control', fecha='2026-11-17',
+    titulo='Cambiar la entrada HDMI del TV sin control remoto',
+    desc='Cambia a HDMI sin control remoto en Samsung, LG o Roku: con el botón del TV o desde el celular. Gratis para empezar, sin anuncios.',
+    h1='Cambiar la entrada HDMI del TV sin control remoto',
+    intro='La consola o el reproductor están listos, pero el TV sigue en otra entrada y el control no aparece. Se puede cambiar de dos formas: con el botón del propio TV o desde el celular. Aquí van los pasos para Samsung, LG y Roku.',
+    pasos=[
+      'Prueba lo más simple: enciende la consola o el reproductor. Si el TV tiene HDMI-CEC activado (Anynet+ en Samsung, SIMPLINK en LG), cambia solo a esa entrada.',
+      'Si no cambia, usa el botón del propio TV, abajo al centro o detrás. En muchos Samsung y LG funciona como joystick y abre un menú con Fuente o Entradas.',
+      'Elige la entrada en ese menú: HDMI 1, HDMI 2 y así. El número es el del puerto donde está enchufado el cable.',
+      'Si prefieres el celular, conéctalo al mismo WiFi, abre Mando TV y toca tu TV.',
+      'En LG y Roku, toca Entradas (función Pro) y elige el HDMI. En Samsung, Entradas (función Pro) manda la tecla Fuente del TV y eliges con las flechas y OK.',
+      'Sin Pro también se puede: con las flechas y OK ve a las entradas de la pantalla de inicio del TV. Según la marca y el año, se llaman Fuente, Dispositivos conectados o Entradas. En un Roku TV son las tarjetas HDMI de la pantalla de inicio.',
+    ],
+    extra=[
+      ('Samsung', 'Si el menú del botón del TV no tiene Fuente, abre el menú de la pantalla de inicio con el celular y busca Fuente o Dispositivos conectados a la izquierda. Se maneja con las flechas y OK de Mando TV, que son gratis.'),
+      ('LG', 'Presiona el joystick del TV y busca Entradas. Con el celular, en Mando TV también puedes abrir la lista de entradas (Pro) y tocar la que quieras.'),
+      ('Roku TV', 'En la pantalla de inicio hay una tarjeta por cada entrada, como HDMI 1 o HDMI 2. Muévete con las flechas y entra con OK, gratis.'),
+      ('Si es un TV con Android TV o Google TV', 'En Mando TV la lista de entradas todavía no está en Android TV. Usa el botón de entradas del propio TV, o llega a ellas con las flechas y OK desde el inicio. Si no tienes control y quieres conectarlo, mira [Android TV sin control remoto](/guias/android-tv-sin-control-remoto/).'),
+      ('Más ayuda', 'Si el TV ni siquiera enciende o no sabes por dónde empezar, mira [Perdí el control del TV](/guias/perdi-el-control-del-tv/). Para jugar en consola, la guía [Encender el TV y cambiar a HDMI sin control](/guias/encender-tv-y-hdmi-de-la-consola-sin-control/) incluye el truco de HDMI-CEC.'),
+    ],
+    marca=None,
+    faq=[
+      ('¿Cambiar de entrada HDMI es gratis?', 'La lista de entradas es parte de Mando TV Pro, un pago único sin suscripción. Gratis puedes encender el TV, usar flechas, OK y volumen, y llegar a las entradas desde el menú del TV.'),
+      ('¿Cómo sé cuál HDMI usar?', 'Mira los puertos HDMI del TV: cada uno tiene un número. Usa el del puerto donde está enchufado el cable de tu consola o reproductor.'),
+      ('¿Qué hago si el TV no se enciende?', 'Enciéndelo con su botón físico. Si ya lo habías conectado antes y activaste el encendido por red, también puedes encenderlo desde el celular.'),
+    ]),
+  dict(slug='guias/android-tv-sin-control-remoto', corto='Android TV sin control', fecha='2026-11-17',
+    titulo='Android TV sin control remoto: úsalo desde el celular',
+    desc='¿Sin el control de tu Android TV o Google TV? Conecta el celular con el código de 6 caracteres de la pantalla. Gratis, sin cuenta y sin anuncios.',
+    h1='Android TV sin control remoto: cómo usarlo desde el celular',
+    intro='Si perdiste el control de tu Android TV o Google TV, o se quedó sin pilas, el celular lo reemplaza. Lo mejor es que conectarlo no necesita el control: el TV muestra un código en la pantalla y lo escribes en el celular. Sirve en Sony, TCL, Philips, Xiaomi, Hisense con Android TV, Chromecast con Google TV y Nvidia Shield.',
+    pasos=[
+      'Enciende el TV con su botón físico. Casi siempre está abajo, al centro, o detrás en una esquina.',
+      'Conecta el celular al mismo WiFi que el TV.',
+      'Descarga Mando TV, que es gratis y no pide cuenta de Google, y ábrela. Toca tu TV en la lista.',
+      'El TV muestra un código de 6 letras y números. Escríbelo en el celular y toca Emparejar. No necesitas el control para esto.',
+      'Ya puedes usar las flechas, OK, Atrás, Inicio, volumen, silencio y teclado. Son gratis. El touchpad y la lista de apps son Pro.',
+      'Para encenderlo desde el celular la próxima vez, busca "Wake on LAN", "Encender por red" o "Activación remota" en los ajustes de red o de energía del TV.',
+    ],
+    extra=[
+      ('Si tu TV no se enciende desde el celular', 'No todos los Android TV traen encendido por red; depende del fabricante y del modelo. Si el tuyo no lo tiene, enciéndelo con el botón del TV y sigue desde el celular. Apagarlo sí lo puedes hacer desde la app.'),
+      ('Chromecast con Google TV, Google TV Streamer y Shield', 'Se conectan igual: mismo WiFi, tocas el aparato en la lista y escribes el código. Si el TV muestra otra entrada, cámbiala al HDMI donde está conectado, como explica [Cambiar la entrada HDMI del TV sin control remoto](/guias/cambiar-entrada-hdmi-sin-control/).'),
+      ('Si el código no aparece o dice que es incorrecto', 'Revisa que el TV esté encendido de verdad y no en reposo. El código cambia cada vez que se pide: vale solo el último. Hay más detalles en [Android TV pide un código para conectar el celular](/guias/android-tv-codigo-de-emparejamiento/).'),
+      ('App de Google o Mando TV', 'Google tiene su propia app con cuenta de Google. Mando TV no pide cuenta, funciona también desde Windows y maneja además televisores LG, Samsung y Roku desde la misma app.'),
+    ],
+    marca=('control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
+    faq=[
+      ('¿Necesito el control para emparejar el celular?', 'No. El código aparece en la pantalla del TV y lo escribes en el celular. Solo tienes que encender el TV, con el botón del televisor si hace falta.'),
+      ('¿Sirve con un Hisense?', 'Con los Hisense que traen Android TV o Google TV, sí. Los Hisense con otro sistema no son compatibles.'),
+      ('¿Puedo escribir con el teclado del celular?', 'Sí. El teclado es gratis y sirve para buscar en YouTube, Netflix y el resto de las apps.'),
     ]),
 ]
 
@@ -235,6 +344,10 @@ GUIAS_PIE = [
   ('android-tv-codigo-de-emparejamiento', 'Android TV pide un código de emparejamiento'),
   ('perdi-el-control-del-roku', 'Perdí el control del Roku'),
   ('encender-tv-y-hdmi-de-la-consola-sin-control', 'Encender el TV y pasar al HDMI de la consola sin control'),
+  ('perdi-el-control-del-tv', 'Perdí el control del TV'),
+  ('perdi-el-control-del-lg', 'Perdí el control del TV LG'),
+  ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI sin control'),
+  ('android-tv-sin-control-remoto', 'Android TV sin control remoto'),
 ]
 MARCAS_PIE = [
   ('control-remoto-samsung', 'Control remoto Samsung'),
@@ -258,22 +371,43 @@ def otras(actual):
 
 ORG = {"@type": "Organization", "@id": URL + "/#org", "name": "Mando TV", "url": URL + "/"}
 
+import re
+def fmt(t):
+    """Escapa el texto y convierte [texto](/ruta/) en enlaces internos."""
+    return re.sub(r'\[([^\]]+)\]\((/[^)\s]*)\)', lambda m: f'<a href="{m[2]}">{m[1]}</a>', html.escape(t))
+
+def plano(t):
+    """Texto sin la marca de enlaces, para los datos estructurados."""
+    return re.sub(r'\[([^\]]+)\]\((/[^)\s]*)\)', r'\1', t)
+
+def hreflangs(alternos):
+    if not alternos:
+        return ''
+    filas = [f'  <link rel="alternate" hreflang="{l}" href="{u}">' for l, u in alternos.items()]
+    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{alternos["es"]}">')
+    return chr(10).join(filas) + chr(10)
+
+def howto(nombre, desc, lang, pasos):
+    return {"@type": "HowTo", "name": nombre, "description": desc, "inLanguage": lang,
+            "step": [{"@type": "HowToStep", "position": n, "text": plano(p)} for n, p in enumerate(pasos, 1)]}
+
 def pagina(g):
     e = html.escape
     url = f'{URL}/{g["slug"]}/'
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": "es",
-       "datePublished": g.get("fecha", FECHA), "dateModified": g.get("fecha", FECHA), "mainEntityOfPage": url, "image": URL + "/social.png",
+       "datePublished": g.get("fecha", FECHA), "dateModified": g.get("modificada", g.get("fecha", FECHA)), "mainEntityOfPage": url, "image": URL + "/social.png",
        "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
       ORG,
+      howto(g["h1"], g["desc"], "es", g["pasos"]),
       {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/"},
         {"@type": "ListItem", "position": 2, "name": "Guías", "item": URL + "/guias/"},
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
-    pasos = '\n'.join(f'        <li>{e(p)}</li>' for p in g['pasos'])
-    extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{e(p)}</p>' for t, p in g['extra'])
+    pasos = '\n'.join(f'        <li>{fmt(p)}</li>' for p in g['pasos'])
+    extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{fmt(p)}</p>' for t, p in g['extra'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
     if g['marca']:
         marcas = f'<p>Más detalles en la página de <a href="/{g["marca"][0]}/">{e(g["marca"][1])}</a>.</p>'
@@ -290,7 +424,7 @@ def pagina(g):
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#3d7bff">
   <link rel="canonical" href="{url}">
-  <meta property="og:site_name" content="Mando TV">
+{hreflangs(g.get("alternos"))}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{url}">
@@ -496,4 +630,223 @@ for g in GUIAS:
     d = os.path.join(SITIO, *g['slug'].split('/'))
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='\n').write(pagina(g))
+    print('ok', g['slug'], len(g['titulo']), len(g['desc']))
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Versiones en otros idiomas de la guía de la consola (2026-11-17): /en/guides/... y /pt/guias/...
+# Textos escritos para cada idioma (no son traducción literal). hreflang entre es, en y pt, en las tres páginas.
+# ---------------------------------------------------------------------------------------------------------------
+GPLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>'
+
+ALT_CONSOLA = {
+  'es': URL + '/guias/encender-tv-y-hdmi-de-la-consola-sin-control/',
+  'en': URL + '/en/guides/turn-on-tv-console-hdmi-without-remote/',
+  'pt': URL + '/pt/guias/ligar-tv-e-hdmi-do-console-sem-controle/',
+}
+
+UI = {
+  'en': dict(lang='en', locale='en_US', inicio='Home', ayuda='Help', contacto='Contact', ver='See the steps', bajar='Download free',
+    pasos='Step by step', hazlo='Do it with Mando TV', faq='Frequently asked questions', idiomas='This guide in other languages',
+    nombres={'es': 'Español', 'en': 'English', 'pt': 'Português (Brasil)'},
+    tiendas='Mando TV is a universal TV remote. Download it free, with no ads and no account. Pro is an optional one-time purchase, no subscription. For iPhone, iPad, Windows and Android:',
+    apple_aria='Download Mando TV free on the App Store', ms_aria='Download Mando TV free on Microsoft Store',
+    gp_aria='Early access to Mando TV on Google Play for Android', descarga='Download on', anticipada='Early access on',
+    nota='Android: free early access on Google Play. <a href="/#android">Join in two steps</a> and help us reach the store.',
+    aviso='Mando TV is not affiliated with LG, Samsung, Roku or Google. Brands named belong to their owners and are mentioned only to show compatibility.',
+    migas_inicio='Home', pie='Footer', principal='Main', ruta='Breadcrumb', aria_desc='Download Mando TV', privacidad='Privacy',
+    guia_nombre='Guide'),
+  'pt': dict(lang='pt-BR', locale='pt_BR', inicio='Início', ayuda='Ajuda', contacto='Contato', ver='Ver os passos', bajar='Baixar grátis',
+    pasos='Passo a passo', hazlo='Faça com o Mando TV', faq='Perguntas frequentes', idiomas='Este guia em outros idiomas',
+    nombres={'es': 'Español', 'en': 'English', 'pt': 'Português (Brasil)'},
+    tiendas='O Mando TV é um controle remoto universal para a sua TV. Baixe grátis, sem anúncios e sem conta. O Pro é uma compra única opcional, sem assinatura. Para iPhone, iPad, Windows e Android:',
+    apple_aria='Baixar o Mando TV grátis na App Store', ms_aria='Baixar o Mando TV grátis na Microsoft Store',
+    gp_aria='Teste antecipado do Mando TV no Google Play para Android', descarga='Baixe na', anticipada='Teste antecipado no',
+    nota='Android: teste antecipado grátis no Google Play. <a href="/#android">Participe em dois passos</a> e nos ajude a chegar à loja.',
+    aviso='O Mando TV não é afiliado à LG, Samsung, Roku nem Google. As marcas citadas pertencem aos seus donos e aparecem só para indicar compatibilidade.',
+    migas_inicio='Início', pie='Rodapé', principal='Principal', ruta='Caminho', aria_desc='Baixar o Mando TV', privacidad='Privacidade',
+    guia_nombre='Guia'),
+}
+
+I18N = [
+  dict(idioma='en', slug='en/guides/turn-on-tv-console-hdmi-without-remote', corto='TV and console without a remote', fecha='2026-11-17',
+    titulo='No TV Remote? Turn On the TV and Switch to Console HDMI',
+    desc='Launch day and no TV remote? Turn on your TV and switch to your PS5 or Xbox HDMI input from your phone. Free, no ads.',
+    h1="How to turn on the TV and switch to your console's HDMI without the remote",
+    intro="GTA VI launch day, the console ready to go, and the TV remote lost somewhere in the couch. It happens more than you would think. With Mando TV your phone turns on the TV and switches it to your PlayStation or Xbox input, over your home Wi-Fi.",
+    pasos=[
+      'Connect your phone to the same Wi-Fi network as the TV.',
+      'Open Mando TV and tap your TV in the list (Samsung, LG, Roku or Android TV).',
+      'If the TV is off, tap Turn on. This works if the TV has power-on over the network enabled. If you never turned that on, switch the TV on this one time with the button on the TV itself, and enable it for next time.',
+      'Turn on the console. If HDMI-CEC is enabled (see the free trick below), the TV switches to its input on its own.',
+      'If it does not switch, tap Inputs in Mando TV (a Pro feature) and pick the HDMI port the console is plugged into: HDMI 1, HDMI 2 and so on.',
+      'For the volume, use the big buttons in the app while you play.',
+    ],
+    extra=[
+      ('The free trick: let the console switch the TV for you', 'The PS5 and the Xbox can turn on the TV and jump to their HDMI input as soon as they start, thanks to HDMI-CEC. On the PS5 it is under Settings > System > HDMI > Enable HDMI Device Link. On the Xbox, open Settings > General > TV & display options and look for the device control option. On the TV the feature has a different name depending on the brand: Anynet+ on Samsung, SIMPLINK on LG, and BRAVIA Sync or HDMI control on others.'),
+      ('If the TV stays on another screen', 'If the console is on but the TV still shows the antenna or an app, the TV did not change input. From your phone, tap Inputs (Pro) and choose the console HDMI. Without Pro, use the arrows and OK to reach the TV inputs, or press the button on the TV itself, and pick the HDMI. The number is the port where you plugged in the console cable.'),
+      ('If it is a Roku TV', 'The physical button on the TV, usually at the bottom center or on the back, turns it on. From there your phone does the rest.'),
+    ],
+    faq=[
+      ('Does Mando TV have anything to do with GTA VI?', 'No. Mando TV is not affiliated with Rockstar Games or Take-Two. It only helps you avoid losing game time because you cannot find the TV remote.'),
+      ('Is switching the HDMI input free?', 'The inputs list is part of Mando TV Pro, a one-time purchase with no subscription. For free you can turn the TV on, use the arrows, OK and volume, and let the console switch the input by itself with HDMI-CEC.'),
+      ('Will it work with my TV?', 'It works with Samsung, LG, Roku and Android TV sets on the same Wi-Fi network. If yours is another brand, the HDMI-CEC trick can still help.'),
+      ('Can I use it to play GTA VI (GTA 6) on PS5 or Xbox?', 'Mando TV does not touch the console or the game. It only gets the TV turned on and on the right HDMI input so you can sit down and play.'),
+    ]),
+  dict(idioma='pt', slug='pt/guias/ligar-tv-e-hdmi-do-console-sem-controle', corto='TV e console sem controle', fecha='2026-11-17',
+    titulo='Sem controle da TV? Ligar e mudar para o HDMI do console',
+    desc='Dia de jogar GTA VI e o controle da TV sumiu? Ligue a TV e mude para o HDMI do PS5 ou Xbox pelo celular. Grátis e sem anúncios.',
+    h1='Como ligar a TV e mudar para o HDMI do console sem o controle',
+    intro='Dia de lançamento de GTA VI, o console pronto e o controle da TV sumiu no meio das almofadas. Acontece mais do que parece. Com o Mando TV, o celular liga a TV e muda para a entrada do seu PlayStation ou Xbox, pelo Wi-Fi da sua casa.',
+    pasos=[
+      'Conecte o celular ao mesmo Wi-Fi da TV.',
+      'Abra o Mando TV e toque na sua TV na lista (Samsung, LG, Roku ou Android TV).',
+      'Se a TV estiver desligada, toque em Ligar. Funciona se a TV estiver com a ativação pela rede ligada. Se você nunca ativou isso, ligue a TV desta vez pelo botão da própria TV e ative para a próxima.',
+      'Ligue o console. Se o HDMI-CEC estiver ativado (veja o truque grátis abaixo), a TV muda sozinha para a entrada dele.',
+      'Se não mudar, toque em Entradas no Mando TV (recurso Pro) e escolha o HDMI onde o console está ligado: HDMI 1, HDMI 2 e assim por diante.',
+      'Para o volume, use os botões grandes do app enquanto você joga.',
+    ],
+    extra=[
+      ('O truque grátis: deixe o console mudar a TV sozinho', 'O PS5 e o Xbox conseguem ligar a TV e mudar para a entrada HDMI deles assim que ligam, graças ao HDMI-CEC. No PS5 fica em Configurações > Sistema > HDMI > Ativar vínculo de dispositivo HDMI. No Xbox, abra Configurações > Geral > Opções de TV e vídeo e procure a opção de controle de dispositivos. Na TV, o recurso tem outro nome conforme a marca: Anynet+ na Samsung, SIMPLINK na LG e BRAVIA Sync ou controle HDMI em outras.'),
+      ('Se a TV ficar em outra tela', 'Se o console está ligado mas a TV continua na antena ou em um app, ela não mudou de entrada. Pelo celular, toque em Entradas (Pro) e escolha o HDMI do console. Sem o Pro, use as setas e o OK para chegar às entradas da TV, ou o botão da própria TV, e escolha o HDMI. O número é o da porta onde você ligou o cabo do console.'),
+      ('Se for uma Roku TV', 'O botão físico da TV, quase sempre embaixo no centro ou atrás, liga o aparelho. Dali o celular faz o resto.'),
+    ],
+    faq=[
+      ('O Mando TV tem alguma relação com GTA VI?', 'Não. O Mando TV não é afiliado à Rockstar Games nem à Take-Two. Ele só ajuda você a não perder a hora de jogar por não achar o controle da TV.'),
+      ('Trocar a entrada HDMI é grátis?', 'A lista de entradas faz parte do Mando TV Pro, uma compra única, sem assinatura. De graça você liga a TV, usa as setas, o OK e o volume, e deixa o console trocar a entrada sozinho com o HDMI-CEC.'),
+      ('Funciona com a minha TV?', 'Funciona com TVs Samsung, LG, Roku e Android TV no mesmo Wi-Fi. Se a sua for de outra marca, o truque do HDMI-CEC ainda pode ajudar.'),
+      ('Dá para usar para jogar GTA VI (GTA 6) no PS5 ou no Xbox?', 'O Mando TV não mexe no console nem no jogo. Ele só deixa a TV ligada e na entrada HDMI certa para você sentar e jogar.'),
+    ]),
+]
+
+
+def pagina_idioma(g):
+    e = html.escape
+    u = UI[g['idioma']]
+    url = f'{URL}/{g["slug"]}/'
+    lang = u['lang']
+    ld = {"@context": "https://schema.org", "@graph": [
+      {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": lang,
+       "datePublished": g["fecha"], "dateModified": g["fecha"], "mainEntityOfPage": url, "image": URL + "/social.png",
+       "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
+      ORG,
+      howto(g["h1"], g["desc"], lang, g["pasos"]),
+      {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": u['inicio'], "item": URL + "/"},
+        {"@type": "ListItem", "position": 2, "name": g["h1"], "item": url}]},
+      {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
+    pasos = '\n'.join(f'        <li>{e(p)}</li>' for p in g['pasos'])
+    extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{e(p)}</p>' for t, p in g['extra'])
+    faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
+    idiomas = '\n'.join(f'        <li><a href="{ALT_CONSOLA[l][len(URL):]}" hreflang="{l}" lang="{l}">{u["nombres"][l]}</a></li>' for l in ('es', 'en', 'pt') if l != g['idioma'])
+    return f'''<!doctype html>
+<html lang="{lang}" style="--marca: #3d7bff">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6834927348">
+  <title>{e(g["titulo"])}</title>
+  <meta name="description" content="{e(g["desc"])}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3d7bff">
+  <link rel="canonical" href="{url}">
+{hreflangs(ALT_CONSOLA)}  <meta property="og:site_name" content="Mando TV">
+  <meta property="og:locale" content="{u["locale"]}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{url}">
+  <meta property="og:title" content="{e(g["titulo"])}">
+  <meta property="og:description" content="{e(g["desc"])}">
+  <meta property="og:image" content="{URL}/social.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/icono.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css?v=12">
+  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+</head>
+<body>
+  <div class="cabecera-pagina">
+    <div class="contenedor">
+      <header class="barra">
+        <a class="logo" href="/" aria-label="Mando TV, {u["inicio"]}">
+          {LOGO}
+          Mando TV
+        </a>
+        <nav aria-label="{u["principal"]}">
+          <a href="/soporte.html">{u["ayuda"]}</a>
+          <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hello%20Mando%20TV">{u["contacto"]}</a>
+        </nav>
+      </header>
+      <nav class="migas" aria-label="{u["ruta"]}"><a href="/">{u["migas_inicio"]}</a> / <span>{e(g["corto"])}</span></nav>
+      <h1>{e(g["h1"])}</h1>
+      <p>{e(g["intro"])}</p>
+      <div class="acciones">
+        <a class="boton" href="#pasos">{u["ver"]}</a>
+        <a class="boton claro" href="#mando-tv">{u["bajar"]}</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="contenedor">
+    <div class="documento">
+      <h2 id="pasos">{u["pasos"]}</h2>
+      <ol>
+{pasos}
+      </ol>
+
+{extra}
+
+      <h2 id="mando-tv">{u["hazlo"]}</h2>
+      <p>{u["tiendas"]}</p>
+      <ul class="tiendas" aria-label="{u["aria_desc"]}">
+        <li><a class="tienda" href="{TIENDA_APPLE}" target="_blank" rel="noopener" aria-label="{u["apple_aria"]}">{APPLE_SVG}<span><small>{u["descarga"]}</small>App Store</span></a></li>
+        <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="{u["ms_aria"]}">{MS_SVG}<span><small>{u["descarga"]}</small>Microsoft Store</span></a></li>
+        <li><a class="tienda" href="/#android" aria-label="{u["gp_aria"]}">{GPLAY_SVG}<span><small>{u["anticipada"]}</small>Google Play</span></a></li>
+      </ul>
+      <p class="nota">{u["nota"]}</p>
+
+      <h2 id="preguntas">{u["faq"]}</h2>
+      <div class="preguntas">
+{faq}
+      </div>
+
+      <h2 id="otras">{u["idiomas"]}</h2>
+      <ul>
+{idiomas}
+      </ul>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-enlaces">
+        <nav aria-label="{u["pie"]}">
+          <a href="/">{u["inicio"]}</a>
+          <a href="/soporte.html">{u["ayuda"]}</a>
+          <a href="/privacidad.html">{u["privacidad"]}</a>
+          <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
+          <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
+        </nav>
+        <span>Made in Chile</span>
+      </div>
+      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+      <small>{u["aviso"]}</small>
+    </div>
+  </footer>
+  <script src="/correo.js?v=3" defer></script>
+  <script src="/cookies.js?v=1" defer></script>
+  <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "3a3f0250e4b04d5884b033b9a94302b4"}}'></script>
+</body>
+</html>
+'''
+
+
+for g in I18N:
+    d = os.path.join(SITIO, *g['slug'].split('/'))
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='\n').write(pagina_idioma(g))
     print('ok', g['slug'], len(g['titulo']), len(g['desc']))
