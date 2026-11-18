@@ -7,7 +7,7 @@ import ast, html, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.dont_write_bytecode = True
 import idiomas_sitio
-from datos_en_eeuu import GUIAS_EEUU
+from datos_en_eeuu import GUIAS_EEUU, FIRE_TV_PUBLICADO
 
 SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
@@ -79,6 +79,10 @@ PIE = [
   ('/en/guides/tv-remote-app-for-iphone/', 'TV remote app for iPhone'),
   ('/en/guides/tv-remote-app-for-windows/', 'TV remote app for Windows PC'),
 ]
+
+
+if not FIRE_TV_PUBLICADO:
+    PIE = [x for x in PIE if 'fire-tv' not in x[0]]
 
 
 def pie_marcas():
@@ -701,6 +705,12 @@ OTRAS_GUIAS = [
 ]
 
 
+if not FIRE_TV_PUBLICADO:
+    OTRAS_GUIAS = [x for x in OTRAS_GUIAS if x[0] != 'firetv']
+    carpeta_ft = os.path.join(SITIO, 'en', 'guides', 'fire-tv-remote-app')
+    if os.path.isdir(carpeta_ft):
+        import shutil
+        shutil.rmtree(carpeta_ft)
 GUIAS.extend(GUIAS_EEUU)
 
 
@@ -785,8 +795,8 @@ def indice():
       'lost-lg': next(g['desc'] for g in GUIAS if g['clave'] == 'lost-lg'),
       'hdmi': next(g['desc'] for g in GUIAS if g['clave'] == 'hdmi'),
       'androidtv': next(g['desc'] for g in GUIAS if g['clave'] == 'androidtv'),
-      **{k: next(g['desc'] for g in GUIAS if g['clave'] == k) for k in ('samsung-lost', 'roku-lost', 'roku-403', 'androidtv-code', 'not-found', 'wifi', 'pc',
-         'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows')},
+      **{k: next(g['desc'] for g in GUIAS if g['clave'] == k) for k in [x for x in ('samsung-lost', 'roku-lost', 'roku-403', 'androidtv-code', 'not-found', 'wifi', 'pc',
+         'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows') if FIRE_TV_PUBLICADO or x != 'firetv']},
       'console': 'Launch day and no TV remote? Turn on your TV and switch to your PS5 or Xbox HDMI input from your phone. Free, no ads.',
     }
     ld = {"@context": "https://schema.org", "@graph": [

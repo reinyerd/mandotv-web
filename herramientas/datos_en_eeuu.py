@@ -5,6 +5,10 @@
 #     lib/drivers/fire_tv.dart, desde la 1.0.8) y Hisense VIDAA (lib/drivers/vidaa.dart, en main, NO publicado aún).
 #   - Vizio SmartCast: sin driver, no se promete. Hisense VIDAA y TCL: solo se dicen las plataformas ya publicadas.
 #   - Gratis y Pro: docs/PRO.md y funcionesProPorDefecto en lib/core/licencia.dart.
+# Fire TV sale en la app 1.0.8. Poner True SOLO cuando la 1.0.8 esté publicada en las tiendas y volver a generar
+# (python -I herramientas/generar_en.py .). Con False no se genera la guía de Fire TV ni se promete en ninguna página.
+FIRE_TV_PUBLICADO = False
+
 FREE_PRO = ('The arrows, OK, Back, Home, volume, channels, number keys, keyboard and power on or off are free. '
             'The touchpad, the apps and inputs lists, voice commands and routines are part of Mando TV Pro, '
             'a one-time purchase with no subscription.')
@@ -50,7 +54,7 @@ GUIAS_EEUU = [
     ],
     extra=[
       ('Where Mando TV fits better', 'One app for several TVs: Roku, Samsung, LG and Google TV or Android TV. No account, no ads. It also works from a Windows PC, which is handy at a desk. The d-pad and volume feel quick, and the keyboard makes typing a search painless.'),
-      ('Where the official Roku app is better', 'Keep the Roku app for things Mando TV does not do: browsing and adding channels from the Roku Channel Store, casting media from your phone and listening privately through headphones. Use both if you like. They can run on the same phone.'),
+      ('Where the official Roku app is better', 'Keep the Roku app for what it offers beyond the remote, such as browsing and adding channels from the Roku Channel Store and its own casting and private listening features. Use both if you like. They can run on the same phone.'),
       ('Roku TV sets and Roku players', 'Both work. That includes Roku TV models from TCL, Hisense, Philips and others, and Roku Express, Streaming Stick and Ultra. Details are on the [Roku remote app page](/en/roku-remote/).'),
       ('If the Roku app stopped working', 'If the buttons stopped responding, the Roku is usually blocking control by apps. The guide [Roku remote app not working](/en/guides/roku-remote-app-not-working/) walks through the setting that fixes it.'),
       ('What is free and what is Pro', FREE_PRO + ' On a Roku, the channels list and the inputs list are Pro.'),
@@ -209,3 +213,59 @@ GUIAS_EEUU = [
       ('Can I use my PC speakers or my screen to see the TV?', 'No. Mando TV is only a remote. It does not mirror or stream the TV picture to the computer.'),
     ]),
 ]
+
+
+# Con Fire TV sin publicar: se quita la guía y toda promesa de control de Fire TV (los textos de arriba son los de True).
+_CAMBIOS = {
+  'hisense': [
+    ("Roku TV, Google TV or Fire TV from your phone over Wi-Fi. Honest guide", "Roku TV or Google TV from your phone over Wi-Fi. Honest guide"),
+    ("Mando TV works as a Hisense TV remote app on the first three.", "Mando TV works as a Hisense TV remote app on Roku TV and Google TV models."),
+    (" Fire TV shows the Fire TV home screen with Amazon rows.", ""),
+    (" Fire TV shows a 4-digit PIN to type into the app.", ""),
+    ("Fire TV support is new in Mando TV. Update the app to the latest version from your store, and see the [Fire TV remote app page](/en/guides/fire-tv-remote-app/) for how the PIN pairing works. If something does not behave, write to us from the Help page and tell us your model.",
+     "Fire TV support is coming in the next app update, so we do not claim it yet. Until then, a Hisense with Fire TV is controlled with the Amazon Fire TV app or its own remote."),
+    ("Hisense TVs that run Roku TV, Google TV or Fire TV are supported.", "Hisense TVs that run Roku TV or Google TV are supported. Fire TV support is coming in the next app update."),
+    ("Roku TV, Google TV or Fire TV?', 'Look", "Roku TV, Google TV or Fire TV?', 'Look"),
+  ],
+  'vizio': [
+    ("If you plug a Roku, Fire TV or Google TV streaming device", "If you plug a Roku or Google TV streaming device"),
+    ("Google TV or Android TV, and Fire TV. Vizio", "Google TV or Android TV. Vizio"),
+    ("a Roku stick, a Fire TV stick or a Chromecast", "a Roku stick or a Chromecast"),
+    ("controls the Roku, Fire TV and Google TV devices.", "controls the Roku and Google TV devices."),
+    ("controls Roku, Fire TV and Google TV devices plugged", "controls Roku and Google TV devices plugged"),
+  ],
+  'iphone': [
+    ("Roku, Google TV and Fire TV over Wi-Fi", "Roku and Google TV over Wi-Fi"),
+    ("Google TV or Android TV, and Fire TV, over", "Google TV or Android TV, over"),
+    ("(Google TV or Fire TV)", "(Google TV)"),
+    ("Google TV and Android TV, and Fire TV. The brand", "Google TV and Android TV. The brand"),
+  ],
+  'windows': [
+    ("Roku, Google TV or Fire TV from a Windows", "Roku or Google TV from a Windows"),
+    ("Roku, Google TV or Fire TV from the same app", "Roku or Google TV from the same app"),
+    ("(Google TV, Fire TV)", "(Google TV)"),
+    ("Google TV and Android TV, and Fire TV.", "Google TV and Android TV."),
+  ],
+}
+if not FIRE_TV_PUBLICADO:
+  GUIAS_EEUU = [g for g in GUIAS_EEUU if g['clave'] != 'firetv']
+  _hechos = set()
+  for g in GUIAS_EEUU:
+    for a, b in _CAMBIOS.get(g['clave'], []):
+      for k, v in list(g.items()):
+        if isinstance(v, str) and a in v:
+          g[k] = v.replace(a, b); _hechos.add((g['clave'], a))
+        elif isinstance(v, list):
+          nv = []
+          for x in v:
+            if isinstance(x, str) and a in x:
+              x = x.replace(a, b); _hechos.add((g['clave'], a))
+            elif isinstance(x, tuple):
+              y = tuple(s.replace(a, b) if isinstance(s, str) else s for s in x)
+              if y != x:
+                _hechos.add((g['clave'], a))
+              x = y
+            nv.append(x)
+          g[k] = nv
+  _faltan = [(c, a) for c, l in _CAMBIOS.items() for a, b in l if (c, a) not in _hechos and a != b]
+  assert not _faltan, _faltan
