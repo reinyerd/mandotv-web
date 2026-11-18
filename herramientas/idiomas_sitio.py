@@ -3,7 +3,7 @@
 # Para activar un idioma nuevo basta añadirlo a ACTIVOS cuando sus páginas ya existen.
 # Lo usan generar_guias.py, generar_marcas.py, generar_en.py y generar_idiomas.py (importan este archivo por ruta).
 URL = 'https://mandotv.app'
-ACTIVOS = ['es', 'en', 'de']          # idiomas con páginas publicadas
+ACTIVOS = ['es', 'en', 'de', 'fr']          # idiomas con páginas publicadas
 ORDEN = ['es', 'en', 'pt', 'de', 'fr']  # orden de los hreflang
 NOMBRES = {'es': 'Español', 'en': 'English', 'pt': 'Português (Brasil)', 'de': 'Deutsch', 'fr': 'Français'}
 CODIGO_LANG = {'es': 'es', 'en': 'en', 'pt': 'pt', 'de': 'de', 'fr': 'fr'}
