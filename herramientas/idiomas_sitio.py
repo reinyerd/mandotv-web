@@ -29,6 +29,15 @@ _FILAS = {
   'not-found': ('guias/el-celular-no-encuentra-el-tv', 'en/guides/phone-cant-find-tv', 'de/ratgeber/handy-findet-fernseher-nicht', 'fr/guides/telephone-ne-trouve-pas-la-tv', 'pt/guias/celular-nao-encontra-a-tv', 'it/guide/smartphone-non-trova-la-tv'),
   'wifi': ('guias/conectar-celular-al-tv-por-wifi', 'en/guides/connect-phone-to-tv-wifi', 'de/ratgeber/handy-als-fernbedienung-wlan', 'fr/guides/telephone-comme-telecommande-wifi', 'pt/guias/celular-como-controle-remoto-por-wifi', 'it/guide/smartphone-come-telecomando-wifi'),
   'pc': ('guias/controlar-el-tv-desde-el-pc', 'en/guides/control-tv-from-pc', 'de/ratgeber/fernseher-mit-dem-pc-steuern', 'fr/guides/controler-la-tv-depuis-le-pc', 'pt/guias/controlar-a-tv-pelo-pc', 'it/guide/controllare-la-tv-dal-pc'),
+  # Guías solo en inglés (SEO EE. UU.): sin gemelas; el hreflang x-default apunta a la propia página.
+  'lg-thinq': (None, 'en/guides/lg-thinq-app-alternative', None, None, None, None),
+  'roku-app-alt': (None, 'en/guides/roku-app-alternative', None, None, None, None),
+  'tcl': (None, 'en/guides/tcl-tv-remote-app', None, None, None, None),
+  'hisense': (None, 'en/guides/hisense-tv-remote-app', None, None, None, None),
+  'vizio': (None, 'en/guides/vizio-tv-remote-app', None, None, None, None),
+  'firetv': (None, 'en/guides/fire-tv-remote-app', None, None, None, None),
+  'iphone': (None, 'en/guides/tv-remote-app-for-iphone', None, None, None, None),
+  'windows': (None, 'en/guides/tv-remote-app-for-windows', None, None, None, None),
   'soporte': ('soporte.html', 'en/support.html', 'de/hilfe.html', 'fr/aide.html', 'pt/ajuda.html', 'it/assistenza.html'),
   'privacidad': ('privacidad.html', 'en/privacy.html', 'de/datenschutz.html', 'fr/confidentialite.html', 'pt/privacidade.html', 'it/privacy.html'),
 }
@@ -61,7 +70,7 @@ def alternos(clave):
 def clave_es(es):
     """Clave de una página a partir de su carpeta en español (por ejemplo 'guias/perdi-el-control-del-tv')."""
     for k, v in PAGINAS.items():
-        if v['es'] == es.strip('/'):
+        if v.get('es') == es.strip('/'):
             return k
     return None
 
@@ -70,7 +79,8 @@ def hreflangs(clave):
     """Bloque <link rel=alternate> con todas las gemelas y x-default (siempre el español)."""
     a = alternos(clave)
     filas = [f'  <link rel="alternate" hreflang="{l}" href="{u}">' for l, u in a.items()]
-    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{a["es"]}">')
+    # x-default: el español; si la página no existe en español (guías solo en inglés), ella misma.
+    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{a.get("es") or next(iter(a.values()))}">')
     return '\n'.join(filas) + '\n'
 
 

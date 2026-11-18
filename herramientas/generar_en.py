@@ -7,6 +7,7 @@ import ast, html, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.dont_write_bytecode = True
 import idiomas_sitio
+from datos_en_eeuu import GUIAS_EEUU, FIRE_TV_PUBLICADO
 
 SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
@@ -36,9 +37,10 @@ ORG = {"@type": "Organization", "@id": URL + "/#org", "name": "Mando TV", "url":
 
 # Equivalencias es <-> en: salen de idiomas_sitio.py (carpeta en español, carpeta en inglés)
 BRANDS = {k: (idiomas_sitio.carpeta(k, 'es'), idiomas_sitio.carpeta(k, 'en')) for k in ('lg', 'samsung', 'roku', 'android')}
-GUIDE_SLUGS = {k: (idiomas_sitio.carpeta(k, 'es'), idiomas_sitio.carpeta(k, 'en')) for k in (
+GUIDE_SLUGS = {k: (idiomas_sitio.PAGINAS[k].get('es'), idiomas_sitio.carpeta(k, 'en')) for k in (
   'lost-tv', 'lost-lg', 'hdmi', 'androidtv', 'lg-on', 'console', 'samsung-lost', 'roku-lost', 'roku-403',
-  'androidtv-code', 'not-found', 'wifi', 'pc')}
+  'androidtv-code', 'not-found', 'wifi', 'pc',
+  'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows')}
 # Páginas sueltas: (ruta en español, ruta en inglés)
 SOPORTE = ('/soporte.html', '/en/support.html')
 PRIVACIDAD = ('/privacidad.html', '/en/privacy.html')
@@ -68,7 +70,19 @@ PIE = [
   ('/en/guides/phone-cant-find-tv/', "Phone can't find the TV"),
   ('/en/guides/connect-phone-to-tv-wifi/', 'Use your phone as a TV remote over Wi-Fi'),
   ('/en/guides/control-tv-from-pc/', 'Control your TV from a Windows PC'),
+  ('/en/guides/lg-thinq-app-alternative/', 'LG ThinQ app alternative'),
+  ('/en/guides/roku-app-alternative/', 'Roku mobile app alternative'),
+  ('/en/guides/tcl-tv-remote-app/', 'TCL TV remote app'),
+  ('/en/guides/hisense-tv-remote-app/', 'Hisense TV remote app'),
+  ('/en/guides/vizio-tv-remote-app/', 'Vizio TV remote app'),
+  ('/en/guides/fire-tv-remote-app/', 'Fire TV remote app'),
+  ('/en/guides/tv-remote-app-for-iphone/', 'TV remote app for iPhone'),
+  ('/en/guides/tv-remote-app-for-windows/', 'TV remote app for Windows PC'),
 ]
+
+
+if not FIRE_TV_PUBLICADO:
+    PIE = [x for x in PIE if 'fire-tv' not in x[0]]
 
 
 def pie_marcas():
@@ -170,7 +184,7 @@ def pie(clave):
         <span>Made in Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV is not affiliated with LG, Samsung, Roku or Google. Brands named belong to their owners and are mentioned only to show compatibility.</small>
+      <small>Mando TV is not affiliated with LG, Samsung, Roku, Google, Amazon, TCL, Hisense or Vizio. Brands named belong to their owners and are mentioned only to show compatibility.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -680,12 +694,29 @@ OTRAS_GUIAS = [
   ('not-found', 'Your phone cannot find the TV: what to check'),
   ('wifi', 'How to use your phone as a TV remote over Wi-Fi'),
   ('pc', 'How to control your TV from a Windows PC'),
+  ('lg-thinq', 'LG ThinQ app alternative for your LG TV remote'),
+  ('roku-app-alt', 'Roku mobile app alternative: one remote for every TV'),
+  ('tcl', 'TCL TV remote app for your phone'),
+  ('hisense', 'Hisense TV remote app: what works and what does not'),
+  ('vizio', 'Vizio TV remote app: honest answer and real options'),
+  ('firetv', 'Fire TV remote app for your phone or PC'),
+  ('iphone', 'TV remote app for iPhone: one remote for every TV'),
+  ('windows', 'TV remote app for Windows PC'),
 ]
+
+
+if not FIRE_TV_PUBLICADO:
+    OTRAS_GUIAS = [x for x in OTRAS_GUIAS if x[0] != 'firetv']
+    carpeta_ft = os.path.join(SITIO, 'en', 'guides', 'fire-tv-remote-app')
+    if os.path.isdir(carpeta_ft):
+        import shutil
+        shutil.rmtree(carpeta_ft)
+GUIAS.extend(GUIAS_EEUU)
 
 
 def pagina_guia(g):
     e = html.escape
-    es, en = '/' + GUIDE_SLUGS[g['clave']][0] + '/', '/' + GUIDE_SLUGS[g['clave']][1] + '/'
+    en = '/' + GUIDE_SLUGS[g['clave']][1] + '/'
     url = URL + en
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": "en",
@@ -710,6 +741,7 @@ def pagina_guia(g):
           f'        <li><a href="{u}">{n}</a></li>' for u, n in PIE[:4]) + '\n      </ul>')
     otras = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a></li>' for k, t in OTRAS_GUIAS if k != g['clave'])
     idiomas = '\n'.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{n}</a></li>' for l, r, n in idiomas_sitio.enlaces_idiomas(g['clave'], 'en'))
+    bloque_idiomas = ('\n      <h2 id="idiomas">This guide in other languages</h2>\n      <ul>\n' + idiomas + '\n      </ul>\n') if idiomas else ''
     return (cabecera(g['titulo'], g['desc'], url, g['clave'], '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{e(g["intro"])}</p>
@@ -746,11 +778,7 @@ def pagina_guia(g):
         <li><a href="/en/support.html">Help and support</a></li>
       </ul>
 
-      <h2 id="idiomas">This guide in other languages</h2>
-      <ul>
-{idiomas}
-      </ul>
-    </div>
+{bloque_idiomas}    </div>
   </main>
 
 ''' + pie(g['clave']))
@@ -767,7 +795,8 @@ def indice():
       'lost-lg': next(g['desc'] for g in GUIAS if g['clave'] == 'lost-lg'),
       'hdmi': next(g['desc'] for g in GUIAS if g['clave'] == 'hdmi'),
       'androidtv': next(g['desc'] for g in GUIAS if g['clave'] == 'androidtv'),
-      **{k: next(g['desc'] for g in GUIAS if g['clave'] == k) for k in ('samsung-lost', 'roku-lost', 'roku-403', 'androidtv-code', 'not-found', 'wifi', 'pc')},
+      **{k: next(g['desc'] for g in GUIAS if g['clave'] == k) for k in [x for x in ('samsung-lost', 'roku-lost', 'roku-403', 'androidtv-code', 'not-found', 'wifi', 'pc',
+         'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows') if FIRE_TV_PUBLICADO or x != 'firetv']},
       'console': 'Launch day and no TV remote? Turn on your TV and switch to your PS5 or Xbox HDMI input from your phone. Free, no ads.',
     }
     ld = {"@context": "https://schema.org", "@graph": [
