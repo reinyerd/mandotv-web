@@ -578,12 +578,14 @@ GUIAS = [
     extra=[
       ('PC keyboard shortcuts (Pro)', 'With Mando TV Pro you control the TV with your computer keyboard: arrow keys to move around, Enter for OK, Backspace or Esc to go back, + and - for the volume, M to mute and Space to pause.'),
       ('Mini remote always on top (Pro)', 'Keep a small window with the remote always visible while you work or play on your PC.'),
+      ('Talk to your TV from the PC (Pro)', 'With Mando TV Pro you give the TV commands with your PC microphone: "open YouTube", "volume up" or "turn off in 30 minutes". On Windows, turn on "Online speech recognition" once in Settings > Privacy & security > Speech, because Windows turns your voice into text with that service. If it is off, Mando TV tells you and opens the setting with one button. The first time, Windows also asks whether Mando TV can use the microphone: say yes.'),
     ],
     marca=None,
     faq=[
       ('Do I need a cable or Bluetooth to control the TV from my PC?', 'No. Mando TV connects over your home network: the PC and the TV only need to be on the same router.'),
       ('Does it work with any TV?', 'It works with Samsung TVs running Tizen (2016 and newer), LG with webOS, Roku, and Google TV or Android TV (Sony, TCL, Philips, Xiaomi and others).'),
       ('How much does it cost?', 'The buttons, the keyboard and power-on over the network are free and ad-free. Mando TV Pro is a one-time purchase, no subscription, for extras such as the touchpad, the apps, the PC keyboard shortcuts and the mini remote.'),
+      ('Why does the microphone not understand me on Windows?', 'Check three things: "Online speech recognition" is on in Settings > Privacy & security > Speech; Mando TV is allowed in Settings > Privacy & security > Microphone; and the language you speak is installed in Windows with speech recognition (Settings > Time & language). Mando TV dictates in the app language, and you can change it by tapping the language above the microphone.'),
     ]),
   dict(clave='roku-403', corto='Roku remote app not working',
     titulo='Roku Remote App Not Working? Fix Error 403',

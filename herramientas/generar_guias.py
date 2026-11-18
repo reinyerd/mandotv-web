@@ -101,12 +101,14 @@ GUIAS = [
     extra=[
       ('Atajos del teclado del PC (Pro)', 'Con Mando TV Pro manejas el TV con el teclado del computador: flechas para moverte, Enter para OK, Retroceso o Esc para volver, + y − para el volumen, M para silenciar y Espacio para pausar.'),
       ('Mini control siempre encima (Pro)', 'Deja una ventana pequeña con el control siempre visible mientras trabajas o juegas en el PC.'),
+      ('Hablarle al TV desde el PC (Pro)', 'Con Mando TV Pro le das órdenes al TV con el micrófono del PC: "abre YouTube", "sube el volumen" o "apaga en 30 minutos". En Windows hay que activar una vez "Reconocimiento de voz en línea" en Configuración > Privacidad y seguridad > Voz, porque Windows convierte tu voz en texto con ese servicio. Si está apagado, Mando TV te avisa y te lleva al ajuste con un botón. La primera vez Windows también pregunta si Mando TV puede usar el micrófono: responde que sí.'),
     ],
     marca=None,
     faq=[
       ('¿Necesito un cable o Bluetooth para controlar el TV desde el PC?', 'No. Mando TV se conecta por la red de tu casa: basta con que el PC y el TV estén en el mismo router.'),
       ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, TCL, Philips, Xiaomi y otros).'),
       ('¿Cuánto cuesta?', 'Los botones, el teclado y el encendido por red son gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como el touchpad, las apps, los atajos del teclado del PC y el mini control.'),
+      ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa tres cosas: que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz; que Mando TV tenga permiso en Configuración > Privacidad y seguridad > Micrófono; y que el idioma en que hablas esté instalado en Windows con su reconocimiento de voz (Configuración > Hora e idioma). Mando TV dicta en el idioma de la app y puedes cambiarlo tocando el idioma sobre el micrófono.'),
     ]),
   # Páginas de rescate (2026-11-17): problemas reales que reportaron los testers. Cada una lleva pasos propios.
   dict(slug='guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',
