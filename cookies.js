@@ -7,7 +7,22 @@
   var CLAVE = 'mandotv-cookies'; // 'si' | 'no'
   var cargado = false;
   var aviso;
-  var EN = document.documentElement.lang === 'en';
+  // Textos del aviso por idioma (<html lang>): es por defecto; en, de y fr con tabla propia.
+  var TEXTOS = {
+    es: { aria: 'Aviso de cookies', titulo: '¿Nos dejas contar tus visitas con cookies?',
+          texto: 'Usamos Google Analytics para saber qué páginas se leen y mejorar la web. Solo se activa si aceptas.',
+          url: '/privacidad.html#cookies', mas: 'Más información', si: 'Aceptar', no: 'Rechazar' },
+    en: { aria: 'Cookie notice', titulo: 'Can we count your visits with cookies?',
+          texto: 'We use Google Analytics to see which pages are read and improve the site. It only turns on if you accept.',
+          url: '/en/privacy.html#cookies', mas: 'Learn more', si: 'Accept', no: 'Decline' },
+    de: { aria: 'Cookie-Hinweis', titulo: 'Dürfen wir deine Besuche mit Cookies zählen?',
+          texto: 'Wir nutzen Google Analytics, um zu sehen, welche Seiten gelesen werden, und die Website zu verbessern. Es wird nur aktiviert, wenn du akzeptierst.',
+          url: '/de/datenschutz.html#cookies', mas: 'Mehr erfahren', si: 'Akzeptieren', no: 'Ablehnen' },
+    fr: { aria: 'Avis sur les cookies', titulo: 'Pouvons-nous compter vos visites avec des cookies ?',
+          texto: "Nous utilisons Google Analytics pour savoir quelles pages sont lues et améliorer le site. Il ne s'active que si vous acceptez.",
+          url: '/fr/confidentialite.html#cookies', mas: 'En savoir plus', si: 'Accepter', no: 'Refuser' }
+  };
+  var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 
   function leer() { try { return localStorage.getItem(CLAVE); } catch (e) { return null; } }
   function guardar(v) { try { localStorage.setItem(CLAVE, v); } catch (e) { /* sin almacenamiento: se vuelve a preguntar */ } }
@@ -42,20 +57,13 @@
     aviso = document.createElement('div');
     aviso.className = 'aviso-cookies';
     aviso.setAttribute('role', 'region');
-    aviso.setAttribute('aria-label', EN ? 'Cookie notice' : 'Aviso de cookies');
-    aviso.innerHTML = EN
-      ? '<p><b>Can we count your visits with cookies?</b> We use Google Analytics to see which pages are read ' +
-        'and improve the site. It only turns on if you accept. <a href="/en/privacy.html#cookies">Learn more</a></p>' +
-        '<div class="aviso-cookies-botones">' +
-        '<button type="button" class="boton" data-eleccion="si">Accept</button>' +
-        '<button type="button" class="boton" data-eleccion="no">Decline</button>' +
-        '</div>'
-      : '<p><b>¿Nos dejas contar tus visitas con cookies?</b> Usamos Google Analytics para saber qué páginas se leen ' +
-        'y mejorar la web. Solo se activa si aceptas. <a href="/privacidad.html#cookies">Más información</a></p>' +
-        '<div class="aviso-cookies-botones">' +
-        '<button type="button" class="boton" data-eleccion="si">Aceptar</button>' +
-        '<button type="button" class="boton" data-eleccion="no">Rechazar</button>' +
-        '</div>';
+    aviso.setAttribute('aria-label', T.aria);
+    aviso.innerHTML =
+      '<p><b>' + T.titulo + '</b> ' + T.texto + ' <a href="' + T.url + '">' + T.mas + '</a></p>' +
+      '<div class="aviso-cookies-botones">' +
+      '<button type="button" class="boton" data-eleccion="si">' + T.si + '</button>' +
+      '<button type="button" class="boton" data-eleccion="no">' + T.no + '</button>' +
+      '</div>';
     aviso.addEventListener('click', function (e) {
       var b = e.target.closest('[data-eleccion]');
       if (!b) return;

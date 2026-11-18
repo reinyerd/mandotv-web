@@ -1,5 +1,8 @@
 # Genera las páginas por marca de mandotv.app (una carpeta con index.html por marca).
 import json, os, html, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.dont_write_bytecode = True
+import idiomas_sitio
 
 SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
@@ -145,18 +148,9 @@ LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
 def otras(actual):
     return '\n'.join(f'          <li><a href="/{m["slug"]}/">Control remoto para {m["nombre"]}</a></li>' for m in MARCAS if m is not actual)
 
-# Gemelas en inglés (generar_en.py): hreflang es + en + x-default.
-EN_GEMELOS = {
-  'control-remoto-lg': 'en/lg-tv-remote',
-  'control-remoto-samsung': 'en/samsung-tv-remote',
-  'control-remoto-roku': 'en/roku-remote',
-  'control-remoto-android-tv': 'en/android-tv-remote',
-}
-
+# hreflang de todas las gemelas (es, en, de, fr...): salen de idiomas_sitio.py.
 def hreflangs(slug):
-    es = f'{URL}/{slug}/'
-    filas = [('es', es), ('en', f'{URL}/{EN_GEMELOS[slug]}/'), ('x-default', es)]
-    return ''.join(f'  <link rel="alternate" hreflang="{l}" href="{u}">' + chr(10) for l, u in filas)
+    return idiomas_sitio.hreflangs(idiomas_sitio.clave_es(slug))
 
 def pagina(m):
     e = html.escape

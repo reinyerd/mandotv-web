@@ -3,13 +3,22 @@
 // Al pulsarlo mostramos un panel con: abrir Gmail, abrir la app de correo o copiar la dirección.
 (function () {
   var panel, asunto, cuerpo, enlaceApp, enlaceGmail, aviso;
-  var EN = document.documentElement.lang === 'en';
-  var T = EN
-    ? { titulo: 'Write to us', es: 'Our email is', gmail: 'Open in Gmail', app: 'Open my email app', copiar: 'Copy address',
-        cerrar: 'Close', copiada: 'Address copied. Paste it into your email.', copia: 'Copy the address: hola@mandotv.app' }
-    : { titulo: 'Escríbenos', es: 'Nuestro correo es', gmail: 'Abrir en Gmail', app: 'Abrir mi app de correo',
-        copiar: 'Copiar dirección', cerrar: 'Cerrar', copiada: 'Dirección copiada. Pégala en tu correo.',
-        copia: 'Copia la dirección: hola@mandotv.app' };
+  // Textos por idioma (<html lang>): es por defecto; en, de y fr con tabla propia.
+  var TEXTOS = {
+    es: { titulo: 'Escríbenos', es: 'Nuestro correo es', gmail: 'Abrir en Gmail', app: 'Abrir mi app de correo',
+          copiar: 'Copiar dirección', cerrar: 'Cerrar', copiada: 'Dirección copiada. Pégala en tu correo.',
+          copia: 'Copia la dirección: hola@mandotv.app', asunto: 'Hola Mando TV' },
+    en: { titulo: 'Write to us', es: 'Our email is', gmail: 'Open in Gmail', app: 'Open my email app', copiar: 'Copy address',
+          cerrar: 'Close', copiada: 'Address copied. Paste it into your email.', copia: 'Copy the address: hola@mandotv.app',
+          asunto: 'Hello Mando TV' },
+    de: { titulo: 'Schreib uns', es: 'Unsere E-Mail-Adresse ist', gmail: 'In Gmail öffnen', app: 'Meine E-Mail-App öffnen',
+          copiar: 'Adresse kopieren', cerrar: 'Schließen', copiada: 'Adresse kopiert. Füge sie in deine E-Mail ein.',
+          copia: 'Kopiere die Adresse: hola@mandotv.app', asunto: 'Hallo Mando TV' },
+    fr: { titulo: 'Écrivez-nous', es: 'Notre adresse e-mail est', gmail: 'Ouvrir dans Gmail', app: 'Ouvrir mon application de messagerie',
+          copiar: "Copier l'adresse", cerrar: 'Fermer', copiada: "Adresse copiée. Collez-la dans votre e-mail.",
+          copia: "Copiez l'adresse : hola@mandotv.app", asunto: 'Bonjour Mando TV' }
+  };
+  var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 
   function crearPanel() {
     panel = document.createElement('dialog');
@@ -47,7 +56,7 @@
   function abrir(href) {
     if (!panel) crearPanel();
     var url = new URL(href);
-    asunto = url.searchParams.get('subject') || (EN ? 'Hello Mando TV' : 'Hola Mando TV');
+    asunto = url.searchParams.get('subject') || T.asunto;
     cuerpo = url.searchParams.get('body') || '';
     enlaceApp.href = href;
     enlaceGmail.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=hola@mandotv.app&su=' +

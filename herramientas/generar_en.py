@@ -4,6 +4,9 @@
 # Mismo patrón que generar_guias.py y generar_marcas.py; hreflang es + en (+ x-default = español) en las dos versiones
 # (las páginas en español lo reciben de sus propios generadores).
 import ast, html, json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.dont_write_bytecode = True
+import idiomas_sitio
 
 SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
@@ -31,28 +34,11 @@ LOGO, APPLE_SVG, MS_SVG, GPLAY_SVG = K['LOGO'], K['APPLE_SVG'], K['MS_SVG'], K['
 
 ORG = {"@type": "Organization", "@id": URL + "/#org", "name": "Mando TV", "url": URL + "/"}
 
-# Equivalencias es <-> en: (carpeta en español, carpeta en inglés)
-BRANDS = {
-  'lg': ('control-remoto-lg', 'en/lg-tv-remote'),
-  'samsung': ('control-remoto-samsung', 'en/samsung-tv-remote'),
-  'roku': ('control-remoto-roku', 'en/roku-remote'),
-  'android': ('control-remoto-android-tv', 'en/android-tv-remote'),
-}
-GUIDE_SLUGS = {
-  'lost-tv': ('guias/perdi-el-control-del-tv', 'en/guides/lost-tv-remote'),
-  'lost-lg': ('guias/perdi-el-control-del-lg', 'en/guides/lost-lg-remote'),
-  'hdmi': ('guias/cambiar-entrada-hdmi-sin-control', 'en/guides/change-hdmi-input-without-remote'),
-  'androidtv': ('guias/android-tv-sin-control-remoto', 'en/guides/android-tv-without-remote'),
-  'lg-on': ('guias/encender-tv-lg-con-el-celular', 'en/guides/turn-on-lg-tv-with-phone'),
-  'console': ('guias/encender-tv-y-hdmi-de-la-consola-sin-control', 'en/guides/turn-on-tv-console-hdmi-without-remote'),
-  'samsung-lost': ('guias/control-remoto-samsung-sin-control', 'en/guides/samsung-tv-without-remote'),
-  'roku-lost': ('guias/perdi-el-control-del-roku', 'en/guides/lost-roku-remote'),
-  'roku-403': ('guias/roku-no-responde-al-celular', 'en/guides/roku-remote-app-not-working'),
-  'androidtv-code': ('guias/android-tv-codigo-de-emparejamiento', 'en/guides/android-tv-pairing-code'),
-  'not-found': ('guias/el-celular-no-encuentra-el-tv', 'en/guides/phone-cant-find-tv'),
-  'wifi': ('guias/conectar-celular-al-tv-por-wifi', 'en/guides/connect-phone-to-tv-wifi'),
-  'pc': ('guias/controlar-el-tv-desde-el-pc', 'en/guides/control-tv-from-pc'),
-}
+# Equivalencias es <-> en: salen de idiomas_sitio.py (carpeta en español, carpeta en inglés)
+BRANDS = {k: (idiomas_sitio.carpeta(k, 'es'), idiomas_sitio.carpeta(k, 'en')) for k in ('lg', 'samsung', 'roku', 'android')}
+GUIDE_SLUGS = {k: (idiomas_sitio.carpeta(k, 'es'), idiomas_sitio.carpeta(k, 'en')) for k in (
+  'lost-tv', 'lost-lg', 'hdmi', 'androidtv', 'lg-on', 'console', 'samsung-lost', 'roku-lost', 'roku-403',
+  'androidtv-code', 'not-found', 'wifi', 'pc')}
 # Páginas sueltas: (ruta en español, ruta en inglés)
 SOPORTE = ('/soporte.html', '/en/support.html')
 PRIVACIDAD = ('/privacidad.html', '/en/privacy.html')
@@ -90,10 +76,8 @@ def pie_marcas():
     return f'      <ul class="marcas-enlaces pie-marcas" aria-label="Brands and guides">\n{li}\n      </ul>\n'
 
 
-def hreflangs(es, en):
-    return (f'  <link rel="alternate" hreflang="es" href="{URL}{es}">\n'
-            f'  <link rel="alternate" hreflang="en" href="{URL}{en}">\n'
-            f'  <link rel="alternate" hreflang="x-default" href="{URL}{es}">\n')
+def hreflangs(clave):
+    return idiomas_sitio.hreflangs(clave)
 
 
 def fmt(t):
@@ -107,7 +91,7 @@ def plano(t):
     return re.sub(r'\[([^\]]+)\]\((/[^)\s]*)\)', r'\1', t)
 
 
-def cabecera(titulo, desc, url, es, en, color, tipo, ld):
+def cabecera(titulo, desc, url, clave, color, tipo, ld):
     e = html.escape
     return f'''<!doctype html>
 <html lang="en" style="--marca: {color}">
@@ -120,7 +104,7 @@ def cabecera(titulo, desc, url, es, en, color, tipo, ld):
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="{color}">
   <link rel="canonical" href="{url}">
-{hreflangs(es, en)}  <meta property="og:site_name" content="Mando TV">
+{hreflangs(clave)}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="{tipo}">
   <meta property="og:url" content="{url}">
@@ -171,7 +155,8 @@ def tiendas_guia():
       <p class="nota">Android: free early access on Google Play. <a href="{ANDROID}">Join in two steps</a> and help us reach the store.</p>'''
 
 
-def pie(es_url):
+def pie(clave):
+    otros = ''.join(f'          <a href="{r}" hreflang="{l}" lang="{l}">{n}</a>\n' for l, r, n in idiomas_sitio.enlaces_idiomas(clave, 'en'))
     return f'''  <footer class="pie">
     <div class="contenedor">
       <div class="pie-enlaces">
@@ -180,8 +165,7 @@ def pie(es_url):
           <a href="/en/support.html">Help</a>
           <a href="/en/privacy.html">Privacy</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
-          <a href="{es_url}" hreflang="es" lang="es">Español</a>
-          <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
+{otros}          <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
         </nav>
         <span>Made in Chile</span>
       </div>
@@ -341,7 +325,7 @@ def pagina_marca(m):
     pasos = '\n'.join(f'          <li>{e(p)}</li>' for p in m['pasos'])
     guias = '\n'.join(f'        <li>{g}</li>' for g in m['guias'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in m['faq'])
-    return (cabecera(m['titulo'], m['desc'], url, es, en, m['color'], 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Mando TV</a> / <span>{e(m["corto"])}</span></nav>
+    return (cabecera(m['titulo'], m['desc'], url, m['clave'], m['color'], 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Mando TV</a> / <span>{e(m["corto"])}</span></nav>
       <h1>{e(m["h1"])}</h1>
       <p>{e(m["intro"])}</p>
       <div class="acciones">
@@ -389,7 +373,7 @@ def pagina_marca(m):
     </div>
   </main>
 
-''' + pie(es))
+''' + pie(m['clave']))
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -725,7 +709,8 @@ def pagina_guia(g):
         marcas = ('<p>More details by brand:</p>\n      <ul>\n' + '\n'.join(
           f'        <li><a href="{u}">{n}</a></li>' for u, n in PIE[:4]) + '\n      </ul>')
     otras = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a></li>' for k, t in OTRAS_GUIAS if k != g['clave'])
-    return (cabecera(g['titulo'], g['desc'], url, es, en, '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
+    idiomas = '\n'.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{n}</a></li>' for l, r, n in idiomas_sitio.enlaces_idiomas(g['clave'], 'en'))
+    return (cabecera(g['titulo'], g['desc'], url, g['clave'], '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{e(g["intro"])}</p>
       <div class="acciones">
@@ -763,12 +748,12 @@ def pagina_guia(g):
 
       <h2 id="idiomas">This guide in other languages</h2>
       <ul>
-        <li><a href="{es}" hreflang="es" lang="es">Español</a></li>
+{idiomas}
       </ul>
     </div>
   </main>
 
-''' + pie(es))
+''' + pie(g['clave']))
 
 
 def indice():
@@ -794,7 +779,7 @@ def indice():
          for n, (k, t) in enumerate(OTRAS_GUIAS, 1)]}}]}
     lista = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a>: {e(descripciones[k])}</li>' for k, t in OTRAS_GUIAS)
     marcas = '\n'.join(f'        <li><a href="{u}">{n}</a></li>' for u, n in PIE[:4])
-    return (cabecera(titulo, desc, url, '/guias/', '/en/guides/', '#3d7bff', 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <span>Guides</span></nav>
+    return (cabecera(titulo, desc, url, 'guias', '#3d7bff', 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <span>Guides</span></nav>
       <h1>Guides to Use Your Phone as a TV Remote</h1>
       <p>Simple steps to connect, turn on and fix the remote of your Samsung, LG, Roku or Android TV with Mando TV.</p>
     </div>
@@ -816,7 +801,7 @@ def indice():
     </div>
   </main>
 
-''' + pie('/guias/'))
+''' + pie('guias'))
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -839,7 +824,7 @@ def pagina_soporte():
     titulo = 'Help: Connect and Turn On Your TV With Mando TV'
     desc = 'How to connect the Mando TV remote to your LG, Samsung, Roku or Android TV, how to turn it on from your phone and what to do if something fails.'
     guias = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{html.escape(t)}</a></li>' for k, t in OTRAS_GUIAS)
-    return (cabecera(titulo, desc, url, SOPORTE[0], SOPORTE[1], '#e0457b', 'website', ld_simple('Help', url)) + f'''      {migas_simple('Help')}
+    return (cabecera(titulo, desc, url, 'soporte', '#e0457b', 'website', ld_simple('Help', url)) + f'''      {migas_simple('Help')}
       <h1>Help</h1>
       <p>The most common questions, in step order. If you do not find yours, write to us at <a href="mailto:hola@mandotv.app?subject=Help%20with%20Mando%20TV">hola@mandotv.app</a> and we will reply.</p>
     </div>
@@ -929,14 +914,14 @@ def pagina_soporte():
     </div>
   </main>
 
-''' + pie(SOPORTE[0]))
+''' + pie('soporte'))
 
 
 def pagina_privacidad():
     url = URL + PRIVACIDAD[1]
     titulo = 'Privacy Policy | Mando TV'
     desc = 'Mando TV collects no personal data: no accounts, no ads and no trackers. The app only talks to your TV inside your Wi-Fi network.'
-    return (cabecera(titulo, desc, url, PRIVACIDAD[0], PRIVACIDAD[1], '#e0457b', 'website', ld_simple('Privacy', url)) + f'''      {migas_simple('Privacy')}
+    return (cabecera(titulo, desc, url, 'privacidad', '#e0457b', 'website', ld_simple('Privacy', url)) + f'''      {migas_simple('Privacy')}
       <h1>Privacy</h1>
       <p>In short: Mando TV does not collect your data. There are no accounts, no ads, no trackers and no servers of ours that store what you do.</p>
     </div>
@@ -996,7 +981,7 @@ def pagina_privacidad():
     </article>
   </main>
 
-''' + pie(PRIVACIDAD[0]))
+''' + pie('privacidad'))
 
 
 def escribir_archivo(ruta, texto):

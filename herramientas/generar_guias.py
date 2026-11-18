@@ -1,6 +1,9 @@
 # Genera las páginas guía de mandotv.app (/guias/<tema>/index.html). Mismo patrón que generar_marcas.py.
 # Uso: python -I herramientas/generar_guias.py <carpeta del sitio>
 import json, os, html, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.dont_write_bytecode = True
+import idiomas_sitio
 
 SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
@@ -380,26 +383,10 @@ def plano(t):
     """Texto sin la marca de enlaces, para los datos estructurados."""
     return re.sub(r'\[([^\]]+)\]\((/[^)\s]*)\)', r'\1', t)
 
-# Gemelas en inglés (generar_en.py): hreflang es + en + x-default en las guías que ya tienen versión en inglés.
-EN_GEMELOS = {
-  'guias/perdi-el-control-del-tv': 'en/guides/lost-tv-remote',
-  'guias/perdi-el-control-del-lg': 'en/guides/lost-lg-remote',
-  'guias/cambiar-entrada-hdmi-sin-control': 'en/guides/change-hdmi-input-without-remote',
-  'guias/android-tv-sin-control-remoto': 'en/guides/android-tv-without-remote',
-  'guias/encender-tv-lg-con-el-celular': 'en/guides/turn-on-lg-tv-with-phone',
-  'guias/control-remoto-samsung-sin-control': 'en/guides/samsung-tv-without-remote',
-  'guias/conectar-celular-al-tv-por-wifi': 'en/guides/connect-phone-to-tv-wifi',
-  'guias/controlar-el-tv-desde-el-pc': 'en/guides/control-tv-from-pc',
-  'guias/roku-no-responde-al-celular': 'en/guides/roku-remote-app-not-working',
-  'guias/el-celular-no-encuentra-el-tv': 'en/guides/phone-cant-find-tv',
-  'guias/android-tv-codigo-de-emparejamiento': 'en/guides/android-tv-pairing-code',
-  'guias/perdi-el-control-del-roku': 'en/guides/lost-roku-remote',
-}
-
+# hreflang de todas las gemelas (es, en, de, fr...): salen de idiomas_sitio.py.
 def alternos_en(slug):
-    if slug not in EN_GEMELOS:
-        return None
-    return {'es': f'{URL}/{slug}/', 'en': f'{URL}/{EN_GEMELOS[slug]}/'}
+    clave = idiomas_sitio.clave_es(slug)
+    return idiomas_sitio.alternos(clave) if clave else None
 
 def hreflangs(alternos):
     if not alternos:
@@ -445,7 +432,7 @@ def pagina(g):
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#3d7bff">
   <link rel="canonical" href="{url}">
-{hreflangs(g.get("alternos") or alternos_en(g["slug"]))}  <meta property="og:site_name" content="Mando TV">
+{hreflangs(alternos_en(g["slug"]) or g.get("alternos"))}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{url}">
@@ -568,7 +555,7 @@ def indice():
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#3d7bff">
   <link rel="canonical" href="{url}">
-{hreflangs({'es': url, 'en': URL + '/en/guides/'})}  <meta property="og:site_name" content="Mando TV">
+{hreflangs(idiomas_sitio.alternos('guias'))}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{url}">
@@ -660,11 +647,7 @@ for g in GUIAS:
 # ---------------------------------------------------------------------------------------------------------------
 GPLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>'
 
-ALT_CONSOLA = {
-  'es': URL + '/guias/encender-tv-y-hdmi-de-la-consola-sin-control/',
-  'en': URL + '/en/guides/turn-on-tv-console-hdmi-without-remote/',
-  'pt': URL + '/pt/guias/ligar-tv-e-hdmi-do-console-sem-controle/',
-}
+ALT_CONSOLA = idiomas_sitio.alternos('console')  # es, en, pt (+ de, fr cuando estén activos)
 
 UI = {
   'en': dict(lang='en', locale='en_US', inicio='Home', ayuda='Help', contacto='Contact', ver='See the steps', bajar='Download free',
@@ -760,7 +743,7 @@ def pagina_idioma(g):
     pasos = '\n'.join(f'        <li>{e(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{e(p)}</p>' for t, p in g['extra'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
-    idiomas = '\n'.join(f'        <li><a href="{ALT_CONSOLA[l][len(URL):]}" hreflang="{l}" lang="{l}">{u["nombres"][l]}</a></li>' for l in ('es', 'en', 'pt') if l != g['idioma'])
+    idiomas = '\n'.join(f'        <li><a href="{ALT_CONSOLA[l][len(URL):]}" hreflang="{l}" lang="{l}">{idiomas_sitio.NOMBRES[l]}</a></li>' for l in ALT_CONSOLA if l != g['idioma'])
     return f'''<!doctype html>
 <html lang="{lang}" style="--marca: #3d7bff">
 <head>

@@ -8,13 +8,46 @@
     roku: { color: '#a77bff', tv: 'Roku', nota: 'Roku: televisores y reproductores, sin emparejar nada.' },
     android: { color: '#2fbf8f', tv: 'Google TV', nota: 'Google TV y Android TV (Sony, TCL, Philips, Xiaomi y más): escribes el código que muestra la pantalla.' }
   };
-  // Páginas en inglés (/en/): mismos textos del escaparate en inglés. La página en español no cambia.
-  var EN = document.documentElement.lang === 'en';
-  if (EN) {
-    marcas.lg.tv = 'LG TV'; marcas.lg.nota = 'LG with webOS: it connects in seconds and it can also turn the TV on.';
-    marcas.samsung.tv = 'Samsung TV'; marcas.samsung.nota = 'Samsung with Tizen: you accept once on the TV and you are set.';
-    marcas.roku.tv = 'Roku'; marcas.roku.nota = 'Roku: TVs and players, nothing to pair.';
-    marcas.android.tv = 'Google TV'; marcas.android.nota = 'Google TV and Android TV (Sony, TCL, Philips, Xiaomi and more): you type the code the screen shows.';
+  // Páginas en otros idiomas (/en/, /de/, /fr/): mismos textos del escaparate en cada idioma. La página en español no cambia.
+  // Se elige por <html lang>; con un idioma sin tabla (es) quedan los textos en español de arriba.
+  var TEXTOS = {
+    en: {
+      marcas: {
+        lg: ['LG TV', 'LG with webOS: it connects in seconds and it can also turn the TV on.'],
+        samsung: ['Samsung TV', 'Samsung with Tizen: you accept once on the TV and you are set.'],
+        roku: ['Roku', 'Roku: TVs and players, nothing to pair.'],
+        android: ['Google TV', 'Google TV and Android TV (Sony, TCL, Philips, Xiaomi and more): you type the code the screen shows.']
+      },
+      ipad: 'Download free for iPad', iphone: 'Download free for iPhone', windows: 'Download free for Windows', android: 'Try free on Android',
+      claro: 'Light', oscuro: 'Dark',
+      frases: ['volcano documentaries', 'cooking music', 'live soccer game', 'Christmas movie']
+    },
+    de: {
+      marcas: {
+        lg: ['LG Fernseher', 'LG mit webOS: Die Verbindung steht in Sekunden und er lässt sich auch einschalten.'],
+        samsung: ['Samsung Fernseher', 'Samsung mit Tizen: Du bestätigst einmal am Fernseher und bist fertig.'],
+        roku: ['Roku', 'Roku: Fernseher und Player, ohne etwas zu koppeln.'],
+        android: ['Google TV', 'Google TV und Android TV (Sony, TCL, Philips, Xiaomi und mehr): Du gibst den Code ein, den der Bildschirm zeigt.']
+      },
+      ipad: 'Kostenlos für iPad laden', iphone: 'Kostenlos für iPhone laden', windows: 'Kostenlos für Windows laden', android: 'Kostenlos auf Android testen',
+      claro: 'Hell', oscuro: 'Dunkel',
+      frases: ['Dokumentationen über Vulkane', 'Musik zum Kochen', 'Fußballspiel live', 'Weihnachtsfilm']
+    },
+    fr: {
+      marcas: {
+        lg: ['TV LG', 'LG avec webOS : la connexion se fait en quelques secondes et elle peut aussi allumer la TV.'],
+        samsung: ['TV Samsung', "Samsung avec Tizen : vous acceptez une fois sur la TV et c'est terminé."],
+        roku: ['Roku', 'Roku : téléviseurs et lecteurs, rien à associer.'],
+        android: ['Google TV', "Google TV et Android TV (Sony, TCL, Philips, Xiaomi et plus) : vous saisissez le code affiché à l'écran."]
+      },
+      ipad: 'Télécharger gratuitement pour iPad', iphone: 'Télécharger gratuitement pour iPhone', windows: 'Télécharger gratuitement pour Windows', android: 'Essayer gratuitement sur Android',
+      claro: 'Clair', oscuro: 'Sombre',
+      frases: ['documentaires sur les volcans', 'musique pour cuisiner', 'match de foot en direct', 'film de Noël']
+    }
+  };
+  var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || null;
+  if (T) {
+    Object.keys(T.marcas).forEach(function (k) { marcas[k].tv = T.marcas[k][0]; marcas[k].nota = T.marcas[k][1]; });
   }
   var orden = ['samsung', 'lg', 'roku', 'android'];
   var actual = 'samsung';
@@ -97,16 +130,16 @@
     principal.href = 'https://apps.apple.com/app/id6834927348';
     principal.target = '_blank';
     principal.rel = 'noopener';
-    document.getElementById('boton-principal-texto').textContent = EN ? (esIpad ? 'Download free for iPad' : 'Download free for iPhone') : (esIpad ? 'Descargar gratis para iPad' : 'Descargar gratis para iPhone');
+    document.getElementById('boton-principal-texto').textContent = T ? (esIpad ? T.ipad : T.iphone) : (esIpad ? 'Descargar gratis para iPad' : 'Descargar gratis para iPhone');
   } else if (principal && /Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) {
     principal.href = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct';
     principal.target = '_blank';
     principal.rel = 'noopener';
-    document.getElementById('boton-principal-texto').textContent = EN ? 'Download free for Windows' : 'Descargar gratis para Windows';
+    document.getElementById('boton-principal-texto').textContent = T ? T.windows : 'Descargar gratis para Windows';
   } else if (principal && /Android/.test(ua)) {
     // Android está en prueba anticipada en Google Play: baja a los dos pasos para unirse.
     principal.href = '#android';
-    document.getElementById('boton-principal-texto').textContent = EN ? 'Try free on Android' : 'Probar gratis en Android';
+    document.getElementById('boton-principal-texto').textContent = T ? T.android : 'Probar gratis en Android';
   }
 
   var nombreTema = document.getElementById('tema-nombre');
@@ -114,7 +147,7 @@
     p.addEventListener('click', function () {
       var claro = p.dataset.tema === 'claro';
       telefono.classList.toggle('claro', claro);
-      nombreTema.textContent = EN ? (claro ? 'Light' : 'Dark') : (claro ? 'Claro' : 'Oscuro');
+      nombreTema.textContent = T ? (claro ? T.claro : T.oscuro) : (claro ? 'Claro' : 'Oscuro');
       document.querySelectorAll('[data-tema]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === p)); });
     });
   });
@@ -148,7 +181,7 @@
   // Demostración del teclado: escribe búsquedas letra por letra, las borra y escribe la siguiente.
   var textoTeclado = document.getElementById('texto-teclado');
   if (textoTeclado) {
-    var frases = EN ? ['volcano documentaries', 'cooking music', 'live soccer game', 'Christmas movie']
+    var frases = T ? T.frases
       : ['documentales de volcanes', 'música para cocinar', 'partido de fútbol en vivo', 'película de Navidad'];
     var f = 0, n = frases[0].length, borrando = true;
     (function escribir() {
