@@ -206,13 +206,13 @@ GUIAS_EEUU = [
       ('Typing on the TV from the PC', 'The on-screen keyboard of a TV is slow. In Mando TV you type with your real keyboard and the text goes to the TV search box. That part is free.'),
       ('More details', 'For the step-by-step version see [how to control your TV from a Windows PC](/en/guides/control-tv-from-pc/). For phone-based control see [use your phone as a TV remote over Wi-Fi](/en/guides/connect-phone-to-tv-wifi/).'),
       ('What is free and what is Pro', FREE_PRO + ' On Windows, Pro is bought through Microsoft Store.'),
-      ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. Windows needs "Online speech recognition" turned on once in Settings > Privacy & security > Speech; Mando TV shows a button that opens that setting if it is off.'),
+      ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. The app uses Windows voice typing: turn on "Online speech recognition" once in Settings > Privacy & security > Speech. Mando TV shows a button that opens that setting if it is off.'),
     ],
     faq=[
       ('Does the TV remote app for Windows need Bluetooth or a cable?', 'No. It uses your home network. The PC and the TV only have to be on the same router.'),
       ('Which TVs can I control from Windows?', 'Samsung Tizen TVs, LG webOS TVs, Roku TV and players, Google TV and Android TV, and Fire TV.'),
       ('Can I use my PC speakers or my screen to see the TV?', 'No. Mando TV is only a remote. It does not mirror or stream the TV picture to the computer.'),
-      ('Why does voice not work on my Windows PC?', 'Turn on "Online speech recognition" in Settings > Privacy & security > Speech, allow Mando TV in Settings > Privacy & security > Microphone, and make sure your language is installed in Windows with speech recognition.'),
+      ('Why does voice not work on my Windows PC?', 'Turn on "Online speech recognition" in Settings > Privacy & security > Speech and make sure Windows has a language that supports voice typing (Settings > Time & language).'),
     ]),
 ]
 

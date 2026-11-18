@@ -415,14 +415,14 @@ GUIAS = [
     extra=[
       ('Scorciatoie da tastiera del PC (Pro)', "Con Mando TV Pro controlli la TV con la tastiera del computer: frecce per muoverti, Invio per OK, Backspace o Esc per tornare indietro, + e - per il volume, M per il muto e Spazio per la pausa."),
       ('Mini telecomando sempre in primo piano (Pro)', "Tieni una piccola finestra con il telecomando sempre visibile mentre lavori o giochi al PC."),
-      ('Parlare alla TV dal PC (Pro)', 'Con Mando TV Pro dai ordini alla TV con il microfono del PC: "apri YouTube", "alza il volume" o "spegni tra 30 minuti". Su Windows bisogna attivare una volta il riconoscimento vocale online nelle impostazioni della privacy di Windows, perché Windows trasforma la tua voce in testo con quel servizio. Se è disattivato, Mando TV te lo dice e apre l\'impostazione con un pulsante. La prima volta Windows chiede anche se Mando TV può usare il microfono: rispondi di sì.'),
+      ('Parlare alla TV dal PC (Pro)', 'Con Mando TV Pro dai ordini alla TV con il microfono del PC: "apri YouTube", "alza il volume" o "spegni tra 30 minuti", come ti viene. Su Windows l\'app usa la digitazione vocale di Windows, che richiede il riconoscimento vocale online attivo nelle impostazioni della privacy e la lingua Italiano (Italia) aggiunta in Windows. Se manca qualcosa, l\'app te lo dice e apre l\'impostazione con un pulsante.'),
     ],
     marca=None,
     faq=[
       ("Servono un cavo o il Bluetooth per controllare la TV dal PC?", "No. Mando TV si collega tramite la rete di casa: PC e TV devono solo essere sullo stesso router."),
       ('Funziona con tutte le TV?', "Funziona con TV Samsung con Tizen (dal 2016 in poi), LG con webOS, Roku e Google TV o Android TV (Sony, TCL, Philips, Xiaomi e altre)."),
       ('Quanto costa?', "I tasti, la tastiera e l'accensione tramite rete sono gratis e senza pubblicità. Mando TV Pro è un acquisto una tantum, senza abbonamento, per extra come il touchpad, le app, le scorciatoie da tastiera del PC e il mini telecomando."),
-      ('Perché il microfono non mi capisce su Windows?', "Controlla tre cose: che il riconoscimento vocale online sia attivo nelle impostazioni della privacy di Windows; che Mando TV abbia il permesso per il microfono; e che la lingua in cui parli sia installata in Windows con il riconoscimento vocale (impostazioni della lingua). Mando TV detta nella lingua dell'app, e puoi cambiarla toccando la lingua sopra il microfono."),
+      ('Perché il microfono non mi capisce su Windows?', "Controlla due cose: che il riconoscimento vocale online sia attivo nelle impostazioni della privacy di Windows e che Windows abbia l'italiano (Italia) nelle impostazioni della lingua. Mando TV usa questa lingua solo mentre ascolta."),
     ]),
   dict(clave='roku-403', corto="L'app Roku non funziona",
     titulo="L'app Roku non funziona? Risolvi l'errore 403",

@@ -101,14 +101,14 @@ GUIAS = [
     extra=[
       ('Atajos del teclado del PC (Pro)', 'Con Mando TV Pro manejas el TV con el teclado del computador: flechas para moverte, Enter para OK, Retroceso o Esc para volver, + y − para el volumen, M para silenciar y Espacio para pausar.'),
       ('Mini control siempre encima (Pro)', 'Deja una ventana pequeña con el control siempre visible mientras trabajas o juegas en el PC.'),
-      ('Hablarle al TV desde el PC (Pro)', 'Con Mando TV Pro le das órdenes al TV con el micrófono del PC: "abre YouTube", "sube el volumen" o "apaga en 30 minutos". En Windows hay que activar una vez "Reconocimiento de voz en línea" en Configuración > Privacidad y seguridad > Voz, porque Windows convierte tu voz en texto con ese servicio. Si está apagado, Mando TV te avisa y te lleva al ajuste con un botón. La primera vez Windows también pregunta si Mando TV puede usar el micrófono: responde que sí.'),
+      ('Hablarle al TV desde el PC (Pro)', 'Con Mando TV Pro le das órdenes al TV con el micrófono del PC: "abre YouTube", "súbele al volumen" o "apaga en 30 minutos", dichas como te salgan. En Windows la app usa el dictado de Windows, que necesita dos cosas: "Reconocimiento de voz en línea" activado en Configuración > Privacidad y seguridad > Voz, y el idioma agregado en Windows (en español sirven Español (México) o Español (España); Mando TV elige la variante sola aunque tu teclado sea de otro país). Si falta algo, la app te avisa y abre el ajuste con un botón.'),
     ],
     marca=None,
     faq=[
       ('¿Necesito un cable o Bluetooth para controlar el TV desde el PC?', 'No. Mando TV se conecta por la red de tu casa: basta con que el PC y el TV estén en el mismo router.'),
       ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, TCL, Philips, Xiaomi y otros).'),
       ('¿Cuánto cuesta?', 'Los botones, el teclado y el encendido por red son gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como el touchpad, las apps, los atajos del teclado del PC y el mini control.'),
-      ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa tres cosas: que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz; que Mando TV tenga permiso en Configuración > Privacidad y seguridad > Micrófono; y que el idioma en que hablas esté instalado en Windows con su reconocimiento de voz (Configuración > Hora e idioma). Mando TV dicta en el idioma de la app y puedes cambiarlo tocando el idioma sobre el micrófono.'),
+      ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa dos cosas: que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz, y que Windows tenga agregado un idioma que admita el dictado (en español, Español (México) o Español (España), en Configuración > Hora e idioma > Idioma y región). Español (Chile) u otras variantes no sirven para dictar, pero puedes tener las dos: Mando TV usa la que corresponde solo mientras escucha.'),
     ]),
   # Páginas de rescate (2026-11-17): problemas reales que reportaron los testers. Cada una lleva pasos propios.
   dict(slug='guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',

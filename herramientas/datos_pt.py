@@ -415,14 +415,14 @@ GUIAS = [
     extra=[
       ('Atalhos do teclado do PC (Pro)', 'Com o Mando TV Pro, você controla a TV com o teclado do computador: setas para se mover, Enter para o OK, Backspace ou Esc para voltar, + e - para o volume, M para o mudo e Espaço para pausar.'),
       ('Mini controle sempre à frente (Pro)', 'Deixe uma janela pequena com o controle sempre visível enquanto você trabalha ou joga no PC.'),
-      ('Falar com a TV pelo PC (Pro)', 'Com o Mando TV Pro você dá ordens à TV pelo microfone do PC: "abre o YouTube", "aumenta o volume" ou "desliga em 30 minutos". No Windows é preciso ativar uma vez o "Reconhecimento de fala online" nas configurações de privacidade do Windows, porque o Windows transforma sua voz em texto com esse serviço. Se estiver desativado, o Mando TV avisa e abre o ajuste com um botão. Na primeira vez o Windows também pergunta se o Mando TV pode usar o microfone: responda que sim.'),
+      ('Falar com a TV pelo PC (Pro)', 'Com o Mando TV Pro você dá ordens à TV pelo microfone do PC: "abre o YouTube", "aumenta o volume" ou "desliga em 30 minutos", do seu jeito. No Windows o app usa a digitação por voz do Windows, que precisa do "Reconhecimento de fala online" ativado nas configurações de privacidade e do idioma adicionado no Windows (Português (Brasil) ou (Portugal)). Se faltar algo, o app avisa e abre o ajuste com um botão.'),
     ],
     marca=None,
     faq=[
       ('Preciso de cabo ou Bluetooth para controlar a TV pelo PC?', 'Não. O Mando TV conecta pela rede da sua casa: o PC e a TV só precisam estar no mesmo roteador.'),
       ('Funciona com todas as TVs?', 'Funciona com TVs Samsung com Tizen (2016 em diante), LG com webOS, Roku e Google TV ou Android TV (Sony, TCL, Philips, Xiaomi e outras).'),
       ('Quanto custa?', 'As teclas, o teclado e o ligar pela rede são grátis e sem anúncios. O Mando TV Pro é uma compra única, sem assinatura, para extras como touchpad, aplicativos, atalhos do teclado do PC e o mini controle.'),
-      ('Por que o microfone não me entende no Windows?', 'Confira três coisas: que o "Reconhecimento de fala online" esteja ativado nas configurações de privacidade do Windows; que o Mando TV tenha permissão de microfone; e que o idioma em que você fala esteja instalado no Windows com reconhecimento de fala (configurações de idioma). O Mando TV dita no idioma do app, e você pode mudar tocando no idioma acima do microfone.'),
+      ('Por que o microfone não me entende no Windows?', 'Confira duas coisas: que o "Reconhecimento de fala online" esteja ativado nas configurações de privacidade do Windows e que o Windows tenha Português (Brasil) ou Português (Portugal) nas configurações de idioma. O Mando TV usa esse idioma só enquanto escuta.'),
     ]),
   dict(clave='roku-403', corto='O app da Roku não funciona',
     titulo='O app da Roku não funciona? Resolva o erro 403',

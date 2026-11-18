@@ -408,14 +408,14 @@ GUIAS = [
     extra=[
       ('Raccourcis clavier du PC (Pro)', "Avec Mando TV Pro, vous pilotez la TV avec le clavier de l'ordinateur : les flèches pour se déplacer, Entrée pour OK, Retour arrière ou Échap pour revenir, + et - pour le volume, M pour le muet et Espace pour la pause."),
       ('Mini télécommande toujours au premier plan (Pro)', "Gardez une petite fenêtre avec la télécommande toujours visible pendant que vous travaillez ou jouez sur votre PC."),
-      ('Parler à la TV depuis le PC (Pro)', 'Avec Mando TV Pro, vous donnez des ordres à la TV avec le micro du PC : « ouvre YouTube », « monte le volume » ou « éteins dans 30 minutes ». Sous Windows, activez une fois la « Reconnaissance vocale en ligne » dans les paramètres de confidentialité de Windows, car Windows transforme votre voix en texte avec ce service. Si elle est désactivée, Mando TV vous prévient et ouvre le réglage avec un bouton. La première fois, Windows demande aussi si Mando TV peut utiliser le micro : répondez oui.'),
+      ('Parler à la TV depuis le PC (Pro)', "Avec Mando TV Pro, vous donnez des ordres à la TV avec le micro du PC : « ouvre YouTube », « monte le son » ou « éteins dans 30 minutes », à votre façon. Sous Windows, l'app utilise la saisie vocale de Windows, qui a besoin de la « Reconnaissance vocale en ligne » activée dans les paramètres de confidentialité et de la langue ajoutée dans Windows (français de France ou du Canada). S'il manque quelque chose, l'app vous prévient et ouvre le réglage avec un bouton."),
     ],
     marca=None,
     faq=[
       ("Faut-il un câble ou le Bluetooth pour contrôler la TV depuis mon PC ?", "Non. Mando TV se connecte via votre réseau domestique : le PC et la TV doivent seulement être sur la même box."),
       ('Cela fonctionne-t-il avec toutes les TV ?', "Cela fonctionne avec les TV Samsung sous Tizen (2016 et plus récentes), LG sous webOS, Roku, et Google TV ou Android TV (Sony, TCL, Philips, Xiaomi et autres)."),
       ('Combien cela coûte-t-il ?', "Les touches, le clavier et l'allumage par le réseau sont gratuits et sans publicité. Mando TV Pro est un achat unique, sans abonnement, pour des extras comme le pavé tactile, les applications, les raccourcis clavier du PC et la mini télécommande."),
-      ('Pourquoi le micro ne me comprend pas sous Windows ?', "Vérifiez trois choses : la « Reconnaissance vocale en ligne » est activée dans les paramètres de confidentialité de Windows ; Mando TV a l'autorisation d'utiliser le micro ; et la langue que vous parlez est installée dans Windows avec la reconnaissance vocale (paramètres de langue). Mando TV dicte dans la langue de l'app, et vous pouvez la changer en touchant la langue au-dessus du micro."),
+      ('Pourquoi le micro ne me comprend pas sous Windows ?', "Vérifiez deux choses : la « Reconnaissance vocale en ligne » est activée dans les paramètres de confidentialité de Windows, et Windows a le français (France) ou (Canada) dans les paramètres de langue. Mando TV utilise cette langue seulement pendant l'écoute."),
     ]),
   dict(clave='roku-403', corto="L'application Roku ne fonctionne pas",
     titulo="L'appli Roku ne fonctionne pas ? Corriger l'erreur 403",
