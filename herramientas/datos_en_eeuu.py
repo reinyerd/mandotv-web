@@ -49,7 +49,7 @@ GUIAS_EEUU = [
       'Connect your phone and the Roku to the same Wi-Fi network.',
       'Download Mando TV and open it. Your Roku TV or Roku player shows up in the list. Tap it. Roku does not ask for a code.',
       'Use the d-pad, OK, Back, Home, volume and the keyboard. Type searches in Roku channels with your phone keyboard.',
-      'If the buttons do nothing, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and set network access to Default or Permissive.',
+      'If the buttons do nothing, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and set network access to Default or Permissive (on newer Roku software, set Control by mobile apps to Enabled).',
       'Optional: on a Roku TV, turn on Fast TV start under Settings, System, Power so Mando TV can switch the TV on.',
     ],
     extra=[

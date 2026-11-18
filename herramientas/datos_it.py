@@ -4,7 +4,7 @@
 # el nombre en inglés que muestran las TV.
 
 # Opciones de las TV que se repiten en varios textos.
-LG_OPC = "l'opzione per accendere la TV con il cellulare (in inglese \"Mobile TV On\"), che si trova in Generali o in Connessione, a seconda del modello"
+LG_OPC = "l'opzione per accendere la TV con il cellulare (in inglese \"TV On With Mobile\"), che si trova in Generali > Dispositivi > Dispositivi esterni (sui modelli più vecchi, in Connessione)"
 LG_WIFI = "l'accensione via Wi-Fi (\"Turn on via Wi-Fi\")"
 SAM_RUTA = "Impostazioni > Generali > Rete > Impostazioni expert (Expert Settings) e attiva l'opzione per accendere con un dispositivo mobile (\"Power On with Mobile\")"
 SAM_PERM = "Impostazioni > Generali > Gestione dispositivi esterni > Gestione connessione dispositivi (\"Device Connection Manager\") e imposta Mando TV come consentito"
@@ -103,7 +103,7 @@ MARCAS = [
       'Apri Mando TV: la tua TV LG compare da sola nell\'elenco. Toccala.',
       "Sullo schermo della TV compare un avviso che chiede l'autorizzazione. Accettalo con il telecomando di sempre (solo la prima volta).",
     ],
-    encender="Sulla TV LG apri le Impostazioni e cerca " + LG_OPC + ". Attiva " + LG_WIFI + ". Se esiste \"Quick Start+\", attivalo anche. Poi, quando tocchi la TV spenta in Mando TV, l'app ti chiede se vuoi accenderla e si collega da sola.",
+    encender="Sulla TV LG apri le Impostazioni e cerca " + LG_OPC + ". Attiva " + LG_WIFI + ". Se esiste l'opzione di avvio rapido (\"Quick Start+\" in inglese), attivala anche. Poi, quando tocchi la TV spenta in Mando TV, l'app ti chiede se vuoi accenderla e si collega da sola.",
     faq=[
       ('Mi serve il Magic Remote per usare Mando TV?', "Solo la prima volta, per accettare l'avviso sullo schermo. Poi basta lo smartphone."),
       ("Mando TV sostituisce l'app LG ThinQ?", "Per controllare la TV sì: non serve un account LG né registrare la TV. Mando TV si collega direttamente tramite il tuo Wi-Fi."),
@@ -162,7 +162,7 @@ MARCAS = [
     pasos=[
       'Collega lo smartphone e la Roku alla stessa rete Wi-Fi.',
       "Apri Mando TV: la tua Roku compare da sola nell'elenco. Toccala.",
-      "Se non si collega, sulla Roku vai in " + ROKU_APPS + " e imposta l'accesso alla rete su Predefinito o Permissivo.",
+      "Se non si collega, sulla Roku vai in " + ROKU_APPS + " e imposta l'accesso alla rete su Predefinito o Permissivo (nelle versioni più recenti del software Roku, imposta \"Control by mobile apps\" su \"Enabled\").",
     ],
     encender="Sulle Roku TV attiva " + ROKU_RAPIDO + ". I dispositivi Roku collegati a un'altra TV non si possono accendere così. Poi, quando tocchi la TV spenta in Mando TV, l'app ti chiede se vuoi accenderla e si collega da sola.",
     faq=[
@@ -316,7 +316,7 @@ GUIAS = [
       'Collega lo smartphone e la TV LG alla stessa rete Wi-Fi.',
       "Sulla TV apri le Impostazioni e cerca " + LG_OPC + ".",
       "Attiva " + LG_WIFI + ". Se la TV è collegata con un cavo di rete, attiva invece l'opzione del cavo.",
-      'Se la tua TV ha \"Quick Start+\", attivalo anche.',
+      'Se la tua TV ha l\'opzione di avvio rapido (\"Quick Start+\" in inglese), attivala anche.',
       "Con la TV accesa, apri Mando TV sullo smartphone e tocca la tua TV LG nell'elenco. Accetta l'avviso che compare sullo schermo. È così che l'app impara a svegliarla.",
       "Spegni la TV e prova: tocca la TV in Mando TV e l'app ti chiede se vuoi accenderla.",
     ],
@@ -521,7 +521,7 @@ SOPORTE = dict(
   titulo='Assistenza: collegare e accendere la TV con Mando TV',
   desc="Come collegare il telecomando Mando TV alla tua TV LG, Samsung, Roku o Android TV, accenderla dallo smartphone e cosa fare se qualcosa non va.",
   h1='Assistenza',
-  intro="Le domande più frequenti, nell'ordine dei passaggi. Se non trovi la tua, scrivici a <a href=\"mailto:hola@mandotv.app?subject=Assistenza%20Mando%20TV\">hola@mandotv.app</a> e ti risponderemo. Rispondiamo in inglese o in spagnolo.",
+  intro="Le domande più frequenti, nell'ordine dei passaggi. Se non trovi la tua, scrivici a <a href=\"mailto:hola@mandotv.app?subject=Assistenza%20Mando%20TV\">hola@mandotv.app</a> e ti risponderemo. Scrivici nella tua lingua. Rispondiamo in spagnolo o in inglese e, se preferisci, nella tua lingua con l'aiuto di un traduttore.",
 )
 SOPORTE_HTML = '''      <h2 id="encontrar">Trovare la TV</h2>
       <div class="preguntas">
@@ -548,7 +548,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trovare la TV</h2>
           <p>La TV chiede se consenti la connessione di Mando TV. Scegli "Consenti" con il telecomando. Se hai rifiutato per sbaglio, vai in Impostazioni > Generali > Gestione dispositivi esterni > Gestione connessione dispositivi ("Device Connection Manager") e cambia in consentito.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku non chiede autorizzazione. Se la connessione fallisce, sulla Roku vai in Impostazioni > Sistema > Impostazioni di sistema avanzate > Controllo tramite app mobili ("Control by mobile apps") e lascia l'accesso alla rete su Predefinito o Permissivo.</p>
+          <p>Roku non chiede autorizzazione. Se la connessione fallisce, sulla Roku vai in Impostazioni > Sistema > Impostazioni di sistema avanzate > Controllo tramite app mobili ("Control by mobile apps") e lascia l'accesso alla rete su Predefinito o Permissivo (nelle versioni più recenti del software Roku, imposta "Control by mobile apps" su "Enabled").</p>
         </details>
         <details><summary>Android TV e Google TV</summary>
           <p>La TV mostra un codice di 6 caratteri. Inseriscilo in Mando TV esattamente come appare. Funziona per Sony, TCL, Philips, Xiaomi, Chromecast con Google TV e altre con Android TV.</p>
@@ -559,7 +559,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trovare la TV</h2>
       <p>Mando TV accende la TV tramite la tua rete domestica. Servono due cose: esserti collegato almeno una volta a TV accesa e aver attivato sulla TV l'accensione tramite rete. Il nome dell'opzione cambia a seconda del modello; ecco i più comuni:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Cerca nelle Impostazioni ''' + LG_OPC + ''' e attiva ''' + LG_WIFI + '''. Se esiste "Quick Start+", attivalo anche.</p>
+          <p>Cerca nelle Impostazioni ''' + LG_OPC + ''' e attiva ''' + LG_WIFI + '''. Se esiste l'opzione di avvio rapido ("Quick Start+" in inglese), attivala anche.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Attiva l'opzione per accendere con un dispositivo mobile ("Power On with Mobile") in Impostazioni > Generali > Rete > Impostazioni expert (Expert Settings).</p>
@@ -601,7 +601,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trovare la TV</h2>
       </ul>
 
       <h2 id="contacto">Hai ancora domande?</h2>
-      <p>Scrivici a <a href="mailto:hola@mandotv.app?subject=Assistenza%20Mando%20TV">hola@mandotv.app</a>. Indica la marca e il modello della tua TV e il passaggio in cui ti sei bloccato. Rispondiamo in inglese o in spagnolo.</p>
+      <p>Scrivici a <a href="mailto:hola@mandotv.app?subject=Assistenza%20Mando%20TV">hola@mandotv.app</a>. Indica la marca e il modello della tua TV e il passaggio in cui ti sei bloccato. Scrivici nella tua lingua. Rispondiamo in spagnolo o in inglese e, se preferisci, nella tua lingua con l'aiuto di un traduttore.</p>
 '''
 
 PRIVACIDAD = dict(

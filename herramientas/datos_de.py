@@ -95,7 +95,7 @@ MARCAS = [
       'Öffne Mando TV: Dein LG-Fernseher erscheint von selbst in der Liste. Tippe darauf.',
       'Auf dem Fernseher erscheint eine Abfrage, die um Erlaubnis bittet. Bestätige sie mit deiner gewohnten Fernbedienung (nur beim ersten Mal).',
     ],
-    encender='Öffne am LG-Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“ (je nach Modell unter Allgemein oder Verbindung). Aktiviere „Über WLAN einschalten“. Gibt es „Quick Start+“, aktiviere es ebenfalls. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
+    encender='Öffne am LG-Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“ (je nach Modell unter Allgemein oder Verbindung). Aktiviere „Über WLAN einschalten“. Gibt es „Schnellstart+“, aktiviere es ebenfalls. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
     faq=[
       ('Brauche ich die Magic Remote, um Mando TV zu nutzen?', 'Nur beim ersten Mal, um die Abfrage auf dem Bildschirm zu bestätigen. Danach reicht dein Handy.'),
       ('Ersetzt Mando TV die LG ThinQ App?', 'Zum Steuern des Fernsehers ja: Du brauchst weder ein LG-Konto noch musst du den Fernseher registrieren. Mando TV verbindet sich direkt über dein WLAN.'),
@@ -154,9 +154,9 @@ MARCAS = [
     pasos=[
       'Verbinde Handy und Roku mit demselben WLAN.',
       'Öffne Mando TV: Dein Roku erscheint von selbst in der Liste. Tippe darauf.',
-      'Falls die Verbindung nicht klappt, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und stelle den Netzwerkzugriff auf Standard oder Permissiv.',
+      'Falls die Verbindung nicht klappt, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und stelle den Netzwerkzugriff auf Standard oder Aktiviert.',
     ],
-    encender='Aktiviere bei Roku-TV-Geräten unter Einstellungen > System > Energie die Option „Schneller TV-Start“. Roku-Player, die an einen anderen Fernseher angeschlossen sind, lassen sich so nicht einschalten. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
+    encender='Aktiviere bei Roku-TV-Geräten unter Einstellungen > System > Energie die Option „TV-Schnellstart“. Roku-Player, die an einen anderen Fernseher angeschlossen sind, lassen sich so nicht einschalten. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
     faq=[
       ('Funktioniert es mit dem Roku Express oder dem Streaming Stick?', 'Ja. Alle Roku-Player und Roku-TV-Geräte werden auf die gleiche Weise gesteuert.'),
       ('Mando TV findet meinen Roku nicht. Was tun?', 'Prüfe, ob beide im selben WLAN sind und ob „Steuerung durch mobile Apps“ am Roku nicht ausgeschaltet ist. Du kannst ihn auch über seine IP-Adresse hinzufügen.'),
@@ -308,7 +308,7 @@ GUIAS = [
       'Verbinde dein Handy und den LG-Fernseher mit demselben WLAN.',
       'Öffne am Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“. Je nach Modell findest du es unter Allgemein oder Verbindung.',
       'Aktiviere „Über WLAN einschalten“. Ist dein Fernseher per Netzwerkkabel verbunden, aktiviere stattdessen die Option für das Kabel.',
-      'Hat dein Fernseher „Quick Start+“, aktiviere es ebenfalls.',
+      'Hat dein Fernseher „Schnellstart+“, aktiviere es ebenfalls.',
       'Öffne bei eingeschaltetem Fernseher Mando TV auf deinem Handy und tippe in der Liste auf deinen LG-Fernseher. Bestätige die Abfrage, die auf dem Bildschirm erscheint. So lernt die App, ihn aufzuwecken.',
       'Schalte den Fernseher aus und probiere es: Tippe in Mando TV auf den Fernseher, und die App fragt, ob sie ihn einschalten soll.',
     ],
@@ -383,7 +383,7 @@ GUIAS = [
     extra=[
       ('Samsung', 'Der Fernseher fragt, ob du die Verbindung zulässt. Bestätige sie beim ersten Mal auf dem Bildschirm. Es funktioniert mit Tizen, Baujahr 2016 und neuer. Um ihn vom Handy aus einzuschalten, aktiviere unter Einstellungen > Allgemein > Netzwerk > Experteneinstellungen die Option „Mit Mobilgerät einschalten“.'),
       ('LG', 'Der Fernseher zeigt eine Abfrage, die um Erlaubnis bittet. Bestätige sie beim ersten Mal. Um ihn vom Handy aus einzuschalten, suche in den Einstellungen „Fernseher per Mobilgerät einschalten“ und aktiviere „Über WLAN einschalten“.'),
-      ('Roku', 'Roku verlangt keine Kopplung: Tippe in der Liste darauf und du bist verbunden. Um ihn einzuschalten, aktiviere unter Einstellungen > System > Energie die Option „Schneller TV-Start“.'),
+      ('Roku', 'Roku verlangt keine Kopplung: Tippe in der Liste darauf und du bist verbunden. Um ihn einzuschalten, aktiviere unter Einstellungen > System > Energie die Option „TV-Schnellstart“.'),
       ('Google TV und Android TV', 'Der Fernseher zeigt einen Code auf dem Bildschirm. Gib ihn beim ersten Mal in Mando TV ein. Um ihn einzuschalten, suche in den Einstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“ oder „Netzwerk-Standby“.'),
     ],
     marca=None,
@@ -423,12 +423,12 @@ GUIAS = [
       'Drücke am Roku Home und gehe zu Einstellungen.',
       'Öffne System und dann Erweiterte Systemeinstellungen.',
       'Gehe zu „Steuerung durch mobile Apps“. Bei manchen Modellen heißt es „Externe Steuerung“.',
-      'Wähle unter „Netzwerkzugriff“ Standard oder Permissiv. Ist es bei deinem Modell nur ein Schalter, lass ihn auf Aktiviert.',
+      'Wähle unter „Netzwerkzugriff“ Standard oder Aktiviert. Ist es bei deinem Modell nur ein Schalter, lass ihn auf Aktiviert.',
       'Gehe zurück zu Mando TV auf deinem Handy und tippe auf deinen Roku. Die Tasten reagieren jetzt.',
     ],
     extra=[
       ('So erkennst du, ob das dein Problem ist', 'Das Zeichen ist eindeutig: Dein Handy sieht den Roku in der Liste und verbindet sich, aber nichts passiert, wenn du eine Taste antippst. Intern antwortet der Roku mit Fehler 403, was „verboten“ bedeutet. Mando TV erkennt das beim Verbinden und zeigt dir genau diese Schritte auf dem Bildschirm.'),
-      ('Standard oder Permissiv, was wähle ich?', 'Standard reicht: Es akzeptiert Befehle aus deinem Heimnetzwerk, und das braucht eine Fernbedienung. Permissiv ist offener und nur in ungewöhnlichen Netzwerken nötig.'),
+      ('Standard oder Aktiviert, was wähle ich?', 'Standard reicht: Es akzeptiert Befehle aus deinem Heimnetzwerk, und das braucht eine Fernbedienung. Permissiv ist offener und nur in ungewöhnlichen Netzwerken nötig.'),
       ('Wenn du die Roku Fernbedienung nicht hast', 'Steht die Einstellung auf Deaktiviert, lässt sie sich nur mit der echten Roku Fernbedienung ändern. Leihe dir eine aus, um es einmal zu ändern; danach kannst du alles mit deinem Handy machen. Lies auch [Roku Fernbedienung verloren](@roku-lost).'),
     ],
     marca='roku',
@@ -503,7 +503,7 @@ GUIAS = [
     ],
     marca='roku',
     faq=[
-      ('Kann mein Handy den Roku einschalten?', 'Ein angeschlossener Roku-Player ist immer an. Bei einem Roku TV schaltet Mando TV ihn per WLAN ein, wenn „Schneller TV-Start“ unter Einstellungen > System > Energie aktiviert ist.'),
+      ('Kann mein Handy den Roku einschalten?', 'Ein angeschlossener Roku-Player ist immer an. Bei einem Roku TV schaltet Mando TV ihn per WLAN ein, wenn „TV-Schnellstart“ unter Einstellungen > System > Energie aktiviert ist.'),
       ('Und die Lautstärke?', 'Bei einem Roku TV stellt dein Handy die Lautstärke lauter und leiser. Bei einem Roku-Player, der per HDMI angeschlossen ist, hängt es vom Fernseher ab: Bei vielen funktioniert es, bei anderen nicht.'),
       ('Muss ich ein Konto anlegen?', 'Nein. Mando TV verlangt kein Konto und steuert außerdem Fernseher von Samsung, LG und Android TV mit derselben App.'),
     ]),
@@ -540,7 +540,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
           <p>Der Fernseher fragt, ob du die Verbindung von Mando TV zulässt. Wähle mit der Fernbedienung „Zulassen“. Hast du sie versehentlich abgelehnt, gehe zu Einstellungen > Allgemein > Externer Geräte-Manager > Geräteverbindungs-Manager und ändere es auf erlaubt.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku fragt nicht nach einer Erlaubnis. Klappt die Verbindung nicht, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und lass den Netzwerkzugriff auf Standard oder Permissiv.</p>
+          <p>Roku fragt nicht nach einer Erlaubnis. Klappt die Verbindung nicht, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und lass den Netzwerkzugriff auf Standard oder Aktiviert.</p>
         </details>
         <details><summary>Android TV und Google TV</summary>
           <p>Der Fernseher zeigt einen Code mit 6 Zeichen. Gib ihn genau so in Mando TV ein, wie er erscheint. Es funktioniert bei Sony, TCL, Philips, Xiaomi, Chromecast mit Google TV und anderen mit Android TV.</p>
@@ -551,13 +551,13 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
       <p>Mando TV schaltet den Fernseher über dein Heimnetzwerk ein. Dafür sind zwei Dinge nötig: Du hast dich mindestens einmal bei eingeschaltetem Fernseher verbunden, und am Fernseher ist das Einschalten über das Netzwerk aktiviert. Der Name der Einstellung ändert sich je nach Modell; das sind die häufigsten:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Suche in den Einstellungen (je nach Modell unter Allgemein oder Verbindung) nach „Fernseher per Mobilgerät einschalten“ und aktiviere „Über WLAN einschalten“. Gibt es „Quick Start+“, aktiviere es ebenfalls.</p>
+          <p>Suche in den Einstellungen (je nach Modell unter Allgemein oder Verbindung) nach „Fernseher per Mobilgerät einschalten“ und aktiviere „Über WLAN einschalten“. Gibt es „Schnellstart+“, aktiviere es ebenfalls.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Aktiviere „Mit Mobilgerät einschalten“ unter Einstellungen > Allgemein > Netzwerk > Experteneinstellungen.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Aktiviere bei Roku-TV-Geräten „Schneller TV-Start“ unter Einstellungen > System > Energie. Roku-Player, die an einen Fernseher angeschlossen sind, lassen sich so nicht einschalten.</p>
+          <p>Aktiviere bei Roku-TV-Geräten „TV-Schnellstart“ unter Einstellungen > System > Energie. Roku-Player, die an einen Fernseher angeschlossen sind, lassen sich so nicht einschalten.</p>
         </details>
         <details><summary>Android TV und Google TV</summary>
           <p>Das hängt vom Hersteller ab. Suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“ oder „Netzwerk-Standby“. Manche Modelle haben diese Option nicht.</p>
@@ -593,7 +593,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
       </ul>
 
       <h2 id="contacto">Noch Fragen?</h2>
-      <p>Schreib uns an <a href="mailto:hola@mandotv.app?subject=Hilfe%20zu%20Mando%20TV">hola@mandotv.app</a>. Sag uns Marke und Modell deines Fernsehers und bei welchem Schritt du nicht weiterkommst.</p>
+      <p>Schreib uns an <a href="mailto:hola@mandotv.app?subject=Hilfe%20zu%20Mando%20TV">hola@mandotv.app</a>. Sag uns Marke und Modell deines Fernsehers und bei welchem Schritt du nicht weiterkommst. Schreib uns in deiner Sprache. Wir antworten auf Spanisch oder Englisch und, wenn du möchtest, in deiner Sprache mit Hilfe eines Übersetzers.</p>
 '''
 
 PRIVACIDAD = dict(

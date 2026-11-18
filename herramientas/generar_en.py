@@ -220,7 +220,7 @@ MARCAS = [
       'Open Mando TV: your LG TV shows up in the list on its own. Tap it.',
       'A prompt appears on the TV screen asking for permission. Accept it with your usual remote (first time only).',
     ],
-    encender='Turn on "TV On With Mobile" (on some models it is called "Turn on via Wi-Fi"). You will find it under Settings, General or Connection, Mobile Device Settings. After that, when you tap the TV in Mando TV while it is off, the app asks if you want to turn it on and connects by itself.',
+    encender='Turn on "TV On With Mobile" (on some models it is called "Turn on via Wi-Fi"). You will find it under Settings, General, Devices, External Devices (on older models Connection, Mobile Connection Management). After that, when you tap the TV in Mando TV while it is off, the app asks if you want to turn it on and connects by itself.',
     faq=[
       ('Do I need the Magic Remote to use Mando TV?', 'Only the first time, to accept the permission prompt on the screen. After that you can use just your phone.'),
       ('Does Mando TV replace LG ThinQ?', 'To control the TV, yes: you do not need an LG account or to register the TV. Mando TV connects directly over your Wi-Fi.'),
@@ -277,7 +277,7 @@ MARCAS = [
     pasos=[
       'Connect your phone and the Roku to the same Wi-Fi network.',
       'Open Mando TV: your Roku shows up in the list on its own. Tap it.',
-      'If it does not connect, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and set network access to Default or Permissive.',
+      'If it does not connect, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and set network access to Default or Permissive (on newer Roku software, set Control by mobile apps to Enabled).',
     ],
     encender='On Roku TV sets, turn on "Fast TV start" under Settings, System, Power. Roku players connected to another TV cannot be turned on this way. After that, when you tap the TV in Mando TV while it is off, the app asks if you want to turn it on and connects by itself.',
     faq=[
@@ -502,7 +502,7 @@ GUIAS = [
     intro='You can turn on an LG TV with your phone, but first you have to switch on one setting on the TV. Once that is done, your phone turns on the LG TV over your Wi-Fi network, with no remote. It takes five minutes and you only do it once.',
     pasos=[
       'Connect your phone and the LG TV to the same Wi-Fi network.',
-      'On the TV, open Settings and look for "TV On With Mobile". Depending on the model it is under General or Connection.',
+      'On the TV, open Settings and look for "TV On With Mobile". It is under Settings, General, Devices, External Devices (on older models Connection, Mobile Connection Management).',
       'Switch on "Turn on via Wi-Fi". If your TV is connected with a network cable, switch on the wired option instead.',
       'If your TV has "Quick Start+", turn it on too.',
       'With the TV on, open Mando TV on your phone and tap your LG TV in the list. Accept the prompt that appears on the screen. That is how the app learns to wake it up.',
@@ -886,7 +886,7 @@ def pagina_soporte():
           <p>The TV asks if you allow the Mando TV connection. Choose Allow with the remote. If you denied it by mistake, go to Settings, General, External Device Manager, Device Connection Manager, and change it to allowed.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku does not ask for permission. If it does not connect, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and leave network access on Default or Permissive.</p>
+          <p>Roku does not ask for permission. If it does not connect, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and leave network access on Default or Permissive (on newer Roku software, set Control by mobile apps to Enabled).</p>
         </details>
         <details><summary>Android TV and Google TV</summary>
           <p>The TV shows a 6-character code. Type it into Mando TV exactly as it appears. It works for Sony, TCL, Philips, Xiaomi, Chromecast with Google TV and others with Android TV.</p>
@@ -897,7 +897,7 @@ def pagina_soporte():
       <p>Mando TV turns on the TV over your home network. Two things are needed for that: you have connected at least once with the TV on, and the TV has power-on over the network turned on. The name of the setting changes by model; these are the most common:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Look for "TV On With Mobile" (or "Turn on via Wi-Fi") in Settings, General or Connection, Mobile Device Settings, and turn it on.</p>
+          <p>Look for "TV On With Mobile" (or "Turn on via Wi-Fi") in Settings, General, Devices, External Devices (on older models Connection, Mobile Connection Management), and turn it on.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Turn on "Power On with Mobile" in Settings, General, Network, Expert Settings.</p>
@@ -939,7 +939,7 @@ def pagina_soporte():
       </ul>
 
       <h2 id="contacto">Still have questions?</h2>
-      <p>Write to us at <a href="mailto:hola@mandotv.app?subject=Help%20with%20Mando%20TV">hola@mandotv.app</a>. Tell us the brand and model of your TV and which step you got stuck on.</p>
+      <p>Write to us at <a href="mailto:hola@mandotv.app?subject=Help%20with%20Mando%20TV">hola@mandotv.app</a>. Tell us the brand and model of your TV and which step you got stuck on. Write to us in your language. We answer in Spanish or English, and in your language with the help of a translator if you prefer.</p>
     </div>
   </main>
 

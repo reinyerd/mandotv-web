@@ -96,11 +96,11 @@ MARCAS = [
       'Ouvrez Mando TV : votre TV LG apparaît toute seule dans la liste. Touchez-la.',
       "Un message apparaît sur l'écran de la TV pour demander l'autorisation. Acceptez-le avec votre télécommande habituelle (seulement la première fois).",
     ],
-    encender="Sur la TV LG, ouvrez les Paramètres et cherchez « Allumer la TV avec un mobile » (selon le modèle, c'est dans Général ou dans Connexion). Activez « Allumer via Wi-Fi ». Si « Quick Start+ » existe, activez-le aussi. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
+    encender="Sur la TV LG, ouvrez les Paramètres et cherchez « Téléviseur en marche avec mobile » (dans Tous les paramètres > Général > Appareils > Appareils externes). Activez « Allumer via Wi-Fi ». Si « Démarrage rapide+ » existe, activez-le aussi. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
     faq=[
       ('Ai-je besoin de la Magic Remote pour utiliser Mando TV ?', "Seulement la première fois, pour accepter le message sur l'écran. Ensuite, votre téléphone suffit."),
       ("Mando TV remplace-t-elle l'application LG ThinQ ?", "Pour piloter la TV, oui : il ne faut ni compte LG ni enregistrer la TV. Mando TV se connecte directement par votre Wi-Fi."),
-      ('Puis-je allumer ma TV LG depuis mon téléphone ?', "Oui, si vous activez « Allumer la TV avec un mobile » sur la TV et que vous vous êtes connecté une fois pendant que la TV était allumée."),
+      ('Puis-je allumer ma TV LG depuis mon téléphone ?', "Oui, si vous activez « Téléviseur en marche avec mobile » sur la TV et que vous vous êtes connecté une fois pendant que la TV était allumée."),
     ],
     guias=[('lg-on', 'Comment allumer une TV LG avec le téléphone'),
            ('lost-lg', 'Télécommande LG perdue : utilisez votre téléphone'),
@@ -129,7 +129,7 @@ MARCAS = [
     ],
     encender="Sur la TV Samsung, ouvrez Paramètres > Général > Réseau > Paramètres d'expert et activez « Allumer avec un appareil mobile ». Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
     faq=[
-      ("J'ai refusé l'autorisation par erreur. Que faire ?", "Sur la TV, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de l'appareil, et réglez Mando TV sur autorisé."),
+      ("J'ai refusé l'autorisation par erreur. Que faire ?", "Sur la TV, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de périphérique, et réglez Mando TV sur autorisé."),
       ('Mando TV remplace-t-elle SmartThings ?', "Pour piloter la TV, oui, et sans compte Samsung. Mando TV se connecte directement par votre Wi-Fi."),
       ('Fonctionne-t-elle avec les anciennes TV Samsung ?', "Elle fonctionne avec les TV Samsung sous Tizen, modèles 2016 et plus récents. Les modèles antérieurs utilisent un autre système que nous ne prenons pas encore en charge."),
     ],
@@ -236,7 +236,7 @@ GUIAS = [
       'Ouvrez Mando TV et touchez votre TV LG dans la liste.',
       "La TV affiche un message qui demande l'autorisation. Acceptez-le avec le joystick ou le bouton de la TV. Si vous avez déjà connecté ce téléphone, elle ne le redemande pas.",
       "Et voilà. Les flèches, OK, Retour, Accueil, le volume, les chaînes et le clavier sont gratuits. Le pointeur, la liste des applications et la liste des sources sont des fonctions Pro.",
-      "Une fois l'application connectée, entrez dans les Paramètres avec les flèches et OK, et activez « Allumer la TV avec un mobile ». Le guide [Allumer une TV LG avec le téléphone](@lg-on) montre où le trouver.",
+      "Une fois l'application connectée, entrez dans les Paramètres avec les flèches et OK, et activez « Téléviseur en marche avec mobile ». Le guide [Allumer une TV LG avec le téléphone](@lg-on) montre où le trouver.",
     ],
     extra=[
       ("Si la TV n'affiche pas le message", "L'autorisation est peut-être déjà enregistrée, ou votre téléphone est sur un autre réseau. Vérifiez que les deux sont sur le même réseau Wi-Fi et que le VPN est désactivé. Si la TV n'apparaît pas dans la liste, lisez [Votre téléphone ne trouve pas la TV](@not-found)."),
@@ -247,7 +247,7 @@ GUIAS = [
     faq=[
       ('Ai-je besoin de la Magic Remote pour utiliser Mando TV ?', "Il vous faut seulement de quoi accepter le message la première fois, et le bouton ou le joystick de la TV elle-même suffit. Ensuite, vous n'utilisez que votre téléphone."),
       ("Ai-je besoin de l'application LG ThinQ ?", "Non. Mando TV se connecte directement par votre Wi-Fi et ne demande pas de compte LG."),
-      ('Puis-je éteindre et allumer ma TV LG depuis mon téléphone ?', "L'éteindre, oui. Pour l'allumer, il faut avoir activé « Allumer la TV avec un mobile » sur la TV et s'être connecté une fois pendant que la TV était allumée."),
+      ('Puis-je éteindre et allumer ma TV LG depuis mon téléphone ?', "L'éteindre, oui. Pour l'allumer, il faut avoir activé « Téléviseur en marche avec mobile » sur la TV et s'être connecté une fois pendant que la TV était allumée."),
     ]),
   dict(clave='hdmi', corto='HDMI sans télécommande',
     titulo="Changer d'entrée HDMI sans télécommande (Samsung, LG, Roku)",
@@ -302,14 +302,14 @@ GUIAS = [
     ]),
   dict(clave='lg-on', corto='Allumer une TV LG avec le téléphone',
     titulo='Allumer une TV LG avec son téléphone (pas à pas)',
-    desc="Allumez votre TV LG avec votre téléphone en Wi-Fi : activez « Allumer la TV avec un mobile » sur la TV et utilisez Mando TV. Pas à pas, gratuit, sans pub.",
+    desc="Allumez votre TV LG avec votre téléphone en Wi-Fi : activez « Téléviseur en marche avec mobile » puis utilisez Mando TV. Gratuit, sans pub.",
     h1='Comment allumer une TV LG avec votre téléphone',
     intro="Vous pouvez allumer une TV LG avec votre téléphone, mais il faut d'abord activer un réglage sur la TV. Une fois cela fait, votre téléphone allume la TV LG via votre réseau Wi-Fi, sans télécommande. Cela prend cinq minutes et vous ne le faites qu'une fois.",
     pasos=[
       'Connectez votre téléphone et la TV LG au même réseau Wi-Fi.',
-      "Sur la TV, ouvrez les Paramètres et cherchez « Allumer la TV avec un mobile ». Selon le modèle, c'est dans Général ou dans Connexion.",
+      "Sur la TV, ouvrez les Paramètres et cherchez « Téléviseur en marche avec mobile ». Il se trouve dans Tous les paramètres > Général > Appareils > Appareils externes.",
       "Activez « Allumer via Wi-Fi ». Si votre TV est connectée par un câble réseau, activez plutôt l'option du câble.",
-      'Si votre TV a « Quick Start+ », activez-le aussi.',
+      'Si votre TV a « Démarrage rapide+ », activez-le aussi.',
       "TV allumée, ouvrez Mando TV sur votre téléphone et touchez votre TV LG dans la liste. Acceptez le message qui apparaît à l'écran. C'est ainsi que l'application apprend à la réveiller.",
       "Éteignez la TV et testez : touchez la TV dans Mando TV et l'application vous demande si vous voulez l'allumer.",
     ],
@@ -318,7 +318,7 @@ GUIAS = [
     ],
     marca='lg',
     faq=[
-      ("Puis-je allumer la TV LG avec mon téléphone si je ne l'ai jamais connectée ?", "Non. Il faut d'abord activer « Allumer la TV avec un mobile » sur la TV et vous connecter une fois avec Mando TV pendant que la TV est allumée."),
+      ("Puis-je allumer la TV LG avec mon téléphone si je ne l'ai jamais connectée ?", "Non. Il faut d'abord activer « Téléviseur en marche avec mobile » sur la TV et vous connecter une fois avec Mando TV pendant que la TV est allumée."),
       ("Ai-je besoin de l'application LG ThinQ ?", "Non. Mando TV se connecte directement par votre Wi-Fi et ne demande pas de compte LG."),
       ('Cela fonctionne-t-il avec les données mobiles ?', 'Non. Le téléphone et la TV doivent être sur le même réseau Wi-Fi.'),
     ]),
@@ -362,7 +362,7 @@ GUIAS = [
     ],
     extra=[
       ("Si la TV ne demande pas l'autorisation", "L'autorisation est peut-être déjà enregistrée, ou la TV est sur un autre réseau Wi-Fi. Fermez Mando TV et rouvrez-la avec la TV allumée. Si la TV date d'avant 2016, elle utilise un autre système qui n'est pas encore pris en charge."),
-      ("Si vous avez refusé l'autorisation par erreur", "Sur la TV, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de l'appareil, et réglez Mando TV sur autorisé. Si votre téléphone ne trouve toujours pas la TV, lisez [Votre téléphone ne trouve pas la TV](@not-found)."),
+      ("Si vous avez refusé l'autorisation par erreur", "Sur la TV, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de périphérique, et réglez Mando TV sur autorisé. Si votre téléphone ne trouve toujours pas la TV, lisez [Votre téléphone ne trouve pas la TV](@not-found)."),
     ],
     marca='samsung',
     faq=[
@@ -383,7 +383,7 @@ GUIAS = [
     ],
     extra=[
       ('Samsung', "La TV demande si vous autorisez la connexion. Acceptez-la à l'écran la première fois. Cela fonctionne avec Tizen, modèles 2016 et plus récents. Pour l'allumer depuis votre téléphone, activez « Allumer avec un appareil mobile » dans Paramètres > Général > Réseau > Paramètres d'expert."),
-      ('LG', "La TV affiche un message qui demande l'autorisation. Acceptez-le la première fois. Pour l'allumer depuis votre téléphone, cherchez « Allumer la TV avec un mobile » dans les Paramètres et activez « Allumer via Wi-Fi »."),
+      ('LG', "La TV affiche un message qui demande l'autorisation. Acceptez-le la première fois. Pour l'allumer depuis votre téléphone, cherchez « Téléviseur en marche avec mobile » dans les Paramètres et activez « Allumer via Wi-Fi »."),
       ('Roku', "Roku ne demande pas d'association : touchez-le dans la liste et vous êtes connecté. Pour l'allumer, activez « Démarrage rapide de la TV » dans Paramètres > Système > Alimentation."),
       ('Google TV et Android TV', "La TV affiche un code à l'écran. Saisissez-le dans Mando TV la première fois. Pour l'allumer, cherchez « Wake on LAN », « Allumer par le réseau » ou « Activation par le réseau » dans les paramètres."),
     ],
@@ -538,7 +538,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
           <p>Quand vous touchez la TV, un message apparaît sur son écran pour demander l'autorisation. Acceptez-le avec votre télécommande habituelle. Vous ne le faites qu'une fois.</p>
         </details>
         <details><summary>Samsung</summary>
-          <p>La TV demande si vous autorisez la connexion de Mando TV. Choisissez « Autoriser » avec la télécommande. Si vous avez refusé par erreur, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de l'appareil et changez en autorisé.</p>
+          <p>La TV demande si vous autorisez la connexion de Mando TV. Choisissez « Autoriser » avec la télécommande. Si vous avez refusé par erreur, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de périphérique et changez en autorisé.</p>
         </details>
         <details><summary>Roku</summary>
           <p>Roku ne demande pas d'autorisation. Si la connexion échoue, sur le Roku allez dans Paramètres > Système > Paramètres système avancés > Contrôle par applications mobiles et laissez l'accès au réseau sur Par défaut ou Permissif.</p>
@@ -552,7 +552,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
       <p>Mando TV allume la TV via votre réseau domestique. Il faut deux choses : vous êtes connecté au moins une fois avec la TV allumée, et l'allumage par le réseau est activé sur la TV. Le nom du réglage change selon le modèle ; voici les plus courants :</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Cherchez « Allumer la TV avec un mobile » dans les Paramètres (selon le modèle, dans Général ou Connexion) et activez « Allumer via Wi-Fi ». Si « Quick Start+ » existe, activez-le aussi.</p>
+          <p>Cherchez « Téléviseur en marche avec mobile » dans les Paramètres (dans Tous les paramètres > Général > Appareils > Appareils externes) et activez « Allumer via Wi-Fi ». Si « Démarrage rapide+ » existe, activez-le aussi.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Activez « Allumer avec un appareil mobile » dans Paramètres > Général > Réseau > Paramètres d'expert.</p>
@@ -594,7 +594,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
       </ul>
 
       <h2 id="contacto">Encore des questions ?</h2>
-      <p>Écrivez-nous à <a href="mailto:hola@mandotv.app?subject=Aide%20Mando%20TV">hola@mandotv.app</a>. Indiquez la marque et le modèle de votre TV et l'étape où vous êtes bloqué.</p>
+      <p>Écrivez-nous à <a href="mailto:hola@mandotv.app?subject=Aide%20Mando%20TV">hola@mandotv.app</a>. Indiquez la marque et le modèle de votre TV et l'étape où vous êtes bloqué. Écrivez-nous dans votre langue. Nous répondons en espagnol ou en anglais, et dans la vôtre avec l'aide d'un traducteur si vous préférez.</p>
 '''
 
 PRIVACIDAD = dict(

@@ -4,7 +4,7 @@
 # el nombre en inglés que muestran las TV.
 
 # Opciones de las TV que se repiten en varios textos.
-LG_OPC = 'a opção de ligar a TV com o celular (em inglês, "Mobile TV On"), que fica em Geral ou em Conexão, conforme o modelo'
+LG_OPC = 'a opção de ligar a TV com o celular (em inglês, "TV On With Mobile"), que fica em Geral > Dispositivos > Dispositivos externos (nos modelos mais antigos, em Conexão)'
 LG_WIFI = 'a ativação via Wi-Fi ("Turn on via Wi-Fi")'
 SAM_RUTA = 'Configurações > Geral > Rede > Configurações de especialista (Expert Settings) e ative a opção de ligar com um dispositivo móvel ("Power On with Mobile")'
 SAM_PERM = 'Configurações > Geral > Gerenciador de dispositivos externos > Gerenciador de conexão de dispositivos ("Device Connection Manager") e deixe o Mando TV como permitido'
@@ -103,7 +103,7 @@ MARCAS = [
       'Abra o Mando TV: a sua TV LG aparece sozinha na lista. Toque nela.',
       'Na tela da TV aparece um aviso pedindo permissão. Aceite com o controle de sempre (só na primeira vez).',
     ],
-    encender='Na TV LG, abra as Configurações e procure ' + LG_OPC + '. Ative ' + LG_WIFI + '. Se existir o "Quick Start+", ative também. Depois, quando você tocar na TV desligada no Mando TV, o app pergunta se você quer ligá-la e conecta sozinho.',
+    encender='Na TV LG, abra as Configurações e procure ' + LG_OPC + '. Ative ' + LG_WIFI + '. Se existir a opção de início rápido ("Quick Start+" em inglês), ative também. Depois, quando você tocar na TV desligada no Mando TV, o app pergunta se você quer ligá-la e conecta sozinho.',
     faq=[
       ('Preciso do Magic Remote para usar o Mando TV?', 'Só na primeira vez, para aceitar o aviso na tela. Depois, o celular basta.'),
       ('O Mando TV substitui o app LG ThinQ?', 'Para controlar a TV, sim: não precisa de conta LG nem de registrar a TV. O Mando TV conecta direto pelo seu Wi-Fi.'),
@@ -162,7 +162,7 @@ MARCAS = [
     pasos=[
       'Conecte o celular e a Roku ao mesmo Wi-Fi.',
       'Abra o Mando TV: a sua Roku aparece sozinha na lista. Toque nela.',
-      'Se não conectar, na Roku vá em ' + ROKU_APPS + ' e deixe o acesso à rede em Padrão ou Permissivo.',
+      'Se não conectar, na Roku vá em ' + ROKU_APPS + ' e deixe o acesso à rede em Padrão ou Permissivo (nas versões mais novas do software da Roku, deixe "Control by mobile apps" em "Enabled").',
     ],
     encender='Nas Roku TV, ative ' + ROKU_RAPIDO + '. Os aparelhos Roku ligados em outra TV não podem ser ligados assim. Depois, quando você tocar na TV desligada no Mando TV, o app pergunta se você quer ligá-la e conecta sozinho.',
     faq=[
@@ -316,7 +316,7 @@ GUIAS = [
       'Conecte o celular e a TV LG ao mesmo Wi-Fi.',
       'Na TV, abra as Configurações e procure ' + LG_OPC + '.',
       'Ative ' + LG_WIFI + '. Se a sua TV estiver conectada por cabo de rede, ative a opção do cabo.',
-      'Se a sua TV tiver o "Quick Start+", ative também.',
+      'Se a sua TV tiver a opção de início rápido ("Quick Start+" em inglês), ative também.',
       'Com a TV ligada, abra o Mando TV no celular e toque na sua TV LG na lista. Aceite o aviso que aparece na tela. É assim que o app aprende a despertá-la.',
       'Desligue a TV e teste: toque na TV no Mando TV e o app pergunta se você quer ligá-la.',
     ],
@@ -521,7 +521,7 @@ SOPORTE = dict(
   titulo='Ajuda: conectar e ligar a TV com o Mando TV',
   desc='Como conectar o controle Mando TV à sua TV LG, Samsung, Roku ou Android TV, ligá-la pelo celular e o que fazer se algo der errado.',
   h1='Ajuda',
-  intro='As perguntas mais comuns, na ordem dos passos. Se não achar a sua, escreva para <a href="mailto:hola@mandotv.app?subject=Ajuda%20Mando%20TV">hola@mandotv.app</a> e nós respondemos. Atendemos em inglês ou espanhol.',
+  intro='As perguntas mais comuns, na ordem dos passos. Se não achar a sua, escreva para <a href="mailto:hola@mandotv.app?subject=Ajuda%20Mando%20TV">hola@mandotv.app</a> e nós respondemos. Escreva para nós no seu idioma. Respondemos em espanhol ou inglês e, se preferir, no seu idioma com a ajuda de um tradutor.',
 )
 SOPORTE_HTML = '''      <h2 id="encontrar">Encontrar a TV</h2>
       <div class="preguntas">
@@ -548,7 +548,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Encontrar a TV</h2>
           <p>A TV pergunta se você permite a conexão do Mando TV. Escolha "Permitir" com o controle. Se você recusou sem querer, vá em Configurações > Geral > Gerenciador de dispositivos externos > Gerenciador de conexão de dispositivos ("Device Connection Manager") e mude para permitido.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>A Roku não pede permissão. Se a conexão falhar, na Roku vá em Configurações > Sistema > Configurações avançadas do sistema > Controle por aplicativos móveis ("Control by mobile apps") e deixe o acesso à rede em Padrão ou Permissivo.</p>
+          <p>A Roku não pede permissão. Se a conexão falhar, na Roku vá em Configurações > Sistema > Configurações avançadas do sistema > Controle por aplicativos móveis ("Control by mobile apps") e deixe o acesso à rede em Padrão ou Permissivo (nas versões mais novas do software da Roku, deixe "Control by mobile apps" em "Enabled").</p>
         </details>
         <details><summary>Android TV e Google TV</summary>
           <p>A TV mostra um código de 6 caracteres. Digite no Mando TV exatamente como aparece. Funciona para Sony, TCL, Philips, Xiaomi, Chromecast com Google TV e outras com Android TV.</p>
@@ -559,7 +559,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Encontrar a TV</h2>
       <p>O Mando TV liga a TV pela rede da sua casa. Para isso são necessárias duas coisas: ter conectado pelo menos uma vez com a TV ligada e ter ativado na TV a ativação pela rede. O nome da opção muda conforme o modelo; estas são as mais comuns:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Procure em Configurações ''' + LG_OPC + ''' e ative ''' + LG_WIFI + '''. Se existir o "Quick Start+", ative também.</p>
+          <p>Procure em Configurações ''' + LG_OPC + ''' e ative ''' + LG_WIFI + '''. Se existir a opção de início rápido ("Quick Start+" em inglês), ative também.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Ative a opção de ligar com um dispositivo móvel ("Power On with Mobile") em Configurações > Geral > Rede > Configurações de especialista (Expert Settings).</p>
@@ -601,7 +601,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Encontrar a TV</h2>
       </ul>
 
       <h2 id="contacto">Ainda tem dúvidas?</h2>
-      <p>Escreva para <a href="mailto:hola@mandotv.app?subject=Ajuda%20Mando%20TV">hola@mandotv.app</a>. Diga a marca e o modelo da sua TV e em qual passo você travou. Respondemos em inglês ou espanhol.</p>
+      <p>Escreva para <a href="mailto:hola@mandotv.app?subject=Ajuda%20Mando%20TV">hola@mandotv.app</a>. Diga a marca e o modelo da sua TV e em qual passo você travou. Escreva para nós no seu idioma. Respondemos em espanhol ou inglês e, se preferir, no seu idioma com a ajuda de um tradutor.</p>
 '''
 
 PRIVACIDAD = dict(
