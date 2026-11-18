@@ -380,6 +380,20 @@ def plano(t):
     """Texto sin la marca de enlaces, para los datos estructurados."""
     return re.sub(r'\[([^\]]+)\]\((/[^)\s]*)\)', r'\1', t)
 
+# Gemelas en inglés (generar_en.py): hreflang es + en + x-default en las guías que ya tienen versión en inglés.
+EN_GEMELOS = {
+  'guias/perdi-el-control-del-tv': 'en/guides/lost-tv-remote',
+  'guias/perdi-el-control-del-lg': 'en/guides/lost-lg-remote',
+  'guias/cambiar-entrada-hdmi-sin-control': 'en/guides/change-hdmi-input-without-remote',
+  'guias/android-tv-sin-control-remoto': 'en/guides/android-tv-without-remote',
+  'guias/encender-tv-lg-con-el-celular': 'en/guides/turn-on-lg-tv-with-phone',
+}
+
+def alternos_en(slug):
+    if slug not in EN_GEMELOS:
+        return None
+    return {'es': f'{URL}/{slug}/', 'en': f'{URL}/{EN_GEMELOS[slug]}/'}
+
 def hreflangs(alternos):
     if not alternos:
         return ''
@@ -424,7 +438,7 @@ def pagina(g):
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#3d7bff">
   <link rel="canonical" href="{url}">
-{hreflangs(g.get("alternos"))}  <meta property="og:site_name" content="Mando TV">
+{hreflangs(g.get("alternos") or alternos_en(g["slug"]))}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{url}">
@@ -547,7 +561,7 @@ def indice():
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#3d7bff">
   <link rel="canonical" href="{url}">
-  <meta property="og:site_name" content="Mando TV">
+{hreflangs({'es': url, 'en': URL + '/en/guides/'})}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{url}">

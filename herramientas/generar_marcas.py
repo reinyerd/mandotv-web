@@ -145,6 +145,19 @@ LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
 def otras(actual):
     return '\n'.join(f'          <li><a href="/{m["slug"]}/">Control remoto para {m["nombre"]}</a></li>' for m in MARCAS if m is not actual)
 
+# Gemelas en inglés (generar_en.py): hreflang es + en + x-default.
+EN_GEMELOS = {
+  'control-remoto-lg': 'en/lg-tv-remote',
+  'control-remoto-samsung': 'en/samsung-tv-remote',
+  'control-remoto-roku': 'en/roku-remote',
+  'control-remoto-android-tv': 'en/android-tv-remote',
+}
+
+def hreflangs(slug):
+    es = f'{URL}/{slug}/'
+    filas = [('es', es), ('en', f'{URL}/{EN_GEMELOS[slug]}/'), ('x-default', es)]
+    return ''.join(f'  <link rel="alternate" hreflang="{l}" href="{u}">' + chr(10) for l, u in filas)
+
 def pagina(m):
     e = html.escape
     url = f'{URL}/{m["slug"]}/'
@@ -169,7 +182,7 @@ def pagina(m):
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="{m["color"]}">
   <link rel="canonical" href="{url}">
-  <meta property="og:site_name" content="Mando TV">
+{hreflangs(m["slug"])}  <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{url}">
