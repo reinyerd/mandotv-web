@@ -9,8 +9,8 @@
 # (python -I herramientas/generar_en.py .). Con False no se genera la guía de Fire TV ni se promete en ninguna página.
 FIRE_TV_PUBLICADO = True
 
-FREE_PRO = ('The arrows, OK, Back, Home, volume, channels, number keys, keyboard and power on or off are free. '
-            'The touchpad, the apps and inputs lists, voice commands and routines are part of Mando TV Pro, '
+FREE_PRO = ('The arrows, OK, Back, Home, volume, channels, number keys, keyboard, opening apps, switching inputs and power on or off are free. '
+            'The touchpad, voice commands, favorite apps, routines and the sleep timer are part of Mando TV Pro, '
             'a one-time purchase with no subscription.')
 
 GUIAS_EEUU = [
@@ -28,7 +28,7 @@ GUIAS_EEUU = [
     ],
     extra=[
       ('Mando TV vs LG ThinQ, in plain terms', 'Use ThinQ if you want to manage LG appliances such as a washer, a fridge or an air conditioner, or LG account features. Use Mando TV if you want a fast, simple remote for the TV that also works for Samsung, Roku and Google TV in the same app. Many people keep both: ThinQ for appliances, Mando TV for the TV.'),
-      ('What Mando TV does on an LG TV', 'It works with LG smart TVs running webOS, which covers most LG smart TV models since 2014, including LED, NanoCell, QNED and OLED. It gives you the d-pad, OK, Back, Home, volume, channels, mute, playback controls and a keyboard for typing in YouTube, Netflix or the browser. With Pro you also get a pointer like the Magic Remote, the apps list and the inputs list.'),
+      ('What Mando TV does on an LG TV', 'It works with LG smart TVs running webOS, which covers most LG smart TV models since 2014, including LED, NanoCell, QNED and OLED. It gives you the d-pad, OK, Back, Home, volume, channels, mute, playback controls and a keyboard for typing in YouTube, Netflix or the browser. The apps list and the inputs list are free too. With Pro you also get a pointer like the Magic Remote.'),
       ('What Mando TV does not do', 'It does not control LG appliances, it does not use your LG account and it does not replace the LG account services on the TV. It is a remote, not a smart home hub.'),
       ('Privacy and ads', 'Mando TV has no ads and no account. It talks to the TV inside your home network and keeps the TV connection key encrypted on your own device. The [LG TV remote page](/en/lg-tv-remote/) has the full list of features.'),
       ('What is free and what is Pro', FREE_PRO),
@@ -57,7 +57,7 @@ GUIAS_EEUU = [
       ('Where the official Roku app is better', 'Keep the Roku app for what it offers beyond the remote, such as browsing and adding channels from the Roku Channel Store and its own casting and private listening features. Use both if you like. They can run on the same phone.'),
       ('Roku TV sets and Roku players', 'Both work. That includes Roku TV models from TCL, Hisense, Philips and others, and Roku Express, Streaming Stick and Ultra. Details are on the [Roku remote app page](/en/roku-remote/).'),
       ('If the Roku app stopped working', 'If the buttons stopped responding, the Roku is usually blocking control by apps. The guide [Roku remote app not working](/en/guides/roku-remote-app-not-working/) walks through the setting that fixes it.'),
-      ('What is free and what is Pro', FREE_PRO + ' On a Roku, the channels list and the inputs list are Pro.'),
+      ('What is free and what is Pro', FREE_PRO),
     ],
     marca=('/en/roku-remote/', 'Roku remote app'),
     faq=[
@@ -183,7 +183,7 @@ GUIAS_EEUU = [
       ('Free and Pro on iPhone', FREE_PRO + ' Pro is bought once inside the app, with no subscription.'),
     ],
     faq=[
-      ('Is Mando TV free on iPhone?', 'The download is free, with no ads. The basic remote is free. Extras such as the touchpad, apps, inputs and routines are Mando TV Pro, a one-time purchase.'),
+      ('Is Mando TV free on iPhone?', 'The download is free, with no ads. The basic remote is free, and so are opening apps and switching inputs. Extras such as the touchpad, voice commands and routines are Mando TV Pro, a one-time purchase.'),
       ('Does it work on iPad?', 'Yes. The same app runs on iPhone and iPad.'),
       ('Does an iPhone remote app need Bluetooth or an infrared blaster?', 'No. iPhones have no infrared blaster, and Mando TV does not use one or Bluetooth. It controls smart TVs over your home Wi-Fi.'),
     ]),

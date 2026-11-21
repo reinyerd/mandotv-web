@@ -4,7 +4,7 @@
 
 Key facts:
 
-- Free: remote buttons (arrows, OK, back, home, volume, channels, mute), phone keyboard to type on the TV, turn the TV on over the network, automatic TV discovery, several TVs, and Easy mode with big buttons.
+- Free: remote buttons (arrows, OK, back, home, volume, channels, mute), phone keyboard to type on the TV, open TV apps, switch inputs, turn the TV on over the network, automatic TV discovery, several TVs, and Easy mode with big buttons.
 - Pro (one-time purchase, no subscription): touchpad, voice commands, routines, sleep timer and more. The exact list is on the home page of each language.
 - Connection: today over Wi-Fi (phone and TV on the same network, no internet needed). Infrared (Android phones with an IR blaster) and Bluetooth (Android) are in development and not available yet.
 - Platforms: App Store (iPhone and iPad), Microsoft Store (Windows) and early access on Google Play (Android).
