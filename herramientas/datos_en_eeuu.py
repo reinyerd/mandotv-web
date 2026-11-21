@@ -153,7 +153,7 @@ GUIAS_EEUU = [
     ],
     extra=[
       ('Fire TV devices it is meant for', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube and TVs with Fire TV built in, such as Amazon Fire TV Edition sets and some Hisense models. Support is new, and we have limited real-device testing. If something does not behave, tell us your model from the Help page.'),
-      ('Turning on a Fire TV', 'A Fire TV Stick or Cube that is asleep can be woken from the app over the network. For a TV with Fire TV built in, the TV power depends on the model. If it does not turn on, use the physical power button.'),
+      ('Turning on a Fire TV', 'Mando TV does not turn a Fire TV on over the network. Turn on the TV with its power button: a Fire TV Stick or Cube plugged into it usually wakes up with it through HDMI-CEC, and on a TV with Fire TV built in, the TV is the Fire TV. Then control it from your phone.'),
       ('If your Fire TV does not show up', 'Make sure both devices are on the same Wi-Fi network and that the Fire TV is awake. On an iPhone, allow Local Network for Mando TV in Settings. See [your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
       ('No remote at all?', 'You need the Fire TV screen to show the PIN, so the TV and the Fire TV must be on and showing the picture. If the TV is on a wrong input, change it with the TV buttons. See [change the HDMI input without a remote](/en/guides/change-hdmi-input-without-remote/).'),
       ('What is free and what is Pro', FREE_PRO),
