@@ -125,7 +125,7 @@
     // Lee la rutina del fragmento (#...), que nunca se envía a ningún servidor. Se muestra solo con textContent.
     (function () {
       var MAX_TEXTO = 4000, MAX_NOMBRE = 24, MAX_PASO = 80, MAX_PASOS = 10;
-      var prohibidos = /[\u0000-\u001F\u007F-\u009F‪-‮⁦-⁩]/;
+      var prohibidos = /[\u0000-\u001F\u007F-\u009F\u202A-\u202E\u2066-\u2069]/;
       function leer(hash) {
         try {
           var t = (hash || '').replace(/^#/, '');
