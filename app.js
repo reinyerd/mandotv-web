@@ -15,7 +15,7 @@
     ipad: 'Descargar gratis para iPad', iphone: 'Descargar gratis para iPhone', windows: 'Descargar gratis para Windows',
     android: 'Descargar gratis para Android', boton: 'Descargar gratis',
     notaAndroid: 'En Android es una prueba anticipada en Google Play: son dos pasos.',
-    claro: 'Claro', oscuro: 'Oscuro', pausar: 'Pausar las marcas', reanudar: 'Reanudar las marcas', pista: 'Toca los botones',
+    claro: 'Claro', oscuro: 'Oscuro', pausar: 'Pausar las marcas', reanudar: 'Reanudar las marcas',
     frases: ['documentales de volcanes', 'música para cocinar', 'partido de fútbol en vivo', 'película de Navidad']
   };
   var TEXTOS = {
@@ -29,7 +29,7 @@
       ipad: 'Download free for iPad', iphone: 'Download free for iPhone', windows: 'Download free for Windows',
       android: 'Download free for Android', boton: 'Download free',
       notaAndroid: "On Android it's early access on Google Play: two quick steps.",
-      claro: 'Light', oscuro: 'Dark', pausar: 'Pause the brands', reanudar: 'Play the brands', pista: 'Tap the buttons',
+      claro: 'Light', oscuro: 'Dark', pausar: 'Pause the brands', reanudar: 'Play the brands',
       frases: ['volcano documentaries', 'cooking music', 'live soccer game', 'Christmas movie']
     },
     de: {
@@ -42,7 +42,7 @@
       ipad: 'Kostenlos für iPad laden', iphone: 'Kostenlos für iPhone laden', windows: 'Kostenlos für Windows laden',
       android: 'Kostenlos für Android laden', boton: 'Kostenlos laden',
       notaAndroid: 'Auf Android gibt es einen frühen Zugang über Google Play: zwei Schritte.',
-      claro: 'Hell', oscuro: 'Dunkel', pausar: 'Marken anhalten', reanudar: 'Marken fortsetzen', pista: 'Tippe auf die Tasten',
+      claro: 'Hell', oscuro: 'Dunkel', pausar: 'Marken anhalten', reanudar: 'Marken fortsetzen',
       frases: ['Dokumentationen über Vulkane', 'Musik zum Kochen', 'Fußballspiel live', 'Weihnachtsfilm']
     },
     fr: {
@@ -55,7 +55,7 @@
       ipad: 'Télécharger gratuitement pour iPad', iphone: 'Télécharger gratuitement pour iPhone', windows: 'Télécharger gratuitement pour Windows',
       android: 'Télécharger gratuitement pour Android', boton: 'Télécharger gratuitement',
       notaAndroid: "Sur Android, c'est un accès anticipé sur Google Play : deux étapes.",
-      claro: 'Clair', oscuro: 'Sombre', pausar: 'Mettre les marques en pause', reanudar: 'Relancer les marques', pista: 'Touchez les boutons',
+      claro: 'Clair', oscuro: 'Sombre', pausar: 'Mettre les marques en pause', reanudar: 'Relancer les marques',
       frases: ['documentaires sur les volcans', 'musique pour cuisiner', 'match de foot en direct', 'film de Noël']
     },
     pt: {
@@ -68,7 +68,7 @@
       ipad: 'Baixar grátis para iPad', iphone: 'Baixar grátis para iPhone', windows: 'Baixar grátis para Windows',
       android: 'Baixar grátis para Android', boton: 'Baixar grátis',
       notaAndroid: 'No Android é um teste antecipado no Google Play: são dois passos.',
-      claro: 'Claro', oscuro: 'Escuro', pausar: 'Pausar as marcas', reanudar: 'Retomar as marcas', pista: 'Toque nos botões',
+      claro: 'Claro', oscuro: 'Escuro', pausar: 'Pausar as marcas', reanudar: 'Retomar as marcas',
       frases: ['documentários sobre vulcões', 'música para cozinhar', 'jogo de futebol ao vivo', 'filme de Natal']
     },
     it: {
@@ -81,7 +81,7 @@
       ipad: 'Scarica gratis per iPad', iphone: 'Scarica gratis per iPhone', windows: 'Scarica gratis per Windows',
       android: 'Scarica gratis per Android', boton: 'Scarica gratis',
       notaAndroid: 'Su Android è un accesso anticipato su Google Play: bastano due passaggi.',
-      claro: 'Chiaro', oscuro: 'Scuro', pausar: 'Metti in pausa le marche', reanudar: 'Riprendi le marche', pista: 'Tocca i tasti',
+      claro: 'Chiaro', oscuro: 'Scuro', pausar: 'Metti in pausa le marche', reanudar: 'Riprendi le marche',
       frases: ['documentari sui vulcani', 'musica per cucinare', 'partita di calcio in diretta', 'film di Natale']
     }
   };
@@ -271,13 +271,21 @@
 
   // Teclas del teléfono dibujado: responden al toque y muestran qué se envió al TV (demostración, como en la app).
   var escaparate = document.querySelector('.escaparate');
+  // La etiqueta solo aparece al tocar una tecla (antes había una pista fija, "Toca los botones", que tapaba el
+  // teléfono: pedido del fundador). Para invitar a tocar, el OK late dos veces al cargar y nada más.
   var chip = document.createElement('span');
-  chip.className = 'toque pista';
+  chip.className = 'toque';
   chip.setAttribute('aria-hidden', 'true');
-  chip.textContent = T.pista;
   if (escaparate) escaparate.appendChild(chip);
-  var flotaPista = chip.animate ? chip.animate([{ translate: '0 0' }, { translate: '0 -6px' }, { translate: '0 0' }],
-    { duration: 1600, iterations: Infinity, easing: 'ease-in-out' }) : null;
+  var tocado = false;
+  var okInvita = telefono.querySelector('.ok');
+  if (okInvita && okInvita.animate) {
+    setTimeout(function () {
+      if (tocado) return;
+      okInvita.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.14)' }, { transform: 'scale(1)' }],
+        { duration: 650, iterations: 2, delay: 0, easing: 'cubic-bezier(.45, 0, .55, 1)' });
+    }, 1400);
+  }
   var FLECHAS = { arriba: '▲', abajo: '▼', izq: '◀', der: '▶' };
   function etiquetaDe(el, e) {
     if (el.classList.contains('cruceta')) {
@@ -304,8 +312,7 @@
     if (!t.el) return;
     t.el.classList.add('pulsada');
     setTimeout(function () { t.el.classList.remove('pulsada'); }, 160);
-    if (flotaPista) { flotaPista.cancel(); flotaPista = null; }
-    chip.classList.remove('pista');
+    tocado = true;
     chip.textContent = t.txt;
     // Vibra solo si el navegador ya registró un toque real (si no, Chrome bloquea la llamada y deja un error en la consola).
     var activo = !navigator.userActivation || navigator.userActivation.hasBeenActive;

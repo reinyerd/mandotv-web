@@ -152,13 +152,11 @@ a { color: inherit; }
 .cruceta .izq { --giro: rotate(-135deg); } .cruceta .der { --giro: rotate(45deg); }
 .toque {
   grid-area: 1 / 1; align-self: end; justify-self: center; position: relative; z-index: 6; margin-bottom: 12px;
+  opacity: 0;
   padding: 9px 16px; border-radius: 999px; pointer-events: none; white-space: nowrap;
   background: #0d0f17; color: #fff; font-weight: 700; font-size: 15px; line-height: 1;
   box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .55);
 }
-.toque.pista { background: #fff; color: #0d0f17; }
-.toque.pista::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%;
-  background: var(--marca); box-shadow: 0 0 0 3px color-mix(in srgb, var(--marca) 30%, transparent); vertical-align: 1px; }
 
 /* ---------- Teléfono dibujado (réplica de la pantalla real de la app) ---------- */
 .telefono {
