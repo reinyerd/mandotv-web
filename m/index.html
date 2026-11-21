@@ -1,0 +1,178 @@
+<!doctype html>
+<!-- mandotv.app/m/: enlace de "Compartir un mando" (sesión compartir-mando, 21-nov). Mismo estilo que /r/.
+     Lee el mando del fragmento (#...), que nunca llega a ningún servidor, y lo muestra SOLO con textContent.
+     No hay llaves en el enlace: solo nombre, pista del TV (marca, IP privada) y botones. noindex. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6834927348">
+  <title>Te compartieron un mando de TV | Mando TV</title>
+  <meta name="description" content="Alguien te armó un mando simple para su TV. Ábrelo en Mando TV, el control remoto universal gratis y sin anuncios.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-bsVZjLs8f1bQC4CCpijKSawP0hNN2GWZqfCAhVYlrTs='; style-src 'self' 'sha256-ba4PP+LNQPHEdC99E4t+R9h/D1RqVsUrvl2FZ35dxBc=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#8e5cf7">
+  <meta property="og:site_name" content="Mando TV">
+  <meta property="og:title" content="Te compartieron un mando de TV">
+  <meta property="og:description" content="Un mando simple para el televisor, listo para usar en Mando TV: gratis y sin anuncios.">
+  <meta property="og:image" content="https://mandotv.app/social.png?v=cf023f807e">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3ac0c31292">
+  <link rel="icon" href="/icono.svg?v=1a26271c80" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css?v=4e8fd87215">
+  <style>
+    :root { --marca: #8e5cf7; }
+    .mando-tarjeta { background: #fff; color: #0f1115; border-radius: 22px; padding: 22px 22px 18px; margin-top: 22px; box-shadow: 0 18px 40px rgba(15, 17, 21, .22); max-width: 560px; }
+    .mando-tarjeta small { display: block; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .6; }
+    .mando-tarjeta h2 { margin: 4px 0 6px; font-size: clamp(1.6rem, 6vw, 2.2rem); overflow-wrap: anywhere; }
+    .mando-tarjeta p { margin: 4px 0; overflow-wrap: anywhere; }
+    .mando-botones { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; padding: 0; list-style: none; }
+    .mando-botones li { background: rgba(142, 92, 247, .12); border-radius: 999px; padding: 6px 12px; font-weight: 600; overflow-wrap: anywhere; }
+    .mando-error { margin-top: 22px; max-width: 560px; }
+    .copiado { margin-left: 10px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="cabecera-pagina">
+    <div class="contenedor">
+      <header class="barra">
+        <a class="logo" href="/" aria-label="Mando TV">
+          <img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">
+          Mando TV
+        </a>
+        <nav aria-label="Principal">
+          <a href="/soporte.html" data-t="ayuda">Ayuda</a>
+        </nav>
+      </header>
+      <h1 data-t="titulo">Te compartieron un mando</h1>
+      <p data-t="intro">Alguien te armó un mando simple para su televisor. Se usa en Mando TV, gratis y sin anuncios.</p>
+
+      <div class="mando-tarjeta" id="tarjeta" hidden>
+        <small data-t="etiqueta">Mando</small>
+        <h2 id="nombre"></h2>
+        <p id="tv"></p>
+        <p id="vence" hidden></p>
+        <ul class="mando-botones" id="botones"></ul>
+      </div>
+      <div class="mando-error" id="error" hidden>
+        <p><strong data-t="error">Este enlace no se puede leer o ya venció. Pide a quien te lo mandó que lo vuelva a enviar.</strong></p>
+      </div>
+
+      <div class="acciones" id="acciones" hidden>
+        <button type="button" class="boton" id="copiar" data-t="copiar">Copiar enlace</button>
+        <a class="boton claro" href="#descargar" data-t="descargar">Descargar Mando TV</a>
+        <span class="copiado" id="copiado" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+
+  <main class="contenedor">
+    <div class="documento">
+      <h2 data-t="comoTitulo">Cómo usarlo</h2>
+      <ol>
+        <li data-t="paso1">Copia este enlace con el botón "Copiar enlace" (o copia el mensaje completo).</li>
+        <li data-t="paso2">Abre Mando TV. Si no la tienes, descárgala gratis más abajo.</li>
+        <li data-t="paso3">En la lista de televisores, toca "¿Te mandaron un mando? Pégalo aquí" y luego Guardar.</li>
+        <li data-t="paso4">Toca el mando. La primera vez, tu TV pedirá permiso para tu teléfono: acéptalo en la pantalla del TV.</li>
+      </ol>
+      <p class="nota" data-t="nota">El enlace no lleva ninguna llave ni clave de tu televisor: solo el nombre del mando, la marca y la dirección del TV en la red de la casa, y los botones.</p>
+
+      <h2 id="descargar" data-t="descargaTitulo">Descarga Mando TV</h2>
+      <p data-t="descargaTexto">Control remoto universal para Samsung, LG, Roku y Android TV. Gratis, sin anuncios y sin cuenta.</p>
+      <ul class="tiendas" aria-label="Descargar Mando TV" data-ta="ariaTiendas">
+        <li><a class="tienda" href="https://apps.apple.com/app/id6834927348" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store" data-ta="ariaApple"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small data-t="enTienda">Descárgalo en</small>App Store</span></a></li>
+        <li><a class="tienda" href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store" data-ta="ariaMs"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg><span><small data-t="enTienda">Descárgalo en</small>Microsoft Store</span></a></li>
+        <li><a class="tienda" href="/#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android" data-ta="ariaPlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small data-t="anticipada">Prueba anticipada en</small>Google Play</span></a></li>
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var T = {
+        es: { enTienda: 'Descárgalo en', anticipada: 'Prueba anticipada en', ariaTiendas: 'Descargar Mando TV', ariaApple: 'Descargar Mando TV gratis en App Store', ariaMs: 'Descargar Mando TV gratis en Microsoft Store', ariaPlay: 'Prueba anticipada de Mando TV en Google Play para Android', titulo: 'Te compartieron un mando', intro: 'Alguien te armó un mando simple para su televisor. Se usa en Mando TV, gratis y sin anuncios.', etiqueta: 'Mando', error: 'Este enlace no se puede leer o ya venció. Pide a quien te lo mandó que lo vuelva a enviar.', copiar: 'Copiar enlace', descargar: 'Descargar Mando TV', comoTitulo: 'Cómo usarlo', paso1: 'Copia este enlace con el botón "Copiar enlace" (o copia el mensaje completo).', paso2: 'Abre Mando TV. Si no la tienes, descárgala gratis más abajo.', paso3: 'En la lista de televisores, toca "¿Te mandaron un mando? Pégalo aquí" y luego Guardar.', paso4: 'Toca el mando. La primera vez, tu TV pedirá permiso para tu teléfono: acéptalo en la pantalla del TV.', nota: 'El enlace no lleva ninguna llave ni clave de tu televisor: solo el nombre del mando, la marca y la dirección del TV en la red de la casa, y los botones.', descargaTitulo: 'Descarga Mando TV', descargaTexto: 'Control remoto universal para Samsung, LG, Roku y Android TV. Gratis, sin anuncios y sin cuenta.', ayuda: 'Ayuda', para: 'Para el TV ', vence: 'Vence el ', botones: ' botones', copiado: 'Enlace copiado', copiaManual: 'Copia el enlace de la barra de direcciones' },
+        en: { enTienda: 'Download on', anticipada: 'Early access on', ariaTiendas: 'Get Mando TV', ariaApple: 'Download Mando TV free on the App Store', ariaMs: 'Download Mando TV free on Microsoft Store', ariaPlay: 'Early access to Mando TV on Google Play for Android', titulo: 'Someone shared a remote with you', intro: 'Someone made you a simple remote for their TV. It works in Mando TV, free and with no ads.', etiqueta: 'Remote', error: 'This link can\'t be read or has expired. Ask the person who sent it to send it again.', copiar: 'Copy link', descargar: 'Get Mando TV', comoTitulo: 'How to use it', paso1: 'Copy this link with the "Copy link" button (or copy the whole message).', paso2: 'Open Mando TV. If you don\'t have it, download it for free below.', paso3: 'In the TV list, tap "Did someone send you a remote? Paste it here", then Save.', paso4: 'Tap the remote. The first time, your TV will ask for permission for your phone: accept it on the TV screen.', nota: 'The link carries no key or password of your TV: only the remote\'s name, the TV brand and its address on the home network, and the buttons.', descargaTitulo: 'Get Mando TV', descargaTexto: 'Universal remote for Samsung, LG, Roku and Android TV. Free, no ads, no account.', ayuda: 'Help', para: 'For the TV ', vence: 'Expires on ', botones: ' buttons', copiado: 'Link copied', copiaManual: 'Copy the link from the address bar' },
+        pt: { enTienda: 'Baixe na', anticipada: 'Acesso antecipado no', ariaTiendas: 'Baixar Mando TV', ariaApple: 'Baixar Mando TV grátis na App Store', ariaMs: 'Baixar Mando TV grátis na Microsoft Store', ariaPlay: 'Acesso antecipado ao Mando TV no Google Play para Android', titulo: 'Compartilharam um controle com você', intro: 'Alguém montou um controle simples para a TV. Ele funciona no Mando TV, grátis e sem anúncios.', etiqueta: 'Controle', error: 'Este link não pode ser lido ou já venceu. Peça para quem enviou mandar de novo.', copiar: 'Copiar link', descargar: 'Baixar Mando TV', comoTitulo: 'Como usar', paso1: 'Copie este link com o botão "Copiar link" (ou copie a mensagem inteira).', paso2: 'Abra o Mando TV. Se não tiver, baixe grátis aqui embaixo.', paso3: 'Na lista de TVs, toque em "Mandaram um controle para você? Cole aqui" e depois em Salvar.', paso4: 'Toque no controle. Na primeira vez, a TV vai pedir permissão para o seu celular: aceite na tela da TV.', nota: 'O link não leva nenhuma chave nem senha da TV: só o nome do controle, a marca e o endereço da TV na rede da casa, e os botões.', descargaTitulo: 'Baixe o Mando TV', descargaTexto: 'Controle remoto universal para Samsung, LG, Roku e Android TV. Grátis, sem anúncios e sem conta.', ayuda: 'Ajuda', para: 'Para a TV ', vence: 'Vence em ', botones: ' botões', copiado: 'Link copiado', copiaManual: 'Copie o link da barra de endereços' },
+        fr: { enTienda: 'Télécharger dans', anticipada: 'Accès anticipé sur', ariaTiendas: 'Télécharger Mando TV', ariaApple: 'Télécharger Mando TV gratuitement dans l\'App Store', ariaMs: 'Télécharger Mando TV gratuitement dans le Microsoft Store', ariaPlay: 'Accès anticipé à Mando TV sur Google Play pour Android', titulo: 'On vous a partagé une télécommande', intro: 'Quelqu\'un vous a préparé une télécommande simple pour sa télé. Elle fonctionne dans Mando TV, gratuite et sans publicité.', etiqueta: 'Télécommande', error: 'Ce lien est illisible ou a expiré. Demandez à la personne de vous le renvoyer.', copiar: 'Copier le lien', descargar: 'Télécharger Mando TV', comoTitulo: 'Comment l\'utiliser', paso1: 'Copiez ce lien avec le bouton "Copier le lien" (ou copiez tout le message).', paso2: 'Ouvrez Mando TV. Si vous ne l\'avez pas, téléchargez-la gratuitement ci-dessous.', paso3: 'Dans la liste des télés, touchez "On vous a envoyé une télécommande ? Collez-la ici", puis Enregistrer.', paso4: 'Touchez la télécommande. La première fois, la télé demandera l\'autorisation pour votre téléphone : acceptez-la sur l\'écran de la télé.', nota: 'Le lien ne contient aucune clé ni aucun mot de passe de votre télé : seulement le nom de la télécommande, la marque et l\'adresse de la télé sur le réseau de la maison, et les boutons.', descargaTitulo: 'Téléchargez Mando TV', descargaTexto: 'Télécommande universelle pour Samsung, LG, Roku et Android TV. Gratuite, sans publicité et sans compte.', ayuda: 'Aide', para: 'Pour la télé ', vence: 'Expire le ', botones: ' boutons', copiado: 'Lien copié', copiaManual: 'Copiez le lien dans la barre d\'adresse' },
+        de: { enTienda: 'Laden im', anticipada: 'Früher Zugang bei', ariaTiendas: 'Mando TV laden', ariaApple: 'Mando TV kostenlos im App Store laden', ariaMs: 'Mando TV kostenlos im Microsoft Store laden', ariaPlay: 'Früher Zugang zu Mando TV bei Google Play für Android', titulo: 'Jemand hat eine Fernbedienung mit dir geteilt', intro: 'Jemand hat dir eine einfache Fernbedienung für seinen Fernseher erstellt. Sie funktioniert in Mando TV, kostenlos und ohne Werbung.', etiqueta: 'Fernbedienung', error: 'Dieser Link kann nicht gelesen werden oder ist abgelaufen. Bitte die Person, ihn noch einmal zu senden.', copiar: 'Link kopieren', descargar: 'Mando TV laden', comoTitulo: 'So geht es', paso1: 'Kopiere diesen Link mit der Taste "Link kopieren" (oder kopiere die ganze Nachricht).', paso2: 'Öffne Mando TV. Wenn du es nicht hast, lade es unten kostenlos.', paso3: 'Tippe in der Fernseherliste auf "Hat dir jemand eine Fernbedienung geschickt? Hier einfügen" und dann auf Speichern.', paso4: 'Tippe auf die Fernbedienung. Beim ersten Mal fragt der Fernseher nach der Erlaubnis für dein Handy: bestätige sie auf dem Fernsehbildschirm.', nota: 'Der Link enthält keinen Schlüssel und kein Passwort deines Fernsehers: nur den Namen der Fernbedienung, die Marke und die Adresse des Fernsehers im Heimnetz sowie die Tasten.', descargaTitulo: 'Mando TV laden', descargaTexto: 'Universalfernbedienung für Samsung, LG, Roku und Android TV. Kostenlos, ohne Werbung und ohne Konto.', ayuda: 'Hilfe', para: 'Für den Fernseher ', vence: 'Läuft ab am ', botones: ' Tasten', copiado: 'Link kopiert', copiaManual: 'Kopiere den Link aus der Adressleiste' },
+        it: { enTienda: 'Scarica su', anticipada: 'Accesso anticipato su', ariaTiendas: 'Scarica Mando TV', ariaApple: 'Scarica Mando TV gratis su App Store', ariaMs: 'Scarica Mando TV gratis su Microsoft Store', ariaPlay: 'Accesso anticipato a Mando TV su Google Play per Android', titulo: 'Ti hanno condiviso un telecomando', intro: 'Qualcuno ti ha preparato un telecomando semplice per la sua TV. Funziona in Mando TV, gratis e senza pubblicità.', etiqueta: 'Telecomando', error: 'Questo link non si può leggere o è scaduto. Chiedi a chi te l\'ha mandato di inviarlo di nuovo.', copiar: 'Copia link', descargar: 'Scarica Mando TV', comoTitulo: 'Come usarlo', paso1: 'Copia questo link con il pulsante "Copia link" (o copia tutto il messaggio).', paso2: 'Apri Mando TV. Se non ce l\'hai, scaricala gratis qui sotto.', paso3: 'Nell\'elenco delle TV, tocca "Ti hanno mandato un telecomando? Incollalo qui" e poi Salva.', paso4: 'Tocca il telecomando. La prima volta, la TV chiederà il permesso per il tuo telefono: accettalo sullo schermo della TV.', nota: 'Il link non contiene nessuna chiave né password della tua TV: solo il nome del telecomando, la marca e l\'indirizzo della TV nella rete di casa, e i pulsanti.', descargaTitulo: 'Scarica Mando TV', descargaTexto: 'Telecomando universale per Samsung, LG, Roku e Android TV. Gratis, senza pubblicità e senza account.', ayuda: 'Aiuto', para: 'Per la TV ', vence: 'Scade il ', botones: ' pulsanti', copiado: 'Link copiato', copiaManual: 'Copia il link dalla barra degli indirizzi' }
+      };
+      var idioma = ((navigator.language || 'es').slice(0, 2)).toLowerCase();
+      var t = T[idioma] || T.en;
+      document.documentElement.lang = T[idioma] ? idioma : 'en';
+      document.querySelectorAll('[data-t]').forEach(function (el) { var v = t[el.getAttribute('data-t')]; if (v) el.textContent = v; });
+      document.querySelectorAll('[data-ta]').forEach(function (el) { var v = t[el.getAttribute('data-ta')]; if (v) el.setAttribute('aria-label', v); });
+
+      // Mismas reglas que lib/core/mando_compartido.dart (versión corta: la app vuelve a validar todo).
+      var MAX_TOKEN = 4500, prohibidos = /[\u0000-\u001F\u007F-\u009F\u200B\u200C\u200E\u200F\u2028\u2029\u202A-\u202E\u2066-\u2069\uFEFF]/;
+      function texto(v, max, opcional) {
+        if (v === undefined || v === null) { if (opcional) return null; throw 0; }
+        if (typeof v !== 'string' || prohibidos.test(v)) throw 0;
+        var s = v.trim();
+        if (!s) { if (opcional) return null; throw 0; }
+        if (s.length > max) throw 0;
+        return s;
+      }
+      function privada(h) {
+        if (typeof h !== 'string') return false;
+        var p = h.split('.');
+        if (p.length !== 4 || !p.every(function (x) { return /^(0|[1-9]\d{0,2})$/.test(x) && +x <= 255; })) return false;
+        var n = p.map(Number);
+        if (n[3] === 0 || n[3] === 255) return false;
+        return n[0] === 10 || (n[0] === 172 && n[1] >= 16 && n[1] <= 31) || (n[0] === 192 && n[1] === 168);
+      }
+      function leer(hash) {
+        try {
+          var s = (hash || '').replace(/^#/, '');
+          if (!s || s.length > MAX_TOKEN || !/^[A-Za-z0-9_-]+$/.test(s)) return null;
+          s = s.replace(/-/g, '+').replace(/_/g, '/');
+          while (s.length % 4) s += '=';
+          var bin = atob(s), bytes = new Uint8Array(bin.length);
+          for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          var d = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+          if (!d || d.v !== 1 || (d.t !== 'i' && d.t !== 'f')) return null;
+          var tv = d.tv;
+          if (!tv || typeof tv.b !== 'string' || !privada(tv.h)) return null;
+          if (!Array.isArray(d.k) || !d.k.length || d.k.length > 12) return null;
+          var vence = null;
+          if (d.x !== undefined) {
+            if (typeof d.x !== 'number' || d.x <= 0 || Math.floor(d.x) !== d.x) return null;
+            vence = new Date(d.x * 1000);
+            if (vence <= new Date()) return null;
+          } else if (d.t === 'i') return null;
+          var etiquetas = d.k.map(function (b) {
+            if (!b || typeof b !== 'object') throw 0;
+            return texto(b.e, 20, true) || (typeof b.a === 'string' ? texto(b.a, 30) : null);
+          }).filter(Boolean);
+          return { nombre: texto(d.n, 30), tv: texto(tv.nm, 30, true) || tv.b, vence: vence, total: d.k.length, etiquetas: etiquetas };
+        } catch (e) { return null; }
+      }
+      window.addEventListener('hashchange', function () { location.reload(); });
+      var m = leer(location.hash);
+      if (!m) { document.getElementById('error').hidden = false; return; }
+      document.getElementById('nombre').textContent = m.nombre;
+      document.getElementById('tv').textContent = t.para + m.tv + ' · ' + m.total + t.botones;
+      if (m.vence) {
+        var v = document.getElementById('vence');
+        v.textContent = t.vence + m.vence.toLocaleDateString(document.documentElement.lang);
+        v.hidden = false;
+      }
+      var ul = document.getElementById('botones');
+      m.etiquetas.forEach(function (e) { var li = document.createElement('li'); li.textContent = e; ul.appendChild(li); });
+      document.getElementById('tarjeta').hidden = false;
+      document.getElementById('acciones').hidden = false;
+      var aviso = document.getElementById('copiado');
+      document.getElementById('copiar').addEventListener('click', function () {
+        var listo = function () { aviso.textContent = t.copiado; };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(location.href).then(listo, function () { aviso.textContent = t.copiaManual; });
+        } else { aviso.textContent = t.copiaManual; }
+      });
+    })();
+  </script>
+</body>
+</html>
