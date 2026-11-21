@@ -8,6 +8,7 @@
 
 :root {
   --marca: #3d7bff;          /* cambia con la marca de TV elegida */
+  --marca-2: #43d3ff;        /* segundo tono del degradado del hero */
   --marca-oscura: #2a5fd6;
   --tinta: #0d0f17;
   --papel: #ffffff;
@@ -49,44 +50,115 @@ a { color: inherit; }
   font-stretch: 75%; font-size: 26px; letter-spacing: -.02em; text-decoration: none; }
 .logo img { width: 34px; height: 34px; border-radius: 9px; }
 .barra nav { display: flex; gap: clamp(12px, 3vw, 32px); align-items: center; }
-.barra nav a { text-decoration: none; font-weight: 600; font-size: 16px; }
+.barra nav a { text-decoration: none; font-weight: 600; font-size: 16px; padding-block: 10px; }
 .barra nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .boton-barra { background: var(--tinta); color: var(--papel); padding: 10px 18px; border-radius: 999px; }
 .boton-barra:hover { text-decoration: none !important; transform: translateY(-1px); }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero: vitrina del producto (rediseño 2026-11-21) ----------
+   Fondo vivo a pantalla completa que cambia con la marca de TV elegida: color 1 de fondo y una capa del color 2 con
+   máscara (degradado), así el cambio es solo una transición de color (barata). Panel interior de vidrio con esquinas
+   redondeadas, "MANDO" gigante detrás del teléfono y la interfaz de descarga a la derecha. */
 .escena {
-  background: var(--marca);
+  position: relative; isolation: isolate; overflow: hidden;
+  background-color: var(--marca);
   transition: background-color var(--t-marca);
   padding: 0 0 var(--margen);
   color: var(--tinta);
 }
+.escena::before, .franja::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-color: var(--marca-2);
+  -webkit-mask-image: radial-gradient(110% 85% at 100% 0%, #000 8%, transparent 72%);
+  mask-image: radial-gradient(110% 85% at 100% 0%, #000 8%, transparent 72%);
+  transition: background-color var(--t-marca);
+}
 .panel {
   position: relative;
-  background: rgba(255, 255, 255, .16);
+  background: linear-gradient(155deg, rgba(255, 255, 255, .24), rgba(255, 255, 255, .06) 55%, rgba(255, 255, 255, .12));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 0 0 1px rgba(255, 255, 255, .2), 0 40px 80px -50px rgba(10, 12, 30, .5);
   border-radius: var(--radio);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 1.05fr .95fr;
   align-items: center;
-  min-height: min(760px, calc(100svh - 110px));
   padding: clamp(24px, 4vw, 56px);
   gap: clamp(24px, 4vw, 56px);
 }
+.escaparate {
+  position: relative; display: grid; grid-template-rows: auto auto; align-content: center; justify-items: center; align-items: center;
+  min-height: 560px; perspective: 1200px; overflow-x: clip; container-type: inline-size;
+}
+/* Foco de luz detrás del producto */
+.escaparate::before {
+  content: ""; position: absolute; left: 50%; top: 44%; width: min(130%, 760px); aspect-ratio: 1; z-index: 0;
+  transform: translate(-50%, -50%); pointer-events: none;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, .55), rgba(255, 255, 255, .18) 45%, rgba(255, 255, 255, 0));
+}
+/* Nombre gigante detrás del producto: ocupa todo el ancho (su caja no se mueve cuando llega la fuente, sin CLS). */
 .gigante {
-  position: absolute; left: 50%; top: 2%; transform: translateX(-50%); z-index: 0;
-  margin: 0; text-align: center; pointer-events: none; user-select: none;
+  position: absolute; left: 0; right: 0; top: 44%; transform: translateY(-50%); z-index: 0;
+  display: flex; justify-content: center;
+  margin: 0; pointer-events: none; user-select: none;
   font-family: var(--titular); font-weight: 900; font-stretch: 62%;
-  font-size: clamp(120px, 15vw, 230px); line-height: .8; letter-spacing: -.03em;
-  color: rgba(255, 255, 255, .34);
+  font-size: clamp(110px, 36cqi, 250px); line-height: .8; letter-spacing: -.04em;
+  color: rgba(255, 255, 255, .5);
   white-space: nowrap;
 }
-.escaparate { position: relative; display: grid; place-items: center; min-height: 600px; padding-top: 70px; }
+.inclinador, .sombra-suelo { grid-area: 1 / 1; }
 .sombra-suelo {
-  position: absolute; z-index: 1; bottom: 4%; width: 54%; height: 34px; border-radius: 50%;
-  background: rgba(0, 0, 0, .28); filter: blur(18px);
+  position: relative; z-index: 1; align-self: end; width: 58%; height: 44px; margin-bottom: -14px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(8, 10, 30, .45), rgba(8, 10, 30, 0));
   animation: sombra 6s ease-in-out infinite;
 }
+
+/* Controles de la vitrina bajo el teléfono: número y nombre de la marca, avance de la rotación, pausa y flechas. */
+.vitrina { grid-row: 2; position: relative; z-index: 3; width: 100%; display: flex; align-items: center; gap: 12px; margin-top: 22px; }
+.vitrina-cuenta { margin: 0; display: flex; align-items: baseline; gap: 8px; min-width: 8.6em;
+  font-family: var(--titular); font-weight: 800; font-stretch: 75%; font-size: 18px; line-height: 1; white-space: nowrap; }
+.vitrina-cuenta b { font-weight: 900; font-size: 34px; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.vitrina-cuenta span { opacity: .85; }
+.vitrina-cuenta #vitrina-nombre { opacity: 1; }
+.vitrina-barras { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; min-width: 60px; }
+.vitrina-barras i { position: relative; height: 4px; border-radius: 4px; overflow: hidden; background: rgba(13, 15, 23, .2); }
+.vitrina-barras i::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: #0d0f17; transform: scaleX(0); transform-origin: left; }
+.vitrina-barras i.vista::after { transform: scaleX(1); }
+.vitrina-barras i.activa::after { animation: progreso var(--vuelta, 3500ms) linear forwards; }
+.vitrina.en-pausa .vitrina-barras i.activa::after { animation-play-state: paused; }
+.vitrina.quieta .vitrina-barras i.activa::after { animation: none; transform: scaleX(1); }
+.redondo {
+  flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer; padding: 0; color: #0d0f17;
+  background: rgba(255, 255, 255, .62); display: grid; place-items: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7), 0 6px 16px -8px rgba(10, 12, 30, .45);
+  transition: transform .16s cubic-bezier(.23, 1, .32, 1), background-color .2s;
+}
+.redondo:hover { background: #fff; }
+.redondo:active { transform: scale(.92); }
+.redondo svg { width: 18px; height: 18px; }
+.pausa .ico-play, .pausa[data-estado="pausa"] .ico-pausa { display: none; }
+.pausa[data-estado="pausa"] .ico-play { display: block; }
+.flechas { display: flex; gap: 8px; }
+.sin-js .vitrina-barras, .sin-js .pausa { display: none; }
+.escaparate > .temas { position: absolute; top: 4px; right: 4px; z-index: 4; padding: 7px 12px 7px 8px; border-radius: 999px;
+  background: rgba(255, 255, 255, .5); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6); }
+.escaparate > .temas .punto { width: 24px; height: 24px; }
+
+/* Teclas del teléfono que responden al toque (demostración) */
+.telefono .tecla, .telefono .ok, .telefono .cruceta, .telefono .balancin, .telefono .pestanas span { cursor: pointer; }
+.telefono .tecla, .telefono .ok, .telefono .balancin, .telefono .pestanas span, .telefono .flecha { transition: transform .16s cubic-bezier(.23, 1, .32, 1), filter .16s; }
+.telefono .pulsada { transform: scale(.9); filter: brightness(1.45); transition-duration: 0s; }
+.telefono .flecha.pulsada { transform: var(--giro) scale(1.5); filter: none; }
+.cruceta .arriba { --giro: rotate(-45deg); } .cruceta .abajo { --giro: rotate(135deg); }
+.cruceta .izq { --giro: rotate(-135deg); } .cruceta .der { --giro: rotate(45deg); }
+.toque {
+  grid-area: 1 / 1; align-self: end; justify-self: center; position: relative; z-index: 6; margin-bottom: 12px;
+  padding: 9px 16px; border-radius: 999px; pointer-events: none; white-space: nowrap;
+  background: #0d0f17; color: #fff; font-weight: 700; font-size: 15px; line-height: 1;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .55);
+}
+.toque.pista { background: #fff; color: #0d0f17; }
+.toque.pista::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%;
+  background: var(--marca); box-shadow: 0 0 0 3px color-mix(in srgb, var(--marca) 30%, transparent); vertical-align: 1px; }
 
 /* ---------- Teléfono dibujado (réplica de la pantalla real de la app) ---------- */
 .telefono {
@@ -184,62 +256,109 @@ a { color: inherit; }
 .telefono.claro .segmento { border-color: rgba(11, 16, 32, .14); }
 .telefono.claro .pantalla::before { opacity: .35; }
 
-/* ---------- Ficha (interfaz de "compra") ---------- */
-.ficha { position: relative; z-index: 1; max-width: 520px; }
+/* ---------- Ficha (interfaz de "compra") ----------
+   Orden de vitrina de tienda: nombre (H1), descripción, precio, variante (tu TV, con su punto de color), talla
+   (tu equipo, en cuadrícula), botón Descargar, tiendas y pruebas cortas. */
+.ficha { position: relative; z-index: 1; max-width: 560px; }
+.antetitulo {
+  display: inline-flex; align-items: center; gap: 9px; margin: 0 0 16px; padding: 7px 14px 7px 11px; border-radius: 999px;
+  background: rgba(255, 255, 255, .55); font-weight: 700; font-size: 14px; line-height: 1.2;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7);
+}
+.antetitulo::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: #0d0f17; box-shadow: 0 0 0 3px rgba(13, 15, 23, .16); }
 .ficha h1 {
   font-family: var(--titular); font-weight: 900; font-stretch: 72%;
-  font-size: clamp(54px, 6.6vw, 96px); line-height: .92; letter-spacing: -.02em; word-spacing: .06em;
-  margin: 0;
+  font-size: clamp(50px, 6vw, 92px); line-height: .92; letter-spacing: -.02em; word-spacing: .06em;
+  margin: 0; text-wrap: balance;
 }
-.bajada { font-size: clamp(18px, 1.6vw, 21px); margin: 20px 0 0; max-width: 32ch; }
-.precio { display: flex; align-items: baseline; gap: 14px; margin: 26px 0 0; flex-wrap: wrap; }
+.bajada { font-size: clamp(18px, 1.5vw, 21px); margin: 18px 0 0; max-width: 38ch; text-wrap: pretty; }
+.precio { display: flex; align-items: baseline; gap: 6px 14px; margin: 22px 0 0; flex-wrap: wrap; }
 .precio strong { font-family: var(--titular); font-weight: 900; font-stretch: 80%; font-size: 44px; line-height: 1; letter-spacing: -.02em; }
 .precio span { font-weight: 600; }
-.etiqueta-grupo { font-weight: 700; font-size: 16px; margin: 26px 0 10px; display: flex; justify-content: space-between; align-items: center; }
-.marcas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.marcas button {
-  font: inherit; font-weight: 700; font-size: 15px; cursor: pointer;
-  padding: 14px 6px; border-radius: 14px; border: 0;
-  background: rgba(255, 255, 255, .55); color: var(--tinta);
-  transition: background-color .25s, color .25s, transform .15s;
+.etiqueta-grupo { font-weight: 700; font-size: 16px; margin: 24px 0 10px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.marcas, .equipos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.marcas button, .equipos button {
+  font: inherit; font-weight: 700; font-size: 15px; cursor: pointer; color: #0d0f17;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 50px; padding: 12px 6px; border-radius: 14px; border: 0;
+  background: rgba(255, 255, 255, .58);
+  transition: background-color .2s, color .2s, transform .16s cubic-bezier(.23, 1, .32, 1), box-shadow .2s;
 }
-.marcas button:hover { background: rgba(255, 255, 255, .85); }
-.marcas button:active { transform: scale(.96); }
-.marcas button[aria-pressed="true"] { background: var(--tinta); color: var(--papel); }
-.flechas { display: flex; gap: 8px; }
-.flechas button {
-  width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer;
-  background: rgba(255, 255, 255, .55); display: grid; place-items: center; transition: transform .15s, background-color .2s;
+/* Punto de color de cada marca (la variante) */
+.marcas button::before { content: ""; flex: none; width: 12px; height: 12px; border-radius: 50%; background: var(--c);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .9); }
+.marcas [data-marca="samsung"] { --c: #3d7bff; }
+.marcas [data-marca="lg"] { --c: #e0457b; }
+.marcas [data-marca="roku"] { --c: #a77bff; }
+.marcas [data-marca="android"] { --c: #2fbf8f; }
+/* Tu equipo: cuadrícula tipo "talla", con borde y relleno al elegir */
+.equipos button { background: rgba(255, 255, 255, .2); box-shadow: inset 0 0 0 2px rgba(13, 15, 23, .66); }
+.marcas button:active, .equipos button:active { transform: scale(.96); }
+.marcas button[aria-pressed="true"], .equipos button[aria-pressed="true"] { background: #0d0f17; color: #fff; box-shadow: none; }
+@media (hover: hover) and (pointer: fine) {
+  .marcas button:hover { background: rgba(255, 255, 255, .88); }
+  .equipos button:hover { background: rgba(255, 255, 255, .5); }
+  .marcas button[aria-pressed="true"]:hover, .equipos button[aria-pressed="true"]:hover { background: #0d0f17; }
 }
-.flechas button:hover { background: #fff; }
-.flechas button:active { transform: scale(.9); }
-.flechas svg { width: 18px; height: 18px; }
-.temas { display: flex; gap: 12px; align-items: center; }
+.sin-js .grupo-equipos { display: none; }
+.temas { display: flex; gap: 10px; align-items: center; font-size: 14px; font-weight: 600; }
 .punto {
-  width: 34px; height: 34px; border-radius: 50%; border: 0; cursor: pointer; padding: 0;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, .7); transition: transform .2s, box-shadow .2s;
+  width: 28px; height: 28px; border-radius: 50%; border: 0; cursor: pointer; padding: 0;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .75); transition: transform .2s cubic-bezier(.23, 1, .32, 1), box-shadow .2s;
 }
+.punto { position: relative; }
+.punto::after { content: ""; position: absolute; inset: -8px; border-radius: 50%; }
 .punto[data-tema="oscuro"] { background: #07080c; }
 .punto[data-tema="claro"] { background: #f2f3f7; }
-.punto[aria-pressed="true"] { box-shadow: 0 0 0 3px var(--marca), 0 0 0 6px var(--tinta); transform: scale(1.06); }
-.temas small { font-size: 15px; font-weight: 600; }
-.acciones { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
+.punto[aria-pressed="true"] { box-shadow: 0 0 0 3px rgba(255, 255, 255, .9), 0 0 0 5px #0d0f17; transform: scale(1.06); }
+.temas small { font-size: 14px; font-weight: 600; min-width: 4.5em; }
+.acciones { display: flex; gap: 10px; margin-top: 26px; flex-wrap: wrap; align-items: center; }
 .boton {
   display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
   font-weight: 700; font-size: 17px; padding: 16px 24px; border-radius: 999px; border: 0; cursor: pointer;
-  background: var(--tinta); color: var(--papel); transition: transform .15s, background-color .2s;
+  background: var(--tinta); color: var(--papel);
+  transition: transform .16s cubic-bezier(.23, 1, .32, 1), background-color .2s, box-shadow .2s;
 }
 .boton:hover { transform: translateY(-2px); }
 .boton:active { transform: translateY(0) scale(.97); }
 .boton.claro { background: rgba(255, 255, 255, .7); color: var(--tinta); }
-.boton svg { width: 20px; height: 20px; }
+.boton svg { width: 20px; height: 20px; flex: none; }
+/* Botón principal del inicio: más grande, con brillo y la flecha que baja al pasar el mouse */
+#boton-principal { padding: 18px 26px 18px 22px; font-size: 17px; background: #0d0f17; color: #fff;
+  box-shadow: 0 18px 36px -16px rgba(10, 12, 30, .7), inset 0 1px 0 rgba(255, 255, 255, .18); }
+#boton-principal svg { transition: transform .25s cubic-bezier(.23, 1, .32, 1); }
+@media (hover: hover) and (pointer: fine) { #boton-principal:hover svg { transform: translateY(3px); } }
+.boton-nota { flex-basis: 100%; margin: 4px 0 0; font-size: 15px; font-weight: 600; }
+.boton-nota[hidden] { display: none; }
 .nota { font-size: 15px; margin-top: 14px; }
+/* Pruebas cortas: sin anuncios, sin cuentas... */
+.pruebas { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.pruebas li { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px 7px 9px; border-radius: 999px;
+  background: rgba(255, 255, 255, .42); font-weight: 700; font-size: 14px; line-height: 1.2; }
+.pruebas li::before { content: ""; flex: none; width: 18px; height: 18px; border-radius: 50%; background: #0d0f17;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm-1.6 15.6-4.3-4.3 1.4-1.4 2.9 2.9 6.2-6.2 1.4 1.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm-1.6 15.6-4.3-4.3 1.4-1.4 2.9 2.9 6.2-6.2 1.4 1.4z'/%3E%3C/svg%3E") center / contain no-repeat; }
+
+/* ---------- Banda de marcas compatibles (bajo el hero) ----------
+   Adorno: se mueve sola y se detiene con "reducir movimiento"; la primera lista es la real (lectores de pantalla), la
+   copia solo sirve para que el giro no tenga cortes. */
+.banda { background: #0d0f17; color: #fff; overflow: hidden; padding: clamp(18px, 2.4vw, 28px) 0; }
+.banda-pista { display: flex; width: max-content; animation: banda 46s linear infinite; }
+.banda ul { display: flex; list-style: none; margin: 0; padding: 0; flex: none; }
+.banda li { display: flex; align-items: center; gap: .5em; padding-right: .5em; white-space: nowrap;
+  font-family: var(--titular); font-weight: 900; font-stretch: 70%; font-size: clamp(30px, 4.2vw, 58px); line-height: 1; letter-spacing: -.01em; }
+.banda li::after { content: ""; width: .26em; height: .26em; border-radius: 50%; background: var(--marca); transition: background-color var(--t-marca); }
+.banda small { font-family: var(--texto); font-stretch: 100%; font-weight: 700; font-size: 13px; letter-spacing: .02em;
+  padding: 4px 9px; border-radius: 999px; background: rgba(255, 255, 255, .16); align-self: center; }
+@media (hover: hover) and (pointer: fine) { .banda:hover .banda-pista { animation-play-state: paused; } }
+@keyframes banda { to { transform: translateX(-50%); } }
+@keyframes progreso { to { transform: scaleX(1); } }
 
 /* ---------- Secciones ---------- */
 section { padding: clamp(80px, 12vw, 180px) 0 0; }
 .titulo-seccion {
   font-family: var(--titular); font-weight: 900; font-stretch: 72%;
-  font-size: clamp(44px, 6vw, 88px); line-height: .92; letter-spacing: -.03em; margin: 0 0 20px;
+  font-size: clamp(44px, 6vw, 88px); line-height: .92; letter-spacing: -.03em; word-spacing: .08em; margin: 0 0 20px;
 }
 .intro { font-size: clamp(19px, 1.7vw, 22px); max-width: 52ch; margin: 0; }
 
@@ -266,7 +385,7 @@ section { padding: clamp(80px, 12vw, 180px) 0 0; }
 .entradas .sel { background: #f4f6fa; color: #0b0d16; }
 
 /* Cómo se conecta: bloque de color de marca a todo lo ancho */
-.franja { background: var(--marca); transition: background-color var(--t-marca); margin-top: clamp(80px, 12vw, 180px); padding: clamp(64px, 9vw, 130px) 0; }
+.franja { position: relative; isolation: isolate; background: var(--marca); transition: background-color var(--t-marca); margin-top: clamp(80px, 12vw, 180px); padding: clamp(64px, 9vw, 130px) 0; }
 .franja section { padding: 0; }
 .pasos { list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 3vw, 40px); counter-reset: paso; }
 .pasos li { background: rgba(255, 255, 255, .55); border-radius: 26px; padding: 28px; }
@@ -359,11 +478,18 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   .aparece { opacity: 1; transform: none; }
 }
 
-/* ---------- Tableta y teléfono ---------- */
+/* ---------- Tableta y teléfono ----------
+   En el celular la primera pantalla muestra título, teléfono y el botón Descargar (antes solo se veía el teléfono).
+   La ficha "se abre" (display: contents) para ordenar sus piezas alrededor del teléfono sin duplicar nada. */
 @media (max-width: 960px) {
-  .panel { grid-template-columns: 1fr; min-height: 0; }
-  .escaparate { min-height: 520px; order: -1; }
-  .ficha { max-width: none; }
+  .panel { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .ficha { display: contents; }
+  .ficha > * { order: 20; }
+  .antetitulo { order: 1; align-self: flex-start; }
+  .ficha h1 { order: 2; }
+  .escaparate { order: 3; min-height: 0; margin-top: 14px; }
+  .ficha .acciones { order: 4; margin-top: 20px; }
+  .inclinador { zoom: .86; }
   .funciones, .promesa, .planes { grid-template-columns: 1fr; }
   .piezas { position: static; }
   .pasos { grid-template-columns: 1fr; }
@@ -372,13 +498,52 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 @media (max-width: 560px) {
   body { font-size: 17px; }
   .barra nav a:not(.boton-barra) { display: none; }
-  .panel { border-radius: 24px; padding: 20px 16px 24px; }
-  .escaparate { min-height: 470px; padding-top: 60px; }
-  .gigante { font-size: 33vw; }
-  .telefono { width: min(250px, 66vw); }
-  .marcas { grid-template-columns: repeat(2, 1fr); }
+  .panel { border-radius: 24px; padding: 18px 16px 24px; }
+  .antetitulo { font-size: 13px; margin-bottom: 12px; }
+  .ficha h1 { font-size: clamp(34px, 10vw, 46px); }
+  .escaparate { margin-top: 14px; }
+  .gigante { font-size: 36cqi; }
+  .inclinador { zoom: .66; }
+  .vitrina { margin-top: 10px; gap: 8px; }
+  .vitrina-cuenta span:not(#vitrina-nombre) { display: none; }
+  .escaparate > .temas { top: auto; right: auto; bottom: 66px; left: 0; padding: 6px; gap: 8px; }
+  .escaparate > .temas small { display: none; }
+  .vitrina-barras { min-width: 36px; }
+  .vitrina-cuenta { min-width: 0; font-size: 16px; }
+  .vitrina-cuenta b { font-size: 28px; }
+  .marcas, .equipos { grid-template-columns: repeat(2, 1fr); }
   .acciones .boton { flex: 1 1 100%; justify-content: center; }
+  #boton-principal { font-size: 16px; padding: 16px 18px; }
+  .etiqueta-grupo { flex-wrap: wrap; }
 }
+@media (max-width: 360px) { .vitrina-barras { display: none; } }
+
+/* ---------- Inicio en escritorio: producto a la izquierda, ficha a la derecha, todo en la primera pantalla ----------
+   El teléfono se achica con zoom (cambia también su caja) según el alto de la pantalla, para que los controles de la
+   vitrina queden pegados a él en notebooks. */
+@media (min-width: 961px) {
+  .panel { grid-template-columns: .92fr 1.08fr; min-height: min(800px, calc(100svh - 104px)); padding-block: clamp(24px, 3.4vh, 48px); }
+  .escaparate { grid-column: 1; grid-row: 1; align-self: stretch; }
+  .ficha { grid-column: 2; grid-row: 1; }
+  .ficha { max-width: 600px; }
+  .ficha h1 { font-size: clamp(44px, 3.9vw, 62px); }
+  .ficha .etiqueta-grupo { margin: 18px 0 8px; }
+  .acciones { margin-top: 22px; }
+  .ficha .tiendas { flex-wrap: nowrap; gap: 8px; margin-top: 14px; }
+  .ficha .tienda { padding: 9px 14px 9px 11px; min-height: 52px; gap: 9px; border-radius: 18px; }
+  .ficha .tienda svg { width: 24px; height: 24px; }
+  .ficha .tienda span { font-size: 16px; }
+  .pruebas { margin-top: 14px; gap: 6px; }
+  .pruebas li { font-size: 13px; padding: 6px 11px 6px 8px; }
+  .bajada { font-size: clamp(17px, 1.25vw, 20px); }
+  .precio strong { font-size: 40px; }
+}
+@media (min-width: 961px) and (min-height: 1000px) { .inclinador { zoom: 1.08; } }
+@media (min-width: 961px) and (max-height: 940px) { .inclinador { zoom: .86; } .pruebas { margin-top: 10px; } }
+@media (min-width: 961px) and (max-height: 860px) { .inclinador { zoom: .82; } .ficha .etiqueta-grupo { margin-top: 18px; } .acciones { margin-top: 20px; } }
+@media (min-width: 961px) and (max-height: 780px) { .inclinador { zoom: .74; } .ficha h1 { font-size: clamp(42px, 3.9vw, 64px); } .bajada { margin-top: 12px; } .precio { margin-top: 14px; } }
+@media (min-width: 961px) and (max-height: 700px) { .inclinador { zoom: .7; } .escaparate { min-height: 480px; } }
+@media (min-width: 961px) and (max-height: 620px) { .inclinador { zoom: .62; } }
 
 /* Panel de correo (correo.js) */
 .panel-correo {
@@ -432,20 +597,21 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .aviso-cookies :focus-visible { outline-color: var(--papel); }
 .enlace-cookies { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 .enlace-cookies:hover { text-decoration: underline; }
-@media (max-width: 560px) { .aviso-cookies-botones { width: 100%; } .aviso-cookies .boton { flex: 1; justify-content: center; } }
+@media (max-width: 560px) {
+  .aviso-cookies { left: 10px; right: 10px; bottom: 10px; padding: 14px 16px; gap: 12px; border-radius: 20px; }
+  .aviso-cookies p { font-size: 14px; }
+  .aviso-cookies-botones { width: 100%; } .aviso-cookies .boton { flex: 1; justify-content: center; padding: 10px 16px; }
+}
 
-/* Botones de tiendas: vidrio líquido moderno (estilo iOS 27): vidrio oscuro translúcido que desenfoca el fondo,
-   borde de luz que cambia de intensidad, reflejo suave arriba a la izquierda y esquinas muy redondeadas.
-   Mientras la app no esté publicada abren "Avísame cuando salga"; al publicar, cambiar href por el de cada tienda. */
+/* Botones de tiendas: vidrio oscuro con reflejo suave y esquinas muy redondeadas. Sin backdrop-filter (desenfocar el
+   fondo costaba mucho en celulares y casi no se notaba sobre el color sólido). */
 .tiendas { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
 .tiendas li { display: flex; }
 .tienda {
   position: relative; isolation: isolate; overflow: hidden;
   display: inline-flex; align-items: center; gap: 12px; text-decoration: none;
   color: #fff; padding: 11px 22px 11px 16px; border-radius: 22px; min-height: 60px;
-  background: rgba(12, 12, 20, .52);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  backdrop-filter: blur(22px) saturate(180%);
+  background: rgba(12, 12, 20, .84);
   box-shadow: 0 10px 30px -12px rgba(20, 0, 30, .55), 0 2px 6px rgba(0,0,0,.12);
   transition: transform .35s cubic-bezier(.2,.8,.2,1), background-color .35s, box-shadow .35s;
 }
@@ -456,15 +622,14 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   background: radial-gradient(closest-side, rgba(255,255,255,.22), rgba(255,255,255,0));
   transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .35s;
 }
-.tienda:hover { transform: translateY(-2px) scale(1.02); background: rgba(12, 12, 20, .62); box-shadow: 0 16px 36px -14px rgba(20,0,30,.65), 0 3px 8px rgba(0,0,0,.14); }
+.tienda:hover { transform: translateY(-2px) scale(1.02); background: rgba(12, 12, 20, .92); box-shadow: 0 16px 36px -14px rgba(20,0,30,.65), 0 3px 8px rgba(0,0,0,.14); }
 .tienda:hover::after { transform: translateX(55%); }
 .tienda:active { transform: scale(.97); }
 .tienda:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .tienda svg { width: 28px; height: 28px; flex: none; }
 .tienda span { display: flex; flex-direction: column; font-weight: 600; font-size: 19px; line-height: 1.1; letter-spacing: -.02em; }
-.tienda small { font-weight: 500; font-size: 11px; letter-spacing: 0; opacity: .78; }
+.tienda small { font-weight: 500; font-size: 12px; letter-spacing: 0; opacity: .8; }
 .tiendas + .nota { margin-top: 12px; }
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .tienda { background: rgba(12,12,20,.88); } }
 @media (max-width: 560px) {
   .tiendas li { flex: 1 1 calc(50% - 12px); } .tienda { flex: 1; } .tienda span { font-size: 17px; }
   /* En móvil los botones ocupan todo el ancho de su fila: el contenido va centrado */
@@ -483,60 +648,6 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 }
 .inclinador.siguiendo { transition: transform .12s linear; }
 
-/* El teléfono del inicio flota igual aunque el sistema pida "reducir movimiento" (decisión del fundador:
-   es un movimiento lento y pequeño, solo en el producto). El resto de animaciones sí se reducen. */
-@media (prefers-reduced-motion: reduce) {
-  .telefono { animation: flotar 6s ease-in-out infinite !important; }
-  /* Demostraciones del producto: Windows con animaciones desactivadas también las ve (decisión del fundador). */
-  .touchpad .dedo { animation: deslizar 3.2s ease-in-out infinite !important; }
-  .teclado .cursor { animation: parpadeo 1s steps(1) infinite !important; }
-  .sombra-suelo { animation: sombra 6s ease-in-out infinite !important; }
-  .entradas span { transition-duration: .35s !important; }
-  .telefono.sale-izq { animation: sale-izq .26s cubic-bezier(.77, 0, .175, 1) forwards !important; }
-  .telefono.sale-der { animation: sale-der .26s cubic-bezier(.77, 0, .175, 1) forwards !important; }
-  .telefono.entra-der { animation: entra-der .56s cubic-bezier(.23, 1, .32, 1), flotar 6s ease-in-out .56s infinite !important; }
-  .telefono.entra-izq { animation: entra-izq .56s cubic-bezier(.23, 1, .32, 1), flotar 6s ease-in-out .56s infinite !important; }
-  .escena, .franja, .pantalla::before, .ok, .pie-gigante, .cabecera-pagina { transition-duration: .6s !important; }
-  .inclinador { transition: transform .8s ease !important; }
-}
-
-/* ---------- Inicio en escritorio: todo en la primera pantalla (2026-11-18) ----------
-   UX y Marketing: en 1904x910 el teléfono quedaba cortado abajo y el botón "Descargar" fuera de la pantalla. Se
-   reordena la columna (título, frase, descargar, tiendas, precio, marcas, aspecto) y se compacta; el teléfono se
-   ajusta al alto disponible y el "MANDO" gigante cabe en su columna. En celular no cambia nada. */
-@media (min-width: 961px) {
-  .panel { min-height: 0; padding-block: clamp(20px, 3.2vh, 44px); grid-template-columns: .92fr 1.08fr; align-items: start; }
-  /* El teléfono queda en la primera pantalla aunque la columna de texto siga más abajo. */
-  .escaparate { min-height: 0; height: calc(100svh - 110px - 2 * clamp(20px, 3.2vh, 44px)); max-height: 760px;
-    padding-top: clamp(40px, 7vh, 70px); }
-  .gigante { font-size: clamp(96px, 8.8vw, 168px); }
-  .ficha { display: flex; flex-direction: column; max-width: 600px; padding-top: clamp(8px, 2vh, 24px); }
-  .ficha > * { order: 10; }
-  .ficha h1 { order: 1; font-size: clamp(46px, 4.1vw, 72px); }
-  .ficha .bajada { order: 2; margin-top: 14px; font-size: clamp(16px, 1.15vw, 19px); max-width: 46ch; }
-  .ficha .acciones { order: 3; margin-top: 20px; }
-  .ficha .tiendas { order: 4; margin-top: 16px; gap: 8px; flex-wrap: nowrap; }
-  .ficha .tienda { padding: 9px 16px 9px 12px; min-height: 52px; gap: 9px; border-radius: 18px; }
-  .ficha .tienda svg { width: 24px; height: 24px; }
-  .ficha .tienda span { font-size: 16px; }
-  .ficha .tiendas + .nota { order: 5; margin-top: 8px; }
-  .ficha .precio { order: 6; margin-top: 16px; }
-  .ficha .precio strong { font-size: 34px; }
-  .ficha .etiqueta-grupo { margin: 14px 0 8px; }
-  .ficha .nota { margin-top: 8px; }
-}
-/* El teléfono se alinea arriba y se achica desde arriba en pantallas bajas (notebooks), para verse entero. */
-@media (min-width: 961px) {
-  .escaparate { place-items: start center; }
-  .inclinador { transform-origin: 50% 0; }
-  .sombra-suelo { display: none; }
-}
-@media (min-width: 961px) and (max-height: 900px) { .inclinador { scale: .95; } }
-@media (min-width: 961px) and (max-height: 820px) { .inclinador { scale: .86; } }
-@media (min-width: 961px) and (max-height: 740px) { .inclinador { scale: .78; } .ficha h1 { font-size: clamp(42px, 3.9vw, 64px); } }
-@media (min-width: 961px) and (max-height: 680px) { .inclinador { scale: .7; } .escaparate { padding-top: 36px; } }
-@media (min-width: 961px) and (max-height: 600px) { .inclinador { scale: .6; } }
-
 /* Tablas comparativas de las guías: en el celular se desplazan dentro de su caja, nunca la página. */
 .tabla { overflow-x: auto; margin: 16px 0 8px; border-radius: 20px; background: var(--suave); }
 .tabla:focus-visible { outline: 3px solid var(--marca); outline-offset: 2px; }
@@ -546,3 +657,62 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .tabla tbody th { font-weight: 600; }
 .tabla tr:last-child th, .tabla tr:last-child td { border-bottom: 0; }
 @media (max-width: 600px) { .tabla th, .tabla td { padding: 10px 10px; font-size: 14px; hyphens: auto; } }
+
+/* El producto se mueve igual aunque Windows tenga las animaciones desactivadas ("reducir movimiento"): decisión del
+   fundador. Se reducen solo los adornos (banda de marcas, entrada de secciones, palabra gigante). */
+@media (prefers-reduced-motion: reduce) {
+  .telefono { animation: flotar 6s ease-in-out infinite !important; }
+  .touchpad .dedo { animation: deslizar 3.2s ease-in-out infinite !important; }
+  .teclado .cursor { animation: parpadeo 1s steps(1) infinite !important; }
+  .sombra-suelo { animation: sombra 6s ease-in-out infinite !important; }
+  .entradas span { transition-duration: .35s !important; }
+  .telefono.sale-izq { animation: sale-izq .26s cubic-bezier(.77, 0, .175, 1) forwards !important; }
+  .telefono.sale-der { animation: sale-der .26s cubic-bezier(.77, 0, .175, 1) forwards !important; }
+  .telefono.entra-der { animation: entra-der .56s cubic-bezier(.23, 1, .32, 1), flotar 6s ease-in-out .56s infinite !important; }
+  .telefono.entra-izq { animation: entra-izq .56s cubic-bezier(.23, 1, .32, 1), flotar 6s ease-in-out .56s infinite !important; }
+  .vitrina-barras i.activa::after { animation: progreso var(--vuelta, 3500ms) linear forwards !important; }
+  .vitrina.quieta .vitrina-barras i.activa::after { animation: none !important; }
+  .telefono .tecla, .telefono .ok, .telefono .balancin, .telefono .pestanas span, .telefono .flecha { transition-duration: .16s !important; }
+  .telefono .pulsada { transition-duration: 0s !important; }
+  .escena, .escena::before, .franja, .franja::before, .pantalla::before, .ok, .pie-gigante, .cabecera-pagina, .banda li::after { transition-duration: .6s !important; }
+  .inclinador { transition: transform .8s ease !important; }
+  .banda-pista { animation: none !important; display: block; width: auto; }
+  .banda-pista ul[aria-hidden] { display: none; }
+  .banda ul { flex: 1 1 100%; flex-wrap: wrap; justify-content: center; row-gap: 10px; padding: 0 var(--margen); }
+}
+
+/* ---------- Secciones: detalles de acabado ---------- */
+.lista-funciones li { position: relative; padding-left: 22px; }
+.lista-funciones li::before { content: ""; position: absolute; left: 0; top: .35em; bottom: .35em; width: 5px; border-radius: 5px;
+  background: var(--marca); transition: background-color var(--t-marca); }
+.documento .lista-funciones li { padding-left: 0; }
+.documento .lista-funciones li::before { display: none; }
+.plan.pro {
+  --tinta: #0d0f17; --papel: #ffffff;
+  position: relative; overflow: hidden; color: #fff;
+  background: radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--marca) 60%, transparent), transparent 62%), #0d0f17;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08), 0 30px 60px -36px color-mix(in srgb, var(--marca) 80%, transparent);
+}
+.promesa li { display: flex; align-items: center; gap: 12px; }
+.promesa li::before { content: ""; flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--marca);
+  box-shadow: inset 0 0 0 7px var(--suave); transition: background-color var(--t-marca); }
+
+/* Lo que está bajo la primera pantalla se dibuja cuando se acerca (menos trabajo al cargar, sobre todo en celulares). */
+.escena ~ .contenedor > section, .escena ~ .franja, .escena ~ .pie { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+
+/* ---------- Modo oscuro (sigue al sistema) ----------
+   Las secciones pasan a fondo oscuro; el hero, la franja de color, el pie y los avisos mantienen tinta oscura sobre
+   color vivo (contraste AA). */
+@media (prefers-color-scheme: dark) {
+  :root { --tinta: #eef0f6; --papel: #0b0c12; --suave: #171a25; --tenue: #b6bccb; color-scheme: dark; }
+  .escena, .franja, .cabecera-pagina, .pasos-dos li, .aviso-cookies, .pie, .banda {
+    --tinta: #0d0f17; --papel: #ffffff; --suave: #f3f4f8; --tenue: #2f3545;
+  }
+  .franja, .cabecera-pagina, .pasos-dos li { color: var(--tinta); }
+  .pie { border-top: 1px solid rgba(255, 255, 255, .08); background: #07080c; }
+  .aviso-cookies { box-shadow: 0 20px 50px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 255, 255, .1); }
+  .pieza { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .07); }
+  .tabla th, .tabla td { border-bottom-color: #2a2f3d; }
+  .panel-correo { box-shadow: 0 30px 80px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(255, 255, 255, .08); }
+  .panel-correo::backdrop { background: rgba(0, 0, 0, .7); }
+}

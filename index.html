@@ -31,6 +31,7 @@
   <meta name="twitter:title" content="Mando TV: el control remoto de tu TV, en tu teléfono">
   <meta name="twitter:description" content="Un control para todos tus TV: Samsung, LG, Roku, Google TV y Android TV. Control gratis, sin anuncios y sin cuentas. Pro con pago único.">
   <meta name="twitter:image" content="https://mandotv.app/social.png?v=cf023f807e">
+  <meta name="twitter:image:alt" content="La app Mando TV en un teléfono, sobre fondo rosado, con el texto: el control remoto de tu TV.">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3ac0c31292">
   <link rel="manifest" href="manifest.webmanifest?v=08b5088cae">
   <script type="application/ld+json">
@@ -52,7 +53,7 @@
         "logo": "https://mandotv.app/apple-touch-icon.png",
         "email": "hola@mandotv.app",
         "sameAs": ["https://apps.apple.com/app/id6834927348", "https://apps.microsoft.com/detail/9N3D7T1DP2SW"],
-        "contactPoint": { "@type": "ContactPoint", "email": "hola@mandotv.app", "contactType": "customer support", "availableLanguage": "Spanish" }
+        "contactPoint": { "@type": "ContactPoint", "email": "hola@mandotv.app", "contactType": "customer support", "availableLanguage": ["Spanish", "English"] }
       },
       {
         "@type": "SoftwareApplication",
@@ -94,7 +95,8 @@
   }
   </script>
   <link rel="icon" href="icono.svg?v=1a26271c80" type="image/svg+xml">
-  <link rel="stylesheet" href="estilos.css?v=e113b58d0b">
+  <link rel="preload" href="/fuentes/archivo-latin.woff2?v=e3a28eade2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="estilos.css?v=9f40a0e350">
 </head>
 <body>
   <a class="oculto" href="#contenido">Saltar al contenido</a>
@@ -117,6 +119,7 @@
       <main id="contenido">
         <div class="panel">
           <div class="escaparate">
+            <div class="temas" role="group" aria-labelledby="tema-etiqueta"><span class="oculto" id="tema-etiqueta">Elige el aspecto</span><button type="button" class="punto" data-tema="oscuro" aria-pressed="true" aria-label="Oscuro"></button><button type="button" class="punto" data-tema="claro" aria-pressed="false" aria-label="Claro"></button><small id="tema-nombre">Oscuro</small></div>
             <p class="gigante" aria-hidden="true">MANDO</p>
             <div class="sombra-suelo" aria-hidden="true"></div>
             <div class="inclinador" id="inclinador"><div class="telefono" data-ui id="telefono" role="img" aria-label="La app Mando TV abierta en un teléfono, con la cruceta, el botón OK y los botones de volumen y canal.">
@@ -150,21 +153,22 @@
                 <div class="reflejo"></div>
               </div>
             </div></div>
+            <div class="vitrina">
+              <p class="vitrina-cuenta" aria-hidden="true"><b id="vitrina-num">01</b><span>/04</span> <span id="vitrina-nombre">Samsung</span></p>
+              <div class="vitrina-barras" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <button type="button" class="redondo pausa" id="pausa" aria-label="Pausar las marcas"><svg class="ico-pausa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zm6.5 0H17v14h-3.5z"/></svg><svg class="ico-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+              <div class="flechas"><button type="button" class="redondo" id="anterior" aria-label="Marca anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="redondo" id="siguiente" aria-label="Marca siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
+            </div>
           </div>
 
           <div class="ficha">
-            <h1>Un control para todos tus TV</h1>
-            <p class="bajada">Samsung, LG, Roku, Google TV y Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi y más) desde tu celular o tu computador, por WiFi. Un solo control para todos los televisores de la casa. Sin cuentas y sin anuncios.</p>
+            <p class="antetitulo">Para iPhone, iPad, Android y Windows</p>
+            <h1>Control remoto universal para todos tus TV</h1>
+            <p class="bajada">Maneja tu Samsung, LG, Roku, Google TV o Android TV desde el celular o el computador, por WiFi.</p>
 
             <p class="precio"><strong>Gratis</strong><span>Pro con pago único, sin suscripción</span></p>
 
-            <div class="etiqueta-grupo">
-              <span id="marca-etiqueta">Funciona con todas estas marcas</span>
-              <div class="flechas">
-                <button type="button" id="anterior" aria-label="Marca anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
-                <button type="button" id="siguiente" aria-label="Marca siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
-              </div>
-            </div>
+            <div class="etiqueta-grupo grupo-marcas"><span id="marca-etiqueta">Tu TV</span></div>
             <div class="marcas" role="group" aria-labelledby="marca-etiqueta">
               <button type="button" data-marca="samsung" aria-pressed="true">Samsung</button>
               <button type="button" data-marca="lg" aria-pressed="false">LG</button>
@@ -172,13 +176,14 @@
               <button type="button" data-marca="android" aria-pressed="false">Google TV</button>
             </div>
             <p class="nota" id="marca-nota" aria-live="polite">Samsung con Tizen: aceptas una vez en el televisor y listo.</p>
-
-            <div class="etiqueta-grupo"><span id="tema-etiqueta">Elige el aspecto</span></div>
-            <div class="temas" role="group" aria-labelledby="tema-etiqueta">
-              <button type="button" class="punto" data-tema="oscuro" aria-pressed="true" aria-label="Oscuro"></button>
-              <button type="button" class="punto" data-tema="claro" aria-pressed="false" aria-label="Claro"></button>
-              <small id="tema-nombre">Oscuro</small>
+            <div class="etiqueta-grupo grupo-equipos"><span id="equipo-etiqueta">Tu equipo</span></div>
+            <div class="equipos grupo-equipos" role="group" aria-labelledby="equipo-etiqueta">
+              <button type="button" data-equipo="iphone" aria-pressed="false">iPhone</button>
+              <button type="button" data-equipo="ipad" aria-pressed="false">iPad</button>
+              <button type="button" data-equipo="android" aria-pressed="false">Android</button>
+              <button type="button" data-equipo="windows" aria-pressed="false">Windows</button>
             </div>
+
 
             <div class="acciones">
               <a class="boton" id="boton-principal" href="#tiendas">
@@ -186,16 +191,24 @@
                 <span id="boton-principal-texto">Descargar gratis</span>
               </a>
               <a class="boton claro" href="#funciones">Ver qué hace</a>
+              <p class="boton-nota" id="boton-nota" hidden></p>
             </div>
             <ul class="tiendas" id="tiendas" aria-label="Disponible en las tiendas">
-              <li><a class="tienda" href="https://apps.apple.com/app/id6834927348" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Descárgalo en</small>App Store</span></a></li>
-              <li><a class="tienda" href="#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small>Google Play</span></a></li>
-              <li><a class="tienda" href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg><span><small>Descárgalo en</small>Microsoft Store</span></a></li>
+              <li><a class="tienda" href="https://apps.apple.com/app/id6834927348" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Descárgalo en</small> App Store</span></a></li>
+              <li><a class="tienda" href="#android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small> Google Play</span></a></li>
+              <li><a class="tienda" href="https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10.5v10.5H1z"/><path fill="#7fba00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00a4ef" d="M1 12.5h10.5V23H1z"/><path fill="#ffb900" d="M12.5 12.5H23V23H12.5z"/></svg><span><small>Descárgalo en</small> Microsoft Store</span></a></li>
             </ul>
-            <p class="nota">iPhone, iPad, Android y Windows. Descarga gratis y sin anuncios.</p>
+            <ul class="pruebas"><li>Sin anuncios</li><li>Sin cuentas</li><li>Sin rastreadores</li><li>Pro de pago único</li></ul>
           </div>
         </div>
       </main>
+    </div>
+  </div>
+
+  <div class="banda">
+    <div class="banda-pista">
+      <ul aria-label="Marcas de TV compatibles"><li>Samsung</li><li>LG</li><li>Roku</li><li>Google TV</li><li>Android TV</li><li>Sony</li><li>Philips</li><li>TCL</li><li>Hisense</li><li>Xiaomi</li><li>Sharp</li><li>Toshiba</li><li>Panasonic</li><li>Apple TV <small>beta</small></li><li>Vizio <small>beta</small></li></ul>
+      <ul aria-hidden="true"><li>Samsung</li><li>LG</li><li>Roku</li><li>Google TV</li><li>Android TV</li><li>Sony</li><li>Philips</li><li>TCL</li><li>Hisense</li><li>Xiaomi</li><li>Sharp</li><li>Toshiba</li><li>Panasonic</li><li>Apple TV <small>beta</small></li><li>Vizio <small>beta</small></li></ul>
     </div>
   </div>
 
@@ -207,7 +220,7 @@
         <ul class="lista-funciones">
           <li class="aparece"><b>Botones grandes y claros</b><span>Cruceta, OK, Atrás, Inicio, volumen, canales y silencio, con su nombre siempre visible.</span></li>
           <li class="aparece"><b>Touchpad (Pro)</b><span>Desliza el dedo para moverte por los menús, o usa el puntero en los televisores que lo tienen.</span></li>
-          <li class="aparece"><b>Teclado del teléfono</b><span>Escribe una contraseña del WiFi o busca en apps sin pasar letra por letra. En YouTube, la búsqueda aparece en el TV al instante.</span></li>
+          <li class="aparece"><b>Teclado del teléfono</b><span>Escribe una contraseña del WiFi o busca en apps sin pasar letra por letra. En YouTube, la búsqueda aparece directo en el TV.</span></li>
           <li class="aparece"><b>Abre tus apps</b><span>Netflix, YouTube y las demás apps del televisor, con un toque.</span></li>
           <li class="aparece"><b>Entradas y sonido</b><span>Cambia a HDMI, TV en vivo o la consola. Con Pro, en LG eliges si suena el TV o la barra de sonido.</span></li>
           <li class="aparece"><b>Enciende el televisor</b><span>Si está apagado, Mando TV lo enciende por la red y se conecta solo.</span></li>
@@ -399,9 +412,9 @@
     </div>
   </footer>
 
-  <script src="app.js?v=fa47214105" defer></script>
+  <script src="app.js?v=29187b9477" defer></script>
   <script src="correo.js?v=117ceb3bc7" defer></script>
-  <script src="/cookies.js?v=b3c1517426" defer></script>
+  <script src="/cookies.js?v=eebb9b127b" defer></script>
   <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3a3f0250e4b04d5884b033b9a94302b4"}'></script>
 </body>

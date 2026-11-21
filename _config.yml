@@ -1,3 +1,4 @@
-# GitHub Pages (Jekyll): herramientas/ son scripts internos y no se publican en la web.
+# GitHub Pages (Jekyll): herramientas/ son scripts internos y docs/ son notas internas: no se publican en la web.
 exclude:
   - herramientas
+  - docs

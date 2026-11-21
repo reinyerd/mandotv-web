@@ -11,22 +11,22 @@
   var TEXTOS = {
     es: { aria: 'Aviso de cookies', titulo: '¿Nos dejas contar tus visitas con cookies?',
           texto: 'Usamos Google Analytics para saber qué páginas se leen y mejorar la web. Solo se activa si aceptas.',
-          url: '/privacidad.html#cookies', mas: 'Más información', si: 'Aceptar', no: 'Rechazar' },
+          url: '/privacidad.html#cookies', mas: 'Más sobre las cookies', si: 'Aceptar', no: 'Rechazar' },
     en: { aria: 'Cookie notice', titulo: 'Can we count your visits with cookies?',
           texto: 'We use Google Analytics to see which pages are read and improve the site. It only turns on if you accept.',
-          url: '/en/privacy.html#cookies', mas: 'Learn more', si: 'Accept', no: 'Decline' },
+          url: '/en/privacy.html#cookies', mas: 'More about cookies', si: 'Accept', no: 'Decline' },
     de: { aria: 'Cookie-Hinweis', titulo: 'Dürfen wir deine Besuche mit Cookies zählen?',
           texto: 'Wir nutzen Google Analytics, um zu sehen, welche Seiten gelesen werden, und die Website zu verbessern. Es wird nur aktiviert, wenn du akzeptierst.',
-          url: '/de/datenschutz.html#cookies', mas: 'Mehr erfahren', si: 'Akzeptieren', no: 'Ablehnen' },
+          url: '/de/datenschutz.html#cookies', mas: 'Mehr über Cookies', si: 'Akzeptieren', no: 'Ablehnen' },
     fr: { aria: 'Avis sur les cookies', titulo: 'Pouvons-nous compter vos visites avec des cookies ?',
           texto: "Nous utilisons Google Analytics pour savoir quelles pages sont lues et améliorer le site. Il ne s'active que si vous acceptez.",
-          url: '/fr/confidentialite.html#cookies', mas: 'En savoir plus', si: 'Accepter', no: 'Refuser' },
+          url: '/fr/confidentialite.html#cookies', mas: 'En savoir plus sur les cookies', si: 'Accepter', no: 'Refuser' },
     pt: { aria: 'Aviso de cookies', titulo: 'Você deixa a gente contar as suas visitas com cookies?',
           texto: 'Usamos o Google Analytics para saber quais páginas são lidas e melhorar o site. Ele só é ativado se você aceitar.',
-          url: '/pt/privacidade.html#cookies', mas: 'Saiba mais', si: 'Aceitar', no: 'Recusar' },
+          url: '/pt/privacidade.html#cookies', mas: 'Saiba mais sobre cookies', si: 'Aceitar', no: 'Recusar' },
     it: { aria: 'Avviso sui cookie', titulo: 'Possiamo contare le tue visite con i cookie?',
           texto: "Usiamo Google Analytics per sapere quali pagine vengono lette e migliorare il sito. Si attiva solo se accetti.",
-          url: '/it/privacy.html#cookies', mas: 'Maggiori informazioni', si: 'Accetta', no: 'Rifiuta' }
+          url: '/it/privacy.html#cookies', mas: 'Maggiori informazioni sui cookie', si: 'Accetta', no: 'Rifiuta' }
   };
   var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
 
@@ -95,7 +95,12 @@
   var eleccion = leer();
   if (eleccion === 'si') cargarAnaliticas();
   else if (eleccion !== 'no') {
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { crearAviso(); });
-    else crearAviso();
+    // Aparece cuando ya cargaron las fuentes: así no cambia de alto al llegar la letra y no mueve nada (CLS).
+    var crearConFuentes = function () {
+      var listas = document.fonts && document.fonts.ready;
+      if (listas) listas.then(crearAviso, crearAviso); else crearAviso();
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', crearConFuentes);
+    else crearConFuentes();
   }
 })();
