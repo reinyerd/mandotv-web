@@ -259,27 +259,27 @@ GUIAS_MARCAS = [
 
   dict(clave='toshiba', corto='Toshiba TV remote app',
     titulo='Toshiba TV Remote App: Fire TV and Google TV Models',
-    desc='Toshiba TV remote app: Mando TV controls Toshiba Fire TV models and Toshiba TVs with Google TV or Android TV from your phone over Wi-Fi. No account.',
+    desc='Toshiba TV remote app: Mando TV controls Toshiba TVs with Fire TV, Google TV, Android TV or VIDAA from your phone or PC over Wi-Fi. No account.',
     h1='Toshiba TV Remote App for Your Phone',
-    intro='In the US, Toshiba smart TVs come with Fire TV built in. In other countries Toshiba also sells TVs with Google TV or Android TV, and some with VIDAA. Mando TV controls the Fire TV, Google TV and Android TV models from your phone or PC over Wi-Fi.',
+    intro='In the US, Toshiba smart TVs come with Fire TV built in. In other countries Toshiba also sells TVs with Google TV or Android TV, and some with VIDAA. Mando TV controls all of them from your phone or PC over Wi-Fi, with one exception on some recent VIDAA models.',
     pasos=[
-      'Check the home screen. Fire TV shows rows of apps and Amazon content. Google TV and Android TV show Google rows of recommendations.',
+      'Check the home screen. Fire TV shows rows of apps and Amazon content. Google TV and Android TV show Google rows of recommendations. VIDAA has its own home screen.',
       'Connect your phone and the TV to the same Wi-Fi network.',
       'Open Mando TV and tap your Toshiba in the list.',
-      'Fire TV models show a 4-digit PIN; Google TV and Android TV models show a 6-character code. Type it into Mando TV once.',
+      'Fire TV and VIDAA models may show a 4-digit PIN; Google TV and Android TV models show a 6-character code. Type it into Mando TV once.',
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
     ],
     extra=[
       ('Toshiba Fire TV', 'The TV is the Fire TV, so the [Fire TV remote app](/en/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/en/guides/lost-fire-tv-remote/).'),
       ('Toshiba Google TV and Android TV', 'They pair with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/en/android-tv-remote/).'),
-      ('Toshiba with VIDAA', 'VIDAA support is not in the released app yet, so we do not claim it. This page will change when it ships.'),
+      ('Toshiba with VIDAA', 'Most VIDAA models work. Some recent VIDAA models only accept the official app of the TV maker; Mando TV detects that when it connects and tells you plainly. More in the [Hisense TV remote app](/en/guides/hisense-tv-remote-app/) guide.'),
       ('Turn on a Toshiba without the remote', 'Look for the power button under the center of the screen or on the back near a lower corner. More in [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
     faq=[
       ('Does Mando TV work with Toshiba Fire TV?', 'Yes. It pairs with the 4-digit PIN on the screen. Fire TV support is new, so keep the app updated and tell us if your model does not behave.'),
-      ('Does it work with Toshiba VIDAA TVs?', 'Not yet. Toshiba models with Fire TV, Google TV or Android TV are supported.'),
+      ('Does it work with Toshiba VIDAA TVs?', 'Yes, with most VIDAA models. Some recent ones only accept the official app; Mando TV detects it and tells you.'),
       ('Do I need an Amazon or Google account?', 'No. Mando TV has no account and connects over your home Wi-Fi.'),
     ]),
 

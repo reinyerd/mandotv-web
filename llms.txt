@@ -33,7 +33,7 @@ Key facts:
 
 ## TV remote app by brand (English)
 
-Each page says which systems that brand uses and which ones Mando TV controls (Roku TV, Google TV / Android TV, Fire TV) and which ones it does not (for example Xumo TV, Titan OS and VIDAA). Vizio SmartCast TVs from 2016 onward have beta support.
+Each page says which systems that brand uses and which ones Mando TV controls (Roku TV, Google TV / Android TV, Fire TV and most Hisense VIDAA models) and which ones it does not (for example Xumo TV and Titan OS). Some recent VIDAA models only accept Hisense's official app; Mando TV detects it and says so. Vizio SmartCast TVs from 2016 onward have beta support.
 
 - [Sony](https://mandotv.app/en/guides/sony-tv-remote-app/), [TCL](https://mandotv.app/en/guides/tcl-tv-remote-app/), [Hisense](https://mandotv.app/en/guides/hisense-tv-remote-app/), [Insignia](https://mandotv.app/en/guides/insignia-tv-remote-app/), [onn.](https://mandotv.app/en/guides/onn-tv-remote-app/), [Toshiba](https://mandotv.app/en/guides/toshiba-tv-remote-app/), [Sharp](https://mandotv.app/en/guides/sharp-tv-remote-app/), [Philips](https://mandotv.app/en/guides/philips-tv-remote-app/), [Westinghouse](https://mandotv.app/en/guides/westinghouse-tv-remote-app/), [Pioneer](https://mandotv.app/en/guides/pioneer-tv-remote-app/), [Vizio (beta support for SmartCast)](https://mandotv.app/en/guides/vizio-tv-remote-app/)
 

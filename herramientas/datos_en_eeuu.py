@@ -2,8 +2,9 @@
 # Las usa generar_en.py (se añaden a GUIAS); las rutas viven en idiomas_sitio.py.
 # Hechos comprobados contra el código de la app (C:\server\htdocs\control):
 #   - Marcas con driver: LG webOS, Samsung (Tizen y 2010-2015), Roku, Android TV / Google TV, Fire TV (PIN de 4 dígitos,
-#     lib/drivers/fire_tv.dart, desde la 1.0.8) y Hisense VIDAA (lib/drivers/vidaa.dart, en main, NO publicado aún).
-#   - Vizio SmartCast: beta desde 1.0.12 (PIN de 4 dígitos, 2016 en adelante). Hisense VIDAA y TCL: solo se dicen las plataformas ya publicadas.
+#     lib/drivers/fire_tv.dart, desde la 1.0.8) y Hisense VIDAA (lib/drivers/vidaa.dart, publicado desde la 1.0.9:
+#     "la mayoría de los modelos; algunos VIDAA recientes solo aceptan la app oficial de Hisense y la app lo avisa").
+#   - Vizio SmartCast: beta desde la 1.0.12 (PIN de 4 dígitos, 2016 en adelante). TCL: solo se dicen las plataformas ya publicadas.
 #   - Gratis y Pro: docs/PRO.md y funcionesProPorDefecto en lib/core/licencia.dart.
 # Fire TV sale en la app 1.0.8. Poner True SOLO cuando la 1.0.8 esté publicada en las tiendas y volver a generar
 # (python -I herramientas/generar_en.py .). Con False no se genera la guía de Fire TV ni se promete en ninguna página.
@@ -92,25 +93,25 @@ GUIAS_EEUU = [
 
   dict(clave='hisense', corto='Hisense TV remote app',
     titulo='Hisense TV Remote App: What Works From Your Phone',
-    desc='Hisense TV remote app: Mando TV controls Hisense TVs that run Roku TV, Google TV or Fire TV from your phone over Wi-Fi. Honest guide to what is supported.',
+    desc='Hisense TV remote app: Mando TV controls Hisense TVs with VIDAA, Roku TV, Google TV or Fire TV from your phone over Wi-Fi. An honest guide to what works.',
     h1='Hisense TV Remote App: What Works and What Does Not',
-    intro='Hisense TVs are not all the same inside. Depending on the model, they run Roku TV, Google TV, Fire TV or Hisense\'s own VIDAA system. Mando TV works as a Hisense TV remote app on the first three. Here is how to tell which one you have and what to expect.',
+    intro='Hisense TVs are not all the same inside. Depending on the model, they run Hisense\'s own VIDAA system, Roku TV, Google TV or Fire TV. Mando TV works as a Hisense TV remote app on all four, with one exception on some recent VIDAA models. Here is how to tell which one you have and what to expect.',
     pasos=[
-      'Check which system your Hisense runs. Roku TV has a grid of channel tiles. Google TV shows rows of recommendations. Fire TV shows the Fire TV home screen with Amazon rows. VIDAA is Hisense\'s own interface.',
+      'Check which system your Hisense runs. VIDAA is Hisense\'s own interface. Roku TV has a grid of channel tiles. Google TV shows rows of recommendations. Fire TV shows the Fire TV home screen with Amazon rows.',
       'Connect your phone and the Hisense TV to the same Wi-Fi network.',
       'Open Mando TV. The TV shows up in the list on its own. Tap it.',
-      'Roku TV asks for nothing. Google TV shows a 6-character code to type into the app. Fire TV shows a 4-digit PIN to type into the app. Do this once.',
+      'VIDAA and Fire TV models may show a 4-digit PIN; Google TV shows a 6-character code. Type it into the app. Roku TV asks for nothing. Do this once.',
       'Use the d-pad, OK, Back, Home, volume and keyboard from your phone.',
     ],
     extra=[
       ('Hisense with Roku TV or Google TV', 'These work fully like any other Roku or Google TV. See the [Roku remote app page](/en/roku-remote/) and the [Android TV remote app page](/en/android-tv-remote/) for the details of each.'),
       ('Hisense with Fire TV', 'Fire TV support is new in Mando TV. Update the app to the latest version from your store, and see the [Fire TV remote app page](/en/guides/fire-tv-remote-app/) for how the PIN pairing works. If something does not behave, write to us from the Help page and tell us your model.'),
-      ('Hisense with VIDAA', 'VIDAA support is not in the released app yet, so we do not promise it. Until it is available, the Hisense app for your model is the way to control a VIDAA TV from a phone, and the buttons on the TV or the original remote still work. Check back here: this page will be updated when it is released.'),
+      ('Hisense with VIDAA', 'Most VIDAA models work: buttons, volume, keyboard, apps and inputs. Some recent VIDAA models only accept Hisense\'s official app. Mando TV detects that when it connects and tells you plainly, instead of failing silently. In that case the Hisense app for your model, the buttons on the TV or the original remote are the way to go.'),
       ('Turn on a Hisense from your phone', 'On Hisense Roku TV, turn on Fast TV start under Settings, System, Power. On Google TV, look for a Wake on LAN or "Turn on over network" option. If neither exists, use the power button on the TV.'),
       ('What is free and what is Pro', FREE_PRO),
     ],
     faq=[
-      ('Does Mando TV work with Hisense VIDAA?', 'Not in the released app yet. We do not claim support we do not ship. Hisense TVs that run Roku TV, Google TV or Fire TV are supported.'),
+      ('Does Mando TV work with Hisense VIDAA?', 'Yes, with most VIDAA models. Some recent ones only accept Hisense\'s official app; Mando TV detects it and tells you. Hisense TVs with Roku TV, Google TV or Fire TV are supported too.'),
       ('How do I know if my Hisense is Roku TV, Google TV or Fire TV?', 'Look at the home screen. Roku TV has a plain grid of tiles and a Roku logo at start-up. Google TV has rows of recommendations. Fire TV has the Amazon Fire TV home screen. The model name in Settings, About also tells you.'),
       ('Do I need a Hisense or Google account?', 'No. Mando TV connects directly over your home Wi-Fi and has no account of its own.'),
     ]),
