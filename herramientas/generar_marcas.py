@@ -13,7 +13,7 @@ MARCAS = [
     desc='Tu celular o PC como control remoto de tu TV LG con webOS, por WiFi. Botones, teclado, apps, entradas y encendido gratis; puntero con Pro.',
     h1='Control remoto para TV LG',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Smart TV LG con webOS, por la red WiFi de tu casa. Sirve si perdiste el control, si se le acabaron las pilas o si simplemente quieres escribir más rápido.',
-    compat='Smart TV LG con sistema webOS (la mayoría de los modelos LG Smart TV desde 2014). Funciona con televisores LED, NanoCell, QNED y OLED.',
+    compat='Smart TV LG con sistema webOS (la mayoría de los modelos LG Smart TV desde 2014). Funciona con televisores LED, NanoCell, QNED y OLED. Los Smart TV LG antiguos con NetCast (2011 a 2014, antes de webOS) tienen soporte nuevo en beta: se emparejan con la clave de 6 dígitos que muestra el TV.',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, canales, silencio y reproducción.'),
       ('Puntero como el Magic Remote (Pro)', 'Mueve la flecha por la pantalla con el dedo, igual que con el control mágico de LG.'),
@@ -32,6 +32,7 @@ MARCAS = [
       ('¿Necesito el Magic Remote para usar Mando TV?', 'Solo la primera vez, para aceptar el permiso en la pantalla. Después puedes usar solo el celular.'),
       ('¿Mando TV reemplaza a LG ThinQ?', 'Para manejar el televisor, sí: no necesitas cuenta de LG ni registrar el TV. Mando TV se conecta directo por tu WiFi.'),
       ('¿Puedo encender mi TV LG desde el celular?', 'Sí, si activas "Encender TV con móvil" en el televisor y te conectaste una vez con el TV encendido.'),
+      ('¿Funciona con televisores LG antiguos, de antes de webOS?', 'En beta, sí: con los Smart TV LG NetCast de 2011 a 2014. Se emparejan con la clave de 6 dígitos que muestra el televisor. Es nuevo, así que todavía puede tener detalles por pulir.'),
     ],
     guias=[('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular'), ('perdi-el-control-del-lg', 'Perdí el control del TV LG: cómo usar el celular'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
   dict(slug='control-remoto-samsung', nombre='Samsung', corto='Samsung', color='#3d7bff',
@@ -73,6 +74,7 @@ MARCAS = [
       ('Entradas', 'En Roku TV, cambia a HDMI, antena o AV desde la app.'),
       ('Encender el TV', 'En televisores Roku TV con inicio rápido, Mando TV lo enciende desde el celular.'),
       ('Sin emparejar', 'Roku no pide código: lo tocas en la lista y listo.'),
+      ('Hacer sonar el control', 'Si tu control Roku tiene parlante, como el Roku Voice Remote Pro, Mando TV lo hace sonar para que lo encuentres. Es gratis y el Roku debe estar encendido.'),
     ],
     pasos=[
       'Conecta el celular y el Roku a la misma red WiFi.',

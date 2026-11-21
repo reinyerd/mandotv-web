@@ -3,7 +3,7 @@
 # Hechos comprobados contra el código de la app (C:\server\htdocs\control):
 #   - Marcas con driver: LG webOS, Samsung (Tizen y 2010-2015), Roku, Android TV / Google TV, Fire TV (PIN de 4 dígitos,
 #     lib/drivers/fire_tv.dart, desde la 1.0.8) y Hisense VIDAA (lib/drivers/vidaa.dart, en main, NO publicado aún).
-#   - Vizio SmartCast: sin driver, no se promete. Hisense VIDAA y TCL: solo se dicen las plataformas ya publicadas.
+#   - Vizio SmartCast: beta desde 1.0.12 (PIN de 4 dígitos, 2016 en adelante). Hisense VIDAA y TCL: solo se dicen las plataformas ya publicadas.
 #   - Gratis y Pro: docs/PRO.md y funcionesProPorDefecto en lib/core/licencia.dart.
 # Fire TV sale en la app 1.0.8. Poner True SOLO cuando la 1.0.8 esté publicada en las tiendas y volver a generar
 # (python -I herramientas/generar_en.py .). Con False no se genera la guía de Fire TV ni se promete en ninguna página.
@@ -116,27 +116,28 @@ GUIAS_EEUU = [
     ]),
 
   dict(clave='vizio', corto='Vizio TV remote app',
-    titulo='Vizio TV Remote App: What Mando TV Can and Cannot Do',
-    desc='Is there a Vizio TV remote app that works? Mando TV does not control Vizio SmartCast TVs. Here are your real options, plus a plug-in streaming stick fix.',
-    h1='Vizio TV Remote App: Honest Answer and Real Options',
-    intro='Mando TV does not control Vizio SmartCast TVs directly, and we would rather say that plainly than waste your time. Here is what does work for a Vizio TV with a lost remote, and how Mando TV can still help if you use a streaming stick.',
+    titulo='Vizio TV Remote App: Beta Support for SmartCast',
+    desc='Vizio TV remote app: Mando TV now has beta support for Vizio SmartCast TVs from 2016 onward. Pair with a 4-digit PIN; turn on from standby with Quick Start.',
+    h1='Vizio TV Remote App: Beta Support for SmartCast TVs',
+    intro='Mando TV now has beta support for Vizio SmartCast TVs from 2016 onward. It is new, so it can still have rough edges, and we would rather say that plainly. Here is how to pair it, what to do if the Vizio will not turn on, and what else works when the remote is lost.',
     pasos=[
-      'Turn the TV on with its physical power button. On most Vizio TVs it is on the back or under the screen, on the lower edge or a corner.',
-      'Install the official Vizio phone app for your TV model and follow its setup. It is the supported way to control SmartCast over Wi-Fi.',
-      'If the app cannot find the TV, check that your phone and the TV are on the same Wi-Fi network, then restart the router and the TV.',
-      'If you plug a Roku, Fire TV or Google TV streaming device into the Vizio, install Mando TV and control that device instead, over the same Wi-Fi.',
-      'To switch the TV to the right HDMI input, use the input button on the TV itself, then control the streaming device from your phone.',
+      'Turn the TV on with its physical power button if it is off. On most Vizio TVs it is on the back or under the screen, on the lower edge or a corner.',
+      'Connect your phone and the Vizio to the same Wi-Fi network, then install Mando TV and open it.',
+      'Pick your Vizio in the TV list. The TV shows a 4-digit PIN on its screen.',
+      'Type that PIN into Mando TV. The pairing is saved, so you do not need the PIN again.',
+      'Use the buttons, the volume and the keyboard from your phone. If the app cannot find the TV, restart the router and the TV and try again.',
     ],
     extra=[
-      ('Why Mando TV does not list Vizio', 'Mando TV controls TVs and devices that run Roku, Samsung Tizen, LG webOS, Google TV or Android TV, and Fire TV. Vizio SmartCast uses a different system that Mando TV does not support, so we do not claim it.'),
-      ('How Mando TV can still help with a Vizio', 'Many Vizio TVs have a Roku stick, a Fire TV stick or a Chromecast with Google TV plugged into an HDMI port. Mando TV controls the Roku, Fire TV and Google TV devices. That covers the streaming apps. For TV power and HDMI inputs on the Vizio itself, you still need the Vizio app or the physical buttons.'),
-      ('Other ways to control a Vizio without the remote', 'Use the buttons on the TV. Check whether your phone has an infrared blaster. Some Android phones do, with an app that supports Vizio codes. Or order a replacement remote that matches your model number, which is on the label on the back of the TV.'),
+      ('What beta means here', 'Vizio support is new and in beta. It covers SmartCast TVs from 2016 onward. Vizio TVs older than 2016 are not covered. If something does not behave, write to us from the Help page and tell us your model.'),
+      ('Turning on a Vizio from standby', 'Mando TV can turn on a Vizio that is in standby, as long as Quick Start (also called quick power-on) is turned on in the TV settings. If the TV is fully off, use its physical power button.'),
+      ('If you use a streaming stick', 'Many Vizio TVs have a Roku stick, a Fire TV stick or a Chromecast with Google TV plugged into an HDMI port. Mando TV controls the Roku, Fire TV and Google TV devices too, from the same app.'),
+      ('Other ways to control a Vizio without the remote', 'Use the buttons on the TV, use the official Vizio phone app, or order a replacement remote that matches your model number, which is on the label on the back of the TV.'),
       ('If you own other TVs too', 'Mando TV is useful for the rest of the house: see the pages for [Samsung](/en/samsung-tv-remote/), [LG](/en/lg-tv-remote/), [Roku](/en/roku-remote/) and [Android TV](/en/android-tv-remote/).'),
     ],
     faq=[
-      ('Does Mando TV work with Vizio TVs?', 'No. Mando TV does not control Vizio SmartCast TVs. It controls Roku, Fire TV and Google TV devices plugged into them.'),
-      ('Will Vizio support be added?', 'We do not announce support before it works. This page will say so plainly when it changes.'),
-      ('What is the fastest way to control a Vizio TV with no remote?', 'Use the physical power and input buttons on the TV, and the official Vizio phone app for everything else.'),
+      ('Does Mando TV work with Vizio TVs?', 'Yes, in beta, on Vizio SmartCast TVs from 2016 onward. It pairs with a 4-digit PIN shown on the TV. Vizio TVs older than 2016 are not covered.'),
+      ('Can Mando TV turn on a Vizio?', 'Yes, if the TV is in standby and Quick Start (quick power-on) is on in the TV settings. A TV that is fully off needs its physical power button.'),
+      ('What is the fastest way to control a Vizio TV with no remote?', 'Press the physical power button on the TV, then pair Mando TV with the PIN. The official Vizio phone app also works.'),
     ]),
 
   dict(clave='firetv', corto='Fire TV remote app',
@@ -185,7 +186,7 @@ GUIAS_EEUU = [
     faq=[
       ('Is Mando TV free on iPhone?', 'The download is free, with no ads. The basic remote is free, and so are opening apps and switching inputs. Extras such as the touchpad, voice commands and routines are Mando TV Pro, a one-time purchase.'),
       ('Does it work on iPad?', 'Yes. The same app runs on iPhone and iPad.'),
-      ('Does an iPhone remote app need Bluetooth or an infrared blaster?', 'No. iPhones have no infrared blaster, and Mando TV does not use one or Bluetooth. It controls smart TVs over your home Wi-Fi.'),
+      ('Does an iPhone remote app need Bluetooth or an infrared blaster?', 'Not on iPhone. iPhones have no infrared blaster, so infrared control is not available there, and Bluetooth is still in development. On iPhone, Mando TV controls smart TVs over your home Wi-Fi.'),
     ]),
 
   dict(clave='windows', corto='TV remote app for Windows',
@@ -206,13 +207,13 @@ GUIAS_EEUU = [
       ('Typing on the TV from the PC', 'The on-screen keyboard of a TV is slow. In Mando TV you type with your real keyboard and the text goes to the TV search box. That part is free.'),
       ('More details', 'For the step-by-step version see [how to control your TV from a Windows PC](/en/guides/control-tv-from-pc/). For phone-based control see [use your phone as a TV remote over Wi-Fi](/en/guides/connect-phone-to-tv-wifi/).'),
       ('What is free and what is Pro', FREE_PRO + ' On Windows, Pro is bought through Microsoft Store.'),
-      ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. The app uses Windows voice typing: turn on "Online speech recognition" once in Settings > Privacy & security > Speech. Mando TV shows a button that opens that setting if it is off.'),
+      ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. The voice is recognized on the PC itself: it needs no internet, no Windows settings to change and works in the 6 languages of the app. What you say never leaves the PC and is not stored. Only on very old processors does the app fall back to Windows voice typing, which needs "Online speech recognition" on in Settings > Privacy & security > Speech and your language added in Windows.'),
     ],
     faq=[
       ('Does the TV remote app for Windows need Bluetooth or a cable?', 'No. It uses your home network. The PC and the TV only have to be on the same router.'),
       ('Which TVs can I control from Windows?', 'Samsung Tizen TVs, LG webOS TVs, Roku TV and players, Google TV and Android TV, and Fire TV.'),
       ('Can I use my PC speakers or my screen to see the TV?', 'No. Mando TV is only a remote. It does not mirror or stream the TV picture to the computer.'),
-      ('Why does voice not work on my Windows PC?', 'Turn on "Online speech recognition" in Settings > Privacy & security > Speech and make sure Windows has a language that supports voice typing (Settings > Time & language).'),
+      ('Why does voice not work on my Windows PC?', 'Voice is a Pro feature, so check that Pro is active and that the PC microphone works. On most PCs the voice is recognized on the PC itself, with no internet. Only on very old processors does the app use Windows voice typing: then turn on "Online speech recognition" in Settings > Privacy & security > Speech and add your language in Settings > Time & language.'),
     ]),
 ]
 
@@ -230,11 +231,8 @@ _CAMBIOS = {
     ("Roku TV, Google TV or Fire TV?', 'Look", "Roku TV, Google TV or Fire TV?', 'Look"),
   ],
   'vizio': [
-    ("If you plug a Roku, Fire TV or Google TV streaming device", "If you plug a Roku or Google TV streaming device"),
-    ("Google TV or Android TV, and Fire TV. Vizio", "Google TV or Android TV. Vizio"),
     ("a Roku stick, a Fire TV stick or a Chromecast", "a Roku stick or a Chromecast"),
-    ("controls the Roku, Fire TV and Google TV devices.", "controls the Roku and Google TV devices."),
-    ("controls Roku, Fire TV and Google TV devices plugged", "controls Roku and Google TV devices plugged"),
+    ("controls the Roku, Fire TV and Google TV devices too", "controls the Roku and Google TV devices too"),
   ],
   'iphone': [
     ("Roku, Google TV and Fire TV over Wi-Fi", "Roku and Google TV over Wi-Fi"),

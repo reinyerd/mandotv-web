@@ -212,7 +212,7 @@ MARCAS = [
     h1='LG TV Remote App for Your Phone',
     corto='LG',
     intro='Mando TV is an LG TV remote app: it turns your phone or computer into the remote for your LG smart TV with webOS, over your home Wi-Fi. It helps if you lost the remote, if its batteries died, or if you just want to type faster.',
-    compat='LG smart TVs running webOS (most LG smart TV models since 2014). Works with LED, NanoCell, QNED and OLED TVs.',
+    compat='LG smart TVs running webOS (most LG smart TV models since 2014). Works with LED, NanoCell, QNED and OLED TVs. Older LG smart TVs with NetCast (2011 to 2014, before webOS) have new beta support: they pair with the 6-digit key shown on the TV.',
     funciones=[
       ('All the buttons', 'D-pad, OK, Back, Home, volume, channels, mute and playback.'),
       ('Pointer like the Magic Remote (Pro)', 'Move the arrow around the screen with your finger, just like with the LG Magic Remote.'),
@@ -231,6 +231,7 @@ MARCAS = [
       ('Do I need the Magic Remote to use Mando TV?', 'Only the first time, to accept the permission prompt on the screen. After that you can use just your phone.'),
       ('Does Mando TV replace LG ThinQ?', 'To control the TV, yes: you do not need an LG account or to register the TV. Mando TV connects directly over your Wi-Fi.'),
       ('Can I turn on my LG TV from my phone?', 'Yes, if you turn on "TV On With Mobile" on the TV and you connected once while the TV was on.'),
+      ('Does it work with older LG TVs from before webOS?', 'In beta, yes, with LG NetCast smart TVs from 2011 to 2014. They pair with the 6-digit key shown on the TV. It is new, so it can still have rough edges.'),
     ],
     guias=['<a href="/en/guides/turn-on-lg-tv-with-phone/">How to turn on an LG TV with your phone</a>',
            '<a href="/en/guides/lost-lg-remote/">Lost your LG TV remote: how to use your phone</a>',
@@ -281,6 +282,7 @@ MARCAS = [
       ('Inputs', 'On a Roku TV, switch to HDMI, antenna or AV from the app.'),
       ('Turn on the TV', 'On Roku TV sets with fast start, Mando TV turns them on from your phone.'),
       ('No pairing', 'Roku does not ask for a code: tap it in the list and you are in.'),
+      ('Make the remote ring', 'If your Roku remote has a speaker, such as the Roku Voice Remote Pro, Mando TV can make it ring so you can find it. It is free, and the Roku must be on.'),
     ],
     pasos=[
       'Connect your phone and the Roku to the same Wi-Fi network.',
@@ -589,14 +591,14 @@ GUIAS = [
     extra=[
       ('PC keyboard shortcuts (Pro)', 'With Mando TV Pro you control the TV with your computer keyboard: arrow keys to move around, Enter for OK, Backspace or Esc to go back, + and - for the volume, M to mute and Space to pause.'),
       ('Mini remote always on top (Pro)', 'Keep a small window with the remote always visible while you work or play on your PC.'),
-      ('Talk to your TV from the PC (Pro)', 'With Mando TV Pro you give the TV commands with your PC microphone: "open YouTube", "turn it up" or "turn off in 30 minutes", said your own way. On Windows the app uses Windows voice typing, which needs two things: "Online speech recognition" turned on in Settings > Privacy & security > Speech, and the language added in Windows. Mando TV picks a supported variant by itself. If something is missing, the app tells you and opens the setting with one button.'),
+      ('Talk to your TV from the PC (Pro)', 'With Mando TV Pro you give the TV commands with your PC microphone: "open YouTube", "turn it up" or "turn off in 30 minutes", said your own way. On Windows the voice is recognized on the PC itself: it needs no internet, no Windows settings to change, and it works in the 6 languages of the app. What you say never leaves the PC and is not stored. Only on very old processors does the app fall back to Windows voice typing, which needs "Online speech recognition" turned on in Settings > Privacy & security > Speech and the language added in Windows. In that case, if something is missing, the app tells you and opens the setting with one button.'),
     ],
     marca=None,
     faq=[
       ('Do I need a cable or Bluetooth to control the TV from my PC?', 'No. Mando TV connects over your home network: the PC and the TV only need to be on the same router.'),
       ('Does it work with any TV?', 'It works with Samsung TVs running Tizen (2016 and newer), LG with webOS, Roku, and Google TV or Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth and others).'),
       ('How much does it cost?', 'The buttons, the keyboard and power-on over the network are free and ad-free. Mando TV Pro is a one-time purchase, no subscription, for extras such as the touchpad, the PC keyboard shortcuts and the mini remote.'),
-      ('Why does the microphone not understand me on Windows?', 'Check two things: "Online speech recognition" is on in Settings > Privacy & security > Speech, and Windows has a language that supports voice typing (Settings > Time & language > Language & region). Mando TV switches to it only while it listens.'),
+      ('Why does the microphone not understand me on Windows?', 'Check that voice is on (it is part of Mando TV Pro) and that the PC microphone works in Windows. On most PCs the voice is recognized on the PC itself, with no internet. Only on very old processors does the app use Windows voice typing: then check that "Online speech recognition" is on in Settings > Privacy & security > Speech and that Windows has a language that supports voice typing (Settings > Time & language > Language & region). Mando TV switches to it only while it listens.'),
     ]),
   dict(clave='roku-403', corto='Roku remote app not working',
     titulo='Roku Remote App Not Working? Fix Error 403',
@@ -635,6 +637,7 @@ GUIAS = [
       'If it still does not show up, add it by hand: in Mando TV tap "Add by IP" and type the IP address of the TV.',
     ],
     extra=[
+      ('Let the app walk you through it', 'In the TV list, tap the "TV not showing up?" button. The app checks the most common causes step by step (same Wi-Fi, VPN, local network permission and more) and gives you a "Check again" button after each fix. It is free.'),
       ('Where to find the IP address of the TV', 'It is in the TV network menu and changes a little by model. On LG: Settings, Network, Wi-Fi Connection, Advanced Wi-Fi Settings. On Samsung: Settings, General, Network, Network Status, IP Settings. On Roku: Settings, Network, About. On Android TV and Google TV: Settings, Network & Internet, then tap your network. It is a number like 192.168.1.86.'),
       ('If it shows up but the connection drops', 'When the connection drops after a few seconds, the cause is usually on the phone: a VPN, a switch to another Wi-Fi network or battery saver. Turn off the VPN, stay on the same Wi-Fi and try again.'),
       ('2.4 and 5 GHz Wi-Fi', 'It does not matter if your phone is on the 5 GHz network and the TV is on the 2.4 GHz one, as long as both come from the same router. If you have a range extender and the TV still does not show up, move your phone closer to the main router and try again.'),
@@ -643,7 +646,7 @@ GUIAS = [
     faq=[
       ('Can I control the TV with mobile data?', 'No. The remote signal travels over your home Wi-Fi, so your phone and the TV must be on the same network.'),
       ('Why does it not work with the VPN on?', 'Because the VPN sends all of your phone traffic through another network and the phone can no longer see the devices in your home. Turn it off while you use the remote.'),
-      ('Does Bluetooth or infrared work?', 'Mando TV uses Wi-Fi only. It does not need Bluetooth or an infrared blaster on your phone.'),
+      ('Does Bluetooth or infrared work?', 'Wi-Fi is how Mando TV controls smart TVs. Infrared works only on Android phones that have an infrared blaster, and it is meant for TVs that are not smart TVs. Bluetooth is not available yet.'),
     ]),
   dict(clave='androidtv-code', corto='Android TV pairing code',
     titulo='Android TV Asks for a Pairing Code: What to Do',
@@ -674,6 +677,7 @@ GUIAS = [
     h1='Lost Your Roku Remote: How to Use Your Phone',
     intro='If you lost your Roku remote or it stopped working, your phone replaces it, as long as the Roku is still connected to your Wi-Fi. And if you changed Wi-Fi or routers, there is a way out for that too.',
     pasos=[
+      'Before anything else, try making the remote ring. If your Roku remote has a speaker, such as the Roku Voice Remote Pro, open Mando TV, connect to the Roku and use the option to make the remote ring so you can find it. It only works with Roku remotes that have a speaker, and the Roku must be on.',
       'Turn on the TV and leave the Roku plugged in. You do not need to touch anything on it.',
       'Connect your phone to the same Wi-Fi the Roku uses.',
       'Open Mando TV. The Roku shows up in the list on its own. Tap it.',
@@ -711,7 +715,7 @@ OTRAS_GUIAS = [
   ('roku-app-alt', 'Roku mobile app alternative: one remote for every TV'),
   ('tcl', 'TCL TV remote app for your phone'),
   ('hisense', 'Hisense TV remote app: what works and what does not'),
-  ('vizio', 'Vizio TV remote app: honest answer and real options'),
+  ('vizio', 'Vizio TV remote app: beta support for SmartCast TVs'),
   ('firetv', 'Fire TV remote app for your phone or PC'),
   ('iphone', 'TV remote app for iPhone: one remote for every TV'),
   ('windows', 'TV remote app for Windows PC'),
@@ -898,6 +902,7 @@ def pagina_soporte():
             <li>Check that your phone and the TV are on the same Wi-Fi network. If your router has a 2.4 GHz network and a 5 GHz network with different names, they sometimes cannot see each other.</li>
             <li>Make sure the TV is on.</li>
             <li>On an iPhone, check that Mando TV has the "Local Network" permission in Settings, Mando TV.</li>
+            <li>Tap the "TV not showing up?" button in the TV list: the app checks the most common causes step by step (same Wi-Fi, VPN, local network permission and more) and gives you a "Check again" button after each fix.</li>
             <li>If it still does not show up, tap the + button, choose the brand and type the IP address of the TV. You can see it in the network menu of the TV (for example, 192.168.1.50).</li>
           </ol>
         </details>
@@ -988,7 +993,7 @@ def pagina_privacidad():
 
   <main class="contenedor">
     <article class="documento">
-      <p class="fecha">Effective November 14, 2026. Last updated: November 15, 2026.</p>
+      <p class="fecha">Effective November 14, 2026. Last updated: November 21, 2026.</p>
 
       <h2>Who we are</h2>
       <p>Mando TV is an app to control your TV from your phone or computer. This policy explains what information the app uses and what it does with it. If you have questions, write to us at <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -1011,8 +1016,9 @@ def pagina_privacidad():
       <p>With your TVs, inside your home Wi-Fi network. To find them, the app searches your local network; that is why on an iPhone it asks for the "Local Network" permission. The text you type with the app keyboard goes straight to the TV and is not stored.</p>
       <p>In addition, when it opens, the app downloads a small public file from this website (mandotv.app/app/config.json) to find out whether there is a new version you should install and which features belong to Mando TV Pro. It is a download, like opening a page: the app does not send your data, your TVs or what you do. It only states the app version and the system (for example, Android), so it can show you the right notice. If you have no internet, the app keeps working with the last file it downloaded; if more than 30 days pass without being able to download it, it will ask you to connect to the internet for a moment.</p>
 
+      <p>If you send photos or videos to the TV (a Pro feature), the TV downloads only the files you pick, straight from your phone or PC over your home Wi-Fi. They do not go through the internet or through us, the app does not see the rest of your photos, and sharing stops when you close that screen.</p>
       <h2>Microphone and voice</h2>
-      <p>Voice search uses the microphone only while you tap the speak button. What you say is converted to text by the speech recognition of your system: Apple on iPhone and Mac, Google on Android and Microsoft on Windows, under their own privacy policies. Mando TV does not record or store the audio, and the resulting text goes straight to your TV, just like what you type with the keyboard.</p>
+      <p>Voice search uses the microphone only while you tap the speak button. What you say is converted to text by the speech recognition of your system: Apple on iPhone and Mac and Google on Android, under their own privacy policies. On Windows, the voice is recognized on your own PC and never leaves it; only on very old processors does the app use Windows voice typing from Microsoft, under its privacy policy. Mando TV does not record or store the audio, and the resulting text goes straight to your TV, just like what you type with the keyboard.</p>
 
       <h2>Test report</h2>
       <p>The app has a "Copy test report" button to help us fix errors. The report is kept only in the memory of the app while it is open and is never sent on its own: you decide whether to copy it and share it. It does not include connection keys, pairing codes or anything you type; only the steps the app took, such as searching, connecting and the errors.</p>

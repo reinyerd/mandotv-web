@@ -79,7 +79,7 @@ MARCAS = [
     desc='Dein Handy oder PC als LG TV Fernbedienung für webOS, per WLAN. Tasten, Tastatur, Apps, Eingänge und Einschalten gratis; Zeiger mit Pro.',
     h1='LG TV Fernbedienung als App fürs Handy',
     intro='Mando TV ist eine Fernbedienungs-App für LG-Fernseher: Sie macht dein Handy oder deinen Computer über das WLAN zu Hause zur Fernbedienung deines LG Smart-TVs mit webOS. Das hilft, wenn du die Fernbedienung verloren hast, die Batterien leer sind oder du einfach schneller tippen möchtest.',
-    compat='LG Smart-TVs mit webOS (die meisten LG-Smart-TV-Modelle seit 2014). Funktioniert mit LED-, NanoCell-, QNED- und OLED-Fernsehern.',
+    compat='LG Smart-TVs mit webOS (die meisten LG-Smart-TV-Modelle seit 2014). Funktioniert mit LED-, NanoCell-, QNED- und OLED-Fernsehern. Ältere LG-Smart-TVs mit NetCast (2011 bis 2014, vor webOS) werden neu in der Beta unterstützt: Sie koppeln sich mit dem 6-stelligen Schlüssel, den der Fernseher anzeigt.',
     h2=dict(funciones='Das kannst du mit deinem LG-Fernseher machen', como='So verbindest du deinen LG-Fernseher mit Mando TV',
             encender='LG-Fernseher mit dem Handy einschalten', preguntas='Fragen zu LG', guias='Ratgeber für LG'),
     funciones=[
@@ -100,6 +100,7 @@ MARCAS = [
       ('Brauche ich die Magic Remote, um Mando TV zu nutzen?', 'Nur beim ersten Mal, um die Abfrage auf dem Bildschirm zu bestätigen. Danach reicht dein Handy.'),
       ('Ersetzt Mando TV die LG ThinQ App?', 'Zum Steuern des Fernsehers ja: Du brauchst weder ein LG-Konto noch musst du den Fernseher registrieren. Mando TV verbindet sich direkt über dein WLAN.'),
       ('Kann ich meinen LG-Fernseher mit dem Handy einschalten?', 'Ja, wenn du am Fernseher „Fernseher per Mobilgerät einschalten“ aktiviert und dich einmal verbunden hast, während der Fernseher an war.'),
+      ('Funktioniert es mit älteren LG-Fernsehern aus der Zeit vor webOS?', 'In der Beta ja, mit LG-NetCast-Smart-TVs von 2011 bis 2014. Sie koppeln sich mit dem 6-stelligen Schlüssel, den der Fernseher anzeigt. Die Funktion ist neu und kann noch Ecken und Kanten haben.'),
     ],
     guias=[('lg-on', 'So schaltest du einen LG-Fernseher mit dem Handy ein'),
            ('lost-lg', 'LG Fernbedienung verloren: So nutzt du dein Handy'),
@@ -150,6 +151,7 @@ MARCAS = [
       ('Eingänge', 'Wechsle bei einem Roku TV in der App zu HDMI, Antenne oder AV.'),
       ('Fernseher einschalten', 'Bei Roku-TV-Geräten mit Schnellstart schaltet Mando TV sie von deinem Handy aus ein.'),
       ('Ohne Kopplung', 'Roku fragt nicht nach einem Code: Tippe in der Liste darauf und du bist verbunden.'),
+      ('Fernbedienung klingeln lassen', 'Hat deine Roku-Fernbedienung einen Lautsprecher, etwa die Roku Voice Remote Pro, lässt Mando TV sie klingeln, damit du sie findest. Kostenlos, der Roku muss eingeschaltet sein.'),
     ],
     pasos=[
       'Verbinde Handy und Roku mit demselben WLAN.',
@@ -407,14 +409,14 @@ GUIAS = [
     extra=[
       ('Tastenkürzel am PC (Pro)', 'Mit Mando TV Pro steuerst du den Fernseher mit der Computertastatur: Pfeiltasten zum Navigieren, Enter für OK, Rücktaste oder Esc für Zurück, + und - für die Lautstärke, M für Stummschaltung und Leertaste für Pause.'),
       ('Mini-Fernbedienung immer im Vordergrund (Pro)', 'Behalte ein kleines Fenster mit der Fernbedienung immer sichtbar, während du arbeitest oder am PC spielst.'),
-      ('Mit dem Fernseher vom PC aus sprechen (Pro)', 'Mit Mando TV Pro gibst du dem Fernseher Befehle über das Mikrofon des PCs: „öffne YouTube“, „mach lauter“ oder „schalte in 30 Minuten aus“, ganz wie du sprichst. Unter Windows nutzt die App das Diktieren von Windows. Dafür muss die Online-Spracherkennung in den Datenschutz-Einstellungen eingeschaltet und Deutsch (Deutschland) in Windows hinzugefügt sein. Fehlt etwas, sagt die App Bescheid und öffnet die Einstellung mit einem Button.'),
+      ('Mit dem Fernseher vom PC aus sprechen (Pro)', 'Mit Mando TV Pro gibst du dem Fernseher Befehle über das Mikrofon des PCs: „öffne YouTube“, „mach lauter“ oder „schalte in 30 Minuten aus“, ganz wie du sprichst. Unter Windows wird die Sprache auf dem PC selbst erkannt: Du brauchst kein Internet, musst in den Windows-Einstellungen nichts ändern, und es funktioniert in den 6 Sprachen der App. Was du sagst, verlässt den PC nicht und wird nicht gespeichert. Nur bei sehr alten Prozessoren greift die App auf das Diktieren von Windows zurück. Dafür muss die Online-Spracherkennung in den Datenschutz-Einstellungen eingeschaltet und Deutsch (Deutschland) in Windows hinzugefügt sein. Fehlt dann etwas, sagt die App Bescheid und öffnet die Einstellung mit einem Button.'),
     ],
     marca=None,
     faq=[
       ('Brauche ich ein Kabel oder Bluetooth, um den Fernseher mit dem PC zu steuern?', 'Nein. Mando TV verbindet sich über dein Heimnetzwerk: PC und Fernseher müssen nur am selben Router hängen.'),
       ('Funktioniert es mit jedem Fernseher?', 'Es funktioniert mit Samsung-Fernsehern mit Tizen (Baujahr 2016 und neuer), LG mit webOS, Roku sowie Google TV oder Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth und andere).'),
       ('Was kostet es?', 'Die Tasten, die Tastatur und das Einschalten über das Netzwerk sind kostenlos und ohne Werbung. Mando TV Pro ist ein Einmalkauf ohne Abo für Extras wie das Touchpad, die PC-Tastenkürzel und die Mini-Fernbedienung.'),
-      ('Warum versteht mich das Mikrofon unter Windows nicht?', 'Prüfe zwei Dinge: Die Online-Spracherkennung ist in den Datenschutz-Einstellungen von Windows eingeschaltet, und Windows hat Deutsch (Deutschland) in den Spracheinstellungen. Mando TV nutzt diese Sprache nur, solange es zuhört.'),
+      ('Warum versteht mich das Mikrofon unter Windows nicht?', 'Prüfe, ob die Sprachfunktion aktiv ist (sie gehört zu Pro) und ob das Mikrofon des PCs unter Windows funktioniert. Auf fast allen PCs wird die Sprache auf dem Gerät selbst erkannt, ganz ohne Internet. Nur bei sehr alten Prozessoren nutzt die App das Diktieren von Windows. Prüfe dann, ob die Online-Spracherkennung in den Datenschutz-Einstellungen von Windows eingeschaltet ist und Windows Deutsch (Deutschland) in den Spracheinstellungen hat. Mando TV nutzt diese Sprache nur, solange es zuhört.'),
     ]),
   dict(clave='roku-403', corto='Roku App funktioniert nicht',
     titulo='Roku App funktioniert nicht? Fehler 403 beheben',
@@ -453,6 +455,7 @@ GUIAS = [
       'Erscheint er immer noch nicht, füge ihn von Hand hinzu: Tippe in Mando TV auf „Per IP hinzufügen“ und gib die IP-Adresse des Fernsehers ein.',
     ],
     extra=[
+      ('Lass dich von der App führen', 'In der Fernseherliste gibt es eine Schaltfläche für den Fall, dass dein Fernseher nicht erscheint. Die App prüft die häufigsten Ursachen Schritt für Schritt (gleiches WLAN, VPN, Berechtigung für das lokale Netzwerk und mehr) und zeigt nach jeder Korrektur eine Schaltfläche zum erneuten Prüfen. Der Assistent ist kostenlos.'),
       ('Wo du die IP-Adresse des Fernsehers findest', 'Sie steht im Netzwerkmenü des Fernsehers und ist je nach Modell etwas anders. Bei LG: Einstellungen, Netzwerk, WLAN-Verbindung, Erweiterte WLAN-Einstellungen. Bei Samsung: Einstellungen, Allgemein, Netzwerk, Netzwerkstatus, IP-Einstellungen. Bei Roku: Einstellungen, Netzwerk, Info. Bei Android TV und Google TV: Einstellungen, Netzwerk & Internet, dann auf dein Netzwerk tippen. Es ist eine Zahl wie 192.168.1.86.'),
       ('Wenn er erscheint, aber die Verbindung abbricht', 'Bricht die Verbindung nach wenigen Sekunden ab, liegt die Ursache meist am Handy: ein VPN, der Wechsel in ein anderes WLAN oder der Energiesparmodus. Schalte das VPN aus, bleibe im selben WLAN und versuche es erneut.'),
       ('WLAN mit 2,4 und 5 GHz', 'Es spielt keine Rolle, ob dein Handy im 5-GHz-Netz und der Fernseher im 2,4-GHz-Netz ist, solange beide vom selben Router kommen. Hast du einen WLAN-Repeater und der Fernseher erscheint trotzdem nicht, gehe mit dem Handy näher an den Haupt-Router und versuche es erneut.'),
@@ -461,7 +464,7 @@ GUIAS = [
     faq=[
       ('Kann ich den Fernseher mit mobilen Daten steuern?', 'Nein. Das Fernbedienungssignal läuft über dein WLAN zu Hause, deshalb müssen Handy und Fernseher im selben Netzwerk sein.'),
       ('Warum funktioniert es mit aktivem VPN nicht?', 'Weil das VPN den gesamten Datenverkehr deines Handys über ein anderes Netzwerk leitet und das Handy die Geräte bei dir zu Hause nicht mehr sieht. Schalte es aus, solange du die Fernbedienung nutzt.'),
-      ('Funktioniert es mit Bluetooth oder Infrarot?', 'Mando TV nutzt nur WLAN. Du brauchst weder Bluetooth noch einen Infrarot-Sender im Handy.'),
+      ('Funktioniert es mit Bluetooth oder Infrarot?', 'Bei Smart-TVs nutzt Mando TV das WLAN. Infrarot funktioniert nur auf Android-Handys mit Infrarotsender und ist für Fernseher gedacht, die keine Smart-TVs sind. Bluetooth ist noch nicht verfügbar.'),
     ]),
   dict(clave='androidtv-code', corto='Android TV Kopplungscode',
     titulo='Android TV fragt nach einem Kopplungscode: Das ist zu tun',
@@ -492,6 +495,7 @@ GUIAS = [
     h1='Roku Fernbedienung verloren: So nutzt du dein Handy',
     intro='Wenn du deine Roku Fernbedienung verloren hast oder sie nicht mehr funktioniert, ersetzt dein Handy sie, solange der Roku noch mit deinem WLAN verbunden ist. Und wenn du das WLAN oder den Router gewechselt hast, gibt es auch dafür einen Ausweg.',
     pasos=[
+      'Versuche zuerst, die Fernbedienung klingeln zu lassen. Hat deine Roku-Fernbedienung einen Lautsprecher, zum Beispiel die Roku Voice Remote Pro, öffne Mando TV, verbinde dich mit dem Roku und nutze die Option, die Fernbedienung klingeln zu lassen, damit du sie findest. Das klappt nur mit Roku-Fernbedienungen mit Lautsprecher, und der Roku muss eingeschaltet sein.',
       'Schalte den Fernseher ein und lass den Roku angeschlossen. Du musst nichts daran anfassen.',
       'Verbinde dein Handy mit demselben WLAN, das der Roku nutzt.',
       'Öffne Mando TV. Der Roku erscheint von selbst in der Liste. Tippe darauf.',
@@ -524,6 +528,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
             <li>Prüfe, ob dein Handy und der Fernseher im selben WLAN sind. Hat dein Router ein 2,4-GHz- und ein 5-GHz-Netz mit unterschiedlichen Namen, sehen sie sich manchmal nicht.</li>
             <li>Stelle sicher, dass der Fernseher eingeschaltet ist.</li>
             <li>Prüfe beim iPhone, ob Mando TV die Berechtigung „Lokales Netzwerk“ hat, unter Einstellungen, Mando TV.</li>
+            <li>Tippe in der Fernseherliste auf die Schaltfläche für den Fall, dass dein Fernseher nicht erscheint: Die App prüft die häufigsten Ursachen Schritt für Schritt (gleiches WLAN, VPN, Berechtigung für das lokale Netzwerk und mehr) und zeigt nach jeder Korrektur eine Schaltfläche zum erneuten Prüfen.</li>
             <li>Erscheint er immer noch nicht, tippe auf die Taste +, wähle die Marke und gib die IP-Adresse des Fernsehers ein. Du siehst sie im Netzwerkmenü des Fernsehers (zum Beispiel 192.168.1.50).</li>
           </ol>
         </details>
@@ -604,7 +609,7 @@ PRIVACIDAD = dict(
   h1='Datenschutz',
   intro='Kurz gesagt: Mando TV erhebt deine Daten nicht. Es gibt keine Konten, keine Werbung, keine Tracker und keine eigenen Server, die speichern, was du tust.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Gültig seit dem 14. November 2026. Zuletzt aktualisiert am 15. November 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Gültig seit dem 14. November 2026. Zuletzt aktualisiert am 21. November 2026.</p>
 
       <h2>Wer wir sind</h2>
       <p>Mando TV ist eine App, mit der du deinen Fernseher von deinem Handy oder Computer aus steuerst. Diese Erklärung beschreibt, welche Informationen die App verwendet und was sie damit macht. Bei Fragen schreib uns an <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -627,8 +632,9 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gültig seit dem 14. November 2026. 
       <p>Mit deinen Fernsehern, innerhalb deines WLANs zu Hause. Um sie zu finden, durchsucht die App dein lokales Netzwerk; deshalb fragt sie auf einem iPhone nach der Berechtigung „Lokales Netzwerk“. Der Text, den du mit der App-Tastatur eingibst, geht direkt an den Fernseher und wird nicht gespeichert.</p>
       <p>Außerdem lädt die App beim Öffnen eine kleine öffentliche Datei von dieser Website herunter (mandotv.app/app/config.json), um zu erfahren, ob es eine neue Version gibt, die du installieren solltest, und welche Funktionen zu Mando TV Pro gehören. Das ist ein Download, wie wenn man eine Seite öffnet: Die App sendet weder deine Daten noch deine Fernseher noch das, was du tust. Sie gibt nur die App-Version und das System an (zum Beispiel Android), damit sie dir den passenden Hinweis zeigen kann. Hast du kein Internet, arbeitet die App mit der zuletzt heruntergeladenen Datei weiter; vergehen mehr als 30 Tage, ohne dass sie heruntergeladen werden konnte, bittet dich die App, dich kurz mit dem Internet zu verbinden.</p>
 
+      <p>Wenn du Fotos oder Videos an den Fernseher sendest (eine Pro-Funktion), lädt der Fernseher nur die Dateien, die du auswählst, direkt von deinem Handy oder PC über dein WLAN zu Hause. Sie gehen weder über das Internet noch über uns, die App sieht deine übrigen Fotos nicht, und die Freigabe endet, sobald du diesen Bildschirm schließt.</p>
       <h2>Mikrofon und Sprache</h2>
-      <p>Die Sprachsuche nutzt das Mikrofon nur, solange du auf die Sprechtaste tippst. Was du sagst, wird von der Spracherkennung deines Systems in Text umgewandelt: von Apple auf iPhone und Mac, von Google auf Android und von Microsoft unter Windows, jeweils nach deren eigenen Datenschutzbestimmungen. Mando TV nimmt das Audio weder auf noch speichert es, und der entstandene Text geht direkt an deinen Fernseher, genau wie das, was du mit der Tastatur eingibst.</p>
+      <p>Die Sprachsuche nutzt das Mikrofon nur, solange du auf die Sprechtaste tippst. Was du sagst, wird von der Spracherkennung deines Systems in Text umgewandelt: von Apple auf iPhone und Mac und von Google auf Android, jeweils nach deren eigenen Datenschutzbestimmungen. Unter Windows wird die Sprache auf deinem eigenen PC erkannt und verlässt das Gerät nicht; nur auf sehr alten Prozessoren nutzt die App die Spracheingabe von Windows, von Microsoft, nach deren Datenschutzbestimmungen. Mando TV nimmt das Audio weder auf noch speichert es, und der entstandene Text geht direkt an deinen Fernseher, genau wie das, was du mit der Tastatur eingibst.</p>
 
       <h2>Testbericht</h2>
       <p>Die App hat eine Schaltfläche „Testbericht kopieren“, die uns hilft, Fehler zu beheben. Der Bericht bleibt nur im Speicher der App, solange sie geöffnet ist, und wird nie von selbst gesendet: Du entscheidest, ob du ihn kopierst und weitergibst. Er enthält keine Verbindungsschlüssel, keine Kopplungscodes und nichts, was du eingibst; nur die Schritte, die die App ausgeführt hat, wie Suchen, Verbinden und die Fehler.</p>

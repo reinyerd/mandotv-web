@@ -108,14 +108,14 @@ GUIAS = [
     extra=[
       ('Atajos del teclado del PC (Pro)', 'Con Mando TV Pro manejas el TV con el teclado del computador: flechas para moverte, Enter para OK, Retroceso o Esc para volver, + y − para el volumen, M para silenciar y Espacio para pausar.'),
       ('Mini control siempre encima (Pro)', 'Deja una ventana pequeña con el control siempre visible mientras trabajas o juegas en el PC.'),
-      ('Hablarle al TV desde el PC (Pro)', 'Con Mando TV Pro le das órdenes al TV con el micrófono del PC: "abre YouTube", "súbele al volumen" o "apaga en 30 minutos", dichas como te salgan. En Windows la app usa el dictado de Windows, que necesita dos cosas: "Reconocimiento de voz en línea" activado en Configuración > Privacidad y seguridad > Voz, y el idioma agregado en Windows (en español sirven Español (México) o Español (España); Mando TV elige la variante sola aunque tu teclado sea de otro país). Si falta algo, la app te avisa y abre el ajuste con un botón.'),
+      ('Hablarle al TV desde el PC (Pro)', 'Con Mando TV Pro le das órdenes al TV con el micrófono del PC: "abre YouTube", "súbele al volumen" o "apaga en 30 minutos", dichas como te salgan. En Windows la voz se reconoce en el propio PC: no necesita internet, no tienes que cambiar nada en los ajustes de Windows y funciona en los 6 idiomas de la app. Lo que dices no sale del PC y no se guarda. Solo en procesadores muy antiguos la app recurre al dictado de Windows, que necesita "Reconocimiento de voz en línea" activado en Configuración > Privacidad y seguridad > Voz y el idioma agregado en Windows (en español sirven Español (México) o Español (España); Mando TV elige la variante sola aunque tu teclado sea de otro país). En ese caso, si falta algo, la app te avisa y abre el ajuste con un botón.'),
     ],
     marca=None,
     faq=[
       ('¿Necesito un cable o Bluetooth para controlar el TV desde el PC?', 'No. Mando TV se conecta por la red de tu casa: basta con que el PC y el TV estén en el mismo router.'),
       ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth y otros).'),
       ('¿Cuánto cuesta?', 'Los botones, el teclado y el encendido por red son gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como el touchpad, los atajos del teclado del PC y el mini control.'),
-      ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa dos cosas: que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz, y que Windows tenga agregado un idioma que admita el dictado (en español, Español (México) o Español (España), en Configuración > Hora e idioma > Idioma y región). Español (Chile) u otras variantes no sirven para dictar, pero puedes tener las dos: Mando TV usa la que corresponde solo mientras escucha.'),
+      ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa que la voz esté activa (es una función de Pro) y que el micrófono del PC funcione en Windows. En casi todos los PC la voz se reconoce en el propio equipo, sin internet. Solo en procesadores muy antiguos la app usa el dictado de Windows: ahí revisa que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz y que Windows tenga agregado un idioma que admita el dictado (en español, Español (México) o Español (España), en Configuración > Hora e idioma > Idioma y región). Mando TV usa la que corresponde solo mientras escucha.'),
     ]),
   # Páginas de rescate (2026-11-17): problemas reales que reportaron los testers. Cada una lleva pasos propios.
   dict(slug='guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',
@@ -155,6 +155,7 @@ GUIAS = [
       'Si todavía no aparece, agrégalo a mano: en Mando TV toca "Agregar por IP" y escribe la dirección IP del televisor.',
     ],
     extra=[
+      ('Deja que la app te guíe', 'En la lista de televisores toca el botón "¿No aparece tu TV?". La app revisa paso a paso las causas más comunes (la misma red WiFi, una VPN, el permiso de red local y más) y, después de cada arreglo, tienes un botón "Volver a comprobar". Es gratis.'),
       ('Dónde ver la dirección IP del TV', 'Está en el menú de red del televisor y cambia un poco según el modelo. En LG: Configuración > Red > Conexión Wi-Fi, en los ajustes avanzados. En Samsung: Configuración > General > Red > Estado de red > Configuración de IP. En Roku: Configuración > Red > Acerca de. En Android TV y Google TV: Configuración > Red e Internet, tocando tu red. Es un número como 192.168.1.86.'),
       ('Si aparece pero se corta al conectar', 'Cuando la conexión se cae a los pocos segundos, el corte suele venir del teléfono: una VPN, un cambio de red WiFi o el ahorro de batería. Apaga la VPN, quédate en el mismo WiFi y vuelve a intentar.'),
       ('WiFi de 2,4 y de 5 GHz', 'No importa que el celular esté en la red de 5 GHz y el TV en la de 2,4, siempre que las dos salgan del mismo router. Si tienes un repetidor y el TV sigue sin aparecer, acerca el celular al router principal y prueba de nuevo.'),
@@ -163,7 +164,7 @@ GUIAS = [
     faq=[
       ('¿Puedo controlar el TV con datos móviles?', 'No. El control viaja por la red WiFi de tu casa, así que el celular y el TV deben estar en la misma red.'),
       ('¿Por qué con la VPN no funciona?', 'Porque la VPN manda todo el tráfico del celular por otra red y el teléfono deja de ver los aparatos de tu casa. Apágala mientras usas el control.'),
-      ('¿Sirve el Bluetooth o el infrarrojo?', 'Mando TV usa solo WiFi. No necesita Bluetooth ni que el celular tenga infrarrojo.'),
+      ('¿Sirve el Bluetooth o el infrarrojo?', 'Para los televisores inteligentes, Mando TV usa el WiFi. El infrarrojo funciona solo en celulares Android que tengan emisor infrarrojo y sirve para televisores que no son inteligentes. El Bluetooth todavía no está disponible.'),
     ]),
   dict(slug='guias/android-tv-codigo-de-emparejamiento', corto='Código de Android TV', fecha='2026-11-17',
     titulo='Android TV pide un código de emparejamiento | Mando TV',
@@ -194,6 +195,7 @@ GUIAS = [
     h1='Perdí el control del Roku: cómo usar el celular',
     intro='Si se te perdió el control del Roku o dejó de funcionar, el celular lo reemplaza, siempre que el Roku siga conectado a tu WiFi. Y si cambiaste de WiFi o de router, también hay una salida.',
     pasos=[
+      'Antes de nada, intenta hacer sonar el control. Si tu control Roku tiene parlante (por ejemplo el Roku Voice Remote Pro), abre Mando TV, conéctate al Roku y usa la opción para hacer sonar el control, así lo encuentras. Solo funciona con controles Roku que tengan parlante y con el Roku encendido.',
       'Enciende el televisor y deja el Roku enchufado. No hace falta tocar nada en él.',
       'Conecta el celular al mismo WiFi que usa el Roku.',
       'Abre Mando TV. El Roku aparece solo en la lista. Tócalo.',

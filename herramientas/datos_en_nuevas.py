@@ -5,7 +5,9 @@
 #   - No decir qué funciones son Pro (apps y entradas pueden pasar a gratis): solo "remote free, optional one-time Pro,
 #     no ads, no subscription". Lo gratis que se nombra (flechas, OK, volumen, canales, números, teclado, encender o
 #     apagar) es gratis hoy según funcionesProPorDefecto.
-#   - Hoy la app funciona por Wi-Fi. Infrarrojo y Bluetooth: "in development". Sin duplicar pantalla (no mirroring).
+#   - La app funciona por Wi-Fi; el infrarrojo (gratis) solo en Android con emisor infrarrojo; Bluetooth: "in development".
+#     Sin duplicar pantalla (no mirroring). Fotos y videos al TV: solo como "part of Mando TV Pro" al describir esa función.
+#     TV antiguos (LG NetCast, Vizio, Sony 2013-2015, Panasonic, Philips 2011-2015): siempre "beta".
 #   - Fire TV: el driver no tiene Wake on LAN (lib/drivers/fire_tv.dart, wakeOnLan: false): no prometer encenderlo.
 #   - Marcas: uso nominativo (docs/MARCAS.md de la app), solo las plataformas que sus modelos usan de verdad.
 # Fuentes de marcas (consultadas el 2026-11-21):
@@ -66,12 +68,12 @@ GUIAS_NUEVAS = [
       ('Where the power button is, by brand', 'Samsung: one control button or stick under the center of the screen, or on the back at a lower corner. LG: a joystick-style button under the LG logo on most models. TCL and Hisense: usually a small button under the middle of the screen or on the back near a lower corner. Sony: on the back or on a side edge, near the bottom. Vizio: on the back, at the lower left or lower right, or on the side. Spots change by model, so if you cannot find it, look up the user manual with the model number printed on the label on the back.'),
       ('Turn on the TV from a console or streaming device (HDMI-CEC)', 'With HDMI-CEC on, turning on a PlayStation, an Xbox, a Roku player, a Fire TV Stick or a Chromecast also turns on the TV and switches it to the right input. Each brand gives the setting its own name: Anynet+ on Samsung, SIMPLINK on LG, BRAVIA Sync on Sony, and CEC on most others. More in [turn on the TV and switch to your console HDMI](/en/guides/turn-on-tv-console-hdmi-without-remote/).'),
       ('Turn on the TV from your phone', 'Smart TVs can wake up over Wi-Fi if you allow it once, and then Mando TV turns them on from your phone. On Samsung, turn on "Power On with Mobile" under Settings, General, Network, Expert Settings. On LG, turn on "TV On With Mobile" ([step by step](/en/guides/turn-on-lg-tv-with-phone/)). On a Roku TV, turn on "Fast TV start" under Settings, System, Power. On Google TV and Android TV, look for Wake on LAN or "Turn on over network", if your model has it. You do this once, with the TV on.'),
-      ('If you cannot find any button', 'Some recent TVs hide the only button so well that it feels like there is none. Look for a small bump or a light sensor area under the screen: the button is often right next to it. Mando TV works over Wi-Fi today, so it needs the TV to have been on and connected once. Infrared control for Android phones with an infrared blaster is in development.'),
+      ('If you cannot find any button', 'Some recent TVs hide the only button so well that it feels like there is none. Look for a small bump or a light sensor area under the screen: the button is often right next to it. Over Wi-Fi, Mando TV needs the TV to have been on and connected once. Infrared is the exception: on an Android phone with an infrared blaster, Mando TV can turn on a TV that was never set up, as long as you point the phone at the TV. Infrared is new, and it works with the brands in the app code list.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
     faq=[
-      ('Can I turn on a TV with my phone if I never set it up?', 'Not over Wi-Fi. A TV that is off only wakes up from the network if power-on over the network was turned on beforehand. The first time, use the button on the TV.'),
+      ('Can I turn on a TV with my phone if I never set it up?', 'Not over Wi-Fi. A TV that is off only wakes up from the network if power-on over the network was turned on beforehand. The first time, use the button on the TV. The exception is an Android phone with an infrared blaster: Mando TV can turn on a TV by infrared with no setup, if the brand is in its code list or you pick "Other brand / not sure".'),
       ('How do I turn on a Samsung TV without the remote?', 'Press the control button under the center of the screen or on the back at a lower corner. Then turn on "Power On with Mobile" so your phone can turn it on next time.'),
       ('How do I turn on a Roku TV without the remote?', 'Use the button on the TV, usually under the center or on the back. Then turn on "Fast TV start" under Settings, System, Power so Mando TV can turn it on from your phone.'),
       ('Why does my TV turn on by itself when I turn on the console?', 'That is HDMI-CEC. It is handy, and you can turn it off in the TV settings if you prefer.'),
@@ -97,13 +99,14 @@ GUIAS_NUEVAS = [
         ['Subscription', 'None. Pro is an optional one-time purchase', 'Weekly or monthly plans are common'],
         ['Account', 'Not needed', 'Varies'],
         ['Smart TVs over Wi-Fi', 'Samsung (2016 and newer), LG webOS, Roku, Google TV and Android TV, Fire TV', 'Varies by app'],
-        ['Infrared for older TVs', 'In development, for Android phones with an infrared blaster', 'Some apps, only on phones with an infrared blaster'],
+        ['Infrared for older TVs', 'Free on Android phones with an infrared blaster (new)', 'Some apps, only on phones with an infrared blaster'],
+        ['Photos and videos to the TV', 'Pro, over Wi-Fi (not mirroring)', 'Varies by app'],
         ['Screen mirroring', 'Not offered', 'Some apps offer it'],
         ['Phones and computers', 'iPhone, iPad and Windows, plus Android in early access', 'Varies'],
       ],
       nota='Mando TV is compared with no app in particular. Check each app\'s store page for its current prices.'),
     extra=[
-      ('What Mando TV does not do', 'It does not mirror your phone screen to the TV, and it does not send photos or videos to the TV. It controls smart TVs over your home Wi-Fi, so a TV that is not a smart TV cannot be controlled today. Infrared control and a Bluetooth option for Android phones are in development; this page will say so when they ship.'),
+      ('What Mando TV does not do', 'It does not mirror your phone screen to the TV. It can send photos and videos to the TV over your home Wi-Fi, which is part of Mando TV Pro, but that is not screen mirroring. It controls smart TVs over your home Wi-Fi. A TV that is not a smart TV can be controlled by infrared from an Android phone with an infrared blaster. A Bluetooth option is still in development.'),
       ('How Mando TV makes money', 'Not with ads and not with your data: the app collects none. Mando TV is paid for by Pro, an optional one-time purchase for extras. The basic remote is free.'),
       ('On the devices you already have', 'iPhone and iPad from the App Store, Windows PCs from Microsoft Store, and Android through free early access on Google Play. See [TV remote app for iPhone](/en/guides/tv-remote-app-for-iphone/) and [TV remote app for Windows](/en/guides/tv-remote-app-for-windows/).'),
       ('Privacy', 'No account and no tracking in the app. It talks to the TV inside your home network, and the TV connection keys stay encrypted on your device. Details in the [privacy policy](/en/privacy.html).'),
@@ -112,7 +115,7 @@ GUIAS_NUEVAS = [
     faq=[
       ('Is there a TV remote app with no subscription?', 'Yes. Mando TV has no subscription at all: the remote is free with no ads, and Pro is an optional one-time purchase.'),
       ('Is Mando TV really free?', 'Yes. The arrows, OK, Back, Home, volume, channels, number keys, keyboard and power on or off are free, with no ads and no time limit.'),
-      ('Does it work without Wi-Fi?', 'Not today. Mando TV controls smart TVs over your home Wi-Fi. Infrared control is in development for Android phones that have an infrared blaster.'),
+      ('Does it work without Wi-Fi?', 'Mostly no. Mando TV controls smart TVs over your home Wi-Fi. The exception is infrared on Android phones that have an infrared blaster, which also works with TVs that are not smart TVs and TVs that were never connected to Wi-Fi.'),
     ]),
 
   dict(clave='smartthings', corto='SmartThings TV remote alternative',
@@ -179,7 +182,7 @@ _FIRE_NUEVO = 'Fire TV support arrived recently in Mando TV, so update the app f
 GUIAS_MARCAS = [
   dict(clave='sony', corto='Sony TV remote app',
     titulo='Sony TV Remote App for iPhone, Android and PC',
-    desc='Sony Bravia TV remote app: Mando TV controls Sony TVs with Google TV or Android TV from your phone or PC over Wi-Fi. No account, no ads.',
+    desc='Sony Bravia TV remote app: Mando TV controls Sony TVs with Google TV or Android TV over Wi-Fi, and 2013 to 2015 Bravia without Android in beta.',
     h1='Sony TV Remote App for Your Phone',
     intro='Sony Bravia smart TVs run Google TV on recent models and Android TV on earlier ones, going back to 2015. Mando TV controls both from an iPhone, an Android phone or a Windows PC over your home Wi-Fi, so it works as a Sony TV remote app when the remote is lost or out of battery.',
     pasos=[
@@ -192,13 +195,14 @@ GUIAS_MARCAS = [
     extra=[
       ('Turn on a Sony TV from your phone', 'Sony Google TV and Android TV models can wake up over the network when "Remote start" is on. It is usually under Settings, Network & Internet, Remote start, though the path changes a little by model. Then tap the TV in Mando TV while it is off and the app turns it on.'),
       ('Where the power button is on a Sony', 'On most Bravia TVs it is on the back, near the lower left or right edge, or on a side edge. A short press turns the TV on. More in [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
-      ('Older Sony TVs', 'Sony TVs without Google TV or Android TV use a different system that Mando TV does not control today.'),
+      ('Older Sony TVs', 'Sony Bravia TVs from 2013 to 2015 that do not run Android have beta support in Mando TV. It is new, so it can still have rough edges. The TV shows a 4-digit PIN to type into the app. Other Sony TVs without Google TV or Android TV are not covered today.'),
       ('Free and Pro', PRECIO),
     ],
     marca=('/en/android-tv-remote/', 'Android TV remote app'),
     faq=[
       ('Does Mando TV work with Sony Bravia TVs?', 'Yes, with Sony TVs that run Google TV or Android TV, which covers most Sony smart TVs since 2015.'),
       ('Do I need a Sony app or a Google account?', 'No. Mando TV pairs with the code on the TV screen and has no account.'),
+      ('Does it work with older Sony Bravia TVs without Android?', 'In beta, yes, on Bravia models from 2013 to 2015 without Android. It pairs with a 4-digit PIN shown on the TV.'),
       ('Can I type on my Sony TV from my phone?', 'Yes. The keyboard is free and types into YouTube, Netflix and the TV search box.'),
     ]),
 
@@ -218,7 +222,7 @@ GUIAS_MARCAS = [
       ('Insignia with Fire TV built in', 'The TV is the Fire TV, so the [Fire TV remote app](/en/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/en/guides/lost-fire-tv-remote/).'),
       ('Insignia with Roku TV', 'It works like any Roku TV, with no code. ' + _ROKU_ENCENDER + ' Details on the [Roku remote app page](/en/roku-remote/).'),
       ('Turn on an Insignia without the remote', 'The power button is usually under the center of the screen or on the back near a lower corner. See [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
-      ('Insignia TVs that are not smart TVs', 'An Insignia without Fire TV or Roku TV cannot be controlled over Wi-Fi. Infrared control for Android phones with an infrared blaster is in development in Mando TV.'),
+      ('Insignia TVs that are not smart TVs', 'An Insignia without Fire TV or Roku TV cannot be controlled over Wi-Fi. Mando TV has infrared control for Android phones with an infrared blaster, but Insignia is not in its list of brand code sets. The "Other brand / not sure" option tries every code set, so whether it works depends on the model.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
@@ -243,12 +247,12 @@ GUIAS_MARCAS = [
     extra=[
       ('onn. Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' To change the input without the remote, the inputs are tiles on the home screen: move with the arrows and press OK. More on the [Roku remote app page](/en/roku-remote/).'),
       ('onn. Google TV and the onn. streaming box', 'Both pair with the 6-character code. For the streaming box, the TV power and input depend on the TV it is plugged into; with HDMI-CEC on, the TV usually follows. More on the [Android TV remote app page](/en/android-tv-remote/).'),
-      ('onn. TVs powered by VIZIO', 'These use VIZIO\'s system, which Mando TV does not control, and we prefer to say so plainly. If you plug a Roku, Fire TV or Google TV device into one, Mando TV can control that device. See the [Vizio TV remote app](/en/guides/vizio-tv-remote-app/) page.'),
+      ('onn. TVs powered by VIZIO', 'These run VIZIO\'s system. Mando TV has beta support for VIZIO SmartCast TVs, explained on the [Vizio TV remote app](/en/guides/vizio-tv-remote-app/) page, but we cannot promise that every onn. model powered by VIZIO works. If you plug a Roku, Fire TV or Google TV device into one, Mando TV can control that device.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
     faq=[
-      ('Does Mando TV work with onn. TVs?', 'With onn. TVs that run Roku TV or Google TV, yes. onn. TVs powered by VIZIO are not supported.'),
+      ('Does Mando TV work with onn. TVs?', 'With onn. TVs that run Roku TV or Google TV, yes. For onn. TVs powered by VIZIO, Mando TV has beta support for VIZIO SmartCast TVs, but we cannot promise those onn. models work.'),
       ('Does it work with the onn. Google TV streaming box?', 'Yes. It runs Google TV and pairs with the code on the screen.'),
       ('Do I need a Walmart or Google account?', 'No. Mando TV has no account and connects over your home Wi-Fi.'),
     ]),
@@ -319,12 +323,13 @@ GUIAS_MARCAS = [
     extra=[
       ('Philips Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/en/roku-remote/).'),
       ('Philips with Google TV or Android TV', 'Includes many Ambilight models. They pair with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/en/android-tv-remote/).'),
-      ('Philips with Titan OS', 'Titan OS is a different system that Mando TV does not control today, and we prefer to say so plainly.'),
+      ('Older Philips TVs without Android', 'Philips TVs from 2011 to 2015 that do not run Android have beta support in Mando TV. It is new, and it needs no pairing code.'),
+      ('Philips with Titan OS', 'Titan OS is a different system that Mando TV does not control today, and we prefer to say so plainly. Newer Philips models without Android are not covered either.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
     faq=[
-      ('Does Mando TV work with Philips TVs?', 'With Philips TVs that run Roku TV, Google TV or Android TV, yes. Titan OS models are not supported.'),
+      ('Does Mando TV work with Philips TVs?', 'With Philips TVs that run Roku TV, Google TV or Android TV, yes, and in beta with Philips TVs from 2011 to 2015 without Android. Titan OS models are not supported.'),
       ('Does it control Ambilight?', 'Mando TV is a remote: it sends the buttons, so you can reach the Ambilight settings with the arrows and OK. It has no separate Ambilight controls.'),
       ('Do I need a Philips or Google account?', 'No. Mando TV connects over your home Wi-Fi and has no account.'),
     ]),

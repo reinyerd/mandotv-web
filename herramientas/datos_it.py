@@ -87,7 +87,7 @@ MARCAS = [
     desc="Usa smartphone o PC come telecomando della TV LG webOS, via Wi-Fi. Tasti, tastiera, app, ingressi e accensione gratis; puntatore con Pro.",
     h1='Telecomando LG: app per il tuo smartphone',
     intro="Mando TV è un'app telecomando per TV LG: trasforma il tuo smartphone o il tuo computer, tramite il Wi-Fi di casa, nel telecomando della tua Smart TV LG con webOS. Ti salva se hai perso il telecomando, se le batterie sono scariche o se vuoi solo scrivere più in fretta.",
-    compat="Smart TV LG con webOS (la maggior parte dei modelli LG Smart TV dal 2014). Funziona con TV LED, NanoCell, QNED e OLED.",
+    compat='Smart TV LG con webOS (la maggior parte dei modelli LG Smart TV dal 2014). Funziona con TV LED, NanoCell, QNED e OLED. Le vecchie Smart TV LG con NetCast (dal 2011 al 2014, prima di webOS) hanno un nuovo supporto in beta: si abbinano con la chiave a 6 cifre mostrata dalla TV.',
     h2=dict(funciones='Cosa puoi fare con la tua TV LG', como='Come collegare la TV LG a Mando TV',
             encender='Accendere la TV LG dallo smartphone', preguntas='Domande su LG', guias='Guide per LG'),
     funciones=[
@@ -108,6 +108,7 @@ MARCAS = [
       ('Mi serve il Magic Remote per usare Mando TV?', "Solo la prima volta, per accettare l'avviso sullo schermo. Poi basta lo smartphone."),
       ("Mando TV sostituisce l'app LG ThinQ?", "Per controllare la TV sì: non serve un account LG né registrare la TV. Mando TV si collega direttamente tramite il tuo Wi-Fi."),
       ('Posso accendere la mia TV LG con lo smartphone?', "Sì, se attivi sulla TV l'opzione per accenderla con il cellulare e ti sei collegato una volta a TV accesa."),
+      ('Funziona con le vecchie TV LG di prima di webOS?', 'In beta sì, con le Smart TV LG NetCast dal 2011 al 2014. Si abbinano con la chiave a 6 cifre mostrata dalla TV. È una novità, quindi può avere ancora qualche imperfezione.'),
     ],
     guias=[('lg-on', 'Come accendere la TV LG con lo smartphone'),
            ('lost-lg', 'Telecomando LG perso: usa lo smartphone'),
@@ -158,6 +159,7 @@ MARCAS = [
       ('Ingressi', "Su una Roku TV passa a HDMI, antenna o AV direttamente dall'app."),
       ('Accendere la TV', "Sulle Roku TV con avvio rapido, Mando TV le accende dallo smartphone."),
       ('Senza associazione', 'Roku non chiede nessun codice: toccala nell\'elenco e sei collegato.'),
+      ('Far squillare il telecomando', 'Se il tuo telecomando Roku ha un altoparlante, come il Roku Voice Remote Pro, Mando TV lo fa squillare per aiutarti a ritrovarlo. È gratis e il Roku deve essere acceso.'),
     ],
     pasos=[
       'Collega lo smartphone e la Roku alla stessa rete Wi-Fi.',
@@ -415,14 +417,14 @@ GUIAS = [
     extra=[
       ('Scorciatoie da tastiera del PC (Pro)', "Con Mando TV Pro controlli la TV con la tastiera del computer: frecce per muoverti, Invio per OK, Backspace o Esc per tornare indietro, + e - per il volume, M per il muto e Spazio per la pausa."),
       ('Mini telecomando sempre in primo piano (Pro)', "Tieni una piccola finestra con il telecomando sempre visibile mentre lavori o giochi al PC."),
-      ('Parlare alla TV dal PC (Pro)', 'Con Mando TV Pro dai ordini alla TV con il microfono del PC: "apri YouTube", "alza il volume" o "spegni tra 30 minuti", come ti viene. Su Windows l\'app usa la digitazione vocale di Windows, che richiede il riconoscimento vocale online attivo nelle impostazioni della privacy e la lingua Italiano (Italia) aggiunta in Windows. Se manca qualcosa, l\'app te lo dice e apre l\'impostazione con un pulsante.'),
+      ('Parlare alla TV dal PC (Pro)', 'Con Mando TV Pro dai ordini alla TV con il microfono del PC: "apri YouTube", "alza il volume" o "spegni tra 30 minuti", come ti viene. Su Windows la voce viene riconosciuta sul PC stesso: non serve Internet, non devi cambiare nulla nelle impostazioni di Windows e funziona nelle 6 lingue dell\'app. Ciò che dici non esce dal PC e non viene conservato. Solo sui processori molto vecchi l\'app ripiega sulla digitazione vocale di Windows, che richiede il riconoscimento vocale online attivo nelle impostazioni della privacy e la lingua Italiano (Italia) aggiunta in Windows. In quel caso, se manca qualcosa, l\'app te lo dice e apre l\'impostazione con un pulsante.'),
     ],
     marca=None,
     faq=[
       ("Servono un cavo o il Bluetooth per controllare la TV dal PC?", "No. Mando TV si collega tramite la rete di casa: PC e TV devono solo essere sullo stesso router."),
       ('Funziona con tutte le TV?', "Funziona con TV Samsung con Tizen (dal 2016 in poi), LG con webOS, Roku e Google TV o Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth e altre)."),
       ('Quanto costa?', "I tasti, la tastiera e l'accensione tramite rete sono gratis e senza pubblicità. Mando TV Pro è un acquisto una tantum, senza abbonamento, per extra come il touchpad, le scorciatoie da tastiera del PC e il mini telecomando."),
-      ('Perché il microfono non mi capisce su Windows?', "Controlla due cose: che il riconoscimento vocale online sia attivo nelle impostazioni della privacy di Windows e che Windows abbia l'italiano (Italia) nelle impostazioni della lingua. Mando TV usa questa lingua solo mentre ascolta."),
+      ('Perché il microfono non mi capisce su Windows?', "Controlla che la voce sia attiva (è una funzione Pro) e che il microfono del PC funzioni in Windows. Sulla maggior parte dei PC la voce viene riconosciuta sul dispositivo stesso, senza Internet. Solo sui processori molto vecchi l'app usa la digitazione vocale di Windows: allora controlla che il riconoscimento vocale online sia attivo nelle impostazioni della privacy di Windows e che Windows abbia l'italiano (Italia) nelle impostazioni della lingua. Mando TV usa questa lingua solo mentre ascolta."),
     ]),
   dict(clave='roku-403', corto="L'app Roku non funziona",
     titulo="L'app Roku non funziona? Risolvi l'errore 403",
@@ -461,6 +463,7 @@ GUIAS = [
       "Se ancora non compare, aggiungila a mano: in Mando TV tocca \"Aggiungi tramite IP\" e inserisci l'indirizzo IP della TV.",
     ],
     extra=[
+      ("Lasciati guidare dall'app", "Nell'elenco delle TV c'è un pulsante per il caso in cui la TV non compaia. L'app controlla passo dopo passo le cause più comuni (stessa rete Wi-Fi, VPN, permesso per la rete locale e altro) e, dopo ogni correzione, mostra un pulsante per ricontrollare. Questo assistente è gratuito."),
       ("Dove trovare l'indirizzo IP della TV", "Si trova nel menu di rete della TV e cambia un po' a seconda del modello. Su LG: Impostazioni, Rete, Connessione Wi-Fi, impostazioni avanzate. Su Samsung: Impostazioni, Generali, Rete, Stato della rete, Impostazioni IP. Su Roku: Impostazioni, Rete, Informazioni. Su Android TV e Google TV: Impostazioni, Rete e Internet, poi tocca la tua rete. È un numero come 192.168.1.86."),
       ("Se compare ma la connessione cade", "Quando la connessione cade dopo pochi secondi, la causa di solito è nello smartphone: una VPN, il passaggio a un'altra rete Wi-Fi o il risparmio energetico. Disattiva la VPN, resta sullo stesso Wi-Fi e riprova."),
       ('Wi-Fi a 2,4 e a 5 GHz', "Non importa se lo smartphone è sulla rete a 5 GHz e la TV su quella a 2,4 GHz, purché vengano dallo stesso router. Se hai un ripetitore Wi-Fi e la TV ancora non compare, avvicina lo smartphone al router principale e riprova."),
@@ -469,7 +472,7 @@ GUIAS = [
     faq=[
       ('Posso controllare la TV con i dati mobili?', "No. Il segnale del telecomando passa dal Wi-Fi di casa, quindi smartphone e TV devono essere sulla stessa rete."),
       ('Perché non funziona con la VPN attiva?', "Perché la VPN manda tutto il traffico dello smartphone su un'altra rete e lo smartphone non vede più i dispositivi di casa. Disattivala mentre usi il telecomando."),
-      ("Funzionano il Bluetooth o l'infrarosso?", "Mando TV usa solo il Wi-Fi. Non servono né il Bluetooth né un emettitore a infrarossi sullo smartphone."),
+      ("Funzionano il Bluetooth o l'infrarosso?", "Per le smart TV, Mando TV usa il Wi-Fi. Gli infrarossi funzionano solo sugli smartphone Android con emettitore a infrarossi e servono per le TV che non sono smart. Il Bluetooth non è ancora disponibile."),
     ]),
   dict(clave='androidtv-code', corto='Codice di associazione Android TV',
     titulo='Android TV chiede un codice di associazione: cosa fare',
@@ -500,6 +503,7 @@ GUIAS = [
     h1='Telecomando Roku perso: come usare lo smartphone',
     intro="Se hai perso il telecomando della Roku o non funziona più, lo smartphone lo sostituisce, finché la Roku è ancora collegata al tuo Wi-Fi. E se hai cambiato Wi-Fi o router, esiste una soluzione anche per questo.",
     pasos=[
+      "Prima di tutto, prova a far squillare il telecomando. Se il tuo telecomando Roku ha un altoparlante, come il Roku Voice Remote Pro, apri Mando TV, collegati al Roku e usa l'opzione per far squillare il telecomando, così lo trovi. Funziona solo con i telecomandi Roku dotati di altoparlante, e il Roku deve essere acceso.",
       "Accendi la TV e lascia la Roku collegata. Non devi toccare nulla.",
       'Collega il tuo smartphone allo stesso Wi-Fi della Roku.',
       "Apri Mando TV. La Roku compare da sola nell'elenco. Toccala.",
@@ -532,6 +536,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trovare la TV</h2>
             <li>Controlla che smartphone e TV siano sulla stessa rete Wi-Fi. Se il tuo router ha una rete a 2,4 GHz e una a 5 GHz con nomi diversi, a volte non si vedono.</li>
             <li>Assicurati che la TV sia accesa.</li>
             <li>Su iPhone controlla che Mando TV abbia il permesso "Rete locale" in Impostazioni, Mando TV.</li>
+            <li>Tocca, nell'elenco delle TV, il pulsante per il caso in cui la TV non compaia: l'app controlla passo dopo passo le cause più comuni (stessa rete Wi-Fi, VPN, permesso per la rete locale e altro) e mostra un pulsante per ricontrollare dopo ogni correzione.</li>
             <li>Se ancora non compare, tocca il pulsante +, scegli la marca e inserisci l'indirizzo IP della TV. Lo vedi nel menu di rete della TV (per esempio 192.168.1.50).</li>
           </ol>
         </details>
@@ -612,7 +617,7 @@ PRIVACIDAD = dict(
   h1='Privacy',
   intro="In breve: Mando TV non raccoglie i tuoi dati. Non ci sono account, pubblicità, tracker né un nostro server che conservi ciò che fai.",
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">In vigore dal 14 novembre 2026. Ultimo aggiornamento: 15 novembre 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">In vigore dal 14 novembre 2026. Ultimo aggiornamento: 21 novembre 2026.</p>
 
       <h2>Chi siamo</h2>
       <p>Mando TV è un'app per controllare la tua TV dallo smartphone o dal computer. Questa informativa spiega quali informazioni usa l'app e cosa ne fa. Per qualsiasi domanda scrivici a <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -635,8 +640,9 @@ PRIVACIDAD_HTML = '''      <p class="fecha">In vigore dal 14 novembre 2026. Ulti
       <p>Con le tue TV, all'interno della rete Wi-Fi di casa. Per trovarle, l'app esplora la tua rete locale; per questo, su iPhone, chiede il permesso "Rete locale". Il testo che scrivi con la tastiera dell'app va direttamente alla TV e non viene conservato.</p>
       <p>Inoltre, all'apertura l'app scarica un piccolo file pubblico da questo sito web (mandotv.app/app/config.json) per sapere se c'è una nuova versione da installare e quali funzioni fanno parte di Mando TV Pro. È un download, come aprire una pagina: l'app non invia i tuoi dati, le tue TV né ciò che fai. Indica solo la versione dell'app e il sistema (per esempio Android), per poterti mostrare l'avviso giusto. Se non hai Internet, l'app continua a funzionare con l'ultimo file scaricato; se passano più di 30 giorni senza poterlo scaricare, ti chiederà di collegarti un momento a Internet.</p>
 
+      <p>Se invii foto o video alla TV (una funzione Pro), la TV scarica solo i file che scegli, direttamente dallo smartphone o dal PC tramite il Wi-Fi di casa. Non passano da internet né da noi, l'app non vede il resto delle tue foto e la condivisione si ferma quando chiudi quella schermata.</p>
       <h2>Microfono e voce</h2>
-      <p>La ricerca vocale usa il microfono solo mentre tocchi il pulsante per parlare. Ciò che dici viene convertito in testo dal riconoscimento vocale del tuo sistema: Apple su iPhone e Mac, Google su Android e Microsoft su Windows, secondo le rispettive informative sulla privacy. Mando TV non registra né conserva l'audio, e il testo ottenuto va direttamente alla tua TV, come ciò che scrivi con la tastiera.</p>
+      <p>La ricerca vocale usa il microfono solo mentre tocchi il pulsante per parlare. Ciò che dici viene convertito in testo dal riconoscimento vocale del tuo sistema: Apple su iPhone e Mac e Google su Android, secondo le rispettive informative sulla privacy. Su Windows la voce viene riconosciuta sul tuo PC e non esce dal computer; solo sui processori molto vecchi l'app usa la dettatura vocale di Windows, di Microsoft, secondo la sua informativa sulla privacy. Mando TV non registra né conserva l'audio, e il testo ottenuto va direttamente alla tua TV, come ciò che scrivi con la tastiera.</p>
 
       <h2>Rapporto di prova</h2>
       <p>L'app ha un pulsante "Copia rapporto di prova" per aiutarci a correggere gli errori. Il rapporto resta solo nella memoria dell'app finché è aperta e non viene mai inviato da solo: sei tu a decidere se copiarlo e condividerlo. Non include chiavi di connessione, codici di associazione né nulla di ciò che scrivi; solo i passaggi seguiti dall'app, come la ricerca, la connessione e gli errori.</p>
