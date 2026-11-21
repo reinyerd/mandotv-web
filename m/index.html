@@ -11,7 +11,7 @@
   <meta name="description" content="Alguien te armó un mando simple para su TV. Ábrelo en Mando TV, el control remoto universal gratis y sin anuncios.">
   <meta name="robots" content="noindex, follow">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-KZ/kx0pnOq71w0C5glhe+VnnLtTNWS1foDEHSUt4W9Y='; style-src 'self' 'sha256-ba4PP+LNQPHEdC99E4t+R9h/D1RqVsUrvl2FZ35dxBc=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-MunRLDrrkfq/YFSoQmjXzwPTEUwjBdVkELaPq6f2xEc='; style-src 'self' 'sha256-ba4PP+LNQPHEdC99E4t+R9h/D1RqVsUrvl2FZ35dxBc=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="theme-color" content="#8e5cf7">
   <meta property="og:site_name" content="Mando TV">
   <meta property="og:title" content="Te compartieron un mando de TV">
@@ -108,7 +108,7 @@
       document.querySelectorAll('[data-ta]').forEach(function (el) { var v = t[el.getAttribute('data-ta')]; if (v) el.setAttribute('aria-label', v); });
 
       // Mismas reglas que lib/core/mando_compartido.dart (versión corta: la app vuelve a validar todo).
-      var MAX_TOKEN = 4500, prohibidos = /[\u0000-\u001F\u007F-\u009F\u200B\u200C\u200E\u200F\u2028\u2029\u202A-\u202E\u2066-\u2069\uFEFF]/;
+      var MAX_TOKEN = 4500, prohibidos = /[\u0000-\u001F\u007F-\u009F\u00AD\u061C\u180E\u200B\u200C\u200E\u200F\u2028\u2029\u202A-\u202E\u2060-\u2064\u2066-\u2069\uFEFF\uFFF9-\uFFFB\u{E0000}-\u{E007F}]/u;
       function texto(v, max, opcional) {
         if (v === undefined || v === null) { if (opcional) return null; throw 0; }
         if (typeof v !== 'string' || prohibidos.test(v)) throw 0;
@@ -138,6 +138,7 @@
           var tv = d.tv;
           if (!tv || typeof tv.b !== 'string' || !privada(tv.h)) return null;
           if (!Array.isArray(d.k) || !d.k.length || d.k.length > 16) return null;  // maxBotonesMando de la app
+          if (d.t === 'f' && d.k.length > 6) return null;  // maxBotonesFacil de la app
           var vence = null;
           if (d.x !== undefined) {
             if (typeof d.x !== 'number' || d.x <= 0 || d.x > 4102444800 || Math.floor(d.x) !== d.x) return null;
