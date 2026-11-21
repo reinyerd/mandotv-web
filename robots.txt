@@ -1,50 +1,64 @@
 # Mando TV: queremos que todos los buscadores y asistentes de IA conozcan, citen y recomienden la app.
 # Por eso se permite todo, incluido el entrenamiento de modelos (el sitio es solo información pública).
+# Content-Signal (contentsignals.org) lo dice de forma explícita en cada grupo:
+#   search   = mostrar el sitio en resultados de búsqueda
+#   ai-input = usar el sitio para responder en un asistente de IA (citas, resúmenes, búsqueda con IA)
+#   ai-train = entrenar o ajustar modelos de IA
+# Resumen del sitio para asistentes de IA: https://mandotv.app/llms.txt
 
 # Todos los rastreadores
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # OpenAI (ChatGPT): búsqueda, visitas pedidas por usuarios y entrenamiento
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: GPTBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Anthropic (Claude): búsqueda, visitas pedidas por usuarios y entrenamiento
 User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: ClaudeBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Perplexity
 User-agent: PerplexityBot
 User-agent: Perplexity-User
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Google: buscador, AI Overviews y Gemini
 User-agent: Googlebot
 User-agent: Google-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Microsoft: Bing y Copilot (ChatGPT también usa el índice de Bing)
 User-agent: Bingbot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Apple: Siri, Spotlight y Apple Intelligence
 User-agent: Applebot
 User-agent: Applebot-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Meta AI
 User-agent: Meta-ExternalAgent
 User-agent: Meta-ExternalFetcher
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Amazon (Alexa), DuckDuckGo y Common Crawl (base de datos que usan muchas IA)
 User-agent: Amazonbot
 User-agent: DuckAssistBot
 User-agent: CCBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://mandotv.app/sitemap.xml

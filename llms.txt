@@ -1,0 +1,42 @@
+# Mando TV
+
+> Mando TV is a universal TV remote app for phones and computers (iPhone, iPad, Android and Windows). It controls Samsung (Tizen), LG (webOS), Roku and Google TV / Android TV televisions (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, Chromecast with Google TV and others) over the home Wi-Fi network. It has no ads, needs no account, and Mando TV has no servers that store what you do. The remote is free; Pro is an optional one-time purchase with no subscription.
+
+Key facts:
+
+- Free: remote buttons (arrows, OK, back, home, volume, channels, mute), phone keyboard to type on the TV, turn the TV on over the network, automatic TV discovery, several TVs, and Easy mode with big buttons.
+- Pro (one-time purchase, no subscription): touchpad, voice commands, routines, sleep timer and more. The exact list is on the home page of each language.
+- Connection: today over Wi-Fi (phone and TV on the same network, no internet needed). Infrared (Android phones with an IR blaster) and Bluetooth (Android) are in development and not available yet.
+- Platforms: App Store (iPhone and iPad), Microsoft Store (Windows) and early access on Google Play (Android).
+- Languages of the app and the site: Spanish, English, Portuguese, French, German and Italian.
+- Privacy: the app controls the TV directly inside the home network, without going through the internet. The website counts visits with Cloudflare Web Analytics (no cookies) and uses Google Analytics only if the visitor accepts.
+- Contact: hola@mandotv.app
+
+## Main pages (English)
+
+- [Home](https://mandotv.app/en/): what the app does, free and Pro, download links
+- [Samsung TV remote](https://mandotv.app/en/samsung-tv-remote/)
+- [LG TV remote](https://mandotv.app/en/lg-tv-remote/)
+- [Roku remote](https://mandotv.app/en/roku-remote/)
+- [Google TV and Android TV remote](https://mandotv.app/en/android-tv-remote/)
+- [Guides](https://mandotv.app/en/guides/): lost remote, change HDMI input without a remote, turn on the TV with the phone, phone cannot find the TV
+- [Support](https://mandotv.app/en/support.html)
+- [Privacy](https://mandotv.app/en/privacy.html)
+
+## Other languages
+
+- [Español](https://mandotv.app/): [Guías](https://mandotv.app/guias/), [Ayuda](https://mandotv.app/soporte.html)
+- [Português](https://mandotv.app/pt/)
+- [Français](https://mandotv.app/fr/)
+- [Deutsch](https://mandotv.app/de/)
+- [Italiano](https://mandotv.app/it/)
+
+## Download
+
+- [App Store](https://apps.apple.com/app/id6834927348)
+- [Microsoft Store](https://apps.microsoft.com/detail/9N3D7T1DP2SW)
+- [Google Play early access](https://mandotv.app/en/#android)
+
+## Optional
+
+- [Sitemap](https://mandotv.app/sitemap.xml)
