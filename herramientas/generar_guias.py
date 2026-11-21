@@ -164,7 +164,7 @@ GUIAS = [
     faq=[
       ('¿Puedo controlar el TV con datos móviles?', 'No. El control viaja por la red WiFi de tu casa, así que el celular y el TV deben estar en la misma red.'),
       ('¿Por qué con la VPN no funciona?', 'Porque la VPN manda todo el tráfico del celular por otra red y el teléfono deja de ver los aparatos de tu casa. Apágala mientras usas el control.'),
-      ('¿Sirve el Bluetooth o el infrarrojo?', 'Para los televisores inteligentes, Mando TV usa el WiFi. El infrarrojo funciona solo en celulares Android que tengan emisor infrarrojo y sirve para televisores que no son inteligentes. El Bluetooth todavía no está disponible.'),
+      ('¿Sirve el Bluetooth o el infrarrojo?', 'Para los televisores inteligentes, Mando TV usa el WiFi. El infrarrojo funciona solo en celulares Android que tengan emisor infrarrojo y sirve para televisores que no son inteligentes. El Bluetooth está disponible en beta y gratis, solo en Android 9 o más reciente: el celular se conecta al TV como teclado y control Bluetooth, sin WiFi. Sirve con Google TV, Android TV y Fire TV; con otras marcas que aceptan teclados Bluetooth podría funcionar, y Roku no los acepta.'),
     ]),
   dict(slug='guias/android-tv-codigo-de-emparejamiento', corto='Código de Android TV', fecha='2026-11-17',
     titulo='Android TV pide un código de emparejamiento | Mando TV',
@@ -529,7 +529,7 @@ def pagina(g):
         <span>Hecho en Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC.</small>
+      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon, Apple o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC. Apple TV es una marca de Apple Inc.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -630,7 +630,7 @@ def indice():
         <span>Hecho en Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC.</small>
+      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon, Apple o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC. Apple TV es una marca de Apple Inc.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -668,7 +668,7 @@ UI = {
     apple_aria='Download Mando TV free on the App Store', ms_aria='Download Mando TV free on Microsoft Store',
     gp_aria='Early access to Mando TV on Google Play for Android', descarga='Download on', anticipada='Early access on',
     nota='Android: free early access on Google Play. <a href="/#android">Join in two steps</a> and help us reach the store.',
-    aviso='Mando TV is an independent app. It is not affiliated with or endorsed by the TV makers named, Google, Amazon or Roku. Trademarks belong to their owners and are used only to indicate compatibility. Android TV and Google TV are trademarks of Google LLC.',
+    aviso='Mando TV is an independent app. It is not affiliated with or endorsed by the TV makers named, Google, Amazon, Apple or Roku. Trademarks belong to their owners and are used only to indicate compatibility. Android TV and Google TV are trademarks of Google LLC. Apple TV is a trademark of Apple Inc.',
     migas_inicio='Home', pie='Footer', principal='Main', ruta='Breadcrumb', aria_desc='Download Mando TV', privacidad='Privacy',
     guia_nombre='Guide'),
 }

@@ -5,7 +5,7 @@
 #   - No decir qué funciones son Pro (apps y entradas pueden pasar a gratis): solo "remote free, optional one-time Pro,
 #     no ads, no subscription". Lo gratis que se nombra (flechas, OK, volumen, canales, números, teclado, encender o
 #     apagar) es gratis hoy según funcionesProPorDefecto.
-#   - La app funciona por Wi-Fi; el infrarrojo (gratis) solo en Android con emisor infrarrojo; Bluetooth: "in development".
+#   - La app funciona por Wi-Fi; el infrarrojo (gratis) solo en Android con emisor infrarrojo; Bluetooth: beta y gratis en Android 9 o más reciente (teclado y control Bluetooth; Google TV, Android TV y Fire TV; Roku no). Apple TV: beta y gratis por Wi-Fi, con PIN.
 #     Sin duplicar pantalla (no mirroring). Fotos y videos al TV: solo como "part of Mando TV Pro" al describir esa función.
 #     TV antiguos (LG NetCast, Vizio, Sony 2013-2015, Panasonic, Philips 2011-2015): siempre "beta".
 #   - Fire TV: el driver no tiene Wake on LAN (lib/drivers/fire_tv.dart, wakeOnLan: false): no prometer encenderlo.
@@ -98,15 +98,16 @@ GUIAS_NUEVAS = [
         ['Ads', 'None', 'Common'],
         ['Subscription', 'None. Pro is an optional one-time purchase', 'Weekly or monthly plans are common'],
         ['Account', 'Not needed', 'Varies'],
-        ['Smart TVs over Wi-Fi', 'Samsung (2016 and newer), LG webOS, Roku, Google TV and Android TV, Fire TV', 'Varies by app'],
+        ['Smart TVs over Wi-Fi', 'Samsung (2016 and newer), LG webOS, Roku, Google TV and Android TV, Fire TV, Apple TV (beta)', 'Varies by app'],
         ['Infrared for older TVs', 'Free on Android phones with an infrared blaster (new)', 'Some apps, only on phones with an infrared blaster'],
+        ['Bluetooth', 'Beta on Android 9 and newer, free', 'Varies by app'],
         ['Photos and videos to the TV', 'Pro, over Wi-Fi (not mirroring)', 'Varies by app'],
         ['Screen mirroring', 'Not offered', 'Some apps offer it'],
         ['Phones and computers', 'iPhone, iPad and Windows, plus Android in early access', 'Varies'],
       ],
       nota='Mando TV is compared with no app in particular. Check each app\'s store page for its current prices.'),
     extra=[
-      ('What Mando TV does not do', 'It does not mirror your phone screen to the TV. It can send photos and videos to the TV over your home Wi-Fi, which is part of Mando TV Pro, but that is not screen mirroring. It controls smart TVs over your home Wi-Fi. A TV that is not a smart TV can be controlled by infrared from an Android phone with an infrared blaster. A Bluetooth option is still in development.'),
+      ('What Mando TV does not do', 'It does not mirror your phone screen to the TV. It can send photos and videos to the TV over your home Wi-Fi, which is part of Mando TV Pro, but that is not screen mirroring. It controls smart TVs over your home Wi-Fi. A TV that is not a smart TV can be controlled by infrared from an Android phone with an infrared blaster. On Android 9 or newer, the phone can also connect to Google TV, Android TV and Fire TV over Bluetooth as a keyboard and remote, with no Wi-Fi. That option is in beta and free.'),
       ('How Mando TV makes money', 'Not with ads and not with your data: the app collects none. Mando TV is paid for by Pro, an optional one-time purchase for extras. The basic remote is free.'),
       ('On the devices you already have', 'iPhone and iPad from the App Store, Windows PCs from Microsoft Store, and Android through free early access on Google Play. See [TV remote app for iPhone](/en/guides/tv-remote-app-for-iphone/) and [TV remote app for Windows](/en/guides/tv-remote-app-for-windows/).'),
       ('Privacy', 'No account and no tracking in the app. It talks to the TV inside your home network, and the TV connection keys stay encrypted on your device. Details in the [privacy policy](/en/privacy.html).'),
@@ -115,7 +116,7 @@ GUIAS_NUEVAS = [
     faq=[
       ('Is there a TV remote app with no subscription?', 'Yes. Mando TV has no subscription at all: the remote is free with no ads, and Pro is an optional one-time purchase.'),
       ('Is Mando TV really free?', 'Yes. The arrows, OK, Back, Home, volume, channels, number keys, keyboard and power on or off are free, with no ads and no time limit.'),
-      ('Does it work without Wi-Fi?', 'Mostly no. Mando TV controls smart TVs over your home Wi-Fi. The exception is infrared on Android phones that have an infrared blaster, which also works with TVs that are not smart TVs and TVs that were never connected to Wi-Fi.'),
+      ('Does it work without Wi-Fi?', 'Mostly no. Mando TV controls smart TVs over your home Wi-Fi. The exceptions are infrared on Android phones that have an infrared blaster, which also works with TVs that are not smart TVs and TVs that were never connected to Wi-Fi, and Bluetooth in beta on Android 9 and newer, which works with Google TV, Android TV and Fire TV.'),
     ]),
 
   dict(clave='smartthings', corto='SmartThings TV remote alternative',

@@ -187,7 +187,7 @@ GUIAS_EEUU = [
     faq=[
       ('Is Mando TV free on iPhone?', 'The download is free, with no ads. The basic remote is free, and so are opening apps and switching inputs. Extras such as the touchpad, voice commands and routines are Mando TV Pro, a one-time purchase.'),
       ('Does it work on iPad?', 'Yes. The same app runs on iPhone and iPad.'),
-      ('Does an iPhone remote app need Bluetooth or an infrared blaster?', 'Not on iPhone. iPhones have no infrared blaster, so infrared control is not available there, and Bluetooth is still in development. On iPhone, Mando TV controls smart TVs over your home Wi-Fi.'),
+      ('Does an iPhone remote app need Bluetooth or an infrared blaster?', 'Not on iPhone. iPhones have no infrared blaster, so infrared control is not available there, and the Bluetooth option is only for Android 9 or newer, not for iPhone. On iPhone, Mando TV controls smart TVs, and Apple TV in beta, over your home Wi-Fi.'),
     ]),
 
   dict(clave='windows', corto='TV remote app for Windows',

@@ -190,7 +190,7 @@ def pie(clave):
         <span>Made in Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV is an independent app. It is not affiliated with or endorsed by the TV makers named, Google, Amazon or Roku. Trademarks belong to their owners and are used only to indicate compatibility. Android TV and Google TV are trademarks of Google LLC.</small>
+      <small>Mando TV is an independent app. It is not affiliated with or endorsed by the TV makers named, Google, Amazon, Apple or Roku. Trademarks belong to their owners and are used only to indicate compatibility. Android TV and Google TV are trademarks of Google LLC. Apple TV is a trademark of Apple Inc.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -431,7 +431,7 @@ GUIAS = [
     faq=[
       ('Can I turn on the TV with my phone if I never connected it before?', 'This first time, turn it on with the button on the TV. After you connect your phone and turn on power-on over the network in the TV settings, you can turn it on from the app.'),
       ('Do I need to buy a new remote?', 'Not necessarily. With Mando TV you get buttons, volume, keyboard and power-on for free. If you still prefer a physical one, look for the exact model of your TV.'),
-      ('Does it work if the TV has no Wi-Fi?', 'No. The phone and the TV have to be on the same Wi-Fi network. A TV that is not a smart TV cannot be controlled with Mando TV.'),
+      ('Does it work if the TV has no Wi-Fi?', 'Mostly no. The phone and the TV usually have to be on the same Wi-Fi network. The exceptions are infrared on Android phones with an infrared blaster, which also controls TVs that are not smart TVs, and Bluetooth in beta on Android 9 or newer, which works with Google TV, Android TV and Fire TV with no Wi-Fi.'),
     ]),
   dict(clave='lost-lg', corto='Lost LG TV remote',
     titulo='Lost Your LG TV Remote? Use Your Phone Instead',
@@ -646,7 +646,7 @@ GUIAS = [
     faq=[
       ('Can I control the TV with mobile data?', 'No. The remote signal travels over your home Wi-Fi, so your phone and the TV must be on the same network.'),
       ('Why does it not work with the VPN on?', 'Because the VPN sends all of your phone traffic through another network and the phone can no longer see the devices in your home. Turn it off while you use the remote.'),
-      ('Does Bluetooth or infrared work?', 'Wi-Fi is how Mando TV controls smart TVs. Infrared works only on Android phones that have an infrared blaster, and it is meant for TVs that are not smart TVs. Bluetooth is not available yet.'),
+      ('Does Bluetooth or infrared work?', 'Wi-Fi is how Mando TV controls smart TVs. Infrared works only on Android phones that have an infrared blaster, and it is meant for TVs that are not smart TVs. Bluetooth is available in beta, for free and only on Android 9 or newer: the phone connects to the TV as a Bluetooth keyboard and remote, with no Wi-Fi needed. It works with Google TV, Android TV and Fire TV; other brands that accept Bluetooth keyboards may work, but Roku does not accept them.'),
     ]),
   dict(clave='androidtv-code', corto='Android TV pairing code',
     titulo='Android TV Asks for a Pairing Code: What to Do',

@@ -17,7 +17,7 @@ UI = dict(
   aria_home='Mando TV, início', aria_main='Principal', nav_que='Recursos', nav_ayuda='Ajuda', nav_contacto='Contato',
   asunto='Ol%C3%A1%20Mando%20TV', inicio='Início', privacidad='Privacidade', aria_pie='Rodapé', aria_ruta='Caminho',
   aria_marcas='Marcas e guias', hecho='Feito no Chile',
-  aviso='O Mando TV é um app independente: não é afiliado aos fabricantes de TV citados nem ao Google, à Amazon ou à Roku, e não tem o apoio deles. As marcas pertencem aos seus donos e são mencionadas apenas para indicar compatibilidade. Android TV e Google TV são marcas do Google LLC.',
+  aviso='O Mando TV é um app independente: não é afiliado aos fabricantes de TV citados nem ao Google, à Amazon, à Apple ou à Roku, e não tem o apoio deles. As marcas pertencem aos seus donos e são mencionadas apenas para indicar compatibilidade. Android TV e Google TV são marcas do Google LLC. Apple TV é uma marca da Apple Inc.',
   bajar='Baixar grátis', descarga='Baixe na', anticipada='Teste antecipado no',
   apple_aria='Baixar o Mando TV grátis na App Store', ms_aria='Baixar o Mando TV grátis na Microsoft Store',
   gp_aria='Teste antecipado do Mando TV no Google Play para Android', aria_desc='Baixar o Mando TV',
@@ -472,7 +472,7 @@ GUIAS = [
     faq=[
       ('Dá para controlar a TV com dados móveis?', 'Não. O sinal do controle passa pelo Wi-Fi da sua casa, então o celular e a TV precisam estar na mesma rede.'),
       ('Por que não funciona com a VPN ligada?', 'Porque a VPN manda todo o tráfego do celular por outra rede e o celular deixa de ver os aparelhos da sua casa. Desligue enquanto usa o controle.'),
-      ('Funciona por Bluetooth ou infravermelho?', 'Para smart TVs, o Mando TV usa o Wi-Fi. O infravermelho só funciona em celulares Android com emissor infravermelho e serve para TVs que não são smart. O Bluetooth ainda não está disponível.'),
+      ('Funciona por Bluetooth ou infravermelho?', 'Para smart TVs, o Mando TV usa o Wi-Fi. O infravermelho só funciona em celulares Android com emissor infravermelho e serve para TVs que não são smart. O Bluetooth está disponível em beta, grátis e só no Android 9 ou mais recente: o celular se conecta à TV como teclado e controle Bluetooth, sem Wi-Fi. Funciona com Google TV, Android TV e Fire TV; em outras marcas que aceitam teclados Bluetooth pode funcionar, mas a Roku não os aceita.'),
     ]),
   dict(clave='androidtv-code', corto='Código de pareamento Android TV',
     titulo='A Android TV pede um código de pareamento: o que fazer',

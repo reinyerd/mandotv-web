@@ -278,7 +278,7 @@ def pagina(m):
         <span>Hecho en Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC.</small>
+      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon, Apple o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC. Apple TV es una marca de Apple Inc.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>

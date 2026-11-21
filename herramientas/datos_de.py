@@ -8,7 +8,7 @@ UI = dict(
   aria_home='Mando TV, Startseite', aria_main='Hauptmenü', nav_que='Funktionen', nav_ayuda='Hilfe', nav_contacto='Kontakt',
   asunto='Hallo%20Mando%20TV', inicio='Startseite', privacidad='Datenschutz', aria_pie='Fußbereich', aria_ruta='Brotkrumenpfad',
   aria_marcas='Marken und Ratgeber', hecho='Entwickelt in Chile',
-  aviso='Mando TV ist eine unabhängige App. Sie steht weder mit den genannten TV-Herstellern noch mit Google, Amazon oder Roku in Verbindung und wird nicht von ihnen unterstützt. Die Marken gehören ihren Inhabern und werden nur genannt, um die Kompatibilität anzugeben. Android TV und Google TV sind Marken von Google LLC.',
+  aviso='Mando TV ist eine unabhängige App. Sie steht weder mit den genannten TV-Herstellern noch mit Google, Amazon, Apple oder Roku in Verbindung und wird nicht von ihnen unterstützt. Die Marken gehören ihren Inhabern und werden nur genannt, um die Kompatibilität anzugeben. Android TV und Google TV sind Marken von Google LLC. Apple TV ist eine Marke von Apple Inc.',
   bajar='Kostenlos herunterladen', descarga='Herunterladen im', anticipada='Früher Zugang bei',
   apple_aria='Mando TV kostenlos im App Store laden', ms_aria='Mando TV kostenlos im Microsoft Store laden',
   gp_aria='Früher Zugang zu Mando TV bei Google Play für Android', aria_desc='Mando TV herunterladen',
@@ -464,7 +464,7 @@ GUIAS = [
     faq=[
       ('Kann ich den Fernseher mit mobilen Daten steuern?', 'Nein. Das Fernbedienungssignal läuft über dein WLAN zu Hause, deshalb müssen Handy und Fernseher im selben Netzwerk sein.'),
       ('Warum funktioniert es mit aktivem VPN nicht?', 'Weil das VPN den gesamten Datenverkehr deines Handys über ein anderes Netzwerk leitet und das Handy die Geräte bei dir zu Hause nicht mehr sieht. Schalte es aus, solange du die Fernbedienung nutzt.'),
-      ('Funktioniert es mit Bluetooth oder Infrarot?', 'Bei Smart-TVs nutzt Mando TV das WLAN. Infrarot funktioniert nur auf Android-Handys mit Infrarotsender und ist für Fernseher gedacht, die keine Smart-TVs sind. Bluetooth ist noch nicht verfügbar.'),
+      ('Funktioniert es mit Bluetooth oder Infrarot?', 'Bei Smart-TVs nutzt Mando TV das WLAN. Infrarot funktioniert nur auf Android-Handys mit Infrarotsender und ist für Fernseher gedacht, die keine Smart-TVs sind. Bluetooth gibt es in der Beta, kostenlos und nur ab Android 9: Das Handy verbindet sich mit dem Fernseher als Bluetooth-Tastatur und -Fernbedienung, ganz ohne WLAN. Es funktioniert mit Google TV, Android TV und Fire TV; bei anderen Marken, die Bluetooth-Tastaturen akzeptieren, kann es funktionieren, Roku akzeptiert sie nicht.'),
     ]),
   dict(clave='androidtv-code', corto='Android TV Kopplungscode',
     titulo='Android TV fragt nach einem Kopplungscode: Das ist zu tun',

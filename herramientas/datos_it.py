@@ -17,7 +17,7 @@ UI = dict(
   aria_home='Mando TV, home', aria_main='Principale', nav_que='Funzioni', nav_ayuda='Assistenza', nav_contacto='Contatti',
   asunto='Ciao%20Mando%20TV', inicio='Home', privacidad='Privacy', aria_pie='Piè di pagina', aria_ruta='Percorso',
   aria_marcas='Marche e guide', hecho='Fatto in Cile',
-  aviso="Mando TV è un'app indipendente: non è affiliata ai produttori di TV citati né a Google, Amazon o Roku, e non è approvata da loro. I marchi appartengono ai rispettivi proprietari e sono citati solo per indicare la compatibilità. Android TV e Google TV sono marchi di Google LLC.",
+  aviso="Mando TV è un'app indipendente: non è affiliata ai produttori di TV citati né a Google, Amazon, Apple o Roku, e non è approvata da loro. I marchi appartengono ai rispettivi proprietari e sono citati solo per indicare la compatibilità. Android TV e Google TV sono marchi di Google LLC. Apple TV è un marchio di Apple Inc.",
   bajar='Scarica gratis', descarga='Scarica su', anticipada='Accesso anticipato su',
   apple_aria="Scarica Mando TV gratis dall'App Store", ms_aria='Scarica Mando TV gratis dal Microsoft Store',
   gp_aria='Accesso anticipato a Mando TV su Google Play per Android', aria_desc='Scarica Mando TV',
@@ -472,7 +472,7 @@ GUIAS = [
     faq=[
       ('Posso controllare la TV con i dati mobili?', "No. Il segnale del telecomando passa dal Wi-Fi di casa, quindi smartphone e TV devono essere sulla stessa rete."),
       ('Perché non funziona con la VPN attiva?', "Perché la VPN manda tutto il traffico dello smartphone su un'altra rete e lo smartphone non vede più i dispositivi di casa. Disattivala mentre usi il telecomando."),
-      ("Funzionano il Bluetooth o l'infrarosso?", "Per le smart TV, Mando TV usa il Wi-Fi. Gli infrarossi funzionano solo sugli smartphone Android con emettitore a infrarossi e servono per le TV che non sono smart. Il Bluetooth non è ancora disponibile."),
+      ("Funzionano il Bluetooth o l'infrarosso?", "Per le smart TV, Mando TV usa il Wi-Fi. Gli infrarossi funzionano solo sugli smartphone Android con emettitore a infrarossi e servono per le TV che non sono smart. Il Bluetooth è disponibile in beta, gratis e solo su Android 9 o successivo: lo smartphone si collega alla TV come tastiera e telecomando Bluetooth, senza Wi-Fi. Funziona con Google TV, Android TV e Fire TV; con altre marche che accettano tastiere Bluetooth potrebbe funzionare, ma Roku non le accetta."),
     ]),
   dict(clave='androidtv-code', corto='Codice di associazione Android TV',
     titulo='Android TV chiede un codice di associazione: cosa fare',

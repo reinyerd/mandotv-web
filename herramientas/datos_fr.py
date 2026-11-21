@@ -10,7 +10,7 @@ UI = dict(
   aria_home='Mando TV, accueil', aria_main='Principal', nav_que='Fonctions', nav_ayuda='Aide', nav_contacto='Contact',
   asunto='Bonjour%20Mando%20TV', inicio='Accueil', privacidad='Confidentialité', aria_pie='Pied de page', aria_ruta="Fil d'Ariane",
   aria_marcas='Marques et guides', hecho='Conçu au Chili',
-  aviso="Mando TV est une app indépendante : elle n'est ni affiliée aux fabricants de TV cités ni à Google, Amazon ou Roku, ni approuvée par eux. Les marques appartiennent à leurs propriétaires et sont citées uniquement pour indiquer la compatibilité. Android TV et Google TV sont des marques de Google LLC.",
+  aviso="Mando TV est une app indépendante : elle n'est ni affiliée aux fabricants de TV cités ni à Google, Amazon, Apple ou Roku, ni approuvée par eux. Les marques appartiennent à leurs propriétaires et sont citées uniquement pour indiquer la compatibilité. Android TV et Google TV sont des marques de Google LLC. Apple TV est une marque d'Apple Inc.",
   bajar='Télécharger gratuitement', descarga='Télécharger sur', anticipada='Accès anticipé sur',
   apple_aria="Télécharger Mando TV gratuitement sur l'App Store", ms_aria='Télécharger Mando TV gratuitement sur le Microsoft Store',
   gp_aria='Accès anticipé à Mando TV sur Google Play pour Android', aria_desc='Télécharger Mando TV',
@@ -465,7 +465,7 @@ GUIAS = [
     faq=[
       ('Puis-je piloter la TV avec les données mobiles ?', "Non. Le signal de la télécommande passe par votre Wi-Fi domestique, donc votre téléphone et la TV doivent être sur le même réseau."),
       ('Pourquoi cela ne fonctionne-t-il pas avec le VPN activé ?', "Parce que le VPN envoie tout le trafic de votre téléphone par un autre réseau et que le téléphone ne voit plus les appareils de chez vous. Désactivez-le pendant que vous utilisez la télécommande."),
-      ("Le Bluetooth ou l'infrarouge fonctionnent-ils ?", "Pour les Smart TV, Mando TV utilise le Wi-Fi. L'infrarouge ne fonctionne que sur les téléphones Android équipés d'un émetteur infrarouge et sert pour les TV qui ne sont pas des Smart TV. Le Bluetooth n'est pas encore disponible."),
+      ("Le Bluetooth ou l'infrarouge fonctionnent-ils ?", "Pour les Smart TV, Mando TV utilise le Wi-Fi. L'infrarouge ne fonctionne que sur les téléphones Android équipés d'un émetteur infrarouge et sert pour les TV qui ne sont pas des Smart TV. Le Bluetooth est disponible en bêta, gratuitement et seulement sur Android 9 ou plus récent : le téléphone se connecte à la TV comme un clavier et une télécommande Bluetooth, sans Wi-Fi. Il fonctionne avec Google TV, Android TV et Fire TV ; chez d'autres marques qui acceptent les claviers Bluetooth, il peut fonctionner, mais Roku ne les accepte pas."),
     ]),
   dict(clave='androidtv-code', corto="Code d'appairage Android TV",
     titulo="Android TV demande un code d'appairage : que faire",
