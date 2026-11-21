@@ -83,9 +83,6 @@ class Idioma:
   <meta name="twitter:card" content="summary_large_image">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" href="/icono.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,600..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/estilos.css?v=12">
   <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
