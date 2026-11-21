@@ -16,6 +16,13 @@ MARCAS_ENLACES = [
   ('control-remoto-lg', 'Control remoto LG'),
   ('control-remoto-roku', 'Control remoto Roku'),
   ('control-remoto-android-tv', 'Control remoto Android TV'),
+  # 2026-11-21: marcas de Latinoamérica (generar_marcas.py + marcas_latam.py)
+  ('control-remoto-master-g', 'Control remoto Master G'),
+  ('control-remoto-kalley', 'Control remoto Kalley'),
+  ('control-remoto-caixun', 'Control remoto Caixun'),
+  ('control-remoto-hyundai', 'Control remoto Hyundai'),
+  ('control-remoto-noblex', 'Control remoto Noblex'),
+  ('control-remoto-bgh', 'Control remoto BGH'),
 ]
 
 GUIAS = [

@@ -7,7 +7,7 @@ import ast, html, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.dont_write_bytecode = True
 import idiomas_sitio
-from datos_en_eeuu import GUIAS_EEUU, FIRE_TV_PUBLICADO
+from datos_en_eeuu import GUIAS_EEUU, FIRE_TV_PUBLICADO, GUIAS_MARCAS_EN
 
 SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
@@ -40,7 +40,8 @@ BRANDS = {k: (idiomas_sitio.carpeta(k, 'es'), idiomas_sitio.carpeta(k, 'en')) fo
 GUIDE_SLUGS = {k: (idiomas_sitio.PAGINAS[k].get('es'), idiomas_sitio.carpeta(k, 'en')) for k in (
   'lost-tv', 'lost-lg', 'hdmi', 'androidtv', 'lg-on', 'console', 'samsung-lost', 'roku-lost', 'roku-403',
   'androidtv-code', 'not-found', 'wifi', 'pc',
-  'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows')}
+  'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows',
+  'firetv-lost', 'turn-on', 'no-sub', 'smartthings', 'googletv-alt') + tuple(k for k, _ in GUIAS_MARCAS_EN)}
 # Páginas sueltas: (ruta en español, ruta en inglés)
 SOPORTE = ('/soporte.html', '/en/support.html')
 PRIVACIDAD = ('/privacidad.html', '/en/privacy.html')
@@ -78,6 +79,11 @@ PIE = [
   ('/en/guides/fire-tv-remote-app/', 'Fire TV remote app'),
   ('/en/guides/tv-remote-app-for-iphone/', 'TV remote app for iPhone'),
   ('/en/guides/tv-remote-app-for-windows/', 'TV remote app for Windows PC'),
+  ('/en/guides/lost-fire-tv-remote/', 'Lost Fire TV remote'),
+  ('/en/guides/turn-on-tv-without-remote/', 'Turn on a TV without the remote'),
+  ('/en/guides/tv-remote-app-no-subscription/', 'TV remote app with no subscription'),
+  ('/en/guides/smartthings-tv-remote-alternative/', 'SmartThings TV remote alternative'),
+  ('/en/guides/google-tv-remote-app-alternative/', 'Google TV remote app alternative'),
 ]
 
 
@@ -257,6 +263,8 @@ MARCAS = [
       ('Does it work with older Samsung TVs?', 'It works with Samsung TVs running Tizen, 2016 and newer. Earlier models use a different system that we do not support yet.'),
     ],
     guias=['<a href="/en/guides/samsung-tv-without-remote/">Samsung TV without the original remote: how to use your phone</a>',
+           '<a href="/en/guides/smartthings-tv-remote-alternative/">SmartThings TV remote alternative for Samsung TVs</a>',
+           '<a href="/en/guides/turn-on-tv-without-remote/">How to turn on a TV without the remote</a>',
            '<a href="/en/guides/change-hdmi-input-without-remote/">Change the TV HDMI input without a remote</a>',
            '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
   dict(clave='roku', nombre='Roku', color='#a77bff',
@@ -287,6 +295,7 @@ MARCAS = [
     ],
     guias=['<a href="/en/guides/roku-remote-app-not-working/">Roku remote app not working (error 403)</a>',
            '<a href="/en/guides/lost-roku-remote/">Lost your Roku remote: how to use your phone</a>',
+           'Roku TV brands: <a href="/en/guides/tcl-tv-remote-app/">TCL</a>, <a href="/en/guides/hisense-tv-remote-app/">Hisense</a>, <a href="/en/guides/onn-tv-remote-app/">onn.</a>, <a href="/en/guides/sharp-tv-remote-app/">Sharp</a>, <a href="/en/guides/philips-tv-remote-app/">Philips</a>, <a href="/en/guides/westinghouse-tv-remote-app/">Westinghouse</a>, <a href="/en/guides/pioneer-tv-remote-app/">Pioneer</a> and <a href="/en/guides/insignia-tv-remote-app/">Insignia</a>',
            '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
   dict(clave='android', nombre='Android TV and Google TV', color='#2fbf8f',
     titulo='Android TV Remote App for Your Phone | Mando TV',
@@ -316,6 +325,8 @@ MARCAS = [
     ],
     guias=['<a href="/en/guides/android-tv-pairing-code/">Android TV asks for a pairing code: what to do</a>',
            '<a href="/en/guides/android-tv-without-remote/">Android TV without a remote: how to use your phone</a>',
+           '<a href="/en/guides/google-tv-remote-app-alternative/">Google TV remote app alternative for your phone</a>',
+           'Google TV and Android TV brands: <a href="/en/guides/sony-tv-remote-app/">Sony</a>, <a href="/en/guides/tcl-tv-remote-app/">TCL</a>, <a href="/en/guides/hisense-tv-remote-app/">Hisense</a>, <a href="/en/guides/philips-tv-remote-app/">Philips</a>, <a href="/en/guides/sharp-tv-remote-app/">Sharp</a>, <a href="/en/guides/toshiba-tv-remote-app/">Toshiba</a> and <a href="/en/guides/onn-tv-remote-app/">onn.</a>',
            '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
 ]
 
@@ -704,7 +715,12 @@ OTRAS_GUIAS = [
   ('firetv', 'Fire TV remote app for your phone or PC'),
   ('iphone', 'TV remote app for iPhone: one remote for every TV'),
   ('windows', 'TV remote app for Windows PC'),
-]
+  ('firetv-lost', 'Lost your Fire TV remote: how to use your phone'),
+  ('turn-on', 'How to turn on a TV without the remote'),
+  ('no-sub', 'TV remote app with no subscription and no ads'),
+  ('smartthings', 'SmartThings TV remote alternative for Samsung TVs'),
+  ('googletv-alt', 'Google TV remote app alternative for your phone'),
+] + [(k, t) for k, t in GUIAS_MARCAS_EN]
 
 
 if not FIRE_TV_PUBLICADO:
@@ -716,13 +732,30 @@ if not FIRE_TV_PUBLICADO:
 GUIAS.extend(GUIAS_EEUU)
 
 
+def tabla_html(t):
+    """Tabla comparativa: la primera columna dice qué se compara. En el celular se desplaza dentro de su caja."""
+    e = html.escape
+    cabeza = ''.join(f'<th scope="col">{e(c)}</th>' for c in t['cabeza'])
+    filas = '\n'.join('            <tr><th scope="row">' + e(f[0]) + '</th>' + ''.join(f'<td>{e(c)}</td>' for c in f[1:]) + '</tr>' for f in t['filas'])
+    nota = f'\n      <p class="nota">{fmt(t["nota"])}</p>' if t.get('nota') else ''
+    return f'''      <h2 id="comparacion">{e(t["titulo"])}</h2>
+      <div class="tabla" role="region" aria-labelledby="comparacion" tabindex="0">
+        <table>
+          <thead><tr>{cabeza}</tr></thead>
+          <tbody>
+{filas}
+          </tbody>
+        </table>
+      </div>''' + nota
+
+
 def pagina_guia(g):
     e = html.escape
     en = '/' + GUIDE_SLUGS[g['clave']][1] + '/'
     url = URL + en
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": "en",
-       "datePublished": FECHA, "dateModified": FECHA, "mainEntityOfPage": url, "image": URL + "/social-en.png",
+       "datePublished": g.get("fecha", FECHA), "dateModified": g.get("fecha", FECHA), "mainEntityOfPage": url, "image": URL + "/social-en.png",
        "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
       ORG,
       {"@type": "HowTo", "name": g["h1"], "description": g["desc"], "inLanguage": "en",
@@ -735,6 +768,8 @@ def pagina_guia(g):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
     pasos = '\n'.join(f'        <li>{fmt(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{fmt(p)}</p>' for t, p in g['extra'])
+    if g.get('tabla'):
+        extra = tabla_html(g['tabla']) + '\n\n' + extra
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
     if g.get('marca'):
         marcas = f'<p>More details on the <a href="{g["marca"][0]}">{e(g["marca"][1])}</a> page.</p>'
@@ -791,16 +826,8 @@ def indice():
     url = URL + '/en/guides/'
     titulo = 'Guides: Control Your TV With Your Phone | Mando TV'
     desc = 'Step-by-step guides to use your phone or PC as a TV remote: turn on the TV, change the HDMI input and fix problems on Samsung, LG, Roku and Android TV.'
-    descripciones = {
-      'lg-on': next(g['desc'] for g in GUIAS if g['clave'] == 'lg-on'),
-      'lost-tv': next(g['desc'] for g in GUIAS if g['clave'] == 'lost-tv'),
-      'lost-lg': next(g['desc'] for g in GUIAS if g['clave'] == 'lost-lg'),
-      'hdmi': next(g['desc'] for g in GUIAS if g['clave'] == 'hdmi'),
-      'androidtv': next(g['desc'] for g in GUIAS if g['clave'] == 'androidtv'),
-      **{k: next(g['desc'] for g in GUIAS if g['clave'] == k) for k in [x for x in ('samsung-lost', 'roku-lost', 'roku-403', 'androidtv-code', 'not-found', 'wifi', 'pc',
-         'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows') if FIRE_TV_PUBLICADO or x != 'firetv']},
-      'console': 'Launch day and no TV remote? Turn on your TV and switch to your PS5 or Xbox HDMI input from your phone. Free, no ads.',
-    }
+    descripciones = {g['clave']: g['desc'] for g in GUIAS}
+    descripciones['console'] = 'Launch day and no TV remote? Turn on your TV and switch to your PS5 or Xbox HDMI input from your phone. Free, no ads.'
     ld = {"@context": "https://schema.org", "@graph": [
       ORG,
       {"@type": "CollectionPage", "name": titulo, "description": desc, "url": url, "inLanguage": "en",
@@ -809,7 +836,8 @@ def indice():
          {"@type": "ListItem", "position": n, "name": t, "url": URL + en_url(k, GUIDE_SLUGS)}
          for n, (k, t) in enumerate(OTRAS_GUIAS, 1)]}}]}
     lista = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a>: {e(descripciones[k])}</li>' for k, t in OTRAS_GUIAS)
-    marcas = '\n'.join(f'        <li><a href="{u}">{n}</a></li>' for u, n in PIE[:4])
+    marcas = '\n'.join([f'        <li><a href="{u}">{n}</a></li>' for u, n in PIE[:4]] + [
+      f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a></li>' for k, t in GUIAS_MARCAS_EN])
     return (cabecera(titulo, desc, url, 'guias', '#3d7bff', 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <span>Guides</span></nav>
       <h1>Guides to Use Your Phone as a TV Remote</h1>
       <p>Simple steps to connect, turn on and fix the remote of your Samsung, LG, Roku or Android TV with Mando TV.</p>

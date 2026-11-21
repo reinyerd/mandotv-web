@@ -114,6 +114,10 @@ MARCAS = [
     guias=[('android-tv-codigo-de-emparejamiento', 'Android TV pide un código para conectar el celular'), ('android-tv-sin-control-remoto', 'Android TV sin control remoto: cómo usarlo desde el celular')]),
 ]
 
+# 2026-11-21: marcas de Latinoamérica con Google TV / Android TV o Roku TV (fuentes en marcas_latam.py).
+from marcas_latam import MARCAS_LATAM
+MARCAS += MARCAS_LATAM
+
 
 GUIAS_PIE = [
   ('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular'),

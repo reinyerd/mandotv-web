@@ -38,6 +38,28 @@ _FILAS = {
   'firetv': (None, 'en/guides/fire-tv-remote-app', None, None, None, None),
   'iphone': (None, 'en/guides/tv-remote-app-for-iphone', None, None, None, None),
   'windows': (None, 'en/guides/tv-remote-app-for-windows', None, None, None, None),
+  # 2026-11-21: rescate y alternativas (EE. UU.)
+  'firetv-lost': (None, 'en/guides/lost-fire-tv-remote', None, None, None, None),
+  'turn-on': (None, 'en/guides/turn-on-tv-without-remote', None, None, None, None),
+  'no-sub': (None, 'en/guides/tv-remote-app-no-subscription', None, None, None, None),
+  'smartthings': (None, 'en/guides/smartthings-tv-remote-alternative', None, None, None, None),
+  'googletv-alt': (None, 'en/guides/google-tv-remote-app-alternative', None, None, None, None),
+  # 2026-11-21: marcas que funcionan con Roku TV, Google TV / Android TV o Fire TV (EE. UU. y Europa)
+  'sony': (None, 'en/guides/sony-tv-remote-app', None, None, None, None),
+  'insignia': (None, 'en/guides/insignia-tv-remote-app', None, None, None, None),
+  'onn': (None, 'en/guides/onn-tv-remote-app', None, None, None, None),
+  'toshiba': (None, 'en/guides/toshiba-tv-remote-app', None, None, None, None),
+  'sharp': (None, 'en/guides/sharp-tv-remote-app', None, None, None, None),
+  'philips': (None, 'en/guides/philips-tv-remote-app', None, None, None, None),
+  'westinghouse': (None, 'en/guides/westinghouse-tv-remote-app', None, None, None, None),
+  'pioneer': (None, 'en/guides/pioneer-tv-remote-app', None, None, None, None),
+  # 2026-11-21: marcas de Latinoamérica, solo en español (sin búsquedas en inglés)
+  'master-g': ('control-remoto-master-g', None, None, None, None, None),
+  'kalley': ('control-remoto-kalley', None, None, None, None, None),
+  'caixun': ('control-remoto-caixun', None, None, None, None, None),
+  'hyundai': ('control-remoto-hyundai', None, None, None, None, None),
+  'noblex': ('control-remoto-noblex', None, None, None, None, None),
+  'bgh': ('control-remoto-bgh', None, None, None, None, None),
   'soporte': ('soporte.html', 'en/support.html', 'de/hilfe.html', 'fr/aide.html', 'pt/ajuda.html', 'it/assistenza.html'),
   'privacidad': ('privacidad.html', 'en/privacy.html', 'de/datenschutz.html', 'fr/confidentialite.html', 'pt/privacidade.html', 'it/privacy.html'),
 }

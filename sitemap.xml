@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mandotv.app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/control-remoto-android-tv/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/control-remoto-bgh/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/control-remoto-caixun/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/control-remoto-hyundai/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/control-remoto-kalley/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/control-remoto-lg/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/control-remoto-master-g/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/control-remoto-noblex/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/control-remoto-roku/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/control-remoto-samsung/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/guias/</loc><lastmod>2026-11-21</lastmod></url>
@@ -49,21 +55,34 @@
   <url><loc>https://mandotv.app/en/guides/connect-phone-to-tv-wifi/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/control-tv-from-pc/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/fire-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/google-tv-remote-app-alternative/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/hisense-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/insignia-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/lg-thinq-app-alternative/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/lost-fire-tv-remote/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/lost-lg-remote/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/lost-roku-remote/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/lost-tv-remote/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/onn-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/philips-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/phone-cant-find-tv/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/pioneer-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/roku-app-alternative/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/roku-remote-app-not-working/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/samsung-tv-without-remote/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/sharp-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/smartthings-tv-remote-alternative/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/sony-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/tcl-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/toshiba-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/turn-on-lg-tv-with-phone/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/turn-on-tv-console-hdmi-without-remote/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/turn-on-tv-without-remote/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/tv-remote-app-for-iphone/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/tv-remote-app-for-windows/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/tv-remote-app-no-subscription/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/vizio-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://mandotv.app/en/guides/westinghouse-tv-remote-app/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/lg-tv-remote/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/privacy.html</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://mandotv.app/en/roku-remote/</loc><lastmod>2026-11-21</lastmod></url>

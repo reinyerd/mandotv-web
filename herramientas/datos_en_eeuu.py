@@ -271,3 +271,7 @@ if not FIRE_TV_PUBLICADO:
           g[k] = nv
   _faltan = [(c, a) for c, l in _CAMBIOS.items() for a, b in l if (c, a) not in _hechos and a != b]
   assert not _faltan, _faltan
+
+# 2026-11-21: rescate, alternativas y marcas nuevas (datos_en_nuevas.py).
+from datos_en_nuevas import GUIAS_NUEVAS, GUIAS_MARCAS_EN
+GUIAS_EEUU += GUIAS_NUEVAS

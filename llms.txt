@@ -1,6 +1,6 @@
 # Mando TV
 
-> Mando TV is a universal TV remote app for phones and computers (iPhone, iPad, Android and Windows). It controls Samsung (Tizen), LG (webOS), Roku and Google TV / Android TV televisions (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, Chromecast with Google TV and others) over the home Wi-Fi network. It has no ads, needs no account, and Mando TV has no servers that store what you do. The remote is free; Pro is an optional one-time purchase with no subscription.
+> Mando TV is a universal TV remote app for phones and computers (iPhone, iPad, Android and Windows). It controls Samsung (Tizen), LG (webOS), Roku and Google TV / Android TV televisions (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, Chromecast with Google TV and others), plus Fire TV (Fire TV Stick, Fire TV Cube and TVs with Fire TV built in, paired with a 4-digit PIN), over the home Wi-Fi network. It does not mirror the phone screen. It has no ads, needs no account, and Mando TV has no servers that store what you do. The remote is free; Pro is an optional one-time purchase with no subscription.
 
 Key facts:
 
@@ -22,6 +22,24 @@ Key facts:
 - [Guides](https://mandotv.app/en/guides/): lost remote, change HDMI input without a remote, turn on the TV with the phone, phone cannot find the TV
 - [Support](https://mandotv.app/en/support.html)
 - [Privacy](https://mandotv.app/en/privacy.html)
+
+## Guides by problem (English)
+
+- [Lost Fire TV remote](https://mandotv.app/en/guides/lost-fire-tv-remote/): use the phone, new Wi-Fi hotspot trick, HDMI-CEC
+- [Turn on a TV without the remote](https://mandotv.app/en/guides/turn-on-tv-without-remote/): power button by brand, HDMI-CEC, power-on from the phone
+- [TV remote app with no subscription](https://mandotv.app/en/guides/tv-remote-app-no-subscription/): comparison table, what Mando TV does and does not do
+- [SmartThings TV remote alternative](https://mandotv.app/en/guides/smartthings-tv-remote-alternative/): Samsung Tizen TVs without a Samsung account
+- [Google TV remote app alternative](https://mandotv.app/en/guides/google-tv-remote-app-alternative/): Google TV and Android TV without a Google account
+
+## TV remote app by brand (English)
+
+Each page says which systems that brand uses and which ones Mando TV controls (Roku TV, Google TV / Android TV, Fire TV) and which ones it does not (for example Xumo TV, Titan OS, VIDAA and TVs powered by VIZIO).
+
+- [Sony](https://mandotv.app/en/guides/sony-tv-remote-app/), [TCL](https://mandotv.app/en/guides/tcl-tv-remote-app/), [Hisense](https://mandotv.app/en/guides/hisense-tv-remote-app/), [Insignia](https://mandotv.app/en/guides/insignia-tv-remote-app/), [onn.](https://mandotv.app/en/guides/onn-tv-remote-app/), [Toshiba](https://mandotv.app/en/guides/toshiba-tv-remote-app/), [Sharp](https://mandotv.app/en/guides/sharp-tv-remote-app/), [Philips](https://mandotv.app/en/guides/philips-tv-remote-app/), [Westinghouse](https://mandotv.app/en/guides/westinghouse-tv-remote-app/), [Pioneer](https://mandotv.app/en/guides/pioneer-tv-remote-app/), [Vizio (not supported, real options)](https://mandotv.app/en/guides/vizio-tv-remote-app/)
+
+## Marcas de Latinoamérica (español)
+
+- [Master G](https://mandotv.app/control-remoto-master-g/), [Kalley](https://mandotv.app/control-remoto-kalley/), [Caixun](https://mandotv.app/control-remoto-caixun/), [Hyundai](https://mandotv.app/control-remoto-hyundai/), [Noblex](https://mandotv.app/control-remoto-noblex/), [BGH](https://mandotv.app/control-remoto-bgh/): models with Google TV / Android TV or Roku TV
 
 ## Other languages
 
