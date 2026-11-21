@@ -106,7 +106,7 @@ GUIAS = [
     marca=None,
     faq=[
       ('¿Necesito un cable o Bluetooth para controlar el TV desde el PC?', 'No. Mando TV se conecta por la red de tu casa: basta con que el PC y el TV estén en el mismo router.'),
-      ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, TCL, Philips, Xiaomi y otros).'),
+      ('¿Funciona con cualquier TV?', 'Con Samsung con Tizen (2016 en adelante), LG con webOS, Roku y Google TV o Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth y otros).'),
       ('¿Cuánto cuesta?', 'Los botones, el teclado y el encendido por red son gratis y sin anuncios. Mando TV Pro es un pago único, sin suscripción, para funciones extra como el touchpad, las apps, los atajos del teclado del PC y el mini control.'),
       ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa dos cosas: que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz, y que Windows tenga agregado un idioma que admita el dictado (en español, Español (México) o Español (España), en Configuración > Hora e idioma > Idioma y región). Español (Chile) u otras variantes no sirven para dictar, pero puedes tener las dos: Mando TV usa la que corresponde solo mientras escucha.'),
     ]),
@@ -177,7 +177,7 @@ GUIAS = [
     ],
     marca=('control-remoto-android-tv', 'Control remoto para Android TV'),
     faq=[
-      ('¿Qué televisores usan este código?', 'Los que traen Android TV o Google TV: Sony, TCL, Philips, Xiaomi, el Chromecast con Google TV y varios más.'),
+      ('¿Qué televisores usan este código?', 'Los que traen Android TV o Google TV: Sony, Philips, TCL, Hisense, Sharp, Xiaomi, el Chromecast con Google TV y varios más.'),
       ('¿Necesito una cuenta de Google en el celular?', 'No. El código de la pantalla es lo único que hace falta.'),
       ('¿Es seguro?', 'Sí. El código demuestra que estás frente al TV: sin verlo en la pantalla nadie puede emparejarse.'),
     ]),
@@ -315,7 +315,7 @@ GUIAS = [
     titulo='Android TV sin control remoto: úsalo desde el celular',
     desc='¿Sin el control de tu Android TV o Google TV? Conecta el celular con el código de 6 caracteres de la pantalla. Gratis, sin cuenta y sin anuncios.',
     h1='Android TV sin control remoto: cómo usarlo desde el celular',
-    intro='Si perdiste el control de tu Android TV o Google TV, o se quedó sin pilas, el celular lo reemplaza. Lo mejor es que conectarlo no necesita el control: el TV muestra un código en la pantalla y lo escribes en el celular. Sirve en Sony, TCL, Philips, Xiaomi, Hisense con Android TV, Chromecast con Google TV y Nvidia Shield.',
+    intro='Si perdiste el control de tu Android TV o Google TV, o se quedó sin pilas, el celular lo reemplaza. Lo mejor es que conectarlo no necesita el control: el TV muestra un código en la pantalla y lo escribes en el celular. Sirve en Sony, Philips, TCL, Hisense, Sharp, Xiaomi con Android TV, Chromecast con Google TV y Nvidia Shield.',
     pasos=[
       'Enciende el TV con su botón físico. Casi siempre está abajo, al centro, o detrás en una esquina.',
       'Conecta el celular al mismo WiFi que el TV.',
@@ -520,7 +520,7 @@ def pagina(g):
         <span>Hecho en Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
+      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -621,7 +621,7 @@ def indice():
         <span>Hecho en Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
+      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -659,7 +659,7 @@ UI = {
     apple_aria='Download Mando TV free on the App Store', ms_aria='Download Mando TV free on Microsoft Store',
     gp_aria='Early access to Mando TV on Google Play for Android', descarga='Download on', anticipada='Early access on',
     nota='Android: free early access on Google Play. <a href="/#android">Join in two steps</a> and help us reach the store.',
-    aviso='Mando TV is not affiliated with LG, Samsung, Roku or Google. Brands named belong to their owners and are mentioned only to show compatibility.',
+    aviso='Mando TV is an independent app. It is not affiliated with or endorsed by the TV makers named, Google, Amazon or Roku. Trademarks belong to their owners and are used only to indicate compatibility. Android TV and Google TV are trademarks of Google LLC.',
     migas_inicio='Home', pie='Footer', principal='Main', ruta='Breadcrumb', aria_desc='Download Mando TV', privacidad='Privacy',
     guia_nombre='Guide'),
 }

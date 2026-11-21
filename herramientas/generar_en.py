@@ -184,7 +184,7 @@ def pie(clave):
         <span>Made in Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV is not affiliated with LG, Samsung, Roku, Google, Amazon, TCL, Hisense or Vizio. Brands named belong to their owners and are mentioned only to show compatibility.</small>
+      <small>Mando TV is an independent app. It is not affiliated with or endorsed by the TV makers named, Google, Amazon or Roku. Trademarks belong to their owners and are used only to indicate compatibility. Android TV and Google TV are trademarks of Google LLC.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>
@@ -294,7 +294,7 @@ MARCAS = [
     h1='Android TV Remote App for Your Phone',
     corto='Android TV and Google TV',
     intro='Mando TV is an Android TV remote app: it turns your phone or computer into the remote for your Android TV or Google TV, over your home Wi-Fi. It also works from an iPhone and from Windows.',
-    compat='TVs with Android TV or Google TV (Sony, TCL, Philips, Xiaomi, Hisense and others), Chromecast with Google TV, Google TV Streamer and Nvidia Shield.',
+    compat='TVs with Google TV or Android TV from Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu and other brands, plus Chromecast with Google TV, Google TV Streamer, onn. and Nvidia Shield. Some of these brands also sell models with a different system: if your TV shows the Google TV home screen or has the Google Play store, Mando TV can control it.',
     funciones=[
       ('All the buttons', 'D-pad, OK, Back, Home, volume, mute and playback.'),
       ('Touchpad (Pro)', 'Swipe your finger to move quickly through the Google TV menus.'),
@@ -474,7 +474,7 @@ GUIAS = [
     titulo='Android TV Without a Remote: Use Your Phone',
     desc='No Android TV or Google TV remote? Connect your phone with the 6-character code on the screen. Free, no account, no ads.',
     h1='Android TV Without a Remote: How to Use Your Phone',
-    intro='If you lost your Android TV or Google TV remote, or it ran out of batteries, your phone replaces it. The best part is that connecting does not need the remote: the TV shows a code on the screen and you type it on your phone. It works on Sony, TCL, Philips, Xiaomi and Hisense TVs with Android TV, Chromecast with Google TV and Nvidia Shield.',
+    intro='If you lost your Android TV or Google TV remote, or it ran out of batteries, your phone replaces it. The best part is that connecting does not need the remote: the TV shows a code on the screen and you type it on your phone. It works on Sony, Philips, TCL, Hisense, Sharp and Xiaomi TVs with Android TV, Chromecast with Google TV and Nvidia Shield.',
     pasos=[
       'Turn on the TV with its physical button. It is almost always at the bottom center, or on the back near a corner.',
       'Connect your phone to the same Wi-Fi network as the TV.',
@@ -583,7 +583,7 @@ GUIAS = [
     marca=None,
     faq=[
       ('Do I need a cable or Bluetooth to control the TV from my PC?', 'No. Mando TV connects over your home network: the PC and the TV only need to be on the same router.'),
-      ('Does it work with any TV?', 'It works with Samsung TVs running Tizen (2016 and newer), LG with webOS, Roku, and Google TV or Android TV (Sony, TCL, Philips, Xiaomi and others).'),
+      ('Does it work with any TV?', 'It works with Samsung TVs running Tizen (2016 and newer), LG with webOS, Roku, and Google TV or Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth and others).'),
       ('How much does it cost?', 'The buttons, the keyboard and power-on over the network are free and ad-free. Mando TV Pro is a one-time purchase, no subscription, for extras such as the touchpad, the apps, the PC keyboard shortcuts and the mini remote.'),
       ('Why does the microphone not understand me on Windows?', 'Check two things: "Online speech recognition" is on in Settings > Privacy & security > Speech, and Windows has a language that supports voice typing (Settings > Time & language > Language & region). Mando TV switches to it only while it listens.'),
     ]),
@@ -653,7 +653,7 @@ GUIAS = [
     ],
     marca=('/en/android-tv-remote/', 'Android TV remote app'),
     faq=[
-      ('Which TVs use this code?', 'The ones with Android TV or Google TV: Sony, TCL, Philips, Xiaomi, Chromecast with Google TV and several more.'),
+      ('Which TVs use this code?', 'The ones with Android TV or Google TV: Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast with Google TV and several more.'),
       ('Do I need a Google account on my phone?', 'No. The code on the screen is all you need.'),
       ('Is it safe?', 'Yes. The code proves you are in front of the TV: nobody can pair without seeing it on the screen.'),
     ]),
@@ -891,7 +891,7 @@ def pagina_soporte():
           <p>Roku does not ask for permission. If it does not connect, on the Roku go to Settings, System, Advanced system settings, Control by mobile apps, and leave network access on Default or Permissive (on newer Roku software, set Control by mobile apps to Enabled).</p>
         </details>
         <details><summary>Android TV and Google TV</summary>
-          <p>The TV shows a 6-character code. Type it into Mando TV exactly as it appears. It works for Sony, TCL, Philips, Xiaomi, Chromecast with Google TV and others with Android TV.</p>
+          <p>The TV shows a 6-character code. Type it into Mando TV exactly as it appears. It works for Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast with Google TV and others with Android TV.</p>
         </details>
       </div>
 

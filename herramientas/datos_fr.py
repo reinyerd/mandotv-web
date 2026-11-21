@@ -10,7 +10,7 @@ UI = dict(
   aria_home='Mando TV, accueil', aria_main='Principal', nav_que='Fonctions', nav_ayuda='Aide', nav_contacto='Contact',
   asunto='Bonjour%20Mando%20TV', inicio='Accueil', privacidad='Confidentialité', aria_pie='Pied de page', aria_ruta="Fil d'Ariane",
   aria_marcas='Marques et guides', hecho='Conçu au Chili',
-  aviso="Mando TV n'est affilié ni à LG, ni à Samsung, ni à Roku, ni à Google. Les marques citées appartiennent à leurs propriétaires et ne sont mentionnées que pour indiquer la compatibilité.",
+  aviso="Mando TV est une app indépendante : elle n'est ni affiliée aux fabricants de TV cités ni à Google, Amazon ou Roku, ni approuvée par eux. Les marques appartiennent à leurs propriétaires et sont citées uniquement pour indiquer la compatibilité. Android TV et Google TV sont des marques de Google LLC.",
   bajar='Télécharger gratuitement', descarga='Télécharger sur', anticipada='Accès anticipé sur',
   apple_aria="Télécharger Mando TV gratuitement sur l'App Store", ms_aria='Télécharger Mando TV gratuitement sur le Microsoft Store',
   gp_aria='Accès anticipé à Mando TV sur Google Play pour Android', aria_desc='Télécharger Mando TV',
@@ -171,7 +171,7 @@ MARCAS = [
     desc="Votre téléphone ou PC comme télécommande Android TV (Sony, TCL, Xiaomi), en Wi-Fi. Touches, clavier et allumage gratuits ; pavé tactile et apps avec Pro.",
     h1='Télécommande Android TV : application pour votre téléphone',
     intro="Mando TV est une application de télécommande pour Android TV : elle transforme votre téléphone ou votre ordinateur, via le Wi-Fi de la maison, en télécommande de votre Android TV ou Google TV. Elle fonctionne aussi depuis un iPhone et depuis Windows.",
-    compat="Téléviseurs sous Android TV ou Google TV (Sony, TCL, Philips, Xiaomi, Hisense et autres), Chromecast avec Google TV, Google TV Streamer et Nvidia Shield.",
+    compat="Téléviseurs sous Google TV ou Android TV de Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu et d'autres marques, ainsi que Chromecast avec Google TV, Google TV Streamer, onn. et Nvidia Shield. Certaines de ces marques vendent aussi des modèles avec un autre système : si votre TV affiche l'écran d'accueil de Google TV ou propose la boutique Google Play, Mando TV la pilote.",
     h2=dict(funciones='Ce que vous pouvez faire avec votre Android TV', como='Comment connecter votre Android TV à Mando TV',
             encender='Allumer votre Android TV depuis le téléphone', preguntas='Questions sur Android TV', guias='Guides pour Android TV'),
     funciones=[
@@ -279,7 +279,7 @@ GUIAS = [
     titulo='Android TV sans télécommande : utilisez le téléphone',
     desc="Plus de télécommande Android TV ou Google TV ? Connectez votre téléphone avec le code à 6 caractères affiché à l'écran. Gratuit, sans compte, sans pub.",
     h1='Android TV sans télécommande : comment utiliser votre téléphone',
-    intro="Si vous avez perdu la télécommande de votre Android TV ou Google TV, ou si ses piles sont vides, votre téléphone la remplace. Le plus beau, c'est que la connexion n'a pas besoin de la télécommande : la TV affiche un code à l'écran et vous le saisissez sur votre téléphone. Cela fonctionne sur les TV Sony, TCL, Philips, Xiaomi et Hisense sous Android TV, sur Chromecast avec Google TV et sur Nvidia Shield.",
+    intro="Si vous avez perdu la télécommande de votre Android TV ou Google TV, ou si ses piles sont vides, votre téléphone la remplace. Le plus beau, c'est que la connexion n'a pas besoin de la télécommande : la TV affiche un code à l'écran et vous le saisissez sur votre téléphone. Cela fonctionne sur les TV Sony, Philips, TCL, Hisense, Sharp et Xiaomi sous Android TV, sur Chromecast avec Google TV et sur Nvidia Shield.",
     pasos=[
       "Allumez la TV avec son bouton physique. Il se trouve presque toujours en bas au centre, ou à l'arrière près d'un coin.",
       'Connectez votre téléphone au même réseau Wi-Fi que la TV.',
@@ -413,7 +413,7 @@ GUIAS = [
     marca=None,
     faq=[
       ("Faut-il un câble ou le Bluetooth pour contrôler la TV depuis mon PC ?", "Non. Mando TV se connecte via votre réseau domestique : le PC et la TV doivent seulement être sur la même box."),
-      ('Cela fonctionne-t-il avec toutes les TV ?', "Cela fonctionne avec les TV Samsung sous Tizen (2016 et plus récentes), LG sous webOS, Roku, et Google TV ou Android TV (Sony, TCL, Philips, Xiaomi et autres)."),
+      ('Cela fonctionne-t-il avec toutes les TV ?', "Cela fonctionne avec les TV Samsung sous Tizen (2016 et plus récentes), LG sous webOS, Roku, et Google TV ou Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth et autres)."),
       ('Combien cela coûte-t-il ?', "Les touches, le clavier et l'allumage par le réseau sont gratuits et sans publicité. Mando TV Pro est un achat unique, sans abonnement, pour des extras comme le pavé tactile, les applications, les raccourcis clavier du PC et la mini télécommande."),
       ('Pourquoi le micro ne me comprend pas sous Windows ?', "Vérifiez deux choses : la « Reconnaissance vocale en ligne » est activée dans les paramètres de confidentialité de Windows, et Windows a le français (France) ou (Canada) dans les paramètres de langue. Mando TV utilise cette langue seulement pendant l'écoute."),
     ]),
@@ -483,7 +483,7 @@ GUIAS = [
     ],
     marca='android',
     faq=[
-      ('Quelles TV utilisent ce code ?', "Celles sous Android TV ou Google TV : Sony, TCL, Philips, Xiaomi, Chromecast avec Google TV et plusieurs autres."),
+      ('Quelles TV utilisent ce code ?', "Celles sous Android TV ou Google TV : Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast avec Google TV et plusieurs autres."),
       ("Ai-je besoin d'un compte Google sur mon téléphone ?", "Non. Le code affiché à l'écran suffit."),
       ('Est-ce sûr ?', "Oui. Le code prouve que vous êtes devant la TV : personne ne peut associer un appareil sans le voir à l'écran."),
     ]),
@@ -546,7 +546,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
           <p>Roku ne demande pas d'autorisation. Si la connexion échoue, sur le Roku allez dans Paramètres > Système > Paramètres système avancés > Contrôle par applications mobiles et laissez l'accès au réseau sur Par défaut ou Permissif.</p>
         </details>
         <details><summary>Android TV et Google TV</summary>
-          <p>La TV affiche un code de 6 caractères. Saisissez-le dans Mando TV exactement comme il apparaît. Cela fonctionne pour Sony, TCL, Philips, Xiaomi, Chromecast avec Google TV et d'autres sous Android TV.</p>
+          <p>La TV affiche un code de 6 caractères. Saisissez-le dans Mando TV exactement comme il apparaît. Cela fonctionne pour Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast avec Google TV et d'autres sous Android TV.</p>
         </details>
       </div>
 

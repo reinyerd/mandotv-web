@@ -91,7 +91,7 @@ MARCAS = [
     desc='Tu celular o PC como control de Google TV o Android TV (Sony, TCL, Xiaomi) por WiFi. Botones, teclado y encendido gratis; touchpad y apps con Pro.',
     h1='Control remoto para Android TV',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Android TV o Google TV, por la red WiFi de tu casa. También en iPhone y en Windows.',
-    compat='Televisores con Android TV o Google TV (Sony, TCL, Philips, Xiaomi, Hisense y otros), Chromecast con Google TV, Google TV Streamer y Nvidia Shield.',
+    compat='Televisores con Google TV o Android TV de Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu y otras marcas, además de Chromecast con Google TV, Google TV Streamer, onn. y Nvidia Shield. Algunas de estas marcas también venden modelos con otro sistema: si tu TV muestra la pantalla de inicio de Google TV o trae la tienda Google Play, Mando TV lo maneja.',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio y reproducción.'),
       ('Touchpad (Pro)', 'Desliza el dedo para moverte rápido por los menús de Google TV.'),
@@ -272,7 +272,7 @@ def pagina(m):
         <span>Hecho en Chile</span>
       </div>
 {pie_marcas()}      <p class="pie-gigante" aria-hidden="true">MANDO</p>
-      <small>Mando TV no está afiliado a LG, Samsung, Roku ni Google. Las marcas nombradas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad.</small>
+      <small>Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC.</small>
     </div>
   </footer>
   <script src="/correo.js?v=3" defer></script>

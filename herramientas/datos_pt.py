@@ -17,7 +17,7 @@ UI = dict(
   aria_home='Mando TV, início', aria_main='Principal', nav_que='Recursos', nav_ayuda='Ajuda', nav_contacto='Contato',
   asunto='Ol%C3%A1%20Mando%20TV', inicio='Início', privacidad='Privacidade', aria_pie='Rodapé', aria_ruta='Caminho',
   aria_marcas='Marcas e guias', hecho='Feito no Chile',
-  aviso='O Mando TV não é afiliado à LG, Samsung, Roku nem Google. As marcas citadas pertencem aos seus donos e aparecem só para indicar compatibilidade.',
+  aviso='O Mando TV é um app independente: não é afiliado aos fabricantes de TV citados nem ao Google, à Amazon ou à Roku, e não tem o apoio deles. As marcas pertencem aos seus donos e são mencionadas apenas para indicar compatibilidade. Android TV e Google TV são marcas do Google LLC.',
   bajar='Baixar grátis', descarga='Baixe na', anticipada='Teste antecipado no',
   apple_aria='Baixar o Mando TV grátis na App Store', ms_aria='Baixar o Mando TV grátis na Microsoft Store',
   gp_aria='Teste antecipado do Mando TV no Google Play para Android', aria_desc='Baixar o Mando TV',
@@ -178,7 +178,7 @@ MARCAS = [
     desc='Use o celular ou o PC como controle remoto da Android TV (Sony, TCL, Xiaomi), por Wi-Fi. Teclas e ligar grátis; touchpad e apps no Pro.',
     h1='Controle remoto Android TV: app para o seu celular',
     intro='O Mando TV é um app de controle remoto para Android TV: ele transforma o celular ou o computador, pelo Wi-Fi de casa, no controle da sua Android TV ou Google TV. Funciona também a partir de um iPhone e do Windows.',
-    compat='TVs com Android TV ou Google TV (Sony, TCL, Philips, Xiaomi, Hisense e outras), Chromecast com Google TV, Google TV Streamer e Nvidia Shield.',
+    compat='TVs com Google TV ou Android TV da Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu e outras marcas, além do Chromecast com Google TV, Google TV Streamer, onn. e Nvidia Shield. Algumas dessas marcas também vendem modelos com outro sistema: se a sua TV mostra a tela inicial do Google TV ou tem a loja Google Play, o Mando TV controla.',
     h2=dict(funciones='O que você pode fazer com a sua Android TV', como='Como conectar a Android TV ao Mando TV',
             encender='Ligar a Android TV pelo celular', preguntas='Perguntas sobre Android TV', guias='Guias para Android TV'),
     funciones=[
@@ -286,7 +286,7 @@ GUIAS = [
     titulo='Android TV sem controle remoto: use o celular',
     desc='Sem o controle da Android TV ou do Google TV? Conecte o celular com o código de 6 caracteres da tela. Grátis, sem conta e sem anúncios.',
     h1='Android TV sem controle remoto: como usar o celular',
-    intro='Se você perdeu o controle da Android TV ou do Google TV, ou as pilhas acabaram, o celular o substitui. O melhor é que a conexão não precisa do controle: a TV mostra um código na tela e você o digita no celular. Funciona em TVs Sony, TCL, Philips, Xiaomi e Hisense com Android TV, no Chromecast com Google TV e na Nvidia Shield.',
+    intro='Se você perdeu o controle da Android TV ou do Google TV, ou as pilhas acabaram, o celular o substitui. O melhor é que a conexão não precisa do controle: a TV mostra um código na tela e você o digita no celular. Funciona em TVs Sony, Philips, TCL, Hisense, Sharp e Xiaomi com Android TV, no Chromecast com Google TV e na Nvidia Shield.',
     pasos=[
       'Ligue a TV pelo botão físico. Quase sempre fica embaixo no centro ou atrás, perto de um canto.',
       'Conecte o celular ao mesmo Wi-Fi da TV.',
@@ -420,7 +420,7 @@ GUIAS = [
     marca=None,
     faq=[
       ('Preciso de cabo ou Bluetooth para controlar a TV pelo PC?', 'Não. O Mando TV conecta pela rede da sua casa: o PC e a TV só precisam estar no mesmo roteador.'),
-      ('Funciona com todas as TVs?', 'Funciona com TVs Samsung com Tizen (2016 em diante), LG com webOS, Roku e Google TV ou Android TV (Sony, TCL, Philips, Xiaomi e outras).'),
+      ('Funciona com todas as TVs?', 'Funciona com TVs Samsung com Tizen (2016 em diante), LG com webOS, Roku e Google TV ou Android TV (Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth e outras).'),
       ('Quanto custa?', 'As teclas, o teclado e o ligar pela rede são grátis e sem anúncios. O Mando TV Pro é uma compra única, sem assinatura, para extras como touchpad, aplicativos, atalhos do teclado do PC e o mini controle.'),
       ('Por que o microfone não me entende no Windows?', 'Confira duas coisas: que o "Reconhecimento de fala online" esteja ativado nas configurações de privacidade do Windows e que o Windows tenha Português (Brasil) ou Português (Portugal) nas configurações de idioma. O Mando TV usa esse idioma só enquanto escuta.'),
     ]),
@@ -490,7 +490,7 @@ GUIAS = [
     ],
     marca='android',
     faq=[
-      ('Quais TVs usam esse código?', 'As que têm Android TV ou Google TV: Sony, TCL, Philips, Xiaomi, Chromecast com Google TV e várias outras.'),
+      ('Quais TVs usam esse código?', 'As que têm Android TV ou Google TV: Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast com Google TV e várias outras.'),
       ('Preciso de conta Google no celular?', 'Não. O código que aparece na tela basta.'),
       ('É seguro?', 'Sim. O código prova que você está diante da TV: ninguém consegue parear um aparelho sem ver a tela.'),
     ]),
@@ -553,7 +553,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Encontrar a TV</h2>
           <p>A Roku não pede permissão. Se a conexão falhar, na Roku vá em Configurações > Sistema > Configurações avançadas do sistema > Controle por aplicativos móveis ("Control by mobile apps") e deixe o acesso à rede em Padrão ou Permissivo (nas versões mais novas do software da Roku, deixe "Control by mobile apps" em "Enabled").</p>
         </details>
         <details><summary>Android TV e Google TV</summary>
-          <p>A TV mostra um código de 6 caracteres. Digite no Mando TV exatamente como aparece. Funciona para Sony, TCL, Philips, Xiaomi, Chromecast com Google TV e outras com Android TV.</p>
+          <p>A TV mostra um código de 6 caracteres. Digite no Mando TV exatamente como aparece. Funciona para Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast com Google TV e outras com Android TV.</p>
         </details>
       </div>
 
