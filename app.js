@@ -307,7 +307,9 @@
     if (flotaPista) { flotaPista.cancel(); flotaPista = null; }
     chip.classList.remove('pista');
     chip.textContent = t.txt;
-    if (navigator.vibrate) { try { navigator.vibrate(8); } catch (err) { /* sin vibración */ } }
+    // Vibra solo si el navegador ya registró un toque real (si no, Chrome bloquea la llamada y deja un error en la consola).
+    var activo = !navigator.userActivation || navigator.userActivation.hasBeenActive;
+    if (navigator.vibrate && activo) { try { navigator.vibrate(8); } catch (err) { /* sin vibración */ } }
     if (chip.animate) {
       chip.animate([{ opacity: 0, transform: 'translateY(6px) scale(.96)' }, { opacity: 1, transform: 'none' }],
         { duration: 180, easing: 'cubic-bezier(.23, 1, .32, 1)', fill: 'both' });
