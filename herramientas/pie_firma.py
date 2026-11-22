@@ -23,12 +23,12 @@ IDIOMA_NOMBRE = dict(
 )
 
 IDIOMA_TEXTO = dict(
-    es=('El control remoto de todos tus televisores, en el celular o el computador.', 'Descargar', 'Para iPhone, iPad, Mac, Android y Windows', 'Idioma'),
-    en=('One remote for every TV in your home, on your phone or computer.', 'Download', 'For iPhone, iPad, Mac, Android and Windows', 'Language'),
-    pt=('O controle remoto de todas as suas TVs, no celular ou no computador.', 'Baixar', 'Para iPhone, iPad, Mac, Android e Windows', 'Idioma'),
-    fr=('La télécommande de tous vos téléviseurs, sur votre téléphone ou votre ordinateur.', 'Télécharger', 'Pour iPhone, iPad, Mac, Android et Windows', 'Langue'),
-    de=('Die Fernbedienung für alle deine Fernseher, auf dem Handy oder am Computer.', 'Herunterladen', 'Für iPhone, iPad, Mac, Android und Windows', 'Sprache'),
-    it=('Il telecomando di tutte le tue TV, sullo smartphone o sul computer.', 'Scarica', 'Per iPhone, iPad, Mac, Android e Windows', 'Lingua'),
+    es=('El control remoto de todos tus televisores, en el celular o el computador.', 'Descargar', 'Para iPhone, iPad, Android y Windows', 'Idioma'),
+    en=('One remote for every TV in your home, on your phone or computer.', 'Download', 'For iPhone, iPad, Android and Windows', 'Language'),
+    pt=('O controle remoto de todas as suas TVs, no celular ou no computador.', 'Baixar', 'Para iPhone, iPad, Android e Windows', 'Idioma'),
+    fr=('La télécommande de tous vos téléviseurs, sur votre téléphone ou votre ordinateur.', 'Télécharger', 'Pour iPhone, iPad, Android et Windows', 'Langue'),
+    de=('Die Fernbedienung für alle deine Fernseher, auf dem Handy oder am Computer.', 'Herunterladen', 'Für iPhone, iPad, Android und Windows', 'Sprache'),
+    it=('Il telecomando di tutte le tue TV, sullo smartphone o sul computer.', 'Scarica', 'Per iPhone, iPad, Android e Windows', 'Lingua'),
 )
 
 INICIO_LANG = dict(es='/', en='/en/', pt='/pt/', fr='/fr/', de='/de/', it='/it/')

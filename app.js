@@ -12,7 +12,7 @@
   // Textos en español (página raíz). Las páginas en otros idiomas (/en/, /de/, /fr/, /pt/, /it/) toman los suyos de
   // TEXTOS según <html lang>.
   var ES = {
-    mac: 'Descargar gratis para Mac', ipad: 'Descargar gratis para iPad', iphone: 'Descargar gratis para iPhone', windows: 'Descargar gratis para Windows',
+    ipad: 'Descargar gratis para iPad', iphone: 'Descargar gratis para iPhone', windows: 'Descargar gratis para Windows',
     android: 'Descargar gratis para Android', boton: 'Descargar gratis',
     notaAndroid: 'En Android es una prueba anticipada en Google Play: son dos pasos.',
     barra: 'Descargar', claro: 'Claro', oscuro: 'Oscuro', pausar: 'Pausar las marcas', reanudar: 'Reanudar las marcas',
@@ -26,7 +26,7 @@
         roku: ['Roku', 'Roku: TVs and players, nothing to pair.'],
         android: ['Google TV', 'Google TV and Android TV (Sony, TCL, Philips, Xiaomi and more): you type the code the screen shows.']
       },
-      mac: 'Download free for Mac', ipad: 'Download free for iPad', iphone: 'Download free for iPhone', windows: 'Download free for Windows',
+      ipad: 'Download free for iPad', iphone: 'Download free for iPhone', windows: 'Download free for Windows',
       android: 'Download free for Android', boton: 'Download free',
       notaAndroid: "On Android it's early access on Google Play: two quick steps.",
       barra: 'Download', claro: 'Light', oscuro: 'Dark', pausar: 'Pause the brands', reanudar: 'Play the brands',
@@ -39,7 +39,7 @@
         roku: ['Roku', 'Roku: Fernseher und Player, ohne etwas zu koppeln.'],
         android: ['Google TV', 'Google TV und Android TV (Sony, TCL, Philips, Xiaomi und mehr): Du gibst den Code ein, den der Bildschirm zeigt.']
       },
-      mac: 'Kostenlos für Mac laden', ipad: 'Kostenlos für iPad laden', iphone: 'Kostenlos für iPhone laden', windows: 'Kostenlos für Windows laden',
+      ipad: 'Kostenlos für iPad laden', iphone: 'Kostenlos für iPhone laden', windows: 'Kostenlos für Windows laden',
       android: 'Kostenlos für Android laden', boton: 'Kostenlos laden',
       notaAndroid: 'Auf Android gibt es einen frühen Zugang über Google Play: zwei Schritte.',
       barra: 'Laden', claro: 'Hell', oscuro: 'Dunkel', pausar: 'Marken anhalten', reanudar: 'Marken fortsetzen',
@@ -52,7 +52,7 @@
         roku: ['Roku', 'Roku : téléviseurs et lecteurs, rien à associer.'],
         android: ['Google TV', "Google TV et Android TV (Sony, TCL, Philips, Xiaomi et plus) : vous saisissez le code affiché à l'écran."]
       },
-      mac: 'Télécharger gratuitement pour Mac', ipad: 'Télécharger gratuitement pour iPad', iphone: 'Télécharger gratuitement pour iPhone', windows: 'Télécharger gratuitement pour Windows',
+      ipad: 'Télécharger gratuitement pour iPad', iphone: 'Télécharger gratuitement pour iPhone', windows: 'Télécharger gratuitement pour Windows',
       android: 'Télécharger gratuitement pour Android', boton: 'Télécharger gratuitement',
       notaAndroid: "Sur Android, c'est un accès anticipé sur Google Play : deux étapes.",
       barra: 'Télécharger', claro: 'Clair', oscuro: 'Sombre', pausar: 'Mettre les marques en pause', reanudar: 'Relancer les marques',
@@ -65,7 +65,7 @@
         roku: ['Roku', 'Roku: TVs e aparelhos, sem precisar parear nada.'],
         android: ['Google TV', 'Google TV e Android TV (Sony, TCL, Philips, Xiaomi e outras): você digita o código que aparece na tela.']
       },
-      mac: 'Baixar grátis para Mac', ipad: 'Baixar grátis para iPad', iphone: 'Baixar grátis para iPhone', windows: 'Baixar grátis para Windows',
+      ipad: 'Baixar grátis para iPad', iphone: 'Baixar grátis para iPhone', windows: 'Baixar grátis para Windows',
       android: 'Baixar grátis para Android', boton: 'Baixar grátis',
       notaAndroid: 'No Android é um teste antecipado no Google Play: são dois passos.',
       barra: 'Baixar', claro: 'Claro', oscuro: 'Escuro', pausar: 'Pausar as marcas', reanudar: 'Retomar as marcas',
@@ -78,7 +78,7 @@
         roku: ['Roku', 'Roku: televisori e dispositivi, senza nulla da associare.'],
         android: ['Google TV', 'Google TV e Android TV (Sony, TCL, Philips, Xiaomi e altre): inserisci il codice che compare sullo schermo.']
       },
-      mac: 'Scarica gratis per Mac', ipad: 'Scarica gratis per iPad', iphone: 'Scarica gratis per iPhone', windows: 'Scarica gratis per Windows',
+      ipad: 'Scarica gratis per iPad', iphone: 'Scarica gratis per iPhone', windows: 'Scarica gratis per Windows',
       android: 'Scarica gratis per Android', boton: 'Scarica gratis',
       notaAndroid: 'Su Android è un accesso anticipato su Google Play: bastano due passaggi.',
       barra: 'Scarica', claro: 'Chiaro', oscuro: 'Scuro', pausar: 'Metti in pausa le marche', reanudar: 'Riprendi le marche',
@@ -229,13 +229,13 @@
   actualizar();
 
   // Tu equipo: iPhone, iPad, Android o Windows. El botón Descargar va directo a su tienda (Android, en prueba
-  // anticipada, baja a los dos pasos para unirse). Se elige sola según el aparato.
+  // anticipada, baja a los dos pasos para unirse). Se elige sola según el aparato; en Mac se propone iPhone.
   var principal = document.getElementById('boton-principal');
   var textoPrincipal = document.getElementById('boton-principal-texto');
   var notaBoton = document.getElementById('boton-nota');
   var APPLE = 'https://apps.apple.com/app/id6834927348';
   var MICROSOFT = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct';
-  var destinos = { iphone: APPLE, ipad: APPLE, mac: APPLE, windows: MICROSOFT, android: '#android' };
+  var destinos = { iphone: APPLE, ipad: APPLE, windows: MICROSOFT, android: '#android' };
   var equipos = document.querySelectorAll('[data-equipo]');
   function elegirEquipo(id) {
     equipos.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.equipo === id)); });
@@ -258,7 +258,7 @@
     : /iPhone|iPod/.test(ua) ? 'iphone'
     : /Android/.test(ua) ? 'android'
     : (/Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) ? 'windows'
-    : /Macintosh/.test(ua) ? 'mac' : null;
+    : /Macintosh/.test(ua) ? 'iphone' : null;
   // Barra fija al bajar (estilo Apple): logo y Descargar siempre a mano, con el mismo destino que el botón principal.
   // Mientras no se ve queda inerte para que el teclado no llegue a enlaces ocultos.
   var barraFija = null, barraDescargar = null;
