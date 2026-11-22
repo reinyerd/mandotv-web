@@ -357,7 +357,7 @@ def pagina_marca(m):
         <a class="boton claro" href="#como">How it connects</a>
       </div>
 {tiendas_html('tiendas', 'Available in the stores')}
-      <p class="nota">iPhone, iPad, Android and Windows. Free download, no ads. Pro is a one-time purchase, no subscription.</p>
+      <p class="nota">iPhone, iPad, Mac, Android and Windows. Free download, no ads. Pro is a one-time purchase, no subscription.</p>
     </div>
   </div>
 

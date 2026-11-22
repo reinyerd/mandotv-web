@@ -13,7 +13,7 @@ UI = dict(
   apple_aria='Mando TV kostenlos im App Store laden', ms_aria='Mando TV kostenlos im Microsoft Store laden',
   gp_aria='Früher Zugang zu Mando TV bei Google Play für Android', aria_desc='Mando TV herunterladen',
   b_como_btn='So verbindest du dich', b_tiendas_label='In den Stores erhältlich',
-  b_nota='iPhone, iPad, Android und Windows. Kostenloser Download, ohne Werbung. Pro ist ein einmaliger Kauf, ohne Abo.',
+  b_nota='iPhone, iPad, Mac, Android und Windows. Kostenloser Download, ohne Werbung. Pro ist ein einmaliger Kauf, ohne Abo.',
   b_compat='Kompatible Fernseher', b_otras='Andere Marken', b_otras_p='Mando TV steuert alle diese Marken mit derselben App:',
   g_guias='Ratgeber', g_ver='Schritte ansehen', g_pasos='Schritt für Schritt', g_hazlo='So geht es mit Mando TV',
   g_tiendas='Mando TV ist eine universelle Fernbedienung für deinen Fernseher. Lade sie kostenlos herunter, ohne Werbung und ohne Konto. Pro ist ein optionaler Einmalkauf, ohne Abo. Für iPhone, iPad, Windows und Android:',

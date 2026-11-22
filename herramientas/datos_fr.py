@@ -15,7 +15,7 @@ UI = dict(
   apple_aria="Télécharger Mando TV gratuitement sur l'App Store", ms_aria='Télécharger Mando TV gratuitement sur le Microsoft Store',
   gp_aria='Accès anticipé à Mando TV sur Google Play pour Android', aria_desc='Télécharger Mando TV',
   b_como_btn='Comment se connecter', b_tiendas_label='Disponible dans les boutiques',
-  b_nota='iPhone, iPad, Android et Windows. Téléchargement gratuit, sans publicité. Pro est un achat unique, sans abonnement.',
+  b_nota='iPhone, iPad, Mac, Android et Windows. Téléchargement gratuit, sans publicité. Pro est un achat unique, sans abonnement.',
   b_compat='Téléviseurs compatibles', b_otras='Autres marques', b_otras_p='Mando TV pilote toutes ces marques depuis la même application :',
   g_guias='Guides', g_ver='Voir les étapes', g_pasos='Pas à pas', g_hazlo='Faites-le avec Mando TV',
   g_tiendas="Mando TV est une télécommande universelle pour votre téléviseur. Téléchargez-la gratuitement, sans publicité et sans compte. Pro est un achat unique facultatif, sans abonnement. Pour iPhone, iPad, Windows et Android :",
