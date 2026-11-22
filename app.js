@@ -15,7 +15,7 @@
     ipad: 'Descargar gratis para iPad', iphone: 'Descargar gratis para iPhone', windows: 'Descargar gratis para Windows',
     android: 'Descargar gratis para Android', boton: 'Descargar gratis',
     notaAndroid: 'En Android es una prueba anticipada en Google Play: son dos pasos.',
-    claro: 'Claro', oscuro: 'Oscuro', pausar: 'Pausar las marcas', reanudar: 'Reanudar las marcas',
+    barra: 'Descargar', claro: 'Claro', oscuro: 'Oscuro', pausar: 'Pausar las marcas', reanudar: 'Reanudar las marcas',
     frases: ['documentales de volcanes', 'música para cocinar', 'partido de fútbol en vivo', 'película de Navidad']
   };
   var TEXTOS = {
@@ -29,7 +29,7 @@
       ipad: 'Download free for iPad', iphone: 'Download free for iPhone', windows: 'Download free for Windows',
       android: 'Download free for Android', boton: 'Download free',
       notaAndroid: "On Android it's early access on Google Play: two quick steps.",
-      claro: 'Light', oscuro: 'Dark', pausar: 'Pause the brands', reanudar: 'Play the brands',
+      barra: 'Download', claro: 'Light', oscuro: 'Dark', pausar: 'Pause the brands', reanudar: 'Play the brands',
       frases: ['volcano documentaries', 'cooking music', 'live soccer game', 'Christmas movie']
     },
     de: {
@@ -42,7 +42,7 @@
       ipad: 'Kostenlos für iPad laden', iphone: 'Kostenlos für iPhone laden', windows: 'Kostenlos für Windows laden',
       android: 'Kostenlos für Android laden', boton: 'Kostenlos laden',
       notaAndroid: 'Auf Android gibt es einen frühen Zugang über Google Play: zwei Schritte.',
-      claro: 'Hell', oscuro: 'Dunkel', pausar: 'Marken anhalten', reanudar: 'Marken fortsetzen',
+      barra: 'Laden', claro: 'Hell', oscuro: 'Dunkel', pausar: 'Marken anhalten', reanudar: 'Marken fortsetzen',
       frases: ['Dokumentationen über Vulkane', 'Musik zum Kochen', 'Fußballspiel live', 'Weihnachtsfilm']
     },
     fr: {
@@ -55,7 +55,7 @@
       ipad: 'Télécharger gratuitement pour iPad', iphone: 'Télécharger gratuitement pour iPhone', windows: 'Télécharger gratuitement pour Windows',
       android: 'Télécharger gratuitement pour Android', boton: 'Télécharger gratuitement',
       notaAndroid: "Sur Android, c'est un accès anticipé sur Google Play : deux étapes.",
-      claro: 'Clair', oscuro: 'Sombre', pausar: 'Mettre les marques en pause', reanudar: 'Relancer les marques',
+      barra: 'Télécharger', claro: 'Clair', oscuro: 'Sombre', pausar: 'Mettre les marques en pause', reanudar: 'Relancer les marques',
       frases: ['documentaires sur les volcans', 'musique pour cuisiner', 'match de foot en direct', 'film de Noël']
     },
     pt: {
@@ -68,7 +68,7 @@
       ipad: 'Baixar grátis para iPad', iphone: 'Baixar grátis para iPhone', windows: 'Baixar grátis para Windows',
       android: 'Baixar grátis para Android', boton: 'Baixar grátis',
       notaAndroid: 'No Android é um teste antecipado no Google Play: são dois passos.',
-      claro: 'Claro', oscuro: 'Escuro', pausar: 'Pausar as marcas', reanudar: 'Retomar as marcas',
+      barra: 'Baixar', claro: 'Claro', oscuro: 'Escuro', pausar: 'Pausar as marcas', reanudar: 'Retomar as marcas',
       frases: ['documentários sobre vulcões', 'música para cozinhar', 'jogo de futebol ao vivo', 'filme de Natal']
     },
     it: {
@@ -81,7 +81,7 @@
       ipad: 'Scarica gratis per iPad', iphone: 'Scarica gratis per iPhone', windows: 'Scarica gratis per Windows',
       android: 'Scarica gratis per Android', boton: 'Scarica gratis',
       notaAndroid: 'Su Android è un accesso anticipato su Google Play: bastano due passaggi.',
-      claro: 'Chiaro', oscuro: 'Scuro', pausar: 'Metti in pausa le marche', reanudar: 'Riprendi le marche',
+      barra: 'Scarica', claro: 'Chiaro', oscuro: 'Scuro', pausar: 'Metti in pausa le marche', reanudar: 'Riprendi le marche',
       frases: ['documentari sui vulcani', 'musica per cucinare', 'partita di calcio in diretta', 'film di Natale']
     }
   };
@@ -247,6 +247,7 @@
       notaBoton.textContent = id === 'android' ? T.notaAndroid : '';
       notaBoton.hidden = id !== 'android';
     }
+    sincronizarBarra();
   }
   equipos.forEach(function (b) { b.addEventListener('click', function () { elegirEquipo(b.dataset.equipo); }); });
   var ua = navigator.userAgent;
@@ -256,7 +257,47 @@
     : /Android/.test(ua) ? 'android'
     : (/Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) ? 'windows'
     : /Macintosh/.test(ua) ? 'iphone' : null;
+  // Barra fija al bajar (estilo Apple): logo y Descargar siempre a mano, con el mismo destino que el botón principal.
+  // Mientras no se ve queda inerte para que el teclado no llegue a enlaces ocultos.
+  var barraFija = null, barraDescargar = null;
+  function sincronizarBarra() {
+    if (!barraDescargar || !principal) return;
+    barraDescargar.href = principal.getAttribute('href');
+    ['target', 'rel'].forEach(function (a) {
+      if (principal.hasAttribute(a)) barraDescargar.setAttribute(a, principal.getAttribute(a));
+      else barraDescargar.removeAttribute(a);
+    });
+  }
+  var portada = document.querySelector('.escena');
+  if (principal && portada && 'IntersectionObserver' in window) {
+    barraFija = document.createElement('div');
+    barraFija.className = 'barra-fija';
+    barraFija.setAttribute('inert', '');
+    var logoFijo = document.createElement('a');
+    logoFijo.className = 'logo';
+    logoFijo.href = '#inicio';
+    var iconoFijo = document.createElement('img');
+    iconoFijo.src = '/icono.svg';
+    iconoFijo.alt = '';
+    iconoFijo.width = 26;
+    iconoFijo.height = 26;
+    logoFijo.appendChild(iconoFijo);
+    logoFijo.appendChild(document.createTextNode('Mando TV'));
+    barraDescargar = document.createElement('a');
+    barraDescargar.className = 'boton';
+    barraDescargar.id = 'barra-descargar';
+    barraDescargar.textContent = T.barra;
+    barraFija.appendChild(logoFijo);
+    barraFija.appendChild(barraDescargar);
+    document.body.appendChild(barraFija);
+    new IntersectionObserver(function (e) {
+      var fuera = !e[0].isIntersecting;
+      barraFija.classList.toggle('visible', fuera);
+      if (fuera) barraFija.removeAttribute('inert'); else barraFija.setAttribute('inert', '');
+    }).observe(portada);
+  }
   if (inicial) elegirEquipo(inicial);
+  sincronizarBarra();
 
   var nombreTema = document.getElementById('tema-nombre');
   document.querySelectorAll('[data-tema]').forEach(function (p) {
