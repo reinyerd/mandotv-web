@@ -1055,3 +1055,24 @@ a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
 .ficha .tienda span { white-space: nowrap; }
 .barra-fija a.boton { min-height: 36px; padding: 0 18px; }
 .aviso-cookies .boton { min-height: 44px; }
+
+/* ---------- Cierre del pie con el ícono de la app (22-nov, propuesta) ----------
+   El "MANDO" gigante y condensado era del estilo anterior y chocaba con la letra limpia de ahora. La página termina con
+   el ícono de Mando TV, su luz del color de la marca y el nombre, como el cierre de las páginas de Apple. El párrafo es
+   decorativo (aria-hidden), así que el ícono y el nombre van como contenido de CSS. */
+.pie { padding-bottom: clamp(48px, 6vw, 72px); }
+.pie-gigante {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  margin: clamp(48px, 6vw, 80px) 0 0; font-size: 0; line-height: 1; color: transparent;
+  background: none; -webkit-background-clip: border-box; background-clip: border-box;
+}
+.pie-gigante::before {
+  content: ""; width: 84px; height: 84px; border-radius: 20px;
+  background: url("/icono.svg") center / cover no-repeat;
+  box-shadow: 0 24px 70px -14px color-mix(in srgb, var(--marca) 75%, transparent), 0 0 0 1px rgba(255, 255, 255, .12);
+  transition: box-shadow var(--t-marca);
+}
+.pie-gigante::after {
+  content: "Mando TV"; font-family: var(--titular); font-weight: 600; font-size: 26px; letter-spacing: -.03em; color: var(--perla);
+}
+@media (max-width: 560px) { .pie-gigante::before { width: 72px; height: 72px; border-radius: 17px; } .pie-gigante::after { font-size: 22px; } }
