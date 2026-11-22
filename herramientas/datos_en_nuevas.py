@@ -98,12 +98,12 @@ GUIAS_NUEVAS = [
         ['Ads', 'None', 'Common'],
         ['Subscription', 'None. Pro is an optional one-time purchase', 'Weekly or monthly plans are common'],
         ['Account', 'Not needed', 'Varies'],
+        ['Phones and computers', 'iPhone, iPad and Windows, plus Android in early access', 'Varies'],
         ['Smart TVs over Wi-Fi', 'Samsung (2016 and newer), LG webOS, Roku, Google TV and Android TV, Fire TV, Apple TV (beta)', 'Varies by app'],
         ['Infrared for older TVs', 'Free on Android phones with an infrared blaster (new)', 'Some apps, only on phones with an infrared blaster'],
         ['Bluetooth', 'Beta on Android 9 and newer, free', 'Varies by app'],
         ['Photos and videos to the TV', 'Pro, over Wi-Fi (not mirroring)', 'Varies by app'],
         ['Screen mirroring', 'Free on iPhone and iPad, through Screen Mirroring in Control Center (TVs with AirPlay)', 'Some apps offer it'],
-        ['Phones and computers', 'iPhone, iPad and Windows, plus Android in early access', 'Varies'],
       ],
       nota='Mando TV is compared with no app in particular. Check each app\'s store page for its current prices.'),
     extra=[
