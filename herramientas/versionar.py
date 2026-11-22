@@ -18,7 +18,7 @@ import sys
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 REF = re.compile(
     r'(?P<attr>(?:href|src|content)=")(?P<pre>https://mandotv\.app/|/)?'
-    r'(?P<ruta>[\w./-]+\.(?:css|js|png|svg|webmanifest|jpg|jpeg|webp|ico|woff2))(?:\?v=[\w-]*)?"'
+    r'(?P<ruta>[\w./-]+\.(?:css|js|png|svg|webmanifest|jpg|jpeg|webp|ico))(?:\?v=[\w-]*)?"'
 )
 _cache = {}
 DOMINIO = 'https://mandotv.app'
