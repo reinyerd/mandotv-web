@@ -864,3 +864,64 @@ summary::after { color: var(--tenue); font-weight: 300; }
 @media (min-width: 961px) {
   .ficha h1 { font-size: clamp(42px, 3.8vw, 60px); }
 }
+
+/* =====================================================================================================================
+   Portada al nivel de las páginas de marca (22-nov, propuesta). Lo esencial en la primera pantalla: título grande,
+   frase, Descargar y tiendas, con el teléfono y su luz al lado. Las cuadrículas de marca y de equipo y el aspecto salen
+   de la portada: el equipo se elige solo según el aparato y la marca se cambia con los puntos de color o las flechas.
+   ===================================================================================================================== */
+.escena .grupo-marcas, .escena .marcas, .escena #marca-nota, .escena .grupo-equipos, .escaparate > .temas { display: none; }
+.escena::before {
+  opacity: .58;
+  -webkit-mask-image: radial-gradient(48% 62% at 74% 46%, #000 0%, rgba(0, 0, 0, .4) 42%, transparent 74%);
+  mask-image: radial-gradient(48% 62% at 74% 46%, #000 0%, rgba(0, 0, 0, .4) 42%, transparent 74%);
+}
+.escena::after {
+  opacity: .3;
+  -webkit-mask-image: radial-gradient(50% 60% at 0% 100%, #000, transparent 72%);
+  mask-image: radial-gradient(50% 60% at 0% 100%, #000, transparent 72%);
+}
+.gigante { color: rgba(255, 255, 255, .09); }
+.ficha .precio { margin-top: 20px; gap: 4px 10px; }
+.ficha .precio strong { font-size: 21px; letter-spacing: -.02em; }
+.ficha .precio span { font-size: 17px; }
+.ficha .acciones { margin-top: 30px; }
+.pruebas { margin-top: 18px; }
+/* Puntos de color de cada marca bajo el teléfono: el de la marca actual se alarga y se llena con el avance. */
+.vitrina-barras { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.vitrina-barras i {
+  width: 12px; height: 12px; border-radius: 999px; background: var(--c); opacity: .55; cursor: pointer;
+  transition: width .35s cubic-bezier(.23, 1, .32, 1), opacity .25s;
+}
+.vitrina-barras i:nth-child(1) { --c: #3d7bff; } .vitrina-barras i:nth-child(2) { --c: #e0457b; }
+.vitrina-barras i:nth-child(3) { --c: #a77bff; } .vitrina-barras i:nth-child(4) { --c: #2fbf8f; }
+.vitrina-barras i:hover { opacity: .9; }
+.vitrina-barras i.activa { width: 36px; opacity: 1; }
+.vitrina-barras i::after { background: rgba(255, 255, 255, .55); }
+.vitrina-barras i.vista::after { transform: scaleX(0); }
+.vitrina { gap: 16px; }
+.vitrina-cuenta { min-width: 0; }
+
+@media (min-width: 961px) {
+  .panel { grid-template-columns: 1.12fr .88fr; }
+  .ficha { grid-column: 1; grid-row: 1; max-width: 680px; }
+  .escaparate { grid-column: 2; grid-row: 1; }
+  .ficha h1 { font-size: clamp(52px, 5.4vw, 88px); line-height: 1.02; }
+  .bajada { font-size: clamp(18px, 1.35vw, 21px); max-width: 40ch; }
+}
+@media (min-width: 961px) and (max-height: 860px) { .ficha h1 { font-size: clamp(48px, 4.8vw, 76px); } }
+@media (max-width: 960px) {
+  .escena::before {
+    -webkit-mask-image: radial-gradient(70% 38% at 55% 50%, #000 0%, rgba(0, 0, 0, .4) 45%, transparent 75%);
+    mask-image: radial-gradient(70% 38% at 55% 50%, #000 0%, rgba(0, 0, 0, .4) 45%, transparent 75%);
+  }
+}
+@media (max-width: 560px) {
+  .ficha h1 { font-size: clamp(34px, 9.6vw, 42px); }
+  .antetitulo { font-size: 11px; letter-spacing: .1em; }
+  /* En el celular basta con los puntos: la marca también se ve en la pantalla del teléfono. */
+  .vitrina-cuenta { display: none; }
+  .vitrina { gap: 10px; justify-content: center; }
+  .vitrina-barras { gap: 8px; }
+  .vitrina-barras i.activa { width: 28px; }
+}

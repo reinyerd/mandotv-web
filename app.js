@@ -223,6 +223,8 @@
   botones.forEach(function (b) { b.addEventListener('click', function () { ponerPausa(true); elegir(b.dataset.marca, undefined, true); }); });
   document.getElementById('anterior').addEventListener('click', function () { ponerPausa(true); mover(-1, true); });
   document.getElementById('siguiente').addEventListener('click', function () { ponerPausa(true); mover(1, true); });
+  // Puntos de color bajo el teléfono: tocar uno elige esa marca (las flechas y la pausa siguen para el teclado).
+  barras.forEach(function (b, k) { b.addEventListener('click', function () { ponerPausa(true); elegir(orden[k], undefined, true); }); });
   marcarBarras();
   actualizar();
 
