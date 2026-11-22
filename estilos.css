@@ -672,19 +672,8 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 /* Lo que está bajo la primera pantalla se dibuja cuando se acerca (menos trabajo al cargar, sobre todo en celulares). */
 .escena ~ .contenedor > section, .escena ~ .franja, .escena ~ .pie { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 
-/* ---------- Modo oscuro (sigue al sistema) ----------
-   Las secciones pasan a fondo oscuro; el hero, la franja de color, el pie y los avisos mantienen tinta oscura sobre
-   color vivo (contraste AA). */
-@media (prefers-color-scheme: dark) {
-  :root { --tinta: #eef0f6; --papel: #0b0c12; --suave: #171a25; --tenue: #b6bccb; color-scheme: dark; }
-  .escena, .franja, .cabecera-pagina, .pasos-dos li, .aviso-cookies, .pie, .banda {
-    --tinta: #0d0f17; --papel: #ffffff; --suave: #f3f4f8; --tenue: #2f3545;
-  }
-  .franja, .cabecera-pagina, .pasos-dos li { color: var(--tinta); }
-  .pie { border-top: 1px solid rgba(255, 255, 255, .08); background: #07080c; }
-  .aviso-cookies { box-shadow: 0 20px 50px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 255, 255, .1); }
-  .pieza { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .07); }
-  .tabla th, .tabla td { border-bottom-color: #2a2f3d; }
-  .panel-correo { box-shadow: 0 30px 80px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(255, 255, 255, .08); }
-  .panel-correo::backdrop { background: rgba(0, 0, 0, .7); }
-}
+/* ---------- Siempre claro (22-nov) ----------
+   La web ya no sigue el tema oscuro del sistema: con Windows o el celular en oscuro casi toda la página quedaba negra y
+   se perdía el color de la marca. Panel (UX, diseño y marketing) y fundador: secciones claras para todos; el negro queda
+   solo como acento (banda de marcas, tarjeta Pro y pie). */
+:root { color-scheme: light; }
