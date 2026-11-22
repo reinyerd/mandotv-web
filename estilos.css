@@ -925,3 +925,66 @@ summary::after { color: var(--tenue); font-weight: 300; }
   .vitrina-barras { gap: 8px; }
   .vitrina-barras i.activa { width: 28px; }
 }
+
+/* =====================================================================================================================
+   Portada completa en cualquier pantalla y pie premium (22-nov, propuesta).
+   ===================================================================================================================== */
+/* El título se ajusta al ancho y al alto de la pantalla: siempre 3 líneas y toda la portada (con las garantías) a la
+   vista. Antes, en pantallas altas, llegaba a 88 px, se partía en 5 líneas y empujaba el resto fuera. */
+@media (min-width: 961px) {
+  .ficha h1 { font-size: clamp(44px, min(4.6vw, 7.6vh), 72px); line-height: 1.02; }
+  .vitrina { gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .vitrina-cuenta { font-size: 16px; }
+  .vitrina-cuenta b { font-size: 28px; }
+}
+
+/* ---------- Pie premium: columnas de enlaces finos, línea de separación, aviso legal y la firma MANDO como marca de
+   agua que se pierde hacia abajo (estilo Apple y WHOOP). Solo estilos: sirve igual para las 154 páginas. ---------- */
+.pie {
+  position: relative; overflow: hidden; background: var(--negro); color: var(--perla);
+  margin-top: clamp(96px, 12vw, 160px); padding: clamp(56px, 7vw, 88px) 0 0;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+.pie::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-color: var(--marca); opacity: .16; transition: background-color var(--t-marca);
+  -webkit-mask-image: radial-gradient(55% 70% at 0% 0%, #000, transparent 72%);
+  mask-image: radial-gradient(55% 70% at 0% 0%, #000, transparent 72%);
+}
+.pie .contenedor { position: relative; z-index: 1; display: flex; flex-direction: column; }
+.pie .pie-marcas { order: 1; }
+.pie .pie-enlaces { order: 2; }
+.pie small { order: 3; }
+.pie .pie-gigante { order: 4; }
+/* Marcas y guías en columnas de texto, sin pastillas. */
+.pie-marcas { display: block; columns: 4 210px; column-gap: 40px; margin: 0; padding: 0; list-style: none; }
+.pie-marcas li { break-inside: avoid; padding: 5px 0; }
+.pie-marcas a, .pie-marcas a:hover {
+  display: inline; padding: 0; border-radius: 0; background: none; color: var(--gris-oscuro);
+  font-size: 14px; font-weight: 500; letter-spacing: -.01em; line-height: 1.45; text-decoration: none;
+  transition: color .2s;
+}
+.pie-marcas a:hover { color: var(--perla); }
+.pie-marcas li:nth-child(-n+4) a { color: var(--perla); font-weight: 600; }
+/* Fila de ayuda, privacidad, correo, idiomas y cookies, con su línea fina arriba. */
+.pie-enlaces {
+  margin-top: clamp(40px, 5vw, 64px); padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .1);
+  font-size: 14px; gap: 12px 28px;
+}
+.pie-enlaces nav { gap: 10px 24px; }
+.pie-enlaces a, .enlace-cookies { color: var(--perla); font-weight: 500; }
+.pie-enlaces a:hover, .enlace-cookies:hover { text-decoration: none; color: #fff; opacity: .75; }
+.pie-enlaces > span { color: var(--gris-oscuro); }
+.pie small { margin-top: 18px; max-width: 90ch; color: #8a91a0; font-size: 12px; line-height: 1.55; }
+/* Firma MANDO: grande, del ancho de la página, con un degradado que se apaga hacia abajo y cortada por el borde. */
+.pie-gigante {
+  margin: clamp(32px, 5vw, 56px) 0 -.16em; font-family: var(--firma); font-weight: 900; font-stretch: 62%;
+  font-size: clamp(120px, 27vw, 420px); line-height: .78; letter-spacing: -.035em; text-align: center;
+  color: transparent; background-image: linear-gradient(180deg, color-mix(in srgb, var(--marca) 55%, #fff) 0%, color-mix(in srgb, var(--marca) 35%, transparent) 45%, transparent 92%);
+  -webkit-background-clip: text; background-clip: text; transition: none; user-select: none;
+}
+@media (max-width: 560px) {
+  .pie-marcas { columns: 2 140px; column-gap: 24px; }
+  .pie-marcas a { font-size: 13px; }
+  .pie-enlaces { flex-direction: column; align-items: flex-start; }
+}
