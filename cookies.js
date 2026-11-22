@@ -104,3 +104,21 @@
     else crearConFuentes();
   }
 })();
+
+// Selector de idioma del pie (está en todas las páginas, igual que este archivo): se cierra al tocar fuera o con
+// Escape, y el menú entra con una animación propia, porque con "reducir movimiento" de Windows no anima nada solo.
+(function () {
+  document.querySelectorAll('.pie-idioma').forEach(function (d) {
+    var menu = d.querySelector('ul');
+    d.addEventListener('toggle', function () {
+      if (d.open && menu && menu.animate) {
+        menu.animate([{ opacity: 0, transform: 'translateY(8px) scale(.97)' }, { opacity: 1, transform: 'none' }],
+          { duration: 220, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+      }
+    });
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); }
+    });
+  });
+})();

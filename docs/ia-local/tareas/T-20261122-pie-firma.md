@@ -116,3 +116,12 @@ python -I herramientas/pie_firma.py ; python -I -c "import ast,sys; ast.parse(op
   las páginas, el script y el hook).
 - Segunda ejecución sin cambios, también después de versionar.py.
 - Rutas de idioma correctas tomadas de cada página; portada del idioma cuando falta el hreflang.
+
+## Informe (lo escribe Opus: el ejecutor no alcanzó a escribirlo)
+- qwen3.6:35b, 8,3 min, cortado por el límite de 60 turnos (error_max_turns) sin correr las pruebas ni tocar el hook.
+- El script que dejó armaba bien el bloque, pero al reemplazar cortaba texto después del pie (rebanaba el texto ya
+  sin la línea vieja con las posiciones del original). Opus lo corrigió, tomó solo las 2 letras de `lang`, limpió
+  variables sin uso y conectó el hook.
+- Pruebas (Opus): 154 páginas cambiadas, segunda pasada 0, después de versionar.py 0; ninguna página con la línea vieja;
+  rutas de idioma correctas en la página inglesa de LG y en las guías; revisión de las 155 páginas con el servidor
+  local, en celular con tema oscuro y movimiento reducido, más las 6 portadas: 0 fallas.

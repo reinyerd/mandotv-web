@@ -435,7 +435,6 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .pie-enlaces nav { display: flex; gap: 24px; flex-wrap: wrap; }
 .pie-enlaces a { text-decoration: none; }
 .pie-enlaces a:hover { text-decoration: underline; }
-.pie-gigante { font-family: var(--titular); font-weight: 900; font-stretch: 62%; font-size: clamp(110px, 25vw, 380px); line-height: .78; letter-spacing: -.04em; margin: 40px 0 0; color: var(--marca); transition: color var(--t-marca); }
 .pie small { display: block; margin-top: 20px; color: #b8bdca; font-size: 14px; }
 
 /* ---------- Páginas de texto (privacidad, soporte) ---------- */
@@ -830,7 +829,6 @@ summary { padding-right: 8px; overflow-wrap: anywhere; hyphens: auto; }
 summary::after { color: var(--tenue); font-weight: 300; }
 .correo { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; }
 .pie { background: var(--negro); }
-.pie-gigante { font-family: var(--firma); }
 
 /* ---------- Páginas de marca, guías y ayuda: la misma cabecera negra con la luz de la marca ---------- */
 .cabecera-pagina { position: relative; isolation: isolate; overflow: hidden; background: var(--negro); color: var(--perla); }
@@ -938,8 +936,8 @@ summary::after { color: var(--tenue); font-weight: 300; }
   .vitrina-cuenta b { font-size: 28px; }
 }
 
-/* ---------- Pie premium: columnas de enlaces finos, línea de separación, aviso legal y la firma MANDO como marca de
-   agua que se pierde hacia abajo (estilo Apple y WHOOP). Solo estilos: sirve igual para las 154 páginas. ---------- */
+/* ---------- Pie premium: columnas de enlaces finos, línea de separación y aviso legal (estilo Apple y WHOOP).
+   El cierre (firma, Descargar, copyright e idioma) está más abajo, en "Pie estilo WHOOP". ---------- */
 .pie {
   position: relative; overflow: hidden; background: var(--negro); color: var(--perla);
   margin-top: clamp(96px, 12vw, 160px); padding: clamp(56px, 7vw, 88px) 0 0;
@@ -955,7 +953,6 @@ summary::after { color: var(--tenue); font-weight: 300; }
 .pie .pie-marcas { order: 1; }
 .pie .pie-enlaces { order: 2; }
 .pie small { order: 3; }
-.pie .pie-gigante { order: 4; }
 /* Marcas y guías en columnas de texto, sin pastillas. */
 .pie-marcas { display: block; columns: 4 210px; column-gap: 40px; margin: 0; padding: 0; list-style: none; }
 .pie-marcas li { break-inside: avoid; padding: 5px 0; }
@@ -976,13 +973,6 @@ summary::after { color: var(--tenue); font-weight: 300; }
 .pie-enlaces a:hover, .enlace-cookies:hover { text-decoration: none; color: #fff; opacity: .75; }
 .pie-enlaces > span { color: var(--gris-oscuro); }
 .pie small { margin-top: 18px; max-width: 90ch; color: #8a91a0; font-size: 12px; line-height: 1.55; }
-/* Firma MANDO: grande, del ancho de la página, con un degradado que se apaga hacia abajo y cortada por el borde. */
-.pie-gigante {
-  margin: clamp(32px, 5vw, 56px) 0 -.16em; font-family: var(--firma); font-weight: 900; font-stretch: 62%;
-  font-size: clamp(120px, 27vw, 420px); line-height: .78; letter-spacing: -.035em; text-align: center;
-  color: transparent; background-image: linear-gradient(180deg, color-mix(in srgb, var(--marca) 55%, #fff) 0%, color-mix(in srgb, var(--marca) 35%, transparent) 45%, transparent 92%);
-  -webkit-background-clip: text; background-clip: text; transition: none; user-select: none;
-}
 @media (max-width: 560px) {
   .pie-marcas { columns: 2 140px; column-gap: 24px; }
   .pie-marcas a { font-size: 13px; }
@@ -1056,23 +1046,87 @@ a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
 .barra-fija a.boton { min-height: 36px; padding: 0 18px; }
 .aviso-cookies .boton { min-height: 44px; }
 
-/* ---------- Cierre del pie con el ícono de la app (22-nov, propuesta) ----------
-   El "MANDO" gigante y condensado era del estilo anterior y chocaba con la letra limpia de ahora. La página termina con
-   el ícono de Mando TV, su luz del color de la marca y el nombre, como el cierre de las páginas de Apple. El párrafo es
-   decorativo (aria-hidden), así que el ícono y el nombre van como contenido de CSS. */
-.pie { padding-bottom: clamp(48px, 6vw, 72px); }
-.pie-gigante {
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
-  margin: clamp(48px, 6vw, 80px) 0 0; font-size: 0; line-height: 1; color: transparent;
-  background: none; -webkit-background-clip: border-box; background-clip: border-box;
+/* ---------- Pie estilo WHOOP (22-nov) ----------
+   El cierre ocupa todo el ancho: a la izquierda la firma (ícono con su luz, nombre y lema), a la derecha Descargar, y
+   abajo el copyright con el selector de idioma. Antes el ícono quedaba solo al centro con mucho vacío a los lados.
+   El bloque lo escribe herramientas/pie_firma.py en las 154 páginas. */
+.pie { padding-bottom: clamp(24px, 3vw, 36px); }
+.pie .pie-marcas { order: 1; }
+.pie .pie-cierre { order: 2; }
+.pie .pie-enlaces { order: 3; }
+.pie small { order: 4; }
+.pie .pie-base { order: 5; }
+
+.pie-cierre {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px 48px;
+  margin-top: clamp(48px, 6vw, 80px); padding-top: clamp(40px, 5vw, 64px); border-top: 1px solid rgba(255, 255, 255, .1);
 }
-.pie-gigante::before {
-  content: ""; width: 84px; height: 84px; border-radius: 20px;
-  background: url("/icono.svg") center / cover no-repeat;
-  box-shadow: 0 24px 70px -14px color-mix(in srgb, var(--marca) 75%, transparent), 0 0 0 1px rgba(255, 255, 255, .12);
+.pie-firma { max-width: 460px; }
+.pie-logo {
+  display: inline-flex; align-items: center; gap: 14px; color: var(--perla); text-decoration: none;
+  font-family: var(--titular); font-weight: 600; font-size: clamp(26px, 2.4vw, 32px); line-height: 1; letter-spacing: -.035em;
+}
+.pie-logo:hover { text-decoration: none; }
+.pie-logo img {
+  width: 48px; height: 48px; border-radius: 12px; flex: none;
+  box-shadow: 0 14px 40px -10px color-mix(in srgb, var(--marca) 80%, transparent), 0 0 0 1px rgba(255, 255, 255, .12);
   transition: box-shadow var(--t-marca);
 }
-.pie-gigante::after {
-  content: "Mando TV"; font-family: var(--titular); font-weight: 600; font-size: 26px; letter-spacing: -.03em; color: var(--perla);
+.pie-firma p { margin: 16px 0 0; color: var(--gris-oscuro); font-size: 15px; line-height: 1.5; max-width: 38ch; }
+.pie-accion { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.pie-accion .boton { background: var(--perla); color: var(--negro); padding: 0 30px; }
+.pie-accion .boton:hover { background: #fff; }
+.pie-accion span { color: var(--gris-oscuro); font-size: 13px; }
+
+/* La fila de ayuda y el aviso legal quedan bajo la firma, sin otra línea. */
+/* Los idiomas sueltos que traía esta fila en las páginas de otros idiomas ahora están en el selector de abajo. */
+.pie-enlaces nav a[hreflang] { display: none; }
+.pie-enlaces { margin-top: clamp(40px, 5vw, 56px); padding-top: 0; border-top: 0; }
+
+/* Copyright a la izquierda y selector de idioma a la derecha, como el cierre de WHOOP. */
+.pie-base {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  margin-top: clamp(36px, 4vw, 52px); color: var(--gris-oscuro); font-size: 13px;
 }
-@media (max-width: 560px) { .pie-gigante::before { width: 72px; height: 72px; border-radius: 17px; } .pie-gigante::after { font-size: 22px; } }
+.pie-idioma { position: relative; }
+.pie-idioma summary {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px 0 12px;
+  border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px; color: var(--perla);
+  font-size: 14px; font-weight: 500; cursor: pointer; list-style: none; user-select: none;
+  transition: background-color .2s, border-color .2s;
+}
+.pie-idioma summary::-webkit-details-marker { display: none; }
+.pie-idioma summary::before {
+  content: ""; width: 16px; height: 16px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.7'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.7'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.pie-idioma summary::after {
+  content: ""; width: 6px; height: 6px; margin: 0 2px 3px 4px; border-right: 1.5px solid; border-bottom: 1.5px solid;
+  opacity: .7; transform: rotate(45deg); transition: transform .2s, margin .2s;
+}
+.pie-idioma[open] summary::after { transform: rotate(-135deg); margin-bottom: -3px; }
+.pie-idioma summary:hover, .pie-idioma[open] summary { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .26); }
+.pie-idioma summary:focus-visible { outline: 2px solid var(--perla); outline-offset: 3px; }
+.pie-idioma ul {
+  position: absolute; right: 0; bottom: calc(100% + 10px); z-index: 2; min-width: 190px; margin: 0; padding: 6px;
+  list-style: none; background: rgba(24, 26, 33, .94); border: 1px solid rgba(255, 255, 255, .12); border-radius: 16px;
+  -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: 0 28px 60px -14px rgba(0, 0, 0, .75);
+}
+.pie-idioma a {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 12px; border-radius: 10px;
+  color: var(--perla); font-size: 14px; text-decoration: none; transition: background-color .15s;
+}
+.pie-idioma a:hover { background: rgba(255, 255, 255, .08); text-decoration: none; }
+.pie-idioma a[aria-current]::after {
+  content: ""; width: 10px; height: 5px; margin-top: -3px; border-left: 2px solid; border-bottom: 2px solid;
+  color: color-mix(in srgb, var(--marca) 55%, #fff); transform: rotate(-45deg);
+}
+
+@media (max-width: 560px) {
+  .pie-cierre { flex-direction: column; align-items: stretch; }
+  .pie-accion { align-items: stretch; }
+  .pie-accion .boton { justify-content: center; }
+  .pie-accion span { text-align: center; }
+}
