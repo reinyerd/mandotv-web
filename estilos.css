@@ -677,3 +677,187 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
    se perdía el color de la marca. Panel (UX, diseño y marketing) y fundador: secciones claras para todos; el negro queda
    solo como acento (banda de marcas, tarjeta Pro y pie). */
 :root { color-scheme: light; }
+
+/* =====================================================================================================================
+   Capa premium (22-nov, pedido del fundador: "que se parezca más a Apple y a WHOOP, que se vea premium").
+   Ritmo de Apple: portada oscura con el color de la marca como luz detrás del producto, y secciones que alternan blanco,
+   gris perla (#f5f5f7) y negro; títulos en Inter semibold con letras juntas; botones en píldora; sombra solo en el
+   producto. De WHOOP: etiquetas cortas en mayúsculas espaciadas y botones blancos sobre negro. Sin copiar marcas: letra
+   propia (Inter), colores propios por marca de TV y la palabra MANDO como firma.
+   ===================================================================================================================== */
+:root {
+  --titular: "Inter", system-ui, sans-serif;
+  --firma: "Archivo", "Inter", system-ui, sans-serif;
+  --tinta: #111522; --suave: #f2f3f7; --tenue: #586074;
+  /* Valores de la app (lib/ui/tema.dart): fondo #07080C, texto #F4F6FA, tenue #A9B0BE, claro #F2F3F7, vidrio blanco 12 %. */
+  --negro: #07080c; --grafito: #161922; --perla: #f4f6fa; --gris-oscuro: #a9b0be; --claro: #f2f3f7;
+  --vidrio: rgba(255, 255, 255, .12); --vidrio-marca: color-mix(in srgb, var(--marca) 18%, rgba(255, 255, 255, .07));
+  --linea: rgba(0, 0, 0, .1); --linea-oscura: rgba(255, 255, 255, .16);
+}
+body { font-size: 17px; line-height: 1.5; color: var(--tinta); letter-spacing: -.011em; }
+.logo { font-family: var(--titular); font-weight: 700; font-size: 21px; letter-spacing: -.02em; }
+
+/* ---------- Portada: lienzo negro con la luz de la marca detrás del teléfono ---------- */
+.escena { background-color: var(--negro); color: var(--perla); transition: none; }
+.escena::before, .escena::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  transition: background-color var(--t-marca);
+}
+.escena::before {
+  background-color: var(--marca); opacity: .6;
+  -webkit-mask-image: radial-gradient(70% 75% at 8% 0%, #000 0%, rgba(0, 0, 0, .4) 40%, transparent 72%);
+  mask-image: radial-gradient(70% 75% at 8% 0%, #000 0%, rgba(0, 0, 0, .4) 40%, transparent 72%);
+}
+.escena::after {
+  background-color: color-mix(in srgb, var(--marca) 55%, #4fd1ff); opacity: .42;
+  -webkit-mask-image: radial-gradient(60% 70% at 100% 100%, #000, transparent 72%);
+  mask-image: radial-gradient(60% 70% at 100% 100%, #000, transparent 72%);
+}
+.escena :focus-visible { outline-color: var(--perla); }
+.barra nav a { font-size: 14px; font-weight: 500; opacity: .9; }
+.boton-barra { background: var(--perla); color: var(--negro); font-weight: 600; padding: 8px 16px; opacity: 1 !important; }
+.panel { background: none; box-shadow: none; border-radius: 0; }
+.gigante { font-family: var(--firma); color: rgba(255, 255, 255, .07); }
+.escaparate::before {
+  background: none; background-color: var(--marca); opacity: .5;
+  -webkit-mask-image: radial-gradient(closest-side, #000, transparent);
+  mask-image: radial-gradient(closest-side, #000, transparent);
+  transition: background-color var(--t-marca);
+}
+.telefono { box-shadow: 0 60px 100px -30px rgba(0, 0, 0, .85), 0 0 0 1px rgba(255, 255, 255, .08),
+  inset 0 0 0 1.5px rgba(255, 255, 255, .22), inset 0 0 0 4px rgba(0, 0, 0, .55); }
+.sombra-suelo { background: radial-gradient(closest-side, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0)); }
+
+.antetitulo {
+  background: none; box-shadow: none; padding: 0; margin-bottom: 18px;
+  text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: var(--gris-oscuro);
+}
+.antetitulo::before { background: var(--marca); box-shadow: 0 0 12px var(--marca); transition: background-color var(--t-marca); }
+.ficha h1 { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; word-spacing: 0; line-height: 1.04; color: var(--perla); }
+.bajada { color: var(--gris-oscuro); }
+.precio strong { font-family: var(--titular); font-weight: 600; letter-spacing: -.03em; color: var(--perla); }
+.precio span { font-weight: 400; color: var(--gris-oscuro); }
+.etiqueta-grupo { font-size: 14px; font-weight: 600; color: var(--perla); }
+.ficha #marca-nota, .boton-nota { color: var(--gris-oscuro); }
+.marcas button, .equipos button {
+  color: var(--perla); background: var(--vidrio-marca); border-radius: 16px; min-height: 46px; font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14); transition: background-color .25s, color .2s, transform .16s cubic-bezier(.23, 1, .32, 1);
+}
+.marcas button::before { box-shadow: 0 0 0 2px rgba(0, 0, 0, .6); }
+.marcas button[aria-pressed="true"], .equipos button[aria-pressed="true"] { background: var(--perla); color: var(--negro); box-shadow: none; }
+@media (hover: hover) and (pointer: fine) {
+  .marcas button:hover, .equipos button:hover { background: color-mix(in srgb, var(--marca) 30%, rgba(255, 255, 255, .1)); }
+  .marcas button[aria-pressed="true"]:hover, .equipos button[aria-pressed="true"]:hover { background: #fff; }
+}
+#boton-principal { background: var(--perla); color: var(--negro); font-weight: 600; box-shadow: 0 10px 40px -12px color-mix(in srgb, var(--marca) 70%, transparent); }
+@media (hover: hover) and (pointer: fine) { #boton-principal:hover { background: #fff; } }
+.escena .boton.claro { background: transparent; color: var(--perla); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
+.tienda { background: rgba(22, 25, 34, .8); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14); border-radius: 16px; }
+.tienda:hover { background: rgba(32, 36, 48, .9); }
+.pruebas { gap: 6px 18px; }
+.pruebas li { background: none; padding: 0; color: var(--gris-oscuro); font-weight: 600; }
+.pruebas li::before { background: var(--gris-oscuro); width: 16px; height: 16px; }
+.vitrina-cuenta { font-family: var(--titular); font-weight: 600; color: var(--perla); letter-spacing: -.02em; }
+.vitrina-cuenta b { font-weight: 600; }
+.vitrina-barras i { background: rgba(255, 255, 255, .18); }
+.vitrina-barras i::after { background: var(--perla); }
+.redondo { background: var(--vidrio-marca); color: var(--perla); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14); }
+.redondo:hover { background: color-mix(in srgb, var(--marca) 30%, rgba(255, 255, 255, .1)); }
+.escaparate > .temas { background: var(--vidrio); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14); color: var(--perla); }
+.punto { box-shadow: 0 0 0 1px rgba(255, 255, 255, .4); }
+.punto[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--negro), 0 0 0 4px var(--perla); }
+.toque { background: var(--perla); color: var(--negro); }
+
+/* Barra fija al bajar (como la de Apple): logo y Descargar siempre a mano. La crea app.js. */
+.barra-fija {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 40; height: 54px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 var(--margen);
+  background: rgba(242, 243, 247, .8); -webkit-backdrop-filter: saturate(180%) blur(18px); backdrop-filter: saturate(180%) blur(18px);
+  box-shadow: 0 1px 0 var(--linea); color: var(--tinta);
+  transform: translateY(-100%); transition: transform .35s cubic-bezier(.23, 1, .32, 1);
+}
+.barra-fija.visible { transform: none; }
+.barra-fija .logo { font-size: 18px; text-decoration: none; }
+.barra-fija .logo img { width: 26px; height: 26px; border-radius: 7px; }
+.barra-fija a.boton { padding: 8px 18px; font-size: 14px; font-weight: 600; background: var(--tinta); color: #fff; }
+
+/* ---------- Banda de marcas: negro, letra limpia ---------- */
+.banda { background: var(--negro); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08); }
+.banda li { font-family: var(--titular); font-weight: 600; letter-spacing: -.03em; font-size: clamp(26px, 3.2vw, 42px); color: var(--perla); }
+.banda li::after { opacity: .9; }
+
+/* ---------- Secciones ---------- */
+section { padding-top: clamp(88px, 10vw, 150px); }
+.titulo-seccion { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; word-spacing: 0; line-height: 1.06;
+  font-size: clamp(36px, 5vw, 64px); }
+.intro { color: var(--tenue); font-size: clamp(18px, 1.5vw, 21px); }
+/* Funciones: las tres demostraciones arriba en fila y las funciones como tarjetas (estilo grilla de Apple). */
+.funciones { grid-template-columns: 1fr; gap: 16px; margin-top: 48px; }
+.piezas { position: static; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pieza { background: var(--negro); border-radius: 24px; }
+.pieza::before { opacity: .45; }
+.lista-funciones { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.lista-funciones li { background: var(--claro); border-radius: 24px; padding: 28px 30px; padding-left: 30px; gap: 8px; align-content: start; }
+.lista-funciones li::before { display: none; }
+.lista-funciones b { font-family: var(--titular); font-weight: 600; font-size: 22px; letter-spacing: -.025em; }
+.lista-funciones span { color: var(--tenue); }
+.documento .lista-funciones { grid-template-columns: 1fr; }
+.documento .lista-funciones li { background: none; padding: 0; border-radius: 0; }
+/* Cómo se conecta y tecnologías: gris perla con tarjetas blancas. */
+.franja { background: var(--claro); color: var(--tinta); transition: none; }
+.franja::before { display: none; }
+.pasos li { background: #fff; border-radius: 24px; }
+.pasos b { font-family: var(--titular); font-weight: 600; letter-spacing: -.025em; font-size: 24px; }
+.pasos p { color: var(--tenue); }
+.tec-estado.ya { background: var(--tinta); }
+/* Prueba en Android: tarjetas negras con botón blanco. */
+.pasos-dos li { background: var(--negro); color: var(--perla); transition: none; }
+.pasos-dos li p { color: var(--gris-oscuro); }
+.pasos-dos .boton { background: var(--perla); color: var(--negro); }
+/* Precio */
+.plan { border-radius: 28px; background: var(--claro); }
+.plan h3 { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; font-size: 44px; line-height: 1; }
+.plan .cuanto { font-weight: 600; }
+/* Privacidad */
+.promesa li { background: var(--claro); }
+/* Preguntas: líneas finas en vez de cajas. */
+.preguntas { gap: 0; border-top: 1px solid var(--linea); }
+details { background: none; border-radius: 0; padding: 0; border-bottom: 1px solid var(--linea); }
+summary { font-weight: 600; font-size: 19px; letter-spacing: -.015em; padding: 22px 0; }
+summary::after { color: var(--tenue); font-weight: 300; }
+.correo { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; }
+.pie { background: var(--negro); }
+.pie-gigante { font-family: var(--firma); }
+
+/* ---------- Páginas de marca, guías y ayuda: la misma cabecera negra con la luz de la marca ---------- */
+.cabecera-pagina { position: relative; isolation: isolate; overflow: hidden; background: var(--negro); color: var(--perla); }
+.cabecera-pagina::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-color: var(--marca); opacity: .5;
+  -webkit-mask-image: radial-gradient(50% 70% at 85% 30%, #000, transparent 72%);
+  mask-image: radial-gradient(50% 70% at 85% 30%, #000, transparent 72%);
+}
+.cabecera-pagina h1 { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; line-height: 1.04; }
+.cabecera-pagina p, .cabecera-pagina .nota { color: var(--gris-oscuro); }
+.cabecera-pagina .boton { background: var(--perla); color: var(--negro); }
+.cabecera-pagina .boton.claro { background: transparent; color: var(--perla); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
+.cabecera-pagina :focus-visible { outline-color: var(--perla); }
+.documento h2 { font-family: var(--titular); font-weight: 600; letter-spacing: -.03em; }
+
+@media (max-width: 960px) {
+  .escena::before { -webkit-mask-image: radial-gradient(70% 40% at 50% 52%, #000 0%, rgba(0, 0, 0, .35) 45%, transparent 75%);
+    mask-image: radial-gradient(70% 40% at 50% 52%, #000 0%, rgba(0, 0, 0, .35) 45%, transparent 75%); }
+  .escena::after { -webkit-mask-image: radial-gradient(60% 30% at 60% 40%, #000, transparent 70%);
+    mask-image: radial-gradient(60% 30% at 60% 40%, #000, transparent 70%); }
+  .piezas { grid-template-columns: 1fr; }
+  .lista-funciones { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .ficha h1 { font-size: clamp(32px, 9vw, 42px); }
+  .titulo-seccion { font-size: clamp(32px, 9vw, 40px); }
+  .lista-funciones li { padding: 24px; }
+  .barra-fija { height: 50px; }
+}
+@media (min-width: 961px) {
+  .ficha h1 { font-size: clamp(42px, 3.8vw, 60px); }
+}
