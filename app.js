@@ -92,7 +92,6 @@
   var raiz = document.documentElement;
   var telefono = document.getElementById('telefono');
   if (!telefono) return;
-  var reducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var orden = ['samsung', 'lg', 'roku', 'android'];
   var actual = 'samsung';
   var nombreTv = document.getElementById('app-tv');
@@ -151,8 +150,8 @@
       telefono.classList.remove.apply(telefono.classList, clases);
       void telefono.offsetWidth;
       telefono.classList.add(haciaAtras ? 'entra-izq' : 'entra-der');
-      // Adorno: la palabra gigante se desliza un poco en la misma dirección (no con "reducir movimiento").
-      if (gigante && gigante.animate && !reducido) {
+      // La palabra gigante se desliza un poco en la misma dirección.
+      if (gigante && gigante.animate) {
         gigante.animate([
           { transform: 'translateY(-50%) translateX(' + (haciaAtras ? '-6%' : '6%') + ')', opacity: 0 },
           { transform: 'translateY(-50%) translateX(0)', opacity: 1 }
@@ -330,7 +329,7 @@
   // Inclinación 3D del teléfono siguiendo el mouse (solo con mouse; en pantallas táctiles queda el flotado).
   var inclinador = document.getElementById('inclinador');
   if (escaparate && inclinador && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    var max = reducido ? 9 : 12; // grados
+    var max = 12; // grados
     var cuadro = null;
     escaparate.addEventListener('pointermove', function (e) {
       var r = escaparate.getBoundingClientRect();
@@ -346,6 +345,18 @@
       inclinador.classList.remove('siguiendo');
       inclinador.style.transform = '';
     });
+  }
+
+  // Banda de marcas: se mueve con la Web Animations API, que funciona aunque Windows tenga los efectos desactivados
+  // (decisión del fundador); con el mouse encima se detiene para poder leerla.
+  var pista = document.querySelector('.banda-pista');
+  if (pista && pista.animate) {
+    var giro = pista.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }],
+      { duration: 46000, iterations: Infinity, easing: 'linear' });
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      pista.addEventListener('pointerenter', function () { giro.pause(); });
+      pista.addEventListener('pointerleave', function () { giro.play(); });
+    }
   }
 
   // Demostración del teclado: escribe búsquedas letra por letra, las borra y escribe la siguiente.
