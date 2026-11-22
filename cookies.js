@@ -122,3 +122,25 @@
     });
   });
 })();
+
+// Descargar del pie: va directo a la tienda del equipo, con la misma detección que el botón principal de la portada
+// (app.js): iPhone, iPad y Mac a la App Store, Windows a Microsoft Store y Android a los dos pasos de la prueba
+// anticipada de Google Play (#android en la portada del idioma, como las insignias de las tiendas). Si no se reconoce
+// el equipo, queda como está: baja a las tiendas (#tiendas).
+(function () {
+  var boton = document.querySelector('.pie-accion .boton');
+  var logo = document.querySelector('.pie-logo');
+  if (!boton || !logo) return;
+  var ua = navigator.userAgent;
+  var equipo = /iPad|iPhone|iPod|Macintosh/.test(ua) ? 'apple'
+    : /Android/.test(ua) ? 'android'
+    : (/Windows NT/.test(ua) && !/Mobile|Xbox/.test(ua)) ? 'windows' : null;
+  var destino = {
+    apple: 'https://apps.apple.com/app/id6834927348',
+    windows: 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct',
+    android: logo.getAttribute('href') + '#android'
+  }[equipo];
+  if (!destino) return;
+  boton.href = destino;
+  if (equipo !== 'android') { boton.target = '_blank'; boton.rel = 'noopener'; }
+})();
