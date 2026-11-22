@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Ícono de Mando TV. Retoque fino del 22-nov-2026 (aprobado por el fundador): mismas piezas, lugar y tamaño que
+       antes; borde de vidrio más fino, brillante y continuo, halo y reflejo de la perla más suaves, onda de afuera,
+       segunda barra y puntos algo más firmes. Detalle: docs/diseno/icono-premium.md. -->
   <defs>
     <!-- Fondo: degradado vivo rosado → violeta profundo, con un brillo radial arriba -->
     <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
@@ -16,10 +19,10 @@
       <stop offset="1" stop-color="#090a10"/>
     </linearGradient>
     <linearGradient id="filo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity=".85"/>
-      <stop offset=".35" stop-color="#fff" stop-opacity=".12"/>
-      <stop offset=".7" stop-color="#fff" stop-opacity=".05"/>
-      <stop offset="1" stop-color="#fff" stop-opacity=".45"/>
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".7" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".6"/>
     </linearGradient>
     <linearGradient id="reflejo" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
@@ -54,27 +57,27 @@
   <g transform="translate(0 -18) rotate(-12 512 600)">
     <!-- Ondas de señal (inalámbrico), alineadas con el control -->
     <g fill="none" stroke="#fff" stroke-linecap="round">
-      <path d="M402 168 Q512 100 622 168" stroke-width="30" stroke-opacity=".5"/>
+      <path d="M402 168 Q512 100 622 168" stroke-width="30" stroke-opacity=".65"/>
       <path d="M448 216 Q512 178 576 216" stroke-width="30" stroke-opacity=".95"/>
     </g>
   </g>
   <g transform="translate(0 -18) rotate(-12 512 600)" filter="url(#sombra)">
     <rect x="352" y="262" width="320" height="660" rx="160" fill="url(#cuerpo)"/>
-    <rect x="352" y="262" width="320" height="660" rx="160" fill="none" stroke="url(#filo)" stroke-width="8"/>
+    <rect x="352" y="262" width="320" height="660" rx="160" fill="none" stroke="url(#filo)" stroke-width="6"/>
     <rect x="396" y="290" width="70" height="600" rx="35" fill="url(#reflejo)"/>
 
     <!-- Halo del anillo -->
-    <circle cx="512" cy="452" r="128" fill="none" stroke="#ff5f8f" stroke-width="40" opacity=".6" filter="url(#brillo)"/>
+    <circle cx="512" cy="452" r="128" fill="none" stroke="#ff5f8f" stroke-width="40" opacity=".5" filter="url(#brillo)"/>
     <!-- Anillo de navegación -->
     <circle cx="512" cy="452" r="112" fill="none" stroke="url(#anillo)" stroke-width="30"/>
     <!-- Botón OK -->
     <circle cx="512" cy="452" r="62" fill="url(#ok)"/>
-    <ellipse cx="496" cy="430" rx="34" ry="18" fill="#fff" opacity=".9"/>
+    <ellipse cx="496" cy="430" rx="34" ry="18" fill="#fff" opacity=".78"/>
 
     <!-- Botones -->
     <rect x="442" y="636" width="140" height="44" rx="22" fill="#fff" opacity=".92"/>
-    <rect x="442" y="714" width="140" height="44" rx="22" fill="#fff" opacity=".38"/>
-    <circle cx="470" cy="818" r="22" fill="#fff" opacity=".28"/>
-    <circle cx="554" cy="818" r="22" fill="#fff" opacity=".28"/>
+    <rect x="442" y="714" width="140" height="44" rx="22" fill="#fff" opacity=".45"/>
+    <circle cx="470" cy="818" r="22" fill="#fff" opacity=".35"/>
+    <circle cx="554" cy="818" r="22" fill="#fff" opacity=".35"/>
   </g>
 </svg>
