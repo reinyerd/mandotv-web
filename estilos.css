@@ -824,6 +824,9 @@ section { padding-top: clamp(88px, 10vw, 150px); }
 .preguntas { gap: 0; border-top: 1px solid var(--linea); }
 details { background: none; border-radius: 0; padding: 0; border-bottom: 1px solid var(--linea); }
 summary { font-weight: 600; font-size: 19px; letter-spacing: -.015em; padding: 22px 0; }
+/* El "+" gira al abrir la pregunta: sin este aire a la derecha asomaba 6 px por el borde en el celular. Las palabras
+   largas (alemán) cortan en vez de ensanchar la página. */
+summary { padding-right: 8px; overflow-wrap: anywhere; hyphens: auto; }
 summary::after { color: var(--tenue); font-weight: 300; }
 .correo { font-family: var(--titular); font-weight: 600; letter-spacing: -.035em; }
 .pie { background: var(--negro); }
