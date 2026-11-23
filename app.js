@@ -378,12 +378,6 @@
   var tocado = false;
   setTimeout(function () { if (!tocado && actual === 'samsung' && !enPausa()) { tocarDemo('samsung'); } }, 1400);
   setTimeout(function () { if (!tocado && actual === 'samsung' && !enPausa()) cruzarBrillo(); }, 2300);
-  // El widget flota a su ritmo, desfasado del teléfono (propiedad translate: no pisa su giro en 3D).
-  var satelite = document.querySelector('.satelite');
-  if (satelite && satelite.animate) {
-    satelite.animate([{ translate: '0 0' }, { translate: '0 -10px' }],
-      { duration: 3800, direction: 'alternate', iterations: Infinity, easing: 'ease-in-out' });
-  }
   var FLECHAS = { arriba: '▲', abajo: '▼', izq: '◀', der: '▶' };
   function etiquetaDe(el, e) {
     if (el.classList.contains('cruceta')) {
@@ -487,6 +481,18 @@
       elegida = (elegida + 1) % opciones.length;
       opciones.forEach(function (o, i) { o.className = i === elegida ? 'sel' : 'vidrio'; });
     }, 1800);
+  }
+
+  // Pieza "Widget (Pro)": como las otras piezas, muestra su uso solo, con un toque suave en subir volumen cada
+  // tanto (Web Animations: funciona aunque Windows tenga los efectos desactivados).
+  var volWidget = document.querySelector('.pieza-widget .w-vol i:last-child');
+  if (volWidget && volWidget.animate) {
+    setInterval(function () {
+      volWidget.animate([
+        { transform: 'scale(1)', filter: 'brightness(1)' }, { transform: 'scale(.86)', filter: 'brightness(1.25)', offset: .35 },
+        { transform: 'scale(1)', filter: 'brightness(1)' }
+      ], { duration: 520, easing: 'cubic-bezier(.23, 1, .32, 1)' });
+    }, 2600);
   }
 
   // Entrada escalonada de cada sección al aparecer en pantalla.
