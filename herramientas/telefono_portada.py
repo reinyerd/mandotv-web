@@ -116,12 +116,37 @@ def telefono(lang, tv, alt):
     )
 
 
-def widget(lang):
+# Pieza "Widget (Pro)" de la sección de funciones (junto a Touchpad, Teclado y Entradas): el widget chico de la 1.2
+# (encender, silenciar y el volumen con el color de la marca). Panel UX y Marketing, 23-nov: en su propia tarjeta, sin
+# nada flotando ni encimado; "Pro" en el título (también en Touchpad) e "iPhone · beta" dentro de la tarjeta.
+PIEZA_WIDGET = {
+    'es': ('iPhone · beta', 'Widget de Mando TV en la pantalla de inicio del iPhone (función Pro, en beta): encender o apagar, silenciar y subir o bajar el volumen.'),
+    'en': ('iPhone · beta', 'Mando TV widget on the iPhone Home Screen (Pro feature, in beta): turn on or off, mute and turn the volume up or down.'),
+    'pt': ('iPhone · beta', 'Widget do Mando TV na tela de início do iPhone (recurso Pro, em beta): ligar ou desligar, silenciar e aumentar ou diminuir o volume.'),
+    'fr': ('iPhone · bêta', "Widget Mando TV sur l'écran d'accueil de l'iPhone (fonction Pro, en bêta) : allumer ou éteindre, couper le son et monter ou baisser le volume."),
+    'de': ('iPhone · Beta', 'Mando-TV-Widget auf dem Home-Bildschirm des iPhone (Pro-Funktion, Beta): ein- oder ausschalten, stummschalten und die Lautstärke ändern.'),
+    'it': ('iPhone · beta', "Widget di Mando TV nella schermata Home dell'iPhone (funzione Pro, in beta): accendere o spegnere, silenziare e alzare o abbassare il volume."),
+}
+
+
+def widget():
     menos = ALTAVOZ.replace('{extra}', '')
     mas = ALTAVOZ.replace('{extra}', 'M18 8.8v6.4')
-    return ('<div class="satelite" aria-hidden="true"><div class="widget">'
+    return ('<div class="widget">'
             f'<span class="w-tecla">{ico("energia")}</span><span class="w-tecla">{ico("silencio")}</span>'
-            f'<span class="w-vol"><i>{menos}</i><i>{mas}</i></span></div><small>{TEXTOS[lang]["widget"]}</small></div>')
+            f'<span class="w-vol"><i>{menos}</i><i>{mas}</i></span></div>')
+
+
+def pieza_widget(lang):
+    nota, alt = PIEZA_WIDGET[lang]
+    return ('<div class="pieza aparece" data-pieza="widget" role="img" aria-label="' + alt.replace('"', '&quot;') + '">\n'
+            '            <h3 aria-hidden="true">Widget (Pro)</h3>\n'
+            f'            <div class="pieza-widget" aria-hidden="true">{widget()}<small>{nota}</small></div>\n'
+            '          </div>')
+
+
+PIEZA = re.compile(r'  <div class="pieza aparece" data-pieza="widget".*?\n          </div>\n        ', re.S)
+TOUCHPAD = re.compile(r'(<h3 aria-hidden="true">)([^<(]+?)(</h3>\s*<div class="touchpad vidrio")')
 
 
 def bloque(html):
@@ -149,10 +174,13 @@ for lang, ruta in PORTADAS.items():
     a, b = bloque(html)
     tv, alt = datos(html)
     nuevo = html[:a] + telefono(lang, tv, alt) + html[b:]
-    # El widget va junto al teléfono, dentro del inclinador (se mueve con él al inclinarlo).
+    # El widget ya no va junto al teléfono (23-nov, el fundador: "ahí se ve horrible"); se quita si quedó de antes.
     nuevo = SATELITE.sub('', nuevo)
-    cierre = nuevo.index('</div>', bloque(nuevo)[1])  # cierre del inclinador
-    nuevo = nuevo[:cierre].rstrip() + '\n            ' + widget(lang) + '\n            ' + nuevo[cierre:]
+    # Va como cuarta pieza de la app, al final de la fila (después de Entradas).
+    nuevo = PIEZA.sub('', nuevo)
+    fin = nuevo.index('</div>\n      </div>\n    </section>', nuevo.index('<div class="piezas"'))
+    nuevo = nuevo[:fin] + '  ' + pieza_widget(lang) + '\n        ' + nuevo[fin:]
+    nuevo = TOUCHPAD.sub(lambda m: m[1] + m[2].strip() + ' (Pro)' + m[3], nuevo, count=1)
     if nuevo != html:
         open(p, 'w', encoding='utf-8', newline='\n').write(nuevo)
         print('ok', ruta)
