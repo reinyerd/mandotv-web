@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es" style="--marca: #e0457b; --marca-2: #ff9a62">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<!-- Prueba de fidelidad: la pantalla del teléfono a tamaño real (440 x 956), para compararla con la captura de la app.
+     msedge --headless --screenshot --window-size=440,956 http://127.0.0.1:8094/herramientas/telefono-prueba.html -->
+<link rel="stylesheet" href="/estilos.css?v=37c8bf317d">
+<style>
+  html, body { margin: 0; width: 440px; height: 956px; overflow: hidden; background: #000; }
+  .telefono { --k: 1; --inclinacion: 0deg; animation: none; position: absolute; left: -9px; top: -9px; box-shadow: none; }
+  .pantalla { border-color: transparent; border-radius: 0; }
+  .reflejo { display: none; }
+</style>
+</head>
+<body>
+<div id="aqui"></div>
+<script>
+  // Copia el teléfono de la portada.
+  fetch('/index.html').then(function (r) { return r.text(); }).then(function (t) {
+    var d = new DOMParser().parseFromString(t, 'text/html');
+    var tel = d.getElementById('telefono');
+    tel.dataset.marca = 'lg';
+    tel.querySelector('#app-tv').textContent = 'TV LG';
+    if (location.hash === '#claro') tel.classList.add('claro');
+    document.getElementById('aqui').replaceWith(tel);
+  });
+</script>
+</body>
+</html>

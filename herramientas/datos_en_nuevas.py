@@ -73,7 +73,7 @@ GUIAS_NUEVAS = [
     ],
     marca=None,
     faq=[
-      ('Can I turn on a TV with my phone if I never set it up?', 'Not over Wi-Fi. A TV that is off only wakes up from the network if power-on over the network was turned on beforehand. The first time, use the button on the TV. The exception is an Android phone with an infrared blaster: Mando TV can turn on a TV by infrared with no setup, if the brand is in its code list or you pick "Other brand / not sure".'),
+      ('Can I turn on a TV with my phone if I never set it up?', 'Not over Wi-Fi. A TV that is off only wakes up from the network if power-on over the network was turned on beforehand. The first time, use the button on the TV. The exception is an Android phone with an infrared blaster: Mando TV can turn on a TV by infrared with no setup, if the brand is in its code list or you pick "Other brand or I don\'t know".'),
       ('How do I turn on a Samsung TV without the remote?', 'Press the control button under the center of the screen or on the back at a lower corner. Then turn on "Power On with Mobile" so your phone can turn it on next time.'),
       ('How do I turn on a Roku TV without the remote?', 'Use the button on the TV, usually under the center or on the back. Then turn on "Fast TV start" under Settings, System, Power so Mando TV can turn it on from your phone.'),
       ('Why does my TV turn on by itself when I turn on the console?', 'That is HDMI-CEC. It is handy, and you can turn it off in the TV settings if you prefer.'),
@@ -223,7 +223,7 @@ GUIAS_MARCAS = [
       ('Insignia with Fire TV built in', 'The TV is the Fire TV, so the [Fire TV remote app](/en/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/en/guides/lost-fire-tv-remote/).'),
       ('Insignia with Roku TV', 'It works like any Roku TV, with no code. ' + _ROKU_ENCENDER + ' Details on the [Roku remote app page](/en/roku-remote/).'),
       ('Turn on an Insignia without the remote', 'The power button is usually under the center of the screen or on the back near a lower corner. See [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
-      ('Insignia TVs that are not smart TVs', 'An Insignia without Fire TV or Roku TV cannot be controlled over Wi-Fi. Mando TV has infrared control for Android phones with an infrared blaster, but Insignia is not in its list of brand code sets. The "Other brand / not sure" option tries every code set, so whether it works depends on the model.'),
+      ('Insignia TVs that are not smart TVs', 'An Insignia without Fire TV or Roku TV cannot be controlled over Wi-Fi. Mando TV has infrared control for Android phones with an infrared blaster, but Insignia is not in its list of brand code sets. The "Other brand or I don\'t know" option tries every code set, so whether it works depends on the model.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,

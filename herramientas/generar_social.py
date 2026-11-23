@@ -41,8 +41,8 @@ for lang, (portada, titulo, sub, tam, tv) in IDIOMAS.items():
     textos1 = [t for t in TEXTO.findall(bloque) if t.strip()]
     assert len(textos0) == len(textos1), (lang, len(textos0), len(textos1))
     alt1 = re.search(r'id="telefono" role="img" aria-label="([^"]*)"', home)[1]
-    if tv:
-        textos1[0] = tv
+    if tv:  # el rótulo de la TV del teléfono (#app-tv), no el primer texto (la hora de la barra de estado)
+        textos1[textos0.index(re.search(r'<span id="app-tv">([^<]*)</span>', base)[1])] = tv
     it = iter(textos1)
     nuevo = TEXTO.sub(lambda m: '>' + next(it) + '<' if m[1].strip() else m[0], base[a0:b0])
     s = base[:a0] + nuevo + base[b0:]

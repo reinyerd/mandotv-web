@@ -210,13 +210,29 @@ class Idioma:
 
 ''' + self.pie(m['clave']))
 
+    def tabla(self, t):
+        """Tabla comparativa (igual que tabla_html de generar_en.py): en el celular se desplaza dentro de su caja."""
+        cabeza = ''.join(f'<th scope="col">{e(c)}</th>' for c in t['cabeza'])
+        filas = '\n'.join('            <tr><th scope="row">' + e(f[0]) + '</th>' + ''.join(f'<td>{e(c)}</td>' for c in f[1:]) + '</tr>' for f in t['filas'])
+        nota = f'\n      <p class="nota">{self.fmt(t["nota"])}</p>' if t.get('nota') else ''
+        return f'''      <h2 id="comparacion">{e(t["titulo"])}</h2>
+      <div class="tabla" role="region" aria-labelledby="comparacion" tabindex="0">
+        <table>
+          <thead><tr>{cabeza}</tr></thead>
+          <tbody>
+{filas}
+          </tbody>
+        </table>
+      </div>''' + nota
+
     # ------------------------------------------------------------------ guías
     def pagina_guia(self, g):
         U = self.U
         url = URL + self.r(g['clave'])
         ld = {"@context": "https://schema.org", "@graph": [
           {"@type": "Article", "headline": g["h1"], "description": g["desc"], "inLanguage": I.CODIGO_LANG[self.cod],
-           "datePublished": FECHA, "dateModified": FECHA, "mainEntityOfPage": url, "image": URL + f"/social-{self.cod}.png",
+           "datePublished": g.get("fecha", FECHA), "dateModified": g.get("modificada", g.get("fecha", FECHA)),
+           "mainEntityOfPage": url, "image": URL + f"/social-{self.cod}.png",
            "author": {"@id": URL + "/#org"}, "publisher": {"@id": URL + "/#org"}},
           ORG,
           {"@type": "HowTo", "name": g["h1"], "description": g["desc"], "inLanguage": I.CODIGO_LANG[self.cod],
@@ -229,9 +245,13 @@ class Idioma:
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
         pasos = '\n'.join(f'        <li>{self.fmt(p)}</li>' for p in g['pasos'])
         extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{self.fmt(p)}</p>' for t, p in g['extra'])
+        if g.get('tabla'):
+            extra = self.tabla(g['tabla']) + '\n\n' + extra
         faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
         if g.get('marca'):
-            enlace = f'<a href="{self.r(g["marca"])}">{e(self.d.PAGINA_MARCA[g["marca"]])}</a>'
+            # marca: clave de una página de marca (texto de PAGINA_MARCA) o (clave de cualquier página, texto del enlace)
+            clave_m, texto_m = g['marca'] if isinstance(g['marca'], tuple) else (g['marca'], self.d.PAGINA_MARCA[g['marca']])
+            enlace = f'<a href="{self.r(clave_m)}">{e(texto_m)}</a>'
             marcas = '<p>' + U['g_mas_pagina'].format(enlace=enlace) + '</p>'
         else:
             marcas = (f'<p>{e(U["g_mas_marca"])}</p>\n      <ul>\n' + '\n'.join(
