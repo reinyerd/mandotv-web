@@ -5,6 +5,16 @@ https://claude.ai/artifact/SJMuTCAYnFpC9fsNQ6bx7H (publicado contra propuesta, e
 con "reducir movimiento"). El sí incluye fusionar `web-1-1-mac` y `web-1-1-windows` el día que cada tienda los
 publique, sin volver a preguntar.
 
+## Estado
+
+**Publicada el 22-nov (~21:12 hora de Chile), commit `db8181b` en `main`**, con el sí del fundador. Comprobado en vivo:
+las 7 páginas responden 200 con los textos nuevos, Descargar va a Microsoft Store en Windows y a App Store en iPhone y
+Mac, sin errores de consola ni desplazamiento lateral. IndexNow aceptó las 7 URL (HTTP 200). Search Console: sitemap
+reenviado ("Se ha enviado el sitemap correctamente"). Bing: sitemap reenviado ("successfully submitted").
+**Pendiente:** pedir la indexación de las 7 URL en Search Console (Inspección de URL > Solicitar indexación). El 22-nov
+Google respondió "Cuota superada" (el cupo diario ya se había usado); hacerlo el 23-nov, la portada en español primero.
+`web-1-1-mac` y `web-1-1-windows` siguen sin fusionar, esperando a sus tiendas.
+
 ## Qué lleva cada rama
 
 | Rama | Se sube cuando | Qué cambia |
