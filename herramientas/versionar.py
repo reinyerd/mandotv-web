@@ -7,8 +7,12 @@ Imprime las páginas que cambió.
 
 También regenera sitemap.xml: lista las páginas indexables (sin noindex, sin herramientas/ ni r/) y pone en cada una
 la fecha real de su último cambio (último commit que tocó el archivo; si tiene cambios sin commitear, la fecha de hoy).
+Si una página tiene un VideoObject en su JSON-LD, su entrada lleva también <video:video> (sitemap de video de Google)
+con los mismos datos del schema: así el video se declara en un solo lugar.
 """
 import hashlib
+import html
+import json
 import pathlib
 import datetime
 import re
@@ -85,13 +89,48 @@ def paginas_indexables():
         yield p
 
 
+LD = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
+
+
+def videos_de(pagina):
+    """Los VideoObject del JSON-LD de la página (dentro de @graph o sueltos)."""
+    encontrados = []
+    for bloque in LD.findall(pagina.read_text(encoding='utf-8')):
+        datos = json.loads(bloque)
+        nodos = datos.get('@graph', [datos]) if isinstance(datos, dict) else datos
+        encontrados += [n for n in nodos if isinstance(n, dict) and n.get('@type') == 'VideoObject']
+    return encontrados
+
+
+def segundos(iso):
+    m = re.fullmatch(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', iso or '')
+    return int(m[1] or 0) * 3600 + int(m[2] or 0) * 60 + int(m[3] or 0) if m else 0
+
+
+def video_xml(v):
+    e = lambda s: html.escape(str(s), quote=False)
+    partes = [f'<video:thumbnail_loc>{e(v["thumbnailUrl"])}</video:thumbnail_loc>', f'<video:title>{e(v["name"])}</video:title>',
+              f'<video:description>{e(v["description"])}</video:description>',
+              f'<video:content_loc>{e(v["contentUrl"])}</video:content_loc>']
+    if v.get('embedUrl'):
+        partes.append(f'<video:player_loc>{e(v["embedUrl"])}</video:player_loc>')
+    if segundos(v.get('duration')):
+        partes.append(f'<video:duration>{segundos(v["duration"])}</video:duration>')
+    if v.get('uploadDate'):
+        partes.append(f'<video:publication_date>{e(v["uploadDate"])}</video:publication_date>')
+    partes.append('<video:family_friendly>yes</video:family_friendly>')
+    return '<video:video>' + ''.join(partes) + '</video:video>'
+
+
 def sitemap():
     def orden(p):
         u = url_de(p)[len(DOMINIO):]
         grupo = 0 if u == '/' else 1 if u.startswith('/control-remoto-') else 2 if u.startswith('/guias/') else 3
         return (grupo, u)
-    filas = [f'  <url><loc>{url_de(p)}</loc><lastmod>{fecha_cambio(p)}</lastmod></url>' for p in sorted(paginas_indexables(), key=orden)]
-    nuevo = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(filas) + '\n</urlset>\n'
+    filas = [f'  <url><loc>{url_de(p)}</loc><lastmod>{fecha_cambio(p)}</lastmod>' + ''.join(video_xml(v) for v in videos_de(p)) + '</url>'
+             for p in sorted(paginas_indexables(), key=orden)]
+    espacios = 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"'
+    nuevo = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset {espacios}>\n' + '\n'.join(filas) + '\n</urlset>\n'
     destino = RAIZ / 'sitemap.xml'
     if not destino.exists() or destino.read_text(encoding='utf-8') != nuevo:
         destino.write_text(nuevo, encoding='utf-8', newline='')

@@ -22,6 +22,7 @@ Key facts:
 - [Roku remote](https://mandotv.app/en/roku-remote/)
 - [Google TV and Android TV remote](https://mandotv.app/en/android-tv-remote/)
 - [Guides](https://mandotv.app/en/guides/): lost remote, change HDMI input without a remote, turn on the TV with the phone, phone cannot find the TV
+- [Video, 25 s](https://mandotv.app/media/mando-tv-in-action-en-720p.mp4): Mando TV in action with no sound (volume, arrows and OK, typing on the TV, inputs, supported brands, Free and Pro). Also on [YouTube](https://youtu.be/RyhvFz0ZUDk), the home page and the [Windows guide](https://mandotv.app/en/guides/tv-remote-app-for-windows/)
 - [Support](https://mandotv.app/en/support.html)
 - [Privacy](https://mandotv.app/en/privacy.html)
 

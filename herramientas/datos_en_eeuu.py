@@ -194,6 +194,15 @@ GUIAS_EEUU = [
     titulo='TV Remote App for Windows PC: Control Your TV',
     desc='Control your Samsung, LG, Roku, Google TV or Fire TV from a Windows PC with Mando TV: keyboard shortcuts, a mini remote and Wi-Fi control. Microsoft Store.',
     h1='TV Remote App for Windows PC',
+    # Video premium hecho con Remotion (23-nov) con pantallas reales de la app; el mismo está en /en/ y en YouTube
+    # (canal Mando TV): de ahí sale el embedUrl del VideoObject. MP4 propio de 720p, sin audio.
+    video=dict(
+      name='Mando TV in action: one remote for all your TVs',
+      description='A 25-second tour of the Mando TV app, with no sound: turn the volume up, move through menus with the arrows and OK, type a search on the TV with the phone keyboard, switch inputs (Live TV, HDMI 1, HDMI 2), use it with LG, Samsung, Roku, Google TV, Fire TV, Hisense and more over Wi-Fi, and see what Free and Pro include. Mando TV is a free universal TV remote for iPhone, iPad, Android and Windows, with no ads and no account.',
+      archivo='/media/mando-tv-in-action-en-720p.mp4', poster='/media/mando-tv-in-action-en.webp',
+      miniatura='/media/mando-tv-in-action-en.jpg', youtube='RyhvFz0ZUDk', fecha='2026-11-23T03:35:00-03:00', duracion='PT25S',
+      boton='Play · 0:25',
+      texto='Mando TV in 25 seconds, no sound. The video shows the phone app; the Windows app has the same remote, and you type on the TV with your PC keyboard.'),
     intro='Mando TV has a Windows app that turns your PC or laptop into a TV remote over your home network. Type on the TV with your real keyboard, keep a small remote window on top while you work, and control Samsung, LG, Roku, Google TV or Fire TV from the same app.',
     pasos=[
       'Install Mando TV free from Microsoft Store on a Windows 10 or 11 PC.',

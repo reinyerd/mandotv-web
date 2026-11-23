@@ -1294,3 +1294,28 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
   .demo-tecla { font-size: 11px; padding: 9px 2px; }
   .demo-paso { padding: 7px 11px; font-size: 13px; }
 }
+
+/* ---------- Video "Mando TV in action" (23-nov): MP4 propio, sin reproductor de YouTube (la web no lleva rastreadores) ---------- */
+.video-premium, .guia-video { margin: 0; }
+.video-premium { margin-top: 56px; }
+.video-marco { position: relative; }
+.video-marco video {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 24px; background: #0b0a10;
+  box-shadow: 0 40px 80px -32px rgba(60, 20, 110, .55);
+}
+.guia-video { margin-top: 8px; }
+.guia-video .video-marco video { border-radius: 18px; }
+.video-play {
+  position: absolute; left: clamp(12px, 2.4vw, 24px); bottom: clamp(12px, 2.4vw, 24px); z-index: 1;
+  display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px 8px 8px; border: 0; border-radius: 999px;
+  background: #fff; color: #0d0f17; font: 600 16px/1 var(--texto); cursor: pointer;
+  box-shadow: 0 14px 34px -10px rgba(13, 15, 23, .45); transition: transform .2s cubic-bezier(.23, 1, .32, 1);
+}
+.video-play:hover { transform: scale(1.04); }
+.video-play:active { transform: scale(.97); }
+.video-play i { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #0d0f17; color: #fff; }
+.video-play svg { width: 18px; height: 18px; fill: currentColor; margin-left: 2px; }
+.video-play[hidden] { display: none; }
+/* En el celular el póster es bajo: solo el círculo, para no tapar el texto del póster (el nombre del botón sigue ahí). */
+@media (max-width: 560px) { .video-play { padding: 4px; gap: 0; font-size: 0; } .video-play i { width: 44px; height: 44px; } }
+.video-premium figcaption, .guia-video figcaption { margin-top: 14px; color: var(--tenue); font-size: 15px; }

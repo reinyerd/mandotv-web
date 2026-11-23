@@ -771,6 +771,27 @@ def pagina_guia(g):
     if idiomas_sitio.es_guia_pc(en):  # ficha de Microsoft Store visible y en JSON-LD (GEO, 23-nov)
         ld['@graph'].append(idiomas_sitio.app_windows(url))
         ms = '      ' + idiomas_sitio.linea_ms_store('en') + '\n'
+    video = ''
+    if g.get('video'):  # MP4 propio: no descarga nada hasta que se pulsa (preload none), solo el póster
+        v = g['video']
+        ld['@graph'].append({"@type": "VideoObject", "@id": url + "#video", "name": v['name'], "description": v['description'],
+          "thumbnailUrl": URL + v['miniatura'], "uploadDate": v['fecha'], "duration": v['duracion'],
+          "contentUrl": URL + v['archivo'], "embedUrl": "https://www.youtube.com/embed/" + v['youtube'],
+          "encodingFormat": "video/mp4", "inLanguage": "en", "publisher": {"@id": URL + "/#org"}})
+        ancho, alto = (720, 1280) if v.get('vertical') else (1280, 720)
+        clase = 'guia-video vertical' if v.get('vertical') else 'guia-video'
+        video = f'''      <h2 id="video">{e(v.get('titulo', 'See it in action'))}</h2>
+      <figure class="{clase}">
+        <div class="video-marco" data-play="{e(v['boton'])}">
+          <video controls muted playsinline preload="none" width="{ancho}" height="{alto}" poster="{v['poster']}" aria-describedby="video-texto">
+            <source src="{v['archivo']}" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">{e(v['texto'])}</figcaption>
+      </figure>
+      <script src="/video.js" defer></script>
+
+'''
     pasos = '\n'.join(f'        <li>{fmt(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{fmt(p)}</p>' for t, p in g['extra'])
     if g.get('tabla'):
@@ -796,7 +817,7 @@ def pagina_guia(g):
 
   <main class="contenedor">
     <div class="documento">
-      <h2 id="pasos">Step by step</h2>
+{video}      <h2 id="pasos">Step by step</h2>
       <ol>
 {pasos}
       </ol>
