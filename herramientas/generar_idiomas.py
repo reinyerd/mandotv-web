@@ -243,6 +243,10 @@ class Idioma:
             {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
           {"@type": "FAQPage", "inLanguage": I.CODIGO_LANG[self.cod], "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
+        ms = ''
+        if I.es_guia_pc(self.r(g['clave'])):  # ficha de Microsoft Store visible y en JSON-LD (GEO, 23-nov)
+            ld['@graph'].append(I.app_windows(url))
+            ms = '\n      ' + I.linea_ms_store(self.cod)
         pasos = '\n'.join(f'        <li>{self.fmt(p)}</li>' for p in g['pasos'])
         extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{self.fmt(p)}</p>' for t, p in g['extra'])
         if g.get('tabla'):
@@ -280,7 +284,7 @@ class Idioma:
       <h2 id="mando-tv">{e(U['g_hazlo'])}</h2>
       <p>{e(U['g_tiendas'])}</p>
 {self.lista_tiendas(None, None, guia=True)}
-      <p class="nota">{U['g_nota'].format(enlace=self.android)}</p>
+      <p class="nota">{U['g_nota'].format(enlace=self.android)}</p>{ms}
       {marcas}
 
       <h2 id="preguntas">{e(U['g_faq'])}</h2>
