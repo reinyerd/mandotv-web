@@ -491,9 +491,9 @@ GUIAS += [
       ('¿Puedo usarlo desde un iPhone?', 'Sí. Mando TV está en la App Store para iPhone y iPad, en Microsoft Store para Windows, y en prueba anticipada gratis en Google Play para Android.'),
     ]),
   dict(slug='guias/app-control-remoto-para-windows', corto='Control remoto para Windows', fecha='2026-11-23',
-    titulo='Control remoto para Windows: usa tu PC como control del TV',
+    titulo='Control remoto para TV en Windows: usa tu PC | Mando TV',
     desc='Controla tu TV Samsung, LG, Roku, Google TV o Fire TV desde un PC con Windows: atajos de teclado, mini control y conexión por WiFi. En Microsoft Store.',
-    h1='App de control remoto del TV para PC con Windows',
+    h1='Control remoto para TV en Windows',
     intro='Mando TV tiene una app para Windows que convierte tu PC o laptop en un control remoto por la red de tu casa. Escribe en el TV con tu teclado real, deja una ventana pequeña del control encima mientras trabajas y controla televisores Samsung, LG, Roku, Google TV o Fire TV desde la misma app.',
     pasos=[
       'Instala Mando TV gratis desde Microsoft Store en un PC con Windows 10 o 11.',
@@ -814,6 +814,11 @@ def pagina(g):
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
+    ms, intro = '', e(g['intro'])
+    if idiomas_sitio.es_guia_pc(g['slug']):  # ficha de Microsoft Store visible, enlazada y en JSON-LD (GEO, 23-nov)
+        ld['@graph'].append(idiomas_sitio.app_windows(url))
+        ms = '\n      ' + idiomas_sitio.linea_ms_store('es')
+        intro = idiomas_sitio.enlazar_mando(intro)
     pasos = '\n'.join(f'        <li>{fmt(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{fmt(p)}</p>' for t, p in g['extra'])
     if g.get('tabla'):
@@ -863,7 +868,7 @@ def pagina(g):
       </header>
       <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/guias/">Guías</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
-      <p>{e(g["intro"])}</p>
+      <p>{intro}</p>
       <div class="acciones">
         <a class="boton" href="#pasos">Ver los pasos</a>
         <a class="boton claro" href="#mando-tv">Descargar gratis</a>
@@ -887,7 +892,7 @@ def pagina(g):
         <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store">{MS_SVG}<span><small>Descárgalo en</small>Microsoft Store</span></a></li>
         <li><a class="tienda" href="/#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small>Google Play</span></a></li>
       </ul>
-      <p class="nota">Android: prueba anticipada gratis en Google Play. <a href="/#android">Únete en dos pasos</a> y ayúdanos a llegar a la tienda.</p>
+      <p class="nota">Android: prueba anticipada gratis en Google Play. <a href="/#android">Únete en dos pasos</a> y ayúdanos a llegar a la tienda.</p>{ms}
       {marcas}
 
       <h2 id="preguntas">Preguntas frecuentes</h2>
@@ -1102,6 +1107,10 @@ def pagina_idioma(g):
         {"@type": "ListItem", "position": 2, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
+    ms = ''
+    if idiomas_sitio.es_guia_pc(g['slug']):  # ficha de Microsoft Store visible y en JSON-LD (GEO, 23-nov)
+        ld['@graph'].append(idiomas_sitio.app_windows(url))
+        ms = '\n      ' + idiomas_sitio.linea_ms_store(g['idioma'])
     pasos = '\n'.join(f'        <li>{e(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{e(p)}</p>' for t, p in g['extra'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
@@ -1169,7 +1178,7 @@ def pagina_idioma(g):
         <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="{u["ms_aria"]}">{MS_SVG}<span><small>{u["descarga"]}</small>Microsoft Store</span></a></li>
         <li><a class="tienda" href="/#android" aria-label="{u["gp_aria"]}">{GPLAY_SVG}<span><small>{u["anticipada"]}</small>Google Play</span></a></li>
       </ul>
-      <p class="nota">{u["nota"]}</p>
+      <p class="nota">{u["nota"]}</p>{ms}
 
       <h2 id="preguntas">{u["faq"]}</h2>
       <div class="preguntas">

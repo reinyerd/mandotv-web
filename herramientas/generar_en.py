@@ -767,6 +767,10 @@ def pagina_guia(g):
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "inLanguage": "en", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
+    ms = ''
+    if idiomas_sitio.es_guia_pc(en):  # ficha de Microsoft Store visible y en JSON-LD (GEO, 23-nov)
+        ld['@graph'].append(idiomas_sitio.app_windows(url))
+        ms = '      ' + idiomas_sitio.linea_ms_store('en') + '\n'
     pasos = '\n'.join(f'        <li>{fmt(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{fmt(p)}</p>' for t, p in g['extra'])
     if g.get('tabla'):
@@ -802,7 +806,7 @@ def pagina_guia(g):
       <h2 id="mando-tv">Do it with Mando TV</h2>
       <p>Mando TV is a universal TV remote. Download it free, with no ads and no account. Pro is an optional one-time purchase, no subscription. For iPhone, iPad, Windows and Android:</p>
 {tiendas_guia()}
-      {marcas}
+{ms}      {marcas}
 
       <h2 id="preguntas">Frequently asked questions</h2>
       <div class="preguntas">

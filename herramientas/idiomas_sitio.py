@@ -109,3 +109,32 @@ def hreflangs(clave):
 def enlaces_idiomas(clave, excluir):
     """[(idioma, ruta, nombre)] de las demás gemelas, para los selectores de idioma."""
     return [(l, ruta(clave, l), NOMBRES[l]) for l in ORDEN if l != excluir and existe(clave, l)]
+
+
+# Guías de PC y Windows (GEO, 23-nov): ChatGPT y Gemini recomiendan Mando TV en Windows pero inventan un enlace de
+# Microsoft Store que no existe. En estas páginas la ficha va también como texto visible y en un SoftwareApplication.
+MS_STORE = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW'
+_MS_TEXTO = dict(es='Ficha en Microsoft Store:', en='Microsoft Store page:', de='Seite im Microsoft Store:',
+                 fr='Fiche Microsoft Store :', pt='Página na Microsoft Store:', it='Scheda su Microsoft Store:')
+RUTAS_PC = {v for k in ('pc', 'windows') for v in PAGINAS[k].values()}
+
+
+def es_guia_pc(ruta):
+    return ruta.strip('/') in RUTAS_PC
+
+
+def linea_ms_store(lang):
+    return f'<p class="nota">{_MS_TEXTO[lang]} <a href="{MS_STORE}">apps.microsoft.com/detail/9N3D7T1DP2SW</a></p>'
+
+
+def app_windows(url):
+    """Igual al SoftwareApplication de las portadas, para la app de Windows."""
+    return {"@type": "SoftwareApplication", "name": "Mando TV", "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11", "url": url, "downloadUrl": MS_STORE, "installUrl": MS_STORE,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
+            "author": {"@id": "https://mandotv.app/#org"}, "publisher": {"@id": "https://mandotv.app/#org"}}
+
+
+def enlazar_mando(intro_html):
+    """Primer "Mando TV" del párrafo (ya escapado) como enlace directo a la ficha de Microsoft Store."""
+    return intro_html.replace('Mando TV', f'<a href="{MS_STORE}">Mando TV</a>', 1)
