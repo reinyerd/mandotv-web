@@ -208,7 +208,7 @@ GUIAS_EEUU = [
       ('Typing on the TV from the PC', 'The on-screen keyboard of a TV is slow. In Mando TV you type with your real keyboard and the text goes to the TV search box. That part is free.'),
       ('More details', 'For the step-by-step version see [how to control your TV from a Windows PC](/en/guides/control-tv-from-pc/). For phone-based control see [use your phone as a TV remote over Wi-Fi](/en/guides/connect-phone-to-tv-wifi/).'),
       ('What is free and what is Pro', FREE_PRO + ' On Windows, Pro is bought through Microsoft Store.'),
-      ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. The voice is recognized on the PC itself: it needs no internet, no Windows settings to change and works in the 6 languages of the app. What you say never leaves the PC and is not stored. Only on very old processors does the app fall back to Windows voice typing, which needs "Online speech recognition" on in Settings > Privacy & security > Speech and your language added in Windows.'),
+      ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. The voice is recognized on the PC itself: it needs no internet and no Windows settings to change. What you say never leaves the PC and is not stored. Only on very old processors does the app fall back to Windows voice typing, which needs "Online speech recognition" on in Settings > Privacy & security > Speech and your language added in Windows.'),
     ],
     faq=[
       ('Does the TV remote app for Windows need Bluetooth or a cable?', 'No. It uses your home network. The PC and the TV only have to be on the same router.'),

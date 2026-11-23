@@ -105,6 +105,56 @@
   var barras = document.querySelectorAll('.vitrina-barras i');
   var nombres = {};
   botones.forEach(function (b) { nombres[b.dataset.marca] = b.textContent.trim(); });
+  var volumen = document.getElementById('app-volumen');
+
+  // Demostración sola (23-nov, "que llame más la atención"): con cada marca que entra, un dedo invisible toca una
+  // tecla (onda de luz y la tecla se hunde; en LG sube el volumen de 12 a 13) y, cada dos marcas, un brillo cruza el
+  // vidrio. Una sola cosa a la vez y solo mientras la vitrina gira sola. Con la Web Animations API, que funciona aunque
+  // Windows tenga los efectos desactivados (decisión del fundador).
+  var pantallaApp = telefono.querySelector('.app');
+  var brillo = telefono.querySelector('.t-brillo');
+  var onda = null, demoPendiente = [];
+  var DEMO = { samsung: '.ok', lg: '.balancin b', roku: '.flecha.der', android: '.ok' };
+  function cancelarDemo() { demoPendiente.forEach(clearTimeout); demoPendiente = []; }
+  function enPantalla(el) { // posición en la pantalla de la app (440 x 956), sin contar la escala ni el giro
+    var x = 0, y = 0, n = el;
+    while (n && n !== pantallaApp) { x += n.offsetLeft; y += n.offsetTop; n = n.offsetParent; }
+    return { x: x + el.offsetWidth / 2, y: y + el.offsetHeight / 2 };
+  }
+  function tocarDemo(id) {
+    var el = pantallaApp && pantallaApp.querySelector(DEMO[id]);
+    if (!el || !el.animate) return;
+    if (!onda) { onda = document.createElement('i'); onda.className = 't-onda'; pantallaApp.appendChild(onda); }
+    var c = enPantalla(el);
+    onda.style.left = c.x + 'px';
+    onda.style.top = c.y + 'px';
+    onda.animate([
+      { opacity: 0, transform: 'scale(.35)' }, { opacity: .7, transform: 'scale(.7)', offset: .25 }, { opacity: 0, transform: 'scale(1.45)' }
+    ], { duration: 720, easing: 'cubic-bezier(.23, 1, .32, 1)' });
+    el.animate([
+      { transform: 'scale(1)', filter: 'brightness(1)' }, { transform: 'scale(.92)', filter: 'brightness(1.4)', offset: .3 },
+      { transform: 'scale(1)', filter: 'brightness(1)' }
+    ], { duration: 460, easing: 'cubic-bezier(.23, 1, .32, 1)' });
+    if (id === 'lg' && volumen) {
+      demoPendiente.push(setTimeout(function () {
+        volumen.textContent = '13';
+        volumen.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
+          { duration: 260, easing: 'cubic-bezier(.23, 1, .32, 1)' });
+      }, 140));
+    }
+  }
+  function cruzarBrillo() {
+    if (!brillo || !brillo.animate) return;
+    brillo.animate([
+      { opacity: 0, transform: 'translateX(-150%) skewX(-14deg)' }, { opacity: 1, offset: .25 }, { opacity: 1, offset: .75 },
+      { opacity: 0, transform: 'translateX(330%) skewX(-14deg)' }
+    ], { duration: 1200, easing: 'cubic-bezier(.4, 0, .2, 1)' });
+  }
+  function demostrar(id) {
+    cancelarDemo();
+    demoPendiente.push(setTimeout(function () { if (!enPausa()) tocarDemo(id); }, 1000));
+    if (id === 'samsung' || id === 'roku') demoPendiente.push(setTimeout(function () { if (!enPausa()) cruzarBrillo(); }, 1900));
+  }
 
   function aplicar(id, porUsuario) {
     var m = marcas[id];
@@ -112,6 +162,9 @@
     raiz.style.setProperty('--marca-2', m.color2);
     if (tema) tema.setAttribute('content', m.color);
     nombreTv.textContent = m.tv;
+    // El número del volumen solo lo muestran los TV LG en la app (estilos.css); cada marca entra con 12.
+    telefono.dataset.marca = id;
+    if (volumen) volumen.textContent = '12';
     // Solo se anuncia a los lectores de pantalla cuando la persona elige; la rotación sola no interrumpe.
     nota.setAttribute('aria-live', porUsuario ? 'polite' : 'off');
     nota.textContent = m.nota;
@@ -142,6 +195,7 @@
     botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.marca === id)); });
     marcarBarras();
     clearTimeout(cambio);
+    cancelarDemo();
     telefono.classList.remove.apply(telefono.classList, clases);
     void telefono.offsetWidth; // reinicia la animación
     telefono.classList.add(haciaAtras ? 'sale-der' : 'sale-izq');
@@ -150,6 +204,7 @@
       telefono.classList.remove.apply(telefono.classList, clases);
       void telefono.offsetWidth;
       telefono.classList.add(haciaAtras ? 'entra-izq' : 'entra-der');
+      if (!porUsuario) demostrar(id);
       // La palabra gigante se desliza un poco en la misma dirección.
       if (gigante && gigante.animate) {
         gigante.animate([
@@ -319,14 +374,15 @@
   chip.className = 'toque';
   chip.setAttribute('aria-hidden', 'true');
   if (escaparate) escaparate.appendChild(chip);
+  // Al cargar, la primera demostración invita a tocar (antes el OK latía dos veces).
   var tocado = false;
-  var okInvita = telefono.querySelector('.ok');
-  if (okInvita && okInvita.animate) {
-    setTimeout(function () {
-      if (tocado) return;
-      okInvita.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.14)' }, { transform: 'scale(1)' }],
-        { duration: 650, iterations: 2, delay: 0, easing: 'cubic-bezier(.45, 0, .55, 1)' });
-    }, 1400);
+  setTimeout(function () { if (!tocado && actual === 'samsung' && !enPausa()) { tocarDemo('samsung'); } }, 1400);
+  setTimeout(function () { if (!tocado && actual === 'samsung' && !enPausa()) cruzarBrillo(); }, 2300);
+  // El widget flota a su ritmo, desfasado del teléfono (propiedad translate: no pisa su giro en 3D).
+  var satelite = document.querySelector('.satelite');
+  if (satelite && satelite.animate) {
+    satelite.animate([{ translate: '0 0' }, { translate: '0 -10px' }],
+      { duration: 3800, direction: 'alternate', iterations: Infinity, easing: 'ease-in-out' });
   }
   var FLECHAS = { arriba: '▲', abajo: '▼', izq: '◀', der: '▶' };
   function etiquetaDe(el, e) {
@@ -381,7 +437,8 @@
       if (cuadro) cancelAnimationFrame(cuadro);
       cuadro = requestAnimationFrame(function () {
         inclinador.classList.add('siguiendo');
-        inclinador.style.transform = 'rotateX(' + (-y * max * 1.4).toFixed(2) + 'deg) rotateY(' + (x * max * 2).toFixed(2) + 'deg)';
+        // Parte de la pose de reposo (estilos.css: --rx 3deg, --ry -9deg).
+        inclinador.style.transform = 'rotateX(' + (3 - y * max * 1.4).toFixed(2) + 'deg) rotateY(' + (-9 + x * max * 2).toFixed(2) + 'deg)';
       });
     });
     escaparate.addEventListener('pointerleave', function () {
