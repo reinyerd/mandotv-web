@@ -22,7 +22,7 @@ UI = dict(
   apple_aria="Scarica Mando TV gratis dall'App Store", ms_aria='Scarica Mando TV gratis dal Microsoft Store',
   gp_aria='Accesso anticipato a Mando TV su Google Play per Android', aria_desc='Scarica Mando TV',
   b_como_btn='Come collegarsi', b_tiendas_label='Disponibile negli store',
-  b_nota="iPhone, iPad, Android e Windows. Download gratuito, senza pubblicità. Pro è un acquisto una tantum, senza abbonamento.",
+  b_nota="iPhone, iPad, Mac, Android e Windows. Download gratuito, senza pubblicità. Pro è un acquisto una tantum, senza abbonamento.",
   b_compat='TV compatibili', b_otras='Altre marche', b_otras_p="Mando TV controlla tutte queste marche con la stessa app:",
   g_guias='Guide', g_ver='Vedi i passaggi', g_pasos='Passo dopo passo', g_hazlo='Fallo con Mando TV',
   g_tiendas="Mando TV è un telecomando universale per la tua TV. Scaricalo gratis, senza pubblicità e senza account. Pro è un acquisto una tantum facoltativo, senza abbonamento. Per iPhone, iPad, Windows e Android:",

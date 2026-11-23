@@ -98,7 +98,7 @@ GUIAS_NUEVAS = [
         ['Ads', 'None', 'Common'],
         ['Subscription', 'None. Pro is an optional one-time purchase', 'Weekly or monthly plans are common'],
         ['Account', 'Not needed', 'Varies'],
-        ['Phones and computers', 'iPhone, iPad and Windows, plus Android in early access', 'Varies'],
+        ['Phones and computers', 'iPhone, iPad, Mac and Windows, plus Android in early access', 'Varies'],
         ['Smart TVs over Wi-Fi', 'Samsung (2016 and newer), LG webOS, Roku, Google TV and Android TV, Fire TV, Apple TV (beta)', 'Varies by app'],
         ['Infrared for older TVs', 'Free on Android phones with an infrared blaster (new)', 'Some apps, only on phones with an infrared blaster'],
         ['Bluetooth', 'Beta on Android 9 and newer, free', 'Varies by app'],
@@ -109,7 +109,7 @@ GUIAS_NUEVAS = [
     extra=[
       ('What Mando TV does not do', 'It has no screen mirroring of its own: on iPhone and iPad it walks you to Screen Mirroring in Control Center, the iPhone\'s own feature, which works with TVs that support AirPlay. With Mando TV Pro it can also send photos and videos to the TV over your home Wi-Fi. It controls smart TVs over your home Wi-Fi. A TV that is not a smart TV can be controlled by infrared from an Android phone with an infrared blaster. On Android 9 or newer, the phone can also connect to Google TV, Android TV and Fire TV over Bluetooth as a keyboard and remote, with no Wi-Fi. That option is in beta and free.'),
       ('How Mando TV makes money', 'Not with ads and not with your data: the app collects none. Mando TV is paid for by Pro, an optional one-time purchase for extras. The basic remote is free.'),
-      ('On the devices you already have', 'iPhone and iPad from the App Store, Windows PCs from Microsoft Store, and Android through free early access on Google Play. See [TV remote app for iPhone](/en/guides/tv-remote-app-for-iphone/) and [TV remote app for Windows](/en/guides/tv-remote-app-for-windows/).'),
+      ('On the devices you already have', 'iPhone, iPad and Mac from the App Store, Windows PCs from Microsoft Store, and Android through free early access on Google Play. See [TV remote app for iPhone](/en/guides/tv-remote-app-for-iphone/) and [TV remote app for Windows](/en/guides/tv-remote-app-for-windows/).'),
       ('Privacy', 'No account and no tracking in the app. It talks to the TV inside your home network, and the TV connection keys stay encrypted on your device. Details in the [privacy policy](/en/privacy.html).'),
     ],
     marca=None,

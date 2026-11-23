@@ -363,6 +363,7 @@ a { color: inherit; }
   .marcas button[aria-pressed="true"]:hover, .equipos button[aria-pressed="true"]:hover { background: #0d0f17; }
 }
 .sin-js .grupo-equipos { display: none; }
+.equipos:has(> :nth-child(5)) { grid-template-columns: repeat(5, 1fr); }
 .temas { display: flex; gap: 10px; align-items: center; font-size: 14px; font-weight: 600; }
 .punto {
   width: 28px; height: 28px; border-radius: 50%; border: 0; cursor: pointer; padding: 0;
@@ -571,6 +572,7 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   .vitrina-cuenta { min-width: 0; font-size: 16px; }
   .vitrina-cuenta b { font-size: 28px; }
   .marcas, .equipos { grid-template-columns: repeat(2, 1fr); }
+  .equipos:has(> :nth-child(5)) { grid-template-columns: repeat(3, 1fr); }
   .acciones .boton { flex: 1 1 100%; justify-content: center; }
   #boton-principal { font-size: 16px; padding: 16px 18px; }
   .etiqueta-grupo { flex-wrap: wrap; }
