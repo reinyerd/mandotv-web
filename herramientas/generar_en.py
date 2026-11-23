@@ -408,6 +408,14 @@ GUIAS = [
     titulo='Lost Your TV Remote? What to Do Right Now',
     desc='Lost your TV remote? Turn the TV on with its button and use your phone as the remote. Steps for LG, Samsung, Roku and Android TV. Free, no ads.',
     h1='Lost Your TV Remote? What You Can Do',
+    # Short vertical de YouTube (Remotion, 23-nov) con pantallas reales de la app; MP4 propio 720x1280 sin audio.
+    video=dict(
+      name='Lost your TV remote? Use your phone instead',
+      description='A 15-second vertical video with no sound: the Mando TV app on a phone turns the TV volume up, moves through the menus with the arrows and OK, and types a search on the TV with the phone keyboard. Mando TV is a free universal TV remote for iPhone, iPad, Android and Windows, with no ads and no account.',
+      archivo='/media/lost-your-tv-remote-short-en-720p.mp4', poster='/media/lost-your-tv-remote-short-en.webp',
+      miniatura='/media/lost-your-tv-remote-short-en.jpg', youtube='HVcCFZlNtcI', fecha='2026-11-23T03:35:00-03:00', duracion='PT15S',
+      boton='Play · 0:15', titulo='Use your phone as the remote', vertical=True,
+      texto='15 seconds, no sound: your phone turns the volume up, moves with the arrows and OK, and types a search on the TV.'),
     intro='A lost TV remote happens in every home: it disappears just when you want to watch something. The good news is that your phone can work as the remote, over your home Wi-Fi. Here is what to do, in order.',
     pasos=[
       'Turn on the TV with its physical button. It is almost always at the bottom center, or on the back near a corner. Sometimes it is a single button and sometimes a tiny joystick.',
