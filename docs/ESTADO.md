@@ -14,6 +14,32 @@ Indexación:
 - Bing Webmaster Tools: el fundador inició sesión y el sitemap se reenvió el 24-nov ("successfully submitted", 153
   URL, sin errores ni advertencias). Única notificación: consejo general "Improve the search presence", informativo.
 
+## 24-nov: portada en inglés en la raíz (rama `web-portada-en`, SIN publicar, esperando el sí del fundador)
+
+Pedido del fundador tras ver Search Console (16 de 22 clics de países que no hablan español). En la rama:
+- `/` = portada en inglés (antes `/en/`), `/es/` = portada en español (antes `/`), `/en/` = redirección al instante a
+  `/` (noindex, canonical a `/`, conserva el #). Solo cambian las portadas; guías y marcas siguen igual.
+- 90 páginas con enlaces ajustados según su idioma (logo, migas, #android, #tiendas, selectores de idioma),
+  hreflang de las 6 portadas, generadores (`idiomas_sitio.py`, `pie_firma.py`, `generar_en.py`, `generar_marcas.py`,
+  `generar_guias.py`), `llms.txt` y `manifest` (lang en). La página de mandos compartidos `m/` enlaza a `/`.
+- Arreglo aparte: los botones de la 404 se veían blancos sobre blanco (en vivo hoy).
+- Probado en local: 0 enlaces rotos en 223 páginas, aviso de idioma correcto en 10 casos, sin errores de consola.
+- Al publicar: fusionar, `pie_firma.py` + `versionar.py`, push, comprobar en vivo, IndexNow, sitemap en Search Console
+  y Bing, y pedir indexación de `/` y `/es/` (después de `/` y `/en/` pendientes de hoy).
+
+## 24-nov: enlaces de las tiendas en inglés (pedido del fundador)
+
+- App Store: privacidad `https://mandotv.app/en/privacy.html` y soporte `https://mandotv.app/en/support.html` en los
+  36 idiomas de la versión 1.2.0 de iPhone (en revisión; salen en vivo cuando Apple la apruebe). La ficha publicada no
+  se puede editar (409). La de Mac 1.2.0 ya está a la venta: su soporte cambia en la próxima versión de Mac (la
+  privacidad es común a iPhone y Mac). Marketing sigue `https://mandotv.app` (será la portada en inglés).
+  `control/tool/fichas_mac_apple.mjs` y `control/docs/ficha-tiendas.md` actualizados (commit e207329 en control).
+- Google Play: política de privacidad cambiada a `/en/privacy.html` y enviada a revisión (24-nov, "Cambios en
+  revisión"). Sitio web de la ficha: `https://mandotv.app` (sin cambio). Aviso de la consola sobre
+  androidx.fragment 1.1.0: ya anotado en `control/docs/ESTADO.md` para la 1.2.1 de Android.
+- **Pendiente Microsoft Store**: Partner Center pide iniciar sesión (el fundador). Después: Propiedades > URL de
+  privacidad y sitio web/soporte a inglés, y enviar (pasa por certificación).
+
 Idea pendiente (no hecha): el aviso de cookies sale en el idioma de la página, no en el del navegador; a quien recibe
 el aviso de idioma le sale en español.
 

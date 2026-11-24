@@ -1,7 +1,7 @@
 {
   "name": "Mando TV",
   "short_name": "Mando TV",
-  "lang": "es",
+  "lang": "en",
   "start_url": "/",
   "display": "browser",
   "background_color": "#e0457b",

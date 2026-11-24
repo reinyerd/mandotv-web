@@ -141,12 +141,12 @@ def cabecera(titulo, desc, url, clave, color, tipo, ld):
   <div class="cabecera-pagina">
     <div class="contenedor">
       <header class="barra">
-        <a class="logo" href="/en/" aria-label="Mando TV, Home">
+        <a class="logo" href="/" aria-label="Mando TV, Home">
           {LOGO}
           Mando TV
         </a>
         <nav aria-label="Main">
-          <a href="/en/#funciones">What it does</a>
+          <a href="/#funciones">What it does</a>
           <a href="/en/support.html">Help</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hello%20Mando%20TV">Contact</a>
         </nav>
@@ -178,7 +178,7 @@ def pie(clave):
     <div class="contenedor">
       <div class="pie-enlaces">
         <nav aria-label="Footer">
-          <a href="/en/">Home</a>
+          <a href="/">Home</a>
           <a href="/en/support.html">Help</a>
           <a href="/en/privacy.html">Privacy</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
@@ -341,7 +341,7 @@ def pagina_marca(m):
     url = URL + en
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Mando TV", "item": URL + "/en/"},
+        {"@type": "ListItem", "position": 1, "name": "Mando TV", "item": URL + "/"},
         {"@type": "ListItem", "position": 2, "name": m['h1'], "item": url}]},
       {"@type": "FAQPage", "inLanguage": "en", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in m['faq']]}]}
@@ -349,7 +349,7 @@ def pagina_marca(m):
     pasos = '\n'.join(f'          <li>{e(p)}</li>' for p in m['pasos'])
     guias = '\n'.join(f'        <li>{g}</li>' for g in m['guias'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in m['faq'])
-    return (cabecera(m['titulo'], m['desc'], url, m['clave'], m['color'], 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Mando TV</a> / <span>{e(m["corto"])}</span></nav>
+    return (cabecera(m['titulo'], m['desc'], url, m['clave'], m['color'], 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/">Mando TV</a> / <span>{e(m["corto"])}</span></nav>
       <h1>{e(m["h1"])}</h1>
       <p>{e(m["intro"])}</p>
       <div class="acciones">
@@ -770,7 +770,7 @@ def pagina_guia(g):
       {"@type": "HowTo", "name": g["h1"], "description": g["desc"], "inLanguage": "en",
        "step": [{"@type": "HowToStep", "position": n, "text": plano(p)} for n, p in enumerate(g["pasos"], 1)]},
       {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": URL + "/en/"},
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": URL + "/"},
         {"@type": "ListItem", "position": 2, "name": "Guides", "item": URL + "/en/guides/"},
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "inLanguage": "en", "mainEntity": [
@@ -813,7 +813,7 @@ def pagina_guia(g):
     otras = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a></li>' for k, t in OTRAS_GUIAS if k != g['clave'])
     idiomas = '\n'.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{n}</a></li>' for l, r, n in idiomas_sitio.enlaces_idiomas(g['clave'], 'en'))
     bloque_idiomas = ('\n      <h2 id="idiomas">This guide in other languages</h2>\n      <ul>\n' + idiomas + '\n      </ul>\n') if idiomas else ''
-    return (cabecera(g['titulo'], g['desc'], url, g['clave'], '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
+    return (cabecera(g['titulo'], g['desc'], url, g['clave'], '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/en/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{e(g["intro"])}</p>
       <div class="acciones">
@@ -872,7 +872,7 @@ def indice():
     lista = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a>: {e(descripciones[k])}</li>' for k, t in OTRAS_GUIAS)
     marcas = '\n'.join([f'        <li><a href="{u}">{n}</a></li>' for u, n in PIE[:4]] + [
       f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a></li>' for k, t in GUIAS_MARCAS_EN])
-    return (cabecera(titulo, desc, url, 'guias', '#3d7bff', 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <span>Guides</span></nav>
+    return (cabecera(titulo, desc, url, 'guias', '#3d7bff', 'website', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/">Home</a> / <span>Guides</span></nav>
       <h1>Guides to Use Your Phone as a TV Remote</h1>
       <p>Simple steps to connect, turn on and fix the remote of your Samsung, LG, Roku or Android TV with Mando TV.</p>
     </div>
@@ -901,14 +901,14 @@ def indice():
 # Ayuda y privacidad (traducción fiel de soporte.html y privacidad.html, que se mantienen a mano en español)
 # ---------------------------------------------------------------------------------------------------------------
 def migas_simple(nombre):
-    return f'<nav class="migas" aria-label="Breadcrumb"><a href="/en/">Home</a> / <span>{nombre}</span></nav>'
+    return f'<nav class="migas" aria-label="Breadcrumb"><a href="/">Home</a> / <span>{nombre}</span></nav>'
 
 
 def ld_simple(nombre, url):
     return {"@context": "https://schema.org", "@graph": [
       ORG,
       {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": URL + "/en/"},
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": URL + "/"},
         {"@type": "ListItem", "position": 2, "name": nombre, "item": url}]}]}
 
 

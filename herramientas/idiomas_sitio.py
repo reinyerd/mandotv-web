@@ -10,7 +10,7 @@ CODIGO_LANG = {'es': 'es', 'en': 'en', 'de': 'de', 'fr': 'fr', 'pt': 'pt-BR', 'i
 
 # (es, en, de, fr, pt, it): archivos terminan en .html; el resto son carpetas.
 _FILAS = {
-  'home': ('', 'en', 'de', 'fr', 'pt', 'it'),
+  'home': ('es', '', 'de', 'fr', 'pt', 'it'),  # 24-nov: la portada en inglés va en la raíz
   'lg': ('control-remoto-lg', 'en/lg-tv-remote', 'de/lg-fernbedienung', 'fr/telecommande-lg', 'pt/controle-remoto-lg', 'it/telecomando-lg'),
   'samsung': ('control-remoto-samsung', 'en/samsung-tv-remote', 'de/samsung-fernbedienung', 'fr/telecommande-samsung', 'pt/controle-remoto-samsung', 'it/telecomando-samsung'),
   'roku': ('control-remoto-roku', 'en/roku-remote', 'de/roku-fernbedienung', 'fr/telecommande-roku', 'pt/controle-remoto-roku', 'it/telecomando-roku'),

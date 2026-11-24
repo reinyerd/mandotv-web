@@ -938,6 +938,9 @@ summary::after { color: var(--tenue); font-weight: 300; }
 .cabecera-pagina .boton { background: var(--perla); color: var(--negro); }
 .cabecera-pagina .boton.claro { background: transparent; color: var(--perla); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
 .cabecera-pagina :focus-visible { outline-color: var(--perla); }
+/* 24-nov: los enlaces de la 404 quedaban blancos sobre fondo claro desde el rediseño oscuro: píldoras de vidrio. */
+.cabecera-pagina .marcas-enlaces a { background: rgba(255, 255, 255, .08); color: var(--perla); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18); }
+.cabecera-pagina .marcas-enlaces a:hover { background: var(--perla); color: var(--negro); }
 .documento h2 { font-family: var(--titular); font-weight: 600; letter-spacing: -.03em; }
 
 @media (max-width: 960px) {

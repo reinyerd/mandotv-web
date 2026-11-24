@@ -809,7 +809,7 @@ def pagina(g):
       ORG,
       howto(g["h1"], g["desc"], "es", g["pasos"]),
       {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/"},
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/es/"},
         {"@type": "ListItem", "position": 2, "name": "Guías", "item": URL + "/guias/"},
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "mainEntity": [
@@ -856,17 +856,17 @@ def pagina(g):
   <div class="cabecera-pagina">
     <div class="contenedor">
       <header class="barra">
-        <a class="logo" href="/" aria-label="Mando TV, inicio">
+        <a class="logo" href="/es/" aria-label="Mando TV, inicio">
           {LOGO}
           Mando TV
         </a>
         <nav aria-label="Principal">
-          <a href="/#funciones">Qué hace</a>
+          <a href="/es/#funciones">Qué hace</a>
           <a href="/soporte.html">Ayuda</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
         </nav>
       </header>
-      <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/guias/">Guías</a> / <span>{e(g["corto"])}</span></nav>
+      <nav class="migas" aria-label="Ruta"><a href="/es/">Inicio</a> / <a href="/guias/">Guías</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{intro}</p>
       <div class="acciones">
@@ -890,9 +890,9 @@ def pagina(g):
       <ul class="tiendas" aria-label="Descargar Mando TV">
         <li><a class="tienda" href="{TIENDA_APPLE}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en App Store">{APPLE_SVG}<span><small>Descárgalo en</small>App Store</span></a></li>
         <li><a class="tienda" href="{TIENDA}" target="_blank" rel="noopener" aria-label="Descargar Mando TV gratis en Microsoft Store">{MS_SVG}<span><small>Descárgalo en</small>Microsoft Store</span></a></li>
-        <li><a class="tienda" href="/#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small>Google Play</span></a></li>
+        <li><a class="tienda" href="/es/#android" aria-label="Prueba anticipada de Mando TV en Google Play para Android"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>Prueba anticipada en</small>Google Play</span></a></li>
       </ul>
-      <p class="nota">Android: prueba anticipada gratis en Google Play. <a href="/#android">Únete en dos pasos</a> y ayúdanos a llegar a la tienda.</p>{ms}
+      <p class="nota">Android: prueba anticipada gratis en Google Play. <a href="/es/#android">Únete en dos pasos</a> y ayúdanos a llegar a la tienda.</p>{ms}
       {marcas}
 
       <h2 id="preguntas">Preguntas frecuentes</h2>
@@ -913,7 +913,7 @@ def pagina(g):
     <div class="contenedor">
       <div class="pie-enlaces">
         <nav aria-label="Pie de página">
-          <a href="/">Inicio</a>
+          <a href="/es/">Inicio</a>
           <a href="/soporte.html">Ayuda</a>
           <a href="/privacidad.html">Privacidad</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
@@ -941,7 +941,7 @@ def indice():
     ld = {"@context": "https://schema.org", "@graph": [
       ORG,
       {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/"},
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/es/"},
         {"@type": "ListItem", "position": 2, "name": "Guías", "item": url}]},
       {"@type": "CollectionPage", "name": "Guías para usar tu celular como control remoto del TV", "description": desc, "url": url, "inLanguage": "es",
        "publisher": {"@id": URL + "/#org"},
@@ -976,17 +976,17 @@ def indice():
   <div class="cabecera-pagina">
     <div class="contenedor">
       <header class="barra">
-        <a class="logo" href="/" aria-label="Mando TV, inicio">
+        <a class="logo" href="/es/" aria-label="Mando TV, inicio">
           {LOGO}
           Mando TV
         </a>
         <nav aria-label="Principal">
-          <a href="/#funciones">Qué hace</a>
+          <a href="/es/#funciones">Qué hace</a>
           <a href="/soporte.html">Ayuda</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
         </nav>
       </header>
-      <nav class="migas" aria-label="Ruta"><a href="/">Inicio</a> / <span>Guías</span></nav>
+      <nav class="migas" aria-label="Ruta"><a href="/es/">Inicio</a> / <span>Guías</span></nav>
       <h1>Guías para usar tu celular como control remoto del TV</h1>
       <p>Pasos simples para conectar, encender y arreglar el control de tu televisor Samsung, LG, Roku o Android TV con Mando TV.</p>
     </div>
@@ -1011,7 +1011,7 @@ def indice():
     <div class="contenedor">
       <div class="pie-enlaces">
         <nav aria-label="Pie de página">
-          <a href="/">Inicio</a>
+          <a href="/es/">Inicio</a>
           <a href="/soporte.html">Ayuda</a>
           <a href="/privacidad.html">Privacidad</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>

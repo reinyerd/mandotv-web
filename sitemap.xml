@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://mandotv.app/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mandotv.app/</loc><lastmod>2026-11-24</lastmod><video:video><video:thumbnail_loc>https://mandotv.app/media/mando-tv-in-action-en.jpg</video:thumbnail_loc><video:title>Mando TV in action: one remote for all your TVs</video:title><video:description>A 25-second tour of the Mando TV app, with no sound: turn the volume up, move through menus with the arrows and OK, type a search on the TV with the phone keyboard, switch inputs (Live TV, HDMI 1, HDMI 2), use it with LG, Samsung, Roku, Google TV, Fire TV, Hisense and more over Wi-Fi, and see what Free and Pro include. Mando TV is a free universal TV remote for iPhone, iPad, Android and Windows, with no ads and no account.</video:description><video:content_loc>https://mandotv.app/media/mando-tv-in-action-en-720p.mp4</video:content_loc><video:player_loc>https://www.youtube.com/embed/RyhvFz0ZUDk</video:player_loc><video:duration>25</video:duration><video:publication_date>2026-11-23T03:35:00-03:00</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
   <url><loc>https://mandotv.app/control-remoto-android-tv/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/control-remoto-bgh/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/control-remoto-caixun/</loc><lastmod>2026-11-24</lastmod></url>
@@ -74,7 +74,6 @@
   <url><loc>https://mandotv.app/de/ratgeber/tcl-fernbedienungs-app/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/de/roku-fernbedienung/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/de/samsung-fernbedienung/</loc><lastmod>2026-11-24</lastmod></url>
-  <url><loc>https://mandotv.app/en/</loc><lastmod>2026-11-24</lastmod><video:video><video:thumbnail_loc>https://mandotv.app/media/mando-tv-in-action-en.jpg</video:thumbnail_loc><video:title>Mando TV in action: one remote for all your TVs</video:title><video:description>A 25-second tour of the Mando TV app, with no sound: turn the volume up, move through menus with the arrows and OK, type a search on the TV with the phone keyboard, switch inputs (Live TV, HDMI 1, HDMI 2), use it with LG, Samsung, Roku, Google TV, Fire TV, Hisense and more over Wi-Fi, and see what Free and Pro include. Mando TV is a free universal TV remote for iPhone, iPad, Android and Windows, with no ads and no account.</video:description><video:content_loc>https://mandotv.app/media/mando-tv-in-action-en-720p.mp4</video:content_loc><video:player_loc>https://www.youtube.com/embed/RyhvFz0ZUDk</video:player_loc><video:duration>25</video:duration><video:publication_date>2026-11-23T03:35:00-03:00</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
   <url><loc>https://mandotv.app/en/android-tv-remote/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/en/guides/android-tv-pairing-code/</loc><lastmod>2026-11-24</lastmod></url>
@@ -116,6 +115,7 @@
   <url><loc>https://mandotv.app/en/roku-remote/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/en/samsung-tv-remote/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/en/support.html</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://mandotv.app/es/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/fr/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/fr/aide.html</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://mandotv.app/fr/confidentialite.html</loc><lastmod>2026-11-24</lastmod></url>
