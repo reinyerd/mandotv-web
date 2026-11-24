@@ -14,6 +14,13 @@ Indexación:
 - Bing Webmaster Tools: el fundador inició sesión y el sitemap se reenvió el 24-nov ("successfully submitted", 153
   URL, sin errores ni advertencias). Única notificación: consejo general "Improve the search presence", informativo.
 
+## 24-nov (noche): "See it in action" con el video primero (publicado)
+
+Con el sí del fundador. En la portada en inglés (`/`), la sección `#demo` lleva primero el video de 25 s (protagonista,
+a todo el ancho) y debajo el subtítulo "The remote, step by step" con la demo animada y las dos capturas. Comprobado
+en vivo en escritorio y celular con movimiento reducido: todo aparece, sin desborde ni errores. IndexNow aceptó `/`,
+sitemap reenviado en Search Console y en Bing. Solo la portada en inglés tiene el video; las demás no cambian.
+
 ## 24-nov (tarde): portada en inglés PUBLICADA
 
 Con el sí del fundador (merge `0d6d9bc6`). Comprobado en vivo: `/` en inglés (navegador en español ve "Esta página
