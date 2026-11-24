@@ -1334,7 +1334,14 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 
 /* ---------- Video "Mando TV in action" (23-nov): MP4 propio, sin reproductor de YouTube (la web no lleva rastreadores) ---------- */
 .video-premium, .guia-video { margin: 0; }
-.video-premium { margin-top: 56px; }
+.video-premium { margin-top: 40px; }
+/* 24-nov: el video va primero (protagonista) y la demo animada debajo, con su propio subtítulo. */
+.demo-subtitulo {
+  margin: clamp(72px, 8vw, 112px) 0 12px; font-family: var(--titular); font-weight: 600;
+  font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; letter-spacing: -.025em;
+}
+.demo-intro { font-size: clamp(16px, 1.3vw, 18px); }
+.demo-subtitulo ~ .demo { margin-top: 32px; }
 .video-marco { position: relative; }
 .video-marco video {
   display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 24px; background: #0b0a10;
