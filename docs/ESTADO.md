@@ -25,8 +25,9 @@ en Search Console ("Se ha enviado el sitemap correctamente") y en Bing ("success
 
 Microsoft Store: envío 14 con privacidad `/en/privacy.html` y soporte `/en/support.html` (sitio web
 `https://mandotv.app` sin cambio) enviado a certificación el 24-nov; solo cambian las Propiedades. Aviso del Action
-Center: "Your contact email address: not provided" (My Preferences), sin resolver: falta el sí del fundador para poner
-su correo. La app (control) no tiene enlace propio a la política de privacidad; Ajustes solo abre `https://mandotv.app`.
+Center: "Your contact email address: not provided": el 24-nov se puso el Gmail del fundador (idioma Español) en
+My Preferences y se pidió el código. El fundador dijo que lo verificó, pero tras recargar dos veces seguía
+"Not Verified": revisar y, si sigue igual, repetir "Verify with OTP". La app (control) no tiene enlace propio a la política de privacidad; Ajustes solo abre `https://mandotv.app`.
 
 ## 24-nov: portada en inglés en la raíz (preparación; ya publicada, ver arriba)
 
