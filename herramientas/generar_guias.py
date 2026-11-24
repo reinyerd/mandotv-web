@@ -776,7 +776,7 @@ def hreflangs(alternos):
     if not alternos:
         return ''
     filas = [f'  <link rel="alternate" hreflang="{l}" href="{u}">' for l, u in alternos.items()]
-    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{alternos["es"]}">')
+    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{alternos.get("en") or alternos["es"]}">')
     return chr(10).join(filas) + chr(10)
 
 def howto(nombre, desc, lang, pasos):

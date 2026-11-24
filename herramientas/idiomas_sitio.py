@@ -98,11 +98,12 @@ def clave_es(es):
 
 
 def hreflangs(clave):
-    """Bloque <link rel=alternate> con todas las gemelas y x-default (siempre el español)."""
+    """Bloque <link rel=alternate> con todas las gemelas y x-default (el inglés si existe; si no, el español)."""
     a = alternos(clave)
     filas = [f'  <link rel="alternate" hreflang="{l}" href="{u}">' for l, u in a.items()]
-    # x-default: el español; si la página no existe en español (guías solo en inglés), ella misma.
-    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{a.get("es") or next(iter(a.values()))}">')
+    # x-default (24-nov): el inglés, que entiende más gente cuando el idioma de quien busca no está en el sitio;
+    # si la página no existe en inglés (marcas solo de Latinoamérica), el español o la que haya.
+    filas.append(f'  <link rel="alternate" hreflang="x-default" href="{a.get("en") or a.get("es") or next(iter(a.values()))}">')
     return '\n'.join(filas) + '\n'
 
 
