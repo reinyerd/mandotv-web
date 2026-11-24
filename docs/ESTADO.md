@@ -11,9 +11,8 @@ Indexación:
 - Search Console: sitemap reenviado ("Se ha enviado el sitemap correctamente", leído el 24-nov).
 - **Pendiente 25-nov**: Inspección de URL > Solicitar indexación de `https://mandotv.app/` y luego
   `https://mandotv.app/en/`. El 24-nov Google respondió "Se ha superado la cuota" (cupo diario ya usado).
-- **Pendiente**: Bing Webmaster Tools tiene la sesión cerrada en el navegador integrado; el fundador debe iniciarla
-  para reenviar el sitemap (`https://www.bing.com/webmasters/sitemaps?siteUrl=https://mandotv.app/`). Las URL ya
-  llegaron a Bing por IndexNow.
+- Bing Webmaster Tools: el fundador inició sesión y el sitemap se reenvió el 24-nov ("successfully submitted", 153
+  URL, sin errores ni advertencias). Única notificación: consejo general "Improve the search presence", informativo.
 
 Idea pendiente (no hecha): el aviso de cookies sale en el idioma de la página, no en el del navegador; a quien recibe
 el aviso de idioma le sale en español.
