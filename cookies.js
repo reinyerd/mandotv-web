@@ -1,3 +1,14 @@
+// Pila fija de abajo (24-nov): el aviso de idioma y el de cookies van uno sobre otro y nunca se tapan entre sí.
+function pilaAvisos() {
+  var pila = document.querySelector('.avisos');
+  if (!pila) {
+    pila = document.createElement('div');
+    pila.className = 'avisos';
+    document.body.appendChild(pila);
+  }
+  return pila;
+}
+
 // Aviso de cookies de Mando TV.
 // Google Analytics (cookies) SOLO se carga si la persona pulsa "Aceptar". Sin respuesta o con "Rechazar"
 // no se descarga nada de Google. La elección se guarda en este navegador y se puede cambiar con el
@@ -78,7 +89,7 @@
       if (v === 'si') { window['ga-disable-' + ID_GA] = false; cargarAnaliticas(); } else { borrarCookiesGa(); }
       aviso.hidden = true;
     });
-    document.body.appendChild(aviso);
+    pilaAvisos().appendChild(aviso);
   }
 
   function mostrarAviso() {
@@ -103,6 +114,83 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', crearConFuentes);
     else crearConFuentes();
   }
+})();
+
+// Aviso de idioma (24-nov): a quien llega desde fuera del sitio con el navegador en otro idioma que esta página tiene
+// (sus <link rel="alternate" hreflang>), se le ofrece esa versión con un aviso que se cierra. No redirige solo:
+// Google desaconseja redirigir por idioma y su robot tiene que ver cada versión tal cual. Se muestra una sola vez.
+(function () {
+  var CLAVE = 'mandotv-aviso-idioma';
+  // Cada texto va en el idioma que se ofrece, el que esa persona entiende.
+  var TEXTOS = {
+    es: { aria: 'Idioma', texto: 'Esta página también está en español.', ir: 'Ver en español', cerrar: 'Cerrar' },
+    en: { aria: 'Language', texto: 'This page is also available in English.', ir: 'View in English', cerrar: 'Close' },
+    de: { aria: 'Sprache', texto: 'Diese Seite gibt es auch auf Deutsch.', ir: 'Auf Deutsch ansehen', cerrar: 'Schließen' },
+    fr: { aria: 'Langue', texto: 'Cette page existe aussi en français.', ir: 'Voir en français', cerrar: 'Fermer' },
+    pt: { aria: 'Idioma', texto: 'Esta página também está em português.', ir: 'Ver em português', cerrar: 'Fechar' },
+    it: { aria: 'Lingua', texto: 'Questa pagina è disponibile anche in italiano.', ir: 'Vedi in italiano', cerrar: 'Chiudi' }
+  };
+  function guardar() { try { localStorage.setItem(CLAVE, '1'); } catch (e) { /* sin almacenamiento: nada que recordar */ } }
+  try { if (localStorage.getItem(CLAVE)) return; } catch (e) { /* sigue */ }
+  // Quien ya navega dentro del sitio eligió su idioma (por ejemplo con el selector del pie): no se le insiste.
+  try { if (document.referrer && new URL(document.referrer).host === location.host) return; } catch (e) { /* sigue */ }
+
+  var actual = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+  var gemelas = {};
+  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+    gemelas[l.getAttribute('hreflang').slice(0, 2).toLowerCase()] = l.href;
+  });
+  var preferidos = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+  var destino = null;
+  for (var i = 0; i < preferidos.length; i++) {
+    var c = String(preferidos[i]).slice(0, 2).toLowerCase();
+    if (c === actual) return;                       // su idioma preferido es el de esta página
+    if (gemelas[c] && TEXTOS[c]) { destino = c; break; }
+  }
+  // Idioma que el sitio no tiene (japonés, polaco...): se ofrece el inglés, como el x-default de los hreflang.
+  if (!destino && actual !== 'en' && gemelas.en) destino = 'en';
+  if (!destino) return;
+
+  var T = TEXTOS[destino];
+  function crear() {
+    var aviso = document.createElement('div');
+    aviso.className = 'aviso-idioma';
+    aviso.setAttribute('role', 'region');
+    aviso.setAttribute('aria-label', T.aria);
+    aviso.lang = destino;
+    aviso.innerHTML =
+      '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">' +
+      '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg>' +
+      '<p>' + T.texto + '</p>' +
+      '<a class="boton" href="' + gemelas[destino] + '" hreflang="' + destino + '">' + T.ir + '</a>' +
+      '<button type="button" class="aviso-idioma-cerrar" aria-label="' + T.cerrar + '">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
+    aviso.querySelector('a').addEventListener('click', function () {
+      guardar();
+      // Para medir cuánto se usa (solo si la persona aceptó las cookies de Google Analytics).
+      if (window.gtag) window.gtag('event', 'aviso_idioma', { desde: actual, hacia: destino, transport_type: 'beacon' });
+    });
+    aviso.querySelector('button').addEventListener('click', function () {
+      guardar();
+      // Animación propia (con "reducir movimiento" de Windows las de CSS no corren).
+      var salida = aviso.animate && aviso.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(10px) scale(.97)' }],
+        { duration: 200, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
+      if (salida) salida.onfinish = function () { aviso.remove(); }; else aviso.remove();
+    });
+    var pila = pilaAvisos();
+    pila.insertBefore(aviso, pila.firstChild);
+    if (aviso.animate) {
+      aviso.animate([{ opacity: 0, transform: 'translateY(14px) scale(.97)' }, { opacity: 1, transform: 'none' }],
+        { duration: 380, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+    }
+  }
+  // Igual que el de cookies: espera las fuentes para no cambiar de tamaño ya visible.
+  var crearConFuentes = function () {
+    var listas = document.fonts && document.fonts.ready;
+    if (listas) listas.then(crear, crear); else crear();
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', crearConFuentes);
+  else crearConFuentes();
 })();
 
 // Selector de idioma del pie (está en todas las páginas, igual que este archivo): se cierra al tocar fuera o con

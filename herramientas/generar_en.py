@@ -1,7 +1,7 @@
 # Genera las páginas en inglés (EE. UU.) de mandotv.app: marcas, índice de guías y guías principales.
 # Textos escritos para búsquedas en inglés (no son traducción literal). La portada /en/ se mantiene a mano.
 # Uso: python -I herramientas/generar_en.py <carpeta del sitio>
-# Mismo patrón que generar_guias.py y generar_marcas.py; hreflang es + en (+ x-default = español) en las dos versiones
+# Mismo patrón que generar_guias.py y generar_marcas.py; hreflang es + en (+ x-default = inglés) en las dos versiones
 # (las páginas en español lo reciben de sus propios generadores).
 import ast, html, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
