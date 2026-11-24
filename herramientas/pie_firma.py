@@ -31,7 +31,8 @@ IDIOMA_TEXTO = dict(
     it=('Il telecomando di tutte le tue TV, sullo smartphone o sul computer.', 'Scarica', 'Per iPhone, iPad, Mac, Android e Windows', 'Lingua'),
 )
 
-INICIO_LANG = dict(es='/', en='/en/', pt='/pt/', fr='/fr/', de='/de/', it='/it/')
+INICIO_LANG = dict(es='/es/', en='/',  # 24-nov: inglés en la raíz
+                    pt='/pt/', fr='/fr/', de='/de/', it='/it/')
 
 BLOCK_INICIO = re.compile(
     r'      <!-- pie-firma: lo escribe herramientas/pie_firma.py \(no editar a mano\) -->'
