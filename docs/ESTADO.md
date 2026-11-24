@@ -14,7 +14,21 @@ Indexación:
 - Bing Webmaster Tools: el fundador inició sesión y el sitemap se reenvió el 24-nov ("successfully submitted", 153
   URL, sin errores ni advertencias). Única notificación: consejo general "Improve the search presence", informativo.
 
-## 24-nov: portada en inglés en la raíz (rama `web-portada-en`, SIN publicar, esperando el sí del fundador)
+## 24-nov (tarde): portada en inglés PUBLICADA
+
+Con el sí del fundador (merge `0d6d9bc6`). Comprobado en vivo: `/` en inglés (navegador en español ve "Esta página
+también está en español" → `/es/`), `/es/` en español (navegador en inglés ve la oferta de `/`), `/en/#tiendas`
+redirige a `/#tiendas`, 404 legible, sin errores. IndexNow aceptó portadas y sitemap (HTTP 200). Sitemap reenviado
+en Search Console ("Se ha enviado el sitemap correctamente") y en Bing ("successfully submitted", 223 URL).
+**Pendiente 25-nov**: Search Console > Inspección de URL > Solicitar indexación de `https://mandotv.app/` y luego
+`https://mandotv.app/es/` (el 24-nov seguía "Se ha superado la cuota").
+
+Microsoft Store: envío 14 con privacidad `/en/privacy.html` y soporte `/en/support.html` (sitio web
+`https://mandotv.app` sin cambio) enviado a certificación el 24-nov; solo cambian las Propiedades. Aviso del Action
+Center: "Your contact email address: not provided" (My Preferences), sin resolver: falta el sí del fundador para poner
+su correo. La app (control) no tiene enlace propio a la política de privacidad; Ajustes solo abre `https://mandotv.app`.
+
+## 24-nov: portada en inglés en la raíz (preparación; ya publicada, ver arriba)
 
 Pedido del fundador tras ver Search Console (16 de 22 clics de países que no hablan español). En la rama:
 - `/` = portada en inglés (antes `/en/`), `/es/` = portada en español (antes `/`), `/en/` = redirección al instante a
@@ -37,7 +51,7 @@ Pedido del fundador tras ver Search Console (16 de 22 clics de países que no ha
 - Google Play: política de privacidad cambiada a `/en/privacy.html` y enviada a revisión (24-nov, "Cambios en
   revisión"). Sitio web de la ficha: `https://mandotv.app` (sin cambio). Aviso de la consola sobre
   androidx.fragment 1.1.0: ya anotado en `control/docs/ESTADO.md` para la 1.2.1 de Android.
-- **Pendiente Microsoft Store**: Partner Center pide iniciar sesión (el fundador). Después: Propiedades > URL de
+- Microsoft Store: hecho el 24-nov (ver arriba, envío 14 en certificación). Antes: Propiedades > URL de
   privacidad y sitio web/soporte a inglés, y enviar (pasa por certificación).
 
 Idea pendiente (no hecha): el aviso de cookies sale en el idioma de la página, no en el del navegador; a quien recibe
