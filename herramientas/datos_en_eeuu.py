@@ -31,10 +31,10 @@ GUIAS_EEUU = [
       ('Mando TV vs LG ThinQ, in plain terms', 'Use ThinQ if you want to manage LG appliances such as a washer, a fridge or an air conditioner, or LG account features. Use Mando TV if you want a fast, simple remote for the TV that also works for Samsung, Roku and Google TV in the same app. Many people keep both: ThinQ for appliances, Mando TV for the TV.'),
       ('What Mando TV does on an LG TV', 'It works with LG smart TVs running webOS, which covers most LG smart TV models since 2014, including LED, NanoCell, QNED and OLED. It gives you the d-pad, OK, Back, Home, volume, channels, mute, playback controls and a keyboard for typing in YouTube, Netflix or the browser. The apps list and the inputs list are free too. With Pro you also get a pointer like the Magic Remote.'),
       ('What Mando TV does not do', 'It does not control LG appliances, it does not use your LG account and it does not replace the LG account services on the TV. It is a remote, not a smart home hub.'),
-      ('Privacy and ads', 'Mando TV has no ads and no account. It talks to the TV inside your home network and keeps the TV connection key encrypted on your own device. The [LG TV remote page](/en/lg-tv-remote/) has the full list of features.'),
+      ('Privacy and ads', 'Mando TV has no ads and no account. It talks to the TV inside your home network and keeps the TV connection key encrypted on your own device. The [LG TV remote page](/lg-tv-remote/) has the full list of features.'),
       ('What is free and what is Pro', FREE_PRO),
     ],
-    marca=('/en/lg-tv-remote/', 'LG TV remote app'),
+    marca=('/lg-tv-remote/', 'LG TV remote app'),
     faq=[
       ('Can I control my LG TV without the LG ThinQ app?', 'Yes. Mando TV connects to LG webOS TVs directly over your Wi-Fi. You accept one prompt on the TV the first time and that is it, with no LG account.'),
       ('Does Mando TV work with the LG Magic Remote pointer?', 'Mando TV Pro has a pointer you move with your finger on the phone screen, similar to how the Magic Remote moves the arrow.'),
@@ -56,11 +56,11 @@ GUIAS_EEUU = [
     extra=[
       ('Where Mando TV fits better', 'One app for several TVs: Roku, Samsung, LG and Google TV or Android TV. No account, no ads. It also works from a Windows PC, which is handy at a desk. The d-pad and volume feel quick, and the keyboard makes typing a search painless.'),
       ('Where the official Roku app is better', 'Keep the Roku app for what it offers beyond the remote, such as browsing and adding channels from the Roku Channel Store and its own casting and private listening features. Use both if you like. They can run on the same phone.'),
-      ('Roku TV sets and Roku players', 'Both work. That includes Roku TV models from TCL, Hisense, Philips and others, and Roku Express, Streaming Stick and Ultra. Details are on the [Roku remote app page](/en/roku-remote/).'),
-      ('If the Roku app stopped working', 'If the buttons stopped responding, the Roku is usually blocking control by apps. The guide [Roku remote app not working](/en/guides/roku-remote-app-not-working/) walks through the setting that fixes it.'),
+      ('Roku TV sets and Roku players', 'Both work. That includes Roku TV models from TCL, Hisense, Philips and others, and Roku Express, Streaming Stick and Ultra. Details are on the [Roku remote app page](/roku-remote/).'),
+      ('If the Roku app stopped working', 'If the buttons stopped responding, the Roku is usually blocking control by apps. The guide [Roku remote app not working](/guides/roku-remote-app-not-working/) walks through the setting that fixes it.'),
       ('What is free and what is Pro', FREE_PRO),
     ],
-    marca=('/en/roku-remote/', 'Roku remote app'),
+    marca=('/roku-remote/', 'Roku remote app'),
     faq=[
       ('Do I need a Roku account to use Mando TV?', 'No. Mando TV talks to the Roku over your home network and does not ask for an account.'),
       ('Does Mando TV replace the Roku mobile app completely?', 'For the remote, yes. For the channel store, casting and private listening, keep the official Roku app.'),
@@ -81,8 +81,8 @@ GUIAS_EEUU = [
     ],
     extra=[
       ('Turn on a TCL TV from your phone', 'On TCL Roku TV, turn on Fast TV start under Settings, System, Power. On TCL Google TV, look for a Wake on LAN, "Turn on over network" or remote start option in the network or power settings. Some models do not offer it. In that case turn the TV on with the physical power button, usually on the bottom center or on the back.'),
-      ('If your TCL does not show up', 'Check that your phone and the TV are on the same Wi-Fi network. Routers with separate 2.4 GHz and 5 GHz networks can hide devices from each other. On an iPhone, allow Local Network for Mando TV in Settings. You can also add the TV by typing its IP address. See [your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
-      ('Brand pages for your TCL', 'Setup details are on the [Roku remote app page](/en/roku-remote/) for TCL Roku TV and the [Android TV remote app page](/en/android-tv-remote/) for TCL Google TV and Android TV.'),
+      ('If your TCL does not show up', 'Check that your phone and the TV are on the same Wi-Fi network. Routers with separate 2.4 GHz and 5 GHz networks can hide devices from each other. On an iPhone, allow Local Network for Mando TV in Settings. You can also add the TV by typing its IP address. See [your phone cannot find the TV](/guides/phone-cant-find-tv/).'),
+      ('Brand pages for your TCL', 'Setup details are on the [Roku remote app page](/roku-remote/) for TCL Roku TV and the [Android TV remote app page](/android-tv-remote/) for TCL Google TV and Android TV.'),
       ('What is free and what is Pro', FREE_PRO),
     ],
     faq=[
@@ -104,8 +104,8 @@ GUIAS_EEUU = [
       'Use the d-pad, OK, Back, Home, volume and keyboard from your phone.',
     ],
     extra=[
-      ('Hisense with Roku TV or Google TV', 'These work fully like any other Roku or Google TV. See the [Roku remote app page](/en/roku-remote/) and the [Android TV remote app page](/en/android-tv-remote/) for the details of each.'),
-      ('Hisense with Fire TV', 'Fire TV support is new in Mando TV. Update the app to the latest version from your store, and see the [Fire TV remote app page](/en/guides/fire-tv-remote-app/) for how the PIN pairing works. If something does not behave, write to us from the Help page and tell us your model.'),
+      ('Hisense with Roku TV or Google TV', 'These work fully like any other Roku or Google TV. See the [Roku remote app page](/roku-remote/) and the [Android TV remote app page](/android-tv-remote/) for the details of each.'),
+      ('Hisense with Fire TV', 'Fire TV support is new in Mando TV. Update the app to the latest version from your store, and see the [Fire TV remote app page](/guides/fire-tv-remote-app/) for how the PIN pairing works. If something does not behave, write to us from the Help page and tell us your model.'),
       ('Hisense with VIDAA', 'Most VIDAA models work: buttons, volume, keyboard, apps and inputs. Some recent VIDAA models only accept Hisense\'s official app. Mando TV detects that when it connects and tells you plainly, instead of failing silently. In that case the Hisense app for your model, the buttons on the TV or the original remote are the way to go.'),
       ('Turn on a Hisense from your phone', 'On Hisense Roku TV, turn on Fast TV start under Settings, System, Power. On Google TV, look for a Wake on LAN or "Turn on over network" option. If neither exists, use the power button on the TV.'),
       ('What is free and what is Pro', FREE_PRO),
@@ -133,7 +133,7 @@ GUIAS_EEUU = [
       ('Turning on a Vizio from standby', 'Mando TV can turn on a Vizio that is in standby, as long as Quick Start (also called quick power-on) is turned on in the TV settings. If the TV is fully off, use its physical power button.'),
       ('If you use a streaming stick', 'Many Vizio TVs have a Roku stick, a Fire TV stick or a Chromecast with Google TV plugged into an HDMI port. Mando TV controls the Roku, Fire TV and Google TV devices too, from the same app.'),
       ('Other ways to control a Vizio without the remote', 'Use the buttons on the TV, use the official Vizio phone app, or order a replacement remote that matches your model number, which is on the label on the back of the TV.'),
-      ('If you own other TVs too', 'Mando TV is useful for the rest of the house: see the pages for [Samsung](/en/samsung-tv-remote/), [LG](/en/lg-tv-remote/), [Roku](/en/roku-remote/) and [Android TV](/en/android-tv-remote/).'),
+      ('If you own other TVs too', 'Mando TV is useful for the rest of the house: see the pages for [Samsung](/samsung-tv-remote/), [LG](/lg-tv-remote/), [Roku](/roku-remote/) and [Android TV](/android-tv-remote/).'),
     ],
     faq=[
       ('Does Mando TV work with Vizio TVs?', 'Yes, in beta, on Vizio SmartCast TVs from 2016 onward. It pairs with a 4-digit PIN shown on the TV. Vizio TVs older than 2016 are not covered.'),
@@ -156,8 +156,8 @@ GUIAS_EEUU = [
     extra=[
       ('Fire TV devices it is meant for', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube and TVs with Fire TV built in, such as Amazon Fire TV Edition sets and some Hisense models. Support is new, and we have limited real-device testing. If something does not behave, tell us your model from the Help page.'),
       ('Turning on a Fire TV', 'Mando TV does not turn a Fire TV on over the network. Turn on the TV with its power button: a Fire TV Stick or Cube plugged into it usually wakes up with it through HDMI-CEC, and on a TV with Fire TV built in, the TV is the Fire TV. Then control it from your phone.'),
-      ('If your Fire TV does not show up', 'Make sure both devices are on the same Wi-Fi network and that the Fire TV is awake. On an iPhone, allow Local Network for Mando TV in Settings. See [your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
-      ('No remote at all?', 'You need the Fire TV screen to show the PIN, so the TV and the Fire TV must be on and showing the picture. If the TV is on a wrong input, change it with the TV buttons. See [change the HDMI input without a remote](/en/guides/change-hdmi-input-without-remote/).'),
+      ('If your Fire TV does not show up', 'Make sure both devices are on the same Wi-Fi network and that the Fire TV is awake. On an iPhone, allow Local Network for Mando TV in Settings. See [your phone cannot find the TV](/guides/phone-cant-find-tv/).'),
+      ('No remote at all?', 'You need the Fire TV screen to show the PIN, so the TV and the Fire TV must be on and showing the picture. If the TV is on a wrong input, change it with the TV buttons. See [change the HDMI input without a remote](/guides/change-hdmi-input-without-remote/).'),
       ('What is free and what is Pro', FREE_PRO),
     ],
     faq=[
@@ -179,7 +179,7 @@ GUIAS_EEUU = [
       'Use the buttons, volume and the keyboard. You are connected.',
     ],
     extra=[
-      ('Works with these TVs', 'LG webOS, Samsung Tizen (2016 and newer), Roku TV and Roku players, Google TV and Android TV, and Fire TV. The brand pages are [Samsung](/en/samsung-tv-remote/), [LG](/en/lg-tv-remote/), [Roku](/en/roku-remote/) and [Android TV](/en/android-tv-remote/).'),
+      ('Works with these TVs', 'LG webOS, Samsung Tizen (2016 and newer), Roku TV and Roku players, Google TV and Android TV, and Fire TV. The brand pages are [Samsung](/samsung-tv-remote/), [LG](/lg-tv-remote/), [Roku](/roku-remote/) and [Android TV](/android-tv-remote/).'),
       ('Why it asks for Local Network', 'iPhone blocks apps from seeing devices on your home network unless you allow it. If the TV is missing from the list, open Settings, Mando TV and turn on Local Network. The app only talks to your TV inside your home network.'),
       ('Why an iPhone and not the TV maker\'s app', 'Each TV brand has its own app, and each wants its own setup or account. Mando TV is one app for all of them, with no account.'),
       ('Free and Pro on iPhone', FREE_PRO + ' Pro is bought once inside the app, with no subscription.'),
@@ -194,7 +194,7 @@ GUIAS_EEUU = [
     titulo='TV Remote App for Windows PC: Control Your TV',
     desc='Control your Samsung, LG, Roku, Google TV or Fire TV from a Windows PC with Mando TV: keyboard shortcuts, a mini remote and Wi-Fi control. Microsoft Store.',
     h1='TV Remote App for Windows PC',
-    # Video premium hecho con Remotion (23-nov) con pantallas reales de la app; el mismo está en /en/ y en YouTube
+    # Video premium hecho con Remotion (23-nov) con pantallas reales de la app; el mismo está en / y en YouTube
     # (canal Mando TV): de ahí sale el embedUrl del VideoObject. MP4 propio de 720p, sin audio.
     video=dict(
       name='Mando TV in action: one remote for all your TVs',
@@ -215,7 +215,7 @@ GUIAS_EEUU = [
       ('Keyboard shortcuts (Pro)', 'With Pro, your PC keyboard becomes the remote: arrow keys to move, Enter for OK, Backspace or Esc to go back, plus and minus for volume, M to mute and Space to pause.'),
       ('Mini remote (Pro)', 'A small remote window that stays on top of other windows, so you can change the volume or pause without leaving what you are doing.'),
       ('Typing on the TV from the PC', 'The on-screen keyboard of a TV is slow. In Mando TV you type with your real keyboard and the text goes to the TV search box. That part is free.'),
-      ('More details', 'For the step-by-step version see [how to control your TV from a Windows PC](/en/guides/control-tv-from-pc/). For phone-based control see [use your phone as a TV remote over Wi-Fi](/en/guides/connect-phone-to-tv-wifi/).'),
+      ('More details', 'For the step-by-step version see [how to control your TV from a Windows PC](/guides/control-tv-from-pc/). For phone-based control see [use your phone as a TV remote over Wi-Fi](/guides/connect-phone-to-tv-wifi/).'),
       ('What is free and what is Pro', FREE_PRO + ' On Windows, Pro is bought through Microsoft Store.'),
       ('Voice commands from the PC (Pro)', 'With Pro you can talk to the TV through the PC microphone. The voice is recognized on the PC itself: it needs no internet and no Windows settings to change. What you say never leaves the PC and is not stored. Only on very old processors does the app fall back to Windows voice typing, which needs "Online speech recognition" on in Settings > Privacy & security > Speech and your language added in Windows.'),
     ],
@@ -235,7 +235,7 @@ _CAMBIOS = {
     ("Mando TV works as a Hisense TV remote app on the first three.", "Mando TV works as a Hisense TV remote app on Roku TV and Google TV models."),
     (" Fire TV shows the Fire TV home screen with Amazon rows.", ""),
     (" Fire TV shows a 4-digit PIN to type into the app.", ""),
-    ("Fire TV support is new in Mando TV. Update the app to the latest version from your store, and see the [Fire TV remote app page](/en/guides/fire-tv-remote-app/) for how the PIN pairing works. If something does not behave, write to us from the Help page and tell us your model.",
+    ("Fire TV support is new in Mando TV. Update the app to the latest version from your store, and see the [Fire TV remote app page](/guides/fire-tv-remote-app/) for how the PIN pairing works. If something does not behave, write to us from the Help page and tell us your model.",
      "Fire TV support is coming in the next app update, so we do not claim it yet. Until then, a Hisense with Fire TV is controlled with the Amazon Fire TV app or its own remote."),
     ("Hisense TVs that run Roku TV, Google TV or Fire TV are supported.", "Hisense TVs that run Roku TV or Google TV are supported. Fire TV support is coming in the next app update."),
     ("Roku TV, Google TV or Fire TV?', 'Look", "Roku TV, Google TV or Fire TV?', 'Look"),

@@ -22,10 +22,10 @@ function pilaAvisos() {
   var TEXTOS = {
     es: { aria: 'Aviso de cookies', titulo: '¿Nos dejas contar tus visitas con cookies?',
           texto: 'Usamos Google Analytics para saber qué páginas se leen y mejorar la web. Solo se activa si aceptas.',
-          url: '/privacidad.html#cookies', mas: 'Más sobre las cookies', si: 'Aceptar', no: 'Rechazar' },
+          url: '/es/privacidad.html#cookies', mas: 'Más sobre las cookies', si: 'Aceptar', no: 'Rechazar' },
     en: { aria: 'Cookie notice', titulo: 'Can we count your visits with cookies?',
           texto: 'We use Google Analytics to see which pages are read and improve the site. It only turns on if you accept.',
-          url: '/en/privacy.html#cookies', mas: 'More about cookies', si: 'Accept', no: 'Decline' },
+          url: '/privacy.html#cookies', mas: 'More about cookies', si: 'Accept', no: 'Decline' },
     de: { aria: 'Cookie-Hinweis', titulo: 'Dürfen wir deine Besuche mit Cookies zählen?',
           texto: 'Wir nutzen Google Analytics, um zu sehen, welche Seiten gelesen werden, und die Website zu verbessern. Es wird nur aktiviert, wenn du akzeptierst.',
           url: '/de/datenschutz.html#cookies', mas: 'Mehr über Cookies', si: 'Akzeptieren', no: 'Ablehnen' },

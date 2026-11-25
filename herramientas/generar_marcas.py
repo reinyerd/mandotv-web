@@ -8,7 +8,7 @@ SITIO = sys.argv[1]
 URL = 'https://mandotv.app'
 
 MARCAS = [
-  dict(slug='control-remoto-lg', nombre='LG', corto='LG', color='#e0457b',
+  dict(slug='es/control-remoto-lg', nombre='LG', corto='LG', color='#e0457b',
     titulo='Control remoto para TV LG en tu celular, gratis | Mando TV',
     desc='Tu celular o PC como control remoto de tu TV LG con webOS, por WiFi. Botones, teclado, apps, entradas y encendido gratis; puntero con Pro.',
     h1='Control remoto para TV LG',
@@ -35,7 +35,7 @@ MARCAS = [
       ('¿Funciona con televisores LG antiguos, de antes de webOS?', 'En beta, sí: con los Smart TV LG NetCast de 2011 a 2014. Se emparejan con la clave de 6 dígitos que muestra el televisor. Es nuevo, así que todavía puede tener detalles por pulir.'),
     ],
     guias=[('encender-tv-lg-con-el-celular', 'Cómo encender el TV LG con el celular'), ('perdi-el-control-del-lg', 'Perdí el control del TV LG: cómo usar el celular'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
-  dict(slug='control-remoto-samsung', nombre='Samsung', corto='Samsung', color='#3d7bff',
+  dict(slug='es/control-remoto-samsung', nombre='Samsung', corto='Samsung', color='#3d7bff',
     titulo='Control remoto para TV Samsung en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Samsung con Tizen, por WiFi. Botones, teclado, apps y encendido gratis; touchpad con Pro. Sin anuncios.',
     h1='Control remoto para TV Samsung',
@@ -61,7 +61,7 @@ MARCAS = [
       ('¿Funciona con televisores Samsung antiguos?', 'Funciona con los Samsung con Tizen, de 2016 en adelante. Los modelos anteriores usan otro sistema que todavía no soportamos.'),
     ],
     guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
-  dict(slug='control-remoto-roku', nombre='Roku', corto='Roku', color='#a77bff',
+  dict(slug='es/control-remoto-roku', nombre='Roku', corto='Roku', color='#a77bff',
     titulo='Control remoto para Roku en tu celular, gratis | Mando TV',
     desc='Tu celular o PC como control remoto de tu Roku TV o reproductor Roku por WiFi. Botones, teclado, canales, entradas y encendido gratis.',
     h1='Control remoto para Roku',
@@ -88,7 +88,7 @@ MARCAS = [
       ('¿Necesito cuenta de Roku?', 'No. Mando TV se conecta directo por tu WiFi.'),
     ],
     guias=[('roku-no-responde-al-celular', 'Roku no responde al celular: solución al error 403'), ('perdi-el-control-del-roku', 'Perdí el control del Roku: cómo usar el celular')]),
-  dict(slug='control-remoto-android-tv', nombre='Android TV y Google TV', corto='Android TV', color='#2fbf8f',
+  dict(slug='es/control-remoto-android-tv', nombre='Android TV y Google TV', corto='Android TV', color='#2fbf8f',
     titulo='Control remoto para Android TV en tu celular | Mando TV',
     desc='Tu celular o PC como control de Google TV o Android TV (Sony, TCL, Xiaomi) por WiFi. Botones, teclado, apps y encendido gratis; touchpad con Pro.',
     h1='Control remoto para Android TV',
@@ -137,16 +137,16 @@ GUIAS_PIE = [
   ('android-tv-sin-control-remoto', 'Android TV sin control remoto'),
 ]
 MARCAS_PIE = [
-  ('control-remoto-samsung', 'Control remoto Samsung'),
-  ('control-remoto-lg', 'Control remoto LG'),
-  ('control-remoto-roku', 'Control remoto Roku'),
-  ('control-remoto-android-tv', 'Control remoto Android TV'),
+  ('es/control-remoto-samsung', 'Control remoto Samsung'),
+  ('es/control-remoto-lg', 'Control remoto LG'),
+  ('es/control-remoto-roku', 'Control remoto Roku'),
+  ('es/control-remoto-android-tv', 'Control remoto Android TV'),
 ]
 
 def pie_marcas():
     li = [f'        <li><a href="/{s}/">{n}</a></li>' for s, n in MARCAS_PIE]
-    li.append('        <li><a href="/guias/">Todas las guías</a></li>')
-    li += [f'        <li><a href="/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
+    li.append('        <li><a href="/es/guias/">Todas las guías</a></li>')
+    li += [f'        <li><a href="/es/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
     return '      <ul class="marcas-enlaces pie-marcas" aria-label="Marcas y guías">\n' + '\n'.join(li) + '\n      </ul>\n'
 
 LOGO = '<img src="/icono.svg?v=1a26271c80" alt="Mando TV" width="34" height="34">'
@@ -169,7 +169,7 @@ def pagina(m):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in m["faq"]]}]}
     funciones = '\n'.join(f'        <li><b>{e(t)}</b><span>{e(d)}</span></li>' for t, d in m['funciones'])
     pasos = '\n'.join(f'          <li>{e(p)}</li>' for p in m['pasos'])
-    guias_marca = '\n'.join(f'        <li><a href="/guias/{s}/">{e(n)}</a></li>' for s, n in m['guias'])
+    guias_marca = '\n'.join(f'        <li><a href="/es/guias/{s}/">{e(n)}</a></li>' for s, n in m['guias'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in m['faq'])
     return f'''<!doctype html>
 <html lang="es" style="--marca: {m["color"]}">
@@ -206,7 +206,7 @@ def pagina(m):
         </a>
         <nav aria-label="Principal">
           <a href="/es/#funciones">Qué hace</a>
-          <a href="/soporte.html">Ayuda</a>
+          <a href="/es/soporte.html">Ayuda</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
         </nav>
       </header>
@@ -252,7 +252,7 @@ def pagina(m):
       <h2 id="guias">Guías de {e(m["corto"])}</h2>
       <ul>
 {guias_marca}
-        <li><a href="/guias/">Todas las guías para controlar el TV con el celular</a></li>
+        <li><a href="/es/guias/">Todas las guías para controlar el TV con el celular</a></li>
       </ul>
 
       <h2 id="otras">Otras marcas</h2>
@@ -268,8 +268,8 @@ def pagina(m):
       <div class="pie-enlaces">
         <nav aria-label="Pie de página">
           <a href="/es/">Inicio</a>
-          <a href="/soporte.html">Ayuda</a>
-          <a href="/privacidad.html">Privacidad</a>
+          <a href="/es/soporte.html">Ayuda</a>
+          <a href="/es/privacidad.html">Privacidad</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
           <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
         </nav>

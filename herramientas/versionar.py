@@ -125,7 +125,7 @@ def video_xml(v):
 def sitemap():
     def orden(p):
         u = url_de(p)[len(DOMINIO):]
-        grupo = 0 if u == '/' else 1 if u.startswith('/control-remoto-') else 2 if u.startswith('/guias/') else 3
+        grupo = 0 if u == '/' else 1 if u.startswith('/es/control-remoto-') else 2 if u.startswith('/es/guias/') else 3
         return (grupo, u)
     filas = [f'  <url><loc>{url_de(p)}</loc><lastmod>{fecha_cambio(p)}</lastmod>' + ''.join(video_xml(v) for v in videos_de(p)) + '</url>'
              for p in sorted(paginas_indexables(), key=orden)]

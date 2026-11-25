@@ -1,6 +1,6 @@
 # Genera las páginas de mandotv.app en alemán (/de/) y francés (/fr/): marcas, guías, índice de guías, ayuda y privacidad.
 # Un solo motor; los textos de cada idioma están en herramientas/datos_de.py y herramientas/datos_fr.py (escritos para las
-# búsquedas de cada país, no son traducción literal). Las portadas /de/ y /fr/ se mantienen a mano, como /en/.
+# búsquedas de cada país, no son traducción literal). Las portadas /de/ y /fr/ se mantienen a mano, como la portada de la raíz /.
 # Uso: python -I herramientas/generar_idiomas.py <carpeta del sitio> [de] [fr]   (sin idiomas: todos los activos)
 # Las rutas y los hreflang salen de idiomas_sitio.py, igual que en generar_en.py, generar_guias.py y generar_marcas.py.
 import ast, html, importlib, json, os, re, sys

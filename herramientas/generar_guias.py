@@ -1,4 +1,4 @@
-# Genera las páginas guía de mandotv.app (/guias/<tema>/index.html). Mismo patrón que generar_marcas.py.
+# Genera las páginas guía de mandotv.app (/es/guias/<tema>/index.html). Mismo patrón que generar_marcas.py.
 # Uso: python -I herramientas/generar_guias.py <carpeta del sitio>
 import json, os, html, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -12,21 +12,21 @@ TIENDA = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct'
 TIENDA_APPLE = 'https://apps.apple.com/app/id6834927348'
 
 MARCAS_ENLACES = [
-  ('control-remoto-samsung', 'Control remoto Samsung'),
-  ('control-remoto-lg', 'Control remoto LG'),
-  ('control-remoto-roku', 'Control remoto Roku'),
-  ('control-remoto-android-tv', 'Control remoto Android TV'),
+  ('es/control-remoto-samsung', 'Control remoto Samsung'),
+  ('es/control-remoto-lg', 'Control remoto LG'),
+  ('es/control-remoto-roku', 'Control remoto Roku'),
+  ('es/control-remoto-android-tv', 'Control remoto Android TV'),
   # 2026-11-21: marcas de Latinoamérica (generar_marcas.py + marcas_latam.py)
-  ('control-remoto-master-g', 'Control remoto Master G'),
-  ('control-remoto-kalley', 'Control remoto Kalley'),
-  ('control-remoto-caixun', 'Control remoto Caixun'),
-  ('control-remoto-hyundai', 'Control remoto Hyundai'),
-  ('control-remoto-noblex', 'Control remoto Noblex'),
-  ('control-remoto-bgh', 'Control remoto BGH'),
+  ('es/control-remoto-master-g', 'Control remoto Master G'),
+  ('es/control-remoto-kalley', 'Control remoto Kalley'),
+  ('es/control-remoto-caixun', 'Control remoto Caixun'),
+  ('es/control-remoto-hyundai', 'Control remoto Hyundai'),
+  ('es/control-remoto-noblex', 'Control remoto Noblex'),
+  ('es/control-remoto-bgh', 'Control remoto BGH'),
 ]
 
 GUIAS = [
-  dict(slug='guias/encender-tv-lg-con-el-celular', corto='Encender TV LG con el celular',
+  dict(slug='es/guias/encender-tv-lg-con-el-celular', corto='Encender TV LG con el celular',
     titulo='Cómo encender tu TV LG con el celular | Mando TV',
     desc='Aprende a encender tu TV LG con el celular por WiFi: activa "Encender TV con móvil" en el televisor y usa Mando TV. Paso a paso, gratis y sin anuncios.',
     h1='Cómo encender el TV LG con el celular',
@@ -42,13 +42,13 @@ GUIAS = [
     extra=[
       ('Si no enciende', 'El TV debe haber estado conectado a la misma red WiFi cuando se apagó. Revisa que la opción siga activada y que el celular esté en esa misma red. Si cambiaste de router, vuelve a conectarte una vez con el TV encendido.'),
     ],
-    marca=('control-remoto-lg', 'Control remoto para TV LG'),
+    marca=('es/control-remoto-lg', 'Control remoto para TV LG'),
     faq=[
       ('¿Puedo encender el TV LG con el celular si nunca lo conecté?', 'No. Primero hay que activar "Encender TV con móvil" en el televisor y conectarse una vez con Mando TV con el TV encendido.'),
       ('¿Necesito la app LG ThinQ?', 'No. Mando TV se conecta directo por tu WiFi y no pide cuenta de LG.'),
       ('¿Funciona con el celular con datos móviles?', 'No. El celular y el TV deben estar en la misma red WiFi.'),
     ]),
-  dict(slug='guias/control-remoto-samsung-sin-control', corto='TV Samsung sin control',
+  dict(slug='es/guias/control-remoto-samsung-sin-control', corto='TV Samsung sin control',
     titulo='¿Perdiste el control Samsung? Usa tu celular | Mando TV',
     desc='Si perdiste el control de tu TV Samsung o no funciona, usa tu celular como control remoto por WiFi. Pasos simples con Mando TV, gratis y sin anuncios.',
     h1='Control remoto Samsung sin el control original',
@@ -64,13 +64,13 @@ GUIAS = [
     extra=[
       ('Si el TV no pide permiso', 'Puede que el permiso ya esté guardado o que el TV esté en otra red WiFi. Cierra Mando TV y vuelve a abrirla con el TV encendido. Si el TV es anterior a 2016, usa otro sistema y todavía no es compatible.'),
     ],
-    marca=('control-remoto-samsung', 'Control remoto para TV Samsung'),
+    marca=('es/control-remoto-samsung', 'Control remoto para TV Samsung'),
     faq=[
       ('¿Cómo acepto la conexión si no tengo el control?', 'En la mayoría de los modelos se acepta con los botones físicos del TV o con el joystick de atrás. Si tu modelo no tiene botones, escríbenos a hola@mandotv.app y te ayudamos.'),
       ('¿Mando TV pide cuenta Samsung?', 'No. Se conecta directo por tu WiFi, sin cuenta Samsung.'),
       ('¿Funciona con mi Samsung antiguo?', 'Funciona con televisores Samsung con Tizen, de 2016 en adelante.'),
     ]),
-  dict(slug='guias/conectar-celular-al-tv-por-wifi', corto='Celular como control por WiFi',
+  dict(slug='es/guias/conectar-celular-al-tv-por-wifi', corto='Celular como control por WiFi',
     titulo='Celular como control remoto del TV por WiFi | Mando TV',
     desc='Conecta tu celular al TV por WiFi y úsalo de control remoto en Samsung, LG, Roku y Google TV. Pasos para cada marca con Mando TV, gratis y sin anuncios.',
     h1='Cómo conectar el celular al TV por WiFi para usarlo de control',
@@ -93,7 +93,7 @@ GUIAS = [
       ('¿Por qué no aparece mi TV en la lista?', 'Revisa que el TV esté encendido y que el celular no esté usando datos móviles ni otra red WiFi. Algunos routers tienen una red de invitados que separa los equipos.'),
       ('¿Puedo usar Mando TV desde iPhone o Android?', 'Sí en iPhone y iPad: ya está en App Store. También en Microsoft Store para Windows. Pronto llega a Android.'),
     ]),
-  dict(slug='guias/controlar-el-tv-desde-el-pc', corto='Controlar el TV desde el PC',
+  dict(slug='es/guias/controlar-el-tv-desde-el-pc', corto='Controlar el TV desde el PC',
     titulo='Controlar el TV desde el PC con Windows (gratis) | Mando TV',
     desc='Usa tu PC con Windows como control remoto del TV Samsung, LG, Roku o Google TV por WiFi. Botones, teclado y apps gratis; atajos del PC con Pro.',
     h1='Cómo controlar el TV desde el PC con Windows',
@@ -118,7 +118,7 @@ GUIAS = [
       ('¿Por qué el micrófono no me entiende en Windows?', 'Revisa que la voz esté activa (es una función de Pro) y que el micrófono del PC funcione en Windows. En casi todos los PC la voz se reconoce en el propio equipo, sin internet. Solo en procesadores muy antiguos la app usa el dictado de Windows: ahí revisa que "Reconocimiento de voz en línea" esté activado en Configuración > Privacidad y seguridad > Voz y que Windows tenga agregado un idioma que admita el dictado (en español, Español (México) o Español (España), en Configuración > Hora e idioma > Idioma y región). Mando TV usa la que corresponde solo mientras escucha.'),
     ]),
   # Páginas de rescate (2026-11-17): problemas reales que reportaron los testers. Cada una lleva pasos propios.
-  dict(slug='guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',
+  dict(slug='es/guias/roku-no-responde-al-celular', corto='Roku no responde al celular', fecha='2026-11-17',
     titulo='Roku no responde al celular: error 403 | Mando TV',
     desc='Tu celular se conecta al Roku pero las teclas no hacen nada. Activa "Control por apps móviles" en el Roku en 5 pasos.',
     h1='Roku no responde al control del celular: la solución',
@@ -135,13 +135,13 @@ GUIAS = [
       ('Predeterminado o Permisivo, ¿cuál elijo?', 'Con Predeterminado alcanza: acepta las órdenes que llegan desde la red de tu casa, que es lo que necesita un control remoto. Permisivo es más abierto y solo hace falta en redes poco comunes.'),
       ('Si no tienes el control del Roku', 'Cuando el ajuste está en Deshabilitado, solo se puede cambiar con el control físico del Roku. Pide uno prestado para cambiarlo una sola vez; después ya puedes usar el celular para todo.'),
     ],
-    marca=('control-remoto-roku', 'Control remoto para Roku'),
+    marca=('es/control-remoto-roku', 'Control remoto para Roku'),
     faq=[
       ('¿Por qué mi Roku dejó de responder si antes funcionaba?', 'Una actualización del Roku puede dejar ese ajuste más restringido. No es una falla del celular ni del WiFi: basta con volver a permitir el control por apps.'),
       ('¿Sirve para Roku TV y para los reproductores Roku?', 'Sí. El ajuste está en el mismo menú en los reproductores Roku y en los televisores con Roku TV.'),
       ('¿Es seguro dejarlo en Predeterminado?', 'Sí. Solo acepta órdenes de aparatos conectados a la red de tu casa.'),
     ]),
-  dict(slug='guias/el-celular-no-encuentra-el-tv', corto='El celular no encuentra el TV', fecha='2026-11-17',
+  dict(slug='es/guias/el-celular-no-encuentra-el-tv', corto='El celular no encuentra el TV', fecha='2026-11-17',
     titulo='El celular no encuentra el TV: 6 cosas a revisar | Mando TV',
     desc='Si la app no encuentra tu TV o se corta al conectar, revisa el WiFi, la VPN y el permiso de red local. Paso a paso para Samsung, LG, Roku y Android TV.',
     h1='El celular no encuentra el TV: qué revisar',
@@ -166,7 +166,7 @@ GUIAS = [
       ('¿Por qué con la VPN no funciona?', 'Porque la VPN manda todo el tráfico del celular por otra red y el teléfono deja de ver los aparatos de tu casa. Apágala mientras usas el control.'),
       ('¿Sirve el Bluetooth o el infrarrojo?', 'Para los televisores inteligentes, Mando TV usa el WiFi. El infrarrojo funciona solo en celulares Android que tengan emisor infrarrojo y sirve para televisores que no son inteligentes. El Bluetooth está disponible en beta y gratis, solo en Android 9 o más reciente: el celular se conecta al TV como teclado y control Bluetooth, sin WiFi. Sirve con Google TV, Android TV y Fire TV; con otras marcas que aceptan teclados Bluetooth podría funcionar, y Roku no los acepta.'),
     ]),
-  dict(slug='guias/android-tv-codigo-de-emparejamiento', corto='Código de Android TV', fecha='2026-11-17',
+  dict(slug='es/guias/android-tv-codigo-de-emparejamiento', corto='Código de Android TV', fecha='2026-11-17',
     titulo='Android TV pide un código de emparejamiento | Mando TV',
     desc='Tu Android TV o Google TV muestra un código de 6 caracteres al conectar el celular. Cómo escribirlo, qué hacer si no aparece o si dice que es incorrecto.',
     h1='Android TV pide un código para conectar el celular: qué hacer',
@@ -183,13 +183,13 @@ GUIAS = [
       ('Si dice que el código es incorrecto', 'El código cambia cada vez que se pide. Si tardaste o lo pediste dos veces, vale solo el último que está en la pantalla. Vuelve a tocar el TV en el celular y escribe el código nuevo.'),
       ('Si el TV vuelve a pedir el código', 'Pasa cuando el TV se restablece de fábrica o cuando borras los datos de la app en el celular. Empareja otra vez y queda guardado.'),
     ],
-    marca=('control-remoto-android-tv', 'Control remoto para Android TV'),
+    marca=('es/control-remoto-android-tv', 'Control remoto para Android TV'),
     faq=[
       ('¿Qué televisores usan este código?', 'Los que traen Android TV o Google TV: Sony, Philips, TCL, Hisense, Sharp, Xiaomi, el Chromecast con Google TV y varios más.'),
       ('¿Necesito una cuenta de Google en el celular?', 'No. El código de la pantalla es lo único que hace falta.'),
       ('¿Es seguro?', 'Sí. El código demuestra que estás frente al TV: sin verlo en la pantalla nadie puede emparejarse.'),
     ]),
-  dict(slug='guias/perdi-el-control-del-roku', corto='Perdí el control del Roku', fecha='2026-11-17',
+  dict(slug='es/guias/perdi-el-control-del-roku', corto='Perdí el control del Roku', fecha='2026-11-17',
     titulo='Perdí el control del Roku: usa tu celular | Mando TV',
     desc='Si perdiste el control del Roku, tu celular lo reemplaza por WiFi. Pasos simples, y qué hacer si cambiaste de router y el Roku quedó sin conexión.',
     h1='Perdí el control del Roku: cómo usar el celular',
@@ -207,18 +207,18 @@ GUIAS = [
       ('Si es un Roku TV', 'Los televisores con Roku TV tienen un botón físico, casi siempre abajo al centro o detrás, que enciende el TV. Con eso basta para encenderlo y seguir con el celular.'),
       ('Si prefieres comprar otro control', 'Fíjate que sea compatible con tu modelo. Los reproductores Roku pequeños que quedan escondidos detrás del TV necesitan un control que no sea de infrarrojo, porque el infrarrojo no les llega.'),
     ],
-    marca=('control-remoto-roku', 'Control remoto para Roku'),
+    marca=('es/control-remoto-roku', 'Control remoto para Roku'),
     faq=[
       ('¿El celular puede encender el Roku?', 'Un reproductor Roku enchufado está siempre encendido. Si es un Roku TV, Mando TV lo enciende por WiFi cuando el televisor tiene activado "Inicio rápido de TV" en Configuración > Sistema > Energía.'),
       ('¿Y el volumen?', 'En un Roku TV el celular sube y baja el volumen. En un reproductor Roku conectado por HDMI depende del televisor: en muchos funciona y en otros no.'),
       ('¿Tengo que crear una cuenta?', 'No. Mando TV no pide cuenta y además controla televisores Samsung, LG y Android TV desde la misma app.'),
     ]),
-  dict(slug='guias/encender-tv-y-hdmi-de-la-consola-sin-control', corto='TV y consola sin control', fecha='2026-11-17',
+  dict(slug='es/guias/encender-tv-y-hdmi-de-la-consola-sin-control', corto='TV y consola sin control', fecha='2026-11-17',
     titulo='Encender el TV y cambiar a HDMI sin control (PS5, Xbox)',
     desc='¿Día de jugar GTA VI y sin control del TV? Enciende la tele y pasa al HDMI de tu PS5 o Xbox desde el celular. Gratis y sin anuncios.',
     modificada='2026-11-17',
-    alternos={'es': URL + '/guias/encender-tv-y-hdmi-de-la-consola-sin-control/',
-              'en': URL + '/en/guides/turn-on-tv-console-hdmi-without-remote/',
+    alternos={'es': URL + '/es/guias/encender-tv-y-hdmi-de-la-consola-sin-control/',
+              'en': URL + '/guides/turn-on-tv-console-hdmi-without-remote/',
               'pt': URL + '/pt/guias/ligar-tv-e-hdmi-do-console-sem-controle/'},
     h1='Cómo encender el TV y cambiar al HDMI de la consola sin el control',
     intro='El estreno de GTA VI (o GTA 6, como lo buscan muchos), la consola lista y el control del televisor perdido entre los cojines. Pasa más de lo que parece. Con Mando TV el celular enciende el televisor y lo cambia al HDMI de tu PlayStation o Xbox, por el WiFi de tu casa.',
@@ -234,7 +234,7 @@ GUIAS = [
       ('El truco gratis: que la consola cambie el TV sola', 'La PS5 y la Xbox pueden encender el televisor y pasarlo a su HDMI apenas se encienden, gracias a HDMI-CEC. En la PS5 está en Configuración > Sistema > HDMI > Activar Enlace de dispositivos HDMI. En la Xbox, en Configuración > General > Opciones de TV y pantalla > Control de dispositivos. En el televisor tiene otro nombre según la marca: Anynet+ en Samsung, SIMPLINK en LG y Control de dispositivos HDMI o BRAVIA Sync en otras.'),
       ('Si es un Roku TV', 'El botón físico del televisor, casi siempre abajo al centro o detrás, lo enciende. Desde ahí el celular hace el resto.'),
       ('Si el TV se queda en otra pantalla', 'Si la consola está encendida pero el televisor sigue en la antena o en una app, el TV no cambió de entrada. Con el celular, toca Entradas y elige el HDMI de la consola. Si prefieres, usa las flechas y OK para llegar a las entradas del TV, o el botón del propio televisor, y elige el HDMI. El número es el del puerto donde enchufaste el cable de la consola.'),
-      ('Más ayuda', 'Si no sabes por dónde empezar, mira [Perdí el control del TV](/guias/perdi-el-control-del-tv/). Para solo cambiar de entrada, está la guía [Cambiar la entrada HDMI del TV sin control remoto](/guias/cambiar-entrada-hdmi-sin-control/).'),
+      ('Más ayuda', 'Si no sabes por dónde empezar, mira [Perdí el control del TV](/es/guias/perdi-el-control-del-tv/). Para solo cambiar de entrada, está la guía [Cambiar la entrada HDMI del TV sin control remoto](/es/guias/cambiar-entrada-hdmi-sin-control/).'),
     ],
     marca=None,
     faq=[
@@ -244,7 +244,7 @@ GUIAS = [
       ('¿Sirve para jugar GTA VI o GTA 6 en PS5 y Xbox?', 'Mando TV no toca la consola ni el juego. Solo deja el televisor encendido y en el HDMI correcto para que te sientes a jugar.'),
       ('¿Y si el TV no se enciende desde el celular?', 'Enciéndelo esta vez con el botón del propio TV y activa el encendido por red para la próxima. La guía de tu marca explica dónde está ese ajuste.'),
     ]),
-  dict(slug='guias/perdi-el-control-del-tv', corto='Perdí el control del TV', fecha='2026-11-17',
+  dict(slug='es/guias/perdi-el-control-del-tv', corto='Perdí el control del TV', fecha='2026-11-17',
     titulo='Perdí el control del TV: qué hacer ahora (paso a paso)',
     desc='¿Perdiste el control del TV? Enciéndelo con su botón y úsalo desde el celular. Pasos para LG, Samsung, Roku y Android TV. Gratis y sin anuncios.',
     h1='Perdí el control del TV: qué puedo hacer',
@@ -258,7 +258,7 @@ GUIAS = [
       'Para la próxima vez, activa el encendido por red en el TV (más abajo está la guía de tu marca) y lo enciendes desde el celular sin tocar el TV.',
     ],
     extra=[
-      ('Elige la guía de tu marca', 'LG: [Perdí el control del TV LG](/guias/perdi-el-control-del-lg/). Samsung: [Control remoto Samsung sin el control original](/guias/control-remoto-samsung-sin-control/). Roku: [Perdí el control del Roku](/guias/perdi-el-control-del-roku/). Android TV y Google TV: [Android TV sin control remoto](/guias/android-tv-sin-control-remoto/).'),
+      ('Elige la guía de tu marca', 'LG: [Perdí el control del TV LG](/es/guias/perdi-el-control-del-lg/). Samsung: [Control remoto Samsung sin el control original](/es/guias/control-remoto-samsung-sin-control/). Roku: [Perdí el control del Roku](/es/guias/perdi-el-control-del-roku/). Android TV y Google TV: [Android TV sin control remoto](/es/guias/android-tv-sin-control-remoto/).'),
       ('Si el TV no enciende con el botón', 'Antes de buscar otro control, revisa que el cable esté bien enchufado y que el enchufe de la pared tenga corriente. Si el botón del TV no hace nada, el problema es del televisor y no del control.'),
       ('Si el control solo dejó de funcionar', 'Prueba con pilas nuevas. Para saber si todavía manda señal, apúntalo a la cámara del celular y aprieta un botón: en muchos celulares se ve una luz morada en la pantalla. Si la luz sale y el TV no responde, el sensor del TV puede estar tapado.'),
       ('Si cambiaste de router y el TV quedó sin WiFi', 'Sin control es más difícil conectarlo a la red nueva. Lo más fácil es conectar el TV con un cable de red al router. También puedes crear una red WiFi con el mismo nombre y la misma clave de antes: el TV suele conectarse solo a ella.'),
@@ -270,7 +270,7 @@ GUIAS = [
       ('¿Necesito comprar un control nuevo?', 'No necesariamente. Con Mando TV tienes botones, volumen, teclado y encendido gratis. Si igual prefieres uno físico, busca el modelo exacto de tu TV.'),
       ('¿Funciona si el TV no tiene WiFi?', 'No. El celular y el TV tienen que estar en la misma red WiFi. Un TV que no es smart no se puede controlar con Mando TV.'),
     ]),
-  dict(slug='guias/perdi-el-control-del-lg', corto='Perdí el control del TV LG', fecha='2026-11-17',
+  dict(slug='es/guias/perdi-el-control-del-lg', corto='Perdí el control del TV LG', fecha='2026-11-17',
     titulo='Perdí el control del TV LG: cómo usar el celular',
     desc='¿Sin el control de tu TV LG? Enciéndelo con el botón, acepta el aviso y usa el celular de control por WiFi. Sin cuenta LG y sin anuncios.',
     h1='Perdí el control del TV LG: cómo usar el celular',
@@ -281,20 +281,20 @@ GUIAS = [
       'Abre Mando TV y toca tu TV LG en la lista.',
       'El TV muestra un aviso pidiendo permiso. Acéptalo con el joystick o el botón del TV. Si ya habías conectado ese celular antes, no lo vuelve a pedir.',
       'Listo. Las flechas, OK, Atrás, Inicio, volumen, canales y teclado son gratis. El puntero es función Pro.',
-      'Con la app conectada, entra en Configuración con las flechas y OK, y activa "Encender TV con móvil". La guía [Cómo encender el TV LG con el celular](/guias/encender-tv-lg-con-el-celular/) dice dónde está.',
+      'Con la app conectada, entra en Configuración con las flechas y OK, y activa "Encender TV con móvil". La guía [Cómo encender el TV LG con el celular](/es/guias/encender-tv-lg-con-el-celular/) dice dónde está.',
     ],
     extra=[
-      ('Si el TV no muestra el aviso', 'Puede que el permiso ya esté guardado, o que el celular esté en otra red. Revisa que los dos estén en el mismo WiFi y que la VPN esté apagada. Si el TV no aparece en la lista, mira [El celular no encuentra el TV](/guias/el-celular-no-encuentra-el-tv/).'),
+      ('Si el TV no muestra el aviso', 'Puede que el permiso ya esté guardado, o que el celular esté en otra red. Revisa que los dos estén en el mismo WiFi y que la VPN esté apagada. Si el TV no aparece en la lista, mira [El celular no encuentra el TV](/es/guias/el-celular-no-encuentra-el-tv/).'),
       ('Si el TV quedó sin WiFi', 'Conecta el TV con un cable de red al router: lo usa solo. O crea una red WiFi con el mismo nombre y la misma clave de antes, porque el TV suele conectarse solo a ella.'),
-      ('Si el TV quedó en otra entrada', 'Con el celular, toca Entradas y elige el HDMI. Más detalles en [Cambiar la entrada HDMI del TV sin control remoto](/guias/cambiar-entrada-hdmi-sin-control/).'),
+      ('Si el TV quedó en otra entrada', 'Con el celular, toca Entradas y elige el HDMI. Más detalles en [Cambiar la entrada HDMI del TV sin control remoto](/es/guias/cambiar-entrada-hdmi-sin-control/).'),
     ],
-    marca=('control-remoto-lg', 'Control remoto para TV LG'),
+    marca=('es/control-remoto-lg', 'Control remoto para TV LG'),
     faq=[
       ('¿Necesito el Magic Remote para usar Mando TV?', 'Solo hace falta algo para aceptar el aviso la primera vez, y sirve el botón o el joystick del propio TV. Después usas solo el celular.'),
       ('¿Necesito la app LG ThinQ?', 'No. Mando TV se conecta directo por tu WiFi y no pide cuenta de LG.'),
       ('¿Puedo apagar y encender el TV LG desde el celular?', 'Apagar sí. Para encender necesitas haber activado "Encender TV con móvil" en el televisor y haberte conectado una vez con el TV encendido.'),
     ]),
-  dict(slug='guias/cambiar-entrada-hdmi-sin-control', corto='Cambiar HDMI sin control', fecha='2026-11-17',
+  dict(slug='es/guias/cambiar-entrada-hdmi-sin-control', corto='Cambiar HDMI sin control', fecha='2026-11-17',
     titulo='Cambiar la entrada HDMI del TV sin control remoto',
     desc='Cambia a HDMI sin control remoto en Samsung, LG o Roku: con el botón del TV o desde el celular. Gratis para empezar, sin anuncios.',
     h1='Cambiar la entrada HDMI del TV sin control remoto',
@@ -311,8 +311,8 @@ GUIAS = [
       ('Samsung', 'Si el menú del botón del TV no tiene Fuente, abre el menú de la pantalla de inicio con el celular y busca Fuente o Dispositivos conectados a la izquierda. Se maneja con las flechas y OK de Mando TV, que son gratis.'),
       ('LG', 'Presiona el joystick del TV y busca Entradas. Con el celular, en Mando TV también puedes abrir la lista de entradas y tocar la que quieras.'),
       ('Roku TV', 'En la pantalla de inicio hay una tarjeta por cada entrada, como HDMI 1 o HDMI 2. Muévete con las flechas y entra con OK, gratis.'),
-      ('Si es un TV con Android TV o Google TV', 'En Mando TV la lista de entradas todavía no está en Android TV. Usa el botón de entradas del propio TV, o llega a ellas con las flechas y OK desde el inicio. Si no tienes control y quieres conectarlo, mira [Android TV sin control remoto](/guias/android-tv-sin-control-remoto/).'),
-      ('Más ayuda', 'Si el TV ni siquiera enciende o no sabes por dónde empezar, mira [Perdí el control del TV](/guias/perdi-el-control-del-tv/). Para jugar en consola, la guía [Encender el TV y cambiar a HDMI sin control](/guias/encender-tv-y-hdmi-de-la-consola-sin-control/) incluye el truco de HDMI-CEC.'),
+      ('Si es un TV con Android TV o Google TV', 'En Mando TV la lista de entradas todavía no está en Android TV. Usa el botón de entradas del propio TV, o llega a ellas con las flechas y OK desde el inicio. Si no tienes control y quieres conectarlo, mira [Android TV sin control remoto](/es/guias/android-tv-sin-control-remoto/).'),
+      ('Más ayuda', 'Si el TV ni siquiera enciende o no sabes por dónde empezar, mira [Perdí el control del TV](/es/guias/perdi-el-control-del-tv/). Para jugar en consola, la guía [Encender el TV y cambiar a HDMI sin control](/es/guias/encender-tv-y-hdmi-de-la-consola-sin-control/) incluye el truco de HDMI-CEC.'),
     ],
     marca=None,
     faq=[
@@ -320,7 +320,7 @@ GUIAS = [
       ('¿Cómo sé cuál HDMI usar?', 'Mira los puertos HDMI del TV: cada uno tiene un número. Usa el del puerto donde está enchufado el cable de tu consola o reproductor.'),
       ('¿Qué hago si el TV no se enciende?', 'Enciéndelo con su botón físico. Si ya lo habías conectado antes y activaste el encendido por red, también puedes encenderlo desde el celular.'),
     ]),
-  dict(slug='guias/android-tv-sin-control-remoto', corto='Android TV sin control', fecha='2026-11-17',
+  dict(slug='es/guias/android-tv-sin-control-remoto', corto='Android TV sin control', fecha='2026-11-17',
     titulo='Android TV sin control remoto: úsalo desde el celular',
     desc='¿Sin el control de tu Android TV o Google TV? Conecta el celular con el código de 6 caracteres de la pantalla. Gratis, sin cuenta y sin anuncios.',
     h1='Android TV sin control remoto: cómo usarlo desde el celular',
@@ -335,11 +335,11 @@ GUIAS = [
     ],
     extra=[
       ('Si tu TV no se enciende desde el celular', 'No todos los Android TV traen encendido por red; depende del fabricante y del modelo. Si el tuyo no lo tiene, enciéndelo con el botón del TV y sigue desde el celular. Apagarlo sí lo puedes hacer desde la app.'),
-      ('Chromecast con Google TV, Google TV Streamer y Shield', 'Se conectan igual: mismo WiFi, tocas el aparato en la lista y escribes el código. Si el TV muestra otra entrada, cámbiala al HDMI donde está conectado, como explica [Cambiar la entrada HDMI del TV sin control remoto](/guias/cambiar-entrada-hdmi-sin-control/).'),
-      ('Si el código no aparece o dice que es incorrecto', 'Revisa que el TV esté encendido de verdad y no en reposo. El código cambia cada vez que se pide: vale solo el último. Hay más detalles en [Android TV pide un código para conectar el celular](/guias/android-tv-codigo-de-emparejamiento/).'),
+      ('Chromecast con Google TV, Google TV Streamer y Shield', 'Se conectan igual: mismo WiFi, tocas el aparato en la lista y escribes el código. Si el TV muestra otra entrada, cámbiala al HDMI donde está conectado, como explica [Cambiar la entrada HDMI del TV sin control remoto](/es/guias/cambiar-entrada-hdmi-sin-control/).'),
+      ('Si el código no aparece o dice que es incorrecto', 'Revisa que el TV esté encendido de verdad y no en reposo. El código cambia cada vez que se pide: vale solo el último. Hay más detalles en [Android TV pide un código para conectar el celular](/es/guias/android-tv-codigo-de-emparejamiento/).'),
       ('App de Google o Mando TV', 'Google tiene su propia app con cuenta de Google. Mando TV no pide cuenta, funciona también desde Windows y maneja además televisores LG, Samsung y Roku desde la misma app.'),
     ],
-    marca=('control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
+    marca=('es/control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
     faq=[
       ('¿Necesito el control para emparejar el celular?', 'No. El código aparece en la pantalla del TV y lo escribes en el celular. Solo tienes que encender el TV, con el botón del televisor si hace falta.'),
       ('¿Sirve con un Hisense?', 'Con los Hisense que traen Android TV o Google TV, sí. Los Hisense con otro sistema no son compatibles.'),
@@ -351,7 +351,7 @@ GUIAS = [
 # >>> guías traídas del inglés (ensamblar.py)
 # Adaptadas con Ollama (qwen3.6:35b) desde las guías inglesas y auditadas por Opus el 22-nov. Rutas en idiomas_sitio.py.
 GUIAS += [
-  dict(slug='guias/app-control-remoto-sin-suscripcion', corto='Control remoto sin suscripción', fecha='2026-11-23',
+  dict(slug='es/guias/app-control-remoto-sin-suscripcion', corto='Control remoto sin suscripción', fecha='2026-11-23',
     titulo='App de control remoto sin suscripción ni anuncios',
     desc='¿Cansado de apps de control remoto con anuncios o suscripción semanal? Mando TV es gratis y sin anuncios, y Pro es un pago único opcional.',
     h1='Control remoto para el TV sin suscripción ni anuncios',
@@ -381,8 +381,8 @@ GUIAS += [
     extra=[
       ('Lo que Mando TV no hace', 'No tiene duplicación de pantalla propia: en el iPhone y el iPad te lleva a Duplicar pantalla, en el Centro de control, la función del propio iPhone, que sirve con televisores compatibles con AirPlay. Con Mando TV Pro también puede enviar fotos y videos al TV por el WiFi de tu casa. Controla los Smart TV por el WiFi de tu casa. Un TV que no es Smart TV se puede controlar por infrarrojo desde un celular Android con emisor infrarrojo. En Android 9 o más reciente, el celular también se conecta a Google TV, Android TV y Fire TV por Bluetooth como teclado y control, sin WiFi. Esta opción está en beta y es gratis.'),
       ('Cómo gana dinero Mando TV', 'No con anuncios ni con tus datos: la app no recopila ninguno. Mando TV se paga con Pro, un pago único opcional por extras. El control básico es gratis.'),
-      ('En los dispositivos que ya tienes', 'iPhone y iPad desde la App Store, PC con Windows desde Microsoft Store, y Android con la prueba anticipada gratis de Google Play. Mira [control remoto del TV en el iPhone](/guias/app-control-remoto-para-iphone/) y [control remoto del TV en Windows](/guias/app-control-remoto-para-windows/).'),
-      ('Privacidad', 'Sin cuenta ni seguimiento en la app. Se comunica con el TV dentro de la red de tu casa, y las claves de conexión con el TV quedan cifradas en tu equipo. Detalles en la [política de privacidad](/privacidad.html).'),
+      ('En los dispositivos que ya tienes', 'iPhone y iPad desde la App Store, PC con Windows desde Microsoft Store, y Android con la prueba anticipada gratis de Google Play. Mira [control remoto del TV en el iPhone](/es/guias/app-control-remoto-para-iphone/) y [control remoto del TV en Windows](/es/guias/app-control-remoto-para-windows/).'),
+      ('Privacidad', 'Sin cuenta ni seguimiento en la app. Se comunica con el TV dentro de la red de tu casa, y las claves de conexión con el TV quedan cifradas en tu equipo. Detalles en la [política de privacidad](/es/privacidad.html).'),
     ],
     marca=None,
     faq=[
@@ -390,7 +390,7 @@ GUIAS += [
       ('¿Mando TV es realmente gratis?', 'Sí. Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado y encendido o apagado son gratis, sin anuncios ni límite de tiempo.'),
       ('¿Funciona sin WiFi?', 'Casi siempre no. Mando TV controla los Smart TV por el WiFi de tu casa. Hay dos excepciones: el infrarrojo en celulares Android con emisor infrarrojo, que también sirve para televisores que no son Smart TV o que nunca se conectaron al WiFi, y el Bluetooth, en beta en Android 9 o más reciente, que funciona con Google TV, Android TV y Fire TV.'),
     ]),
-  dict(slug='guias/alternativa-a-la-app-de-roku', corto='Alternativa a la app de Roku', fecha='2026-11-23',
+  dict(slug='es/guias/alternativa-a-la-app-de-roku', corto='Alternativa a la app de Roku', fecha='2026-11-23',
     titulo='Alternativa a la app de Roku: un control simple | Mando TV',
     desc='Una alternativa a la app de Roku para usarla como control: Mando TV controla Roku por WiFi, sin cuenta ni anuncios, y también Samsung, LG y Google TV.',
     h1='Alternativa a la app de Roku: un control para cada TV',
@@ -405,17 +405,17 @@ GUIAS += [
     extra=[
       ('Dónde destaca Mando TV', 'Una app para varios televisores: Roku, Samsung, LG y Google TV o Android TV. Sin cuenta ni anuncios. También funciona desde un PC con Windows, útil en el escritorio. Las flechas y el volumen responden rápido, y el teclado facilita escribir búsquedas.'),
       ('Dónde destaca la app oficial de Roku', 'Guarda la app de Roku para lo que ofrece más allá del control, como navegar y agregar canales desde la Tienda de canales de Roku, así como sus funciones propias para enviar contenido y de escucha privada. Usa ambas si prefieres. Las dos pueden estar en el mismo celular.'),
-      ('Televisores Roku TV y reproductores Roku', 'Ambos funcionan. Incluye modelos Roku TV de TCL, Hisense, Philips y otros, y los reproductores Roku Express, Streaming Stick y Ultra. Más detalles en la [página del control remoto para Roku](/control-remoto-roku/).'),
-      ('Si la app de Roku dejó de funcionar', 'Si los botones dejaron de responder, el Roku suele bloquear el control por apps. La guía [Roku no responde al celular (error 403)](/guias/roku-no-responde-al-celular/) explica el ajuste que lo soluciona.'),
+      ('Televisores Roku TV y reproductores Roku', 'Ambos funcionan. Incluye modelos Roku TV de TCL, Hisense, Philips y otros, y los reproductores Roku Express, Streaming Stick y Ultra. Más detalles en la [página del control remoto para Roku](/es/control-remoto-roku/).'),
+      ('Si la app de Roku dejó de funcionar', 'Si los botones dejaron de responder, el Roku suele bloquear el control por apps. La guía [Roku no responde al celular (error 403)](/es/guias/roku-no-responde-al-celular/) explica el ajuste que lo soluciona.'),
       ('Qué es gratis y qué es Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar entradas y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
-    marca=('control-remoto-roku', 'Control remoto para Roku'),
+    marca=('es/control-remoto-roku', 'Control remoto para Roku'),
     faq=[
       ('¿Necesito una cuenta de Roku para usar Mando TV?', 'No. Mando TV se comunica con el Roku por tu red local y no pide cuenta.'),
       ('¿Mando TV reemplaza completamente la app móvil de Roku?', 'Para el control remoto, sí. Para la tienda de canales, enviar contenido y la escucha privada, conserva la app oficial de Roku.'),
       ('¿Funciona en mi Roku Express o Streaming Stick?', 'Sí. Todos los reproductores Roku y televisores con Roku TV se controlan igual.'),
     ]),
-  dict(slug='guias/alternativa-a-lg-thinq', corto='Alternativa a la app LG ThinQ', fecha='2026-11-23',
+  dict(slug='es/guias/alternativa-a-lg-thinq', corto='Alternativa a la app LG ThinQ', fecha='2026-11-23',
     titulo='Alternativa a LG ThinQ: control remoto del TV LG sin cuenta',
     desc='¿Buscas una alternativa a LG ThinQ solo para usar como control remoto de tu TV? Mando TV controla los TV LG con webOS por WiFi, sin cuenta de LG ni anuncios.',
     h1='Alternativa a LG ThinQ para controlar tu TV LG',
@@ -431,16 +431,16 @@ GUIAS += [
       ('Mando TV o LG ThinQ: cuál usar', 'Usa ThinQ si quieres gestionar electrodomésticos LG como una lavadora, un refrigerador o un aire acondicionado, o las funciones de la cuenta de LG. Usa Mando TV si buscas un control rápido y sencillo para el TV que también funciona con Samsung, Roku y Google TV en la misma app. Mucha gente usa las dos: ThinQ para electrodomésticos y Mando TV para el TV.'),
       ('Qué hace Mando TV en un TV LG', 'Funciona con los Smart TV LG con webOS, que son la mayoría de los modelos desde 2014, incluidos LED, NanoCell, QNED y OLED. Tiene las flechas, OK, Atrás, Inicio, volumen, canales, silencio, controles de reproducción y un teclado para escribir en YouTube, Netflix o el navegador. La lista de apps y la de entradas también son gratis. Con Pro tienes además un puntero como el del Magic Remote.'),
       ('Qué no hace Mando TV', 'No controla electrodomésticos LG, no usa tu cuenta de LG ni reemplaza los servicios de la cuenta de LG en el TV. Es un control remoto, no un centro para el hogar inteligente.'),
-      ('Privacidad y anuncios', 'Mando TV no tiene anuncios ni cuenta. Se comunica con el TV dentro de la red de tu casa y guarda cifrada en tu equipo la clave de conexión con el TV. La [página del control remoto LG](/control-remoto-lg/) tiene la lista completa de funciones.'),
+      ('Privacidad y anuncios', 'Mando TV no tiene anuncios ni cuenta. Se comunica con el TV dentro de la red de tu casa y guarda cifrada en tu equipo la clave de conexión con el TV. La [página del control remoto LG](/es/control-remoto-lg/) tiene la lista completa de funciones.'),
       ('Qué es gratis y qué es Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar de entrada y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es una compra única opcional para funciones adicionales.'),
     ],
-    marca=('control-remoto-lg', 'Control remoto para TV LG'),
+    marca=('es/control-remoto-lg', 'Control remoto para TV LG'),
     faq=[
       ('¿Puedo controlar mi TV LG sin la app LG ThinQ?', 'Sí. Mando TV se conecta directamente a los TV LG con webOS por tu WiFi. Aceptas un aviso en el TV la primera vez y listo, sin cuenta de LG.'),
       ('¿Mando TV funciona con el puntero del Magic Remote?', 'Mando TV Pro tiene un puntero que mueves con el dedo en la pantalla del celular, tal como el Magic Remote mueve la flecha.'),
       ('¿Mando TV es de LG?', 'No. Mando TV es una app independiente y no está afiliada a LG. LG y ThinQ pertenecen a sus respectivos dueños y se nombran solo para describir la compatibilidad.'),
     ]),
-  dict(slug='guias/alternativa-a-smartthings', corto='Alternativa a SmartThings para TV', fecha='2026-11-23',
+  dict(slug='es/guias/alternativa-a-smartthings', corto='Alternativa a SmartThings para TV', fecha='2026-11-23',
     titulo='¿SmartThings no controla tu TV? Una alternativa simple',
     desc='Si el control de SmartThings falla o va lento, Mando TV controla tu TV Samsung con Tizen por WiFi, sin cuenta Samsung ni anuncios. Pasos y soluciones.',
     h1='Alternativa a SmartThings para televisores Samsung',
@@ -453,19 +453,19 @@ GUIAS += [
       'Opcional: activa "Encender con dispositivo móvil" en Configuración > General > Red > Configuración experta para que Mando TV también pueda encender el TV.',
     ],
     extra=[
-      ('Por qué falla el control desde el celular', 'Las causas habituales son simples: el celular y el TV están en redes WiFi distintas, hay una VPN activa o el TV está en reposo profundo. Con SmartThings, la cuenta Samsung suma algo más que puede fallar, como que se cierre la sesión. Mando TV se comunica directo con el TV en tu red local, sin cuenta en la que iniciar sesión. Más soluciones en [el celular no encuentra el TV](/guias/el-celular-no-encuentra-el-tv/).'),
+      ('Por qué falla el control desde el celular', 'Las causas habituales son simples: el celular y el TV están en redes WiFi distintas, hay una VPN activa o el TV está en reposo profundo. Con SmartThings, la cuenta Samsung suma algo más que puede fallar, como que se cierre la sesión. Mando TV se comunica directo con el TV en tu red local, sin cuenta en la que iniciar sesión. Más soluciones en [el celular no encuentra el TV](/es/guias/el-celular-no-encuentra-el-tv/).'),
       ('Mando TV o SmartThings: cuál usar', 'Quédate con SmartThings si lo usas para electrodomésticos Samsung, luces u otros aparatos de la casa inteligente, o para funciones de la cuenta Samsung. Usa Mando TV cuando solo quieras un control rápido para el TV, o si tienes también un LG, Roku, Google TV o Fire TV: una sola app los controla a todos. Ambas pueden estar en el mismo celular.'),
       ('Si negaste el permiso por error', 'En el TV, ve a Configuración > General > Administrador de dispositivos externos > Administrador de conexión de dispositivos y deja Mando TV como permitido.'),
-      ('¿No tienes control?', 'Puedes aceptar el aviso con el botón del propio TV. La guía [control remoto Samsung sin el control original](/guias/control-remoto-samsung-sin-control/) explica cómo.'),
+      ('¿No tienes control?', 'Puedes aceptar el aviso con el botón del propio TV. La guía [control remoto Samsung sin el control original](/es/guias/control-remoto-samsung-sin-control/) explica cómo.'),
       ('Gratis y Pro', 'El control se descarga y se usa gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
-    marca=('control-remoto-samsung', 'Control remoto para TV Samsung'),
+    marca=('es/control-remoto-samsung', 'Control remoto para TV Samsung'),
     faq=[
       ('¿Puedo controlar mi TV Samsung sin SmartThings?', 'Sí. Mando TV se conecta a los televisores Samsung con Tizen directo por tu WiFi. Aceptas la conexión una vez en el TV, sin cuenta Samsung.'),
       ('¿Mando TV controla electrodomésticos Samsung?', 'No. Es solo un control para TV. Usa SmartThings para electrodomésticos y otros dispositivos del hogar inteligente.'),
       ('¿Mando TV es de Samsung?', 'No. Mando TV es una app independiente y no está afiliada a Samsung. Samsung y SmartThings pertenecen a sus dueños y se nombran solo para describir compatibilidad.'),
     ]),
-  dict(slug='guias/alternativa-a-la-app-google-tv', corto='Alternativa al control de Google TV', fecha='2026-11-23',
+  dict(slug='es/guias/alternativa-a-la-app-google-tv', corto='Alternativa al control de Google TV', fecha='2026-11-23',
     titulo='¿El control de Google TV no funciona? Prueba otra app',
     desc='Si el celular no encuentra tu TV o el control falla, usa Mando TV. Controla Google TV y Android TV por WiFi sin cuenta de Google ni anuncios.',
     h1='Alternativa al control de Google TV en el celular',
@@ -478,19 +478,19 @@ GUIAS += [
       'Opcional: busca "Wake on LAN" o "Encender por red" en la configuración del TV para que la app también pueda encenderlo.',
     ],
     extra=[
-      ('Por qué el control del celular deja de encontrar el TV', 'Lo más común es la red: el celular y el TV están en redes WiFi distintas, hay una VPN activa o una red de invitados los separa. Corrige eso primero, porque afecta a cualquier app de control. Mira [el celular no encuentra el TV](/guias/el-celular-no-encuentra-el-tv/).'),
+      ('Por qué el control del celular deja de encontrar el TV', 'Lo más común es la red: el celular y el TV están en redes WiFi distintas, hay una VPN activa o una red de invitados los separa. Corrige eso primero, porque afecta a cualquier app de control. Mira [el celular no encuentra el TV](/es/guias/el-celular-no-encuentra-el-tv/).'),
       ('Con qué televisores funciona', 'TVs con Google TV y Android TV de Sony, TCL, Hisense, Philips, Sharp, Xiaomi, Toshiba y más, además del Chromecast con Google TV, Google TV Streamer y Nvidia Shield. Todos se emparejan igual, con el código en pantalla, una sola vez.'),
       ('Dónde la app de Google es mejor', 'La app de Google también te ayuda a encontrar qué ver y guarda tu lista de lo que quieres ver. Úsala para eso. Mando TV es solo el control remoto y además controla Samsung, LG, Roku y Fire TV desde la misma app, y desde un PC con Windows.'),
       ('Si ya no está la antigua app de control de Android TV', 'Google movió el control del celular de la antigua app Android TV Remote Control a la app Google TV. Si buscas un control remoto independiente, Mando TV es una opción.'),
       ('Gratis y Pro', 'El control se descarga y usa gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
-    marca=('control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
+    marca=('es/control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
     faq=[
       ('¿Necesito una cuenta de Google para usar Mando TV con Google TV?', 'No. El código en la pantalla del TV es todo lo que se necesita para emparejar.'),
       ('¿Funciona con Chromecast con Google TV?', 'Sí. Se empareja igual, con el código de 6 caracteres en la pantalla.'),
       ('¿Puedo usarlo desde un iPhone?', 'Sí. Mando TV está en la App Store para iPhone y iPad, en Microsoft Store para Windows, y en prueba anticipada gratis en Google Play para Android.'),
     ]),
-  dict(slug='guias/app-control-remoto-para-windows', corto='Control remoto para Windows', fecha='2026-11-23',
+  dict(slug='es/guias/app-control-remoto-para-windows', corto='Control remoto para Windows', fecha='2026-11-23',
     titulo='Control remoto para TV en Windows: usa tu PC | Mando TV',
     desc='Controla tu TV Samsung, LG, Roku, Google TV o Fire TV desde un PC con Windows: atajos de teclado, mini control y conexión por WiFi. En Microsoft Store.',
     h1='Control remoto para TV en Windows',
@@ -506,7 +506,7 @@ GUIAS += [
       ('Atajos de teclado (Pro)', 'Con Pro, el teclado del PC se convierte en el control: flechas para moverse, Enter para OK, Backspace o Esc para volver, más y menos para volumen, M para silenciar y Espacio para pausar.'),
       ('Mini control (Pro)', 'Una ventana pequeña del control que se queda encima de las otras ventanas, así puedes cambiar el volumen o pausar sin dejar lo que estás haciendo.'),
       ('Escribir en el TV desde el PC', 'El teclado en pantalla de un TV es lento. En Mando TV escribes con tu teclado real y el texto va a la búsqueda del TV. Esta parte es gratis.'),
-      ('Más detalles', 'Para la versión paso a paso mira [cómo controlar el TV desde el PC con Windows](/guias/controlar-el-tv-desde-el-pc/). Para usar el celular, mira [cómo conectar el celular al TV por WiFi](/guias/conectar-celular-al-tv-por-wifi/).'),
+      ('Más detalles', 'Para la versión paso a paso mira [cómo controlar el TV desde el PC con Windows](/es/guias/controlar-el-tv-desde-el-pc/). Para usar el celular, mira [cómo conectar el celular al TV por WiFi](/es/guias/conectar-celular-al-tv-por-wifi/).'),
       ('Gratis y Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar entradas y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra. En Windows, Pro se compra a través de Microsoft Store.'),
       ('Comandos de voz desde el PC (Pro)', 'Con Pro puedes hablarle al TV por el micrófono del PC. El reconocimiento de voz se hace en el propio PC: no necesita internet ni cambiar ajustes de Windows. Lo que dices nunca sale del PC y no se guarda. Solo en procesadores muy antiguos la app usa la escritura por voz de Windows, que requiere activar "Reconocimiento de voz en línea" en Configuración > Privacidad y seguridad > Voz y tener tu idioma añadido en Windows.'),
     ],
@@ -517,7 +517,7 @@ GUIAS += [
       ('¿Puedo usar los parlantes del PC o la pantalla para ver el TV?', 'No. Mando TV es solo un control remoto. No muestra ni transmite la imagen del TV en el PC.'),
       ('¿Por qué no funciona la voz en mi PC con Windows?', 'La voz es una función Pro, así que revisa que Pro esté activo y que el micrófono del PC funcione. En la mayoría de los PC el reconocimiento se hace en el propio PC, sin internet. Solo en procesadores muy antiguos la app usa la escritura por voz de Windows: entonces activa "Reconocimiento de voz en línea" en Configuración > Privacidad y seguridad > Voz y añade tu idioma en Configuración > Hora e idioma.'),
     ]),
-  dict(slug='guias/app-control-remoto-para-iphone', corto='Control remoto para iPhone', fecha='2026-11-23',
+  dict(slug='es/guias/app-control-remoto-para-iphone', corto='Control remoto para iPhone', fecha='2026-11-23',
     titulo='App de control remoto para iPhone: Samsung, LG, Roku',
     desc='Usa tu iPhone como control remoto por WiFi para Samsung, LG, Roku, Google TV y Fire TV. Gratis en la App Store, sin cuenta ni anuncios.',
     h1='Control remoto en el iPhone para todos tus televisores',
@@ -530,7 +530,7 @@ GUIAS += [
       'Usa los botones, el volumen y el teclado. Ya estás conectado.',
     ],
     extra=[
-      ('Funciona con estos televisores', 'LG webOS, Samsung Tizen (2016 en adelante), Roku TV y reproductores Roku, Google TV y Android TV, y Fire TV. Las páginas de cada marca son [Samsung](/control-remoto-samsung/), [LG](/control-remoto-lg/), [Roku](/control-remoto-roku/) y [Android TV](/control-remoto-android-tv/).'),
+      ('Funciona con estos televisores', 'LG webOS, Samsung Tizen (2016 en adelante), Roku TV y reproductores Roku, Google TV y Android TV, y Fire TV. Las páginas de cada marca son [Samsung](/es/control-remoto-samsung/), [LG](/es/control-remoto-lg/), [Roku](/es/control-remoto-roku/) y [Android TV](/es/control-remoto-android-tv/).'),
       ('Por qué pide acceso a la red local', 'El iPhone no deja que las apps vean los aparatos de tu red WiFi si no le das permiso. Si el TV no aparece en la lista, abre Ajustes > Mando TV y activa Red local. La app solo se comunica con tu TV dentro de la red de tu casa.'),
       ('Por qué una app para iPhone y no la del fabricante', 'Cada marca de TV tiene su propia app y cada una quiere su propio registro o cuenta. Mando TV es una sola app para todas, sin necesidad de cuenta.'),
       ('Gratis y Pro en iPhone', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar entradas y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra, y se compra dentro de la app.'),
@@ -541,7 +541,7 @@ GUIAS += [
       ('¿Funciona en iPad?', 'Sí. La misma app funciona en iPhone y iPad.'),
       ('¿Una app de control remoto para iPhone necesita Bluetooth o infrarrojo?', 'No en iPhone. Los iPhone no tienen emisor infrarrojo, por lo que el control infrarrojo no está disponible allí, y la opción de Bluetooth solo es para Android 9 o más reciente, no para iPhone. En el iPhone, Mando TV controla los Smart TV y Apple TV (en beta) a través del WiFi de tu casa.'),
     ]),
-  dict(slug='guias/control-remoto-fire-tv-en-el-celular', corto='Control remoto para Fire TV', fecha='2026-11-23',
+  dict(slug='es/guias/control-remoto-fire-tv-en-el-celular', corto='Control remoto para Fire TV', fecha='2026-11-23',
     titulo='Control remoto para Fire TV en el celular y el PC',
     desc='Usa el celular o el PC como control de un Fire TV Stick, Fire TV Cube o TV con Fire TV, por WiFi y con un PIN de 4 dígitos. Sin la app de Amazon.',
     h1='Control remoto para Fire TV desde tu celular o PC',
@@ -556,8 +556,8 @@ GUIAS += [
     extra=[
       ('Dispositivos Fire TV compatibles', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube y televisores con Fire TV integrado. El soporte es nuevo y las pruebas en dispositivos reales son limitadas. Si algo no funciona como debe, escríbenos tu modelo desde la página de Ayuda.'),
       ('Cómo encender un Fire TV', 'Mando TV no enciende el Fire TV a través de la red. Enciende el televisor con su botón físico: un Fire TV Stick o Cube conectado a él suele encenderse junto con el TV gracias a HDMI-CEC, y en un televisor con Fire TV integrado, el TV es el propio Fire TV. Luego controla todo desde tu celular.'),
-      ('Si tu Fire TV no aparece', 'Asegúrate de que ambos dispositivos estén en la misma red WiFi y de que el Fire TV esté encendido. En un iPhone, permite "Red local" para Mando TV en Ajustes. Mira [el celular no encuentra el TV](/guias/el-celular-no-encuentra-el-tv/).'),
-      ('¿No tienes ningún control?', 'Necesitas que la pantalla del Fire TV muestre el PIN, por lo que el televisor y el Fire TV deben estar encendidos y mostrando imagen. Si el TV está en una entrada incorrecta, cámbiala con los botones físicos del televisor. Mira [cambiar la entrada HDMI sin control](/guias/cambiar-entrada-hdmi-sin-control/).'),
+      ('Si tu Fire TV no aparece', 'Asegúrate de que ambos dispositivos estén en la misma red WiFi y de que el Fire TV esté encendido. En un iPhone, permite "Red local" para Mando TV en Ajustes. Mira [el celular no encuentra el TV](/es/guias/el-celular-no-encuentra-el-tv/).'),
+      ('¿No tienes ningún control?', 'Necesitas que la pantalla del Fire TV muestre el PIN, por lo que el televisor y el Fire TV deben estar encendidos y mostrando imagen. Si el TV está en una entrada incorrecta, cámbiala con los botones físicos del televisor. Mira [cambiar la entrada HDMI sin control](/es/guias/cambiar-entrada-hdmi-sin-control/).'),
       ('Qué es gratis y qué es Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar entradas y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
     marca=None,
@@ -566,14 +566,14 @@ GUIAS += [
       ('¿Funciona con televisores con Fire TV y con Fire TV Stick?', 'Sí, para eso está diseñado. El soporte es nuevo; mantén la app actualizada y avísanos si algún modelo no funciona correctamente.'),
       ('¿Por qué necesito un PIN?', 'El Fire TV muestra un PIN de 4 dígitos para demostrar que estás frente al televisor. Nadie puede emparejarse sin ver la pantalla.'),
     ]),
-  dict(slug='guias/perdi-el-control-del-fire-tv', corto='Perdí el control del Fire TV', fecha='2026-11-23',
+  dict(slug='es/guias/perdi-el-control-del-fire-tv', corto='Perdí el control del Fire TV', fecha='2026-11-23',
     titulo='¿Perdiste el control del Fire TV? Usa tu celular',
     desc='¿Perdiste el control de tu Fire TV Stick? Contrólalo desde el celular por WiFi con un PIN de 4 dígitos. Soluciones para cambiar de red y HDMI-CEC.',
     h1='¿Perdiste el control del Fire TV? Usa tu celular',
     intro='Si perdiste o se dañó el control de tu Fire TV Stick, Fire TV Cube o Smart TV con Fire TV, puedes usar tu celular siempre que el dispositivo siga conectado a tu WiFi. El emparejamiento usa un PIN de 4 dígitos que aparece en la pantalla del TV, así que no necesitas el control antiguo para esto.',
     pasos=[
       'Enciende el TV con su botón físico. Un Fire TV Stick o Cube enchufado suele encenderse junto con él; si tienes HDMI-CEC activado, el TV a veces cambia solo a esa entrada.',
-      'Si el TV muestra otra entrada, cámbiala con el botón de entradas del TV. Mira [cambiar la entrada HDMI sin control](/guias/cambiar-entrada-hdmi-sin-control/).',
+      'Si el TV muestra otra entrada, cámbiala con el botón de entradas del TV. Mira [cambiar la entrada HDMI sin control](/es/guias/cambiar-entrada-hdmi-sin-control/).',
       'Conecta tu celular a la misma red WiFi que el Fire TV.',
       'Descarga y abre Mando TV. Tu Fire TV aparece en la lista. Tócalo.',
       'El TV muestra un PIN de 4 dígitos. Escríbelo en Mando TV. Solo se hace una vez.',
@@ -584,16 +584,16 @@ GUIAS += [
       ('Si te mudaste o cambiaste el WiFi', 'Sin control no puedes escribir la nueva contraseña del WiFi en el Fire TV, pero hay una salida: desde otro celular, crea un punto de acceso con exactamente el mismo nombre y contraseña que tu WiFi anterior. El Fire TV se conecta solo. Conecta el celular con Mando TV a ese punto de acceso, empareja con el PIN, luego ve a Configuración > Red en el Fire TV y elige tu nuevo WiFi. Por último, conecta también el celular a la red nueva.'),
       ('Emparejar un control de repuesto', 'La mayoría de los controles nuevos de Fire TV se emparejan al mantener presionado el botón Inicio unos 10 segundos cerca del Fire TV. Si no se empareja, en Configuración entra al menú de controles y dispositivos Bluetooth ("Controllers & Bluetooth Devices") y elige agregar un control nuevo de Amazon Fire TV. Puedes llegar a ese menú desde tu celular con Mando TV.'),
       ('Fire TV integrado en el TV', 'En TVs con Fire TV integrado, los mismos pasos funcionan porque el TV es el Fire TV.'),
-      ('Antes de empezar', 'El soporte para Fire TV llegó recientemente a Mando TV, así que actualiza la app primero. Si tu modelo no se comporta bien, escríbenos desde la [página de ayuda](/soporte.html) e incluye el nombre del modelo.'),
+      ('Antes de empezar', 'El soporte para Fire TV llegó recientemente a Mando TV, así que actualiza la app primero. Si tu modelo no se comporta bien, escríbenos desde la [página de ayuda](/es/soporte.html) e incluye el nombre del modelo.'),
       ('Gratis y Pro', 'El control es gratis para descargar y usar, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para extras.'),
     ],
-    marca=('guias/control-remoto-fire-tv-en-el-celular', 'Control remoto para Fire TV desde tu celular o PC'),
+    marca=('es/guias/control-remoto-fire-tv-en-el-celular', 'Control remoto para Fire TV desde tu celular o PC'),
     faq=[
       ('¿Puedo controlar un Fire TV Stick con el celular sin el control?', 'Sí, si el Fire TV está encendido y conectado a tu WiFi. Mando TV se empareja con el PIN de 4 dígitos que muestra el TV, así que no necesitas el control antiguo en ningún momento.'),
       ('¿Funciona si el Fire TV está en una nueva red WiFi?', 'No directamente, porque el celular y el Fire TV deben estar en la misma red. Primero debes volver a conectar el Fire TV con el truco del punto de acceso descrito en esta guía.'),
       ('¿Necesito la app Amazon Fire TV o una cuenta de Amazon en mi celular?', 'No. Mando TV se conecta al Fire TV por tu red local usando el PIN y no requiere ninguna cuenta.'),
     ]),
-  dict(slug='guias/encender-el-tv-sin-control', corto='Encender el TV sin control', fecha='2026-11-23',
+  dict(slug='es/guias/encender-el-tv-sin-control', corto='Encender el TV sin control', fecha='2026-11-23',
     titulo='Cómo encender el TV sin control (todas las marcas)',
     desc='Aprende a encender tu TV sin control: dónde está el botón en Samsung, LG, TCL, Hisense y Sony, más HDMI-CEC y trucos desde el celular.',
     h1='Cómo encender el TV sin el control remoto',
@@ -607,8 +607,8 @@ GUIAS += [
     ],
     extra=[
       ('Dónde está el botón de encendido por marca', 'Samsung: un botón o joystick bajo el centro de la pantalla, o atrás en una esquina inferior. LG: un joystick debajo del logo LG en la mayoría de los modelos. TCL y Hisense: usualmente un botón pequeño debajo del centro de la pantalla o atrás cerca de una esquina inferior. Sony: atrás o en un borde lateral, cerca de abajo. Las ubicaciones cambian por modelo; si no lo encuentras, busca el manual con el número de modelo en la etiqueta trasera.'),
-      ('Encender el TV desde una consola o reproductor de streaming (HDMI-CEC)', 'Con HDMI-CEC activado, encender una PlayStation, una Xbox, un reproductor Roku, un Fire TV Stick o un Chromecast también enciende el TV y cambia a la entrada correcta. Cada marca llama al ajuste con su propio nombre: Anynet+ en Samsung, SIMPLINK en LG, BRAVIA Sync en Sony, y CEC en la mayoría de los demás. Más detalles en [encender el TV y pasar al HDMI de la consola](/guias/encender-tv-y-hdmi-de-la-consola-sin-control/).'),
-      ('Encender el TV desde tu celular', 'Los Smart TV pueden encenderse por WiFi si lo permites una vez, y luego Mando TV los enciende desde tu celular. En Samsung, activa "Encender con dispositivo móvil" en Configuración > General > Red > Configuración experta. En LG, activa "Encender TV con móvil" ([paso a paso](/guias/encender-tv-lg-con-el-celular/)). En un Roku TV, activa "Inicio rápido de TV" en Configuración > Sistema > Energía. En Google TV y Android TV, busca Wake on LAN o "Encender por red", si tu modelo lo tiene. Esto se hace una sola vez, con el TV encendido.'),
+      ('Encender el TV desde una consola o reproductor de streaming (HDMI-CEC)', 'Con HDMI-CEC activado, encender una PlayStation, una Xbox, un reproductor Roku, un Fire TV Stick o un Chromecast también enciende el TV y cambia a la entrada correcta. Cada marca llama al ajuste con su propio nombre: Anynet+ en Samsung, SIMPLINK en LG, BRAVIA Sync en Sony, y CEC en la mayoría de los demás. Más detalles en [encender el TV y pasar al HDMI de la consola](/es/guias/encender-tv-y-hdmi-de-la-consola-sin-control/).'),
+      ('Encender el TV desde tu celular', 'Los Smart TV pueden encenderse por WiFi si lo permites una vez, y luego Mando TV los enciende desde tu celular. En Samsung, activa "Encender con dispositivo móvil" en Configuración > General > Red > Configuración experta. En LG, activa "Encender TV con móvil" ([paso a paso](/es/guias/encender-tv-lg-con-el-celular/)). En un Roku TV, activa "Inicio rápido de TV" en Configuración > Sistema > Energía. En Google TV y Android TV, busca Wake on LAN o "Encender por red", si tu modelo lo tiene. Esto se hace una sola vez, con el TV encendido.'),
       ('Si no encuentras ningún botón', 'Algunos televisores recientes esconden tanto el único botón que parece que no hay ninguno. Busca un pequeño relieve o un área de sensor de luz debajo de la pantalla: el botón suele estar justo al lado. Por WiFi, Mando TV necesita que el TV haya estado encendido y conectado una vez. La excepción es el infrarrojo: en un celular Android con emisor infrarrojo, Mando TV puede encender un TV que nunca se configuró, siempre que apuntes el celular al TV. El infrarrojo es nuevo y funciona con las marcas que están en la lista de códigos de la app.'),
       ('Gratis y Pro', 'El control se descarga y se usa gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
@@ -619,7 +619,7 @@ GUIAS += [
       ('¿Cómo enciendo un Roku TV sin el control?', 'Usa el botón del TV, usualmente bajo el centro o atrás. Luego activa "Inicio rápido de TV" en Configuración > Sistema > Energía para que Mando TV lo encienda desde tu celular.'),
       ('¿Por qué mi TV se enciende solo cuando enciendo la consola?', 'Eso es HDMI-CEC. Es útil, y puedes desactivarlo en la configuración del TV si lo prefieres.'),
     ]),
-  dict(slug='guias/control-remoto-sony', corto='Control remoto Sony', fecha='2026-11-23',
+  dict(slug='es/guias/control-remoto-sony', corto='Control remoto Sony', fecha='2026-11-23',
     titulo='Control remoto para TV Sony en el celular y el PC',
     desc='Controla tu TV Sony Bravia con Google TV o Android TV desde el celular por WiFi. Y en beta, los Bravia de 2013 a 2015 sin Android.',
     h1='Control remoto para tu TV Sony desde el celular',
@@ -633,18 +633,18 @@ GUIAS += [
     ],
     extra=[
       ('Encender un Sony desde el celular', 'Los Sony con Google TV y Android TV se pueden encender por la red si está activado "Inicio remoto". Suele estar en Configuración > Red e Internet > Inicio remoto, aunque la ruta cambia ligeramente según el modelo. Luego toca el TV en Mando TV mientras está apagado y la app lo enciende.'),
-      ('Dónde está el botón de encendido en un Sony', 'En la mayoría de los Bravia está atrás, cerca del borde inferior izquierdo o derecho, o en un borde lateral. Una pulsación corta enciende el TV. Más en [cómo encender un TV sin el control](/guias/encender-el-tv-sin-control/).'),
+      ('Dónde está el botón de encendido en un Sony', 'En la mayoría de los Bravia está atrás, cerca del borde inferior izquierdo o derecho, o en un borde lateral. Una pulsación corta enciende el TV. Más en [cómo encender un TV sin el control](/es/guias/encender-el-tv-sin-control/).'),
       ('Sony antiguos', 'Los Sony Bravia de 2013 a 2015 que no usan Android tienen soporte beta en Mando TV. Es nuevo, así que aún puede tener detalles por pulir. El TV muestra un PIN de 4 dígitos para escribir en la app. Otros Sony sin Google TV o Android TV no están cubiertos hoy.'),
       ('Gratis y Pro', 'El control se descarga y se usa gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
-    marca=('control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
+    marca=('es/control-remoto-android-tv', 'Control remoto para Android TV y Google TV'),
     faq=[
       ('¿Mando TV funciona con los TV Sony Bravia?', 'Sí, con los que usan Google TV o Android TV, que son la mayoría de los Smart TV Sony desde 2015.'),
       ('¿Necesito una app de Sony o cuenta de Google?', 'No. Mando TV se empareja con el código en pantalla y no pide cuenta.'),
       ('¿Funciona con Bravia antiguos sin Android?', 'En beta, sí, en modelos de 2013 a 2015 sin Android. Se empareja con un PIN de 4 dígitos que muestra el TV.'),
       ('¿Puedo escribir en mi Sony desde el celular?', 'Sí. El teclado es gratis y escribe en YouTube, Netflix y la caja de búsqueda del TV.'),
     ]),
-  dict(slug='guias/control-remoto-tcl', corto='Control remoto TCL', fecha='2026-11-23',
+  dict(slug='es/guias/control-remoto-tcl', corto='Control remoto TCL', fecha='2026-11-23',
     titulo='Control remoto TCL para iPhone, Android y PC | Mando TV',
     desc='¿Perdiste el control de tu TV TCL? La mayoría usa Roku TV o Google TV. Usa Mando TV por WiFi desde tu celular. Gratis, sin cuenta ni anuncios.',
     h1='Control remoto TCL para tu celular',
@@ -658,8 +658,8 @@ GUIAS += [
     ],
     extra=[
       ('Encender un TCL desde el celular', 'En TCL con Roku TV, activa "Inicio rápido de TV" en Configuración > Sistema > Energía. En TCL con Google TV, busca una opción como Wake on LAN, "Encender por red" o inicio remoto en la configuración de red o energía. Algunos modelos no la ofrecen. En ese caso, enciende el TV con el botón físico, casi siempre abajo al centro o atrás.'),
-      ('Si tu TCL no aparece', 'Revisa que el celular y el TV estén en la misma red WiFi. Los routers con redes separadas de 2.4 GHz y 5 GHz pueden ocultar dispositivos. En un iPhone, permite "Red local" para Mando TV en Ajustes. También puedes agregar el TV escribiendo su dirección IP. Mira [el celular no encuentra el TV](/guias/el-celular-no-encuentra-el-tv/).'),
-      ('Más detalles para tu TCL', 'Para un TCL con Roku TV, mira [control remoto para Roku](/control-remoto-roku/). Para un TCL con Google TV o Android TV, mira [control remoto para Android TV](/control-remoto-android-tv/).'),
+      ('Si tu TCL no aparece', 'Revisa que el celular y el TV estén en la misma red WiFi. Los routers con redes separadas de 2.4 GHz y 5 GHz pueden ocultar dispositivos. En un iPhone, permite "Red local" para Mando TV en Ajustes. También puedes agregar el TV escribiendo su dirección IP. Mira [el celular no encuentra el TV](/es/guias/el-celular-no-encuentra-el-tv/).'),
+      ('Más detalles para tu TCL', 'Para un TCL con Roku TV, mira [control remoto para Roku](/es/control-remoto-roku/). Para un TCL con Google TV o Android TV, mira [control remoto para Android TV](/es/control-remoto-android-tv/).'),
       ('Gratis y Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar entradas y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
     ],
     marca=None,
@@ -668,7 +668,7 @@ GUIAS += [
       ('¿Necesito la app TCL o una cuenta?', 'No. Mando TV se conecta directo por tu WiFi y no pide ninguna cuenta.'),
       ('Mi TCL pide un código. ¿Dónde está?', 'Los modelos TCL con Google TV y Android TV muestran un código de 6 caracteres en la pantalla. Escríbelo en Mando TV tal como aparece. El TCL con Roku TV no pide código.'),
     ]),
-  dict(slug='guias/control-remoto-hisense', corto='Control remoto Hisense', fecha='2026-11-23',
+  dict(slug='es/guias/control-remoto-hisense', corto='Control remoto Hisense', fecha='2026-11-23',
     titulo='Control remoto Hisense: qué funciona desde el celular',
     desc='Mando TV controla los TV Hisense con VIDAA, Roku TV, Google TV o Fire TV desde tu celular por WiFi. Guía honesta de lo que funciona y cómo.',
     h1='Control remoto Hisense en el celular: qué funciona y qué no',
@@ -681,8 +681,8 @@ GUIAS += [
       'Usa las flechas, OK, Atrás, Inicio, volumen y teclado desde tu celular.',
     ],
     extra=[
-      ('Hisense con Roku TV o Google TV', 'Estos funcionan igual que cualquier otro Roku o Google TV. Mira [control remoto para Roku](/control-remoto-roku/) y [control remoto para Android TV](/control-remoto-android-tv/) para los detalles de cada uno.'),
-      ('Hisense con Fire TV', 'El soporte para Fire TV es nuevo en Mando TV. Actualiza la app a la última versión desde tu tienda y lee la [control remoto para Fire TV](/guias/control-remoto-fire-tv-en-el-celular/) para ver cómo funciona el emparejamiento por PIN. Si algo no se comporta bien, escríbenos desde la página de Ayuda y menciona tu modelo.'),
+      ('Hisense con Roku TV o Google TV', 'Estos funcionan igual que cualquier otro Roku o Google TV. Mira [control remoto para Roku](/es/control-remoto-roku/) y [control remoto para Android TV](/es/control-remoto-android-tv/) para los detalles de cada uno.'),
+      ('Hisense con Fire TV', 'El soporte para Fire TV es nuevo en Mando TV. Actualiza la app a la última versión desde tu tienda y lee la [control remoto para Fire TV](/es/guias/control-remoto-fire-tv-en-el-celular/) para ver cómo funciona el emparejamiento por PIN. Si algo no se comporta bien, escríbenos desde la página de Ayuda y menciona tu modelo.'),
       ('Hisense con VIDAA', 'La mayoría de los modelos VIDAA funcionan: botones, volumen, teclado, apps y entradas. Algunos modelos recientes de VIDAA solo aceptan la app oficial de Hisense. Mando TV lo detecta al conectar y te lo dice claramente, en lugar de fallar sin avisar. En ese caso, usa la app de Hisense para tu modelo, los botones del TV o el control original.'),
       ('Encender un Hisense desde el celular', 'En Hisense con Roku TV, activa "Inicio rápido de TV" en Configuración > Sistema > Energía. En Google TV, busca una opción de Wake on LAN o "Encender por red". Si no existe, usa el botón de encendido del TV.'),
       ('Gratis y Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, números, teclado, abrir apps, cambiar entradas y encender o apagar son gratis, sin anuncios ni suscripción. Mando TV Pro es un pago único opcional para funciones extra.'),
@@ -693,7 +693,7 @@ GUIAS += [
       ('¿Cómo sé si mi Hisense es Roku TV, Google TV o Fire TV?', 'Mira la pantalla de inicio. Roku TV tiene una cuadrícula simple de canales y un logo de Roku al iniciar. Google TV muestra filas de recomendaciones. Fire TV tiene la pantalla de inicio de Amazon Fire TV. El nombre del modelo en Configuración > Acerca de también te lo indica.'),
       ('¿Necesito una cuenta de Hisense o Google?', 'No. Mando TV se conecta directo por tu WiFi y no pide ninguna cuenta.'),
     ]),
-  dict(slug='guias/control-remoto-philips', corto='Control remoto Philips', fecha='2026-11-23',
+  dict(slug='es/guias/control-remoto-philips', corto='Control remoto Philips', fecha='2026-11-23',
     titulo='Control remoto Philips: Roku TV, Google TV y Android TV',
     desc='Usa tu celular como control de tu TV Philips por WiFi. Funciona con modelos Roku TV, Google TV y Android TV. Y una nota honesta sobre Titan OS.',
     h1='Control remoto para tu TV Philips desde el celular',
@@ -706,8 +706,8 @@ GUIAS += [
       'Usa las flechas, OK, Atrás, Inicio, volumen y teclado.',
     ],
     extra=[
-      ('Philips con Roku TV', 'Funciona como cualquier Roku TV. Para encenderlo desde el celular, activa "Inicio rápido de TV" en Configuración > Sistema > Energía. Más detalles en [control remoto para Roku](/control-remoto-roku/).'),
-      ('Philips con Google TV o Android TV', 'Incluye muchos modelos con Ambilight. Se emparejan con el código que aparece en la pantalla. Para encenderlo desde el celular, busca "Wake on LAN" o "Encender por red" en los ajustes de red o energía. Algunos modelos no lo tienen. Más detalles en [control remoto para Android TV](/control-remoto-android-tv/).'),
+      ('Philips con Roku TV', 'Funciona como cualquier Roku TV. Para encenderlo desde el celular, activa "Inicio rápido de TV" en Configuración > Sistema > Energía. Más detalles en [control remoto para Roku](/es/control-remoto-roku/).'),
+      ('Philips con Google TV o Android TV', 'Incluye muchos modelos con Ambilight. Se emparejan con el código que aparece en la pantalla. Para encenderlo desde el celular, busca "Wake on LAN" o "Encender por red" en los ajustes de red o energía. Algunos modelos no lo tienen. Más detalles en [control remoto para Android TV](/es/control-remoto-android-tv/).'),
       ('Philips antiguos sin Android', 'Los TVs Philips de 2011 a 2015 que no usan Android tienen soporte beta en Mando TV. Es nuevo y no requiere código de emparejamiento.'),
       ('Philips con Titan OS', 'Titan OS es un sistema diferente que Mando TV no controla hoy, y preferimos decirlo claro. Los modelos Philips nuevos sin Android tampoco están cubiertos.'),
       ('Gratis y Pro', 'El control se descarga y usa gratis, sin anuncios ni suscripción. Mando TV Pro es una pago único opcional para funciones extra.'),
@@ -737,16 +737,16 @@ GUIAS_PIE = [
   ('android-tv-sin-control-remoto', 'Android TV sin control remoto'),
 ]
 MARCAS_PIE = [
-  ('control-remoto-samsung', 'Control remoto Samsung'),
-  ('control-remoto-lg', 'Control remoto LG'),
-  ('control-remoto-roku', 'Control remoto Roku'),
-  ('control-remoto-android-tv', 'Control remoto Android TV'),
+  ('es/control-remoto-samsung', 'Control remoto Samsung'),
+  ('es/control-remoto-lg', 'Control remoto LG'),
+  ('es/control-remoto-roku', 'Control remoto Roku'),
+  ('es/control-remoto-android-tv', 'Control remoto Android TV'),
 ]
 
 def pie_marcas():
     li = [f'        <li><a href="/{s}/">{n}</a></li>' for s, n in MARCAS_PIE]
-    li.append('        <li><a href="/guias/">Todas las guías</a></li>')
-    li += [f'        <li><a href="/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
+    li.append('        <li><a href="/es/guias/">Todas las guías</a></li>')
+    li += [f'        <li><a href="/es/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
     return '      <ul class="marcas-enlaces pie-marcas" aria-label="Marcas y guías">\n' + '\n'.join(li) + '\n      </ul>\n'
 
 LOGO = '<img src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="34" height="34">'
@@ -810,7 +810,7 @@ def pagina(g):
       howto(g["h1"], g["desc"], "es", g["pasos"]),
       {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL + "/es/"},
-        {"@type": "ListItem", "position": 2, "name": "Guías", "item": URL + "/guias/"},
+        {"@type": "ListItem", "position": 2, "name": "Guías", "item": URL + "/es/guias/"},
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
@@ -863,11 +863,11 @@ def pagina(g):
         </a>
         <nav aria-label="Principal">
           <a href="/es/#funciones">Qué hace</a>
-          <a href="/soporte.html">Ayuda</a>
+          <a href="/es/soporte.html">Ayuda</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
         </nav>
       </header>
-      <nav class="migas" aria-label="Ruta"><a href="/es/">Inicio</a> / <a href="/guias/">Guías</a> / <span>{e(g["corto"])}</span></nav>
+      <nav class="migas" aria-label="Ruta"><a href="/es/">Inicio</a> / <a href="/es/guias/">Guías</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{intro}</p>
       <div class="acciones">
@@ -904,8 +904,8 @@ def pagina(g):
       <h2 id="otras">Otras guías</h2>
       <ul>
 {otras(g)}
-        <li><a href="/guias/">Todas las guías</a></li>
-        <li><a href="/soporte.html">Ayuda y soporte</a></li>
+        <li><a href="/es/guias/">Todas las guías</a></li>
+        <li><a href="/es/soporte.html">Ayuda y soporte</a></li>
       </ul>
     </div>
   </main>
@@ -915,8 +915,8 @@ def pagina(g):
       <div class="pie-enlaces">
         <nav aria-label="Pie de página">
           <a href="/es/">Inicio</a>
-          <a href="/soporte.html">Ayuda</a>
-          <a href="/privacidad.html">Privacidad</a>
+          <a href="/es/soporte.html">Ayuda</a>
+          <a href="/es/privacidad.html">Privacidad</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
           <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
         </nav>
@@ -936,7 +936,7 @@ def pagina(g):
 
 def indice():
     e = html.escape
-    url = f'{URL}/guias/'
+    url = f'{URL}/es/guias/'
     titulo = 'Guías para controlar tu TV con el celular | Mando TV'
     desc = 'Guías paso a paso para usar tu celular o PC como control remoto del TV: encender el TV, conectar por WiFi y resolver problemas en Samsung, LG y Roku.'
     ld = {"@context": "https://schema.org", "@graph": [
@@ -984,7 +984,7 @@ def indice():
         </a>
         <nav aria-label="Principal">
           <a href="/es/#funciones">Qué hace</a>
-          <a href="/soporte.html">Ayuda</a>
+          <a href="/es/soporte.html">Ayuda</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hola%20Mando%20TV">Contacto</a>
         </nav>
       </header>
@@ -1004,7 +1004,7 @@ def indice():
       <h2 id="marcas">Control remoto por marca</h2>
       <ul>
 {chr(10).join(f'        <li><a href="/{s}/">{e(n)}</a></li>' for s, n in MARCAS_ENLACES)}
-        <li><a href="/soporte.html">Ayuda y soporte</a></li>
+        <li><a href="/es/soporte.html">Ayuda y soporte</a></li>
       </ul>
     </div>
   </main>
@@ -1014,8 +1014,8 @@ def indice():
       <div class="pie-enlaces">
         <nav aria-label="Pie de página">
           <a href="/es/">Inicio</a>
-          <a href="/soporte.html">Ayuda</a>
-          <a href="/privacidad.html">Privacidad</a>
+          <a href="/es/soporte.html">Ayuda</a>
+          <a href="/es/privacidad.html">Privacidad</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
           <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
         </nav>
@@ -1033,8 +1033,8 @@ def indice():
 </html>
 """
 
-os.makedirs(os.path.join(SITIO, 'guias'), exist_ok=True)
-open(os.path.join(SITIO, 'guias', 'index.html'), 'w', encoding='utf-8', newline='\n').write(indice())
+os.makedirs(os.path.join(SITIO, "es", "guias"), exist_ok=True)
+open(os.path.join(SITIO, "es", "guias", "index.html"), 'w', encoding='utf-8', newline='\n').write(indice())
 print('ok guias/ (índice)')
 
 for g in GUIAS:
@@ -1045,7 +1045,7 @@ for g in GUIAS:
 
 
 # ---------------------------------------------------------------------------------------------------------------
-# Versiones en otros idiomas de la guía de la consola (2026-11-17): /en/guides/... (las demás: generar_idiomas.py)
+# Versiones en otros idiomas de la guía de la consola (2026-11-17): /guides/... (las demás: generar_idiomas.py)
 # Textos escritos para cada idioma (no son traducción literal). hreflang de idiomas_sitio.py.
 # ---------------------------------------------------------------------------------------------------------------
 GPLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924z"/><path fill="#ffce00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00f076" d="M13.544 10.989l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973z"/><path fill="#ff3a44" d="M13.544 13.056l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>'
@@ -1066,7 +1066,7 @@ UI = {
 }
 
 I18N = [
-  dict(idioma='en', slug='en/guides/turn-on-tv-console-hdmi-without-remote', corto='TV and console without a remote', fecha='2026-11-17',
+  dict(idioma='en', slug='guides/turn-on-tv-console-hdmi-without-remote', corto='TV and console without a remote', fecha='2026-11-17',
     titulo='No TV Remote? Turn On the TV and Switch to Console HDMI',
     desc='Launch day and no TV remote? Turn on your TV and switch to your PS5 or Xbox HDMI input from your phone. Free, no ads.',
     h1="How to turn on the TV and switch to your console's HDMI without the remote",
@@ -1151,7 +1151,7 @@ def pagina_idioma(g):
           Mando TV
         </a>
         <nav aria-label="{u["principal"]}">
-          <a href="/soporte.html">{u["ayuda"]}</a>
+          <a href="{idiomas_sitio.ruta('soporte', g['idioma'])}">{u["ayuda"]}</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hello%20Mando%20TV">{u["contacto"]}</a>
         </nav>
       </header>
@@ -1200,8 +1200,8 @@ def pagina_idioma(g):
       <div class="pie-enlaces">
         <nav aria-label="{u["pie"]}">
           <a href="/">{u["inicio"]}</a>
-          <a href="/soporte.html">{u["ayuda"]}</a>
-          <a href="/privacidad.html">{u["privacidad"]}</a>
+          <a href="{idiomas_sitio.ruta('soporte', g['idioma'])}">{u["ayuda"]}</a>
+          <a href="{idiomas_sitio.ruta('privacidad', g['idioma'])}">{u["privacidad"]}</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
           <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
         </nav>

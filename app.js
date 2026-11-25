@@ -9,7 +9,7 @@
     roku: { color: '#a77bff', color2: '#ff7be5', tv: 'Roku', nota: 'Roku: televisores y reproductores, sin emparejar nada.' },
     android: { color: '#2fbf8f', color2: '#c4f04f', tv: 'Google TV', nota: 'Google TV y Android TV (Sony, TCL, Philips, Xiaomi y más): escribes el código que muestra la pantalla.' }
   };
-  // Textos en español (página raíz). Las páginas en otros idiomas (/en/, /de/, /fr/, /pt/, /it/) toman los suyos de
+  // Textos en español (/es/ y páginas sin idioma propio). Las páginas en otros idiomas (/, /de/, /fr/, /pt/, /it/) toman los suyos de
   // TEXTOS según <html lang>.
   var ES = {
     mac: 'Descargar gratis para Mac', ipad: 'Descargar gratis para iPad', iphone: 'Descargar gratis para iPhone', windows: 'Descargar gratis para Windows',
