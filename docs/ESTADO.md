@@ -1,5 +1,53 @@
 # Estado de la web mandotv.app
 
+## 25-nov: web en 30 idiomas e idioma recordado (EN CURSO, rama `web-idiomas-30`, carpeta `mandotv-web-idiomas`)
+
+Pedido del fundador: traducir la web a los 24 idiomas que la app ya tiene (hoy 6), y que el idioma elegido se
+recuerde (antes el aviso salía una vez y después no dejaba cambiar). Decisión del panel: recordar la elección (pie,
+barra, aviso o cerrar el aviso) y, al volver desde fuera, llevar a la gemela en ese idioma (script del `<head>`,
+`herramientas/idioma_guardado.py`, corre en el pre-commit) + botón de idioma (globo) en la barra. Commits `a1f5d6e6`
+(idioma recordado) y `cc0f16d0` (base 30 idiomas, sección Casa de la privacidad en de/fr). Proceso y reglas en
+`docs/AGREGAR-IDIOMA.md`; revisor `herramientas/revisar_idioma.py <k>`.
+- 25 agentes Sonnet en segundo plano: 1 hace las tablas cortas (app.js, cookies.js, correo.js y
+  `herramientas/textos_idiomas.json`); 24 traducen cada idioma (rutas, datos, portada).
+- Falta al juntar: sumar a `LISTOS` los que den 0 errores, correr generadores y scripts, imágenes social-<k>.png,
+  `:lang(vi)` con fuente del sistema, revisar RTL (ar, he), llms.txt, comparación lado a lado y OK del fundador,
+  publicar, IndexNow, Search Console y Bing.
+### Avance 25-nov (sesión de retoma, tras cortarse los 25 agentes)
+
+Recuento real hecho con el revisor idioma por idioma (no con la lista de memoria):
+- 0 errores ya: `da`, `nl`, `nb`, `sv`, `zh-hant`, `fi`.
+- `ja`: 0 errores pero 1 aviso (298 textos en la portada contra 299 del alemán); hay que revisarlo.
+- Solo faltaba la portada `index.html` (rutas y datos correctos): `id`, `cs`, `sk`, `he`, `ar`, `ko`, `zh`.
+- `pl` y `tr`: las partes `_parte_<k>_NN.py` concatenadas en orden daban exactamente la estructura del alemán
+  (1056 líneas, mismos marcadores). Se armaron `datos_pl.py` y `datos_tr.py` con `cat`; quedó solo la portada.
+- `ro`: `datos_ro.py` cortado en 666 líneas (falta el bloque final `GUIAS += [...]` y `OTRAS_GUIAS += [...]` del
+  alemán, líneas 671-1056). Hay una parte traducida en `_parte_ro_05.py`. La portada ya existe.
+- `ms` (partes = 666 líneas), `hu` (988), `el` (913): falta completar el bloque final y la portada; `el` además no
+  tenía rutas.
+- `th`, `uk`, `hi`, `vi`: sin datos. `th` tenía rutas; `uk`, `hi`, `vi` no.
+- Arreglado: `rutas/fi.json` tenía `firetv` y `firetv-lost` sin el prefijo `fi/oppaat/`, lo que había generado dos
+  carpetas sueltas en la raíz (`fire-tv-kaukosaadin-*`), ya borradas.
+
+Hecho: `fi` con 0 errores. En curso: agentes Sonnet en paralelo por idioma para las portadas que faltan y para
+completar los datos de `ro`, `ms`, `hu`, `el`, `th`, `uk`, `hi`, `vi`.
+
+Dos hallazgos de esta sesión:
+- El aviso de `ja` (298 textos contra 299) es falso positivo: en alemán el párrafo de "con qué televisores funciona"
+  empieza con la preposición "Mit" antes del primer enlace y en japonés empieza directo con el enlace. No falta nada.
+  El revisor cuenta nodos de texto, así que este aviso puede repetirse en otros idiomas y no es error.
+- **Pendiente real de contenido**: la pregunta frecuente "¿en qué idiomas está?" dice en cada portada en cuántos
+  idiomas está la WEB (hoy "seis": español, inglés, portugués, francés, alemán e italiano; cada agente le sumó el
+  suyo). Al publicar los 30 hay que corregirla en las 30 portadas, en el texto visible y en el JSON-LD, para que
+  diga 30 idiomas. Se hace de una sola pasada cuando todos los idiomas pasen la revisión.
+
+Aviso de presupuesto: el semanal iba al 96 % al retomar, así que se priorizó lo barato de más valor (las portadas)
+y se guarda el estado a cada paso.
+
+- Ojo: los generadores no conocen arreglos hechos a mano (Casa en la privacidad es/en/pt/it, `/#android` en las guías
+  en inglés, la portada en inglés en la raíz). No regenerar páginas existentes: usar `portadas_idiomas.py`, que solo
+  refresca los enlaces de idioma.
+
 ## 25-nov: envío a directorios (hecho con Claude in Chrome)
 
 Resultado (detalle en la tabla de `docs/DIRECTORIOS.md`): **Uneed agendado** en la cola gratis para el 23-jun-2027
