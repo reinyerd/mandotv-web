@@ -1,6 +1,6 @@
 # Estado de la web mandotv.app
 
-## 24-nov (noche): avisos del auditor auditarweb.co (91/100), preparado en la rama `web-cabeceras-alt`, SIN publicar
+## 24-nov (noche): avisos del auditor auditarweb.co (91/100), PUBLICADO (merge `824f6aa4`, sí del fundador)
 
 - Hecho en la rama (commit `16efd5c7`): logo con `alt="Mando TV"` en barra, pie y barra fija (226 páginas, generadores
   y `app.js`), `<meta name="referrer" content="strict-origin-when-cross-origin">` en todas las páginas, y el selector
@@ -10,7 +10,12 @@
   cabeceras HTTP y GitHub Pages no deja ponerlas. Solución propuesta: poner Cloudflare (plan gratis; el sitio ya usa
   Cloudflare Web Analytics) delante, cambiando los servidores DNS en Porkbun y copiando todos los registros (MX del
   correo hola@mandotv.app, TXT de verificación). Espera el sí del fundador.
-- Al publicar: fusionar en `main`, push, comprobar en vivo, IndexNow y sitemap en Search Console y Bing.
+- Comprobado en vivo: `/`, `/es/`, `/de/`, `/guias/`, `/control-remoto-lg/` con la meta referrer y sin alt vacío;
+  portada con 0 imágenes sin alt (5 imágenes), selector con 6 idiomas y alto máximo 440px, sin errores de consola.
+- IndexNow aceptó todo el sitemap (HTTP 200).
+- **Pendiente**: reenviar el sitemap en Search Console y en Bing Webmaster Tools. El 24-nov ninguno de los dos
+  navegadores tenía la sesión iniciada (el panel de la app pedía inicio de sesión y Claude in Chrome no estaba
+  conectado). El cambio no se ve en la página, así que no es urgente.
 
 ## 24-nov: aviso de idioma y x-default en inglés (publicado)
 
