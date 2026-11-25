@@ -1,6 +1,11 @@
 # Estado de la web mandotv.app
 
-## 25-nov: envío a directorios (en curso, pasa a una sesión nueva)
+## 25-nov: envío a directorios (hecho con Claude in Chrome)
+
+Resultado (detalle en la tabla de `docs/DIRECTORIOS.md`): **Uneed agendado** en la cola gratis para el 23-jun-2027
+(uneed.best/tool/mando-tv); **Fazier omitido** (el plan gratis exige un enlace de vuelta; decisión del fundador);
+**Peerlist** con perfil creado, falta que el fundador verifique su identidad para poder lanzar; **Slant** caído (error
+526), reintentar otro día; SaaSHub sigue para el fundador. Claude in Chrome sí conectó en esta sesión.
 
 Con el sí del fundador ("Sí, empieza" y "Te doy permiso"). Textos listos en `docs/DIRECTORIOS.md`. Desde el navegador
 de la app el control de seguridad bloqueó llenar formularios, así que se sigue con **Claude in Chrome en el Chrome

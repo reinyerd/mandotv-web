@@ -43,8 +43,8 @@ Mando TV is an independent app, not affiliated with any TV maker.
 |---|---|---|---|---|
 | 1 | AlternativeTo | alternativeto.net/software/mando-tv/ | Publicado. Agregar Android y Mac cuando estén | **publicado** (visto 25-nov) |
 | 2 | SaaSHub | https://www.saashub.com/services/submit | Pide cuenta; poner competidores (si no, va al final de la cola); verificar con hola@mandotv.app para subir prioridad; no comprar promoción | pendiente |
-| 3 | Uneed | https://www.uneed.best/submit-a-tool | Lee la web solo y pide crear cuenta para guardar; usar la cola gratis | pendiente |
-| 4 | Fazier | https://fazier.com/ (botón Submit) | Lanzamiento gratis con fecha; elegir la cola gratis | pendiente |
-| 5 | Peerlist | https://peerlist.io/ (Launchpad) | Pide perfil de creador; lanzamiento gratis semanal | pendiente |
-| 6 | Slant | https://www.slant.co/ | Buscar "best universal TV remote app" y agregar Mando TV como opción con la descripción corta | pendiente |
+| 3 | Uneed | uneed.best/tool/mando-tv (panel: uneed.best/edit/waiting-line/79967) | Cola gratis "Join the line" con el OK del fundador. Ícono, eslogan, descripción larga y 3 imágenes de la web. Lanza solo el 23-jun-2027; necesita 10 votos ese día para seguir publicada y 20 para el enlace do-follow (no se piden votos). Se puede editar después | **agendado** 25-nov para el 23-jun-2027 |
+| 4 | Fazier | https://fazier.com/submit | El plan gratis exige poner un enlace a Fazier en la portada o pie de mandotv.app (intercambio de enlaces, va contra las reglas); el resto es de pago | **omitido** 25-nov (decisión del fundador) |
+| 5 | Peerlist | https://peerlist.io/ (Launchpad) | Perfil creado el 25-nov (peerlist.io/reinyerd_dev, bio de Mando TV y web https://mandotv.app). Para lanzar pide "Get verified": identidad con documento oficial (lo hace el fundador) y perfil al 40 % (va en 20 %). Después: Launchpad, botón Launch, con los textos de arriba | **pendiente**: verificación del fundador |
+| 6 | Slant | https://www.slant.co/ | Todo el sitio daba error 526 de Cloudflare (certificado inválido en su servidor) el 25-nov de 03:40 a 03:53 UTC. Reintentar otro día: buscar "best universal TV remote app" y agregar Mando TV como opción con la descripción corta | **pendiente**: sitio caído |
 | 7 | Product Hunt | https://www.producthunt.com/posts/new | Esperar a Google Play en producción (~1-dic). Textos en `control/docs/ENLACES-SEO.md` 2.1 | más adelante |
