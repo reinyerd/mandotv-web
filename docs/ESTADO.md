@@ -53,6 +53,10 @@ idioma del pie tiene los 30 idiomas en las 30 portadas, sin duplicados y con un 
 `pie_firma.py` y solo después `portadas_idiomas.py`. Si se corre `portadas_idiomas.py` con el pie escrito para menos
 idiomas, el pie queda mal.
 
+**Continuación programada (sí del fundador, 25-nov)**: tarea única `mandotv-web-30-idiomas-seguir` para el 27-nov a
+las 18:10 de Chile (al renovarse el semanal). Sigue con la lista de abajo hasta dejar la comparación lado a lado; no
+publica ni indexa. Corre solo si la app de Claude está abierta (si no, al abrirla).
+
 **Falta para dar el trabajo por terminado:**
 
 1. La pregunta frecuente "¿en qué idiomas está?" sigue diciendo que la WEB está en seis idiomas (cada agente le sumó
