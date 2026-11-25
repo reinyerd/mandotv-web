@@ -1,6 +1,29 @@
 # Estado de la web mandotv.app
 
-## 25-nov: web en 30 idiomas e idioma recordado (EN CURSO, rama `web-idiomas-30`, carpeta `mandotv-web-idiomas`)
+## 25-nov: web en 30 idiomas PUBLICADA (sí del fundador; `main` = `a2821e9f`)
+
+- **Fusión previa**: `main` había avanzado con la reestructura de URL de otra sesión (`683e8ffa`: inglés en la raíz,
+  español bajo `/es/`, páginas puente). Se fusionó con los 30 idiomas (detalle en el commit `a2821e9f`). Orden que
+  funcionó cuando cambian las URL: `idiomas_sitio.py`, `portadas_idiomas.py .`, `idioma_guardado.py` y **después**
+  `pie_firma.py` (el pie toma sus enlaces de los hreflang del head). Comprobado antes de subir: 0 enlaces rotos y 0
+  enlaces a páginas puente en 1064 páginas, 30 idiomas en el pie y 31 hreflang en todas, revisor en 0 errores.
+- **En vivo (comprobado 25-nov)**: `/`, `/es/`, `/ko/`, `/ar/`, `/hi/guides/`, `/zh-hant/`, `/no/`,
+  `/vi/huong-dan/`, `/guides/lost-tv-remote/`, `/es/guias/`, `/social-ko.png`, `sitemap.xml` y `llms.txt` responden
+  200 con HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy y nosniff. En navegador: `/ar/` de derecha a
+  izquierda, 30 idiomas en el pie, 31 hreflang, 0 imágenes sin alt, sin errores de consola; `/guias/...` redirige a
+  `/es/guias/...` conservando consulta y ancla.
+- **Indexación**: IndexNow aceptó las 1063 URL del sitemap (HTTP 200). Search Console: sitemap reenviado ("Se ha
+  enviado el sitemap correctamente", figura enviado el 25 nov); `/ko/` aparece "Descubierta, actualmente sin
+  indexar".
+- **Pendiente 26-nov**: Search Console > Inspección de URL > Solicitar indexación de `/ko/`, `/nl/`, `/sv/`, `/da/`,
+  `/no/`, `/fi/`, `/pl/` y luego `/zh/`, `/hi/`, `/ar/` (el 25-nov respondió "Cuota superada").
+- **Pendiente**: Bing Webmaster Tools no tenía la sesión iniciada en Chrome el 25-nov; falta reenviar ahí el sitemap
+  (Bing ya recibió las URL por IndexNow).
+- **Pendiente (regla del fundador del 25-nov)**: un video por idioma en 16:9 y en 9:16; hoy solo existe el de la
+  portada en inglés. Y evaluar su idea de que las pestañas del teléfono (Touchpad, Teclado, Apps) respondan al toque.
+- Regla nueva del fundador: publicar cada versión estable y seguir (memoria `publicar-cada-version-estable`).
+
+## 25-nov: web en 30 idiomas e idioma recordado (historial del trabajo, rama `web-idiomas-30`)
 
 Pedido del fundador: traducir la web a los 24 idiomas que la app ya tiene (hoy 6), y que el idioma elegido se
 recuerde (antes el aviso salía una vez y después no dejaba cambiar). Decisión del panel: recordar la elección (pie,
