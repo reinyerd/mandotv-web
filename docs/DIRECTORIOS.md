@@ -48,3 +48,37 @@ Mando TV is an independent app, not affiliated with any TV maker.
 | 5 | Peerlist | https://peerlist.io/ (Launchpad) | Perfil creado el 25-nov (peerlist.io/reinyerd_dev): bio de Mando TV, ícono como foto, web https://mandotv.app, Santiago, CL, etiquetas, y el proyecto Mando TV completo al 100 % (perfil al 60 %). Para lanzar en el Launchpad pide "Get verified": documento oficial por Stripe Identity y **pago único de 19 USD**. No se pagó (regla: solo gratis sin el OK del fundador). Si lo aprueba: él verifica y paga, y después Launchpad, botón Launch | **perfil y proyecto publicados**; lanzamiento **descartado** 25-nov (decisión del fundador: no pagar 19 USD) |
 | 6 | Slant | https://www.slant.co/ | Todo el sitio daba error 526 de Cloudflare (certificado inválido en su servidor) el 25-nov de 03:40 a 03:53 UTC. Reintentar otro día: buscar "best universal TV remote app" y agregar Mando TV como opción con la descripción corta | **pendiente**: sitio caído |
 | 7 | Product Hunt | https://www.producthunt.com/posts/new | Esperar a Google Play en producción (~1-dic). Textos en `control/docs/ENLACES-SEO.md` 2.1 | más adelante |
+
+## Comparativas y guías "mejores apps de control remoto" (25-nov, investigación de competencia)
+
+Objetivo: que Mando TV aparezca en las listas que leen las personas y las IA. Cada correo lo envía el fundador desde
+su Gmail personal (o con su OK desde ese Gmail). Un correo por sitio, sin seguimiento insistente, nunca pagar por
+aparecer ni ofrecer enlaces a cambio.
+
+| Sitio | Por qué | Contacto | Estado |
+|---|---|---|---|
+| reviewlist.makerio.net/tv-remote-apps-reviews/ | Compara apps de control remoto con sus reseñas (18-nov-2026) | buscar "contact" en el sitio | por verificar contacto |
+| universalremotereviews (buscar el sitio exacto) | Comparativa del nicho | buscar contacto | por verificar |
+| theappverdict.com | Lista "best TV remote apps iPhone" (12-nov) | Es de un competidor (RemoteTv): no esperar respuesta; enviar solo si hay formulario de sugerencias | baja prioridad |
+| adecentremote.com | Lista de Android (31-oct) | Es de un competidor: omitir | omitido |
+| Reddit (r/AndroidTV, r/smarttv, r/Roku, r/LGOLED) | Las IA citan Reddit | Solo responder hilos reales de "qué app uso" como desarrollador, diciendo que es nuestra app; nunca publicar anuncios ni cuentas falsas | cuando haya un hilo real |
+| Product Hunt | Lanzamiento | Ver fila 7 de arriba | tras Android en producción |
+
+### Correo para comparativas (en inglés; cambiar el nombre del sitio)
+
+Asunto: A universal TV remote app with no ads and no subscription, for your remote apps roundup
+
+Hi,
+
+I read your comparison of TV remote apps and noticed that most of the apps listed charge weekly subscriptions or
+show ads, which is also the top complaint in their reviews.
+
+I make Mando TV, a universal TV remote for iPhone, iPad, Mac, Windows and Android (Android public release in early
+December). It controls Samsung, LG, Roku, Google TV / Android TV and Fire TV over Wi-Fi, with no ads, no account and
+no subscription. The remote is free; Pro (touchpad, voice, routines, kids mode) is a one-time purchase of US$9.99.
+
+If it is useful for your readers, I would be glad to send you a Pro code to test it. Website: https://mandotv.app
+App Store: https://apps.apple.com/app/id6834927348 · Microsoft Store: https://apps.microsoft.com/detail/9N3D7T1DP2SW
+
+Thanks for your time,
+Reinyerd, developer of Mando TV
