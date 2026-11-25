@@ -71,6 +71,9 @@ Hecho en esta tanda, con los 24 idiomas nuevos todavía en 0 errores:
 - `llms.txt` con los 30 idiomas.
 - Revisado en navegador: `ar` y `he` de derecha a izquierda, 30 idiomas en el pie y en el botón de la barra (lista
   desplazable, actual marcado), 0 imágenes sin alt, sin desborde en 375 px, sin errores propios de consola.
+- Pedido del fundador (25-nov): el texto de las teclas del teléfono de la vitrina ya no se puede seleccionar (con
+  doble clic quedaba marcado "OK"); el clic sigue llegando a la tecla. `estilos.css` (`.escaparate`) y `app.js`.
+  Idea suya por evaluar: que las pestañas del teléfono (Touchpad, Teclado, Apps) también respondan al toque.
 **Falta**: el sí del fundador; después publicar (merge a main, push), IndexNow, sitemap en Search Console y Bing, e
 indexación de las portadas nuevas (primero ko, nl, sv, da, no, fi, pl). **Videos**: regla nueva del fundador
 (25-nov): un video por idioma en 16:9 y en 9:16; hoy la web solo tiene el video de la portada en inglés, así que

@@ -825,3 +825,13 @@
   }, { rootMargin: '0px 0px -8% 0px' });
   piezas.forEach(function (el) { obs.observe(el); });
 })();
+
+// El teléfono de la vitrina se toca, no se selecciona. Con user-select: none el navegador igual marcaba el texto
+// vecino al hacer doble o triple clic sobre una tecla (por ejemplo "OK"), así que se cancela el inicio de la selección
+// dentro de la vitrina. El clic y el toque siguen llegando a las teclas.
+(function () {
+  var vitrina = document.querySelector('.escaparate');
+  if (!vitrina) return;
+  vitrina.addEventListener('selectstart', function (e) { e.preventDefault(); });
+  vitrina.addEventListener('mousedown', function (e) { if (e.detail > 1) e.preventDefault(); });
+})();

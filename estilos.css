@@ -1413,3 +1413,9 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 /* Árabe y hebreo: el botón de idioma del pie queda a la izquierda, así que su menú se abre hacia la derecha
    (anclado a la derecha se salía de la pantalla en el celular). */
 [dir="rtl"] .pie-idioma ul { right: auto; left: 0; }
+/* El teléfono de la portada se puede tocar (hace la acción del botón), pero su texto no se selecciona: con doble
+   clic quedaba marcado "OK" como si fuera texto de la página. */
+/* Va en toda la vitrina (teléfono, su marco inclinado y los controles de modelo): si solo se ponía en el teléfono,
+   el doble clic saltaba a marcar el nombre del modelo que está al lado. */
+.escaparate, .escaparate * { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+.telefono, .telefono * { -webkit-user-select: none; user-select: none; }
