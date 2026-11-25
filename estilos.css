@@ -649,12 +649,14 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
 .pie-marcas a { background: rgba(255, 255, 255, .1); color: var(--papel); }
 .pie-marcas a:hover { background: var(--papel); color: var(--tinta); }
 
-/* Pila fija de abajo (cookies.js, 24-nov): el aviso de idioma va arriba y el de cookies abajo, sin taparse. */
+/* Pila fija de abajo (cookies.js, 24-nov): el aviso de idioma y el de cookies. Desde el 25-nov sale uno a la vez
+   (primero el de idioma; al cerrarlo, el de cookies), porque juntos tapaban media pantalla y el botón de descarga. */
 .avisos {
   position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50; margin: 0 auto; max-width: 720px;
   display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none;
 }
 .avisos > * { pointer-events: auto; }
+.avisos > :not([hidden]) ~ * { display: none; }
 .avisos:empty { display: none; }
 
 /* Aviso de idioma (cookies.js): píldora oscura como el de cookies, más baja, con la versión que entiende quien llega. */
@@ -699,6 +701,8 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   .aviso-idioma p { font-size: 14px; }
   .aviso-idioma .boton { grid-column: 1 / -1; grid-row: 2; justify-content: center; margin-right: 4px; }
   .aviso-cookies p { font-size: 14px; }
+  /* En el celular basta la pregunta y el enlace "Más sobre las cookies": así el aviso ocupa la mitad de alto. */
+  .aviso-cookies-texto { display: none; }
   .aviso-cookies-botones { width: 100%; } .aviso-cookies .boton { flex: 1; justify-content: center; padding: 10px 16px; }
 }
 
