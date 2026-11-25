@@ -9,7 +9,10 @@ Pedido del fundador. Vale para las 30 portadas (solo cambian `estilos.css` y `ap
   caen en su tecla (los 2 restantes son esquinas del rectángulo inclinado).
 - **Celular**: `touch-action: manipulation` (sin la espera del doble toque) y cualquier toque sobre el teléfono pausa
   la rotación de marcas (con el dedo no había "pasar por encima" que la pausara y cambiaba de marca en mitad del
-  toque). Se reanuda con el botón de pausa.
+  toque). Sigue sola 8 s después del último toque.
+- **Sin botones de pausa, anterior y siguiente** en la vitrina (pedido del fundador; él recordaba haberlos quitado,
+  pero estaban en todas las ramas y en lo publicado). Ocultos con `estilos.css` en las 30 portadas; la marca se
+  elige con los puntos de color. La rotación se pausa al pasar el mouse, al tocar o al recorrer con teclado.
 - **Texto no seleccionable** en toda la vitrina (ver más abajo).
 - **Pestañas**: Touchpad (el punto sigue al dedo, un toque corto es OK), Teclado (escribe en el campo; va de
   izquierda a derecha también en árabe y hebreo) y Apps (9 apps con inicial sobre color, sin logos). Las vistas las

@@ -1464,3 +1464,6 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 .telefono.claro .v-campo, .telefono.claro .v-letra { color: #111522; }
 .telefono.claro .v-app { color: rgba(17, 21, 34, .78); }
 .telefono.claro .v-letra.enviar { color: #fff; }
+/* Sin botones de pausa, anterior y siguiente en la vitrina (pedido del fundador, 25-nov). La marca se elige con los
+   puntos de color; la rotación se pausa sola al pasar el mouse, al tocar el teléfono o al recorrer con el teclado. */
+.vitrina .redondo, .vitrina .flechas { display: none !important; }

@@ -569,6 +569,7 @@
   // Con el mouse se pausa sobre el teléfono y los selectores; con el teclado, mientras el foco esté en cualquier parte
   // del hero (WCAG 2.2.2: el color no cambia mientras la persona recorre la ficha).
   var conMouse = false, conFoco = false;
+  var esperaToque = null;
   [document.querySelector('.escaparate'), document.querySelector('.marcas'), document.querySelector('.equipos')].forEach(function (zona) {
     if (!zona) return;
     zona.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { conMouse = true; mirando = true; actualizar(); } });
@@ -711,9 +712,12 @@
   }
   var ocultar = null;
   telefono.addEventListener('pointerdown', function (e) {
-    // Al tocar el teléfono la rotación de marcas se detiene (con el dedo no hay "pasar por encima" que la pause, y
-    // el teléfono cambiaba de marca en mitad del toque). Se reanuda con el botón de pausa.
-    if (!detenida) ponerPausa(true);
+    // Al tocar el teléfono la rotación de marcas espera (con el dedo no hay "pasar por encima" que la pause, y el
+    // teléfono cambiaba de marca en mitad del toque). Sigue sola 8 s después del último toque: los botones de pausa
+    // y flechas ya no se muestran (pedido del fundador), así que no puede quedar detenida para siempre.
+    mirando = true; actualizar();
+    clearTimeout(esperaToque);
+    esperaToque = setTimeout(function () { mirando = conMouse || conFoco; actualizar(); }, 8000);
     var el = e.target.closest('.cruceta, .balancin, .tecla, .pestanas span');
     if (!el) return;
     var t = etiquetaDe(el, e);
