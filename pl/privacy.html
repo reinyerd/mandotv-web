@@ -18,6 +18,7 @@
   <link rel="alternate" hreflang="pl" href="https://mandotv.app/pl/privacy.html">
   <link rel="alternate" hreflang="pt" href="https://mandotv.app/pt/privacidade.html">
   <link rel="alternate" hreflang="x-default" href="https://mandotv.app/en/privacy.html">
+  <script data-idioma-guardado>(function(){try{var d=document,p=localStorage.getItem("mandotv-idioma"),h=(d.documentElement.lang||"").toLowerCase();if(!p||!/^[a-z]{2,3}(-[a-z]{2,4})?$/.test(p)||p===h||p===h.split("-")[0])return;if(d.referrer&&new URL(d.referrer).host===location.host)return;var l=d.querySelectorAll('link[rel="alternate"][hreflang]'),aqui=location.origin+location.pathname;for(var i=0;i<l.length;i++)if(l[i].hreflang.toLowerCase()===p&&l[i].href!==aqui){sessionStorage.setItem("mandotv-idioma-desde",h);location.replace(l[i].href+location.search+location.hash);return}}catch(e){}})()</script>
   <meta property="og:site_name" content="Mando TV">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:type" content="website">
@@ -26,9 +27,9 @@
   <meta property="og:description" content="Mando TV nie zbiera danych osobowych: bez kont, bez reklam, bez trackerów. Aplikacja rozmawia tylko z Twoim telewizorem w Twojej sieci Wi-Fi.">
   <meta property="og:image" content="https://mandotv.app/social-pl.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="icon" href="/icono.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/estilos.css?v=12">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5cc01b351f">
+  <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
+  <link rel="stylesheet" href="/estilos.css?v=b307510258">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://mandotv.app/#org", "name": "Mando TV", "url": "https://mandotv.app/"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://mandotv.app/pl/"}, {"@type": "ListItem", "position": 2, "name": "Prywatność", "item": "https://mandotv.app/pl/privacy.html"}]}]}</script>
 </head>
 <body>
@@ -148,12 +149,37 @@
         <li><a href="/pl/poradniki/telefon-jako-pilot-wifi/">Telefon jako pilot przez Wi-Fi</a></li>
         <li><a href="/pl/poradniki/sterowanie-telewizorem-z-komputera/">Sterowanie telewizorem z komputera</a></li>
       </ul>
-      <p class="pie-gigante" aria-hidden="true">MANDO</p>
+      <!-- pie-firma: lo escribe herramientas/pie_firma.py (no editar a mano) -->
+      <div class="pie-cierre">
+        <div class="pie-firma">
+          <a class="pie-logo" href="/" aria-label="Mando TV"><img src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="44" height="44" loading="lazy" decoding="async">Mando TV</a>
+          <p>Jeden pilot do każdego telewizora w domu, na telefonie lub komputerze.</p>
+        </div>
+        <div class="pie-accion">
+          <a class="boton" href="/#tiendas">Pobierz</a>
+          <span>Na iPhone&#x27;a, iPada, Maca, Androida i Windows</span>
+        </div>
+      </div>
+      <div class="pie-base">
+        <span>© 2026 Mando TV</span>
+        <details class="pie-idioma">
+          <summary><span class="oculto">Język: </span>Polski</summary>
+          <ul>
+            <li><a href="/de/datenschutz.html" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="/en/privacy.html" hreflang="en" lang="en">English</a></li>
+            <li><a href="/privacidad.html" hreflang="es" lang="es">Español</a></li>
+            <li><a href="/fr/confidentialite.html" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="/it/privacy.html" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="/pt/privacidade.html" hreflang="pt" lang="pt">Português</a></li>
+          </ul>
+        </details>
+      </div>
+      <!-- /pie-firma -->
       <small>Mando TV to niezależna aplikacja. Nie jest powiązana z wymienionymi producentami telewizorów ani z Google, Amazon, Apple czy Roku i nie jest przez nich wspierana. Marki należą do ich właścicieli i są wymieniane wyłącznie po to, by wskazać zgodność. Android TV i Google TV to znaki towarowe Google LLC. Apple TV to znak towarowy Apple Inc.</small>
     </div>
   </footer>
-  <script src="/correo.js?v=3" defer></script>
-  <script src="/cookies.js?v=1" defer></script>
+  <script src="/correo.js?v=888abbe670" defer></script>
+  <script src="/cookies.js?v=0bcdc83987" defer></script>
   <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3a3f0250e4b04d5884b033b9a94302b4"}'></script>
 </body>

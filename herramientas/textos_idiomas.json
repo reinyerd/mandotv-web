@@ -1,0 +1,122 @@
+{
+  "id": {
+    "pie": ["Satu remote untuk semua TV di rumah, di ponsel atau komputer.", "Unduh", "Untuk iPhone, iPad, Mac, Android, dan Windows", "Bahasa"],
+    "ms_texto": "Halaman Microsoft Store:",
+    "social": ["Satu remote untuk semua TV", "Gratis, tanpa iklan, tanpa akun."]
+  },
+  "ms": {
+    "pie": ["Satu alat kawalan untuk setiap TV di rumah anda, pada telefon atau komputer.", "Muat turun", "Untuk iPhone, iPad, Mac, Android dan Windows", "Bahasa"],
+    "ms_texto": "Halaman Microsoft Store:",
+    "social": ["Satu kawalan untuk semua TV", "Percuma, tanpa iklan dan tanpa akaun."]
+  },
+  "cs": {
+    "pie": ["Jeden ovladač pro každou televizi u vás doma, v telefonu nebo počítači.", "Stáhnout", "Pro iPhone, iPad, Mac, Android a Windows", "Jazyk"],
+    "ms_texto": "Stránka v Microsoft Store:",
+    "social": ["Jeden ovladač pro všechny TV", "Zdarma, bez reklam a bez účtů."]
+  },
+  "da": {
+    "pie": ["Én fjernbetjening til alle tv'er derhjemme, på din telefon eller computer.", "Hent", "Til iPhone, iPad, Mac, Android og Windows", "Sprog"],
+    "ms_texto": "Side i Microsoft Store:",
+    "social": ["Én fjernbetjening til alle tv", "Gratis, uden reklamer og konti."]
+  },
+  "hu": {
+    "pie": ["Egy távirányító az otthon minden tévéjéhez, telefonon vagy számítógépen.", "Letöltés", "iPhone-ra, iPadre, Macre, Androidra és Windowsra", "Nyelv"],
+    "ms_texto": "Microsoft Store oldal:",
+    "social": ["Egy távirányító minden tévéhez", "Ingyenes, reklám és fiók nélkül."]
+  },
+  "nl": {
+    "pie": ["Eén afstandsbediening voor alle tv's in huis, op je telefoon of computer.", "Download", "Voor iPhone, iPad, Mac, Android en Windows", "Taal"],
+    "ms_texto": "Pagina in de Microsoft Store:",
+    "social": ["Eén bediening voor al je tv's", "Gratis, zonder advertenties of accounts."]
+  },
+  "nb": {
+    "pie": ["Én fjernkontroll for alle TV-ene hjemme, på mobilen eller datamaskinen.", "Last ned", "For iPhone, iPad, Mac, Android og Windows", "Språk"],
+    "ms_texto": "Side i Microsoft Store:",
+    "social": ["Én fjernkontroll for alle TV-er", "Gratis, uten reklame og kontoer."]
+  },
+  "pl": {
+    "pie": ["Jeden pilot do każdego telewizora w domu, na telefonie lub komputerze.", "Pobierz", "Na iPhone'a, iPada, Maca, Androida i Windows", "Język"],
+    "ms_texto": "Strona w Microsoft Store:",
+    "social": ["Jeden pilot do wszystkich TV", "Za darmo, bez reklam i kont."]
+  },
+  "ro": {
+    "pie": ["O singură telecomandă pentru toate televizoarele din casă, pe telefon sau pe computer.", "Descarcă", "Pentru iPhone, iPad, Mac, Android și Windows", "Limba"],
+    "ms_texto": "Pagina din Microsoft Store:",
+    "social": ["O telecomandă pentru orice TV", "Gratuit, fără reclame și fără conturi."]
+  },
+  "sk": {
+    "pie": ["Jeden ovládač pre každý televízor u vás doma, v telefóne alebo počítači.", "Stiahnuť", "Pre iPhone, iPad, Mac, Android a Windows", "Jazyk"],
+    "ms_texto": "Stránka v Microsoft Store:",
+    "social": ["Jeden ovládač pre všetky TV", "Zadarmo, bez reklám a bez účtov."]
+  },
+  "fi": {
+    "pie": ["Yksi kaukosäädin kaikkiin kodin televisioihin, puhelimessa tai tietokoneella.", "Lataa", "iPhonelle, iPadille, Macille, Androidille ja Windowsille", "Kieli"],
+    "ms_texto": "Microsoft Store -sivu:",
+    "social": ["Yksi kaukosäädin kaikille TV:ille", "Ilmainen, ei mainoksia eikä tilejä."]
+  },
+  "sv": {
+    "pie": ["En fjärrkontroll för alla tv-apparater hemma, på mobilen eller datorn.", "Ladda ner", "För iPhone, iPad, Mac, Android och Windows", "Språk"],
+    "ms_texto": "Sida i Microsoft Store:",
+    "social": ["En fjärrkontroll för alla tv", "Gratis, utan reklam och konton."]
+  },
+  "vi": {
+    "pie": ["Một điều khiển cho mọi TV trong nhà, trên điện thoại hoặc máy tính.", "Tải về", "Cho iPhone, iPad, Mac, Android và Windows", "Ngôn ngữ"],
+    "ms_texto": "Trang trên Microsoft Store:",
+    "social": ["Một điều khiển cho mọi TV", "Miễn phí, không quảng cáo, không tài khoản."]
+  },
+  "tr": {
+    "pie": ["Evdeki her TV için tek kumanda, telefonunda ya da bilgisayarında.", "İndir", "iPhone, iPad, Mac, Android ve Windows için", "Dil"],
+    "ms_texto": "Microsoft Store sayfası:",
+    "social": ["Tüm TV'ler için tek kumanda", "Ücretsiz, reklamsız, hesapsız."]
+  },
+  "el": {
+    "pie": ["Ένα τηλεχειριστήριο για κάθε τηλεόραση του σπιτιού, στο κινητό ή στον υπολογιστή σου.", "Λήψη", "Για iPhone, iPad, Mac, Android και Windows", "Γλώσσα"],
+    "ms_texto": "Σελίδα στο Microsoft Store:",
+    "social": ["Ένα χειριστήριο για κάθε TV", "Δωρεάν, χωρίς διαφημίσεις και λογαριασμούς."]
+  },
+  "uk": {
+    "pie": ["Один пульт для кожного телевізора вдома, на телефоні чи комп'ютері.", "Завантажити", "Для iPhone, iPad, Mac, Android і Windows", "Мова"],
+    "ms_texto": "Сторінка в Microsoft Store:",
+    "social": ["Один пульт для всіх телевізорів", "Безкоштовно, без реклами й облікових записів."]
+  },
+  "he": {
+    "pie": ["שלט אחד לכל הטלוויזיות בבית, בטלפון או במחשב.", "הורדה", "ל-iPhone, ל-iPad, ל-Mac, ל-Android ול-Windows", "שפה"],
+    "ms_texto": "עמוד ב-Microsoft Store:",
+    "social": ["שלט אחד לכל הטלוויזיות", "חינם, בלי פרסומות ובלי חשבונות."]
+  },
+  "ar": {
+    "pie": ["جهاز تحكم واحد لكل تلفزيون في منزلك، على هاتفك أو حاسوبك.", "تنزيل", "لأجهزة iPhone وiPad وMac وAndroid وWindows", "اللغة"],
+    "ms_texto": "صفحة Microsoft Store:",
+    "social": ["تحكم واحد لكل تلفزيوناتك", "مجاني، بلا إعلانات وبلا حسابات."]
+  },
+  "hi": {
+    "pie": ["घर के हर टीवी के लिए एक रिमोट, आपके फ़ोन या कंप्यूटर पर।", "डाउनलोड", "iPhone, iPad, Mac, Android और Windows के लिए", "भाषा"],
+    "ms_texto": "Microsoft Store पेज:",
+    "social": ["सभी टीवी के लिए एक रिमोट", "मुफ़्त, बिना विज्ञापन, बिना अकाउंट।"]
+  },
+  "th": {
+    "pie": ["รีโมตเดียวสำหรับทีวีทุกเครื่องในบ้าน บนโทรศัพท์หรือคอมพิวเตอร์ของคุณ", "ดาวน์โหลด", "สำหรับ iPhone, iPad, Mac, Android และ Windows", "ภาษา"],
+    "ms_texto": "หน้า Microsoft Store:",
+    "social": ["รีโมตเดียวคุมทีวีทุกเครื่อง", "ฟรี ไม่มีโฆษณา ไม่ต้องสมัครบัญชี"]
+  },
+  "ko": {
+    "pie": ["집에 있는 모든 TV를 위한 리모컨 하나, 휴대폰이나 컴퓨터에서.", "다운로드", "iPhone, iPad, Mac, Android, Windows용", "언어"],
+    "ms_texto": "Microsoft Store 페이지:",
+    "social": ["TV 리모컨은 하나로", "무료, 광고 없음, 계정 없음."]
+  },
+  "ja": {
+    "pie": ["家じゅうのテレビを1つのリモコンで、スマートフォンやパソコンから。", "ダウンロード", "iPhone、iPad、Mac、Android、Windows対応", "言語"],
+    "ms_texto": "Microsoft Storeのページ：",
+    "social": ["テレビのリモコンは1つで", "無料、広告なし、アカウント不要。"]
+  },
+  "zh": {
+    "pie": ["一个遥控器，控制家里所有电视，手机或电脑都能用。", "下载", "适用于 iPhone、iPad、Mac、Android 和 Windows", "语言"],
+    "ms_texto": "Microsoft Store 页面：",
+    "social": ["一个遥控器管所有电视", "免费，无广告，无需账号。"]
+  },
+  "zh-hant": {
+    "pie": ["一個遙控器，控制家裡所有電視，手機或電腦都能用。", "下載", "適用於 iPhone、iPad、Mac、Android 和 Windows", "語言"],
+    "ms_texto": "Microsoft Store 頁面：",
+    "social": ["一個遙控器管所有電視", "免費，無廣告，無需帳號。"]
+  }
+}

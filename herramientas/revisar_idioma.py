@@ -36,7 +36,7 @@ def archivo_de_ruta(r):
     """Ruta pública (/nl/gidsen/) al archivo del sitio."""
     r = r.split('#')[0].split('?')[0]
     p = os.path.join(RAIZ, *[x for x in r.split('/') if x])
-    return p if r.endswith(('.html', '.png', '.svg', '.css', '.js', '.txt', '.xml', '.webmanifest', '.mp4', '.jpg', '.webp')) else os.path.join(p, 'index.html')
+    return p if '.' in r.rstrip('/').rsplit('/', 1)[-1] else os.path.join(p, 'index.html')  # con extensión: archivo
 
 
 # ---------------------------------------------------------------- 1. rutas
@@ -141,6 +141,10 @@ class Lector(html.parser.HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.etiquetas, self.textos, self.hrefs, self.ld, self._pila = Counter(), [], [], [], []
+        # Enlaces con hreflang: el bloque de alternates y el selector de idioma del pie. Ahí el enlace al alemán es
+        # correcto (el pie lista los 30 idiomas), así que no cuentan como texto sin traducir.
+        self.hrefs_idioma = []
+        self.textos_linea = Counter()   # cuántos nodos de texto hay en cada línea, para localizar diferencias
         self.lang = self.dir = self.canonical = self.og_image = None
 
     def handle_starttag(self, tag, attrs):
@@ -155,6 +159,8 @@ class Lector(html.parser.HTMLParser):
             self.og_image = a.get('content')
         if a.get('href'):
             self.hrefs.append(a['href'])
+            if a.get('hreflang'):
+                self.hrefs_idioma.append(a['href'])
         if a.get('src'):
             self.hrefs.append(a['src'])
 
@@ -172,6 +178,7 @@ class Lector(html.parser.HTMLParser):
             return
         if d.strip():
             self.textos.append(d.strip())
+            self.textos_linea[self.getpos()[0]] += 1
 
 
 def leer(p):
@@ -204,6 +211,8 @@ else:
         except ValueError as ex:
             errores.append(f'portada: JSON-LD inválido: {ex}')
     for h in po.hrefs:
+        if h in po.hrefs_idioma:   # el selector de idioma del pie y los alternates sí enlazan al alemán
+            continue
         if h.startswith('/de/') or h == '/de/':
             errores.append(f'portada: enlace al alemán {h}')
     if len(pd.textos) == len(po.textos):
@@ -211,7 +220,13 @@ else:
         for t in iguales[:5]:
             errores.append(f'portada: texto sin traducir: "{t[:70]}"')
     else:
-        avisos.append(f'portada: {len(po.textos)} textos contra {len(pd.textos)} del alemán (revisar que no falte nada)')
+        # Decir en qué líneas difiere: así se revisa de un vistazo. Suele ser orden de la frase (en alemán el
+        # párrafo empieza con una palabra suelta antes del primer enlace y en otros idiomas empieza por el enlace),
+        # no texto perdido. Las líneas son las mismas en todos los idiomas porque la portada es copia de la alemana.
+        lineas = sorted(l for l in set(pd.textos_linea) | set(po.textos_linea) if pd.textos_linea[l] != po.textos_linea[l])
+        detalle = ', '.join(f'línea {l}: alemán {pd.textos_linea[l]}, aquí {po.textos_linea[l]}' for l in lineas[:6])
+        avisos.append(f'portada: {len(po.textos)} textos contra {len(pd.textos)} del alemán ({detalle}); '
+                      f'revisar esas líneas por si falta algo')
 
 # ---------------------------------------------------------------- 4. páginas generadas y enlaces
 for k in rutas:

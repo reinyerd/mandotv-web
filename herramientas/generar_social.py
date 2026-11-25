@@ -17,6 +17,18 @@ IDIOMAS = {
   'pt': ('pt/index.html', 'Um controle para todas as TVs', 'Grátis, sem anúncios e sem conta.', None, None),
   'it': ('it/index.html', 'Un telecomando per tutte le TV', 'Gratis, senza pubblicità e senza account.', 84, None),
 }
+# 25-nov: los idiomas nuevos, con el título y el subtítulo de herramientas/textos_idiomas.json. El título se achica
+# según su largo (en chino, japonés y coreano cada letra ocupa casi el doble). Ojo: 'en' ya no sirve para regenerar
+# (desde el 24-nov en/index.html es la redirección a /), por eso se puede pedir solo algunos idiomas.
+# Uso: python -I herramientas/generar_social.py <carpeta del sitio> [idiomas...]
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import idiomas_sitio as I  # noqa: E402
+for _k, _t in I.TEXTOS_NUEVOS.items():
+    _titulo, _sub = _t['social']
+    _largo = len(_titulo) * (1.8 if _k in ('zh', 'zh-hant', 'ja', 'ko') else 1)
+    _tam = None if _largo <= 27 else 84 if _largo <= 30 else 74 if _largo <= 34 else 64
+    IDIOMAS[_k] = (I.NUEVOS[_k][2] + '/index.html', _titulo, _sub, _tam, None)
+PEDIDOS = sys.argv[2:]
 TEXTO = re.compile(r'>([^<>]+)<')
 
 
@@ -35,6 +47,8 @@ textos0 = [t for t in TEXTO.findall(base[a0:b0]) if t.strip()]
 alt0 = re.search(r'id="telefono" role="img" aria-label="([^"]*)"', base)[1]
 
 for lang, (portada, titulo, sub, tam, tv) in IDIOMAS.items():
+    if PEDIDOS and lang not in PEDIDOS:
+        continue
     home = leer(portada)
     a1, b1 = telefono(home)
     bloque = home[a1:b1]
@@ -49,7 +63,7 @@ for lang, (portada, titulo, sub, tam, tv) in IDIOMAS.items():
     s = s.replace(alt0, alt1)
     if tam:
         s = s.replace('font-size: 96px; line-height: .9;', f'font-size: {tam}px; line-height: .95;')
-    s = s.replace('<html lang="es"', f'<html lang="{lang}"', 1)
+    s = s.replace('<html lang="es"', f'<html lang="{I.CODIGO_LANG.get(lang, lang)}"', 1)
     s = s.replace('Un control para todos tus TV', titulo).replace('Gratis, sin anuncios y sin cuentas.', sub)
     s = s.replace('Genera social.png', f'Genera social-{lang}.png').replace('herramientas/social.html', f'herramientas/social-{lang}.html')
     open(os.path.join(SITIO, 'herramientas', f'social-{lang}.html'), 'w', encoding='utf-8', newline='\n').write(s)

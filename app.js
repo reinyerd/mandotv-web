@@ -83,6 +83,318 @@
       notaAndroid: 'Su Android è un accesso anticipato su Google Play: bastano due passaggi.',
       barra: 'Scarica', claro: 'Chiaro', oscuro: 'Scuro', pausar: 'Metti in pausa le marche', reanudar: 'Riprendi le marche',
       frases: ['documentari sui vulcani', 'musica per cucinare', 'partita di calcio in diretta', 'film di Natale']
+    },
+    id: {
+      marcas: {
+        lg: ['TV LG', 'LG dengan webOS: terhubung lewat Wi-Fi dan bisa menyalakan TV juga.'],
+        samsung: ['TV Samsung', 'Samsung dengan Tizen: cukup setujui sekali di TV, lalu siap dipakai.'],
+        roku: ['Roku', 'Roku: TV dan perangkat, tanpa perlu dipasangkan.'],
+        android: ['Google TV', 'Google TV dan Android TV (Sony, TCL, Philips, Xiaomi, dan lainnya): ketik kode yang tampil di layar.']
+      },
+      mac: 'Unduh gratis untuk Mac', ipad: 'Unduh gratis untuk iPad', iphone: 'Unduh gratis untuk iPhone', windows: 'Unduh gratis untuk Windows',
+      android: 'Unduh gratis untuk Android', boton: 'Unduh gratis',
+      notaAndroid: 'Di Android ini akses awal di Google Play: cukup dua langkah.',
+      barra: 'Unduh', claro: 'Terang', oscuro: 'Gelap', pausar: 'Jeda merek', reanudar: 'Putar merek',
+      frases: ['dokumenter gunung berapi', 'musik untuk memasak', 'pertandingan sepak bola langsung', 'film keluarga']
+    },
+    ms: {
+      marcas: {
+        lg: ['TV LG', 'LG dengan webOS: bersambung melalui Wi-Fi dan boleh menghidupkan TV juga.'],
+        samsung: ['TV Samsung', 'Samsung dengan Tizen: anda setuju sekali pada TV, dan sedia digunakan.'],
+        roku: ['Roku', 'Roku: TV dan peranti, tanpa perlu dipasangkan.'],
+        android: ['Google TV', 'Google TV dan Android TV (Sony, TCL, Philips, Xiaomi dan banyak lagi): anda menaip kod yang dipaparkan pada skrin.']
+      },
+      mac: 'Muat turun percuma untuk Mac', ipad: 'Muat turun percuma untuk iPad', iphone: 'Muat turun percuma untuk iPhone', windows: 'Muat turun percuma untuk Windows',
+      android: 'Muat turun percuma untuk Android', boton: 'Muat turun percuma',
+      notaAndroid: 'Di Android, ini akses awal di Google Play: dua langkah mudah.',
+      barra: 'Muat turun', claro: 'Cerah', oscuro: 'Gelap', pausar: 'Jeda jenama', reanudar: 'Main jenama',
+      frases: ['dokumentari gunung berapi', 'muzik untuk memasak', 'perlawanan bola sepak secara langsung', 'filem keluarga']
+    },
+    cs: {
+      marcas: {
+        lg: ['TV LG', 'LG s webOS: připojí se přes Wi-Fi a umí televizi i zapnout.'],
+        samsung: ['TV Samsung', 'Samsung s Tizenem: na televizi jednou potvrdíte a máte hotovo.'],
+        roku: ['Roku', 'Roku: televizory a přehrávače, nic se nepáruje.'],
+        android: ['Google TV', 'Google TV a Android TV (Sony, TCL, Philips, Xiaomi a další): opíšete kód, který se zobrazí na obrazovce.']
+      },
+      mac: 'Stáhnout zdarma pro Mac', ipad: 'Stáhnout zdarma pro iPad', iphone: 'Stáhnout zdarma pro iPhone', windows: 'Stáhnout zdarma pro Windows',
+      android: 'Stáhnout zdarma pro Android', boton: 'Stáhnout zdarma',
+      notaAndroid: 'Na Androidu jde o předběžný přístup v Google Play: stačí dva kroky.',
+      barra: 'Stáhnout', claro: 'Světlý', oscuro: 'Tmavý', pausar: 'Pozastavit značky', reanudar: 'Spustit značky',
+      frases: ['dokumenty o sopkách', 'hudba na vaření', 'fotbalový zápas živě', 'vánoční film']
+    },
+    da: {
+      marcas: {
+        lg: ['LG-tv', "LG med webOS: den forbinder via Wi-Fi og kan også tænde for tv'et."],
+        samsung: ['Samsung-tv', "Samsung med Tizen: du godkender én gang på tv'et, og så er du klar."],
+        roku: ['Roku', 'Roku: tv og afspillere, uden noget at parre.'],
+        android: ['Google TV', 'Google TV og Android TV (Sony, TCL, Philips, Xiaomi og flere): du skriver koden, som skærmen viser.']
+      },
+      mac: 'Hent gratis til Mac', ipad: 'Hent gratis til iPad', iphone: 'Hent gratis til iPhone', windows: 'Hent gratis til Windows',
+      android: 'Hent gratis til Android', boton: 'Hent gratis',
+      notaAndroid: 'På Android er det tidlig adgang på Google Play: to hurtige trin.',
+      barra: 'Hent', claro: 'Lys', oscuro: 'Mørk', pausar: 'Sæt mærkerne på pause', reanudar: 'Afspil mærkerne',
+      frases: ['dokumentarer om vulkaner', 'musik til madlavning', 'live fodboldkamp', 'julefilm']
+    },
+    hu: {
+      marcas: {
+        lg: ['LG tévé', 'LG webOS-szel: Wi-Fi-n csatlakozik, és a tévét be is tudja kapcsolni.'],
+        samsung: ['Samsung tévé', 'Samsung Tizennel: egyszer elfogadod a tévén, és kész.'],
+        roku: ['Roku', 'Roku: tévék és lejátszók, párosítani sem kell semmit.'],
+        android: ['Google TV', 'Google TV és Android TV (Sony, TCL, Philips, Xiaomi és mások): beírod a képernyőn látható kódot.']
+      },
+      mac: 'Ingyenes letöltés Machez', ipad: 'Ingyenes letöltés iPadhez', iphone: 'Ingyenes letöltés iPhone-hoz', windows: 'Ingyenes letöltés Windowshoz',
+      android: 'Ingyenes letöltés Androidhoz', boton: 'Ingyenes letöltés',
+      notaAndroid: 'Androidon ez korai hozzáférés a Google Playen: két gyors lépés.',
+      barra: 'Letöltés', claro: 'Világos', oscuro: 'Sötét', pausar: 'Márkák szüneteltetése', reanudar: 'Márkák lejátszása',
+      frases: ['dokumentumfilmek vulkánokról', 'zene főzéshez', 'élő focimeccs', 'karácsonyi film']
+    },
+    nl: {
+      marcas: {
+        lg: ['LG-tv', 'LG met webOS: verbindt via wifi en kan de tv ook aanzetten.'],
+        samsung: ['Samsung-tv', 'Samsung met Tizen: je bevestigt één keer op de tv en klaar.'],
+        roku: ['Roku', "Roku: tv's en spelers, niets om te koppelen."],
+        android: ['Google TV', 'Google TV en Android TV (Sony, TCL, Philips, Xiaomi en meer): je typt de code die op het scherm staat.']
+      },
+      mac: 'Download gratis voor Mac', ipad: 'Download gratis voor iPad', iphone: 'Download gratis voor iPhone', windows: 'Download gratis voor Windows',
+      android: 'Download gratis voor Android', boton: 'Download gratis',
+      notaAndroid: 'Op Android is het vroege toegang in Google Play: twee korte stappen.',
+      barra: 'Download', claro: 'Licht', oscuro: 'Donker', pausar: 'Merken pauzeren', reanudar: 'Merken afspelen',
+      frases: ['documentaires over vulkanen', 'muziek om bij te koken', 'live voetbalwedstrijd', 'kerstfilm']
+    },
+    nb: {
+      marcas: {
+        lg: ['LG-TV', 'LG med webOS: kobler til over Wi-Fi og kan også slå på TV-en.'],
+        samsung: ['Samsung-TV', 'Samsung med Tizen: du godkjenner én gang på TV-en, og så er du klar.'],
+        roku: ['Roku', 'Roku: TV-er og spillere, uten noe å koble sammen.'],
+        android: ['Google TV', 'Google TV og Android TV (Sony, TCL, Philips, Xiaomi og flere): du skriver inn koden som vises på skjermen.']
+      },
+      mac: 'Last ned gratis for Mac', ipad: 'Last ned gratis for iPad', iphone: 'Last ned gratis for iPhone', windows: 'Last ned gratis for Windows',
+      android: 'Last ned gratis for Android', boton: 'Last ned gratis',
+      notaAndroid: 'På Android er det tidlig tilgang på Google Play: to raske steg.',
+      barra: 'Last ned', claro: 'Lys', oscuro: 'Mørk', pausar: 'Sett merkene på pause', reanudar: 'Spill av merkene',
+      frases: ['dokumentarer om vulkaner', 'musikk til matlaging', 'direkte fotballkamp', 'julefilm']
+    },
+    pl: {
+      marcas: {
+        lg: ['Telewizor LG', 'LG z webOS: łączy się przez Wi-Fi i potrafi też włączyć telewizor.'],
+        samsung: ['Telewizor Samsung', 'Samsung z Tizenem: raz potwierdzasz na telewizorze i gotowe.'],
+        roku: ['Roku', 'Roku: telewizory i odtwarzacze, nic nie trzeba parować.'],
+        android: ['Google TV', 'Google TV i Android TV (Sony, TCL, Philips, Xiaomi i inne): wpisujesz kod, który pokazuje ekran.']
+      },
+      mac: 'Pobierz za darmo na Maca', ipad: 'Pobierz za darmo na iPada', iphone: "Pobierz za darmo na iPhone'a", windows: 'Pobierz za darmo na Windows',
+      android: 'Pobierz za darmo na Androida', boton: 'Pobierz za darmo',
+      notaAndroid: 'Na Androidzie to wczesny dostęp w Google Play: dwa szybkie kroki.',
+      barra: 'Pobierz', claro: 'Jasny', oscuro: 'Ciemny', pausar: 'Wstrzymaj marki', reanudar: 'Odtwarzaj marki',
+      frases: ['dokumenty o wulkanach', 'muzyka do gotowania', 'mecz piłkarski na żywo', 'film świąteczny']
+    },
+    ro: {
+      marcas: {
+        lg: ['TV LG', 'LG cu webOS: se conectează prin Wi-Fi și poate porni și televizorul.'],
+        samsung: ['TV Samsung', 'Samsung cu Tizen: accepți o singură dată pe televizor și gata.'],
+        roku: ['Roku', 'Roku: televizoare și playere, nimic de asociat.'],
+        android: ['Google TV', 'Google TV și Android TV (Sony, TCL, Philips, Xiaomi și altele): scrii codul afișat pe ecran.']
+      },
+      mac: 'Descarcă gratuit pentru Mac', ipad: 'Descarcă gratuit pentru iPad', iphone: 'Descarcă gratuit pentru iPhone', windows: 'Descarcă gratuit pentru Windows',
+      android: 'Descarcă gratuit pentru Android', boton: 'Descarcă gratuit',
+      notaAndroid: 'Pe Android este acces anticipat în Google Play: doi pași rapizi.',
+      barra: 'Descarcă', claro: 'Luminos', oscuro: 'Întunecat', pausar: 'Oprește mărcile', reanudar: 'Pornește mărcile',
+      frases: ['documentare despre vulcani', 'muzică pentru gătit', 'meci de fotbal în direct', 'film de Crăciun']
+    },
+    sk: {
+      marcas: {
+        lg: ['TV LG', 'LG s webOS: pripojí sa cez Wi-Fi a vie televízor aj zapnúť.'],
+        samsung: ['TV Samsung', 'Samsung s Tizenom: raz potvrdíš na televízore a máš hotovo.'],
+        roku: ['Roku', 'Roku: televízory a prehrávače, nič sa nepáruje.'],
+        android: ['Google TV', 'Google TV a Android TV (Sony, TCL, Philips, Xiaomi a ďalšie): prepíšeš kód, ktorý sa zobrazí na obrazovke.']
+      },
+      mac: 'Stiahnuť zadarmo pre Mac', ipad: 'Stiahnuť zadarmo pre iPad', iphone: 'Stiahnuť zadarmo pre iPhone', windows: 'Stiahnuť zadarmo pre Windows',
+      android: 'Stiahnuť zadarmo pre Android', boton: 'Stiahnuť zadarmo',
+      notaAndroid: 'Na Androide ide o predbežný prístup v Google Play: stačia dva kroky.',
+      barra: 'Stiahnuť', claro: 'Svetlý', oscuro: 'Tmavý', pausar: 'Pozastaviť značky', reanudar: 'Spustiť značky',
+      frases: ['dokumenty o sopkách', 'hudba na varenie', 'futbalový zápas naživo', 'vianočný film']
+    },
+    fi: {
+      marcas: {
+        lg: ['LG-televisio', 'LG ja webOS: yhdistyy Wi-Fin kautta ja osaa myös käynnistää television.'],
+        samsung: ['Samsung-televisio', 'Samsung ja Tizen: hyväksyt kerran televisiossa, ja se on siinä.'],
+        roku: ['Roku', 'Roku: televisiot ja soittimet, mitään ei tarvitse yhdistää.'],
+        android: ['Google TV', 'Google TV ja Android TV (Sony, TCL, Philips, Xiaomi ja muut): kirjoitat näytöllä näkyvän koodin.']
+      },
+      mac: 'Lataa ilmaiseksi Macille', ipad: 'Lataa ilmaiseksi iPadille', iphone: 'Lataa ilmaiseksi iPhonelle', windows: 'Lataa ilmaiseksi Windowsille',
+      android: 'Lataa ilmaiseksi Androidille', boton: 'Lataa ilmaiseksi',
+      notaAndroid: 'Androidilla tämä on varhainen käyttöoikeus Google Playssa: kaksi nopeaa vaihetta.',
+      barra: 'Lataa', claro: 'Vaalea', oscuro: 'Tumma', pausar: 'Keskeytä merkit', reanudar: 'Toista merkit',
+      frases: ['dokumentit tulivuorista', 'musiikkia ruoanlaittoon', 'jalkapallo-ottelu suorana', 'jouluelokuva']
+    },
+    sv: {
+      marcas: {
+        lg: ['LG-tv', 'LG med webOS: ansluter via wifi och kan också sätta på tv:n.'],
+        samsung: ['Samsung-tv', 'Samsung med Tizen: du godkänner en gång på tv:n och sedan är du klar.'],
+        roku: ['Roku', 'Roku: tv-apparater och spelare, inget att para ihop.'],
+        android: ['Google TV', 'Google TV och Android TV (Sony, TCL, Philips, Xiaomi med flera): du skriver in koden som visas på skärmen.']
+      },
+      mac: 'Ladda ner gratis för Mac', ipad: 'Ladda ner gratis för iPad', iphone: 'Ladda ner gratis för iPhone', windows: 'Ladda ner gratis för Windows',
+      android: 'Ladda ner gratis för Android', boton: 'Ladda ner gratis',
+      notaAndroid: 'På Android är det tidig åtkomst på Google Play: två snabba steg.',
+      barra: 'Ladda ner', claro: 'Ljust', oscuro: 'Mörkt', pausar: 'Pausa märkena', reanudar: 'Spela upp märkena',
+      frases: ['dokumentärer om vulkaner', 'musik att laga mat till', 'fotbollsmatch live', 'julfilm']
+    },
+    vi: {
+      marcas: {
+        lg: ['TV LG', 'LG với webOS: kết nối qua Wi-Fi và cũng có thể bật TV.'],
+        samsung: ['TV Samsung', 'Samsung với Tizen: bạn chỉ cần đồng ý một lần trên TV là xong.'],
+        roku: ['Roku', 'Roku: TV và đầu phát, không cần ghép nối gì cả.'],
+        android: ['Google TV', 'Google TV và Android TV (Sony, TCL, Philips, Xiaomi và nhiều hãng khác): bạn nhập mã hiển thị trên màn hình.']
+      },
+      mac: 'Tải miễn phí cho Mac', ipad: 'Tải miễn phí cho iPad', iphone: 'Tải miễn phí cho iPhone', windows: 'Tải miễn phí cho Windows',
+      android: 'Tải miễn phí cho Android', boton: 'Tải miễn phí',
+      notaAndroid: 'Trên Android, đây là bản truy cập sớm trên Google Play: chỉ hai bước nhanh.',
+      barra: 'Tải về', claro: 'Sáng', oscuro: 'Tối', pausar: 'Tạm dừng các hãng', reanudar: 'Phát các hãng',
+      frases: ['phim tài liệu về núi lửa', 'nhạc để nấu ăn', 'trận bóng đá trực tiếp', 'phim Giáng sinh']
+    },
+    tr: {
+      marcas: {
+        lg: ['LG TV', "LG ve webOS: Wi-Fi ile bağlanır ve TV'yi de açabilir."],
+        samsung: ['Samsung TV', "Samsung ve Tizen: TV'de bir kez onaylarsın, hepsi bu."],
+        roku: ['Roku', "Roku: TV'ler ve oynatıcılar, eşleştirilecek bir şey yok."],
+        android: ['Google TV', 'Google TV ve Android TV (Sony, TCL, Philips, Xiaomi ve diğerleri): ekranda görünen kodu yazarsın.']
+      },
+      mac: 'Mac için ücretsiz indir', ipad: 'iPad için ücretsiz indir', iphone: 'iPhone için ücretsiz indir', windows: 'Windows için ücretsiz indir',
+      android: 'Android için ücretsiz indir', boton: 'Ücretsiz indir',
+      notaAndroid: "Android'de Google Play'de erken erişim: iki kısa adım.",
+      barra: 'İndir', claro: 'Açık', oscuro: 'Koyu', pausar: 'Markaları duraklat', reanudar: 'Markaları oynat',
+      frases: ['yanardağ belgeselleri', 'yemek yaparken müzik', 'canlı futbol maçı', 'aile filmi']
+    },
+    el: {
+      marcas: {
+        lg: ['Τηλεόραση LG', 'LG με webOS: συνδέεται μέσω Wi-Fi και μπορεί να ανοίξει και την τηλεόραση.'],
+        samsung: ['Τηλεόραση Samsung', 'Samsung με Tizen: αποδέχεσαι μία φορά στην τηλεόραση και τελείωσες.'],
+        roku: ['Roku', 'Roku: τηλεοράσεις και συσκευές, χωρίς κανένα ζευγάρωμα.'],
+        android: ['Google TV', 'Google TV και Android TV (Sony, TCL, Philips, Xiaomi και άλλες): πληκτρολογείς τον κωδικό που εμφανίζει η οθόνη.']
+      },
+      mac: 'Δωρεάν λήψη για Mac', ipad: 'Δωρεάν λήψη για iPad', iphone: 'Δωρεάν λήψη για iPhone', windows: 'Δωρεάν λήψη για Windows',
+      android: 'Δωρεάν λήψη για Android', boton: 'Δωρεάν λήψη',
+      notaAndroid: 'Στο Android είναι πρώιμη πρόσβαση στο Google Play: δύο γρήγορα βήματα.',
+      barra: 'Λήψη', claro: 'Φωτεινό', oscuro: 'Σκούρο', pausar: 'Παύση των μαρκών', reanudar: 'Αναπαραγωγή των μαρκών',
+      frases: ['ντοκιμαντέρ για ηφαίστεια', 'μουσική για μαγείρεμα', 'ποδοσφαιρικός αγώνας ζωντανά', 'χριστουγεννιάτικη ταινία']
+    },
+    uk: {
+      marcas: {
+        lg: ['Телевізор LG', 'LG із webOS: підключається через Wi-Fi і може також увімкнути телевізор.'],
+        samsung: ['Телевізор Samsung', 'Samsung із Tizen: ви підтверджуєте один раз на телевізорі, і все готово.'],
+        roku: ['Roku', "Roku: телевізори та програвачі, нічого не потрібно з'єднувати."],
+        android: ['Google TV', 'Google TV і Android TV (Sony, TCL, Philips, Xiaomi та інші): ви вводите код, який показує екран.']
+      },
+      mac: 'Завантажити безкоштовно для Mac', ipad: 'Завантажити безкоштовно для iPad', iphone: 'Завантажити безкоштовно для iPhone', windows: 'Завантажити безкоштовно для Windows',
+      android: 'Завантажити безкоштовно для Android', boton: 'Завантажити безкоштовно',
+      notaAndroid: 'На Android це ранній доступ у Google Play: два швидкі кроки.',
+      barra: 'Завантажити', claro: 'Світла', oscuro: 'Темна', pausar: 'Призупинити бренди', reanudar: 'Відтворити бренди',
+      frases: ['документальні фільми про вулкани', 'музика для приготування їжі', 'футбольний матч наживо', 'різдвяний фільм']
+    },
+    he: {
+      marcas: {
+        lg: ['טלוויזיית LG', 'LG עם webOS: מתחברת דרך Wi-Fi ויכולה גם להדליק את הטלוויזיה.'],
+        samsung: ['טלוויזיית Samsung', 'Samsung עם Tizen: מאשרים פעם אחת בטלוויזיה וזהו.'],
+        roku: ['Roku', 'Roku: טלוויזיות ונגנים, בלי צורך בצימוד.'],
+        android: ['Google TV', 'Google TV ו-Android TV (Sony, TCL, Philips, Xiaomi ועוד): מקלידים את הקוד שמופיע במסך.']
+      },
+      mac: 'הורדה חינם ל-Mac', ipad: 'הורדה חינם ל-iPad', iphone: 'הורדה חינם ל-iPhone', windows: 'הורדה חינם ל-Windows',
+      android: 'הורדה חינם ל-Android', boton: 'הורדה חינם',
+      notaAndroid: 'ב-Android זו גישה מוקדמת ב-Google Play: שני שלבים קצרים.',
+      barra: 'הורדה', claro: 'בהיר', oscuro: 'כהה', pausar: 'השהיית המותגים', reanudar: 'הפעלת המותגים',
+      frases: ['סרטים דוקומנטריים על הרי געש', 'מוזיקה לבישול', 'משחק כדורגל בשידור חי', 'סרט משפחתי']
+    },
+    ar: {
+      marcas: {
+        lg: ['تلفزيون LG', 'LG مع webOS: يتصل عبر Wi-Fi ويمكنه أيضًا تشغيل التلفزيون.'],
+        samsung: ['تلفزيون Samsung', 'Samsung مع Tizen: توافق مرة واحدة على التلفزيون وينتهي الأمر.'],
+        roku: ['Roku', 'Roku: تلفزيونات ومشغلات، بلا أي إقران.'],
+        android: ['Google TV', 'Google TV وAndroid TV (Sony وTCL وPhilips وXiaomi وغيرها): تكتب الرمز الذي تعرضه الشاشة.']
+      },
+      mac: 'نزّل مجانًا لجهاز Mac', ipad: 'نزّل مجانًا لجهاز iPad', iphone: 'نزّل مجانًا لجهاز iPhone', windows: 'نزّل مجانًا لنظام Windows',
+      android: 'نزّل مجانًا لنظام Android', boton: 'نزّل مجانًا',
+      notaAndroid: 'على Android هو وصول مبكر في Google Play: خطوتان سريعتان.',
+      barra: 'تنزيل', claro: 'فاتح', oscuro: 'داكن', pausar: 'إيقاف العلامات مؤقتًا', reanudar: 'تشغيل العلامات',
+      frases: ['وثائقيات عن البراكين', 'موسيقى للطبخ', 'مباراة كرة قدم مباشرة', 'فيلم عائلي']
+    },
+    hi: {
+      marcas: {
+        lg: ['LG टीवी', 'webOS वाला LG: Wi-Fi से जुड़ता है और टीवी चालू भी कर सकता है।'],
+        samsung: ['Samsung टीवी', 'Tizen वाला Samsung: टीवी पर एक बार मंज़ूरी दें और बस हो गया।'],
+        roku: ['Roku', 'Roku: टीवी और प्लेयर, कुछ भी पेयर करने की ज़रूरत नहीं।'],
+        android: ['Google TV', 'Google TV और Android TV (Sony, TCL, Philips, Xiaomi और अन्य): स्क्रीन पर दिखने वाला कोड डालें।']
+      },
+      mac: 'Mac के लिए मुफ़्त डाउनलोड करें', ipad: 'iPad के लिए मुफ़्त डाउनलोड करें', iphone: 'iPhone के लिए मुफ़्त डाउनलोड करें', windows: 'Windows के लिए मुफ़्त डाउनलोड करें',
+      android: 'Android के लिए मुफ़्त डाउनलोड करें', boton: 'मुफ़्त डाउनलोड करें',
+      notaAndroid: 'Android पर यह Google Play में शुरुआती एक्सेस है: बस दो आसान चरण।',
+      barra: 'डाउनलोड', claro: 'लाइट', oscuro: 'डार्क', pausar: 'ब्रांड रोकें', reanudar: 'ब्रांड चलाएँ',
+      frases: ['ज्वालामुखी पर डॉक्यूमेंट्री', 'खाना बनाने के लिए संगीत', 'फ़ुटबॉल मैच लाइव', 'पारिवारिक फ़िल्म']
+    },
+    th: {
+      marcas: {
+        lg: ['ทีวี LG', 'LG ที่ใช้ webOS: เชื่อมต่อผ่าน Wi-Fi และเปิดทีวีได้ด้วย'],
+        samsung: ['ทีวี Samsung', 'Samsung ที่ใช้ Tizen: กดยอมรับบนทีวีเพียงครั้งเดียวก็พร้อมใช้งาน'],
+        roku: ['Roku', 'Roku: ทีวีและกล่องสตรีมมิง ไม่ต้องจับคู่อะไรเลย'],
+        android: ['Google TV', 'Google TV และ Android TV (Sony, TCL, Philips, Xiaomi และยี่ห้ออื่นอีกมาก): พิมพ์รหัสที่แสดงบนหน้าจอ']
+      },
+      mac: 'ดาวน์โหลดฟรีสำหรับ Mac', ipad: 'ดาวน์โหลดฟรีสำหรับ iPad', iphone: 'ดาวน์โหลดฟรีสำหรับ iPhone', windows: 'ดาวน์โหลดฟรีสำหรับ Windows',
+      android: 'ดาวน์โหลดฟรีสำหรับ Android', boton: 'ดาวน์โหลดฟรี',
+      notaAndroid: 'บน Android เป็นการเข้าถึงก่อนใครบน Google Play: ทำแค่สองขั้นตอน',
+      barra: 'ดาวน์โหลด', claro: 'สว่าง', oscuro: 'มืด', pausar: 'หยุดแบรนด์ชั่วคราว', reanudar: 'เล่นแบรนด์ต่อ',
+      frases: ['สารคดีภูเขาไฟ', 'เพลงสำหรับทำอาหาร', 'ถ่ายทอดสดฟุตบอล', 'หนังครอบครัว']
+    },
+    ko: {
+      marcas: {
+        lg: ['LG TV', 'webOS를 쓰는 LG: Wi-Fi로 연결되고 TV 전원도 켤 수 있어요.'],
+        samsung: ['Samsung TV', 'Tizen을 쓰는 Samsung: TV에서 한 번만 허용하면 바로 쓸 수 있어요.'],
+        roku: ['Roku', 'Roku: TV와 플레이어 모두, 따로 페어링할 필요가 없어요.'],
+        android: ['Google TV', 'Google TV와 Android TV (Sony, TCL, Philips, Xiaomi 등): 화면에 나오는 코드를 입력하면 돼요.']
+      },
+      mac: 'Mac용 무료 다운로드', ipad: 'iPad용 무료 다운로드', iphone: 'iPhone용 무료 다운로드', windows: 'Windows용 무료 다운로드',
+      android: 'Android용 무료 다운로드', boton: '무료 다운로드',
+      notaAndroid: 'Android에서는 Google Play 사전 체험으로 제공돼요: 두 단계면 끝나요.',
+      barra: '다운로드', claro: '라이트', oscuro: '다크', pausar: '브랜드 일시정지', reanudar: '브랜드 재생',
+      frases: ['화산 다큐멘터리', '요리할 때 듣는 음악', '축구 경기 생중계', '크리스마스 영화']
+    },
+    ja: {
+      marcas: {
+        lg: ['LGテレビ', 'webOS搭載のLG：Wi-Fiで接続でき、テレビの電源も入れられます。'],
+        samsung: ['Samsungテレビ', 'Tizen搭載のSamsung：テレビで一度許可するだけで使えます。'],
+        roku: ['Roku', 'Roku：テレビもプレーヤーも、ペアリングは不要です。'],
+        android: ['Google TV', 'Google TVとAndroid TV（Sony、TCL、Philips、Xiaomiなど）：画面に表示されるコードを入力します。']
+      },
+      mac: 'Mac用に無料ダウンロード', ipad: 'iPad用に無料ダウンロード', iphone: 'iPhone用に無料ダウンロード', windows: 'Windows用に無料ダウンロード',
+      android: 'Android用に無料ダウンロード', boton: '無料ダウンロード',
+      notaAndroid: 'Androidでは、Google Playの先行アクセスです。2ステップで始められます。',
+      barra: 'ダウンロード', claro: 'ライト', oscuro: 'ダーク', pausar: 'ブランドを一時停止', reanudar: 'ブランドを再生',
+      frases: ['火山のドキュメンタリー', '料理のときの音楽', 'サッカーの生中継', 'クリスマス映画']
+    },
+    'zh-hans': {
+      marcas: {
+        lg: ['LG 电视', '搭载 webOS 的 LG：通过 Wi-Fi 连接，还能开启电视。'],
+        samsung: ['Samsung 电视', '搭载 Tizen 的 Samsung：在电视上确认一次就能用。'],
+        roku: ['Roku', 'Roku：电视和播放器都无需配对。'],
+        android: ['Google TV', 'Google TV 和 Android TV（Sony、TCL、Philips、小米等）：输入屏幕上显示的代码即可。']
+      },
+      mac: '免费下载 Mac 版', ipad: '免费下载 iPad 版', iphone: '免费下载 iPhone 版', windows: '免费下载 Windows 版',
+      android: '免费下载 Android 版', boton: '免费下载',
+      notaAndroid: '在 Android 上是 Google Play 的抢先体验：只需两步。',
+      barra: '下载', claro: '浅色', oscuro: '深色', pausar: '暂停品牌', reanudar: '播放品牌',
+      frases: ['火山纪录片', '做饭时听的音乐', '足球比赛直播', '圣诞电影']
+    },
+    'zh-hant': {
+      marcas: {
+        lg: ['LG 電視', '搭載 webOS 的 LG：透過 Wi-Fi 連線，還能開啟電視。'],
+        samsung: ['Samsung 電視', '搭載 Tizen 的 Samsung：在電視上確認一次就能使用。'],
+        roku: ['Roku', 'Roku：電視與播放器都不需要配對。'],
+        android: ['Google TV', 'Google TV 與 Android TV（Sony、TCL、Philips、小米等）：輸入畫面上顯示的代碼即可。']
+      },
+      mac: '免費下載 Mac 版', ipad: '免費下載 iPad 版', iphone: '免費下載 iPhone 版', windows: '免費下載 Windows 版',
+      android: '免費下載 Android 版', boton: '免費下載',
+      notaAndroid: '在 Android 上是 Google Play 的搶先體驗：只要兩個步驟。',
+      barra: '下載', claro: '淺色', oscuro: '深色', pausar: '暫停品牌', reanudar: '播放品牌',
+      frases: ['火山紀錄片', '烹飪時聽的音樂', '足球賽直播', '聖誕電影']
     }
   };
   var L = (document.documentElement.lang || '').toLowerCase();  // zh-hans y zh-hant tienen tabla propia; pt-br usa pt

@@ -32,6 +32,47 @@ Recuento real hecho con el revisor idioma por idioma (no con la lista de memoria
 Hecho: `fi` con 0 errores. En curso: agentes Sonnet en paralelo por idioma para las portadas que faltan y para
 completar los datos de `ro`, `ms`, `hu`, `el`, `th`, `uk`, `hi`, `vi`.
 
+**Al día 25-nov (se actualiza a cada idioma terminado):**
+
+- **0 errores en el revisor (20)**: `da`, `nl`, `nb`, `sv`, `zh-hant`, `ja`, `ko`, `id`, `he`, `ar`, `zh`, `cs`,
+  `sk`, `fi`, `pl`, `tr`, `ro`, `hu`, `el`, `vi`. Todavía **no** sumados a `LISTOS`: se suman todos juntos al final, porque
+  `pie_firma.py` (que corre en el pre-commit) reescribe el pie de todas las páginas y conviene no hacerlo mientras
+  haya agentes trabajando.
+- **`ms`: datos y portada terminados, 2 errores que se arreglan solos al juntar.** Los dos son textos en alemán
+  dentro del bloque `<!-- pie-firma -->`, que no se edita a mano: lo escribe `pie_firma.py`. Ese script solo toca
+  las páginas que existen cuando corre, y la portada en malayo se creó después de la última pasada. Se arregla al
+  sumar `ms` a `LISTOS` y correr `pie_firma.py` en el paso de juntar. Comprobado: `textos_idiomas.json` ya tiene los
+  textos cortos completos de los 24 idiomas (pie, Microsoft Store e imagen para compartir), así que no falta nada
+  para que el pie salga en malayo. Lo mismo pasará con los idiomas que terminen después.
+- **En curso (3 agentes)**: `th`, `uk`, `hi`. Los tres ya tienen `herramientas/rutas/<k>.json` y
+  `herramientas/datos_<k>.py` con las 1056 líneas del alemán; les falta **solo la portada** `<k>/index.html`. Si hay
+  que retomarlos, el trabajo que queda es ese archivo: se copia `de/index.html` traducido siguiendo el punto 3 de
+  `docs/AGREGAR-IDIOMA.md` (son alfabetos no latinos, así que la referencia es `ja/index.html` y los slugs ya están
+  en su `rutas/<k>.json`).
+- **Nada por relanzar de los otros**: `el` y `vi` terminaron con 0 errores (rutas, datos y portada).
+
+**Semanal al 99 % al escribir esto.** Por eso no se empezó ningún idioma nuevo. Si se corta antes de que `th`, `uk`
+y `hi` terminen, lo único pendiente de ellos es la portada, como dice el punto de arriba.
+- Si el plan semanal se corta: se termina el idioma que esté a medias y no se empieza otro. El semanal se renueva
+  el 27-nov a las 18:00 de Chile.
+
+**Dos arreglos al revisor en esta sesión (`herramientas/revisar_idioma.py`):**
+
+1. Daba `ERROR portada: enlace al alemán /de/` en TODOS los idiomas, hasta en los que ya estaban en 0. Causa: el
+   pre-commit corre `pie_firma.py`, que reescribe el selector de idioma del pie de cada página, y ahí el enlace a
+   `/de/` es correcto (el pie lista los 30 idiomas, alemán incluido). El revisor marcaba cualquier `/de/` de la
+   portada. Ahora salta los enlaces que llevan `hreflang` (el selector del pie y el bloque de alternates) y sigue
+   marcando los demás. Con esto los 18 vuelven a 0 errores.
+2. El aviso "N textos contra 299 del alemán" ahora dice en qué líneas está la diferencia, para poder revisarlo de
+   un vistazo.
+
+**Aviso "298 textos contra 299" (ja, ko, ar, tr, hu): comprobado, no falta nada.** En los cinco la diferencia está
+en la misma línea 429 de la portada, la pregunta "¿con qué televisores funciona?": en alemán el párrafo empieza con
+la palabra suelta "Mit" antes del primer enlace y en esos idiomas la frase empieza directamente por el enlace, así
+que hay un nodo de texto menos. Verificado en el húngaro (alfabeto latino, legible): están los 4 enlaces de marca,
+las 5 marcas de televisores antiguos (NetCast, SmartCast, Bravia, Viera, Philips), Apple TV y HDMI-CEC, igual que en
+alemán. No es texto sin traducir.
+
 Dos hallazgos de esta sesión:
 - El aviso de `ja` (298 textos contra 299) es falso positivo: en alemán el párrafo de "con qué televisores funciona"
   empieza con la preposición "Mit" antes del primer enlace y en japonés empieza directo con el enlace. No falta nada.
