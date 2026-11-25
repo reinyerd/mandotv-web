@@ -1212,6 +1212,8 @@ a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
   list-style: none; background: rgba(24, 26, 33, .94); border: 1px solid rgba(255, 255, 255, .12); border-radius: 16px;
   -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4);
   box-shadow: 0 28px 60px -14px rgba(0, 0, 0, .75);
+  /* Con muchos idiomas (30 o más) la lista se desplaza en vez de salirse de la pantalla. */
+  max-height: min(70vh, 440px); overflow-y: auto; overscroll-behavior: contain;
 }
 .pie-idioma a {
   display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 12px; border-radius: 10px;

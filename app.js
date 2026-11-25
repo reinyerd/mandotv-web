@@ -335,7 +335,7 @@
     logoFijo.href = '#inicio';
     var iconoFijo = document.createElement('img');
     iconoFijo.src = '/icono.svg';
-    iconoFijo.alt = '';
+    iconoFijo.alt = 'Mando TV';
     iconoFijo.width = 26;
     iconoFijo.height = 26;
     logoFijo.appendChild(iconoFijo);
