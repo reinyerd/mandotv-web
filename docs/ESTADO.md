@@ -1,5 +1,22 @@
 # Estado de la web mandotv.app
 
+## 25-nov (noche): teléfono de la vitrina, clics que fallaban y pestañas vivas (publicado)
+
+Pedido del fundador. Vale para las 30 portadas (solo cambian `estilos.css` y `app.js`).
+- **Clics que no tomaban**: el teléfono va inclinado en 3D y la mitad que queda detrás del plano de `.inclinador` la
+  tapaba ese contenedor invisible, que se quedaba con el clic. Ahora `.inclinador` no recibe clics y el teléfono sí.
+  Medido con `elementFromPoint` en 180 puntos sobre las teclas: antes muchos caían en `DIV.inclinador`; después 178
+  caen en su tecla (los 2 restantes son esquinas del rectángulo inclinado).
+- **Celular**: `touch-action: manipulation` (sin la espera del doble toque) y cualquier toque sobre el teléfono pausa
+  la rotación de marcas (con el dedo no había "pasar por encima" que la pausara y cambiaba de marca en mitad del
+  toque). Se reanuda con el botón de pausa.
+- **Texto no seleccionable** en toda la vitrina (ver más abajo).
+- **Pestañas**: Touchpad (el punto sigue al dedo, un toque corto es OK), Teclado (escribe en el campo; va de
+  izquierda a derecha también en árabe y hebreo) y Apps (9 apps con inicial sobre color, sin logos). Las vistas las
+  crea `app.js`, sin texto que traducir. Cambian al instante en el `pointerdown`.
+- Probado en local: inglés escritorio y árabe en 375 px (37 de 37 teclas responden en su centro), sin errores de
+  consola.
+
 ## 25-nov: web en 30 idiomas PUBLICADA (sí del fundador; `main` = `a2821e9f`)
 
 - **Fusión previa**: `main` había avanzado con la reestructura de URL de otra sesión (`683e8ffa`: inglés en la raíz,

@@ -1419,3 +1419,48 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
    el doble clic saltaba a marcar el nombre del modelo que está al lado. */
 .escaparate, .escaparate * { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
 .telefono, .telefono * { -webkit-user-select: none; user-select: none; }
+/* Clics que fallaban (25-nov): el teléfono va inclinado en 3D y la mitad que queda detrás del plano de su contenedor
+   la tapaba el propio contenedor, que es invisible pero recibía el clic. El contenedor ya no recibe clics; el
+   teléfono sí. */
+.inclinador { pointer-events: none; }
+.inclinador .telefono { pointer-events: auto; }
+/* Respuesta inmediata al toque en el celular: sin la espera del doble toque para ampliar. */
+.telefono { touch-action: manipulation; }
+
+/* Pestañas del teléfono (25-nov): Touchpad, Teclado y Apps cambian la zona central (donde van las fichas, las teclas
+   y la cruceta); volumen, canales y la barra de pestañas se quedan. Las vistas las crea app.js. */
+.app[data-vista]:not([data-vista="control"]) .t-chips,
+.app[data-vista]:not([data-vista="control"]) .t-teclas,
+.app[data-vista]:not([data-vista="control"]) .cruceta { visibility: hidden; pointer-events: none; }
+.vista { left: 16px; right: 16px; top: 184px; height: 405px; display: none; }
+.app[data-vista="touchpad"] .v-touchpad, .app[data-vista="teclado"] .v-teclado, .app[data-vista="apps"] .v-apps { display: block; }
+.vista, .vista * { cursor: pointer; }
+/* touchpad */
+.v-pad { position: absolute; inset: 0; border-radius: 28px; overflow: hidden; touch-action: none;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, .075), rgba(255, 255, 255, 0) 62%), var(--vidrio-app); }
+.v-pad svg { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px; opacity: .28; }
+.v-punto { position: absolute; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; opacity: 0;
+  background: var(--ok); box-shadow: 0 0 30px 4px color-mix(in srgb, var(--marca) 62%, transparent); pointer-events: none; }
+/* teclado */
+.v-teclado { direction: ltr; }
+.v-campo { position: absolute; left: 0; right: 0; top: 0; height: 54px; border-radius: 18px; padding: 0 18px; display: flex; align-items: center;
+  background: var(--vidrio-app); font: 500 19px/1 var(--texto); letter-spacing: 0; color: #f4f6fa; white-space: pre; overflow: hidden; }
+.v-cursor { flex: none; width: 2px; height: 24px; margin-left: 2px; border-radius: 1px; background: var(--ok); }
+.v-filas { position: absolute; left: 0; right: 0; top: 66px; bottom: 0; display: grid; grid-template-rows: repeat(4, 1fr); gap: 9px; }
+.v-fila { display: flex; justify-content: center; gap: 5px; }
+.v-letra { flex: 1 1 0; max-width: 36.3px; display: grid; place-items: center; border-radius: 11px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, 0) 55%), var(--vidrio-app);
+  font: 500 19px/1 var(--texto); letter-spacing: 0; color: #f4f6fa; text-transform: uppercase; }
+.v-letra.ancha { flex: 1.6 1 0; max-width: 62px; } .v-letra.espacio { flex: 6 1 0; max-width: none; }
+.v-letra svg { width: 22px; height: 22px; }
+.v-letra.enviar { background: linear-gradient(180deg, var(--ok), color-mix(in srgb, var(--ok) 88%, #000)); color: #0b0d16; }
+/* apps */
+.v-rejilla { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 10px; }
+.v-app { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 11px; border-radius: 22px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, 0) 55%), var(--vidrio-app);
+  font: 500 13.5px/1 var(--texto); letter-spacing: 0; color: rgba(244, 246, 250, .82); white-space: nowrap; }
+.v-app i { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 15px; font: 700 23px/1 var(--texto); font-style: normal; color: #fff; }
+.telefono .v-letra, .telefono .v-app { transition: transform .12s cubic-bezier(.23, 1, .32, 1), filter .12s; }
+.telefono.claro .v-campo, .telefono.claro .v-letra { color: #111522; }
+.telefono.claro .v-app { color: rgba(17, 21, 34, .78); }
+.telefono.claro .v-letra.enviar { color: #fff; }

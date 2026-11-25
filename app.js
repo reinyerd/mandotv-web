@@ -711,6 +711,9 @@
   }
   var ocultar = null;
   telefono.addEventListener('pointerdown', function (e) {
+    // Al tocar el teléfono la rotación de marcas se detiene (con el dedo no hay "pasar por encima" que la pause, y
+    // el teléfono cambiaba de marca en mitad del toque). Se reanuda con el botón de pausa.
+    if (!detenida) ponerPausa(true);
     var el = e.target.closest('.cruceta, .balancin, .tecla, .pestanas span');
     if (!el) return;
     var t = etiquetaDe(el, e);
@@ -834,4 +837,123 @@
   if (!vitrina) return;
   vitrina.addEventListener('selectstart', function (e) { e.preventDefault(); });
   vitrina.addEventListener('mousedown', function (e) { if (e.detail > 1) e.preventDefault(); });
+})();
+
+// Pestañas del teléfono de la vitrina (25-nov, pedido del fundador): Touchpad, Teclado y Apps responden al toque y
+// cambian la zona central del teléfono, como en la app. Las vistas se crean aquí para no repetir marcado en las
+// portadas de los 30 idiomas: no llevan texto que traducir (letras, íconos y nombres de apps).
+(function () {
+  var telefono = document.getElementById('telefono');
+  var app = telefono && telefono.querySelector('.app');
+  var pestanas = app && app.querySelectorAll('.pestanas span');
+  if (!app || !pestanas || pestanas.length !== 4) return;
+  var NOMBRES = ['control', 'touchpad', 'teclado', 'apps'];
+  var chip = document.querySelector('.escaparate .toque');
+  var ocultar = null;
+  function avisar(txt) {   // la misma etiqueta que muestran las teclas del control
+    if (!chip) return;
+    chip.textContent = txt;
+    if (!chip.animate) return;
+    chip.animate([{ opacity: 0, transform: 'translateY(6px) scale(.96)' }, { opacity: 1, transform: 'none' }],
+      { duration: 140, easing: 'cubic-bezier(.23, 1, .32, 1)', fill: 'both' });
+    clearTimeout(ocultar);
+    ocultar = setTimeout(function () {
+      chip.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 200, easing: 'ease-out', fill: 'both' });
+    }, 900);
+  }
+  function pulsar(el) {
+    el.classList.add('pulsada');
+    setTimeout(function () { el.classList.remove('pulsada'); }, 130);
+  }
+  function crear(clase, html) {
+    var d = document.createElement('div');
+    d.className = 'vista ' + clase;
+    d.innerHTML = html;
+    app.insertBefore(d, app.querySelector('.pestanas'));
+    return d;
+  }
+
+  // Touchpad: el punto sigue al dedo; un toque corto es OK.
+  var icono = pestanas[1].querySelector('svg');
+  var vPad = crear('v-touchpad', '<div class="v-pad">' + (icono ? icono.outerHTML : '') + '<i class="v-punto"></i></div>');
+  var pad = vPad.querySelector('.v-pad'), punto = vPad.querySelector('.v-punto');
+  var arrastre = null;
+  function mover(e) {
+    var r = pad.getBoundingClientRect();
+    var x = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)), y = Math.max(0, Math.min(1, (e.clientY - r.top) / r.height));
+    punto.style.left = (x * pad.offsetWidth) + 'px';
+    punto.style.top = (y * pad.offsetHeight) + 'px';
+  }
+  pad.addEventListener('pointerdown', function (e) {
+    arrastre = { x: e.clientX, y: e.clientY, movido: false };
+    try { pad.setPointerCapture(e.pointerId); } catch (err) { /* sin captura */ }
+    mover(e);
+    punto.style.opacity = '1';
+  });
+  pad.addEventListener('pointermove', function (e) {
+    if (!arrastre) return;
+    if (Math.hypot(e.clientX - arrastre.x, e.clientY - arrastre.y) > 6) arrastre.movido = true;
+    mover(e);
+  });
+  function soltar() {
+    if (!arrastre) return;
+    if (!arrastre.movido) avisar('OK');
+    arrastre = null;
+    if (punto.animate) punto.animate([{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(1.9)' }], { duration: 260, easing: 'ease-out' });
+    punto.style.opacity = '0';
+  }
+  pad.addEventListener('pointerup', soltar);
+  pad.addEventListener('pointercancel', soltar);
+
+  // Teclado: lo que se toca aparece en el campo, como al escribir en el buscador del TV.
+  var BORRAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 5H9l-6 7 6 7h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z"/><path d="m16 9-5 6m0-6 5 6"/></svg>';
+  var ENVIAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
+  var filas = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'].map(function (f, n) {
+    var t = f.split('').map(function (c) { return '<span class="v-letra" data-t="' + c + '">' + c + '</span>'; }).join('');
+    if (n === 2) t += '<span class="v-letra ancha" data-t="borrar">' + BORRAR + '</span>';
+    return '<div class="v-fila">' + t + '</div>';
+  }).join('');
+  filas += '<div class="v-fila"><span class="v-letra espacio" data-t=" "></span><span class="v-letra ancha enviar" data-t="enviar">' + ENVIAR + '</span></div>';
+  var vTec = crear('v-teclado', '<div class="v-campo"><span class="v-texto"></span><i class="v-cursor"></i></div><div class="v-filas">' + filas + '</div>');
+  var texto = vTec.querySelector('.v-texto'), cursor = vTec.querySelector('.v-cursor');
+  if (cursor.animate) cursor.animate([{ opacity: 1 }, { opacity: 1, offset: .5 }, { opacity: 0, offset: .51 }, { opacity: 0 }], { duration: 1000, iterations: Infinity });
+  vTec.addEventListener('pointerdown', function (e) {
+    var k = e.target.closest('.v-letra');
+    if (!k) return;
+    pulsar(k);
+    var t = k.dataset.t;
+    if (t === 'borrar') { texto.textContent = texto.textContent.slice(0, -1); avisar('⌫'); }
+    else if (t === 'enviar') { avisar(texto.textContent.trim() ? texto.textContent.trim() + '  ↵' : '↵'); texto.textContent = ''; }
+    else { if (texto.textContent.length < 22) texto.textContent += t; avisar(t === ' ' ? '␣' : t.toUpperCase()); }
+  });
+
+  // Apps: al tocar una, la etiqueta dice cuál se abriría en el TV. Sin logos: la inicial sobre un color.
+  var APPS = [['YouTube', '#e5352b'], ['Netflix', '#c2101a'], ['Prime Video', '#1a8fe3'], ['Disney+', '#2a4fd6'], ['Spotify', '#1a9f4b'],
+    ['Twitch', '#8a45f0'], ['Apple TV', '#6f7480'], ['Max', '#5b3df5'], ['Plex', '#c98a06']];
+  var vApps = crear('v-apps', '<div class="v-rejilla">' + APPS.map(function (a) {
+    return '<span class="v-app" data-t="' + a[0] + '"><i style="background:' + a[1] + '">' + a[0].charAt(0) + '</i>' + a[0] + '</span>';
+  }).join('') + '</div>');
+  vApps.addEventListener('pointerdown', function (e) {
+    var k = e.target.closest('.v-app');
+    if (!k) return;
+    pulsar(k);
+    avisar(k.dataset.t);
+  });
+
+  // Cambio de pestaña: al instante en el pointerdown (sin esperar al clic) y con una entrada corta hecha con la
+  // Web Animations API, que también se ve con los efectos de Windows apagados.
+  var vistas = { touchpad: vPad, teclado: vTec, apps: vApps };
+  app.dataset.vista = 'control';
+  Array.prototype.forEach.call(pestanas, function (p, i) {
+    p.addEventListener('pointerdown', function () {
+      var nombre = NOMBRES[i];
+      if (app.dataset.vista === nombre) return;
+      app.dataset.vista = nombre;
+      Array.prototype.forEach.call(pestanas, function (o) { o.classList.toggle('activa', o === p); });
+      var entra = vistas[nombre] ? [vistas[nombre]] : Array.prototype.slice.call(app.querySelectorAll('.t-chips, .t-teclas, .cruceta'));
+      entra.forEach(function (el) {
+        if (el.animate) el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, easing: 'ease-out' });
+      });
+    });
+  });
 })();
