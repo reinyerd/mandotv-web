@@ -354,5 +354,5 @@ clics de países no hispanohablantes en /en/ antes y después del 24-nov.
   aviso repetido con espacio duro), cookies.js (foco vuelve a quien abrió el aviso), demo.js (sin cambiar aria-label junto a
   aria-pressed), estilos.css (enlace "Saltar al contenido" visible al recibir foco, scroll contenido en el panel de correo),
   loading="lazy" en los 3 videos + generar_en.py, fetchpriority="low" en el beacon de Cloudflare (1.067 archivos + generadores).
-- Commit local a0fbb3ad hecho; falta push con el OK del fundador (único cambio visible: "Saltar al contenido" al pulsar Tab).
+- Publicado con OK del fundador (fbef4ed2, en vivo 25-nov). IndexNow enviado (200). Sin pedir inspección en Search Console: cambio técnico sin contenido nuevo.
 - Descartado tras verificación: 8 sugerencias (ver informe del workflow wf_65a283bb-f2a).
