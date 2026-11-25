@@ -1,5 +1,23 @@
 # Estado de la web mandotv.app
 
+## 25-NOV: PRUEBA GRATIS DE PRO DE 3 DÍAS ENCENDIDA (config remota, sin versión nueva)
+
+- Aprobado por el fundador el 25-nov ("Sí, enciéndela"). En `mandotv-web/app/config.json` (https://mandotv.app/app/config.json)
+  se agregó la clave `"pro"` con la lista de funciones y plataformas de fábrica (`funcionesProPorDefecto` /
+  `plataformasProPorDefecto` de `lib/core/licencia.dart`) y `"dias_prueba": 3`. `funciones_pro: []` (solo la lee la
+  1.0.1) no se tocó: la 1.0.1 sigue igual.
+- Efecto: cada dispositivo sin Pro tiene 3 días de Pro desde la primera vez que abre la app con esta config (también
+  los usuarios antiguos, una sola vez); al terminar vuelve a Gratis. Quien compró Pro no cambia. Lo gratis sigue gratis.
+  En versiones muy antiguas (1.0.2 a 1.0.11) "apps" y "entradas" quedan gratis mientras exista la clave `pro`
+  (en la 1.0.12 en adelante ya lo eran).
+- Prueba: `test/config_publicado_test.dart` lee el archivo de la web con el código de la app (27 pruebas en verde con
+  `licencia_test.dart`). Revisión de seguridad: sin hallazgos.
+- **Cómo apagarla**: quitar la clave `"pro"` entera de config.json (vuelve exactamente a lo de antes: lista de fábrica
+  y sin prueba), o solo `"dias_prueba"` (misma lista, sin prueba). Quien ya empezó la prueba no la repite al volver a
+  encenderla.
+- **Medida**: compras Pro / descargas por semana. Línea base al 25-nov: 2 compras pagadas en ~350 descargas (0,6 %).
+  **Se revisa el 2-dic** (si no sube, se apaga o se cambia la duración).
+
 ## 25-nov: "El control, paso a paso" en los 30 idiomas (PUBLICADO, `main` = `2d17649b`)
 
 Con el sí del fundador a la comparación lado a lado. La sección `#demo` de la portada en inglés está ahora en las 30
