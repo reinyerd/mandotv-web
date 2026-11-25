@@ -1,5 +1,12 @@
 # Estado de la web mandotv.app
 
+## 25-nov: Cloudflare delante, preparado (falta cambiar servidores en Porkbun)
+
+Detalle y vuelta atrás en `docs/CLOUDFLARE.md`. Cloudflare ya tiene todo configurado (registros, HSTS, X-Frame-Options,
+Referrer-Policy, Permissions-Policy, nosniff), pero no recibe visitas hasta que en Porkbun se pongan
+`brynne.ns.cloudflare.com` y `owen.ns.cloudflare.com`. Espera el sí del fundador. Después: comprobar cabeceras con
+curl, el correo hola@mandotv.app, GitHub Pages y repetir el auditor.
+
 ## 24-nov (noche): avisos del auditor auditarweb.co (91/100), PUBLICADO (merge `824f6aa4`, sí del fundador)
 
 - Hecho en la rama (commit `16efd5c7`): logo con `alt="Mando TV"` en barra, pie y barra fija (226 páginas, generadores
