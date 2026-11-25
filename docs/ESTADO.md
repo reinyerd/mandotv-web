@@ -1,5 +1,12 @@
 # Estado de la web mandotv.app
 
+## 25-nov: auditor auditarweb.co en 98/100
+
+Único aviso: "No hay datos de autoridad de dominio" (se mide con enlaces de otras webs; no se arregla con código).
+Enlaces conseguidos: AlternativeTo publicado (alternativeto.net/software/mando-tv/, visto el 25-nov). mandotv.net
+redirige con 301 a mandotv.app. Siguiente: kit de directorios de `control/docs/ENLACES-SEO.md` (SaaSHub, Slant,
+Uneed, Fazier, Peerlist; Product Hunt cuando Google Play esté en producción), cada sitio con el OK del fundador.
+
 ## 25-nov: Cloudflare delante de mandotv.app, ACTIVO (sí del fundador)
 
 - Porkbun con `brynne.ns.cloudflare.com` y `owen.ns.cloudflare.com` (registro .app confirmado por RDAP). Sin DNSSEC.
