@@ -149,7 +149,7 @@ def pie_marcas():
     li += [f'        <li><a href="/guias/{s}/">{n}</a></li>' for s, n in GUIAS_PIE]
     return '      <ul class="marcas-enlaces pie-marcas" aria-label="Marcas y guías">\n' + '\n'.join(li) + '\n      </ul>\n'
 
-LOGO = '<img src="/icono.svg?v=1a26271c80" alt="" width="34" height="34">'
+LOGO = '<img src="/icono.svg?v=1a26271c80" alt="Mando TV" width="34" height="34">'
 
 def otras(actual):
     return '\n'.join(f'          <li><a href="/{m["slug"]}/">Control remoto para {m["nombre"]}</a></li>' for m in MARCAS if m is not actual)
@@ -176,6 +176,7 @@ def pagina(m):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="apple-itunes-app" content="app-id=6834927348">
   <title>{e(m["titulo"])}</title>
   <meta name="description" content="{e(m["desc"])}">

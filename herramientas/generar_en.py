@@ -118,6 +118,7 @@ def cabecera(titulo, desc, url, clave, color, tipo, ld):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="apple-itunes-app" content="app-id=6834927348">
   <title>{e(titulo)}</title>
   <meta name="description" content="{e(desc)}">

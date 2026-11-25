@@ -91,7 +91,7 @@ def bloque_nuevo(lenguaje, hreflangs, tiene_tiendas):
     bloque = '      <!-- pie-firma: lo escribe herramientas/pie_firma.py (no editar a mano) -->\n'
     bloque += '      <div class="pie-cierre">\n'
     bloque += '        <div class="pie-firma">\n'
-    bloque += '          <a class="pie-logo" href="' + inicio_esc + '"><img src="/icono.svg" alt="" width="44" height="44" loading="lazy" decoding="async">Mando TV</a>\n'
+    bloque += '          <a class="pie-logo" href="' + inicio_esc + '" aria-label="Mando TV"><img src="/icono.svg" alt="Mando TV" width="44" height="44" loading="lazy" decoding="async">Mando TV</a>\n'
     bloque += '          <p>' + lema_esc + '</p>\n'
     bloque += '        </div>\n'
     bloque += '        <div class="pie-accion">\n'
