@@ -1,5 +1,23 @@
 # Estado de la web mandotv.app
 
+## 25-nov: "El control, paso a paso" en los 30 idiomas (PUBLICADO, `main` = `2d17649b`)
+
+Con el sí del fundador a la comparación lado a lado. La sección `#demo` de la portada en inglés está ahora en las 30
+portadas: demo animada con los nombres de los botones de la app en cada idioma y las dos capturas de App Store en ese
+idioma con Pro activo, sin candados (pedido del fundador; también en inglés). Comprobado en vivo (es, ar, ja: la demo se
+mueve y las capturas cargan) y en local las 30 en 1280 y 375 px sin desborde ni textos cortados. IndexNow aceptó las
+30 portadas (HTTP 200).
+- Script: `herramientas/demo_portadas.py <sitio> C:/server/htdocs/control/lib/l10n` (idempotente; molde = la sección
+  de `index.html`). Textos en `herramientas/demo_textos.json`. Capturas: `control` con
+  `flutter test tool/capturas_tienda_test.dart --update-goldens --dart-define=WEB=true --dart-define=IDIOMAS=<k>`,
+  `tool/componer_capturas_tienda.ps1 -Idioma <k> -Carpeta capturas-web` y
+  `C:/server/htdocs/mandotv-web-demo-pasos/herramientas/webp_capturas.py`.
+- **Videos por idioma (pendiente)**: la sesión "Videos multiidioma locales para YouTube" los deja en
+  `C:/server/htdocs/mandotv-web-videos-entrega/<k>/` después del sí del fundador a sus 3 muestras (es, ja, ar). Al
+  llegar: copiarlos a `media/`, volver a correr `demo_portadas.py` (pone el video arriba solo), agregar un
+  `VideoObject` por idioma en el JSON-LD (pedir el ID de YouTube de cada uno), versionar, publicar e IndexNow.
+- Pendiente común con lo de arriba: solicitar indexación en Search Console (cuota de hoy agotada).
+
 ## 25-nov (noche): teléfono de la vitrina, clics que fallaban y pestañas vivas (publicado)
 
 Pedido del fundador. Vale para las 30 portadas (solo cambian `estilos.css` y `app.js`).
