@@ -4,6 +4,9 @@ cd "$(git rev-parse --show-toplevel)" || exit 1
 # Primero el cierre del pie (firma, Descargar, copyright e idioma) en todas las páginas (ver herramientas/pie_firma.py).
 firmas=$(python -I herramientas/pie_firma.py) || { echo "pie_firma.py falló"; exit 1; }
 printf '%s\n' "$firmas" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git add -- "$f"; done
+# Script del idioma recordado en el <head> de cada página con gemelas (ver herramientas/idioma_guardado.py).
+guardado=$(python -I herramientas/idioma_guardado.py) || { echo "idioma_guardado.py falló"; exit 1; }
+printf '%s\n' "$guardado" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git add -- "$f"; done
 cambiadas=$(python -I herramientas/versionar.py) || { echo "versionar.py falló"; exit 1; }
 # Python en Windows termina las líneas con \r\n: se quita el \r para que git encuentre los archivos.
 printf '%s\n' "$cambiadas" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git add -- "$f"; done

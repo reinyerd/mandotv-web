@@ -116,11 +116,39 @@ function pilaAvisos() {
   }
 })();
 
+// Idioma recordado (25-nov). La elección de idioma se guarda en este navegador ('mandotv-idioma', con el código del
+// hreflang): al tocar un idioma del pie, de la barra o de "esta guía en otros idiomas", al tocar "Ver en..." del
+// aviso, o al cerrar el aviso (quedarse en el de la página). La próxima vez que la persona entra desde fuera del sitio,
+// el script corto del <head> (lo pone herramientas/idioma_guardado.py) la lleva a la gemela en su idioma antes de
+// pintar. Nunca se adivina por el idioma del navegador: solo se recuerda lo que la persona eligió, y los robots (que
+// no guardan nada) ven cada versión tal cual, como pide Google.
+var IDIOMA_GUARDADO = 'mandotv-idioma';
+function codigoIdioma(x) {
+  // Etiqueta del navegador o de la página (es-CL, pt-BR, zh-TW, nb-NO...) al código de hreflang del sitio.
+  x = String(x || '').toLowerCase().replace('_', '-');
+  if (/^zh-(tw|hk|mo|hant)/.test(x)) return 'zh-hant';
+  if (/^zh/.test(x)) return 'zh-hans';
+  if (/^(no|nn|nb)(-|$)/.test(x)) return 'nb';
+  if (/^iw(-|$)/.test(x)) return 'he';
+  if (/^in(-|$)/.test(x)) return 'id';
+  return x.split('-')[0];
+}
+function guardarIdioma(c) {
+  try {
+    localStorage.setItem(IDIOMA_GUARDADO, codigoIdioma(c));
+    localStorage.removeItem('mandotv-aviso-idioma');  // marca vieja (solo decía "ya lo vio"), ya no se usa
+  } catch (e) { /* sin almacenamiento: no se recuerda, el aviso vuelve a ofrecer */ }
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[hreflang]');
+  if (a && a.host === location.host && a.getAttribute('hreflang') !== 'x-default') guardarIdioma(a.getAttribute('hreflang'));
+});
+
 // Aviso de idioma (24-nov): a quien llega desde fuera del sitio con el navegador en otro idioma que esta página tiene
 // (sus <link rel="alternate" hreflang>), se le ofrece esa versión con un aviso que se cierra. No redirige solo:
-// Google desaconseja redirigir por idioma y su robot tiene que ver cada versión tal cual. Se muestra una sola vez.
+// Google desaconseja redirigir por idioma y su robot tiene que ver cada versión tal cual. Sale hasta que la persona
+// elige (ver "Idioma recordado" arriba); después ya no se le pregunta.
 (function () {
-  var CLAVE = 'mandotv-aviso-idioma';
   // Cada texto va en el idioma que se ofrece, el que esa persona entiende.
   var TEXTOS = {
     es: { aria: 'Idioma', texto: 'Esta página también está en español.', ir: 'Ver en español', cerrar: 'Cerrar' },
@@ -130,20 +158,27 @@ function pilaAvisos() {
     pt: { aria: 'Idioma', texto: 'Esta página também está em português.', ir: 'Ver em português', cerrar: 'Fechar' },
     it: { aria: 'Lingua', texto: 'Questa pagina è disponibile anche in italiano.', ir: 'Vedi in italiano', cerrar: 'Chiudi' }
   };
-  function guardar() { try { localStorage.setItem(CLAVE, '1'); } catch (e) { /* sin almacenamiento: nada que recordar */ } }
-  try { if (localStorage.getItem(CLAVE)) return; } catch (e) { /* sigue */ }
+  var actual = codigoIdioma(document.documentElement.lang);
+  // Para medir el idioma recordado: el script del <head> deja de qué idioma venía antes de llevar a la persona aquí.
+  try {
+    var desde = sessionStorage.getItem('mandotv-idioma-desde');
+    if (desde) {
+      sessionStorage.removeItem('mandotv-idioma-desde');
+      if (window.gtag) window.gtag('event', 'idioma_recordado', { desde: codigoIdioma(desde), hacia: actual });
+    }
+  } catch (e) { /* sigue */ }
+  try { if (localStorage.getItem(IDIOMA_GUARDADO)) return; } catch (e) { /* sigue */ }
   // Quien ya navega dentro del sitio eligió su idioma (por ejemplo con el selector del pie): no se le insiste.
   try { if (document.referrer && new URL(document.referrer).host === location.host) return; } catch (e) { /* sigue */ }
 
-  var actual = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
   var gemelas = {};
   document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
-    gemelas[l.getAttribute('hreflang').slice(0, 2).toLowerCase()] = l.href;
+    gemelas[l.getAttribute('hreflang').toLowerCase()] = l.href;
   });
   var preferidos = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
   var destino = null;
   for (var i = 0; i < preferidos.length; i++) {
-    var c = String(preferidos[i]).slice(0, 2).toLowerCase();
+    var c = codigoIdioma(preferidos[i]);
     if (c === actual) return;                       // su idioma preferido es el de esta página
     if (gemelas[c] && TEXTOS[c]) { destino = c; break; }
   }
@@ -166,12 +201,12 @@ function pilaAvisos() {
       '<button type="button" class="aviso-idioma-cerrar" aria-label="' + T.cerrar + '">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>';
     aviso.querySelector('a').addEventListener('click', function () {
-      guardar();
+      guardarIdioma(destino);
       // Para medir cuánto se usa (solo si la persona aceptó las cookies de Google Analytics).
       if (window.gtag) window.gtag('event', 'aviso_idioma', { desde: actual, hacia: destino, transport_type: 'beacon' });
     });
     aviso.querySelector('button').addEventListener('click', function () {
-      guardar();
+      guardarIdioma(actual);  // cerrar es elegir quedarse en el idioma de esta página
       // Animación propia (con "reducir movimiento" de Windows las de CSS no corren).
       var salida = aviso.animate && aviso.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(10px) scale(.97)' }],
         { duration: 200, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
@@ -195,20 +230,64 @@ function pilaAvisos() {
 
 // Selector de idioma del pie (está en todas las páginas, igual que este archivo): se cierra al tocar fuera o con
 // Escape, y el menú entra con una animación propia, porque con "reducir movimiento" de Windows no anima nada solo.
+// Desde el 25-nov la misma lista sale también arriba, en la barra (globo y código del idioma), para cambiar de idioma
+// sin bajar hasta el pie. Se arma aquí a partir de la lista del pie, así las páginas no repiten la lista.
 (function () {
+  function entrar(menu, y) {
+    if (menu && menu.animate) {
+      menu.animate([{ opacity: 0, transform: 'translateY(' + y + 'px) scale(.97)' }, { opacity: 1, transform: 'none' }],
+        { duration: 220, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+    }
+  }
   document.querySelectorAll('.pie-idioma').forEach(function (d) {
     var menu = d.querySelector('ul');
-    d.addEventListener('toggle', function () {
-      if (d.open && menu && menu.animate) {
-        menu.animate([{ opacity: 0, transform: 'translateY(8px) scale(.97)' }, { opacity: 1, transform: 'none' }],
-          { duration: 220, easing: 'cubic-bezier(.2, .8, .2, 1)' });
-      }
-    });
+    d.addEventListener('toggle', function () { if (d.open) entrar(menu, 8); });
     document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); }
     });
   });
+
+  var pie = document.querySelector('.pie-idioma');
+  var nav = document.querySelector('.barra nav');
+  if (!pie || !nav || nav.querySelector('.barra-idioma')) return;
+  var lista = pie.querySelector('ul');
+  var actual = lista.querySelector('a[aria-current]');
+  var cod = (actual ? actual.getAttribute('hreflang') : document.documentElement.lang) || '';
+  var caja = document.createElement('div');
+  caja.className = 'barra-idioma';
+  var boton = document.createElement('button');
+  boton.type = 'button';
+  boton.className = 'barra-idioma-boton';
+  boton.setAttribute('aria-expanded', 'false');
+  boton.setAttribute('aria-controls', 'barra-idiomas');
+  boton.setAttribute('aria-label', pie.querySelector('summary').textContent.replace(/\s+/g, ' ').trim());
+  boton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7">' +
+    '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z"/></svg>' +
+    '<span aria-hidden="true"></span>';
+  boton.querySelector('span').textContent = cod.split('-')[0].toUpperCase();
+  var menu = lista.cloneNode(true);
+  menu.id = 'barra-idiomas';
+  menu.hidden = true;
+  caja.appendChild(boton);
+  caja.appendChild(menu);
+  nav.insertBefore(caja, nav.firstChild);
+  function cerrar(foco) {
+    if (menu.hidden) return;
+    menu.hidden = true;
+    boton.setAttribute('aria-expanded', 'false');
+    if (foco) boton.focus();
+  }
+  boton.addEventListener('click', function () {
+    if (!menu.hidden) { cerrar(false); return; }
+    menu.hidden = false;
+    boton.setAttribute('aria-expanded', 'true');
+    entrar(menu, -8);
+    var elegido = menu.querySelector('[aria-current]');
+    if (elegido && elegido.scrollIntoView) elegido.scrollIntoView({ block: 'nearest' });
+  });
+  document.addEventListener('click', function (e) { if (!caja.contains(e.target)) cerrar(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrar(true); });
 })();
 
 // Descargar del pie: va directo a la tienda del equipo, con la misma detección que el botón principal de la portada
