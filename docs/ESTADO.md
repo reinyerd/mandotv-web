@@ -32,6 +32,38 @@ Recuento real hecho con el revisor idioma por idioma (no con la lista de memoria
 Hecho: `fi` con 0 errores. En curso: agentes Sonnet en paralelo por idioma para las portadas que faltan y para
 completar los datos de `ro`, `ms`, `hu`, `el`, `th`, `uk`, `hi`, `vi`.
 
+**LOS 30 IDIOMAS CON 0 ERRORES (25-nov).** Los 24 nuevos pasaron `herramientas/revisar_idioma.py <k>` con
+0 errores y están en `LISTOS` de `herramientas/idiomas_sitio.py`; `ACTIVOS` da 30. Comprobado además: el selector de
+idioma del pie tiene los 30 idiomas en las 30 portadas, sin duplicados y con un solo `aria-current` por página; el
+`<head>` lleva 31 `hreflang` (los 30 más `x-default`); `ar` y `he` llevan `dir="rtl"`.
+
+**Dos fallos de los generadores encontrados y arreglados al juntar (importante para la próxima vez):**
+
+1. `herramientas/portadas_idiomas.py` rompía el selector de idioma del pie. Ese bloque lo escribe entero
+   `pie_firma.py` (con sangría de 12 espacios y `aria-current`), pero `portadas_idiomas.py` también lo tocaba con
+   expresiones regulares de 8 y 10 espacios que no casaban con lo que escribe `pie_firma.py`. Resultado al pasar de
+   6 a 30 idiomas: **34 entradas con cuatro idiomas repetidos en todas las páginas**, y una segunda pasada las
+   dobló a 58. Arreglado: ahora `portadas_idiomas.py` solo trabaja en lo que hay antes de los marcadores
+   `<!-- pie-firma -->` y deja ese bloque a `pie_firma.py`. Comprobado que dos pasadas seguidas dejan 30 sin
+   duplicados (es idempotente).
+2. `herramientas/revisar_idioma.py`, los dos arreglos ya descritos más abajo (el `/de/` del selector del pie y el
+   aviso que no decía dónde estaba la diferencia).
+
+**Orden correcto al juntar** (sirve para la próxima vez): primero sumar los idiomas a `LISTOS`, después
+`pie_firma.py` y solo después `portadas_idiomas.py`. Si se corre `portadas_idiomas.py` con el pie escrito para menos
+idiomas, el pie queda mal.
+
+**Falta para dar el trabajo por terminado:**
+
+1. La pregunta frecuente "¿en qué idiomas está?" sigue diciendo que la WEB está en seis idiomas (cada agente le sumó
+   el suyo, así que hay 30 versiones distintas de la frase). Hay que corregirla en las 30 portadas, en el texto
+   visible y en el JSON-LD, para que diga 30.
+2. Imágenes `social-<k>.png` de los 24 idiomas nuevos (`generar_social.py` y captura con Edge sin ventana).
+3. `:lang(vi)` con fuente del sistema.
+4. `llms.txt`.
+5. Revisar en el navegador: escritorio, celular, efectos de Windows apagados, y `ar` y `he` de derecha a izquierda.
+6. Comparación lado a lado para el fundador y su OK. Después: publicar, IndexNow, Search Console y Bing.
+
 **Al día 25-nov (se actualiza a cada idioma terminado):**
 
 - **0 errores en el revisor (20)**: `da`, `nl`, `nb`, `sv`, `zh-hant`, `ja`, `ko`, `id`, `he`, `ar`, `zh`, `cs`,

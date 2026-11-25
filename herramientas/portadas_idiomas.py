@@ -30,8 +30,14 @@ for clave, idiomas in I.PAGINAS.items():
         t = open(ruta, encoding='utf-8').read()
         enlaces = I.enlaces_idiomas(clave, lang)
         n = HREFLANG.sub(lambda m: I.hreflangs(clave), t, count=1)
-        n = SELECTOR.sub(lambda m: ''.join(f'          <a href="{r}" hreflang="{l}" lang="{l}">{nom}</a>\n' for l, r, nom in enlaces), n, count=1)
-        n = LISTA.sub(lambda m: ''.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{nom}</a></li>\n' for l, r, nom in enlaces), n, count=1)
+        # El cierre del pie lo escribe entero pie_firma.py (la lista de idiomas incluida, con su sangría y su
+        # aria-current). Si se toca también aquí queda una lista a medias: el 25-nov, al pasar de 6 a 30 idiomas,
+        # dejó 34 entradas con cuatro idiomas repetidos en todas las páginas, y una segunda pasada las dobló a 58.
+        # Por eso se trabaja solo en lo que hay ANTES de los marcadores pie-firma.
+        antes, marca, resto = n.partition('      <!-- pie-firma')
+        antes = SELECTOR.sub(lambda m: ''.join(f'          <a href="{r}" hreflang="{l}" lang="{l}">{nom}</a>\n' for l, r, nom in enlaces), antes, count=1)
+        antes = LISTA.sub(lambda m: ''.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{nom}</a></li>\n' for l, r, nom in enlaces), antes, count=1)
+        n = antes + marca + resto
         if n != t:
             open(ruta, 'w', encoding='utf-8', newline='\n').write(n)
             print('ok', ruta)

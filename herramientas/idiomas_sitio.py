@@ -36,7 +36,9 @@ NUEVOS = {
   'zh': ('简体中文', 'zh-Hans', 'zh', 'ltr'),
   'zh-hant': ('繁體中文', 'zh-Hant', 'zh-hant', 'ltr'),
 }
-LISTOS = []  # idiomas nuevos ya revisados (se suman a medida que pasan la revisión)
+# 25-nov: los 24 pasaron la revisión con 0 errores (herramientas/revisar_idioma.py <k>).
+LISTOS = ['id', 'ms', 'cs', 'da', 'hu', 'nl', 'nb', 'pl', 'ro', 'sk', 'fi', 'sv', 'vi', 'tr', 'el', 'uk',
+          'he', 'ar', 'hi', 'th', 'ko', 'ja', 'zh', 'zh-hant']
 # Para generar y revisar en la máquina un idioma que aún no se publica: MANDO_IDIOMAS_PRUEBA=nl,ja (variable de
 # entorno). Solo la usan generar_idiomas.py y revisar_idioma.py; nunca al hacer commit.
 LISTOS = LISTOS + [x for x in _os.environ.get('MANDO_IDIOMAS_PRUEBA', '').split(',') if x in NUEVOS and x not in LISTOS]
