@@ -1476,3 +1476,13 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 /* Demo del control en árabe y hebreo: como en la app, la fila de arriba se espeja pero VOL sigue a la izquierda y CH a la derecha. */
 [dir="rtl"] .demo-fila { direction: ltr; }
 [dir="rtl"] .demo-fila > * { direction: rtl; }
+
+/* Precio de Pro según el país (lo agrega precio.js; sin JavaScript no aparece) */
+.pro-precio { display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 14px; border-radius: 999px;
+  background: color-mix(in srgb, currentColor 14%, transparent); color: inherit; font-weight: 700; }
+.pro-precio b { font-family: var(--titular); font-weight: 900; font-stretch: 85%; font-size: 20px; letter-spacing: -.01em; }
+.plan-monto { font-family: var(--titular); font-weight: 900; font-stretch: 80%; font-size: 40px; line-height: 1;
+  letter-spacing: -.02em; margin: 14px 0 0; }
+.pro-linea { display: inline-block; margin-top: 10px; padding: 4px 12px; border-radius: 999px;
+  background: color-mix(in srgb, currentColor 10%, transparent); color: inherit; font-size: 15px; font-weight: 600; }
+.pro-linea b { font-weight: 900; }

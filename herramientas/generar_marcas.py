@@ -281,6 +281,7 @@ def pagina(m):
   </footer>
   <script src="/correo.js?v=3" defer></script>
   <script src="/cookies.js?v=1" defer></script>
+  <script src="/precio.js?v=1" defer></script>
   <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
   <script defer fetchpriority="low" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "3a3f0250e4b04d5884b033b9a94302b4"}}'></script>
 </body>
