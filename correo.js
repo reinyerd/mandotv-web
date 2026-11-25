@@ -24,7 +24,8 @@
           copiar: 'Copia indirizzo', cerrar: 'Chiudi', copiada: "Indirizzo copiato. Incollalo nella tua e-mail.",
           copia: "Copia l'indirizzo: hola@mandotv.app", asunto: 'Ciao Mando TV' }
   };
-  var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
+  var L = (document.documentElement.lang || '').toLowerCase();  // zh-hans y zh-hant tienen tabla propia; pt-br usa pt
+  var T = TEXTOS[L] || TEXTOS[L.slice(0, 2)] || TEXTOS.es;
 
   function crearPanel() {
     panel = document.createElement('dialog');

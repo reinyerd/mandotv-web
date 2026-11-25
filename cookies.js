@@ -39,7 +39,8 @@ function pilaAvisos() {
           texto: "Usiamo Google Analytics per sapere quali pagine vengono lette e migliorare il sito. Si attiva solo se accetti.",
           url: '/it/privacy.html#cookies', mas: 'Maggiori informazioni sui cookie', si: 'Accetta', no: 'Rifiuta' }
   };
-  var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || TEXTOS.es;
+  var L = (document.documentElement.lang || '').toLowerCase();  // zh-hans y zh-hant tienen tabla propia; pt-br usa pt
+  var T = TEXTOS[L] || TEXTOS[L.slice(0, 2)] || TEXTOS.es;
 
   function leer() { try { return localStorage.getItem(CLAVE); } catch (e) { return null; } }
   function guardar(v) { try { localStorage.setItem(CLAVE, v); } catch (e) { /* sin almacenamiento: se vuelve a preguntar */ } }

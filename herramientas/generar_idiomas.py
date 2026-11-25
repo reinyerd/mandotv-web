@@ -42,11 +42,11 @@ ENLACE = re.compile(r'\[([^\]]+)\]\(@([\w-]+)\)')
 class Idioma:
     def __init__(self, cod):
         self.cod = cod
-        d = importlib.import_module('datos_' + cod)
+        d = importlib.import_module('datos_' + cod.replace('-', '_'))
         self.d = d
         self.U = d.UI
-        self.home = f'/{cod}/'
-        self.android = f'/{cod}/#android'
+        self.home = I.ruta('home', cod)
+        self.android = self.home + '#android'
 
     def r(self, clave):
         return I.ruta(clave, self.cod)
@@ -63,7 +63,7 @@ class Idioma:
     def cabecera(self, titulo, desc, url, clave, color, tipo, ld):
         U = self.U
         return f'''<!doctype html>
-<html lang="{I.CODIGO_LANG[self.cod]}" style="--marca: {color}">
+<html lang="{I.CODIGO_LANG[self.cod]}"{' dir="rtl"' if I.DIRECCION[self.cod] == 'rtl' else ''} style="--marca: {color}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

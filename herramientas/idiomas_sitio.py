@@ -1,12 +1,72 @@
 # Mapa de idiomas del sitio: una sola fuente para las rutas gemelas y los hreflang de todos los generadores.
 # Cada clave es una página y dice en qué carpeta o archivo vive en cada idioma (sin barra inicial; carpeta sin barra final).
-# Para activar un idioma nuevo basta añadirlo a ACTIVOS cuando sus páginas ya existen.
-# Lo usan generar_guias.py, generar_marcas.py, generar_en.py y generar_idiomas.py (importan este archivo por ruta).
+# Para activar un idioma nuevo basta añadirlo a LISTOS cuando sus páginas ya existen y pasaron la revisión.
+# Lo usan generar_guias.py, generar_marcas.py, generar_en.py, generar_idiomas.py, portadas_idiomas.py y pie_firma.py.
+import json as _json
+import os as _os
+
 URL = 'https://mandotv.app'
-ACTIVOS = ['es', 'en', 'de', 'fr', 'pt', 'it']          # idiomas con páginas publicadas
-ORDEN = ['es', 'en', 'de', 'fr', 'pt', 'it']  # orden de los hreflang
+BASE = ['es', 'en', 'de', 'fr', 'pt', 'it']
+# 25-nov: los 24 idiomas que la app ya tiene (lib/l10n de control). Clave interna del idioma:
+# (nombre en su idioma, código de hreflang y de <html lang>, carpeta del sitio, dirección del texto).
+# Sus rutas están en herramientas/rutas/<clave>.json y sus textos en herramientas/datos_<clave con _>.py.
+NUEVOS = {
+  'id': ('Bahasa Indonesia', 'id', 'id', 'ltr'),
+  'ms': ('Bahasa Melayu', 'ms', 'ms', 'ltr'),
+  'cs': ('Čeština', 'cs', 'cs', 'ltr'),
+  'da': ('Dansk', 'da', 'da', 'ltr'),
+  'hu': ('Magyar', 'hu', 'hu', 'ltr'),
+  'nl': ('Nederlands', 'nl', 'nl', 'ltr'),
+  'nb': ('Norsk', 'nb', 'no', 'ltr'),
+  'pl': ('Polski', 'pl', 'pl', 'ltr'),
+  'ro': ('Română', 'ro', 'ro', 'ltr'),
+  'sk': ('Slovenčina', 'sk', 'sk', 'ltr'),
+  'fi': ('Suomi', 'fi', 'fi', 'ltr'),
+  'sv': ('Svenska', 'sv', 'sv', 'ltr'),
+  'vi': ('Tiếng Việt', 'vi', 'vi', 'ltr'),
+  'tr': ('Türkçe', 'tr', 'tr', 'ltr'),
+  'el': ('Ελληνικά', 'el', 'el', 'ltr'),
+  'uk': ('Українська', 'uk', 'uk', 'ltr'),
+  'he': ('עברית', 'he', 'he', 'rtl'),
+  'ar': ('العربية', 'ar', 'ar', 'rtl'),
+  'hi': ('हिन्दी', 'hi', 'hi', 'ltr'),
+  'th': ('ไทย', 'th', 'th', 'ltr'),
+  'ko': ('한국어', 'ko', 'ko', 'ltr'),
+  'ja': ('日本語', 'ja', 'ja', 'ltr'),
+  'zh': ('简体中文', 'zh-Hans', 'zh', 'ltr'),
+  'zh-hant': ('繁體中文', 'zh-Hant', 'zh-hant', 'ltr'),
+}
+LISTOS = []  # idiomas nuevos ya revisados (se suman a medida que pasan la revisión)
+# Para generar y revisar en la máquina un idioma que aún no se publica: MANDO_IDIOMAS_PRUEBA=nl,ja (variable de
+# entorno). Solo la usan generar_idiomas.py y revisar_idioma.py; nunca al hacer commit.
+LISTOS = LISTOS + [x for x in _os.environ.get('MANDO_IDIOMAS_PRUEBA', '').split(',') if x in NUEVOS and x not in LISTOS]
+ACTIVOS = BASE + LISTOS          # idiomas con páginas publicadas
+# Orden de los hreflang y de los selectores de idioma: por el nombre en su propio idioma, como las listas de Apple.
+ORDEN = ['id', 'ms', 'cs', 'da', 'de', 'en', 'es', 'fr', 'it', 'hu', 'nl', 'nb', 'pl', 'pt', 'ro', 'sk', 'fi', 'sv',
+         'vi', 'tr', 'el', 'uk', 'he', 'ar', 'hi', 'th', 'ko', 'ja', 'zh', 'zh-hant']
 NOMBRES = {'es': 'Español', 'en': 'English', 'de': 'Deutsch', 'fr': 'Français', 'pt': 'Português (Brasil)', 'it': 'Italiano'}
-CODIGO_LANG = {'es': 'es', 'en': 'en', 'de': 'de', 'fr': 'fr', 'pt': 'pt-BR', 'it': 'it'}
+CODIGO_LANG = {'es': 'es', 'en': 'en', 'de': 'de', 'fr': 'fr', 'pt': 'pt-BR', 'it': 'it'}  # <html lang> e inLanguage
+HREFLANG = {l: l for l in BASE}
+DIRECCION = {l: 'ltr' for l in BASE}
+for _k, (_nombre, _codigo, _carpeta, _dir) in NUEVOS.items():
+    NOMBRES[_k], CODIGO_LANG[_k], HREFLANG[_k], DIRECCION[_k] = _nombre, _codigo, _codigo, _dir
+assert sorted(ORDEN) == sorted(BASE + list(NUEVOS))
+
+# Textos cortos de cada idioma nuevo (pie, Microsoft Store, imagen para compartir): herramientas/textos_idiomas.json.
+_AQUI = _os.path.dirname(_os.path.abspath(__file__))
+try:
+    TEXTOS_NUEVOS = _json.load(open(_os.path.join(_AQUI, 'textos_idiomas.json'), encoding='utf-8'))
+except FileNotFoundError:
+    TEXTOS_NUEVOS = {}
+
+
+def clave_de_lang(codigo):
+    """Clave interna a partir de un <html lang> o un hreflang (zh-Hans -> zh, pt-BR -> pt, nb -> nb)."""
+    x = (codigo or '').lower()
+    for k in ORDEN:
+        if x in (k, CODIGO_LANG[k].lower(), HREFLANG[k].lower()):
+            return k
+    return x.split('-')[0]
 
 # (es, en, de, fr, pt, it): archivos terminan en .html; el resto son carpetas.
 _FILAS = {
@@ -65,6 +125,21 @@ _FILAS = {
 }
 _COLS = ('es', 'en', 'de', 'fr', 'pt', 'it')
 PAGINAS = {k: {l: v for l, v in zip(_COLS, fila) if v is not None} for k, fila in _FILAS.items()}
+# Idiomas nuevos: {clave de página: ruta} en herramientas/rutas/<idioma>.json (las mismas páginas que tiene el alemán).
+# Un idioma que todavía se está traduciendo (no está en ACTIVOS) puede tener el archivo a medio escribir: se salta.
+for _k in NUEVOS:
+    _f = _os.path.join(_AQUI, 'rutas', _k + '.json')
+    if not _os.path.isfile(_f):
+        continue
+    try:
+        _rutas = _json.load(open(_f, encoding='utf-8'))
+        assert all(c in PAGINAS and 'de' in PAGINAS[c] for c in _rutas), _k
+    except (ValueError, AssertionError):
+        if _k in ACTIVOS:
+            raise
+        continue
+    for _clave, _ruta in _rutas.items():
+        PAGINAS[_clave][_k] = _ruta
 
 
 def ruta(clave, lang):
@@ -85,8 +160,8 @@ def existe(clave, lang):
 
 
 def alternos(clave):
-    """{idioma: url absoluta} de las gemelas publicadas, en el orden de ORDEN."""
-    return {l: URL + ruta(clave, l) for l in ORDEN if existe(clave, l)}
+    """{código de hreflang: url absoluta} de las gemelas publicadas, en el orden de ORDEN (zh -> 'zh-Hans')."""
+    return {HREFLANG[l]: URL + ruta(clave, l) for l in ORDEN if existe(clave, l)}
 
 
 def clave_es(es):
@@ -108,8 +183,8 @@ def hreflangs(clave):
 
 
 def enlaces_idiomas(clave, excluir):
-    """[(idioma, ruta, nombre)] de las demás gemelas, para los selectores de idioma."""
-    return [(l, ruta(clave, l), NOMBRES[l]) for l in ORDEN if l != excluir and existe(clave, l)]
+    """[(código de hreflang, ruta, nombre)] de las demás gemelas, para los selectores de idioma."""
+    return [(HREFLANG[l], ruta(clave, l), NOMBRES[l]) for l in ORDEN if l != excluir and existe(clave, l)]
 
 
 # Guías de PC y Windows (GEO, 23-nov): ChatGPT y Gemini recomiendan Mando TV en Windows pero inventan un enlace de
@@ -125,7 +200,9 @@ def es_guia_pc(ruta):
 
 
 def linea_ms_store(lang):
-    return f'<p class="nota">{_MS_TEXTO[lang]} <a href="{MS_STORE}">apps.microsoft.com/detail/9N3D7T1DP2SW</a></p>'
+    # Idioma nuevo sin su texto todavía (textos_idiomas.json): en inglés mientras tanto; revisar_idioma.py lo avisa.
+    texto = _MS_TEXTO.get(lang) or TEXTOS_NUEVOS.get(lang, {}).get('ms_texto') or _MS_TEXTO['en']
+    return f'<p class="nota">{texto} <a href="{MS_STORE}">apps.microsoft.com/detail/9N3D7T1DP2SW</a></p>'
 
 
 def app_windows(url):

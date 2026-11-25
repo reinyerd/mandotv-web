@@ -85,7 +85,8 @@
       frases: ['documentari sui vulcani', 'musica per cucinare', 'partita di calcio in diretta', 'film di Natale']
     }
   };
-  var T = TEXTOS[(document.documentElement.lang || '').slice(0, 2)] || ES;
+  var L = (document.documentElement.lang || '').toLowerCase();  // zh-hans y zh-hant tienen tabla propia; pt-br usa pt
+  var T = TEXTOS[L] || TEXTOS[L.slice(0, 2)] || ES;
   if (T.marcas) {
     Object.keys(T.marcas).forEach(function (k) { marcas[k].tv = T.marcas[k][0]; marcas[k].nota = T.marcas[k][1]; });
   }

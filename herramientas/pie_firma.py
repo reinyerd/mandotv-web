@@ -10,18 +10,16 @@ import re
 import sys
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(RAIZ / 'herramientas'))
+import idiomas_sitio as I  # noqa: E402  (idiomas, nombres, códigos de hreflang y portadas: una sola fuente)
 
-IDIOMAS_ORDEN = ['es', 'en', 'pt', 'fr', 'de', 'it']
+# Idiomas del selector: los publicados, por el nombre en su propio idioma (idiomas_sitio.ORDEN).
+IDIOMAS_ORDEN = [l for l in I.ORDEN if l in I.ACTIVOS]
 
-IDIOMA_NOMBRE = dict(
-    es='Español',
-    en='English',
-    pt='Português',
-    fr='Français',
-    de='Deutsch',
-    it='Italiano',
-)
+IDIOMA_NOMBRE = dict(I.NOMBRES, pt='Português')
 
+# (lema, Descargar, plataformas, Idioma). Los idiomas nuevos (25-nov) vienen de herramientas/textos_idiomas.json.
 IDIOMA_TEXTO = dict(
     es=('El control remoto de todos tus televisores, en el celular o el computador.', 'Descargar', 'Para iPhone, iPad, Mac, Android y Windows', 'Idioma'),
     en=('One remote for every TV in your home, on your phone or computer.', 'Download', 'For iPhone, iPad, Mac, Android and Windows', 'Language'),
@@ -31,8 +29,10 @@ IDIOMA_TEXTO = dict(
     it=('Il telecomando di tutte le tue TV, sullo smartphone o sul computer.', 'Scarica', 'Per iPhone, iPad, Mac, Android e Windows', 'Lingua'),
 )
 
-INICIO_LANG = dict(es='/es/', en='/',  # 24-nov: inglés en la raíz
-                    pt='/pt/', fr='/fr/', de='/de/', it='/it/')
+for _k, _t in I.TEXTOS_NUEVOS.items():
+    IDIOMA_TEXTO[_k] = tuple(_t['pie'])
+
+INICIO_LANG = {l: I.ruta('home', l) for l in IDIOMAS_ORDEN}  # 24-nov: inglés en la raíz (/), español en /es/
 
 BLOCK_INICIO = re.compile(
     r'      <!-- pie-firma: lo escribe herramientas/pie_firma.py \(no editar a mano\) -->'
@@ -70,9 +70,10 @@ def bloque_nuevo(lenguaje, hreflangs, tiene_tiendas):
     partes_li = list()
     for cod in IDIOMAS_ORDEN:
         nombre = html.escape(IDIOMA_NOMBRE[cod])
-        a_href = ' href="' + html.escape(hreflangs.get(cod, INICIO_LANG[cod])) + '"'
-        a_lang = ' lang="' + cod + '"'
-        a_hreflang = ' hreflang="' + cod + '"'
+        hl = I.HREFLANG[cod]  # zh -> zh-Hans
+        a_href = ' href="' + html.escape(hreflangs.get(hl, INICIO_LANG[cod])) + '"'
+        a_lang = ' lang="' + hl + '"'
+        a_hreflang = ' hreflang="' + hl + '"'
         cls = ''
         if cod == lenguaje:
             cls = ' aria-current="page"'
@@ -133,7 +134,7 @@ def procesar(pagina):
         fin_pos = inicio_pos + len(LINEA_VIEJA)
 
     lang_match = re.search(r'<html[^>]*\slang="([\w-]+)"', texto)
-    lenguaje = lang_match.group(1)[:2].lower() if lang_match else 'es'
+    lenguaje = I.clave_de_lang(lang_match.group(1)) if lang_match else 'es'
     if lenguaje not in IDIOMA_TEXTO:
         lenguaje = 'es'
 

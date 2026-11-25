@@ -1116,7 +1116,7 @@ def pagina_idioma(g):
     pasos = '\n'.join(f'        <li>{e(p)}</li>' for p in g['pasos'])
     extra = '\n\n'.join(f'      <h2>{e(t)}</h2>\n      <p>{e(p)}</p>' for t, p in g['extra'])
     faq = '\n'.join(f'        <details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g['faq'])
-    idiomas = '\n'.join(f'        <li><a href="{ALT_CONSOLA[l][len(URL):]}" hreflang="{l}" lang="{l}">{idiomas_sitio.NOMBRES[l]}</a></li>' for l in ALT_CONSOLA if l != g['idioma'])
+    idiomas = '\n'.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{n}</a></li>' for l, r, n in idiomas_sitio.enlaces_idiomas('console', g['idioma']))
     return f'''<!doctype html>
 <html lang="{lang}" style="--marca: #3d7bff">
 <head>

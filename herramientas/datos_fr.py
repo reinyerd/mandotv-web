@@ -610,7 +610,7 @@ PRIVACIDAD = dict(
   h1='Confidentialité',
   intro="En bref : Mando TV ne collecte pas vos données. Il n'y a ni compte, ni publicité, ni traceur, ni serveur à nous qui conserve ce que vous faites.",
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">En vigueur depuis le 14 novembre 2026. Dernière mise à jour : 21 novembre 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">En vigueur depuis le 14 novembre 2026. Dernière mise à jour : 25 novembre 2026.</p>
 
       <h2>Qui nous sommes</h2>
       <p>Mando TV est une application pour piloter votre TV depuis votre téléphone ou votre ordinateur. Cette politique explique quelles informations l'application utilise et ce qu'elle en fait. Pour toute question, écrivez-nous à <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -636,6 +636,10 @@ PRIVACIDAD_HTML = '''      <p class="fecha">En vigueur depuis le 14 novembre 202
       <p>Si vous envoyez des photos ou des vidéos à la TV (une fonction Pro), la TV télécharge uniquement les fichiers que vous choisissez, directement depuis votre téléphone ou votre PC via le Wi-Fi de votre domicile. Ils ne passent ni par Internet ni par nous, l'application ne voit pas le reste de vos photos et le partage s'arrête quand vous fermez cet écran.</p>
       <h2>Microphone et voix</h2>
       <p>La recherche vocale n'utilise le microphone que pendant que vous touchez le bouton pour parler. Ce que vous dites est converti en texte par la reconnaissance vocale de votre système : Apple sur iPhone et Mac et Google sur Android, selon leurs propres politiques de confidentialité. Sur Windows, la voix est reconnue sur votre propre PC et ne le quitte pas ; seuls les processeurs très anciens passent par la saisie vocale de Windows, de Microsoft, selon sa politique de confidentialité. Mando TV n'enregistre ni ne stocke l'audio, et le texte obtenu va directement à votre TV, comme ce que vous saisissez avec le clavier.</p>
+
+      <h2>Maison : appareils Apple Maison et Google Home</h2>
+      <p>Si vous ouvrez la section Maison (en test), l'application demande l'autorisation de voir les appareils que vous avez déjà dans l'app Maison d'Apple (HomeKit) ou dans Google Home. Avec cette autorisation, elle lit leur nom, leur pièce et leur état (allumé ou éteint, luminosité, température ou étape du cycle d'un appareil électroménager) pour les afficher et leur envoyer ce que vous touchez. Tout se passe entre votre téléphone et le système d'Apple ou de Google : Mando TV n'enregistre pas cette liste, ne l'envoie ni à nous ni à des tiers et ne l'utilise ni pour la publicité ni pour des statistiques. Sur Android, Google Home fonctionne avec votre propre compte Google, selon les règles de confidentialité de Google. Vous pouvez retirer l'autorisation à tout moment : sur iPhone, dans Réglages &gt; Confidentialité et sécurité &gt; HomeKit ; sur Android, dans les paramètres de votre compte Google.</p>
+      <p>Si vous touchez « Comment Maison a-t-il fonctionné pour vous ? », votre application de messagerie s'ouvre avec un message à hola@mandotv.app contenant un résumé technique : la version de l'application, le système, le nombre d'appareils de chaque type qui sont apparus et s'ils répondent. Il ne contient aucun nom d'appareil, de pièce ou de maison, et il n'est envoyé que si vous l'envoyez vous-même.</p>
 
       <h2>Rapport de test</h2>
       <p>L'application a un bouton « Copier le rapport de test » pour nous aider à corriger les erreurs. Le rapport reste uniquement dans la mémoire de l'application tant qu'elle est ouverte et n'est jamais envoyé de lui-même : c'est vous qui décidez de le copier et de le partager. Il n'inclut ni clés de connexion, ni codes d'appairage, ni rien de ce que vous saisissez ; seulement les étapes suivies par l'application, comme la recherche, la connexion et les erreurs.</p>
