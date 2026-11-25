@@ -1,5 +1,14 @@
 # Estado de la web mandotv.app
 
+## 25-nov: envío a directorios (en curso, pasa a una sesión nueva)
+
+Con el sí del fundador ("Sí, empieza" y "Te doy permiso"). Textos listos en `docs/DIRECTORIOS.md`. Desde el navegador
+de la app el control de seguridad bloqueó llenar formularios, así que se sigue con **Claude in Chrome en el Chrome
+normal** (`C:\Program Files\Google\Chrome\Application\chrome.exe`, nunca Canary); la extensión ya está conectada
+pero la sesión anterior no la veía. Orden: Uneed, Fazier, Peerlist, Slant (SaaSHub lo envía el fundador: su página
+pide que lo haga una persona). En cada sitio: el fundador crea la cuenta y escribe la contraseña; pedir su OK antes de
+enviar cada ficha; usar la cola gratis, no pagar ni pedir votos. Anotar cada ficha publicada con fecha y URL.
+
 ## 25-nov: auditor auditarweb.co en 98/100
 
 Único aviso: "No hay datos de autoridad de dominio" (se mide con enlaces de otras webs; no se arregla con código).
