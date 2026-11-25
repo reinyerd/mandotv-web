@@ -8,6 +8,19 @@ function pilaAvisos() {
   }
   return pila;
 }
+// Entrada de un aviso con animación propia (con "reducir movimiento" de Windows las de CSS no corren).
+function entraAviso(el) {
+  if (el && el.animate) {
+    el.animate([{ opacity: 0, transform: 'translateY(14px) scale(.97)' }, { opacity: 1, transform: 'none' }],
+      { duration: 380, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+  }
+}
+// Al cerrar el de idioma aparece el siguiente de la pila (el de cookies, si sigue pendiente).
+function siguienteAviso() {
+  var pila = document.querySelector('.avisos');
+  var sig = pila && pila.querySelector(':scope > :not([hidden])');
+  if (sig) entraAviso(sig);
+}
 
 // Aviso de cookies de Mando TV.
 // Google Analytics (cookies) SOLO se carga si la persona pulsa "Aceptar". Sin respuesta o con "Rechazar"
@@ -149,7 +162,7 @@ function pilaAvisos() {
     aviso.setAttribute('role', 'region');
     aviso.setAttribute('aria-label', T.aria);
     aviso.innerHTML =
-      '<p><b>' + T.titulo + '</b> ' + T.texto + ' <a href="' + T.url + '">' + T.mas + '</a></p>' +
+      '<p><b>' + T.titulo + '</b> <span class="aviso-cookies-texto">' + T.texto + '</span> <a href="' + T.url + '">' + T.mas + '</a></p>' +
       '<div class="aviso-cookies-botones">' +
       '<button type="button" class="boton" data-eleccion="si">' + T.si + '</button>' +
       '<button type="button" class="boton" data-eleccion="no">' + T.no + '</button>' +
@@ -175,6 +188,9 @@ function pilaAvisos() {
     if (!aviso) crearAviso();
     disparador = document.activeElement !== document.body ? document.activeElement : null;
     aviso.hidden = false;
+    // Los avisos salen uno a la vez: si lo pide el botón "Cookies" del pie, pasa delante del de idioma.
+    var pila = aviso.parentNode;
+    if (pila && pila.firstChild !== aviso) { pila.insertBefore(aviso, pila.firstChild); entraAviso(aviso); }
     var primero = aviso.querySelector('button');
     if (primero) primero.focus({ preventScroll: true });
   }
@@ -314,7 +330,8 @@ document.addEventListener('click', function (e) {
       // Animación propia (con "reducir movimiento" de Windows las de CSS no corren).
       var salida = aviso.animate && aviso.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(10px) scale(.97)' }],
         { duration: 200, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
-      if (salida) salida.onfinish = function () { aviso.remove(); }; else aviso.remove();
+      var quitar = function () { aviso.remove(); siguienteAviso(); };
+      if (salida) salida.onfinish = quitar; else quitar();
     });
     var pila = pilaAvisos();
     pila.insertBefore(aviso, pila.firstChild);
