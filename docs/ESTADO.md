@@ -5,8 +5,8 @@
 Resultado (detalle en la tabla de `docs/DIRECTORIOS.md`): **Uneed agendado** en la cola gratis para el 23-jun-2027
 (uneed.best/tool/mando-tv); **Fazier omitido** (el plan gratis exige un enlace de vuelta; decisión del fundador);
 **Peerlist** con perfil y proyecto Mando TV listos (perfil al 60 %), y el lanzamiento descartado por el fundador (exigía verificación de 19 USD); **Slant** caído (error
-526), reintentar otro día; **SaaSHub enviado** por el fundador en la cola gratis (1 a 12 semanas; falta verificar con
-hola@mandotv.app). Claude in Chrome sí conectó en esta sesión.
+526), reintentar otro día; **SaaSHub**: la ficha original saashub.com/mando-tv ya estaba verificada y en cola (se le sumó Mac);
+el envío del 25-nov creó un duplicado ("Mando TV - Control Universal") que el fundador pide borrar por correo. Claude in Chrome sí conectó en esta sesión.
 
 Con el sí del fundador ("Sí, empieza" y "Te doy permiso"). Textos listos en `docs/DIRECTORIOS.md`. Desde el navegador
 de la app el control de seguridad bloqueó llenar formularios, así que se sigue con **Claude in Chrome en el Chrome
