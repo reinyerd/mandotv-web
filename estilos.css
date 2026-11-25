@@ -1467,3 +1467,6 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 /* Sin botones de pausa, anterior y siguiente en la vitrina (pedido del fundador, 25-nov). La marca se elige con los
    puntos de color; la rotación se pausa sola al pasar el mouse, al tocar el teléfono o al recorrer con el teclado. */
 .vitrina .redondo, .vitrina .flechas { display: none !important; }
+/* Demo del control en árabe y hebreo: como en la app, la fila de arriba se espeja pero VOL sigue a la izquierda y CH a la derecha. */
+[dir="rtl"] .demo-fila { direction: ltr; }
+[dir="rtl"] .demo-fila > * { direction: rtl; }

@@ -97,7 +97,7 @@
   boton.addEventListener('click', function () {
     pausadoPorUsuario = !pausadoPorUsuario;
     boton.setAttribute('aria-pressed', String(pausadoPorUsuario));
-    boton.setAttribute('aria-label', pausadoPorUsuario ? 'Play the demo' : 'Pause the demo');
+    boton.setAttribute('aria-label', pausadoPorUsuario ? (boton.dataset.reanudar || 'Play the demo') : (boton.dataset.pausar || 'Pause the demo'));
     aplicar();
   });
   new IntersectionObserver(function (e) { visible = e[0].isIntersecting; aplicar(); }, { threshold: 0.3 }).observe(raiz);
