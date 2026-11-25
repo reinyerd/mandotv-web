@@ -1402,3 +1402,14 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 .guia-video.vertical { max-width: 300px; margin-inline: auto; }
 .guia-video.vertical .video-marco video { aspect-ratio: 9 / 16; border-radius: 24px; }
 .guia-video.vertical figcaption { text-align: center; }
+
+/* 25-nov, web en 30 idiomas. Vietnamita: Archivo e Inter (subconjuntos latin y latin-ext) no traen las letras con
+   doble tilde (ạ ả ấ ề ộ...), así que cada palabra mezclaba dos fuentes; se usa la del sistema, que las trae todas. */
+:lang(vi) { --titular: system-ui, "Segoe UI", Roboto, sans-serif; --firma: system-ui, "Segoe UI", Roboto, sans-serif; --texto: system-ui, "Segoe UI", Roboto, sans-serif; }
+/* Árabe: el espaciado entre letras separa las letras que van unidas. */
+:lang(ar) * { letter-spacing: 0 !important; }
+/* Coreano: no cortar una palabra por la mitad al cambiar de línea (si una no cabe, ahí sí se parte). */
+:lang(ko) { word-break: keep-all; overflow-wrap: anywhere; }
+/* Árabe y hebreo: el botón de idioma del pie queda a la izquierda, así que su menú se abre hacia la derecha
+   (anclado a la derecha se salía de la pantalla en el celular). */
+[dir="rtl"] .pie-idioma ul { right: auto; left: 0; }

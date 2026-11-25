@@ -9,7 +9,7 @@ Key facts:
 - Screen mirroring: on iPhone and iPad, Mando TV walks you to Screen Mirroring in Control Center (the iPhone's own feature, free) for TVs with AirPlay; on Windows it opens Cast (Windows + K, free). Android (Cast) gets the same shortcut with its next version. On Windows, Pro adds Mando TV's own screen mirroring over the home network to LG, Samsung, Hisense (VIDAA) and Android TV sets (beta, a few seconds of delay and no sound; for photos and presentations, not games). With Pro it can also send photos and videos to the TV.
 - Connection: over Wi-Fi (phone and TV on the same network, no internet needed). Infrared is also available, only on Android phones with an infrared blaster (common on Xiaomi, Redmi and POCO), for TVs that are not smart TVs or were never connected to Wi-Fi. It is new. Bluetooth is available in beta and free on Android 9 or newer: the phone connects to the TV as a Bluetooth keyboard and remote, with no Wi-Fi needed. It works with Google TV, Android TV and Fire TV; other brands that accept Bluetooth keyboards may work; Roku does not accept them. It is not available on iPhone or Windows. Apple TV (beta, free) is controlled over the home Wi-Fi and paired with a PIN shown on the Apple TV screen; Mando TV wakes it over Wi-Fi, and with HDMI-CEC enabled in the Apple TV settings the TV turns on too.
 - Platforms: App Store (iPhone, iPad and Mac), Microsoft Store (Windows) and early access on Google Play (Android).
-- Languages of the website (6): Spanish, English, Portuguese, French, German and Italian.
+- Languages of the website (30, the same as the app): every page links to its version in the other languages; the home page of each language is listed under "Other languages" below.
 - Languages of the app: 30 since version 1.1 (already on the App Store for iPhone and iPad and on Microsoft Store for Windows; Android gets them with its 1.1 update, until then 13): Arabic, Chinese (Simplified and Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Norwegian, Polish, Portuguese, Romanian, Slovak, Spanish, Swedish, Thai, Turkish, Ukrainian and Vietnamese. Voice commands (Pro) are understood in 29 of them.
 - Privacy: the app controls the TV directly inside the home network, without going through the internet. The website counts visits with Cloudflare Web Analytics (no cookies) and uses Google Analytics only if the visitor accepts.
 - Contact: hola@mandotv.app
@@ -51,6 +51,30 @@ Each page says which systems that brand uses and which ones Mando TV controls (R
 - [Français](https://mandotv.app/fr/)
 - [Deutsch](https://mandotv.app/de/)
 - [Italiano](https://mandotv.app/it/)
+- [Bahasa Indonesia](https://mandotv.app/id/) (Indonesian)
+- [Bahasa Melayu](https://mandotv.app/ms/) (Malay)
+- [Čeština](https://mandotv.app/cs/) (Czech)
+- [Dansk](https://mandotv.app/da/) (Danish)
+- [Magyar](https://mandotv.app/hu/) (Hungarian)
+- [Nederlands](https://mandotv.app/nl/) (Dutch)
+- [Norsk](https://mandotv.app/no/) (Norwegian)
+- [Polski](https://mandotv.app/pl/) (Polish)
+- [Română](https://mandotv.app/ro/) (Romanian)
+- [Slovenčina](https://mandotv.app/sk/) (Slovak)
+- [Suomi](https://mandotv.app/fi/) (Finnish)
+- [Svenska](https://mandotv.app/sv/) (Swedish)
+- [Tiếng Việt](https://mandotv.app/vi/) (Vietnamese)
+- [Türkçe](https://mandotv.app/tr/) (Turkish)
+- [Ελληνικά](https://mandotv.app/el/) (Greek)
+- [Українська](https://mandotv.app/uk/) (Ukrainian)
+- [עברית](https://mandotv.app/he/) (Hebrew)
+- [العربية](https://mandotv.app/ar/) (Arabic)
+- [हिन्दी](https://mandotv.app/hi/) (Hindi)
+- [ไทย](https://mandotv.app/th/) (Thai)
+- [한국어](https://mandotv.app/ko/) (Korean)
+- [日本語](https://mandotv.app/ja/) (Japanese)
+- [简体中文](https://mandotv.app/zh/) (Chinese (Simplified))
+- [繁體中文](https://mandotv.app/zh-hant/) (Chinese (Traditional))
 
 ## Download
 

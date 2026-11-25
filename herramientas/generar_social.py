@@ -63,8 +63,26 @@ for lang, (portada, titulo, sub, tam, tv) in IDIOMAS.items():
     s = s.replace(alt0, alt1)
     if tam:
         s = s.replace('font-size: 96px; line-height: .9;', f'font-size: {tam}px; line-height: .95;')
-    s = s.replace('<html lang="es"', f'<html lang="{I.CODIGO_LANG.get(lang, lang)}"', 1)
+    direccion = ' dir="rtl"' if I.DIRECCION.get(lang) == 'rtl' else ''   # árabe y hebreo
+    s = s.replace('<html lang="es"', f'<html lang="{I.CODIGO_LANG.get(lang, lang)}"{direccion}', 1)
     s = s.replace('Un control para todos tus TV', titulo).replace('Gratis, sin anuncios y sin cuentas.', sub)
     s = s.replace('Genera social.png', f'Genera social-{lang}.png').replace('herramientas/social.html', f'herramientas/social-{lang}.html')
+    if lang in I.NUEVOS:
+        # Idiomas nuevos: el título se ajusta solo hasta caber en 2 líneas y el subtítulo en 1 (un título de 3 líneas
+        # tapaba las marcas y el sello, visto en griego). En coreano no se corta una palabra por la mitad, y las
+        # escrituras altas (árabe, hindi, tailandés) llevan más interlineado y nada de espaciado entre letras.
+        alto = '1.2' if lang in ('ar', 'hi', 'th') else '1.08' if lang in ('he', 'ko', 'ja', 'zh', 'zh-hant') else None
+        css = '.tarjeta h1 { letter-spacing: 0;' + (f' line-height: {alto} !important;' if alto else '') + (' word-break: keep-all;' if lang == 'ko' else '') + (' word-break: auto-phrase;' if lang == 'ja' else '') + (' -webkit-text-stroke: 2px currentColor;' if lang in ('ja', 'zh-hant') else '') + ' }'
+        ajuste = ('<style>' + css + '</style>\n<script>(function () {\n'
+                  '  function lineas(e) { return Math.round(e.getBoundingClientRect().height / parseFloat(getComputedStyle(e).lineHeight)); }\n'
+                  '  function ajustar(sel, max, min) { var e = document.querySelector(sel), t = parseFloat(getComputedStyle(e).fontSize);\n'
+                  '    while (t > min && (lineas(e) > max || e.scrollWidth > e.clientWidth + 1)) { t -= 2; e.style.fontSize = t + "px"; } }\n'
+                  '  function todo() { ajustar(".tarjeta h1", 2, 44); ajustar(".tarjeta h1 + p", 1, 20);\n'
+                  '    var h = document.querySelector(".tarjeta h1"), x = document.querySelector(".tarjeta .texto"), u = document.querySelector(".tarjeta .url"), t = parseFloat(getComputedStyle(h).fontSize);\n'
+                  '    while (t > 44 && x.getBoundingClientRect().bottom > u.getBoundingClientRect().top - 18) { t -= 2; h.style.fontSize = t + "px"; } }\n'
+                  '  todo(); addEventListener("load", todo); if (document.fonts) document.fonts.ready.then(todo);\n'
+                  '})();</script>\n</body>')
+        assert s.count('</body>') == 1
+        s = s.replace('</body>', ajuste)
     open(os.path.join(SITIO, 'herramientas', f'social-{lang}.html'), 'w', encoding='utf-8', newline='\n').write(s)
     print('ok', lang)

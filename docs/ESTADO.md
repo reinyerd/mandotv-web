@@ -57,7 +57,27 @@ idiomas, el pie queda mal.
 las 18:10 de Chile (al renovarse el semanal). Sigue con la lista de abajo hasta dejar la comparación lado a lado; no
 publica ni indexa. Corre solo si la app de Claude está abierta (si no, al abrirla).
 
-**Falta para dar el trabajo por terminado:**
+**LISTO PARA QUE EL FUNDADOR LO MIRE (25-nov, tarde).** Comparación lado a lado en
+`docs/comparacion-30-idiomas/index.html` (fuera de git; se abre con el servidor local en
+`http://localhost:8090/docs/comparacion-30-idiomas/`): antes y propuesta en escritorio, celular y con los efectos de
+Windows apagados, más árabe de derecha a izquierda, el selector con los 30 y las imágenes para compartir.
+Hecho en esta tanda, con los 24 idiomas nuevos todavía en 0 errores:
+- La pregunta "¿en qué idiomas está?" dice en las 30 portadas que la web está en los mismos 30 (texto y JSON-LD).
+- 24 imágenes `social-<k>.png`. `generar_social.py` ahora ajusta solo el título a 2 líneas y el subtítulo a 1, no deja
+  que el texto tape el sello, pone `dir="rtl"` en árabe y hebreo y no parte palabras en coreano ni japonés.
+- `estilos.css`: vietnamita con fuente del sistema (Archivo e Inter no traen sus letras con doble tilde), árabe sin
+  espaciado entre letras, coreano sin partir palabras, y el menú de idioma del pie en árabe y hebreo se abre hacia
+  la derecha (anclado a la derecha se salía de la pantalla en el celular).
+- `llms.txt` con los 30 idiomas.
+- Revisado en navegador: `ar` y `he` de derecha a izquierda, 30 idiomas en el pie y en el botón de la barra (lista
+  desplazable, actual marcado), 0 imágenes sin alt, sin desborde en 375 px, sin errores propios de consola.
+**Falta**: el sí del fundador; después publicar (merge a main, push), IndexNow, sitemap en Search Console y Bing, e
+indexación de las portadas nuevas (primero ko, nl, sv, da, no, fi, pl). **Videos**: regla nueva del fundador
+(25-nov): un video por idioma en 16:9 y en 9:16; hoy la web solo tiene el video de la portada en inglés, así que
+faltan los de los otros 29 idiomas (no se pudo contar los ya hechos desde este proyecto). La tarea programada del
+27-nov ya no hace falta.
+
+**Lista anterior (ya resuelta salvo la publicación):**
 
 1. La pregunta frecuente "¿en qué idiomas está?" sigue diciendo que la WEB está en seis idiomas (cada agente le sumó
    el suyo, así que hay 30 versiones distintas de la frase). Hay que corregirla en las 30 portadas, en el texto
