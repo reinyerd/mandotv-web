@@ -4,7 +4,7 @@
 
 Resultado (detalle en la tabla de `docs/DIRECTORIOS.md`): **Uneed agendado** en la cola gratis para el 23-jun-2027
 (uneed.best/tool/mando-tv); **Fazier omitido** (el plan gratis exige un enlace de vuelta; decisión del fundador);
-**Peerlist** con perfil creado, falta que el fundador verifique su identidad para poder lanzar; **Slant** caído (error
+**Peerlist** con perfil y proyecto Mando TV listos (perfil al 60 %), pero lanzar exige verificar identidad pagando 19 USD (no pagado, decide el fundador); **Slant** caído (error
 526), reintentar otro día; SaaSHub sigue para el fundador. Claude in Chrome sí conectó en esta sesión.
 
 Con el sí del fundador ("Sí, empieza" y "Te doy permiso"). Textos listos en `docs/DIRECTORIOS.md`. Desde el navegador
