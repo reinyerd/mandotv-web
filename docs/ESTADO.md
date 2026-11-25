@@ -1,5 +1,17 @@
 # Estado de la web mandotv.app
 
+## 24-nov (noche): avisos del auditor auditarweb.co (91/100), preparado en la rama `web-cabeceras-alt`, SIN publicar
+
+- Hecho en la rama (commit `16efd5c7`): logo con `alt="Mando TV"` en barra, pie y barra fija (226 páginas, generadores
+  y `app.js`), `<meta name="referrer" content="strict-origin-when-cross-origin">` en todas las páginas, y el selector
+  de idioma del pie con alto máximo y desplazamiento (listo para 30 idiomas o más). Probado en local: 0 imágenes sin
+  alt, 6 idiomas en el selector (la web está en 6), sin errores propios en consola.
+- **Falta y no se puede en GitHub Pages**: `X-Frame-Options` y `Strict-Transport-Security` (HSTS) solo van como
+  cabeceras HTTP y GitHub Pages no deja ponerlas. Solución propuesta: poner Cloudflare (plan gratis; el sitio ya usa
+  Cloudflare Web Analytics) delante, cambiando los servidores DNS en Porkbun y copiando todos los registros (MX del
+  correo hola@mandotv.app, TXT de verificación). Espera el sí del fundador.
+- Al publicar: fusionar en `main`, push, comprobar en vivo, IndexNow y sitemap en Search Console y Bing.
+
 ## 24-nov: aviso de idioma y x-default en inglés (publicado)
 
 Publicado con el sí del fundador (merge `442156f2` en `main`). Comprobado en vivo: con el navegador en inglés la
