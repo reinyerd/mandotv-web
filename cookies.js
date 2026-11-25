@@ -160,13 +160,20 @@ function pilaAvisos() {
       var v = b.getAttribute('data-eleccion');
       guardar(v);
       if (v === 'si') { window['ga-disable-' + ID_GA] = false; cargarAnaliticas(); } else { borrarCookiesGa(); }
+      var teniaFoco = aviso.contains(document.activeElement);
       aviso.hidden = true;
+      // Al ocultar el botón con foco, el foco caería al inicio de la página: vuelve a quien abrió el aviso.
+      if (teniaFoco && disparador && disparador.isConnected) disparador.focus({ preventScroll: true });
+      disparador = null;
     });
     pilaAvisos().appendChild(aviso);
   }
 
+  var disparador = null;
+
   function mostrarAviso() {
     if (!aviso) crearAviso();
+    disparador = document.activeElement !== document.body ? document.activeElement : null;
     aviso.hidden = false;
     var primero = aviso.querySelector('button');
     if (primero) primero.focus({ preventScroll: true });

@@ -38,6 +38,11 @@ a { color: inherit; }
 :focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; border-radius: 8px; }
 ::selection { background: var(--tinta); color: var(--papel); }
 .oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* "Saltar al contenido": invisible hasta que llega el foco del teclado; entonces aparece arriba a la izquierda. */
+a.oculto[href="#contenido"]:focus { position: fixed; z-index: 1000; top: calc(env(safe-area-inset-top, 0px) + 12px); left: 12px;
+  width: auto; height: auto; overflow: visible; clip: auto; padding: 12px 20px; border-radius: 999px;
+  background: #fff; color: #0d0f17; font-weight: 700; text-decoration: none; box-shadow: 0 6px 24px rgba(13, 15, 23, .35); }
+#contenido:focus { outline: none; }
 
 .contenedor { width: 100%; max-width: var(--ancho); margin: 0 auto; padding: 0 var(--margen); }
 
@@ -611,9 +616,10 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
   border: 0; border-radius: 28px; padding: 36px 32px 28px; width: min(460px, calc(100vw - 32px));
   background: var(--papel); color: var(--tinta); box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
 }
-.panel-correo::backdrop { background: rgba(13, 15, 23, .55); }
+.panel-correo::backdrop { background: rgba(13, 15, 23, .55); overflow: hidden; overscroll-behavior: contain; }
+.panel-correo:modal { overscroll-behavior: contain; } /* el scroll dentro del panel no mueve la página de atrás */
 .panel-correo[open] { animation: panel-entra .28s cubic-bezier(.2, .8, .2, 1); }
-.panel-correo h2 { font-family: var(--titular); font-weight: 900; font-stretch: 75%; font-size: 44px; line-height: 1; margin: 0 0 12px; letter-spacing: -.02em; }
+.panel-correo h1 { font-family: var(--titular); font-weight: 900; font-stretch: 75%; font-size: 44px; line-height: 1; margin: 0 0 12px; letter-spacing: -.02em; }
 .panel-correo p { margin: 0; }
 .panel-correo-dir { font-weight: 700; font-size: 24px; margin: 4px 0 22px !important; overflow-wrap: anywhere; }
 .panel-correo-acciones { display: grid; gap: 10px; }

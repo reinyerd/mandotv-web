@@ -18,6 +18,28 @@ mueve y las capturas cargan) y en local las 30 en 1280 y 375 px sin desborde ni 
   `VideoObject` por idioma en el JSON-LD (pedir el ID de YouTube de cada uno), versionar, publicar e IndexNow.
 - Pendiente común con lo de arriba: solicitar indexación en Search Console (cuota de hoy agotada).
 
+## 25-nov (noche): URLs por idioma, PUBLICADO (merge `683e8ffa`, sí del fundador)
+
+Inglés en la raíz (`/lg-tv-remote/`, `/guides/...`, `/privacy.html`, `/support.html`) y cada idioma bajo su prefijo
+(`/es/...`, `/de/`, `/fr/`, `/pt/`, `/it/`). Fuente única: `herramientas/idiomas_sitio.py`. 82 URL viejas quedan como
+páginas puente (refresh 0 s + canonical + noindex), generadas por `herramientas/generar_redirecciones.py`; lista en
+`docs/REDIRECCIONES.tsv`. Comprobado: 0 enlaces rotos, canonical y hreflang correctos, y en vivo `/privacidad.html` y
+`/en/privacy.html` (URLs de las fichas de las tiendas) llevan a las nuevas.
+- IndexNow: sitemap completo y las 82 URL viejas aceptados (HTTP 200).
+- Search Console: sitemap reenviado. **Pendiente 26-nov**: solicitar indexación de `/samsung-tv-remote/`,
+  `/lg-tv-remote/`, `/guides/` y `/es/control-remoto-lg/` (el 25-nov dio "Cuota superada").
+- **Pendiente**: redirecciones 301 reales en Cloudflare (Bulk Redirects con `docs/REDIRECCIONES.tsv`); cambiar en las
+  fichas de las tiendas los enlaces de privacidad y soporte a las URL nuevas; la portada 404 sigue en español.
+- Aviso: los generadores no tienen la sección "Home" agregada a mano en `privacy.html`, `it/privacy.html` y
+  `pt/privacidade.html`; la borrarían al regenerar.
+
+## REGLA FIJA: canal de YouTube de Mando TV (pedido del fundador, 25-nov-2026)
+
+Todo video de Mando TV se sube **solo** al canal **Mando TV (@mandotvapp)**, ID `UCNlAqoB_UH4aurE1wMlIYYQ`
+(https://studio.youtube.com/channel/UCNlAqoB_UH4aurE1wMlIYYQ). Antes de subir, comprobar en YouTube Studio (menú de
+la cuenta > Cambiar de cuenta) que el canal activo es Mando TV. **Nunca** en el canal personal "Reinyerd Babinczuk"
+(`UCzHOi8TkbM1d3Lcda8L5MCg`), que es el que abre Studio por defecto. Ahí quedaron por error 2 Shorts del 21-nov
+(474 y 54 vistas al 25-nov); no se borran ni se ocultan sin el OK del fundador.
 ## 25-nov (noche): teléfono de la vitrina, clics que fallaban y pestañas vivas (publicado)
 
 Pedido del fundador. Vale para las 30 portadas (solo cambian `estilos.css` y `app.js`).
@@ -207,9 +229,7 @@ y se guarda el estado a cada paso.
 
 - Ojo: los generadores no conocen arreglos hechos a mano (Casa en la privacidad es/en/pt/it, `/#android` en las guías
   en inglés, la portada en inglés en la raíz). No regenerar páginas existentes: usar `portadas_idiomas.py`, que solo
-  refresca los enlaces de idioma.
-
-## 25-nov: envío a directorios (hecho con Claude in Chrome)
+  refresca los enlaces de idioma.## 25-nov: envío a directorios (hecho con Claude in Chrome)
 
 Resultado (detalle en la tabla de `docs/DIRECTORIOS.md`): **Uneed agendado** en la cola gratis para el 23-jun-2027
 (uneed.best/tool/mando-tv); **Fazier omitido** (el plan gratis exige un enlace de vuelta; decisión del fundador);
@@ -328,3 +348,11 @@ el aviso de idioma le sale en español.
 
 Cómo medir: evento `aviso_idioma` en Google Analytics (solo visitas que aceptan cookies) y, en Search Console,
 clics de países no hispanohablantes en /en/ antes y después del 24-nov.
+
+## Modern Web Guidance (25-nov, sesión "Actualizar código con Modern Web Guidance")
+- Cambios probados con Playwright en local: correo.js (closedby="any" + respaldo para Safari, h1, role="status",
+  aviso repetido con espacio duro), cookies.js (foco vuelve a quien abrió el aviso), demo.js (sin cambiar aria-label junto a
+  aria-pressed), estilos.css (enlace "Saltar al contenido" visible al recibir foco, scroll contenido en el panel de correo),
+  loading="lazy" en los 3 videos + generar_en.py, fetchpriority="low" en el beacon de Cloudflare (1.067 archivos + generadores).
+- Commit local a0fbb3ad hecho; falta push con el OK del fundador (único cambio visible: "Saltar al contenido" al pulsar Tab).
+- Descartado tras verificación: 8 sugerencias (ver informe del workflow wf_65a283bb-f2a).

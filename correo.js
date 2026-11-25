@@ -104,7 +104,7 @@
     panel.className = 'panel-correo';
     panel.setAttribute('aria-labelledby', 'panel-correo-titulo');
     panel.innerHTML =
-      '<h2 id="panel-correo-titulo">' + T.titulo + '</h2>' +
+      '<h1 id="panel-correo-titulo">' + T.titulo + '</h1>' +
       '<p>' + T.es + '</p>' +
       '<p class="panel-correo-dir">hola@mandotv.app</p>' +
       '<div class="panel-correo-acciones">' +
@@ -112,24 +112,42 @@
       '<a class="boton claro" id="pc-app">' + T.app + '</a>' +
       '<button type="button" class="boton claro" id="pc-copiar">' + T.copiar + '</button>' +
       '</div>' +
-      '<p class="panel-correo-aviso" id="pc-aviso" aria-live="polite"></p>' +
+      '<p class="panel-correo-aviso" id="pc-aviso" role="status"></p>' +
       '<button type="button" class="panel-correo-cerrar" id="pc-cerrar" aria-label="' + T.cerrar + '">×</button>';
     document.body.appendChild(panel);
     enlaceGmail = panel.querySelector('#pc-gmail');
     enlaceApp = panel.querySelector('#pc-app');
     aviso = panel.querySelector('#pc-aviso');
     panel.querySelector('#pc-cerrar').addEventListener('click', function () { panel.close(); });
-    panel.addEventListener('click', function (e) { if (e.target === panel) panel.close(); }); // clic fuera
+    panel.setAttribute('closedby', 'any'); // clic fuera cierra (nativo en Chrome, Edge y Firefox)
+    if (!('closedBy' in HTMLDialogElement.prototype)) { // Safari: mismo cierre, mirando la posición del puntero
+      var fuera = function (e) {
+        var r = panel.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      };
+      var pulsoFuera = false;
+      panel.addEventListener('pointerdown', function (e) { pulsoFuera = fuera(e); });
+      panel.addEventListener('pointerup', function (e) { if (pulsoFuera && fuera(e)) panel.close(); });
+    }
     panel.querySelector('#pc-copiar').addEventListener('click', copiar);
   }
 
   function copiar() {
-    var listo = function () { aviso.textContent = T.copiada; };
+    var listo = function () { decir(T.copiada); };
     if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText('hola@mandotv.app').then(listo, function () { aviso.textContent = T.copia; });
+      navigator.clipboard.writeText('hola@mandotv.app').then(listo, function () { decir(T.copia); });
     } else {
-      aviso.textContent = T.copia;
+      decir(T.copia);
     }
+  }
+
+  // VoiceOver no repite un aviso idéntico al anterior: si se repite, se alterna un espacio duro al final.
+  var ultimo = '';
+  function decir(m) {
+    if (m === ultimo) m += ' ';
+    ultimo = m;
+    aviso.textContent = '';
+    requestAnimationFrame(function () { aviso.textContent = m; });
   }
 
   function abrir(href) {

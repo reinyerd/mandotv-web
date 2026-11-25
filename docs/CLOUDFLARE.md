@@ -20,6 +20,7 @@ pasa las visitas y les agrega las cabeceras.
 | MX | @ | fwd1.porkbun.com (prioridad 10), fwd2.porkbun.com (20) | No aplica |
 | TXT | @ | google-site-verification=uL5C-EKKLz51dNDfDhks7Y25UhfT3g-DpQNMgkMyUp8 | No aplica |
 | TXT | @ | v=spf1 include:_spf.porkbun.com ~all | No aplica |
+| TXT | @ | apple-domain-verification=czUGHRuFfO3XrnJD | No aplica |
 
 Antes de cambiar servidores, comparar con la lista del panel de Porkbun por si hay alguno más (DKIM, _dmarc,
 verificaciones). El reenvío de hola@mandotv.app de Porkbun funciona con otros servidores DNS si están los MX y el

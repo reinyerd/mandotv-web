@@ -194,7 +194,7 @@ def pie(clave):
   <script src="/correo.js?v=3" defer></script>
   <script src="/cookies.js?v=1" defer></script>
   <!-- Cloudflare Web Analytics: cuenta visitas sin cookies ni datos personales -->
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "3a3f0250e4b04d5884b033b9a94302b4"}}'></script>
+  <script defer fetchpriority="low" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "3a3f0250e4b04d5884b033b9a94302b4"}}'></script>
 </body>
 </html>
 '''
@@ -792,7 +792,7 @@ def pagina_guia(g):
         video = f'''      <h2 id="video">{e(v.get('titulo', 'See it in action'))}</h2>
       <figure class="{clase}">
         <div class="video-marco" data-play="{e(v['boton'])}">
-          <video controls muted playsinline preload="none" width="{ancho}" height="{alto}" poster="{v['poster']}" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="{ancho}" height="{alto}" poster="{v['poster']}" aria-describedby="video-texto">
             <source src="{v['archivo']}" type="video/mp4">
           </video>
         </div>
