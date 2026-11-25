@@ -164,7 +164,7 @@ def datos(html):
     return tv, alt
 
 
-PORTADAS = {'es': 'index.html', 'en': 'en/index.html', 'pt': 'pt/index.html', 'fr': 'fr/index.html',
+PORTADAS = {'es': 'es/index.html', 'en': 'index.html', 'pt': 'pt/index.html', 'fr': 'fr/index.html',
             'de': 'de/index.html', 'it': 'it/index.html'}
 SATELITE = re.compile(r'\s*<div class="satelite" aria-hidden="true">.*?</small></div>', re.S)
 

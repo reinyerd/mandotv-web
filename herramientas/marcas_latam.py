@@ -62,7 +62,7 @@ def _oficial(marca):
 
 
 MARCAS_LATAM = [
-  dict(slug='control-remoto-master-g', nombre='Master G', corto='Master G', color='#f2742b',
+  dict(slug='es/control-remoto-master-g', nombre='Master G', corto='Master G', color='#f2742b',
     titulo='Control remoto para TV Master G en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Master G con Google TV o Android TV, por WiFi. Gratis, sin anuncios y sin cuenta.',
     h1='Control remoto para TV Master G',
@@ -77,7 +77,7 @@ MARCAS_LATAM = [
     ],
     guias=_GUIAS_GTV),
 
-  dict(slug='control-remoto-kalley', nombre='Kalley', corto='Kalley', color='#e5484d',
+  dict(slug='es/control-remoto-kalley', nombre='Kalley', corto='Kalley', color='#e5484d',
     titulo='Control remoto para TV Kalley en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Kalley con Roku TV o Google TV, por WiFi. Gratis, sin anuncios y sin cuenta.',
     h1='Control remoto para TV Kalley',
@@ -92,7 +92,7 @@ MARCAS_LATAM = [
     ],
     guias=_GUIAS_ROKU_GTV),
 
-  dict(slug='control-remoto-caixun', nombre='Caixun', corto='Caixun', color='#1ba8b5',
+  dict(slug='es/control-remoto-caixun', nombre='Caixun', corto='Caixun', color='#1ba8b5',
     titulo='Control remoto para TV Caixun en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Caixun con Roku TV o Google TV, por WiFi. Gratis, sin anuncios y sin cuenta.',
     h1='Control remoto para TV Caixun',
@@ -108,7 +108,7 @@ MARCAS_LATAM = [
     ],
     guias=_GUIAS_ROKU_GTV),
 
-  dict(slug='control-remoto-hyundai', nombre='Hyundai', corto='Hyundai', color='#2b8cff',
+  dict(slug='es/control-remoto-hyundai', nombre='Hyundai', corto='Hyundai', color='#2b8cff',
     titulo='Control remoto para TV Hyundai en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu TV Hyundai con Google TV o Android TV, por WiFi. Gratis, sin anuncios y sin cuenta.',
     h1='Control remoto para TV Hyundai',
@@ -123,7 +123,7 @@ MARCAS_LATAM = [
     ],
     guias=_GUIAS_GTV),
 
-  dict(slug='control-remoto-noblex', nombre='Noblex', corto='Noblex', color='#8f6bff',
+  dict(slug='es/control-remoto-noblex', nombre='Noblex', corto='Noblex', color='#8f6bff',
     titulo='Control remoto para TV Noblex en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu Smart TV Noblex con Google TV o Android TV, por WiFi. Gratis, sin anuncios y sin cuenta.',
     h1='Control remoto para TV Noblex',
@@ -138,7 +138,7 @@ MARCAS_LATAM = [
     ],
     guias=_GUIAS_GTV),
 
-  dict(slug='control-remoto-bgh', nombre='BGH', corto='BGH', color='#22b07d',
+  dict(slug='es/control-remoto-bgh', nombre='BGH', corto='BGH', color='#22b07d',
     titulo='Control remoto para TV BGH en tu celular | Mando TV',
     desc='Usa tu celular o PC como control remoto de tu Smart TV BGH con Google TV o Android TV, por WiFi. Gratis, sin anuncios y sin cuenta.',
     h1='Control remoto para TV BGH',

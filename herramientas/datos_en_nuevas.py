@@ -31,7 +31,7 @@ GUIAS_NUEVAS = [
     intro='If the remote for your Fire TV Stick, Fire TV Cube or Fire TV smart TV is lost or dead, your phone can take over, as long as the Fire TV is still connected to your home Wi-Fi. Pairing uses a 4-digit PIN that appears on the TV screen, so you never need the old remote for it.',
     pasos=[
       'Turn on the TV with its own power button. A Fire TV Stick or Cube plugged into it usually wakes up with it, and with HDMI-CEC the TV often switches to its input by itself.',
-      'If the TV shows another input, change it with the input button on the TV. See [change the HDMI input without a remote](/en/guides/change-hdmi-input-without-remote/).',
+      'If the TV shows another input, change it with the input button on the TV. See [change the HDMI input without a remote](/guides/change-hdmi-input-without-remote/).',
       'Connect your phone to the same Wi-Fi network as the Fire TV.',
       'Download Mando TV and open it. Your Fire TV shows up in the list. Tap it.',
       'The TV shows a 4-digit PIN. Type it into Mando TV. You only do this once.',
@@ -41,11 +41,11 @@ GUIAS_NUEVAS = [
       ('Try the TV remote first (HDMI-CEC)', 'Many TV remotes can drive a Fire TV Stick through HDMI-CEC. With the Fire TV on screen, press the arrows and OK on the TV remote. If nothing happens, turn on CEC in the TV settings (Anynet+ on Samsung, SIMPLINK on LG, BRAVIA Sync on Sony) and on the Fire TV under Settings, Display & Sounds, HDMI CEC Device Control.'),
       ('If you moved or changed your Wi-Fi', 'Without a remote you cannot type the new Wi-Fi password on the Fire TV, but there is a way out: on a second phone, create a hotspot with exactly the same network name and password as your old Wi-Fi. The Fire TV joins it by itself. Connect the phone with Mando TV to that hotspot, pair with the PIN, then go to Settings, Network on the Fire TV and choose your new Wi-Fi. Finally, move your phone to the new Wi-Fi too.'),
       ('Pairing a replacement remote', 'Most new Fire TV remotes pair when you hold the Home button for about 10 seconds near the Fire TV. If it does not pair, open Settings, Controllers & Bluetooth Devices, Amazon Fire TV Remotes, Add New Remote. You can reach that menu from your phone with Mando TV.'),
-      ('Fire TV built into the TV', 'On TVs with Fire TV built in, such as many Insignia and Toshiba models, the same steps work because the TV is the Fire TV. See the [Insignia](/en/guides/insignia-tv-remote-app/) and [Toshiba](/en/guides/toshiba-tv-remote-app/) pages.'),
-      ('Before you start', 'Fire TV support arrived recently in Mando TV, so update the app first. If your model does not behave, tell us from the [Help page](/en/support.html) and include the model name.'),
+      ('Fire TV built into the TV', 'On TVs with Fire TV built in, such as many Insignia and Toshiba models, the same steps work because the TV is the Fire TV. See the [Insignia](/guides/insignia-tv-remote-app/) and [Toshiba](/guides/toshiba-tv-remote-app/) pages.'),
+      ('Before you start', 'Fire TV support arrived recently in Mando TV, so update the app first. If your model does not behave, tell us from the [Help page](/support.html) and include the model name.'),
       ('Free and Pro', PRECIO),
     ],
-    marca=('/en/guides/fire-tv-remote-app/', 'Fire TV remote app'),
+    marca=('/guides/fire-tv-remote-app/', 'Fire TV remote app'),
     faq=[
       ('Can I control a Fire TV Stick with my phone without the remote?', 'Yes, if the Fire TV is on and connected to your Wi-Fi. Mando TV pairs with the 4-digit PIN shown on the TV, so you do not need the old remote at any point.'),
       ('Does it work if the Fire TV is on a new Wi-Fi network?', 'Not directly, because the phone and the Fire TV must be on the same network. Bring the Fire TV back online first with the hotspot trick described on this page.'),
@@ -66,8 +66,8 @@ GUIAS_NUEVAS = [
     ],
     extra=[
       ('Where the power button is, by brand', 'Samsung: one control button or stick under the center of the screen, or on the back at a lower corner. LG: a joystick-style button under the LG logo on most models. TCL and Hisense: usually a small button under the middle of the screen or on the back near a lower corner. Sony: on the back or on a side edge, near the bottom. Vizio: on the back, at the lower left or lower right, or on the side. Spots change by model, so if you cannot find it, look up the user manual with the model number printed on the label on the back.'),
-      ('Turn on the TV from a console or streaming device (HDMI-CEC)', 'With HDMI-CEC on, turning on a PlayStation, an Xbox, a Roku player, a Fire TV Stick or a Chromecast also turns on the TV and switches it to the right input. Each brand gives the setting its own name: Anynet+ on Samsung, SIMPLINK on LG, BRAVIA Sync on Sony, and CEC on most others. More in [turn on the TV and switch to your console HDMI](/en/guides/turn-on-tv-console-hdmi-without-remote/).'),
-      ('Turn on the TV from your phone', 'Smart TVs can wake up over Wi-Fi if you allow it once, and then Mando TV turns them on from your phone. On Samsung, turn on "Power On with Mobile" under Settings, General, Network, Expert Settings. On LG, turn on "TV On With Mobile" ([step by step](/en/guides/turn-on-lg-tv-with-phone/)). On a Roku TV, turn on "Fast TV start" under Settings, System, Power. On Google TV and Android TV, look for Wake on LAN or "Turn on over network", if your model has it. You do this once, with the TV on.'),
+      ('Turn on the TV from a console or streaming device (HDMI-CEC)', 'With HDMI-CEC on, turning on a PlayStation, an Xbox, a Roku player, a Fire TV Stick or a Chromecast also turns on the TV and switches it to the right input. Each brand gives the setting its own name: Anynet+ on Samsung, SIMPLINK on LG, BRAVIA Sync on Sony, and CEC on most others. More in [turn on the TV and switch to your console HDMI](/guides/turn-on-tv-console-hdmi-without-remote/).'),
+      ('Turn on the TV from your phone', 'Smart TVs can wake up over Wi-Fi if you allow it once, and then Mando TV turns them on from your phone. On Samsung, turn on "Power On with Mobile" under Settings, General, Network, Expert Settings. On LG, turn on "TV On With Mobile" ([step by step](/guides/turn-on-lg-tv-with-phone/)). On a Roku TV, turn on "Fast TV start" under Settings, System, Power. On Google TV and Android TV, look for Wake on LAN or "Turn on over network", if your model has it. You do this once, with the TV on.'),
       ('If you cannot find any button', 'Some recent TVs hide the only button so well that it feels like there is none. Look for a small bump or a light sensor area under the screen: the button is often right next to it. Over Wi-Fi, Mando TV needs the TV to have been on and connected once. Infrared is the exception: on an Android phone with an infrared blaster, Mando TV can turn on a TV that was never set up, as long as you point the phone at the TV. Infrared is new, and it works with the brands in the app code list.'),
       ('Free and Pro', PRECIO),
     ],
@@ -109,8 +109,8 @@ GUIAS_NUEVAS = [
     extra=[
       ('What Mando TV does not do', 'On iPhone and iPad it walks you to Screen Mirroring in Control Center, the iPhone\'s own feature, which works with TVs that support AirPlay. On Windows it opens Cast (Windows + K), and Mando TV Pro can send the PC screen over your home Wi-Fi to LG, Samsung, Hisense and Android TV sets (beta, with a few seconds of delay and no sound). With Mando TV Pro it can also send photos and videos to the TV over your home Wi-Fi. It controls smart TVs over your home Wi-Fi. A TV that is not a smart TV can be controlled by infrared from an Android phone with an infrared blaster. On Android 9 or newer, the phone can also connect to Google TV, Android TV and Fire TV over Bluetooth as a keyboard and remote, with no Wi-Fi. That option is in beta and free.'),
       ('How Mando TV makes money', 'Not with ads and not with your data: the app collects none. Mando TV is paid for by Pro, an optional one-time purchase for extras. The basic remote is free.'),
-      ('On the devices you already have', 'iPhone, iPad and Mac from the App Store, Windows PCs from Microsoft Store, and Android through free early access on Google Play. See [TV remote app for iPhone](/en/guides/tv-remote-app-for-iphone/) and [TV remote app for Windows](/en/guides/tv-remote-app-for-windows/).'),
-      ('Privacy', 'No account and no tracking in the app. It talks to the TV inside your home network, and the TV connection keys stay encrypted on your device. Details in the [privacy policy](/en/privacy.html).'),
+      ('On the devices you already have', 'iPhone, iPad and Mac from the App Store, Windows PCs from Microsoft Store, and Android through free early access on Google Play. See [TV remote app for iPhone](/guides/tv-remote-app-for-iphone/) and [TV remote app for Windows](/guides/tv-remote-app-for-windows/).'),
+      ('Privacy', 'No account and no tracking in the app. It talks to the TV inside your home network, and the TV connection keys stay encrypted on your device. Details in the [privacy policy](/privacy.html).'),
     ],
     marca=None,
     faq=[
@@ -132,13 +132,13 @@ GUIAS_NUEVAS = [
       'Optional: turn on "Power On with Mobile" under Settings, General, Network, Expert Settings so Mando TV can also turn the TV on.',
     ],
     extra=[
-      ('Why a phone remote stops working', 'The usual causes are simple: the phone and the TV are on different Wi-Fi networks, a VPN is on, or the TV is in a deep standby mode. With SmartThings, the Samsung account adds one more thing that can fail, such as being signed out. Mando TV talks to the TV directly inside your home network, so there is no account to sign in to. More fixes in [your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
+      ('Why a phone remote stops working', 'The usual causes are simple: the phone and the TV are on different Wi-Fi networks, a VPN is on, or the TV is in a deep standby mode. With SmartThings, the Samsung account adds one more thing that can fail, such as being signed out. Mando TV talks to the TV directly inside your home network, so there is no account to sign in to. More fixes in [your phone cannot find the TV](/guides/phone-cant-find-tv/).'),
       ('Mando TV vs SmartThings, in plain terms', 'Keep SmartThings if you use it for Samsung appliances, lights or other smart home devices, or for Samsung account features. Use Mando TV when you just want a fast remote for the TV, or when you also have an LG, Roku, Google TV or Fire TV at home: one app controls all of them. Both can live on the same phone.'),
       ('If you denied the permission by mistake', 'On the TV, go to Settings, General, External Device Manager, Device Connection Manager, and set Mando TV to allowed.'),
-      ('No remote at all?', 'You can accept the prompt with the control button on the TV itself. The guide [Samsung TV without a remote](/en/guides/samsung-tv-without-remote/) walks through it.'),
+      ('No remote at all?', 'You can accept the prompt with the control button on the TV itself. The guide [Samsung TV without a remote](/guides/samsung-tv-without-remote/) walks through it.'),
       ('Free and Pro', PRECIO),
     ],
-    marca=('/en/samsung-tv-remote/', 'Samsung TV remote app'),
+    marca=('/samsung-tv-remote/', 'Samsung TV remote app'),
     faq=[
       ('Can I control my Samsung TV without SmartThings?', 'Yes. Mando TV connects to Samsung Tizen TVs directly over your Wi-Fi. You allow the connection once on the TV, with no Samsung account.'),
       ('Does Mando TV control Samsung appliances?', 'No. It is a TV remote only. Keep SmartThings for appliances and other smart home devices.'),
@@ -158,13 +158,13 @@ GUIAS_NUEVAS = [
       'Optional: look for Wake on LAN or "Turn on over network" in the TV settings so the app can also turn the TV on.',
     ],
     extra=[
-      ('Why a phone remote stops finding the TV', 'Most of the time it is the network: the phone and the TV are on different Wi-Fi networks, a VPN is on, or a guest network keeps devices apart. Fix that first, because it affects every remote app. See [your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
+      ('Why a phone remote stops finding the TV', 'Most of the time it is the network: the phone and the TV are on different Wi-Fi networks, a VPN is on, or a guest network keeps devices apart. Fix that first, because it affects every remote app. See [your phone cannot find the TV](/guides/phone-cant-find-tv/).'),
       ('Which TVs it works with', 'Google TV and Android TV sets from Sony, TCL, Hisense, Philips, Sharp, Xiaomi, Toshiba and more, plus Chromecast with Google TV, Google TV Streamer and Nvidia Shield. They all pair the same way, with the code on the screen, once.'),
       ('Where Google\'s app is better', 'Google\'s app also helps you find what to watch and keeps your watchlist. Keep it for that. Mando TV is just the remote, and it also controls Samsung, LG, Roku and Fire TV from the same app, and from a Windows PC.'),
       ('If the old Android TV remote app is gone', 'Google moved its phone remote from the old Android TV Remote Control app into the Google TV app. If you want a standalone remote instead, Mando TV is one.'),
       ('Free and Pro', PRECIO),
     ],
-    marca=('/en/android-tv-remote/', 'Android TV remote app'),
+    marca=('/android-tv-remote/', 'Android TV remote app'),
     faq=[
       ('Do I need a Google account to use Mando TV with Google TV?', 'No. The code on the TV screen is all it takes to pair.'),
       ('Does it work with Chromecast with Google TV?', 'Yes. It pairs the same way, with the 6-character code on the screen.'),
@@ -178,7 +178,7 @@ GUIAS_NUEVAS = [
 # ---------------------------------------------------------------------------------------------------------------
 _ROKU_ENCENDER = 'To turn it on from your phone, turn on "Fast TV start" under Settings, System, Power.'
 _GTV_ENCENDER = 'To turn it on from your phone, look for Wake on LAN or "Turn on over network" in the network or power settings. Some models do not have it.'
-_FIRE_NUEVO = 'Fire TV support arrived recently in Mando TV, so update the app first, and tell us from the [Help page](/en/support.html) if your model does not behave.'
+_FIRE_NUEVO = 'Fire TV support arrived recently in Mando TV, so update the app first, and tell us from the [Help page](/support.html) if your model does not behave.'
 
 GUIAS_MARCAS = [
   dict(clave='sony', corto='Sony TV remote app',
@@ -195,11 +195,11 @@ GUIAS_MARCAS = [
     ],
     extra=[
       ('Turn on a Sony TV from your phone', 'Sony Google TV and Android TV models can wake up over the network when "Remote start" is on. It is usually under Settings, Network & Internet, Remote start, though the path changes a little by model. Then tap the TV in Mando TV while it is off and the app turns it on.'),
-      ('Where the power button is on a Sony', 'On most Bravia TVs it is on the back, near the lower left or right edge, or on a side edge. A short press turns the TV on. More in [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
+      ('Where the power button is on a Sony', 'On most Bravia TVs it is on the back, near the lower left or right edge, or on a side edge. A short press turns the TV on. More in [how to turn on a TV without the remote](/guides/turn-on-tv-without-remote/).'),
       ('Older Sony TVs', 'Sony Bravia TVs from 2013 to 2015 that do not run Android have beta support in Mando TV. It is new, so it can still have rough edges. The TV shows a 4-digit PIN to type into the app. Other Sony TVs without Google TV or Android TV are not covered today.'),
       ('Free and Pro', PRECIO),
     ],
-    marca=('/en/android-tv-remote/', 'Android TV remote app'),
+    marca=('/android-tv-remote/', 'Android TV remote app'),
     faq=[
       ('Does Mando TV work with Sony Bravia TVs?', 'Yes, with Sony TVs that run Google TV or Android TV, which covers most Sony smart TVs since 2015.'),
       ('Do I need a Sony app or a Google account?', 'No. Mando TV pairs with the code on the TV screen and has no account.'),
@@ -220,9 +220,9 @@ GUIAS_MARCAS = [
       'Use the d-pad, OK, Back, Home, volume and keyboard from your phone.',
     ],
     extra=[
-      ('Insignia with Fire TV built in', 'The TV is the Fire TV, so the [Fire TV remote app](/en/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/en/guides/lost-fire-tv-remote/).'),
-      ('Insignia with Roku TV', 'It works like any Roku TV, with no code. ' + _ROKU_ENCENDER + ' Details on the [Roku remote app page](/en/roku-remote/).'),
-      ('Turn on an Insignia without the remote', 'The power button is usually under the center of the screen or on the back near a lower corner. See [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
+      ('Insignia with Fire TV built in', 'The TV is the Fire TV, so the [Fire TV remote app](/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/guides/lost-fire-tv-remote/).'),
+      ('Insignia with Roku TV', 'It works like any Roku TV, with no code. ' + _ROKU_ENCENDER + ' Details on the [Roku remote app page](/roku-remote/).'),
+      ('Turn on an Insignia without the remote', 'The power button is usually under the center of the screen or on the back near a lower corner. See [how to turn on a TV without the remote](/guides/turn-on-tv-without-remote/).'),
       ('Insignia TVs that are not smart TVs', 'An Insignia without Fire TV or Roku TV cannot be controlled over Wi-Fi. Mando TV has infrared control for Android phones with an infrared blaster, but Insignia is not in its list of brand code sets. The "Other brand or I don\'t know" option tries every code set, so whether it works depends on the model.'),
       ('Free and Pro', PRECIO),
     ],
@@ -246,9 +246,9 @@ GUIAS_MARCAS = [
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
     ],
     extra=[
-      ('onn. Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' To change the input without the remote, the inputs are tiles on the home screen: move with the arrows and press OK. More on the [Roku remote app page](/en/roku-remote/).'),
-      ('onn. Google TV and the onn. streaming box', 'Both pair with the 6-character code. For the streaming box, the TV power and input depend on the TV it is plugged into; with HDMI-CEC on, the TV usually follows. More on the [Android TV remote app page](/en/android-tv-remote/).'),
-      ('onn. TVs powered by VIZIO', 'These run VIZIO\'s system. Mando TV has beta support for VIZIO SmartCast TVs, explained on the [Vizio TV remote app](/en/guides/vizio-tv-remote-app/) page, but we cannot promise that every onn. model powered by VIZIO works. If you plug a Roku, Fire TV or Google TV device into one, Mando TV can control that device.'),
+      ('onn. Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' To change the input without the remote, the inputs are tiles on the home screen: move with the arrows and press OK. More on the [Roku remote app page](/roku-remote/).'),
+      ('onn. Google TV and the onn. streaming box', 'Both pair with the 6-character code. For the streaming box, the TV power and input depend on the TV it is plugged into; with HDMI-CEC on, the TV usually follows. More on the [Android TV remote app page](/android-tv-remote/).'),
+      ('onn. TVs powered by VIZIO', 'These run VIZIO\'s system. Mando TV has beta support for VIZIO SmartCast TVs, explained on the [Vizio TV remote app](/guides/vizio-tv-remote-app/) page, but we cannot promise that every onn. model powered by VIZIO works. If you plug a Roku, Fire TV or Google TV device into one, Mando TV can control that device.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
@@ -271,10 +271,10 @@ GUIAS_MARCAS = [
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
     ],
     extra=[
-      ('Toshiba Fire TV', 'The TV is the Fire TV, so the [Fire TV remote app](/en/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/en/guides/lost-fire-tv-remote/).'),
-      ('Toshiba Google TV and Android TV', 'They pair with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/en/android-tv-remote/).'),
-      ('Toshiba with VIDAA', 'Most VIDAA models work. Some recent VIDAA models only accept the official app of the TV maker; Mando TV detects that when it connects and tells you plainly. More in the [Hisense TV remote app](/en/guides/hisense-tv-remote-app/) guide.'),
-      ('Turn on a Toshiba without the remote', 'Look for the power button under the center of the screen or on the back near a lower corner. More in [how to turn on a TV without the remote](/en/guides/turn-on-tv-without-remote/).'),
+      ('Toshiba Fire TV', 'The TV is the Fire TV, so the [Fire TV remote app](/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO + ' Lost the remote? See [lost your Fire TV remote](/guides/lost-fire-tv-remote/).'),
+      ('Toshiba Google TV and Android TV', 'They pair with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/android-tv-remote/).'),
+      ('Toshiba with VIDAA', 'Most VIDAA models work. Some recent VIDAA models only accept the official app of the TV maker; Mando TV detects that when it connects and tells you plainly. More in the [Hisense TV remote app](/guides/hisense-tv-remote-app/) guide.'),
+      ('Turn on a Toshiba without the remote', 'Look for the power button under the center of the screen or on the back near a lower corner. More in [how to turn on a TV without the remote](/guides/turn-on-tv-without-remote/).'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
@@ -297,15 +297,15 @@ GUIAS_MARCAS = [
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
     ],
     extra=[
-      ('Sharp Roku TV', 'Works like any Roku TV, including Sharp\'s OLED Roku TV models. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/en/roku-remote/).'),
-      ('Sharp Aquos with Google TV or Android TV', 'Pairs with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/en/android-tv-remote/).'),
+      ('Sharp Roku TV', 'Works like any Roku TV, including Sharp\'s OLED Roku TV models. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/roku-remote/).'),
+      ('Sharp Aquos with Google TV or Android TV', 'Pairs with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/android-tv-remote/).'),
       ('Sharp TVs with another system', 'Sharp TVs without Roku TV, Google TV or Android TV are not controlled by Mando TV today.'),
       ('Free and Pro', PRECIO),
     ],
     marca=None,
     faq=[
       ('Does Mando TV work with Sharp TVs?', 'Yes, with Sharp TVs that run Roku TV, Google TV or Android TV.'),
-      ('My Sharp Roku TV ignores the app. What do I do?', 'On the TV, go to Settings, System, Advanced system settings, Control by mobile apps, and allow network access. The guide [Roku remote app not working](/en/guides/roku-remote-app-not-working/) has the details.'),
+      ('My Sharp Roku TV ignores the app. What do I do?', 'On the TV, go to Settings, System, Advanced system settings, Control by mobile apps, and allow network access. The guide [Roku remote app not working](/guides/roku-remote-app-not-working/) has the details.'),
       ('Do I need an account?', 'No. Mando TV connects over your home Wi-Fi and has no account.'),
     ]),
 
@@ -322,8 +322,8 @@ GUIAS_MARCAS = [
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
     ],
     extra=[
-      ('Philips Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/en/roku-remote/).'),
-      ('Philips with Google TV or Android TV', 'Includes many Ambilight models. They pair with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/en/android-tv-remote/).'),
+      ('Philips Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/roku-remote/).'),
+      ('Philips with Google TV or Android TV', 'Includes many Ambilight models. They pair with the code on the screen. ' + _GTV_ENCENDER + ' More on the [Android TV remote app page](/android-tv-remote/).'),
       ('Older Philips TVs without Android', 'Philips TVs from 2011 to 2015 that do not run Android have beta support in Mando TV. It is new, and it needs no pairing code.'),
       ('Philips with Titan OS', 'Titan OS is a different system that Mando TV does not control today, and we prefer to say so plainly. Newer Philips models without Android are not covered either.'),
       ('Free and Pro', PRECIO),
@@ -345,14 +345,14 @@ GUIAS_MARCAS = [
       'Connect your phone and the TV to the same Wi-Fi network.',
       'Open Mando TV and tap your Westinghouse in the list. Roku TV does not ask for a code.',
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
-      'If the buttons do nothing, allow control by mobile apps on the TV, as shown in [Roku remote app not working](/en/guides/roku-remote-app-not-working/).',
+      'If the buttons do nothing, allow control by mobile apps on the TV, as shown in [Roku remote app not working](/guides/roku-remote-app-not-working/).',
     ],
     extra=[
-      ('Turn it on and change the input', _ROKU_ENCENDER + ' To change the input without the remote, the inputs are tiles on the home screen: move with the arrows and press OK. More on the [Roku remote app page](/en/roku-remote/).'),
+      ('Turn it on and change the input', _ROKU_ENCENDER + ' To change the input without the remote, the inputs are tiles on the home screen: move with the arrows and press OK. More on the [Roku remote app page](/roku-remote/).'),
       ('Westinghouse Xumo TV', 'Xumo TV uses a different system that Mando TV does not control. If you plug a Roku, Fire TV or Google TV device into one, Mando TV can control that device.'),
       ('Free and Pro', PRECIO),
     ],
-    marca=('/en/roku-remote/', 'Roku remote app'),
+    marca=('/roku-remote/', 'Roku remote app'),
     faq=[
       ('Does Mando TV work with Westinghouse TVs?', 'With Westinghouse Roku TV models, yes. Westinghouse Xumo TV models are not supported.'),
       ('Can my phone turn on a Westinghouse Roku TV?', 'Yes, once "Fast TV start" is on under Settings, System, Power.'),
@@ -372,8 +372,8 @@ GUIAS_MARCAS = [
       'Use the d-pad, OK, Back, Home, volume and keyboard.',
     ],
     extra=[
-      ('Pioneer Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/en/roku-remote/).'),
-      ('Pioneer Fire TV', 'The TV is the Fire TV, so the [Fire TV remote app](/en/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO),
+      ('Pioneer Roku TV', 'Works like any Roku TV. ' + _ROKU_ENCENDER + ' More on the [Roku remote app page](/roku-remote/).'),
+      ('Pioneer Fire TV', 'The TV is the Fire TV, so the [Fire TV remote app](/guides/fire-tv-remote-app/) guide applies. ' + _FIRE_NUEVO),
       ('Pioneer Xumo TV', 'Xumo TV uses a different system that Mando TV does not control today.'),
       ('Free and Pro', PRECIO),
     ],

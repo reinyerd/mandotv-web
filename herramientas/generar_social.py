@@ -11,7 +11,7 @@ SITIO = sys.argv[1]
 
 # idioma: (portada, título, subtítulo, tamaño del título en px o None, rótulo de la TV del teléfono o None)
 IDIOMAS = {
-  'en': ('en/index.html', 'One remote for all your TVs', 'Free, no ads and no accounts.', None, None),
+  'en': ('index.html', 'One remote for all your TVs', 'Free, no ads and no accounts.', None, None),
   'de': ('de/index.html', 'Eine Fernbedienung für alle TVs', 'Kostenlos, ohne Werbung und ohne Konto.', 72, 'Samsung TV'),
   'fr': ('fr/index.html', 'Une télécommande pour toutes vos TV', 'Gratuite, sans publicité et sans compte.', 74, None),
   'pt': ('pt/index.html', 'Um controle para todas as TVs', 'Grátis, sem anúncios e sem conta.', None, None),

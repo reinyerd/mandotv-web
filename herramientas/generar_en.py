@@ -1,5 +1,5 @@
 # Genera las páginas en inglés (EE. UU.) de mandotv.app: marcas, índice de guías y guías principales.
-# Textos escritos para búsquedas en inglés (no son traducción literal). La portada /en/ se mantiene a mano.
+# Textos escritos para búsquedas en inglés (no son traducción literal). La portada / (raíz) se mantiene a mano.
 # Uso: python -I herramientas/generar_en.py <carpeta del sitio>
 # Mismo patrón que generar_guias.py y generar_marcas.py; hreflang es + en (+ x-default = inglés) en las dos versiones
 # (las páginas en español lo reciben de sus propios generadores).
@@ -14,7 +14,7 @@ URL = 'https://mandotv.app'
 FECHA = '2026-11-18'
 TIENDA = 'https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct'
 TIENDA_APPLE = 'https://apps.apple.com/app/id6834927348'
-ANDROID = '/en/#android'
+ANDROID = '/#android'
 
 
 def constantes():
@@ -43,8 +43,8 @@ GUIDE_SLUGS = {k: (idiomas_sitio.PAGINAS[k].get('es'), idiomas_sitio.carpeta(k, 
   'lg-thinq', 'roku-app-alt', 'tcl', 'hisense', 'vizio', 'firetv', 'iphone', 'windows',
   'firetv-lost', 'turn-on', 'no-sub', 'smartthings', 'googletv-alt') + tuple(k for k, _ in GUIAS_MARCAS_EN)}
 # Páginas sueltas: (ruta en español, ruta en inglés)
-SOPORTE = ('/soporte.html', '/en/support.html')
-PRIVACIDAD = ('/privacidad.html', '/en/privacy.html')
+SOPORTE = (idiomas_sitio.ruta('soporte', 'es'), idiomas_sitio.ruta('soporte', 'en'))
+PRIVACIDAD = (idiomas_sitio.ruta('privacidad', 'es'), idiomas_sitio.ruta('privacidad', 'en'))
 
 
 def en_url(clave, tabla):
@@ -53,37 +53,37 @@ def en_url(clave, tabla):
 
 # Pie de página en inglés: marcas y guías que existen en inglés.
 PIE = [
-  ('/en/samsung-tv-remote/', 'Samsung TV remote'),
-  ('/en/lg-tv-remote/', 'LG TV remote'),
-  ('/en/roku-remote/', 'Roku remote'),
-  ('/en/android-tv-remote/', 'Android TV remote'),
-  ('/en/guides/', 'All guides'),
-  ('/en/guides/lost-tv-remote/', 'Lost TV remote'),
-  ('/en/guides/lost-lg-remote/', 'Lost LG TV remote'),
-  ('/en/guides/turn-on-lg-tv-with-phone/', 'Turn on an LG TV with your phone'),
-  ('/en/guides/change-hdmi-input-without-remote/', 'Change the HDMI input without a remote'),
-  ('/en/guides/android-tv-without-remote/', 'Android TV without a remote'),
-  ('/en/guides/turn-on-tv-console-hdmi-without-remote/', 'Turn on the TV and switch to console HDMI'),
-  ('/en/guides/samsung-tv-without-remote/', 'Samsung TV without a remote'),
-  ('/en/guides/lost-roku-remote/', 'Lost Roku remote'),
-  ('/en/guides/roku-remote-app-not-working/', 'Roku remote app not working'),
-  ('/en/guides/android-tv-pairing-code/', 'Android TV pairing code'),
-  ('/en/guides/phone-cant-find-tv/', "Phone can't find the TV"),
-  ('/en/guides/connect-phone-to-tv-wifi/', 'Use your phone as a TV remote over Wi-Fi'),
-  ('/en/guides/control-tv-from-pc/', 'Control your TV from a Windows PC'),
-  ('/en/guides/lg-thinq-app-alternative/', 'LG ThinQ app alternative'),
-  ('/en/guides/roku-app-alternative/', 'Roku mobile app alternative'),
-  ('/en/guides/tcl-tv-remote-app/', 'TCL TV remote app'),
-  ('/en/guides/hisense-tv-remote-app/', 'Hisense TV remote app'),
-  ('/en/guides/vizio-tv-remote-app/', 'Vizio TV remote app'),
-  ('/en/guides/fire-tv-remote-app/', 'Fire TV remote app'),
-  ('/en/guides/tv-remote-app-for-iphone/', 'TV remote app for iPhone'),
-  ('/en/guides/tv-remote-app-for-windows/', 'TV remote app for Windows PC'),
-  ('/en/guides/lost-fire-tv-remote/', 'Lost Fire TV remote'),
-  ('/en/guides/turn-on-tv-without-remote/', 'Turn on a TV without the remote'),
-  ('/en/guides/tv-remote-app-no-subscription/', 'TV remote app with no subscription'),
-  ('/en/guides/smartthings-tv-remote-alternative/', 'SmartThings TV remote alternative'),
-  ('/en/guides/google-tv-remote-app-alternative/', 'Google TV remote app alternative'),
+  ('/samsung-tv-remote/', 'Samsung TV remote'),
+  ('/lg-tv-remote/', 'LG TV remote'),
+  ('/roku-remote/', 'Roku remote'),
+  ('/android-tv-remote/', 'Android TV remote'),
+  ('/guides/', 'All guides'),
+  ('/guides/lost-tv-remote/', 'Lost TV remote'),
+  ('/guides/lost-lg-remote/', 'Lost LG TV remote'),
+  ('/guides/turn-on-lg-tv-with-phone/', 'Turn on an LG TV with your phone'),
+  ('/guides/change-hdmi-input-without-remote/', 'Change the HDMI input without a remote'),
+  ('/guides/android-tv-without-remote/', 'Android TV without a remote'),
+  ('/guides/turn-on-tv-console-hdmi-without-remote/', 'Turn on the TV and switch to console HDMI'),
+  ('/guides/samsung-tv-without-remote/', 'Samsung TV without a remote'),
+  ('/guides/lost-roku-remote/', 'Lost Roku remote'),
+  ('/guides/roku-remote-app-not-working/', 'Roku remote app not working'),
+  ('/guides/android-tv-pairing-code/', 'Android TV pairing code'),
+  ('/guides/phone-cant-find-tv/', "Phone can't find the TV"),
+  ('/guides/connect-phone-to-tv-wifi/', 'Use your phone as a TV remote over Wi-Fi'),
+  ('/guides/control-tv-from-pc/', 'Control your TV from a Windows PC'),
+  ('/guides/lg-thinq-app-alternative/', 'LG ThinQ app alternative'),
+  ('/guides/roku-app-alternative/', 'Roku mobile app alternative'),
+  ('/guides/tcl-tv-remote-app/', 'TCL TV remote app'),
+  ('/guides/hisense-tv-remote-app/', 'Hisense TV remote app'),
+  ('/guides/vizio-tv-remote-app/', 'Vizio TV remote app'),
+  ('/guides/fire-tv-remote-app/', 'Fire TV remote app'),
+  ('/guides/tv-remote-app-for-iphone/', 'TV remote app for iPhone'),
+  ('/guides/tv-remote-app-for-windows/', 'TV remote app for Windows PC'),
+  ('/guides/lost-fire-tv-remote/', 'Lost Fire TV remote'),
+  ('/guides/turn-on-tv-without-remote/', 'Turn on a TV without the remote'),
+  ('/guides/tv-remote-app-no-subscription/', 'TV remote app with no subscription'),
+  ('/guides/smartthings-tv-remote-alternative/', 'SmartThings TV remote alternative'),
+  ('/guides/google-tv-remote-app-alternative/', 'Google TV remote app alternative'),
 ]
 
 
@@ -148,7 +148,7 @@ def cabecera(titulo, desc, url, clave, color, tipo, ld):
         </a>
         <nav aria-label="Main">
           <a href="/#funciones">What it does</a>
-          <a href="/en/support.html">Help</a>
+          <a href="/support.html">Help</a>
           <a class="boton-barra" href="mailto:hola@mandotv.app?subject=Hello%20Mando%20TV">Contact</a>
         </nav>
       </header>
@@ -180,8 +180,8 @@ def pie(clave):
       <div class="pie-enlaces">
         <nav aria-label="Footer">
           <a href="/">Home</a>
-          <a href="/en/support.html">Help</a>
-          <a href="/en/privacy.html">Privacy</a>
+          <a href="/support.html">Help</a>
+          <a href="/privacy.html">Privacy</a>
           <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>
 {otros}          <button type="button" class="enlace-cookies" data-cookies>Cookies</button>
         </nav>
@@ -231,10 +231,10 @@ MARCAS = [
       ('Can I turn on my LG TV from my phone?', 'Yes, if you turn on "TV On With Mobile" on the TV and you connected once while the TV was on.'),
       ('Does it work with older LG TVs from before webOS?', 'In beta, yes, with LG NetCast smart TVs from 2011 to 2014. They pair with the 6-digit key shown on the TV. It is new, so it can still have rough edges.'),
     ],
-    guias=['<a href="/en/guides/turn-on-lg-tv-with-phone/">How to turn on an LG TV with your phone</a>',
-           '<a href="/en/guides/lost-lg-remote/">Lost your LG TV remote: how to use your phone</a>',
-           '<a href="/en/guides/change-hdmi-input-without-remote/">Change the TV HDMI input without a remote</a>',
-           '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
+    guias=['<a href="/guides/turn-on-lg-tv-with-phone/">How to turn on an LG TV with your phone</a>',
+           '<a href="/guides/lost-lg-remote/">Lost your LG TV remote: how to use your phone</a>',
+           '<a href="/guides/change-hdmi-input-without-remote/">Change the TV HDMI input without a remote</a>',
+           '<a href="/guides/">All guides to control your TV with your phone</a>']),
   dict(clave='samsung', nombre='Samsung', color='#3d7bff',
     titulo='Samsung TV Remote App for Your Phone, Free | Mando TV',
     desc='Use your phone or PC as a Samsung TV remote for Tizen over Wi-Fi. Buttons, keyboard, apps and power-on are free; touchpad with Pro. No ads.',
@@ -261,11 +261,11 @@ MARCAS = [
       ('Does Mando TV replace SmartThings?', 'To control the TV, yes, and without a Samsung account. Mando TV connects directly over your Wi-Fi.'),
       ('Does it work with older Samsung TVs?', 'It works with Samsung TVs running Tizen, 2016 and newer. Earlier models use a different system that we do not support yet.'),
     ],
-    guias=['<a href="/en/guides/samsung-tv-without-remote/">Samsung TV without the original remote: how to use your phone</a>',
-           '<a href="/en/guides/smartthings-tv-remote-alternative/">SmartThings TV remote alternative for Samsung TVs</a>',
-           '<a href="/en/guides/turn-on-tv-without-remote/">How to turn on a TV without the remote</a>',
-           '<a href="/en/guides/change-hdmi-input-without-remote/">Change the TV HDMI input without a remote</a>',
-           '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
+    guias=['<a href="/guides/samsung-tv-without-remote/">Samsung TV without the original remote: how to use your phone</a>',
+           '<a href="/guides/smartthings-tv-remote-alternative/">SmartThings TV remote alternative for Samsung TVs</a>',
+           '<a href="/guides/turn-on-tv-without-remote/">How to turn on a TV without the remote</a>',
+           '<a href="/guides/change-hdmi-input-without-remote/">Change the TV HDMI input without a remote</a>',
+           '<a href="/guides/">All guides to control your TV with your phone</a>']),
   dict(clave='roku', nombre='Roku', color='#a77bff',
     titulo='Roku Remote App for Your Phone, Free | Mando TV',
     desc='Use your phone or PC as a Roku remote for Roku TV or Roku players over Wi-Fi. Buttons, keyboard, channels, inputs and power-on are free.',
@@ -293,10 +293,10 @@ MARCAS = [
       ('Mando TV cannot find my Roku. What do I do?', 'Check that both are on the same Wi-Fi network and that "Control by mobile apps" on the Roku is not turned off. You can also add it by typing its IP address.'),
       ('Do I need a Roku account?', 'No. Mando TV connects directly over your Wi-Fi.'),
     ],
-    guias=['<a href="/en/guides/roku-remote-app-not-working/">Roku remote app not working (error 403)</a>',
-           '<a href="/en/guides/lost-roku-remote/">Lost your Roku remote: how to use your phone</a>',
-           'Roku TV brands: <a href="/en/guides/tcl-tv-remote-app/">TCL</a>, <a href="/en/guides/hisense-tv-remote-app/">Hisense</a>, <a href="/en/guides/onn-tv-remote-app/">onn.</a>, <a href="/en/guides/sharp-tv-remote-app/">Sharp</a>, <a href="/en/guides/philips-tv-remote-app/">Philips</a>, <a href="/en/guides/westinghouse-tv-remote-app/">Westinghouse</a>, <a href="/en/guides/pioneer-tv-remote-app/">Pioneer</a> and <a href="/en/guides/insignia-tv-remote-app/">Insignia</a>',
-           '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
+    guias=['<a href="/guides/roku-remote-app-not-working/">Roku remote app not working (error 403)</a>',
+           '<a href="/guides/lost-roku-remote/">Lost your Roku remote: how to use your phone</a>',
+           'Roku TV brands: <a href="/guides/tcl-tv-remote-app/">TCL</a>, <a href="/guides/hisense-tv-remote-app/">Hisense</a>, <a href="/guides/onn-tv-remote-app/">onn.</a>, <a href="/guides/sharp-tv-remote-app/">Sharp</a>, <a href="/guides/philips-tv-remote-app/">Philips</a>, <a href="/guides/westinghouse-tv-remote-app/">Westinghouse</a>, <a href="/guides/pioneer-tv-remote-app/">Pioneer</a> and <a href="/guides/insignia-tv-remote-app/">Insignia</a>',
+           '<a href="/guides/">All guides to control your TV with your phone</a>']),
   dict(clave='android', nombre='Android TV and Google TV', color='#2fbf8f',
     titulo='Android TV Remote App for Your Phone | Mando TV',
     desc='Use your phone or PC as an Android TV remote (Sony, TCL, Xiaomi) over Wi-Fi. Buttons, keyboard, apps and power-on are free; touchpad with Pro.',
@@ -323,11 +323,11 @@ MARCAS = [
       ('How is it different from the Google TV app?', 'Mando TV does not need a Google account, it also works from Windows, and it controls LG, Samsung and Roku TVs from the same app.'),
       ('The code does not show up on the screen. What do I do?', 'Close Mando TV, open it again and tap the TV once more. Check that the TV is not in a deep power-saving mode.'),
     ],
-    guias=['<a href="/en/guides/android-tv-pairing-code/">Android TV asks for a pairing code: what to do</a>',
-           '<a href="/en/guides/android-tv-without-remote/">Android TV without a remote: how to use your phone</a>',
-           '<a href="/en/guides/google-tv-remote-app-alternative/">Google TV remote app alternative for your phone</a>',
-           'Google TV and Android TV brands: <a href="/en/guides/sony-tv-remote-app/">Sony</a>, <a href="/en/guides/tcl-tv-remote-app/">TCL</a>, <a href="/en/guides/hisense-tv-remote-app/">Hisense</a>, <a href="/en/guides/philips-tv-remote-app/">Philips</a>, <a href="/en/guides/sharp-tv-remote-app/">Sharp</a>, <a href="/en/guides/toshiba-tv-remote-app/">Toshiba</a> and <a href="/en/guides/onn-tv-remote-app/">onn.</a>',
-           '<a href="/en/guides/">All guides to control your TV with your phone</a>']),
+    guias=['<a href="/guides/android-tv-pairing-code/">Android TV asks for a pairing code: what to do</a>',
+           '<a href="/guides/android-tv-without-remote/">Android TV without a remote: how to use your phone</a>',
+           '<a href="/guides/google-tv-remote-app-alternative/">Google TV remote app alternative for your phone</a>',
+           'Google TV and Android TV brands: <a href="/guides/sony-tv-remote-app/">Sony</a>, <a href="/guides/tcl-tv-remote-app/">TCL</a>, <a href="/guides/hisense-tv-remote-app/">Hisense</a>, <a href="/guides/philips-tv-remote-app/">Philips</a>, <a href="/guides/sharp-tv-remote-app/">Sharp</a>, <a href="/guides/toshiba-tv-remote-app/">Toshiba</a> and <a href="/guides/onn-tv-remote-app/">onn.</a>',
+           '<a href="/guides/">All guides to control your TV with your phone</a>']),
 ]
 
 
@@ -427,7 +427,7 @@ GUIAS = [
       f'For next time, turn on power-on over the network in the TV settings (your brand guide is below) and you can turn the TV on from your phone without touching it.',
     ],
     extra=[
-      ('Pick your brand guide', 'LG: [Lost your LG TV remote](/en/guides/lost-lg-remote/). Android TV and Google TV: [Android TV without a remote](/en/guides/android-tv-without-remote/). Samsung: [Samsung TV without a remote](/en/guides/samsung-tv-without-remote/). Roku: [Lost your Roku remote](/en/guides/lost-roku-remote/).'),
+      ('Pick your brand guide', 'LG: [Lost your LG TV remote](/guides/lost-lg-remote/). Android TV and Google TV: [Android TV without a remote](/guides/android-tv-without-remote/). Samsung: [Samsung TV without a remote](/guides/samsung-tv-without-remote/). Roku: [Lost your Roku remote](/guides/lost-roku-remote/).'),
       ('If the TV does not turn on with the button', 'Before you look for another remote, check that the cable is plugged in firmly and that the wall outlet has power. If the button on the TV does nothing, the problem is the TV and not the remote.'),
       ('If the remote just stopped working', 'Try new batteries. To check whether it still sends a signal, point it at your phone camera and press a button: on many phones you will see a purple light on the screen. If the light shows up and the TV does not respond, the sensor on the TV may be blocked.'),
       ('If you changed routers and the TV lost its Wi-Fi', 'Without a remote it is harder to connect the TV to the new network. The easiest way is to plug the TV into the router with a network cable. You can also create a Wi-Fi network with the same name and password as before: the TV usually reconnects to it by itself.'),
@@ -450,14 +450,14 @@ GUIAS = [
       'Open Mando TV and tap your LG TV in the list.',
       'The TV shows a prompt asking for permission. Accept it with the joystick or the button on the TV. If you connected that phone before, it does not ask again.',
       'Done. The arrows, OK, Back, Home, volume, channels and keyboard are free. The pointer is a Pro feature.',
-      'With the app connected, go into Settings with the arrows and OK, and turn on "TV On With Mobile". The guide [How to turn on an LG TV with your phone](/en/guides/turn-on-lg-tv-with-phone/) shows where it is.',
+      'With the app connected, go into Settings with the arrows and OK, and turn on "TV On With Mobile". The guide [How to turn on an LG TV with your phone](/guides/turn-on-lg-tv-with-phone/) shows where it is.',
     ],
     extra=[
-      ('If the TV does not show the prompt', 'The permission may already be saved, or your phone may be on a different network. Check that both are on the same Wi-Fi network and that the VPN is off. If the TV does not show up in the list, see [Your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
+      ('If the TV does not show the prompt', 'The permission may already be saved, or your phone may be on a different network. Check that both are on the same Wi-Fi network and that the VPN is off. If the TV does not show up in the list, see [Your phone cannot find the TV](/guides/phone-cant-find-tv/).'),
       ('If the TV lost its Wi-Fi', 'Plug the TV into the router with a network cable and it will use it on its own. Or create a Wi-Fi network with the same name and password as before, because the TV usually reconnects to it by itself.'),
-      ('If the TV is stuck on another input', 'On your phone, tap Inputs and pick the HDMI. More details in [Change the HDMI input on a TV without a remote](/en/guides/change-hdmi-input-without-remote/).'),
+      ('If the TV is stuck on another input', 'On your phone, tap Inputs and pick the HDMI. More details in [Change the HDMI input on a TV without a remote](/guides/change-hdmi-input-without-remote/).'),
     ],
-    marca=('/en/lg-tv-remote/', 'LG TV remote app'),
+    marca=('/lg-tv-remote/', 'LG TV remote app'),
     faq=[
       ('Do I need the Magic Remote to use Mando TV?', 'You only need something to accept the prompt the first time, and the button or joystick on the TV itself works. After that you use just your phone.'),
       ('Do I need the LG ThinQ app?', 'No. Mando TV connects directly over your Wi-Fi and does not ask for an LG account.'),
@@ -480,8 +480,8 @@ GUIAS = [
       ('Samsung', 'If the menu from the button on the TV has no Source, open the home screen menu with your phone and look for Source or Connected Devices on the left. You control it with the arrows and OK in Mando TV, which are free.'),
       ('LG', 'Press the joystick on the TV and look for Inputs. With your phone, in Mando TV you can also open the inputs list and tap the one you want.'),
       ('Roku TV', 'On the home screen there is a tile for each input, such as HDMI 1 or HDMI 2. Move with the arrows and go in with OK, for free.'),
-      ('If it is a TV with Android TV or Google TV', 'In Mando TV the inputs list is not on Android TV yet. Use the inputs button on the TV itself, or reach them with the arrows and OK from the home screen. If you do not have a remote and want to connect, see [Android TV without a remote](/en/guides/android-tv-without-remote/).'),
-      ('More help', 'If the TV does not even turn on or you do not know where to start, see [Lost your TV remote](/en/guides/lost-tv-remote/). For gaming on a console, the guide [Turn on the TV and switch to your console HDMI without the remote](/en/guides/turn-on-tv-console-hdmi-without-remote/) includes the HDMI-CEC trick.'),
+      ('If it is a TV with Android TV or Google TV', 'In Mando TV the inputs list is not on Android TV yet. Use the inputs button on the TV itself, or reach them with the arrows and OK from the home screen. If you do not have a remote and want to connect, see [Android TV without a remote](/guides/android-tv-without-remote/).'),
+      ('More help', 'If the TV does not even turn on or you do not know where to start, see [Lost your TV remote](/guides/lost-tv-remote/). For gaming on a console, the guide [Turn on the TV and switch to your console HDMI without the remote](/guides/turn-on-tv-console-hdmi-without-remote/) includes the HDMI-CEC trick.'),
     ],
     marcas=True,
     faq=[
@@ -504,11 +504,11 @@ GUIAS = [
     ],
     extra=[
       ('If your TV does not turn on from your phone', 'Not every Android TV has power-on over the network; it depends on the manufacturer and the model. If yours does not have it, turn it on with the button on the TV and continue from your phone. You can turn it off from the app.'),
-      ('Chromecast with Google TV, Google TV Streamer and Shield', 'They connect the same way: same Wi-Fi network, tap the device in the list and type the code. If the TV shows another input, switch it to the HDMI where the device is plugged in, as explained in [Change the HDMI input on a TV without a remote](/en/guides/change-hdmi-input-without-remote/).'),
-      ('If the code does not show up or it says it is wrong', 'Check that the TV is really on and not in standby. The code changes every time it is requested: only the latest one works. There are more details in [Android TV asks for a pairing code](/en/guides/android-tv-pairing-code/).'),
+      ('Chromecast with Google TV, Google TV Streamer and Shield', 'They connect the same way: same Wi-Fi network, tap the device in the list and type the code. If the TV shows another input, switch it to the HDMI where the device is plugged in, as explained in [Change the HDMI input on a TV without a remote](/guides/change-hdmi-input-without-remote/).'),
+      ('If the code does not show up or it says it is wrong', 'Check that the TV is really on and not in standby. The code changes every time it is requested: only the latest one works. There are more details in [Android TV asks for a pairing code](/guides/android-tv-pairing-code/).'),
       ('Google app or Mando TV', 'Google has its own app that needs a Google account. Mando TV does not ask for an account, it also works from Windows, and it controls LG, Samsung and Roku TVs from the same app.'),
     ],
-    marca=('/en/android-tv-remote/', 'Android TV remote app'),
+    marca=('/android-tv-remote/', 'Android TV remote app'),
     faq=[
       ('Do I need the remote to pair my phone?', 'No. The code appears on the TV screen and you type it on your phone. You only have to turn on the TV, with the button on the TV if needed.'),
       ('Does it work with a Hisense?', 'On Hisense TVs that have Android TV or Google TV, yes. Hisense TVs with another system are not compatible.'),
@@ -530,7 +530,7 @@ GUIAS = [
     extra=[
       ('If it does not turn on', 'The TV must have been on the same Wi-Fi network when it was turned off. Check that the setting is still on and that your phone is on that same network. If you changed routers, connect once more with the TV on.'),
     ],
-    marca=('/en/lg-tv-remote/', 'LG TV remote app'),
+    marca=('/lg-tv-remote/', 'LG TV remote app'),
     faq=[
       ('Can I turn on the LG TV with my phone if I never connected it?', 'No. First you have to turn on "TV On With Mobile" on the TV and connect once with Mando TV while the TV is on.'),
       ('Do I need the LG ThinQ app?', 'No. Mando TV connects directly over your Wi-Fi and does not ask for an LG account.'),
@@ -551,9 +551,9 @@ GUIAS = [
     ],
     extra=[
       ('If the TV does not ask for permission', 'The permission may already be saved, or the TV may be on a different Wi-Fi network. Close Mando TV and open it again with the TV on. If the TV is older than 2016, it uses a different system that is not supported yet.'),
-      ('If you denied the permission by mistake', 'On the TV go to Settings, General, External Device Manager, Device Connection Manager, and set Mando TV to allowed. If your phone still cannot find the TV, see [Your phone cannot find the TV](/en/guides/phone-cant-find-tv/).'),
+      ('If you denied the permission by mistake', 'On the TV go to Settings, General, External Device Manager, Device Connection Manager, and set Mando TV to allowed. If your phone still cannot find the TV, see [Your phone cannot find the TV](/guides/phone-cant-find-tv/).'),
     ],
-    marca=('/en/samsung-tv-remote/', 'Samsung TV remote app'),
+    marca=('/samsung-tv-remote/', 'Samsung TV remote app'),
     faq=[
       ('How do I accept the connection if I have no remote?', 'On most models you accept it with the physical buttons on the TV or with the joystick on the back. If your model has no buttons, write to hola@mandotv.app and we will help you.'),
       ('Does Mando TV ask for a Samsung account?', 'No. It connects directly over your Wi-Fi, with no Samsung account.'),
@@ -621,9 +621,9 @@ GUIAS = [
     extra=[
       ('How to tell if this is your problem', 'The sign is clear: your phone sees the Roku in the list and connects, but nothing happens when you tap a button. Inside, the Roku answers with error 403, which means "forbidden". Mando TV detects it when it connects and shows you these same steps on the screen.'),
       ('Default or Permissive, which one do I pick?', 'Default is enough: it accepts commands that come from your home network, which is what a remote needs. Permissive is more open and is only needed on unusual networks.'),
-      ('If you do not have the Roku remote', 'When the setting is Disabled, it can only be changed with the physical Roku remote. Borrow one to change it once; after that you can use your phone for everything. See also [Lost your Roku remote](/en/guides/lost-roku-remote/).'),
+      ('If you do not have the Roku remote', 'When the setting is Disabled, it can only be changed with the physical Roku remote. Borrow one to change it once; after that you can use your phone for everything. See also [Lost your Roku remote](/guides/lost-roku-remote/).'),
     ],
-    marca=('/en/roku-remote/', 'Roku remote app'),
+    marca=('/roku-remote/', 'Roku remote app'),
     faq=[
       ('Why did my Roku stop responding if it used to work?', 'A Roku update can leave that setting more restricted. It is not a problem with your phone or your Wi-Fi: you just need to allow control by apps again.'),
       ('Does it work for Roku TV and for Roku players?', 'Yes. The setting is in the same menu on Roku players and on Roku TV sets.'),
@@ -669,9 +669,9 @@ GUIAS = [
     extra=[
       ('If the code does not show up on the TV', 'Check that the TV is really on and not in standby, and that your phone is on the same Wi-Fi. Tap the TV on your phone again. If it still does not appear, restart the TV: unplug it for ten seconds, plug it back in and try again.'),
       ('If it says the code is wrong', 'The code changes every time it is requested. If you took a while or requested it twice, only the latest one on the screen works. Tap the TV on your phone again and type the new code.'),
-      ('If the TV asks for the code again', 'This happens when the TV is factory reset or when you clear the app data on your phone. Pair again and it is saved. If you have no remote at all, see [Android TV without a remote](/en/guides/android-tv-without-remote/).'),
+      ('If the TV asks for the code again', 'This happens when the TV is factory reset or when you clear the app data on your phone. Pair again and it is saved. If you have no remote at all, see [Android TV without a remote](/guides/android-tv-without-remote/).'),
     ],
-    marca=('/en/android-tv-remote/', 'Android TV remote app'),
+    marca=('/android-tv-remote/', 'Android TV remote app'),
     faq=[
       ('Which TVs use this code?', 'The ones with Android TV or Google TV: Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast with Google TV and several more.'),
       ('Do I need a Google account on my phone?', 'No. The code on the screen is all you need.'),
@@ -688,14 +688,14 @@ GUIAS = [
       'Connect your phone to the same Wi-Fi the Roku uses.',
       'Open Mando TV. The Roku shows up in the list on its own. Tap it.',
       'Use the arrows, OK, Home and Back like on your usual remote. The Roku does not ask for a code.',
-      'If the buttons do nothing, the Roku is blocking control by apps: the guide [Roku remote app not working](/en/guides/roku-remote-app-not-working/) explains how to allow it.',
+      'If the buttons do nothing, the Roku is blocking control by apps: the guide [Roku remote app not working](/guides/roku-remote-app-not-working/) explains how to allow it.',
     ],
     extra=[
       ('If the Roku has no Wi-Fi (you changed routers or moved)', 'Without the remote you cannot get into the menu to set up the new network, but there is a trick: the Roku connects on its own to a network with the same name and password as the old one. On another phone, create a Wi-Fi hotspot with that exact name and password, connect the phone that has Mando TV to it and the Roku will show up in the list. From there go to Settings, Network and connect it to the new Wi-Fi.'),
       ('If it is a Roku TV', 'Roku TV sets have a physical button, almost always at the bottom center or on the back, that turns the TV on. That is enough to turn it on and continue with your phone.'),
       ('If you prefer to buy another remote', 'Make sure it is compatible with your model. Small Roku players hidden behind the TV need a remote that is not infrared, because infrared does not reach them.'),
     ],
-    marca=('/en/roku-remote/', 'Roku remote app'),
+    marca=('/roku-remote/', 'Roku remote app'),
     faq=[
       ('Can my phone turn on the Roku?', 'A plugged-in Roku player is always on. On a Roku TV, Mando TV turns it on over Wi-Fi when the TV has "Fast TV start" turned on under Settings, System, Power.'),
       ('What about the volume?', 'On a Roku TV your phone turns the volume up and down. On a Roku player connected over HDMI it depends on the TV: on many it works and on others it does not.'),
@@ -735,7 +735,7 @@ OTRAS_GUIAS = [
 
 if not FIRE_TV_PUBLICADO:
     OTRAS_GUIAS = [x for x in OTRAS_GUIAS if x[0] != 'firetv']
-    carpeta_ft = os.path.join(SITIO, 'en', 'guides', 'fire-tv-remote-app')
+    carpeta_ft = os.path.join(SITIO, *idiomas_sitio.carpeta('firetv', 'en').split('/'))
     if os.path.isdir(carpeta_ft):
         import shutil
         shutil.rmtree(carpeta_ft)
@@ -772,7 +772,7 @@ def pagina_guia(g):
        "step": [{"@type": "HowToStep", "position": n, "text": plano(p)} for n, p in enumerate(g["pasos"], 1)]},
       {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": URL + "/"},
-        {"@type": "ListItem", "position": 2, "name": "Guides", "item": URL + "/en/guides/"},
+        {"@type": "ListItem", "position": 2, "name": "Guides", "item": URL + "/guides/"},
         {"@type": "ListItem", "position": 3, "name": g["h1"], "item": url}]},
       {"@type": "FAQPage", "inLanguage": "en", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]]}]}
@@ -814,7 +814,7 @@ def pagina_guia(g):
     otras = '\n'.join(f'        <li><a href="{en_url(k, GUIDE_SLUGS)}">{e(t)}</a></li>' for k, t in OTRAS_GUIAS if k != g['clave'])
     idiomas = '\n'.join(f'        <li><a href="{r}" hreflang="{l}" lang="{l}">{n}</a></li>' for l, r, n in idiomas_sitio.enlaces_idiomas(g['clave'], 'en'))
     bloque_idiomas = ('\n      <h2 id="idiomas">This guide in other languages</h2>\n      <ul>\n' + idiomas + '\n      </ul>\n') if idiomas else ''
-    return (cabecera(g['titulo'], g['desc'], url, g['clave'], '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/en/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
+    return (cabecera(g['titulo'], g['desc'], url, g['clave'], '#3d7bff', 'article', ld) + f'''      <nav class="migas" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / <span>{e(g["corto"])}</span></nav>
       <h1>{e(g["h1"])}</h1>
       <p>{e(g["intro"])}</p>
       <div class="acciones">
@@ -846,8 +846,8 @@ def pagina_guia(g):
       <h2 id="otras">More guides</h2>
       <ul>
 {otras}
-        <li><a href="/en/guides/">All guides</a></li>
-        <li><a href="/en/support.html">Help and support</a></li>
+        <li><a href="/guides/">All guides</a></li>
+        <li><a href="/support.html">Help and support</a></li>
       </ul>
 
 {bloque_idiomas}    </div>
@@ -858,7 +858,7 @@ def pagina_guia(g):
 
 def indice():
     e = html.escape
-    url = URL + '/en/guides/'
+    url = URL + '/guides/'
     titulo = 'Guides: Control Your TV With Your Phone | Mando TV'
     desc = 'Step-by-step guides to use your phone or PC as a TV remote: turn on the TV, change the HDMI input and fix problems on Samsung, LG, Roku and Android TV.'
     descripciones = {g['clave']: g['desc'] for g in GUIAS}
@@ -889,7 +889,7 @@ def indice():
       <h2 id="marcas">TV remote app by brand</h2>
       <ul>
 {marcas}
-        <li><a href="/en/support.html">Help and support</a></li>
+        <li><a href="/support.html">Help and support</a></li>
       </ul>
 
     </div>
@@ -943,7 +943,7 @@ def pagina_soporte():
       </div>
 
       <h2 id="conectar">Connecting for the first time</h2>
-      <p>Full guides by brand: <a href="/en/lg-tv-remote/">LG</a>, <a href="/en/samsung-tv-remote/">Samsung</a>, <a href="/en/roku-remote/">Roku</a> and <a href="/en/android-tv-remote/">Android TV</a>.</p>
+      <p>Full guides by brand: <a href="/lg-tv-remote/">LG</a>, <a href="/samsung-tv-remote/">Samsung</a>, <a href="/roku-remote/">Roku</a> and <a href="/android-tv-remote/">Android TV</a>.</p>
       <div class="preguntas">
         <details><summary>LG</summary>
           <p>When you tap the TV, a prompt appears on the TV screen asking for permission. Accept it with your usual remote. You only do this once.</p>
@@ -999,7 +999,7 @@ def pagina_soporte():
       </div>
 
       <h2 id="guias">Step-by-step guides</h2>
-      <p><a href="/en/guides/">See all the guides</a></p>
+      <p><a href="/guides/">See all the guides</a></p>
       <ul>
 {guias}
       </ul>
@@ -1094,8 +1094,8 @@ def escribir(ruta, texto):
 for m in MARCAS:
     escribir(BRANDS[m['clave']][1], pagina_marca(m))
     print('ok', BRANDS[m['clave']][1], len(m['titulo']), len(m['desc']))
-escribir('en/guides', indice())
-print('ok en/guides')
+escribir(idiomas_sitio.carpeta('guias', 'en'), indice())
+print('ok', idiomas_sitio.carpeta('guias', 'en'))
 for g in GUIAS:
     escribir(GUIDE_SLUGS[g['clave']][1], pagina_guia(g))
     print('ok', GUIDE_SLUGS[g['clave']][1], len(g['titulo']), len(g['desc']))

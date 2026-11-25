@@ -17,36 +17,36 @@ Key facts:
 ## Main pages (English)
 
 - [Home](https://mandotv.app/): what the app does, free and Pro, download links
-- [Samsung TV remote](https://mandotv.app/en/samsung-tv-remote/)
-- [LG TV remote](https://mandotv.app/en/lg-tv-remote/)
-- [Roku remote](https://mandotv.app/en/roku-remote/)
-- [Google TV and Android TV remote](https://mandotv.app/en/android-tv-remote/)
-- [Guides](https://mandotv.app/en/guides/): lost remote, change HDMI input without a remote, turn on the TV with the phone, phone cannot find the TV
-- [Video, 25 s](https://mandotv.app/media/mando-tv-in-action-en-720p.mp4): Mando TV in action with no sound (volume, arrows and OK, typing on the TV, inputs, supported brands, Free and Pro). Also on [YouTube](https://youtu.be/RyhvFz0ZUDk), the home page and the [Windows guide](https://mandotv.app/en/guides/tv-remote-app-for-windows/)
-- [Support](https://mandotv.app/en/support.html)
-- [Privacy](https://mandotv.app/en/privacy.html)
+- [Samsung TV remote](https://mandotv.app/samsung-tv-remote/)
+- [LG TV remote](https://mandotv.app/lg-tv-remote/)
+- [Roku remote](https://mandotv.app/roku-remote/)
+- [Google TV and Android TV remote](https://mandotv.app/android-tv-remote/)
+- [Guides](https://mandotv.app/guides/): lost remote, change HDMI input without a remote, turn on the TV with the phone, phone cannot find the TV
+- [Video, 25 s](https://mandotv.app/media/mando-tv-in-action-en-720p.mp4): Mando TV in action with no sound (volume, arrows and OK, typing on the TV, inputs, supported brands, Free and Pro). Also on [YouTube](https://youtu.be/RyhvFz0ZUDk), the home page and the [Windows guide](https://mandotv.app/guides/tv-remote-app-for-windows/)
+- [Support](https://mandotv.app/support.html)
+- [Privacy](https://mandotv.app/privacy.html)
 
 ## Guides by problem (English)
 
-- [Lost Fire TV remote](https://mandotv.app/en/guides/lost-fire-tv-remote/): use the phone, new Wi-Fi hotspot trick, HDMI-CEC
-- [Turn on a TV without the remote](https://mandotv.app/en/guides/turn-on-tv-without-remote/): power button by brand, HDMI-CEC, power-on from the phone
-- [TV remote app with no subscription](https://mandotv.app/en/guides/tv-remote-app-no-subscription/): comparison table, what Mando TV does and does not do
-- [SmartThings TV remote alternative](https://mandotv.app/en/guides/smartthings-tv-remote-alternative/): Samsung Tizen TVs without a Samsung account
-- [Google TV remote app alternative](https://mandotv.app/en/guides/google-tv-remote-app-alternative/): Google TV and Android TV without a Google account
+- [Lost Fire TV remote](https://mandotv.app/guides/lost-fire-tv-remote/): use the phone, new Wi-Fi hotspot trick, HDMI-CEC
+- [Turn on a TV without the remote](https://mandotv.app/guides/turn-on-tv-without-remote/): power button by brand, HDMI-CEC, power-on from the phone
+- [TV remote app with no subscription](https://mandotv.app/guides/tv-remote-app-no-subscription/): comparison table, what Mando TV does and does not do
+- [SmartThings TV remote alternative](https://mandotv.app/guides/smartthings-tv-remote-alternative/): Samsung Tizen TVs without a Samsung account
+- [Google TV remote app alternative](https://mandotv.app/guides/google-tv-remote-app-alternative/): Google TV and Android TV without a Google account
 
 ## TV remote app by brand (English)
 
 Each page says which systems that brand uses and which ones Mando TV controls (Roku TV, Google TV / Android TV, Fire TV and most Hisense VIDAA models) and which ones it does not (for example Xumo TV and Titan OS). Some recent VIDAA models only accept Hisense's official app; Mando TV detects it and says so. Vizio SmartCast TVs from 2016 onward have beta support.
 
-- [Sony](https://mandotv.app/en/guides/sony-tv-remote-app/), [TCL](https://mandotv.app/en/guides/tcl-tv-remote-app/), [Hisense](https://mandotv.app/en/guides/hisense-tv-remote-app/), [Insignia](https://mandotv.app/en/guides/insignia-tv-remote-app/), [onn.](https://mandotv.app/en/guides/onn-tv-remote-app/), [Toshiba](https://mandotv.app/en/guides/toshiba-tv-remote-app/), [Sharp](https://mandotv.app/en/guides/sharp-tv-remote-app/), [Philips](https://mandotv.app/en/guides/philips-tv-remote-app/), [Westinghouse](https://mandotv.app/en/guides/westinghouse-tv-remote-app/), [Pioneer](https://mandotv.app/en/guides/pioneer-tv-remote-app/), [Vizio (beta support for SmartCast)](https://mandotv.app/en/guides/vizio-tv-remote-app/)
+- [Sony](https://mandotv.app/guides/sony-tv-remote-app/), [TCL](https://mandotv.app/guides/tcl-tv-remote-app/), [Hisense](https://mandotv.app/guides/hisense-tv-remote-app/), [Insignia](https://mandotv.app/guides/insignia-tv-remote-app/), [onn.](https://mandotv.app/guides/onn-tv-remote-app/), [Toshiba](https://mandotv.app/guides/toshiba-tv-remote-app/), [Sharp](https://mandotv.app/guides/sharp-tv-remote-app/), [Philips](https://mandotv.app/guides/philips-tv-remote-app/), [Westinghouse](https://mandotv.app/guides/westinghouse-tv-remote-app/), [Pioneer](https://mandotv.app/guides/pioneer-tv-remote-app/), [Vizio (beta support for SmartCast)](https://mandotv.app/guides/vizio-tv-remote-app/)
 
 ## Marcas de Latinoamérica (español)
 
-- [Master G](https://mandotv.app/control-remoto-master-g/), [Kalley](https://mandotv.app/control-remoto-kalley/), [Caixun](https://mandotv.app/control-remoto-caixun/), [Hyundai](https://mandotv.app/control-remoto-hyundai/), [Noblex](https://mandotv.app/control-remoto-noblex/), [BGH](https://mandotv.app/control-remoto-bgh/): models with Google TV / Android TV or Roku TV
+- [Master G](https://mandotv.app/es/control-remoto-master-g/), [Kalley](https://mandotv.app/es/control-remoto-kalley/), [Caixun](https://mandotv.app/es/control-remoto-caixun/), [Hyundai](https://mandotv.app/es/control-remoto-hyundai/), [Noblex](https://mandotv.app/es/control-remoto-noblex/), [BGH](https://mandotv.app/es/control-remoto-bgh/): models with Google TV / Android TV or Roku TV
 
 ## Other languages
 
-- [Español](https://mandotv.app/es/): [Guías](https://mandotv.app/guias/), [Ayuda](https://mandotv.app/soporte.html)
+- [Español](https://mandotv.app/es/): [Guías](https://mandotv.app/es/guias/), [Ayuda](https://mandotv.app/es/soporte.html)
 - [Português](https://mandotv.app/pt/)
 - [Français](https://mandotv.app/fr/)
 - [Deutsch](https://mandotv.app/de/)
