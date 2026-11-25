@@ -3,8 +3,8 @@
 **Estado 25-nov**: zona creada en Cloudflare (plan Free, cuenta del fundador) con los 13 registros importados
 (web con proxy, correo y TXT solo DNS), SSL Full, Always Use HTTPS, HSTS 12 meses + nosniff y la regla
 "Cabeceras de seguridad" activa. Bot Preference Sync desactivado (no toca robots.txt) y bots de IA en "Allow"
-(bueno para GEO). **Falta**: cambiar en Porkbun los servidores a `brynne.ns.cloudflare.com` y
-`owen.ns.cloudflare.com` (espera el sí del fundador) y comprobar después.
+(bueno para GEO). Servidores cambiados en Porkbun y zona **activa** desde el 25-nov (ver `docs/ESTADO.md`). Ojo: el certificado de
+Cloudflare tarda unos minutos tras activarse; pausar la zona mientras tanto para no dejar la web sin HTTPS.
 
 Objetivo: enviar las cabeceras de seguridad que GitHub Pages no permite (X-Frame-Options, HSTS y las demás).
 La web sigue en GitHub Pages; Cloudflare (plan gratis, cuenta del fundador, la misma de Web Analytics) solo

@@ -1,11 +1,18 @@
 # Estado de la web mandotv.app
 
-## 25-nov: Cloudflare delante, preparado (falta cambiar servidores en Porkbun)
+## 25-nov: Cloudflare delante de mandotv.app, ACTIVO (sí del fundador)
 
-Detalle y vuelta atrás en `docs/CLOUDFLARE.md`. Cloudflare ya tiene todo configurado (registros, HSTS, X-Frame-Options,
-Referrer-Policy, Permissions-Policy, nosniff), pero no recibe visitas hasta que en Porkbun se pongan
-`brynne.ns.cloudflare.com` y `owen.ns.cloudflare.com`. Espera el sí del fundador. Después: comprobar cabeceras con
-curl, el correo hola@mandotv.app, GitHub Pages y repetir el auditor.
+- Porkbun con `brynne.ns.cloudflare.com` y `owen.ns.cloudflare.com` (registro .app confirmado por RDAP). Sin DNSSEC.
+- Al activarse, el certificado de Cloudflare tardó unos minutos ("Pending Validation") y por Google DNS y Quad9 la web
+  no abría: se pausó Cloudflare (las visitas fueron directo a GitHub) hasta que el certificado estuvo listo y luego se
+  reactivó. **Lección para la receta**: no cambiar servidores hasta que el certificado de Cloudflare esté activo, o
+  pausar la zona apenas se active y reanudarla cuando el certificado esté listo.
+- Comprobado por Cloudflare (`curl --resolve` a 104.21.75.146): `/`, `www` (301 a `/`), `/es/`, `/guias/`,
+  `estilos.css` y `robots.txt` responden con HSTS 1 año, X-Frame-Options SAMEORIGIN, Referrer-Policy,
+  Permissions-Policy y nosniff. `robots.txt` igual al del repositorio. Google DNS ya entrega las IP de Cloudflare.
+- Correo: MX `fwd1`/`fwd2.porkbun.com` y SPF servidos por Cloudflare; no se probó un envío real.
+- **Pendiente**: repetir el auditor (auditarweb.co) cuando el fundador quiera; vigilar en GitHub > Settings > Pages
+  que el dominio siga verde (con Cloudflare delante GitHub puede marcar aviso de DNS, la web sigue funcionando).
 
 ## 24-nov (noche): avisos del auditor auditarweb.co (91/100), PUBLICADO (merge `824f6aa4`, sí del fundador)
 
