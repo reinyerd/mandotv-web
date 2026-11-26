@@ -629,7 +629,7 @@ PRIVACIDAD = dict(
   h1='Privacidade',
   intro='Resumindo: o Mando TV não coleta os seus dados. Não há conta, anúncios, rastreadores nem um servidor nosso que guarde o que você faz.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Em vigor desde 14 de novembro de 2026. Última atualização: 21 de novembro de 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Em vigor desde 14 de novembro de 2026. Última atualização: 26 de novembro de 2026.</p>
 
       <h2>Quem somos</h2>
       <p>O Mando TV é um app para controlar a sua TV pelo celular ou pelo computador. Esta política explica quais informações o app usa e o que faz com elas. Para qualquer dúvida, escreva para <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -654,7 +654,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Em vigor desde 14 de novembro de 202
 
       <p>Se você enviar fotos ou vídeos para a TV (um recurso Pro), a TV baixa só os arquivos que você escolher, direto do seu celular ou PC pelo Wi-Fi da sua casa. Eles não passam pela internet nem por nós, o app não vê o resto das suas fotos e o envio termina quando você fecha essa tela.</p>
       <h2>Microfone e voz</h2>
-      <p>A busca por voz só usa o microfone enquanto você toca no botão para falar. O que você diz é convertido em texto pelo reconhecimento de voz do seu sistema: Apple no iPhone e no Mac e Google no Android, conforme as políticas de privacidade deles. No Windows, a voz é reconhecida no seu próprio PC e não sai do computador; só em processadores muito antigos o app usa a digitação por voz do Windows, da Microsoft, conforme a política de privacidade dela. O Mando TV não grava nem guarda o áudio, e o texto obtido vai direto para a sua TV, como o que você digita no teclado.</p>
+      <p>No iPhone, no Mac e no Android, a busca por voz só usa o microfone enquanto você toca no botão para falar. O que você diz é convertido em texto pelo reconhecimento de voz do seu sistema: Apple no iPhone e no Mac e Google no Android, conforme as políticas de privacidade deles. No Windows, a voz é reconhecida no seu próprio PC e não sai do computador; só em processadores muito antigos o app usa a digitação por voz do Windows, da Microsoft, conforme a política de privacidade dela. No Windows, o microfone abre quando você abre o painel de voz e fecha quando você o fecha, ou após 30 segundos sem uso; enquanto você não fala, nada é gravado nem guardado. O Mando TV não grava nem guarda o áudio, e o texto obtido vai direto para a sua TV, como o que você digita no teclado.</p>
 
       <h2>Casa: aparelhos do Apple Casa e do Google Home</h2>
       <p>Se você abrir a seção Casa (em teste), o app pede permissão para ver os aparelhos que você já tem no app Casa da Apple (HomeKit) ou no Google Home. Com essa permissão, ele lê o nome, o cômodo e o estado deles (ligado ou desligado, brilho, temperatura ou em que ponto do programa está um eletrodoméstico) para mostrá-los e enviar o que você tocar. Tudo acontece entre o seu celular e o sistema da Apple ou do Google: o Mando TV não guarda essa lista, não a envia para nós nem para terceiros e não a usa para publicidade nem para análises. No Android, o Google Home funciona com a sua própria conta do Google, conforme a política de privacidade do Google. Você pode retirar a permissão quando quiser: no iPhone, em Ajustes &gt; Privacidade e Segurança &gt; HomeKit; no Android, nas configurações da sua conta do Google.</p>

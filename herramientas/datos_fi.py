@@ -620,7 +620,7 @@ PRIVACIDAD = dict(
   h1='Tietosuoja',
   intro='Lyhyesti: Mando TV ei kerää tietojasi. Ei ole tilejä, mainoksia, seurantaa eikä omia palvelimia, jotka tallentaisivat, mitä teet.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen. Päivitetty viimeksi 25. marraskuuta 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen. Päivitetty viimeksi 26. marraskuuta 2026.</p>
 
       <h2>Keitä olemme</h2>
       <p>Mando TV on sovellus, jolla ohjaat televisiotasi puhelimellasi tai tietokoneellasi. Tässä selosteessa kerrotaan, mitä tietoja sovellus käyttää ja mitä se niillä tekee. Jos sinulla on kysyttävää, kirjoita meille osoitteeseen <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -645,7 +645,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen
 
       <p>Kun lähetät valokuvia tai videoita televisioon (Pro-ominaisuus), televisio lataa vain valitsemasi tiedostot suoraan puhelimestasi tai tietokoneeltasi kotisi wifin kautta. Ne eivät kulje internetin eivätkä meidän kauttamme, sovellus ei näe muita kuviasi, ja jako päättyy heti, kun suljet tämän näytön.</p>
       <h2>Mikrofoni ja ääni</h2>
-      <p>Äänihaku käyttää mikrofonia vain, kun napautat puhepainiketta. Se, mitä sanot, muunnetaan tekstiksi järjestelmäsi puheentunnistuksella: Applen iPhonella ja Macilla ja Googlen Androidilla, kummankin omien tietosuojaehtojen mukaan. Windowsissa puhe tunnistetaan omalla tietokoneellasi eikä poistu laitteelta; vain hyvin vanhoilla suorittimilla sovellus käyttää Windowsin puhesyöttöä, Microsoftin tietosuojaehtojen mukaan. Mando TV ei tallenna ääntä eikä säilytä sitä, ja syntynyt teksti menee suoraan televisioosi, aivan kuten se, mitä kirjoitat näppäimistöllä.</p>
+      <p>iPhonella, Macilla ja Androidilla äänihaku käyttää mikrofonia vain, kun napautat puhepainiketta. Se, mitä sanot, muunnetaan tekstiksi järjestelmäsi puheentunnistuksella: Applen iPhonella ja Macilla ja Googlen Androidilla, kummankin omien tietosuojaehtojen mukaan. Windowsissa puhe tunnistetaan omalla tietokoneellasi eikä poistu laitteelta; vain hyvin vanhoilla suorittimilla sovellus käyttää Windowsin puhesyöttöä, Microsoftin tietosuojaehtojen mukaan. Windowsissa mikrofoni avautuu, kun avaat ääniruudun, ja sulkeutuu, kun suljet sen tai kun sitä ei ole käytetty 30 sekuntiin; kun et puhu, mitään ei tallenneta eikä säilytetä. Mando TV ei tallenna ääntä eikä säilytä sitä, ja syntynyt teksti menee suoraan televisioosi, aivan kuten se, mitä kirjoitat näppäimistöllä.</p>
 
       <h2>Koti: Apple Homen ja Google Homen laitteet</h2>
       <p>Kun avaat Koti-osion (testivaiheessa), sovellus pyytää lupaa nähdä laitteet, jotka sinulla jo on Applen Koti-sovelluksessa (HomeKit) tai Google Homessa. Tällä luvalla se lukee niiden nimen, huoneen ja tilan (päällä vai pois, kirkkaus, lämpötila tai missä vaiheessa kodinkoneen ohjelma on), näyttääkseen ne ja lähettääkseen niille sen, mitä napautat. Kaikki tapahtuu puhelimesi ja Applen tai Googlen järjestelmän välillä: Mando TV ei tallenna tätä luetteloa, ei lähetä sitä meille eikä kolmansille osapuolille eikä käytä sitä mainontaan tai analytiikkaan. Androidilla Google Home toimii omalla Google-tililläsi Googlen tietosuojaselosteen mukaan. Voit peruuttaa luvan milloin tahansa: iPhonella kohdassa Asetukset &gt; Tietosuoja ja turvallisuus &gt; HomeKit, Androidilla Google-tilisi asetuksissa.</p>

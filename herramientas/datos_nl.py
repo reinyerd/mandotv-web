@@ -620,7 +620,7 @@ PRIVACIDAD = dict(
   h1='Privacy',
   intro='Kort gezegd: Mando TV verzamelt je gegevens niet. Er zijn geen accounts, geen advertenties, geen trackers en geen eigen servers die opslaan wat je doet.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laatst bijgewerkt op 25 november 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laatst bijgewerkt op 26 november 2026.</p>
 
       <h2>Wie we zijn</h2>
       <p>Mando TV is een app waarmee je je tv bedient vanaf je telefoon of computer. Deze verklaring beschrijft welke informatie de app gebruikt en wat ze ermee doet. Heb je vragen, schrijf ons dan naar <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -645,7 +645,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laats
 
       <p>Als je foto’s of video’s naar de tv stuurt (een Pro-functie), laadt de tv alleen de bestanden die je kiest, rechtstreeks van je telefoon of pc via je wifi thuis. Ze gaan niet via internet en niet via ons, de app ziet je overige foto’s niet, en het delen eindigt zodra je dit scherm sluit.</p>
       <h2>Microfoon en spraak</h2>
-      <p>Het spraakzoeken gebruikt de microfoon alleen zolang je op de spreekknop tikt. Wat je zegt, wordt door de spraakherkenning van je systeem omgezet in tekst: door Apple op iPhone en Mac en door Google op Android, telkens volgens hun eigen privacyvoorwaarden. Op Windows wordt de spraak op je eigen pc herkend en verlaat het apparaat niet; alleen op zeer oude processors gebruikt de app de spraakinvoer van Windows, van Microsoft, volgens hun privacyvoorwaarden. Mando TV neemt de audio niet op en slaat hem niet op, en de ontstane tekst gaat rechtstreeks naar je tv, precies zoals wat je met het toetsenbord typt.</p>
+      <p>Op iPhone, Mac en Android gebruikt het spraakzoeken de microfoon alleen zolang je op de spreekknop tikt. Wat je zegt, wordt door de spraakherkenning van je systeem omgezet in tekst: door Apple op iPhone en Mac en door Google op Android, telkens volgens hun eigen privacyvoorwaarden. Op Windows wordt de spraak op je eigen pc herkend en verlaat het apparaat niet; alleen op zeer oude processors gebruikt de app de spraakinvoer van Windows, van Microsoft, volgens hun privacyvoorwaarden. Op Windows gaat de microfoon open wanneer je het spraakpaneel opent en dicht wanneer je het sluit, of na 30 seconden zonder gebruik; zolang je niet spreekt, wordt er niets opgenomen of opgeslagen. Mando TV neemt de audio niet op en slaat hem niet op, en de ontstane tekst gaat rechtstreeks naar je tv, precies zoals wat je met het toetsenbord typt.</p>
 
       <h2>Thuis: apparaten uit Apple Home en Google Home</h2>
       <p>Als je het onderdeel Thuis (in test) opent, vraagt de app om toestemming de apparaten te zien die je al hebt in de Woning-app van Apple (HomeKit) of in Google Home. Met die toestemming leest ze hun naam, hun ruimte en hun status (aan of uit, helderheid, temperatuur of op welk punt van zijn programma een huishoudapparaat zit) om ze te tonen en door te geven wat je aantikt. Alles gebeurt tussen je telefoon en het systeem van Apple of Google: Mando TV slaat deze lijst niet op, stuurt hem niet naar ons of naar derden en gebruikt hem niet voor advertenties of analyses. Op Android werkt Google Home met je eigen Google-account, volgens de privacyverklaring van Google. Je kunt de toestemming op elk moment intrekken: op de iPhone onder Instellingen &gt; Privacy en beveiliging &gt; HomeKit, op Android in de instellingen van je Google-account.</p>

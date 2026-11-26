@@ -620,7 +620,7 @@ PRIVACIDAD = dict(
   h1='Ochrana soukromí',
   intro='Stručně: Mando TV vaše údaje neshromažďuje. Neexistují žádné účty, žádné reklamy, žádné sledovače ani vlastní servery, které by ukládaly, co děláte.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Naposledy aktualizováno 25. listopadu 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Naposledy aktualizováno 26. listopadu 2026.</p>
 
       <h2>Kdo jsme</h2>
       <p>Mando TV je aplikace, kterou ovládáte televizi z telefonu nebo počítače. Tyto zásady popisují, jaké informace aplikace používá a co s nimi dělá. S dotazy nám napište na <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
@@ -645,7 +645,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Napos
 
       <p>Pokud do televize odesíláte fotografie nebo videa (funkce Pro), televize stahuje jen soubory, které vyberete, přímo z vašeho telefonu nebo počítače přes domácí Wi-Fi. Neprocházejí internetem ani námi, aplikace nevidí vaše ostatní fotografie a sdílení skončí, jakmile tuto obrazovku zavřete.</p>
       <h2>Mikrofon a hlas</h2>
-      <p>Hlasové vyhledávání používá mikrofon jen po dobu, kdy držíte tlačítko pro mluvení. To, co řeknete, převádí na text rozpoznávání řeči vašeho systému: společnost Apple na iPhonu a Macu a společnost Google v Androidu, vždy podle jejich vlastních zásad ochrany soukromí. Ve Windows se řeč rozpoznává přímo ve vašem počítači a zařízení neopouští; jen u velmi starých procesorů aplikace používá hlasový vstup Windows od společnosti Microsoft, podle jejích zásad ochrany soukromí. Mando TV zvuk nenahrává ani neukládá a výsledný text jde přímo do vaší televize, stejně jako to, co píšete na klávesnici.</p>
+      <p>Na iPhonu, Macu a v Androidu hlasové vyhledávání používá mikrofon jen po dobu, kdy držíte tlačítko pro mluvení. To, co řeknete, převádí na text rozpoznávání řeči vašeho systému: společnost Apple na iPhonu a Macu a společnost Google v Androidu, vždy podle jejich vlastních zásad ochrany soukromí. Ve Windows se řeč rozpoznává přímo ve vašem počítači a zařízení neopouští; jen u velmi starých procesorů aplikace používá hlasový vstup Windows od společnosti Microsoft, podle jejích zásad ochrany soukromí. Ve Windows se mikrofon zapne, když otevřete hlasový panel, a vypne se, když ho zavřete, nebo po 30 sekundách nepoužívání; dokud nemluvíte, nic se nenahrává ani neukládá. Mando TV zvuk nenahrává ani neukládá a výsledný text jde přímo do vaší televize, stejně jako to, co píšete na klávesnici.</p>
 
       <h2>Domácnost: zařízení z Apple Home a Google Home</h2>
       <p>Když otevřete oddíl Domácnost (ve zkušebním provozu), aplikace požádá o povolení zobrazit zařízení, která už máte v aplikaci Domácnost od Applu (HomeKit) nebo v Google Home. S tímto povolením čte jejich název, místnost a stav (zapnuto nebo vypnuto, jas, teplota nebo v jaké fázi programu je spotřebič), aby je zobrazila a odeslala jim to, na co klepnete. Všechno probíhá mezi vaším telefonem a systémem Applu nebo Googlu: Mando TV tento seznam neukládá, neposílá ho nám ani třetím stranám a nepoužívá ho k reklamě ani k analýzám. V Androidu funguje Google Home s vaším vlastním účtem Google, podle zásad ochrany soukromí Googlu. Povolení můžete kdykoli odebrat: na iPhonu v Nastavení &gt; Soukromí a zabezpečení &gt; HomeKit, v Androidu v nastavení svého účtu Google.</p>
