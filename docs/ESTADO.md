@@ -1,5 +1,29 @@
 # Estado de la web mandotv.app
 
+## 26-nov: 53 meta descriptions y 2 títulos acortados (PUBLICADO con el sí del fundador, commit `99193116`)
+
+- Origen: escaneo propio de las 1063 páginas (sesión de ai-company) con las reglas del Site Scan de Bing: 53
+  descripciones de más de 160 caracteres y 2 títulos de más de 70. Ahora: descripciones de 150 o menos y títulos de
+  65 o menos. Por idioma: el 15 + 2 títulos, ms 9, fi 6, nl 6, hu 5, vi 4, tr 3, ro 2, uk 2, nb 1.
+- Fuente: `datos_<k>.py` (y la portada `hu/index.html` + `tanda1/hu.json`). Regenerado con la cadena completa
+  (`generar_idiomas.py` -> `video_guias.py` -> `pie_firma.py`, `idioma_guardado.py`, `versionar.py`); antes se probó
+  que la cadena sin cambios deja el repo idéntico. 63 páginas cambiadas (guías, índices de guías, marcas, privacidad,
+  portada hu); en cada una cambian solo descripción, títulos y textos iguales (og, twitter, JSON-LD, tarjetas).
+- Redacción: Sonnet en un lote; verificador por idioma con retrotraducción y conteo; revisores SEO/GEO, Marketing
+  y UX de textos. Se aplicaron 19 correcciones (Google TV recuperado en 7 guías de "alternativa a Roku", "Βήμα προς
+  βήμα", hoteclaves en uk, "aplicații de telecomandă" en ro, compra única en hu, etc.).
+- Escáner: antes 53 + 2 largos; después, en el repo y en vivo (1063/1063 con 200), solo los 4 avisos de chino
+  "corto" (falsos positivos). JSON-LD válido, `csp.py --verificar` OK.
+- Nuevo `herramientas/escaneo_seo.py` (correrlo antes de publicar; ver `docs/AGREGAR-IDIOMA.md` paso 6).
+  `--estricto` (150/65) todavía lista 145 descripciones de 151 a 160 y 12 títulos de 66 a 70 que nunca estuvieron en
+  la lista: bajo el límite de Bing, quedan para otra tanda si se quiere.
+- `video_guias.py` abre el archivo antes de calcular: si falla (por ejemplo, llamado con `nb` en vez de `no`) deja la
+  página vacía. Pasó en `no/guider/mistet-fjernkontrollen/` y se restauró con git antes del commit. Llamarlo con `no`.
+- Buscadores: IndexNow aceptó las 63 URL (HTTP 200). Search Console: sitemap reenviado ("Se ha enviado el sitemap
+  correctamente") e indexación pedida de `/hu/` y `/el/guides/roku-app-alternative/` (9 pedidas en el día; el resto
+  queda para los próximos días). Bing: sitemap reenviado ("successfully submitted for processing"). El Site Scan
+  "SEO/GEO MandoTV" de Bing no se tocó.
+
 ## 26-nov: tanda 1 de la evaluación de las 4 IA (PUBLICADA con el sí del fundador, `main` = 33f29fad)
 
 Debate: `ai-company/debates/2026-11-26-evaluacion-de-la-app-y-la-web-pantalla-por-pantall/` (09-claude-cierre.md).
