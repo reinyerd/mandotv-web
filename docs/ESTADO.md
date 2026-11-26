@@ -1,5 +1,21 @@
 # Estado de la web mandotv.app
 
+## 25-nov (noche): video de cada idioma en las 30 portadas (PUBLICADO, `main` = `29a08acd`)
+
+Pedido del fundador ("ve colocando los videos de youtube en sus respectivos idiomas"). Cada portada muestra su video
+"Mando TV in action" en su idioma (720p en `media/`, póster en su idioma), un enlace "YouTube" bajo el video a la
+versión de ese idioma en @mandotvapp y un `VideoObject` en el JSON-LD con el título y la descripción de YouTube
+(`embedUrl` y `url` del ID de ese idioma). El sitemap lleva `<video:video>` en las 30 portadas (32 con 2 guías).
+- Todo lo hace `herramientas/demo_portadas.py` (diccionario `YT` con los 30 ID; títulos de
+  `C:/server/htdocs/mandotv-videos/idiomas/<k>.json`). Si se regeneran las portadas con otro generador, volver a
+  correrlo después.
+- Comprobado: en local ja (escritorio, se reproduce) y ar (375 px, sin desborde); en vivo es, ar, hi, id, zh-hant, no
+  con su video y su ID. IndexNow aceptó las 30 portadas y el sitemap (HTTP 200).
+- **Pendiente**: (1) Search Console: reenviar el sitemap y pedir indexación de las portadas (cuota del 25-nov
+  agotada). (2) Las guías traducidas aún no tienen video: en inglés lo tienen `guides/lost-tv-remote/` (Short) y
+  `guides/tv-remote-app-for-windows/`; sus equivalentes en los 29 idiomas necesitan pasarlo por `generar_guias.py`
+  (los Shorts por idioma no están entregados en 720p para la web, solo en YouTube).
+
 ## 25-NOV: PRUEBA GRATIS DE PRO DE 3 DÍAS ENCENDIDA (config remota, sin versión nueva)
 
 - Aprobado por el fundador el 25-nov ("Sí, enciéndela"). En `mandotv-web/app/config.json` (https://mandotv.app/app/config.json)
@@ -30,7 +46,7 @@ mueve y las capturas cargan) y en local las 30 en 1280 y 375 px sin desborde ni 
   `flutter test tool/capturas_tienda_test.dart --update-goldens --dart-define=WEB=true --dart-define=IDIOMAS=<k>`,
   `tool/componer_capturas_tienda.ps1 -Idioma <k> -Carpeta capturas-web` y
   `C:/server/htdocs/mandotv-web-demo-pasos/herramientas/webp_capturas.py`.
-- **Videos por idioma (pendiente)**: la sesión "Videos multiidioma locales para YouTube" los deja en
+- **Videos por idioma (HECHO el 25-nov, ver arriba)**: la sesión "Videos multiidioma locales para YouTube" los deja en
   `C:/server/htdocs/mandotv-web-videos-entrega/<k>/` después del sí del fundador a sus 3 muestras (es, ja, ar). Al
   llegar: copiarlos a `media/`, volver a correr `demo_portadas.py` (pone el video arriba solo), agregar un
   `VideoObject` por idioma en el JSON-LD (pedir el ID de YouTube de cada uno), versionar, publicar e IndexNow.
