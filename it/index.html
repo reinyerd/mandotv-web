@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/it/#video",
+        "name": "Mando TV: app telecomando TV gratis per LG, Samsung, Roku, Google TV e Fire TV",
+        "description": "Usa il telefono come telecomando: volume, frecce e OK, tastiera, fonti e altro, via Wi-Fi. Gratis, nessuna pubblicità, nessun account. Pro è un acquisto unico, nessun abbonamento.",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-it.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-it-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/5Ss8KlwbeG4",
+        "url": "https://www.youtube.com/watch?v=5Ss8KlwbeG4",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "it",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">Vai al contenuto</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">Il telecomando, passo dopo passo</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">Guardalo in azione</h2>
+      <p class="intro aparece">Guarda Mando TV in 25 secondi, poi il telecomando passo dopo passo.</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="Riproduci · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-it.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-it-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">Mando TV in 25 secondi, senza audio: volume, frecce e OK, scrivere sulla TV, ingressi, le marche compatibili e cosa includono Gratis e Pro.<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=5Ss8KlwbeG4" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">Il telecomando, passo dopo passo</h3>
       <p class="intro demo-intro aparece">Questo è il telecomando di Mando TV su Windows: il volume, le frecce e OK, e gli ingressi della tua TV. Su iPhone e iPad è lo stesso telecomando.</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -617,6 +644,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>

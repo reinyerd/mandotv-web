@@ -1408,6 +1408,8 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 /* En el celular el póster es bajo: solo el círculo, para no tapar el texto del póster (el nombre del botón sigue ahí). */
 @media (max-width: 560px) { .video-play { padding: 4px; gap: 0; font-size: 0; } .video-play i { width: 44px; height: 44px; } }
 .video-premium figcaption, .guia-video figcaption { margin-top: 14px; color: var(--tenue); font-size: 15px; }
+.video-yt a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.video-yt a:hover { color: var(--tinta); }
 /* Video vertical (Short): del tamaño de un teléfono y centrado. */
 .guia-video.vertical { max-width: 300px; margin-inline: auto; }
 .guia-video.vertical .video-marco video { aspect-ratio: 9 / 16; border-radius: 24px; }

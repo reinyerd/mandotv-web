@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/ar/#video",
+        "name": "Mando TV: تطبيق ريموت تلفزيون مجاني لـ LG و Samsung و Roku و Google TV و Fire TV",
+        "description": "حوّل هاتفك لريموت تلفزيون: صوت، أسهم و OK، لوحة مفاتيح، مدخلات والمزيد، عبر Wi-Fi. مجاني، بدون إعلانات، بدون حساب. النسخة الاحترافية شراء لمرة واحدة، لا اشتراك.",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-ar.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-ar-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/Vxk8IQPLSWg",
+        "url": "https://www.youtube.com/watch?v=Vxk8IQPLSWg",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "ar",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">الانتقال إلى المحتوى</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">الريموت خطوة بخطوة</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">شاهده أثناء العمل</h2>
+      <p class="intro aparece">شاهد Mando TV في 25 ثانية، ثم شاهد الريموت خطوة بخطوة.</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="تشغيل · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-ar.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-ar-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">Mando TV في 25 ثانية، بدون صوت: مستوى الصوت والأسهم وOK، والكتابة على التلفزيون، والمدخلات، والماركات المدعومة، وما تشمله النسخة المجانية وPro.<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=Vxk8IQPLSWg" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">الريموت خطوة بخطوة</h3>
       <p class="intro demo-intro aparece">هذا هو ريموت Mando TV على Windows: مستوى الصوت والأسهم وOK ومدخلات تلفزيونك. وعلى iPhone وiPad هو الريموت نفسه.</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -617,6 +644,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>

@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/nl/#video",
+        "name": "Mando TV: gratis tv-afstandsbediening voor LG, Samsung, Roku, Google TV en Fire TV",
+        "description": "Gebruik je telefoon als tv-afstandsbediening: volume, pijltjes en ok, toetsenbord, inputs en meer, via Wi-Fi. Gratis, geen ads, geen account. Pro is éénmalig betalen, geen abonnement.",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-nl.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-nl-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/yh7euESWfdU",
+        "url": "https://www.youtube.com/watch?v=yh7euESWfdU",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "nl",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">Ga naar de inhoud</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">De afstandsbediening, stap voor stap</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">Zie het in actie</h2>
+      <p class="intro aparece">Bekijk Mando TV in 25 seconden en daarna de afstandsbediening stap voor stap.</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="Afspelen · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-nl.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-nl-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">Mando TV in 25 seconden, zonder geluid: volume, pijltjes en OK, typen op de tv, ingangen, de merken waarmee het werkt en wat Gratis en Pro bevatten.<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=yh7euESWfdU" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">De afstandsbediening, stap voor stap</h3>
       <p class="intro demo-intro aparece">Dit is de Mando TV-afstandsbediening op Windows: het volume, de pijltjes en OK, en de ingangen van je tv. Op iPhone en iPad is het dezelfde afstandsbediening.</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -617,6 +644,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>

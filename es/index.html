@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/es/#video",
+        "name": "Mando TV: app gratis de control remoto para LG, Samsung, Roku, Google TV y Fire TV",
+        "description": "Usa tu celular como control: volumen, flechas y OK, teclado, entradas y más, por Wi-Fi. Gratis, sin anuncios, sin cuenta. Pro es pago único, sin suscripción.",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-es.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-es-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/Q_xBRIiufgk",
+        "url": "https://www.youtube.com/watch?v=Q_xBRIiufgk",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "es",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">Saltar al contenido</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">El control, paso a paso</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">Míralo en acción</h2>
+      <p class="intro aparece">Mira Mando TV en 25 segundos y después el control paso a paso.</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="Reproducir · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-es.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-es-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">Mando TV en 25 segundos, sin sonido: volumen, flechas y OK, escribir en el TV, entradas, las marcas con las que funciona y qué incluyen Gratis y Pro.<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=Q_xBRIiufgk" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">El control, paso a paso</h3>
       <p class="intro demo-intro aparece">Este es el control de Mando TV en Windows: el volumen, las flechas y OK, y las entradas de tu TV. En iPhone y iPad es el mismo control.</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -589,6 +616,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>

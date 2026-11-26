@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/zh/#video",
+        "name": "Mando TV：适用于 LG、Samsung、Roku、Google TV 和 Fire TV 的免费电视遥控器应用",
+        "description": "把手机变成电视遥控器：音量、方向键和确定、键盘、输入源等，通过 Wi-Fi 连接。免费，无广告，无需账号。Pro 版一次性购买，无订阅。",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-zh.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-zh-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/To1FTqE888E",
+        "url": "https://www.youtube.com/watch?v=To1FTqE888E",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "zh-Hans",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">跳到正文</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">遥控器，一步一步看</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">看看它如何工作</h2>
+      <p class="intro aparece">25 秒看完 Mando TV，再一步一步了解遥控器。</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="播放 · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-zh.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-zh-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">25 秒了解 Mando TV（无声）：音量、方向键和 OK、在电视上输入文字、输入源、支持的品牌，以及免费版和 Pro 包含的功能。<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=To1FTqE888E" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">遥控器，一步一步看</h3>
       <p class="intro demo-intro aparece">这是 Windows 上的 Mando TV 遥控器：音量、方向键和 OK，以及电视的输入源。在 iPhone 和 iPad 上也是同一个遥控器。</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -617,6 +644,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>

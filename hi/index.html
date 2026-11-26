@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/hi/#video",
+        "name": "Mando TV: LG, Samsung, Roku, Google TV और Fire TV के लिए फ्री टीवी रिमोट ऐप",
+        "description": "अपने फोन को टीवी रिमोट के रूप में इस्तेमाल करें: वॉल्यूम, तीर और OK, कीबोर्ड, इनपुट और ज्यादा, Wi-Fi पर। फ्री, कोई विज्ञापन नहीं, कोई खाता नहीं। Pro एक बार की खरीदारी है, सब्सक्रिप्शन नहीं।",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-hi.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-hi-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/I1gihsq_FXE",
+        "url": "https://www.youtube.com/watch?v=I1gihsq_FXE",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "hi",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">सामग्री पर जाएँ</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">रिमोट, कदम-दर-कदम</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">इसे काम करते देखें</h2>
+      <p class="intro aparece">Mando TV को 25 सेकंड में देखें, फिर रिमोट को कदम-दर-कदम देखें।</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="चलाएँ · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-hi.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-hi-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">25 सेकंड में Mando TV, बिना आवाज़ के: वॉल्यूम, ऐरो और OK, टीवी पर टाइप करना, इनपुट, काम करने वाले ब्रांड, और मुफ़्त व Pro में क्या मिलता है।<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=I1gihsq_FXE" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">रिमोट, कदम-दर-कदम</h3>
       <p class="intro demo-intro aparece">यह Windows पर Mando TV रिमोट है: वॉल्यूम, ऐरो और OK, और आपके टीवी के इनपुट। iPhone और iPad पर भी यही रिमोट है।</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -617,6 +644,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>

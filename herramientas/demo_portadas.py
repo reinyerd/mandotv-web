@@ -18,6 +18,19 @@ CLAVES_ARB = {'Modern': 'controlModoModerno', 'Classic': 'controlModoClasico', '
 BLOQUE = re.compile(r'  <div class="contenedor">\n    <section id="demo".*?</section>\n  </div>\n\n', re.S)
 FUNCIONES = '  <div class="contenedor">\n    <section id="funciones"'
 FIGURA_VIDEO = re.compile(r'      <figure class="video-premium.*?</figure>\n', re.S)
+# Video "Mando TV in action" de cada idioma en YouTube (canal @mandotvapp, ID de cada uno en
+# C:/server/htdocs/mandotv-videos/out/youtube/ids.tsv). Si un idioma no está aquí, su video queda sin enlace a YouTube.
+YT = {'en': 'RyhvFz0ZUDk', 'es': 'Q_xBRIiufgk', 'ar': 'Vxk8IQPLSWg', 'de': 'AhRW1BrGioA', 'el': 'x5vlufspkpI',
+      'fr': 'XUnpE7703os', 'hu': 'WuKjH4Euzj8', 'it': '5Ss8KlwbeG4', 'ja': 'csRLl6Rj2lc', 'ko': 'WrpGsXpAN2c',
+      'ms': '_rR1d8fcjvs', 'no': 'km_ohKVyhnk', 'nl': 'yh7euESWfdU', 'pl': 'VKcvvg1wkKA', 'pt': 'pUOjCuRVeLU',
+      'ro': 'lqmRLLTy5Hc', 'sk': 'JL63mTr_e4w', 'sv': 'awzZLvfmWck', 'th': 'WSd4Yt_zbdU', 'tr': 'RrUpAIV6HOk',
+      'uk': 'Db0iqUvaiCw', 'vi': '0V149Qm08Sw', 'zh': 'To1FTqE888E', 'zh-hant': 'titOlDxNBQY', 'cs': 'r8Ry2sSFprs',
+      'da': 'Sw6PfIEHJXA', 'fi': 'wy8CNHwThao', 'he': 'z1DkNeGVCVU', 'hi': 'I1gihsq_FXE', 'id': 'pj6gauxMMXk'}
+# Título y descripción de YouTube de cada idioma, para el VideoObject (mismos textos que en YouTube).
+VIDEOS_TEXTOS = 'C:/server/htdocs/mandotv-videos/idiomas'
+LD = re.compile(r'(<script type="application/ld\+json">\n.*?)(\n    \]\n  \}\n  </script>)', re.S)
+VIDEO_LD = re.compile(r',\n      \{\n        "@type": "VideoObject".*?\n      \}(?=\n    \]\n  \}\n  </script>)', re.S)
+YT_ENLACE = re.compile(r'<span class="video-yt">.*?</span>')
 SIN_VIDEO = re.compile(r'      <h2 class="titulo-seccion aparece" id="t-demo">.*?</h3>\n', re.S)
 
 
@@ -48,6 +61,10 @@ def seccion(k, base):
     hay_video = os.path.isfile(os.path.join(SITIO, 'media', f'mando-tv-in-action-{k}-720p.mp4'))
     if hay_video:
         t = cambiar(t, 'mando-tv-in-action-en', f'mando-tv-in-action-{k}')
+        if k in YT:
+            t = cambiar(t, 'watch?v=' + YT['en'], 'watch?v=' + YT[k], 1)
+        else:
+            t = YT_ENLACE.sub('', t)
         t = cambiar(t, f'data-play="{esc(en["video_play"])}"', f'data-play="{esc(w["video_play"])}"', 1)
         t = cambiar(t, f'>{esc(en["video_caption"])}<', f'>{esc(w["video_caption"])}<', 1)
         t = cambiar(t, f'>{esc(en["intro_con_video"])}<', f'>{esc(w["intro_con_video"])}<', 1)
@@ -95,6 +112,32 @@ def scripts(t, hay_video):
     return t
 
 
+def video_ld(k, t, hay_video):
+    """Pone (o quita) el VideoObject del video de ese idioma en el JSON-LD de la portada. Idempotente."""
+    t = VIDEO_LD.sub('', t)
+    if not (hay_video and k in YT):
+        return t
+    arch = os.path.join(VIDEOS_TEXTOS, ARB_DE.get(k, k) + '.json')
+    tx = json.load(open(arch, encoding='utf-8'))
+    lang = re.search(r'<html lang="([^"]+)"', t).group(1)
+    obj = {
+        '@type': 'VideoObject', '@id': f'https://mandotv.app/{k}/#video',
+        'name': tx['yt_accion_titulo'], 'description': tx['yt_accion_desc'],
+        'thumbnailUrl': f'https://mandotv.app/media/mando-tv-in-action-{k}.jpg',
+        'uploadDate': '2026-11-25T19:00:00-03:00', 'duration': 'PT25S',
+        'contentUrl': f'https://mandotv.app/media/mando-tv-in-action-{k}-720p.mp4',
+        'embedUrl': f'https://www.youtube.com/embed/{YT[k]}',
+        'url': f'https://www.youtube.com/watch?v={YT[k]}',
+        'encodingFormat': 'video/mp4', 'inLanguage': lang,
+        'publisher': {'@id': 'https://mandotv.app/#org'},
+    }
+    bloque = ',\n' + '\n'.join('      ' + l for l in json.dumps(obj, ensure_ascii=False, indent=2).split('\n'))
+    t, n = LD.subn(lambda m: m.group(1) + bloque + m.group(2), t, count=1)
+    if n != 1:
+        sys.exit(f'{k}: no encuentro el final del JSON-LD')
+    return t
+
+
 def main():
     base = molde()
     idiomas = sys.argv[3:] or [k for k in TX['web'] if k != 'en']
@@ -107,6 +150,7 @@ def main():
         else:
             t = cambiar(t, FUNCIONES, nuevo + FUNCIONES, 1)
         t = scripts(t, hay_video)
+        t = video_ld(k, t, hay_video)
         open(ruta, 'w', encoding='utf-8', newline='\n').write(t)
         print(k, 'con video' if hay_video else 'sin video')
 

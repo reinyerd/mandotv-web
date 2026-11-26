@@ -186,13 +186,30 @@
             }
           }
         ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://mandotv.app/fr/#video",
+        "name": "Mando TV : app télécommande gratuite pour LG, Samsung, Roku, Google TV et Fire TV",
+        "description": "Utilisez votre téléphone comme télécommande : volume, flèches et OK, clavier, entrées et plus, via Wi-Fi. Gratuit, pas de pubs, pas de compte. Pro en achat unique, pas d'abonnement.",
+        "thumbnailUrl": "https://mandotv.app/media/mando-tv-in-action-fr.jpg",
+        "uploadDate": "2026-11-25T19:00:00-03:00",
+        "duration": "PT25S",
+        "contentUrl": "https://mandotv.app/media/mando-tv-in-action-fr-720p.mp4",
+        "embedUrl": "https://www.youtube.com/embed/XUnpE7703os",
+        "url": "https://www.youtube.com/watch?v=XUnpE7703os",
+        "encodingFormat": "video/mp4",
+        "inLanguage": "fr",
+        "publisher": {
+          "@id": "https://mandotv.app/#org"
+        }
       }
     ]
   }
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=4df4356a91">
+  <link rel="stylesheet" href="/estilos.css?v=6b5f8302fa">
 </head>
 <body>
   <a class="oculto" href="#contenido">Aller au contenu</a>
@@ -298,7 +315,17 @@
 
   <div class="contenedor">
     <section id="demo" aria-labelledby="t-demo">
-      <h2 class="titulo-seccion aparece" id="t-demo">La télécommande, pas à pas</h2>
+      <h2 class="titulo-seccion aparece" id="t-demo">Voyez-le en action</h2>
+      <p class="intro aparece">Regardez Mando TV en 25 secondes, puis découvrez la télécommande pas à pas.</p>
+      <figure class="video-premium aparece">
+        <div class="video-marco" data-play="Lire · 0:25">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-fr.webp" aria-describedby="video-texto">
+            <source src="/media/mando-tv-in-action-fr-720p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption id="video-texto">Mando TV en 25 secondes, sans le son : volume, flèches et OK, saisie sur la TV, sources, les marques compatibles et ce que comprennent Gratuit et Pro.<span class="video-yt"> · <a href="https://www.youtube.com/watch?v=XUnpE7703os" target="_blank" rel="noopener">YouTube</a></span></figcaption>
+      </figure>
+      <h3 class="demo-subtitulo aparece" id="t-pasos">La télécommande, pas à pas</h3>
       <p class="intro demo-intro aparece">Voici la télécommande Mando TV sur Windows : le volume, les flèches et OK, et les sources de votre TV. Sur iPhone et iPad, c'est la même télécommande.</p>
       <div class="demo">
         <figure class="demo-app aparece" data-demo>
@@ -617,6 +644,7 @@
 
   <script src="/app.js?v=c6dcd621fc" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
+  <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
   <script src="/cookies.js?v=65b0a00096" defer></script>
   <script src="/precio.js?v=32566dcbf6" defer></script>
