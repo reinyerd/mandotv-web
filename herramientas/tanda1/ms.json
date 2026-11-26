@@ -1,0 +1,47 @@
+{
+  "boton": "Muat turun percuma",
+  "nota": "Pro dibeli di dalam aplikasi.",
+  "cambios": [
+    {
+      "viejo": "<meta name=\"description\" content=\"Alat kawalan jauh TV universal untuk Samsung, LG, Roku dan Google TV pada telefon atau PC. Butang, papan kekunci, apl, input dan hidupkan percuma; pad sentuh dengan Pro.\">",
+      "nuevo": "<meta name=\"description\" content=\"Alat kawalan jauh TV untuk Samsung, LG, Roku, Google TV dan Fire TV di telefon atau PC. Butang, papan kekunci, apl dan hidupkan percuma; pad sentuh dengan Pro.\">"
+    },
+    {
+      "viejo": "Google TV dan Android TV. Alat kawalan jauh percuma",
+      "nuevo": "Google TV, Android TV dan Fire TV. Alat kawalan jauh percuma"
+    },
+    {
+      "viejo": "Google TV dan Android TV, melalui Wi-Fi",
+      "nuevo": "Google TV, Android TV, Fire TV dan Hisense VIDAA, melalui Wi-Fi"
+    },
+    {
+      "viejo": "dalam 30 bahasa pada iPhone, iPad dan Windows",
+      "nuevo": "dalam 30 bahasa",
+      "veces": 2
+    },
+    {
+      "viejo": "dalam 29 bahasa pada iPhone, iPad dan Windows",
+      "nuevo": "dalam 29 bahasa",
+      "veces": 2
+    },
+    {
+      "viejo": "Chromecast dengan Google TV dan lain-lain). Baharu ",
+      "nuevo": "Chromecast dengan Google TV dan lain-lain). Selain itu, Fire TV (Fire TV Stick, Fire TV Cube dan TV dengan Fire TV terbina dalam) serta banyak TV Hisense dengan VIDAA; sesetengah model VIDAA yang baharu belum disokong. Baharu ",
+      "veces": 2
+    },
+    {
+      "viejo": "Pada iPhone, iPad dan Windows, aplikasi ini sudah ada dalam 30 bahasa, termasuk",
+      "nuevo": "Aplikasi ini ada dalam 30 bahasa pada iPhone, iPad, Mac, Android dan Windows, termasuk",
+      "veces": 2
+    },
+    {
+      "viejo": " Pada Android, bahasa ini menyusul dengan versi seterusnya.",
+      "nuevo": "",
+      "veces": 2
+    },
+    {
+      "viejo": "Android TV dan Apple TV (beta)</li>",
+      "nuevo": "Android TV, Fire TV, Hisense VIDAA dan Apple TV (beta)</li>"
+    }
+  ]
+}

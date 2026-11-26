@@ -1,0 +1,53 @@
+{
+ "boton": "Завантажити безкоштовно",
+ "nota": "Pro купується всередині застосунку.",
+ "cambios": [
+  {
+   "viejo": "content=\"Універсальний пульт для телевізора Samsung, LG, Roku і Google TV на смартфоні чи ПК. Кнопки, клавіатура, застосунки, входи й увімкнення безкоштовно; тачпад у Pro.\"",
+   "nuevo": "content=\"Універсальний пульт Samsung, LG, Roku, Google TV і Fire TV на смартфоні чи ПК. Кнопки, клавіатура, застосунки й увімкнення безкоштовно; тачпад у Pro.\""
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV і Android TV. Безкоштовний",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV і Fire TV. Безкоштовний"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV і Android TV, через Wi-Fi",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV і Hisense VIDAA, через Wi-Fi"
+  },
+  {
+   "viejo": "застосунок 30 мовами на iPhone, iPad і Windows.",
+   "nuevo": "застосунок 30 мовами."
+  },
+  {
+   "viejo": "голосове керування 29 мовами на iPhone, iPad і Windows,",
+   "nuevo": "голосове керування 29 мовами,"
+  },
+  {
+   "viejo": "Chromecast з Google TV та інші). Нове й у бета-версії",
+   "nuevo": "Chromecast з Google TV та інші). Також працює Fire TV (Fire TV Stick, Fire TV Cube і телевізори з Fire TV) та багато телевізорів Hisense з VIDAA; деякі новіші моделі VIDAA поки що ні. Нове й у бета-версії",
+   "veces": 2
+  },
+  {
+   "viejo": "На iPhone, iPad і Windows застосунок уже доступний 30 мовами, зокрема",
+   "nuevo": "Застосунок доступний 30 мовами на iPhone, iPad, Mac, Android і Windows, зокрема",
+   "veces": 2
+  },
+  {
+   "viejo": " На Android вони з’являться з наступною версією.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV і Apple TV (бета)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA і Apple TV (бета)</li>"
+  },
+  {
+   "viejo": "<li>Застосунок 30 мовами на iPhone, iPad і Windows</li>",
+   "nuevo": "<li>Застосунок 30 мовами</li>"
+  },
+  {
+   "viejo": "<li>Голосове керування 29 мовами на iPhone, iPad і Windows</li>",
+   "nuevo": "<li>Голосове керування 29 мовами</li>"
+  }
+ ]
+}

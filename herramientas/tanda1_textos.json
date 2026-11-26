@@ -1,0 +1,38 @@
+{
+  "es": {
+    "boton": "Descargar gratis",
+    "nota": "Pro se compra dentro de la app.",
+    "cambios": [
+      {"viejo": "<meta name=\"description\" content=\"Control remoto universal para Samsung, LG, Roku y Google TV, desde el celular o el PC. Botones, teclado, apps, entradas y encendido gratis; touchpad con Pro.\">",
+       "nuevo": "<meta name=\"description\" content=\"Control remoto universal para Samsung, LG, Roku, Google TV y Fire TV en el celular o el PC. Botones, teclado, apps y encendido gratis; touchpad con Pro.\">"},
+      {"viejo": "Samsung, LG, Roku, Google TV y Android TV. Control gratis", "nuevo": "Samsung, LG, Roku, Google TV, Android TV y Fire TV. Control gratis"},
+      {"viejo": "Samsung Tizen, LG webOS, Roku, Google TV y Android TV, por WiFi", "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV y Hisense VIDAA, por WiFi"},
+      {"viejo": "la app en 30 idiomas en iPhone, iPad y Windows", "nuevo": "la app en 30 idiomas"},
+      {"viejo": "voz en 29 idiomas en iPhone, iPad y Windows", "nuevo": "voz en 29 idiomas"},
+      {"viejo": "Chromecast con Google TV y otros). También hay soporte nuevo", "nuevo": "Chromecast con Google TV y otros). Además, Fire TV (Fire TV Stick, Fire TV Cube y televisores con Fire TV) y muchos Hisense con VIDAA; algunos modelos nuevos de VIDAA todavía no. También hay soporte nuevo", "veces": 2},
+      {"viejo": "En iPhone, iPad y Windows, la app ya está en 30 idiomas, entre ellos", "nuevo": "La app está en 30 idiomas en iPhone, iPad, Mac, Android y Windows, entre ellos", "veces": 2},
+      {"viejo": " En Android llegan con su próxima versión.", "nuevo": "", "veces": 2},
+      {"viejo": "<li>Samsung, LG, Roku, Google TV, Android TV y Apple TV (beta)</li>", "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA y Apple TV (beta)</li>"},
+      {"viejo": "<li>La app en 30 idiomas en iPhone, iPad y Windows</li>", "nuevo": "<li>La app en 30 idiomas</li>"},
+      {"viejo": "<li>Voz en 29 idiomas en iPhone, iPad y Windows</li>", "nuevo": "<li>Voz en 29 idiomas</li>"}
+    ]
+  },
+  "en": {
+    "boton": "Download free",
+    "nota": "Pro is bought inside the app.",
+    "cambios": [
+      {"viejo": "<meta name=\"description\" content=\"Universal TV remote app for Samsung, LG, Roku and Google TV, on your phone or PC. Buttons, keyboard, apps, inputs and power-on are free; touchpad with Pro.\">",
+       "nuevo": "<meta name=\"description\" content=\"Universal TV remote app for Samsung, LG, Roku, Google TV and Fire TV on your phone or PC. Buttons, keyboard, apps and power-on are free; touchpad with Pro.\">"},
+      {"viejo": "Samsung, LG, Roku, Google TV and Android TV. Free remote", "nuevo": "Samsung, LG, Roku, Google TV, Android TV and Fire TV. Free remote"},
+      {"viejo": "Samsung Tizen, LG webOS, Roku, Google TV and Android TV, over Wi-Fi", "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV and Hisense VIDAA, over Wi-Fi"},
+      {"viejo": "the app in 30 languages on iPhone, iPad and Windows", "nuevo": "the app in 30 languages"},
+      {"viejo": "voice in 29 languages on iPhone, iPad and Windows", "nuevo": "voice in 29 languages"},
+      {"viejo": "Chromecast with Google TV and others). Support for older TVs", "nuevo": "Chromecast with Google TV and others). It also works with Fire TV (Fire TV Stick, Fire TV Cube and TVs with Fire TV built in) and many Hisense TVs with VIDAA; some newer VIDAA models are not supported yet. Support for older TVs", "veces": 2},
+      {"viejo": "On iPhone, iPad and Windows the app is already in 30 languages, including", "nuevo": "The app is in 30 languages on iPhone, iPad, Mac, Android and Windows, including", "veces": 2},
+      {"viejo": " Android gets them with its next version.", "nuevo": "", "veces": 2},
+      {"viejo": "<li>Samsung, LG, Roku, Google TV, Android TV and Apple TV (beta)</li>", "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA and Apple TV (beta)</li>"},
+      {"viejo": "<li>The app in 30 languages on iPhone, iPad and Windows</li>", "nuevo": "<li>The app in 30 languages</li>"},
+      {"viejo": "<li>Voice in 29 languages on iPhone, iPad and Windows</li>", "nuevo": "<li>Voice in 29 languages</li>"}
+    ]
+  }
+}

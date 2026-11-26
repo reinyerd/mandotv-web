@@ -1,0 +1,47 @@
+{
+  "boton": "Tải miễn phí",
+  "nota": "Pro được mua ngay trong ứng dụng.",
+  "cambios": [
+    {
+      "viejo": "<meta name=\"description\" content=\"Điều khiển TV vạn năng cho Samsung, LG, Roku và Google TV trên điện thoại hoặc máy tính. Phím bấm, bàn phím, ứng dụng, nguồn vào và bật TV miễn phí; touchpad có trong Pro.\">",
+      "nuevo": "<meta name=\"description\" content=\"Điều khiển TV cho Samsung, LG, Roku, Google TV và Fire TV trên điện thoại hoặc PC. Phím bấm, bàn phím, ứng dụng và bật TV miễn phí; touchpad có trong Pro.\">"
+    },
+    {
+      "viejo": "Google TV và Android TV. Điều khiển miễn phí",
+      "nuevo": "Google TV, Android TV và Fire TV. Điều khiển miễn phí"
+    },
+    {
+      "viejo": "Google TV và Android TV, qua Wi-Fi",
+      "nuevo": "Google TV, Android TV, Fire TV và Hisense VIDAA, qua Wi-Fi"
+    },
+    {
+      "viejo": "có 30 ngôn ngữ trên iPhone, iPad và Windows",
+      "nuevo": "có 30 ngôn ngữ",
+      "veces": 2
+    },
+    {
+      "viejo": "trong 29 ngôn ngữ trên iPhone, iPad và Windows",
+      "nuevo": "trong 29 ngôn ngữ",
+      "veces": 2
+    },
+    {
+      "viejo": "Chromecast với Google TV và các hãng khác). Mới ",
+      "nuevo": "Chromecast với Google TV và các hãng khác). Ngoài ra còn có Fire TV (Fire TV Stick, Fire TV Cube và TV tích hợp sẵn Fire TV) và nhiều TV Hisense dùng VIDAA; một số mẫu VIDAA mới thì chưa. Mới ",
+      "veces": 2
+    },
+    {
+      "viejo": "Trên iPhone, iPad và Windows, ứng dụng đã có 30 ngôn ngữ, trong đó có",
+      "nuevo": "Ứng dụng có 30 ngôn ngữ trên iPhone, iPad, Mac, Android và Windows, trong đó có",
+      "veces": 2
+    },
+    {
+      "viejo": " Trên Android, các ngôn ngữ này sẽ có ở phiên bản tiếp theo.",
+      "nuevo": "",
+      "veces": 2
+    },
+    {
+      "viejo": "Android TV và Apple TV (beta)</li>",
+      "nuevo": "Android TV, Fire TV, Hisense VIDAA và Apple TV (beta)</li>"
+    }
+  ]
+}

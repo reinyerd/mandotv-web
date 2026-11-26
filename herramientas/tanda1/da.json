@@ -1,0 +1,53 @@
+{
+ "boton": "Hent gratis",
+ "nota": "Pro købes i appen.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Universel tv-fjernbetjening til Samsung, LG, Roku og Google TV på mobil eller pc. Knapper, tastatur, apps, indgange og tænd gratis; touchpad med Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Universel tv-fjernbetjening til Samsung, LG, Roku, Google TV og Fire TV på mobil eller pc. Knapper, tastatur, apps og tænd gratis; touchpad med Pro.\">"
+  },
+  {
+   "viejo": "Google TV og Android TV. Gratis fjernbetjening",
+   "nuevo": "Google TV, Android TV og Fire TV. Gratis fjernbetjening"
+  },
+  {
+   "viejo": "Google TV og Android TV, via wifi",
+   "nuevo": "Google TV, Android TV, Fire TV og Hisense VIDAA, via wifi"
+  },
+  {
+   "viejo": "appen på 30 sprog på iPhone, iPad og Windows",
+   "nuevo": "appen på 30 sprog"
+  },
+  {
+   "viejo": "stemmestyring på 29 sprog på iPhone, iPad og Windows",
+   "nuevo": "stemmestyring på 29 sprog"
+  },
+  {
+   "viejo": "Chromecast med Google TV og andre). Nyt og i beta",
+   "nuevo": "Chromecast med Google TV og andre). Desuden Fire TV (Fire TV Stick, Fire TV Cube og tv med Fire TV) og mange Hisense med VIDAA; nogle nyere VIDAA-modeller endnu ikke. Nyt og i beta",
+   "veces": 2
+  },
+  {
+   "viejo": "På iPhone, iPad og Windows findes appen allerede på 30 sprog, blandt andet",
+   "nuevo": "Appen findes på 30 sprog på iPhone, iPad, Mac, Android og Windows, blandt andet",
+   "veces": 2
+  },
+  {
+   "viejo": " På Android kommer de med den næste version.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV og Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA og Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Appen på 30 sprog på iPhone, iPad og Windows</li>",
+   "nuevo": "<li>Appen på 30 sprog</li>"
+  },
+  {
+   "viejo": "<li>Stemmestyring på 29 sprog på iPhone, iPad og Windows</li>",
+   "nuevo": "<li>Stemmestyring på 29 sprog</li>"
+  }
+ ]
+}

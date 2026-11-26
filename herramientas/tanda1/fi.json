@@ -1,0 +1,56 @@
+{
+ "boton": "Lataa ilmaiseksi",
+ "nota": "Pro ostetaan sovelluksen sisältä.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Yleiskaukosäädin Samsung-, LG-, Roku- ja Google TV -televisioille puhelimella tai tietokoneella. Painikkeet, näppäimistö, sovellukset, tulot ja käynnistys ilmaiseksi; kosketuslevy Prolla.\">",
+   "nuevo": "<meta name=\"description\" content=\"Yleiskaukosäädin Samsung-, LG-, Roku-, Google TV- ja Fire TV -televisioille puhelimella. Painikkeet, näppäimistö ja käynnistys ilmaiseksi; kosketuslevy Prolla.\">"
+  },
+  {
+   "viejo": "Google TV ja Android TV. Ilmainen kaukosäädin",
+   "nuevo": "Google TV, Android TV ja Fire TV. Ilmainen kaukosäädin"
+  },
+  {
+   "viejo": "Google TV ja Android TV, wifin kautta",
+   "nuevo": "Google TV, Android TV, Fire TV ja Hisense VIDAA, wifin kautta"
+  },
+  {
+   "viejo": "sovellus 30 kielellä iPhonella, iPadilla ja Windowsissa.",
+   "nuevo": "sovellus 30 kielellä."
+  },
+  {
+   "viejo": "ääniohjaus 29 kielellä iPhonella, iPadilla ja Windowsissa",
+   "nuevo": "ääniohjaus 29 kielellä"
+  },
+  {
+   "viejo": "ja muut) kanssa. Uutta ja betassa",
+   "nuevo": "ja muut) kanssa. Lisäksi toimii Fire TV:n (Fire TV Stick, Fire TV Cube ja Fire TV -televisiot) ja monien VIDAA-käyttöisten Hisense-televisioiden kanssa; osa uusista VIDAA-malleista ei vielä toimi. Uutta ja betassa"
+  },
+  {
+   "viejo": "Chromecast with Google TV ja muut). Uutta ja betassa",
+   "nuevo": "Chromecast with Google TV ja muut). Lisäksi toimii Fire TV (Fire TV Stick, Fire TV Cube ja Fire TV -televisiot) ja monet VIDAA-käyttöiset Hisense-televisiot; osa uusista VIDAA-malleista ei vielä toimi. Uutta ja betassa"
+  },
+  {
+   "viejo": "iPhonella, iPadilla ja Windowsissa sovellus on jo 30 kielellä, muun muassa",
+   "nuevo": "Sovellus on 30 kielellä iPhonella, iPadilla, Macilla, Androidilla ja Windowsissa, muun muassa",
+   "veces": 2
+  },
+  {
+   "viejo": " Androidilla ne tulevat seuraavan version mukana.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV ja Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA ja Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Sovellus 30 kielellä iPhonella, iPadilla ja Windowsissa</li>",
+   "nuevo": "<li>Sovellus 30 kielellä</li>"
+  },
+  {
+   "viejo": "<li>Ääniohjaus 29 kielellä iPhonella, iPadilla ja Windowsissa</li>",
+   "nuevo": "<li>Ääniohjaus 29 kielellä</li>"
+  }
+ ]
+}

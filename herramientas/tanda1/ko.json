@@ -1,0 +1,53 @@
+{
+ "boton": "무료 다운로드",
+ "nota": "Pro는 앱 안에서 구매해요.",
+ "cambios": [
+  {
+   "viejo": "삼성, LG, Roku, Google TV를 스마트폰이나 PC로 조작하는 TV 리모컨 앱. 버튼, 키보드, 앱 실행, 입력 전환, TV 켜기는 무료",
+   "nuevo": "삼성, LG, Roku, Google TV, Fire TV를 스마트폰이나 PC로 조작하는 TV 리모컨 앱. 버튼, 키보드, 앱 실행, TV 켜기는 무료"
+  },
+  {
+   "viejo": "Roku, Google TV, Android TV. 광고와",
+   "nuevo": "Roku, Google TV, Android TV, Fire TV. 광고와"
+  },
+  {
+   "viejo": "Google TV, Android TV까지 모든 브랜드를 지원하는",
+   "nuevo": "Google TV, Android TV, Fire TV, Hisense VIDAA까지 모든 브랜드를 지원하는"
+  },
+  {
+   "viejo": "iPhone, iPad, Windows에서 30개 언어 지원. Pro",
+   "nuevo": "30개 언어 앱 지원. Pro"
+  },
+  {
+   "viejo": "어린이 모드, iPhone, iPad, Windows에서 29개 언어 음성 제어, 위젯",
+   "nuevo": "어린이 모드, 29개 언어 음성 제어, 위젯"
+  },
+  {
+   "viejo": "Chromecast 등)에서 쓸 수 있어요. 새로 추가된",
+   "nuevo": "Chromecast 등)에서 쓸 수 있어요. Fire TV(Fire TV Stick, Fire TV Cube, Fire TV 내장 TV)와 VIDAA를 쓰는 많은 Hisense TV에서도 쓸 수 있어요. 다만 VIDAA의 일부 신형 모델은 아직 지원하지 않아요. 새로 추가된",
+   "veces": 2
+  },
+  {
+   "viejo": "iPhone, iPad, Windows에서는 한국어,",
+   "nuevo": "iPhone, iPad, Mac, Android, Windows에서는 한국어,",
+   "veces": 2
+  },
+  {
+   "viejo": " Android는 다음 버전부터 지원해요.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV, Apple TV(베타)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA, Apple TV(베타)</li>"
+  },
+  {
+   "viejo": "<li>iPhone, iPad, Windows에서 30개 언어 지원</li>",
+   "nuevo": "<li>30개 언어 앱 지원</li>"
+  },
+  {
+   "viejo": "<li>iPhone, iPad, Windows에서 29개 언어 음성 제어</li>",
+   "nuevo": "<li>29개 언어 음성 제어</li>"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "boton": "免费下载",
+ "nota": "Pro 在应用内购买。",
+ "cambios": [
+  {
+   "viejo": "支持 Samsung、LG、Roku 和 Google TV，手机或电脑都能用。按键、键盘、应用、输入源和开机免费",
+   "nuevo": "支持 Samsung、LG、Roku、Google TV 和 Fire TV，手机或电脑都能用。按键、键盘、应用和开机免费"
+  },
+  {
+   "viejo": "Roku、Google TV 和 Android TV。遥控器免费",
+   "nuevo": "Roku、Google TV、Android TV 和 Fire TV。遥控器免费"
+  },
+  {
+   "viejo": "Roku、Google TV 和 Android TV，通过 WiFi",
+   "nuevo": "Roku、Google TV、Android TV、Fire TV 和 Hisense VIDAA，通过 WiFi"
+  },
+  {
+   "viejo": "iPhone、iPad 和 Windows 版应用支持 30 种语言。Pro",
+   "nuevo": "应用支持 30 种语言。Pro"
+  },
+  {
+   "viejo": "儿童模式、iPhone、iPad 和 Windows 上支持 29 种语言的语音控制、",
+   "nuevo": "儿童模式、支持 29 种语言的语音控制、"
+  },
+  {
+   "viejo": "搭载 Google TV 的 Chromecast 等）。新增并处于",
+   "nuevo": "搭载 Google TV 的 Chromecast 等）。另外也支持 Fire TV（Fire TV Stick、Fire TV Cube 和内置 Fire TV 的电视），以及许多搭载 VIDAA 的 Hisense 电视；部分较新的 VIDAA 机型暂不支持。新增并处于",
+   "veces": 2
+  },
+  {
+   "viejo": "iPhone、iPad 和 Windows 版应用已支持 30 种语言，包括",
+   "nuevo": "应用在 iPhone、iPad、Mac、Android 和 Windows 上支持 30 种语言，包括",
+   "veces": 2
+  },
+  {
+   "viejo": "Android 版将在下一个版本加入。",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung、LG、Roku、Google TV、Android TV 和 Apple TV（Beta）</li>",
+   "nuevo": "<li>Samsung、LG、Roku、Google TV、Android TV、Fire TV、Hisense VIDAA 和 Apple TV（Beta）</li>"
+  },
+  {
+   "viejo": "<li>iPhone、iPad 和 Windows 版应用支持 30 种语言</li>",
+   "nuevo": "<li>应用支持 30 种语言</li>"
+  },
+  {
+   "viejo": "<li>iPhone、iPad 和 Windows 上支持 29 种语言的语音控制</li>",
+   "nuevo": "<li>支持 29 种语言的语音控制</li>"
+  }
+ ]
+}

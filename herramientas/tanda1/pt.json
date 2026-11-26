@@ -1,0 +1,53 @@
+{
+ "boton": "Baixar grátis",
+ "nota": "O Pro é comprado dentro do app.",
+ "cambios": [
+  {
+   "viejo": "Controle remoto universal para Samsung, LG, Roku e Google TV, no celular ou no PC. Teclas, teclado, apps, entradas e ligar grátis",
+   "nuevo": "Controle remoto universal para Samsung, LG, Roku, Google TV e Fire TV, no celular ou no PC. Teclas, teclado, apps e ligar grátis"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV e Android TV. Controle grátis",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV e Fire TV. Controle grátis"
+  },
+  {
+   "viejo": "Google TV e Android TV, por Wi-Fi",
+   "nuevo": "Google TV, Android TV, Fire TV e Hisense VIDAA, por Wi-Fi"
+  },
+  {
+   "viejo": "o app em 30 idiomas no iPhone, no iPad e no Windows.",
+   "nuevo": "o app em 30 idiomas."
+  },
+  {
+   "viejo": "em 29 idiomas no iPhone, no iPad e no Windows, widgets",
+   "nuevo": "em 29 idiomas, widgets"
+  },
+  {
+   "viejo": "com Google TV e outras). Há também suporte novo",
+   "nuevo": "com Google TV e outras). Funciona também com Fire TV (Fire TV Stick, Fire TV Cube e TVs com Fire TV) e muitas Hisense com VIDAA; alguns modelos novos de VIDAA ainda não. Há também suporte novo",
+   "veces": 2
+  },
+  {
+   "viejo": "No iPhone, no iPad e no Windows, o app já está em 30 idiomas, entre eles",
+   "nuevo": "O app está em 30 idiomas no iPhone, no iPad, no Mac, no Android e no Windows, entre eles",
+   "veces": 2
+  },
+  {
+   "viejo": " No Android, eles chegam com a próxima versão.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "Android TV e Apple TV (beta)</li>",
+   "nuevo": "Android TV, Fire TV, Hisense VIDAA e Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>O app em 30 idiomas no iPhone, no iPad e no Windows</li>",
+   "nuevo": "<li>O app em 30 idiomas</li>"
+  },
+  {
+   "viejo": "<li>Voz em 29 idiomas no iPhone, no iPad e no Windows</li>",
+   "nuevo": "<li>Voz em 29 idiomas</li>"
+  }
+ ]
+}

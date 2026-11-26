@@ -1,0 +1,53 @@
+{
+ "boton": "Stiahnuť zadarmo",
+ "nota": "Pro sa kupuje priamo v aplikácii.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Univerzálny ovládač televízora pre Samsung, LG, Roku a Google TV v mobile alebo PC. Tlačidlá, klávesnica, aplikácie, vstupy a zapnutie zadarmo; touchpad s Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Univerzálny ovládač televízora pre Samsung, LG, Roku, Google TV a Fire TV v mobile alebo PC. Tlačidlá, klávesnica, aplikácie a zapnutie zadarmo; touchpad s Pro.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV a Android TV. Bezplatný",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV a Fire TV. Bezplatný"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV a Android TV, cez Wi-Fi",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV a Hisense VIDAA, cez Wi-Fi"
+  },
+  {
+   "viejo": "aplikácia v 30 jazykoch na iPhone, iPade a Windowse",
+   "nuevo": "aplikácia v 30 jazykoch"
+  },
+  {
+   "viejo": "hlasové ovládanie v 29 jazykoch na iPhone, iPade a Windowse",
+   "nuevo": "hlasové ovládanie v 29 jazykoch"
+  },
+  {
+   "viejo": "Chromecast s Google TV a ďalšie). Novinka",
+   "nuevo": "Chromecast s Google TV a ďalšie). Funguje aj Fire TV (Fire TV Stick, Fire TV Cube a televízory s Fire TV) a mnohé televízory Hisense s VIDAA; niektoré novšie modely VIDAA zatiaľ nie. Novinka",
+   "veces": 2
+  },
+  {
+   "viejo": "Na iPhone, iPade a Windowse je aplikácia už v 30 jazykoch, vrátane",
+   "nuevo": "Aplikácia je v 30 jazykoch na iPhone, iPade, Macu, Androide a Windowse, vrátane",
+   "veces": 2
+  },
+  {
+   "viejo": " Na Androide pribudnú s ďalšou verziou.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV a Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA a Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Aplikácia v 30 jazykoch na iPhone, iPade a Windowse</li>",
+   "nuevo": "<li>Aplikácia v 30 jazykoch</li>"
+  },
+  {
+   "viejo": "<li>Hlasové ovládanie v 29 jazykoch na iPhone, iPade a Windowse</li>",
+   "nuevo": "<li>Hlasové ovládanie v 29 jazykoch</li>"
+  }
+ ]
+}

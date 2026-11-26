@@ -120,9 +120,35 @@ def quitar_version(texto):
     return re.sub(r'\?v=[\w-]+', '', texto)
 
 
+# Botón blanco de la barra de arriba (tanda 1 de la evaluación, 26-nov): era "Contacto" (correo o #contacto) y ahora
+# es "Descargar", con el mismo destino que el Descargar del pie. Contacto queda como enlace de texto en la barra (en
+# el celular se oculta, como los demás enlaces de texto, y sigue en el pie). Los generadores escriben la barra vieja;
+# esto la cambia en todas las páginas en cada commit (pre-commit), así que no hay que tocar cada generador.
+BARRA_VIEJA = re.compile(r'( *)<a class="boton-barra" href="([^"]*)">([^<]*)</a>')
+
+
+def barra_descargar(texto, descargar, href):
+    def cambiar(m):
+        if m.group(2).endswith('#tiendas'):
+            return m.group(0)  # ya cambiada
+        sangria = m.group(1)
+        return (f'{sangria}<a href="{m.group(2)}">{m.group(3)}</a>\n'
+                f'{sangria}<a class="boton-barra" href="{html.escape(href)}">{html.escape(descargar)}</a>')
+    return BARRA_VIEJA.sub(cambiar, texto, count=1)
+
+
 def procesar(pagina):
     """Procesa una página. Devuelve True si se modificó, False si no cambió."""
     texto = pagina.read_text(encoding='utf-8')
+    original = texto
+
+    lang_match = re.search(r'<html[^>]*\slang="([\w-]+)"', texto)
+    lenguaje = I.clave_de_lang(lang_match.group(1)) if lang_match else 'es'
+    if lenguaje not in IDIOMA_TEXTO:
+        lenguaje = 'es'
+    tiene_tiendas = 'id="tiendas"' in texto
+    inicio = INICIO_LANG.get(lenguaje, '/')
+    texto = barra_descargar(texto, IDIOMA_TEXTO[lenguaje][1], '#tiendas' if tiene_tiendas else inicio + '#tiendas')
 
     match = BLOCK_INICIO.search(texto)
     if match:
@@ -130,23 +156,19 @@ def procesar(pagina):
     else:
         inicio_pos = texto.find(LINEA_VIEJA)
         if inicio_pos == -1:
+            if texto != original:
+                pagina.write_text(texto, encoding='utf-8', newline='')
+                return True
             return False
         fin_pos = inicio_pos + len(LINEA_VIEJA)
 
-    lang_match = re.search(r'<html[^>]*\slang="([\w-]+)"', texto)
-    lenguaje = I.clave_de_lang(lang_match.group(1)) if lang_match else 'es'
-    if lenguaje not in IDIOMA_TEXTO:
-        lenguaje = 'es'
-
     hreflangs = idiomas_de_pagina(pagina)
-
-    tiene_tiendas = 'id="tiendas"' in texto
 
     nuevo_bloque = bloque_nuevo(lenguaje, hreflangs, tiene_tiendas)
 
     resultado = texto[:inicio_pos] + nuevo_bloque + texto[fin_pos:]
 
-    if quitar_version(resultado) != quitar_version(texto):
+    if quitar_version(resultado) != quitar_version(original):
         pagina.write_text(resultado, encoding='utf-8', newline='')
         return True
     return False

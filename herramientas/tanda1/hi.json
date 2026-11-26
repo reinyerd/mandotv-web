@@ -1,0 +1,53 @@
+{
+ "boton": "मुफ़्त डाउनलोड करें",
+ "nota": "Pro ऐप के अंदर से ही खरीदा जाता है।",
+ "cambios": [
+  {
+   "viejo": "Samsung, LG, Roku और Google TV के लिए यूनिवर्सल टीवी रिमोट। बटन, कीबोर्ड, ऐप्स, इनपुट और चालू करना मुफ़्त",
+   "nuevo": "Samsung, LG, Roku, Google TV और Fire TV के लिए यूनिवर्सल टीवी रिमोट। बटन, कीबोर्ड, ऐप्स और चालू करना मुफ़्त"
+  },
+  {
+   "viejo": "Roku, Google TV और Android TV। रिमोट मुफ़्त",
+   "nuevo": "Roku, Google TV, Android TV और Fire TV। रिमोट मुफ़्त"
+  },
+  {
+   "viejo": "Roku, Google TV और Android TV, वाई-फ़ाई से",
+   "nuevo": "Roku, Google TV, Android TV, Fire TV और Hisense VIDAA, वाई-फ़ाई से"
+  },
+  {
+   "viejo": ", iPhone, iPad और Windows पर 30 भाषाओं में ऐप। Pro",
+   "nuevo": ", 30 भाषाओं में ऐप। Pro"
+  },
+  {
+   "viejo": "iPhone, iPad और Windows पर 29 भाषाओं में आवाज़ से कंट्रोल,",
+   "nuevo": "29 भाषाओं में आवाज़ से कंट्रोल,"
+  },
+  {
+   "viejo": "Google TV वाला Chromecast और अन्य)। नया और बीटा में",
+   "nuevo": "Google TV वाला Chromecast और अन्य)। इसके अलावा Fire TV (Fire TV Stick, Fire TV Cube और Fire TV वाले टीवी) और VIDAA वाले कई Hisense टीवी पर भी चलता है; VIDAA के कुछ नए मॉडल पर अभी नहीं। नया और बीटा में",
+   "veces": 2
+  },
+  {
+   "viejo": "iPhone, iPad और Windows पर ऐप अभी 30 भाषाओं में है, जिनमें",
+   "nuevo": "iPhone, iPad, Mac, Android और Windows पर ऐप 30 भाषाओं में है, जिनमें",
+   "veces": 2
+  },
+  {
+   "viejo": " Android पर वे अगले वर्शन के साथ आएँगी।",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV और Apple TV (बीटा)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA और Apple TV (बीटा)</li>"
+  },
+  {
+   "viejo": "<li>iPhone, iPad और Windows पर 30 भाषाओं में ऐप</li>",
+   "nuevo": "<li>30 भाषाओं में ऐप</li>"
+  },
+  {
+   "viejo": "<li>iPhone, iPad और Windows पर 29 भाषाओं में आवाज़ से कंट्रोल</li>",
+   "nuevo": "<li>29 भाषाओं में आवाज़ से कंट्रोल</li>"
+  }
+ ]
+}

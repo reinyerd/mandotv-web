@@ -1,0 +1,53 @@
+{
+ "boton": "Kostenlos laden",
+ "nota": "Pro kaufst du in der App.",
+ "cambios": [
+  {
+   "viejo": "Universelle TV Fernbedienung für Samsung, LG, Roku und Google TV auf Handy oder PC. Tasten, Tastatur, Apps, Eingänge und Einschalten gratis",
+   "nuevo": "Universelle TV Fernbedienung für Samsung, LG, Roku, Google TV und Fire TV auf Handy oder PC. Tasten, Tastatur, Apps und Einschalten gratis"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV und Android TV. Kostenlose",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV und Fire TV. Kostenlose"
+  },
+  {
+   "viejo": "Google TV und Android TV, per WLAN",
+   "nuevo": "Google TV, Android TV, Fire TV und Hisense VIDAA, per WLAN"
+  },
+  {
+   "viejo": "die App in 30 Sprachen auf iPhone, iPad und Windows.",
+   "nuevo": "die App in 30 Sprachen."
+  },
+  {
+   "viejo": "in 29 Sprachen auf iPhone, iPad und Windows, Widgets",
+   "nuevo": "in 29 Sprachen, Widgets"
+  },
+  {
+   "viejo": "und andere). Neu und in der Beta",
+   "nuevo": "und andere). Es funktioniert auch mit Fire TV (Fire TV Stick, Fire TV Cube und Fernseher mit Fire TV) und vielen Hisense mit VIDAA; einige neuere VIDAA-Modelle noch nicht. Neu und in der Beta",
+   "veces": 2
+  },
+  {
+   "viejo": "Auf iPhone, iPad und Windows gibt es die App schon in 30 Sprachen, darunter",
+   "nuevo": "Die App gibt es auf iPhone, iPad, Mac, Android und Windows in 30 Sprachen, darunter",
+   "veces": 2
+  },
+  {
+   "viejo": " Auf Android kommen sie mit der nächsten Version.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "Android TV und Apple TV (Beta)</li>",
+   "nuevo": "Android TV, Fire TV, Hisense VIDAA und Apple TV (Beta)</li>"
+  },
+  {
+   "viejo": "<li>Die App in 30 Sprachen auf iPhone, iPad und Windows</li>",
+   "nuevo": "<li>Die App in 30 Sprachen</li>"
+  },
+  {
+   "viejo": "<li>Sprachsteuerung in 29 Sprachen auf iPhone, iPad und Windows</li>",
+   "nuevo": "<li>Sprachsteuerung in 29 Sprachen</li>"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "boton": "Descarcă gratuit",
+ "nota": "Pro se cumpără din aplicație.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Telecomandă TV universală pentru Samsung, LG, Roku și Google TV, pe telefon sau PC. Butoane, tastatură, aplicații, intrări și pornire gratis; touchpad cu Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Telecomandă TV universală pentru Samsung, LG, Roku, Google TV și Fire TV, pe telefon sau PC. Butoane, tastatură, aplicații și pornire gratis; touchpad cu Pro.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV și Android TV. Telecomandă gratuită",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV și Fire TV. Telecomandă gratuită"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV și Android TV, prin Wi-Fi",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV și Hisense VIDAA, prin Wi-Fi"
+  },
+  {
+   "viejo": "aplicația în 30 de limbi pe iPhone, iPad și Windows",
+   "nuevo": "aplicația în 30 de limbi"
+  },
+  {
+   "viejo": "control vocal în 29 de limbi pe iPhone, iPad și Windows",
+   "nuevo": "control vocal în 29 de limbi"
+  },
+  {
+   "viejo": "Chromecast cu Google TV și altele). Nou și în versiunea beta",
+   "nuevo": "Chromecast cu Google TV și altele). Funcționează și Fire TV (Fire TV Stick, Fire TV Cube și televizoare cu Fire TV), precum și multe televizoare Hisense cu VIDAA; unele modele noi VIDAA încă nu. Nou și în versiunea beta",
+   "veces": 2
+  },
+  {
+   "viejo": "Pe iPhone, iPad și Windows, aplicația există deja în 30 de limbi, printre care",
+   "nuevo": "Aplicația există în 30 de limbi pe iPhone, iPad, Mac, Android și Windows, printre care",
+   "veces": 2
+  },
+  {
+   "viejo": " Pe Android vin cu următoarea versiune.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV și Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA și Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Aplicația în 30 de limbi pe iPhone, iPad și Windows</li>",
+   "nuevo": "<li>Aplicația în 30 de limbi</li>"
+  },
+  {
+   "viejo": "<li>Control vocal în 29 de limbi pe iPhone, iPad și Windows</li>",
+   "nuevo": "<li>Control vocal în 29 de limbi</li>"
+  }
+ ]
+}

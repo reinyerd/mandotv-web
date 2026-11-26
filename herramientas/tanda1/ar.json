@@ -1,0 +1,53 @@
+{
+ "boton": "نزّل مجانًا",
+ "nota": "يُشترى Pro من داخل التطبيق.",
+ "cambios": [
+  {
+   "viejo": "لأجهزة Samsung وLG وRoku وGoogle TV. الأزرار ولوحة المفاتيح والتطبيقات والمدخلات والتشغيل مجانًا",
+   "nuevo": "لأجهزة Samsung وLG وRoku وGoogle TV وFire TV. الأزرار ولوحة المفاتيح والتطبيقات والتشغيل مجانًا"
+  },
+  {
+   "viejo": "Samsung وLG وRoku وGoogle TV وAndroid TV. ريموت مجاني",
+   "nuevo": "Samsung وLG وRoku وGoogle TV وAndroid TV وFire TV. ريموت مجاني"
+  },
+  {
+   "viejo": "Roku وGoogle TV وAndroid TV، عبر Wi-Fi",
+   "nuevo": "Roku وGoogle TV وAndroid TV وFire TV وHisense VIDAA، عبر Wi-Fi"
+  },
+  {
+   "viejo": "التطبيق بـ 30 لغة على iPhone وiPad وWindows. مع Pro",
+   "nuevo": "التطبيق بـ 30 لغة. مع Pro"
+  },
+  {
+   "viejo": "التحكم الصوتي بـ 29 لغة على iPhone وiPad وWindows،",
+   "nuevo": "التحكم الصوتي بـ 29 لغة،"
+  },
+  {
+   "viejo": "Chromecast مع Google TV وغيرها). جديد وفي نسخة تجريبية",
+   "nuevo": "Chromecast مع Google TV وغيرها). ويعمل أيضًا مع Fire TV (Fire TV Stick وFire TV Cube والتلفزيونات المزودة بـ Fire TV) ومع كثير من تلفزيونات Hisense بنظام VIDAA، أما بعض موديلات VIDAA الأحدث فلا تُدعم بعد. جديد وفي نسخة تجريبية",
+   "veces": 2
+  },
+  {
+   "viejo": "يتوفر التطبيق الآن بـ 30 لغة على iPhone وiPad وWindows، منها",
+   "nuevo": "يتوفر التطبيق بـ 30 لغة على iPhone وiPad وMac وAndroid وWindows، منها",
+   "veces": 2
+  },
+  {
+   "viejo": " وستصل إلى Android مع الإصدار القادم.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung وLG وRoku وGoogle TV وAndroid TV وApple TV (تجريبي)</li>",
+   "nuevo": "<li>Samsung وLG وRoku وGoogle TV وAndroid TV وFire TV وHisense VIDAA وApple TV (تجريبي)</li>"
+  },
+  {
+   "viejo": "<li>التطبيق بـ 30 لغة على iPhone وiPad وWindows</li>",
+   "nuevo": "<li>التطبيق بـ 30 لغة</li>"
+  },
+  {
+   "viejo": "<li>التحكم الصوتي بـ 29 لغة على iPhone وiPad وWindows</li>",
+   "nuevo": "<li>التحكم الصوتي بـ 29 لغة</li>"
+  }
+ ]
+}

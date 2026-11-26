@@ -631,12 +631,16 @@
   // Barra fija al bajar (estilo Apple): logo y Descargar siempre a mano, con el mismo destino que el botón principal.
   // Mientras no se ve queda inerte para que el teclado no llegue a enlaces ocultos.
   var barraFija = null, barraDescargar = null;
+  // También el botón de la barra de arriba y el de la sección de precio (tanda 1, 26-nov): todos van a la misma tienda.
   function sincronizarBarra() {
-    if (!barraDescargar || !principal) return;
-    barraDescargar.href = principal.getAttribute('href');
-    ['target', 'rel'].forEach(function (a) {
-      if (principal.hasAttribute(a)) barraDescargar.setAttribute(a, principal.getAttribute(a));
-      else barraDescargar.removeAttribute(a);
+    if (!principal) return;
+    [barraDescargar, document.querySelector('.barra .boton-barra'), document.getElementById('precio-descargar')].forEach(function (b) {
+      if (!b) return;
+      b.href = principal.getAttribute('href');
+      ['target', 'rel'].forEach(function (a) {
+        if (principal.hasAttribute(a)) b.setAttribute(a, principal.getAttribute(a));
+        else b.removeAttribute(a);
+      });
     });
   }
   var portada = document.querySelector('.escena');

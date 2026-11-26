@@ -1,0 +1,53 @@
+{
+ "boton": "Δωρεάν λήψη",
+ "nota": "Το Pro αγοράζεται μέσα από την εφαρμογή.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Καθολικό τηλεχειριστήριο τηλεόρασης για Samsung, LG, Roku και Google TV στο κινητό ή τον υπολογιστή. Πλήκτρα, πληκτρολόγιο, εφαρμογές, είσοδοι και άνοιγμα δωρεάν· touchpad με Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Καθολικό τηλεχειριστήριο TV για Samsung, LG, Roku, Google TV και Fire TV σε κινητό ή PC. Πλήκτρα, πληκτρολόγιο, εφαρμογές, άνοιγμα δωρεάν· touchpad με Pro.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV και Android TV. Δωρεάν",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV και Fire TV. Δωρεάν"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV και Android TV, μέσω Wi-Fi",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV και Hisense VIDAA, μέσω Wi-Fi"
+  },
+  {
+   "viejo": "η εφαρμογή σε 30 γλώσσες σε iPhone, iPad και Windows",
+   "nuevo": "η εφαρμογή σε 30 γλώσσες"
+  },
+  {
+   "viejo": "φωνητικός έλεγχος σε 29 γλώσσες σε iPhone, iPad και Windows",
+   "nuevo": "φωνητικός έλεγχος σε 29 γλώσσες"
+  },
+  {
+   "viejo": "Chromecast με Google TV και άλλες). Νέο και σε beta",
+   "nuevo": "Chromecast με Google TV και άλλες). Επιπλέον λειτουργεί το Fire TV (Fire TV Stick, Fire TV Cube και τηλεοράσεις με Fire TV) και πολλές Hisense με VIDAA· μερικά νεότερα μοντέλα VIDAA όχι ακόμα. Νέο και σε beta",
+   "veces": 2
+  },
+  {
+   "viejo": "Σε iPhone, iPad και Windows η εφαρμογή υπάρχει ήδη σε 30 γλώσσες, μεταξύ των οποίων",
+   "nuevo": "Η εφαρμογή υπάρχει σε 30 γλώσσες σε iPhone, iPad, Mac, Android και Windows, μεταξύ των οποίων",
+   "veces": 2
+  },
+  {
+   "viejo": " Στο Android έρχονται με την επόμενη έκδοση.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV και Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA και Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Η εφαρμογή σε 30 γλώσσες σε iPhone, iPad και Windows</li>",
+   "nuevo": "<li>Η εφαρμογή σε 30 γλώσσες</li>"
+  },
+  {
+   "viejo": "<li>Φωνητικός έλεγχος σε 29 γλώσσες σε iPhone, iPad και Windows</li>",
+   "nuevo": "<li>Φωνητικός έλεγχος σε 29 γλώσσες</li>"
+  }
+ ]
+}

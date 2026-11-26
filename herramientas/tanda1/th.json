@@ -1,0 +1,47 @@
+{
+  "boton": "ดาวน์โหลดฟรี",
+  "nota": "ซื้อ Pro ได้ในแอปเลย",
+  "cambios": [
+    {
+      "viejo": "<meta name=\"description\" content=\"แอปรีโมททีวีสำหรับ Samsung, LG, Roku และ Google TV บนมือถือหรือพีซี ปุ่มกด คีย์บอร์ด แอป อินพุต และเปิดทีวีได้ฟรี ทัชแพดใช้ได้กับ Pro\">",
+      "nuevo": "<meta name=\"description\" content=\"แอปรีโมททีวีสำหรับ Samsung, LG, Roku, Google TV และ Fire TV บนมือถือหรือพีซี ปุ่มกด คีย์บอร์ด แอป และเปิดทีวีได้ฟรี ทัชแพดใช้ได้กับ Pro\">"
+    },
+    {
+      "viejo": "Google TV และ Android TV รีโมทใช้ฟรี",
+      "nuevo": "Google TV, Android TV และ Fire TV รีโมทใช้ฟรี"
+    },
+    {
+      "viejo": "Google TV และ Android TV ผ่าน Wi-Fi",
+      "nuevo": "Google TV, Android TV, Fire TV และ Hisense VIDAA ผ่าน Wi-Fi"
+    },
+    {
+      "viejo": "แอปมี 30 ภาษาบน iPhone, iPad และ Windows",
+      "nuevo": "แอปมี 30 ภาษา",
+      "veces": 2
+    },
+    {
+      "viejo": "29 ภาษาบน iPhone, iPad และ Windows",
+      "nuevo": "29 ภาษา",
+      "veces": 2
+    },
+    {
+      "viejo": "Chromecast with Google TV และอื่น ๆ) ใหม่และอยู่ในเวอร์ชันเบต้า: ",
+      "nuevo": "Chromecast with Google TV และอื่น ๆ) นอกจากนี้ยังใช้ได้กับ Fire TV (Fire TV Stick, Fire TV Cube และทีวีที่มี Fire TV ในตัว) และทีวี Hisense หลายรุ่นที่ใช้ VIDAA ส่วนบางรุ่นใหม่ของ VIDAA ยังไม่รองรับ ใหม่และอยู่ในเวอร์ชันเบต้า: ",
+      "veces": 2
+    },
+    {
+      "viejo": "บน iPhone, iPad และ Windows แอปมีให้ใช้แล้วใน 30 ภาษา รวมถึง",
+      "nuevo": "แอปมีให้ใช้ใน 30 ภาษาบน iPhone, iPad, Mac, Android และ Windows รวมถึง",
+      "veces": 2
+    },
+    {
+      "viejo": " ส่วน Android จะมีในเวอร์ชันถัดไป",
+      "nuevo": "",
+      "veces": 2
+    },
+    {
+      "viejo": "Android TV และ Apple TV (เบต้า)</li>",
+      "nuevo": "Android TV, Fire TV, Hisense VIDAA และ Apple TV (เบต้า)</li>"
+    }
+  ]
+}

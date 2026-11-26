@@ -1,0 +1,53 @@
+{
+ "boton": "Pobierz za darmo",
+ "nota": "Pro kupisz w aplikacji.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Uniwersalny pilot do telewizorów Samsung, LG, Roku i Google TV na telefonie lub PC. Przyciski, klawiatura, aplikacje, źródła i włączanie za darmo; touchpad w Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Uniwersalny pilot do TV Samsung, LG, Roku, Google TV i Fire TV na telefonie lub PC. Przyciski, klawiatura, aplikacje i włączanie za darmo; touchpad w Pro.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV i Android TV. Darmowy",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV i Fire TV. Darmowy"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV i Android TV, przez Wi-Fi",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV i Hisense VIDAA, przez Wi-Fi"
+  },
+  {
+   "viejo": "aplikacja w 30 językach na iPhone, iPad i Windows",
+   "nuevo": "aplikacja w 30 językach"
+  },
+  {
+   "viejo": "sterowanie głosem w 29 językach na iPhone, iPad i Windows",
+   "nuevo": "sterowanie głosem w 29 językach"
+  },
+  {
+   "viejo": "Chromecast z Google TV i inne). Nowość",
+   "nuevo": "Chromecast z Google TV i inne). Działa też z Fire TV (Fire TV Stick, Fire TV Cube i telewizorami z Fire TV) oraz z wieloma telewizorami Hisense z VIDAA; niektóre nowsze modele VIDAA jeszcze nie. Nowość",
+   "veces": 2
+  },
+  {
+   "viejo": "Na iPhone, iPad i Windows aplikacja jest już w 30 językach, między innymi",
+   "nuevo": "Aplikacja jest w 30 językach na iPhone, iPad, Mac, Androidzie i Windows, między innymi",
+   "veces": 2
+  },
+  {
+   "viejo": " Na Androidzie pojawią się w następnej wersji.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV i Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA i Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Aplikacja w 30 językach na iPhone, iPad i Windows</li>",
+   "nuevo": "<li>Aplikacja w 30 językach</li>"
+  },
+  {
+   "viejo": "<li>Sterowanie głosem w 29 językach na iPhone, iPad i Windows</li>",
+   "nuevo": "<li>Sterowanie głosem w 29 językach</li>"
+  }
+ ]
+}

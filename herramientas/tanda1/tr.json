@@ -1,0 +1,53 @@
+{
+ "boton": "Ücretsiz indir",
+ "nota": "Pro uygulamanın içinden satın alınır.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Samsung, LG, Roku ve Google TV için telefonda veya bilgisayarda evrensel TV kumandası. Tuşlar, klavye, uygulamalar, girişler ve açma ücretsiz; dokunmatik yüzey Pro’da.\">",
+   "nuevo": "<meta name=\"description\" content=\"Samsung, LG, Roku, Google TV ve Fire TV için telefonda veya PC’de evrensel TV kumandası. Tuşlar, klavye, uygulamalar ve açma ücretsiz; dokunmatik yüzey Pro’da.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV ve Android TV. Ücretsiz",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV ve Fire TV. Ücretsiz"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV ve Android TV, telefonundan",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV ve Hisense VIDAA, telefonundan"
+  },
+  {
+   "viejo": "yansıtma, iPhone, iPad ve Windows’ta 30 dilde uygulama",
+   "nuevo": "yansıtma, 30 dilde uygulama"
+  },
+  {
+   "viejo": "çocuk modu, iPhone, iPad ve Windows’ta 29 dilde sesle kontrol",
+   "nuevo": "çocuk modu, 29 dilde sesle kontrol"
+  },
+  {
+   "viejo": "Google TV’li Chromecast ve diğerleri). Yeni ve betada",
+   "nuevo": "Google TV’li Chromecast ve diğerleri). Ayrıca Fire TV (Fire TV Stick, Fire TV Cube ve Fire TV’li televizyonlar) ve VIDAA’lı birçok Hisense çalışır; VIDAA’lı bazı yeni modeller henüz çalışmaz. Yeni ve betada",
+   "veces": 2
+  },
+  {
+   "viejo": "iPhone, iPad ve Windows’ta uygulama şimdiden 30 dilde var;",
+   "nuevo": "Uygulama iPhone, iPad, Mac, Android ve Windows’ta 30 dilde var;",
+   "veces": 2
+  },
+  {
+   "viejo": " Android’de bunlar bir sonraki sürümle gelecek.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV ve Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA ve Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>iPhone, iPad ve Windows’ta 30 dilde uygulama</li>",
+   "nuevo": "<li>30 dilde uygulama</li>"
+  },
+  {
+   "viejo": "<li>iPhone, iPad ve Windows’ta 29 dilde sesle kontrol</li>",
+   "nuevo": "<li>29 dilde sesle kontrol</li>"
+  }
+ ]
+}

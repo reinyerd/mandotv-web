@@ -1,0 +1,53 @@
+{
+ "boton": "Ladda ner gratis",
+ "nota": "Pro köps i appen.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Universell tv-fjärrkontroll för Samsung, LG, Roku och Google TV i mobilen eller datorn. Knappar, tangentbord, appar, ingångar och påslagning gratis; touchpad med Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Tv-fjärrkontroll för Samsung, LG, Roku, Google TV och Fire TV i mobilen eller datorn. Knappar, tangentbord, appar och påslagning gratis; touchpad med Pro.\">"
+  },
+  {
+   "viejo": "Google TV och Android TV. Gratis fjärrkontroll",
+   "nuevo": "Google TV, Android TV och Fire TV. Gratis fjärrkontroll"
+  },
+  {
+   "viejo": "Google TV och Android TV, via wifi",
+   "nuevo": "Google TV, Android TV, Fire TV och Hisense VIDAA, via wifi"
+  },
+  {
+   "viejo": "appen på 30 språk på iPhone, iPad och Windows",
+   "nuevo": "appen på 30 språk"
+  },
+  {
+   "viejo": "röststyrning på 29 språk på iPhone, iPad och Windows",
+   "nuevo": "röststyrning på 29 språk"
+  },
+  {
+   "viejo": "Chromecast med Google TV och andra). Nytt och i betan",
+   "nuevo": "Chromecast med Google TV och andra). Dessutom Fire TV (Fire TV Stick, Fire TV Cube och tv med Fire TV) och många Hisense med VIDAA; vissa nyare VIDAA-modeller ännu inte. Nytt och i betan",
+   "veces": 2
+  },
+  {
+   "viejo": "På iPhone, iPad och Windows finns appen redan på 30 språk, bland annat",
+   "nuevo": "Appen finns på 30 språk på iPhone, iPad, Mac, Android och Windows, bland annat",
+   "veces": 2
+  },
+  {
+   "viejo": " På Android kommer de med nästa version.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV och Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA och Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Appen på 30 språk på iPhone, iPad och Windows</li>",
+   "nuevo": "<li>Appen på 30 språk</li>"
+  },
+  {
+   "viejo": "<li>Röststyrning på 29 språk på iPhone, iPad och Windows</li>",
+   "nuevo": "<li>Röststyrning på 29 språk</li>"
+  }
+ ]
+}

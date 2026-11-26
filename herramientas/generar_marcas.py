@@ -89,9 +89,9 @@ MARCAS = [
     ],
     guias=[('roku-no-responde-al-celular', 'Roku no responde al celular: solución al error 403'), ('perdi-el-control-del-roku', 'Perdí el control del Roku: cómo usar el celular')]),
   dict(slug='es/control-remoto-android-tv', nombre='Android TV y Google TV', corto='Android TV', color='#2fbf8f',
-    titulo='Control remoto para Android TV en tu celular | Mando TV',
-    desc='Tu celular o PC como control de Google TV o Android TV (Sony, TCL, Xiaomi) por WiFi. Botones, teclado, apps y encendido gratis; touchpad con Pro.',
-    h1='Control remoto para Android TV',
+    titulo='Control remoto de Google TV y Android TV en tu celular | Mando TV',
+    desc='Google TV y Android TV (Sony, TCL, Hisense, Xiaomi) desde tu celular o PC por WiFi. Botones, teclado, apps y encendido gratis; touchpad con Pro.',
+    h1='Control remoto para Google TV y Android TV',
     intro='Mando TV convierte tu celular o tu computador en el control remoto de tu Android TV o Google TV, por la red WiFi de tu casa. También en iPhone y en Windows.',
     compat='Televisores con Google TV o Android TV de Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu y otras marcas, además de Chromecast con Google TV, Google TV Streamer, onn. y Nvidia Shield. Algunas de estas marcas también venden modelos con otro sistema: si tu TV muestra la pantalla de inicio de Google TV o trae la tienda Google Play, Mando TV lo maneja.',
     funciones=[

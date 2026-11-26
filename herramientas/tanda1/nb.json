@@ -1,0 +1,53 @@
+{
+ "boton": "Last ned gratis",
+ "nota": "Pro kjøpes i appen.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Universell TV-fjernkontroll for Samsung, LG, Roku og Google TV på mobil eller PC. Knapper, tastatur, apper, innganger og påslåing gratis; touchpad med Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Universell TV-fjernkontroll for Samsung, LG, Roku, Google TV og Fire TV på mobil eller PC. Knapper, tastatur, apper og påslåing gratis; touchpad med Pro.\">"
+  },
+  {
+   "viejo": "Google TV og Android TV. Gratis fjernkontroll",
+   "nuevo": "Google TV, Android TV og Fire TV. Gratis fjernkontroll"
+  },
+  {
+   "viejo": "Google TV og Android TV, via Wi-Fi",
+   "nuevo": "Google TV, Android TV, Fire TV og Hisense VIDAA, via Wi-Fi"
+  },
+  {
+   "viejo": "appen på 30 språk på iPhone, iPad og Windows",
+   "nuevo": "appen på 30 språk"
+  },
+  {
+   "viejo": "talestyring på 29 språk på iPhone, iPad og Windows",
+   "nuevo": "talestyring på 29 språk"
+  },
+  {
+   "viejo": "Chromecast med Google TV og andre). Nytt og i beta",
+   "nuevo": "Chromecast med Google TV og andre). Dessuten Fire TV (Fire TV Stick, Fire TV Cube og TV-er med Fire TV) og mange Hisense med VIDAA; noen nyere VIDAA-modeller ennå ikke. Nytt og i beta",
+   "veces": 2
+  },
+  {
+   "viejo": "På iPhone, iPad og Windows finnes appen allerede på 30 språk, blant dem",
+   "nuevo": "Appen finnes på 30 språk på iPhone, iPad, Mac, Android og Windows, blant dem",
+   "veces": 2
+  },
+  {
+   "viejo": " På Android kommer de med neste versjon.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV og Apple TV (beta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA og Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>Appen på 30 språk på iPhone, iPad og Windows</li>",
+   "nuevo": "<li>Appen på 30 språk</li>"
+  },
+  {
+   "viejo": "<li>Talestyring på 29 språk på iPhone, iPad og Windows</li>",
+   "nuevo": "<li>Talestyring på 29 språk</li>"
+  }
+ ]
+}

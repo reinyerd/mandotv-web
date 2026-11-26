@@ -1,0 +1,53 @@
+{
+ "boton": "Scarica gratis",
+ "nota": "Pro si acquista nell'app.",
+ "cambios": [
+  {
+   "viejo": "Telecomando universale per Samsung, LG, Roku e Google TV, su smartphone o PC. Tasti, tastiera, app, ingressi e accensione gratis",
+   "nuevo": "Telecomando universale per Samsung, LG, Roku, Google TV e Fire TV, su smartphone o PC. Tasti, tastiera, app e accensione gratis"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV e Android TV. Telecomando gratis",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV e Fire TV. Telecomando gratis"
+  },
+  {
+   "viejo": "Google TV e Android TV, via Wi-Fi",
+   "nuevo": "Google TV, Android TV, Fire TV e Hisense VIDAA, via Wi-Fi"
+  },
+  {
+   "viejo": "l'app in 30 lingue su iPhone, iPad e Windows.",
+   "nuevo": "l'app in 30 lingue."
+  },
+  {
+   "viejo": "in 29 lingue su iPhone, iPad e Windows, widget",
+   "nuevo": "in 29 lingue, widget"
+  },
+  {
+   "viejo": "con Google TV e altre). Nuovo e in beta",
+   "nuevo": "con Google TV e altre). Funziona anche con Fire TV (Fire TV Stick, Fire TV Cube e TV con Fire TV) e molte Hisense con VIDAA; alcuni modelli VIDAA più recenti non ancora. Nuovo e in beta",
+   "veces": 2
+  },
+  {
+   "viejo": "Su iPhone, iPad e Windows l'app è già disponibile in 30 lingue, tra cui",
+   "nuevo": "L'app è disponibile in 30 lingue su iPhone, iPad, Mac, Android e Windows, tra cui",
+   "veces": 2
+  },
+  {
+   "viejo": " Su Android arrivano con la prossima versione.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "Android TV e Apple TV (beta)</li>",
+   "nuevo": "Android TV, Fire TV, Hisense VIDAA e Apple TV (beta)</li>"
+  },
+  {
+   "viejo": "<li>L'app in 30 lingue su iPhone, iPad e Windows</li>",
+   "nuevo": "<li>L'app in 30 lingue</li>"
+  },
+  {
+   "viejo": "<li>Comandi vocali in 29 lingue su iPhone, iPad e Windows</li>",
+   "nuevo": "<li>Comandi vocali in 29 lingue</li>"
+  }
+ ]
+}

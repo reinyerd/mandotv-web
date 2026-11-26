@@ -1,0 +1,53 @@
+{
+ "boton": "無料ダウンロード",
+ "nota": "Proはアプリ内で購入できます。",
+ "cambios": [
+  {
+   "viejo": "Samsung、LG、Roku、Google TV対応のテレビ用ユニバーサルリモコン。ボタン、キーボード、アプリ、入力切替、電源オンは無料",
+   "nuevo": "Samsung、LG、Roku、Google TV、Fire TV対応のテレビ用ユニバーサルリモコン。ボタン、キーボード、アプリ、電源オンは無料"
+  },
+  {
+   "viejo": "Roku、Google TV、Android TVに対応。",
+   "nuevo": "Roku、Google TV、Android TV、Fire TVに対応。"
+  },
+  {
+   "viejo": "LG webOS、Roku、Google TV、Android TVを、スマホ",
+   "nuevo": "LG webOS、Roku、Google TV、Android TV、Fire TV、Hisense VIDAAを、スマホ"
+  },
+  {
+   "viejo": "iPhone、iPad、Windows版の30言語対応。Pro",
+   "nuevo": "アプリの30言語対応。Pro"
+  },
+  {
+   "viejo": "キッズモード、iPhone、iPad、Windowsでの29言語の音声操作、",
+   "nuevo": "キッズモード、29言語の音声操作、"
+  },
+  {
+   "viejo": "Chromecast with Google TVなど)で使えます。新機能として",
+   "nuevo": "Chromecast with Google TVなど)で使えます。Fire TV(Fire TV Stick、Fire TV Cube、Fire TV搭載のテレビ)や、VIDAA搭載の多くのHisenseでも使えます。ただし、VIDAAの一部の新しいモデルにはまだ対応していません。新機能として",
+   "veces": 2
+  },
+  {
+   "viejo": "iPhone、iPad、Windows版のアプリは、すでに30の言語に対応しています。",
+   "nuevo": "アプリは、iPhone、iPad、Mac、Android、Windowsで30の言語に対応しています。",
+   "veces": 2
+  },
+  {
+   "viejo": "Android版には、次のバージョンで追加されます。",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung、LG、Roku、Google TV、Android TV、Apple TV(ベータ)</li>",
+   "nuevo": "<li>Samsung、LG、Roku、Google TV、Android TV、Fire TV、Hisense VIDAA、Apple TV(ベータ)</li>"
+  },
+  {
+   "viejo": "<li>iPhone、iPad、Windows版は30の言語に対応</li>",
+   "nuevo": "<li>アプリは30の言語に対応</li>"
+  },
+  {
+   "viejo": "<li>iPhone、iPad、Windowsでの29言語の音声操作</li>",
+   "nuevo": "<li>29言語の音声操作</li>"
+  }
+ ]
+}

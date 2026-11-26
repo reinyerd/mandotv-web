@@ -1,0 +1,53 @@
+{
+ "boton": "הורדה חינם",
+ "nota": "את Pro קונים בתוך האפליקציה.",
+ "cambios": [
+  {
+   "viejo": "content=\"שלט אוניברסלי לטלוויזיה מהטלפון או מהמחשב, ל-Samsung, LG, Roku ו-Google TV. כפתורים, מקלדת, אפליקציות, כניסות והדלקה בחינם; משטח מגע ב-Pro.\"",
+   "nuevo": "content=\"שלט אוניברסלי לטלוויזיה מהטלפון או מהמחשב, ל-Samsung, LG, Roku, Google TV ול-Fire TV. כפתורים, מקלדת, אפליקציות והדלקה בחינם; משטח מגע ב-Pro.\""
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV ו-Android TV. שלט בחינם",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV ו-Fire TV. שלט בחינם"
+  },
+  {
+   "viejo": "Roku, Google TV ו-Android TV, דרך Wi-Fi",
+   "nuevo": "Roku, Google TV, Android TV, Fire TV ו-Hisense VIDAA, דרך Wi-Fi"
+  },
+  {
+   "viejo": "האפליקציה ב-30 שפות ב-iPhone, ב-iPad וב-Windows.",
+   "nuevo": "האפליקציה ב-30 שפות."
+  },
+  {
+   "viejo": "שליטה בקול ב-29 שפות ב-iPhone, ב-iPad וב-Windows,",
+   "nuevo": "שליטה בקול ב-29 שפות,"
+  },
+  {
+   "viejo": "Chromecast with Google TV ועוד). חדש ובבטא",
+   "nuevo": "Chromecast with Google TV ועוד). עובדת גם עם Fire TV (Fire TV Stick, Fire TV Cube וטלוויזיות עם Fire TV) ועם הרבה טלוויזיות Hisense עם VIDAA; בכמה דגמים חדשים של VIDAA עדיין לא. חדש ובבטא",
+   "veces": 2
+  },
+  {
+   "viejo": "ב-iPhone, ב-iPad וב-Windows האפליקציה כבר ב-30 שפות, בהן",
+   "nuevo": "האפליקציה ב-30 שפות ב-iPhone, ב-iPad, ב-Mac, ב-Android וב-Windows, בהן",
+   "veces": 2
+  },
+  {
+   "viejo": " ב-Android הן יגיעו עם הגרסה הבאה.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV ו-Apple TV (בטא)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA ו-Apple TV (בטא)</li>"
+  },
+  {
+   "viejo": "<li>האפליקציה ב-30 שפות ב-iPhone, ב-iPad וב-Windows</li>",
+   "nuevo": "<li>האפליקציה ב-30 שפות</li>"
+  },
+  {
+   "viejo": "<li>שליטה בקול ב-29 שפות ב-iPhone, ב-iPad וב-Windows</li>",
+   "nuevo": "<li>שליטה בקול ב-29 שפות</li>"
+  }
+ ]
+}

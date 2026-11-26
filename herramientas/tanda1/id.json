@@ -1,0 +1,47 @@
+{
+  "boton": "Unduh gratis",
+  "nota": "Pro dibeli langsung di dalam aplikasi.",
+  "cambios": [
+    {
+      "viejo": "<meta name=\"description\" content=\"Remote TV universal untuk Samsung, LG, Roku, dan Google TV di HP atau PC. Tombol, keyboard, aplikasi, input, dan menyalakan TV gratis; touchpad dengan Pro.\">",
+      "nuevo": "<meta name=\"description\" content=\"Remote TV universal untuk Samsung, LG, Roku, Google TV, dan Fire TV di HP atau PC. Tombol, keyboard, aplikasi, dan menyalakan TV gratis; touchpad dengan Pro.\">"
+    },
+    {
+      "viejo": "Google TV, dan Android TV. Remote gratis",
+      "nuevo": "Google TV, Android TV, dan Fire TV. Remote gratis"
+    },
+    {
+      "viejo": "Google TV, dan Android TV, lewat Wi-Fi",
+      "nuevo": "Google TV, Android TV, Fire TV, dan Hisense VIDAA, lewat Wi-Fi"
+    },
+    {
+      "viejo": "dalam 30 bahasa di iPhone, iPad, dan Windows",
+      "nuevo": "dalam 30 bahasa",
+      "veces": 2
+    },
+    {
+      "viejo": "dalam 29 bahasa di iPhone, iPad, dan Windows",
+      "nuevo": "dalam 29 bahasa",
+      "veces": 2
+    },
+    {
+      "viejo": "Chromecast dengan Google TV, dan lainnya). Baru ",
+      "nuevo": "Chromecast dengan Google TV, dan lainnya). Selain itu, Fire TV (Fire TV Stick, Fire TV Cube, dan TV dengan Fire TV bawaan) serta banyak TV Hisense dengan VIDAA; sebagian model VIDAA yang baru belum didukung. Baru ",
+      "veces": 2
+    },
+    {
+      "viejo": "Di iPhone, iPad, dan Windows, aplikasinya sudah tersedia dalam 30 bahasa, antara lain",
+      "nuevo": "Aplikasinya tersedia dalam 30 bahasa di iPhone, iPad, Mac, Android, dan Windows, antara lain",
+      "veces": 2
+    },
+    {
+      "viejo": " Di Android, bahasa-bahasa itu menyusul di versi berikutnya.",
+      "nuevo": "",
+      "veces": 2
+    },
+    {
+      "viejo": "Android TV, dan Apple TV (beta)</li>",
+      "nuevo": "Android TV, Fire TV, Hisense VIDAA, dan Apple TV (beta)</li>"
+    }
+  ]
+}

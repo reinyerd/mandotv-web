@@ -1,0 +1,53 @@
+{
+ "boton": "Download gratis",
+ "nota": "Pro koop je in de app.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Universele tv-afstandsbediening voor Samsung, LG, Roku en Google TV op je telefoon of pc. Toetsen, toetsenbord, apps, ingangen en aanzetten gratis; touchpad met Pro.\">",
+   "nuevo": "<meta name=\"description\" content=\"Universele tv-afstandsbediening voor Samsung, LG, Roku, Google TV en Fire TV op telefoon of pc. Toetsen, toetsenbord, apps en aanzetten gratis; touchpad in Pro.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV en Android TV. Gratis",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV en Fire TV. Gratis"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV en Android TV, via wifi",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV en Hisense VIDAA, via wifi"
+  },
+  {
+   "viejo": "de app in 30 talen op iPhone, iPad en Windows",
+   "nuevo": "de app in 30 talen"
+  },
+  {
+   "viejo": "spraakbediening in 29 talen op iPhone, iPad en Windows",
+   "nuevo": "spraakbediening in 29 talen"
+  },
+  {
+   "viejo": "Chromecast met Google TV en andere). Nieuw en in de bèta",
+   "nuevo": "Chromecast met Google TV en andere). Daarnaast werken Fire TV (Fire TV Stick, Fire TV Cube en tv’s met Fire TV) en veel Hisense-tv’s met VIDAA; sommige nieuwere VIDAA-modellen nog niet. Nieuw en in de bèta",
+   "veces": 2
+  },
+  {
+   "viejo": "Op iPhone, iPad en Windows is de app al beschikbaar in 30 talen, waaronder",
+   "nuevo": "De app is beschikbaar in 30 talen op iPhone, iPad, Mac, Android en Windows, waaronder",
+   "veces": 2
+  },
+  {
+   "viejo": " Op Android komen ze met de volgende versie.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV en Apple TV (bèta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA en Apple TV (bèta)</li>"
+  },
+  {
+   "viejo": "<li>De app in 30 talen op iPhone, iPad en Windows</li>",
+   "nuevo": "<li>De app in 30 talen</li>"
+  },
+  {
+   "viejo": "<li>Spraakbediening in 29 talen op iPhone, iPad en Windows</li>",
+   "nuevo": "<li>Spraakbediening in 29 talen</li>"
+  }
+ ]
+}

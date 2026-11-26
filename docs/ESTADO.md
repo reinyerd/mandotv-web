@@ -1,5 +1,32 @@
 # Estado de la web mandotv.app
 
+## 26-nov: tanda 1 de la evaluación de las 4 IA (LISTA, ESPERA EL SÍ DEL FUNDADOR; sin publicar)
+
+Debate: `ai-company/debates/2026-11-26-evaluacion-de-la-app-y-la-web-pantalla-por-pantall/` (09-claude-cierre.md).
+Trabajo en la rama `tanda1-web` (worktree `C:\server\htdocs\mandotv-web-tanda1`), **sin fusionar en `main` ni subir**
+hasta el sí: así ninguna otra sesión lo publica por accidente. Comparación lado a lado para el fundador:
+https://claude.ai/code/artifact/da7ed0b5-4c62-468f-848d-c3e2d68dfecd
+- **Web 2, barra**: la píldora blanca "Contacto" pasa a "Descargar" en las 1063 páginas; Contacto queda como texto.
+  Lo hace `pie_firma.py` (`barra_descargar`, corre en cada commit), así los generadores no se tocaron. En las
+  portadas `app.js` (`sincronizarBarra`) le pone la misma tienda que al botón principal.
+- **Web 1, precio**: botón "Descargar gratis" bajo las tarjetas + "Pro se compra dentro de la app." (30 idiomas,
+  `#precio-descargar`, `.precio-accion` en estilos.css, sincronizado por app.js).
+- **Web 3**: Fire TV y Hisense VIDAA ("muchos; algunos nuevos todavía no") en la FAQ de compatibilidad (visible y
+  JSON-LD), meta description, twitter:description y descripción de SoftwareApplication de las 30 portadas.
+- **Web 8**: título, H1 y descripción de las 30 páginas de Android TV empiezan por Google TV (`generar_en.py`,
+  `generar_marcas.py`, `datos_<k>.py`). `.cabecera-pagina h1 { text-wrap: balance }`.
+- **Web 4 (solo datos viejos)**: "30 idiomas" y "voz en 29 idiomas" sin "en iPhone, iPad y Windows"; FAQ de
+  idiomas con Mac y Android, sin "En Android llegan con su próxima versión". (También: ro tenía "und" en alemán
+  en una FAQ, corregido.)
+- Herramienta: `herramientas/tanda1_portadas.py` + `tanda1_textos.json` + `tanda1/<k>.json` (cambios exactos por
+  idioma, idempotente). Traducción con Sonnet y revisión por retrotraducción (7 grupos de 4 idiomas).
+- Comprobado en local (servidor con CSP): 30/30 portadas con botón de precio, Fire TV y VIDAA; 30/30 páginas de
+  Android TV con Google TV en título y H1; 0 páginas con la barra vieja; JSON-LD válido; `csp.py --verificar` OK;
+  capturas en escritorio, celular, movimiento reducido, ja y ar. hu: meta description de 165 caracteres (algo larga).
+- **Al recibir el sí**: commit en la rama, fusionar en `main`, push, borrar rama y worktree (`git cherry`), IndexNow,
+  sitemap en Search Console y Bing, pedir indexación (es, en y las páginas de Android TV primero).
+- No hecho a propósito: Web 5 (prueba gratis), Web 6 y 7 (tanda 2), "Early access" de Play, precios en el HTML.
+
 ## 26-nov: CSP y HSTS con subdominios en Cloudflare (HECHO, pedido del fundador)
 
 - HSTS: `max-age=31536000; includeSubDomains` (comprobado con curl). Preload sigue apagado.

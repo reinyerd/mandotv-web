@@ -1,0 +1,53 @@
+{
+ "boton": "Ingyenes letöltés",
+ "nota": "A Pro az alkalmazáson belül vásárolható meg.",
+ "cambios": [
+  {
+   "viejo": "<meta name=\"description\" content=\"Univerzális TV távirányító Samsunghoz, LG-hez, Rokuhoz és Google TV-hez telefonról vagy PC-ről. Gombok, billentyűzet, appok, bemenetek és bekapcsolás ingyen; érintőpad Proval.\">",
+   "nuevo": "<meta name=\"description\" content=\"TV távirányító Samsunghoz, LG-hez, Rokuhoz, Google TV-hez és Fire TV-hez telefonról vagy PC-ről. Gombok, billentyűzet, appok és bekapcsolás ingyen; érintőpad Proval.\">"
+  },
+  {
+   "viejo": "Samsung, LG, Roku, Google TV és Android TV. Ingyenes",
+   "nuevo": "Samsung, LG, Roku, Google TV, Android TV és Fire TV. Ingyenes"
+  },
+  {
+   "viejo": "Samsung Tizen, LG webOS, Roku, Google TV és Android TV, Wi-Fi-n",
+   "nuevo": "Samsung Tizen, LG webOS, Roku, Google TV, Android TV, Fire TV és Hisense VIDAA, Wi-Fi-n"
+  },
+  {
+   "viejo": "az alkalmazás 30 nyelven iPhone-on, iPaden és Windowson",
+   "nuevo": "az alkalmazás 30 nyelven"
+  },
+  {
+   "viejo": "hangvezérlés 29 nyelven iPhone-on, iPaden és Windowson",
+   "nuevo": "hangvezérlés 29 nyelven"
+  },
+  {
+   "viejo": "Chromecast Google TV-vel és mások). Új",
+   "nuevo": "Chromecast Google TV-vel és mások). Működik a Fire TV-vel is (Fire TV Stick, Fire TV Cube és Fire TV-s tévék), valamint sok VIDAA-s Hisense-szel. Néhány újabb VIDAA-modell még nem. Új",
+   "veces": 2
+  },
+  {
+   "viejo": "iPhone-on, iPaden és Windowson az alkalmazás már 30 nyelven elérhető, köztük",
+   "nuevo": "Az alkalmazás 30 nyelven elérhető iPhone-on, iPaden, Macen, Androidon és Windowson, köztük",
+   "veces": 2
+  },
+  {
+   "viejo": " Androidon a következő verzióval érkeznek.",
+   "nuevo": "",
+   "veces": 2
+  },
+  {
+   "viejo": "<li>Samsung, LG, Roku, Google TV, Android TV és Apple TV (béta)</li>",
+   "nuevo": "<li>Samsung, LG, Roku, Google TV, Android TV, Fire TV, Hisense VIDAA és Apple TV (béta)</li>"
+  },
+  {
+   "viejo": "<li>Az alkalmazás 30 nyelven iPhone-on, iPaden és Windowson</li>",
+   "nuevo": "<li>Az alkalmazás 30 nyelven</li>"
+  },
+  {
+   "viejo": "<li>Hangvezérlés 29 nyelven iPhone-on, iPaden és Windowson</li>",
+   "nuevo": "<li>Hangvezérlés 29 nyelven</li>"
+  }
+ ]
+}
