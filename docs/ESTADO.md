@@ -1,5 +1,18 @@
 # Estado de la web mandotv.app
 
+## 26-nov: CSP y HSTS con subdominios en Cloudflare (HECHO, pedido del fundador)
+
+- HSTS: `max-age=31536000; includeSubDomains` (comprobado con curl). Preload sigue apagado.
+- CSP en la regla "Cabeceras de seguridad" = `herramientas/csp.txt` (comprobado con curl: idéntica). Antes se quitó el
+  script en línea de las 82 páginas puente (`/puente.js`, conserva ?consulta y #ancla; solo rutas del mismo sitio).
+  Probado en vivo sin bloqueos: portada (video, demo, beacon), guía ja, /m/, /r/, página puente, ar. **No probado**:
+  Google Analytics después de aceptar cookies (se evitó una visita falsa); la CSP permite los dominios que Google pide
+  para GA4. Si al aceptar cookies GA no registra, mirar la consola por "Content Security Policy".
+- Si se cambia un script en línea (idioma_guardado.py, /m/, /r/): `python -I herramientas/csp.py` y copiar
+  `csp.txt` en la regla de Cloudflare antes de publicar (el pre-commit lo exige).
+- Ojo: el 26-nov otra sesión hizo commits en esta misma carpeta a la vez y se llevó archivos míos en su commit
+  (`cb67260f`). No se perdió nada, pero dos sesiones no deben trabajar a la vez en la misma carpeta.
+
 ## 25-nov (noche): todos los idiomas iguales al inglés + revisión de seguridad (PUBLICADO)
 
 Resultado: corregido el contenido de los 29 idiomas en 3 rondas (workflows `paridad-contenido-idiomas` y

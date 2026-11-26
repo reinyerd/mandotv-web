@@ -30,12 +30,15 @@ SPF (kb.porkbun.com, artículo 47).
 
 - SSL/TLS: modo **Full** (no Strict, para que una renovación atrasada del certificado de GitHub no corte la web).
   Always Use HTTPS: activado.
-- SSL/TLS > Edge Certificates > HSTS: max-age 12 meses, sin includeSubDomains ni preload al principio,
-  No-Sniff activado (`X-Content-Type-Options: nosniff`).
+- SSL/TLS > Edge Certificates > HSTS: max-age 12 meses, **includeSubDomains activado desde el 26-nov** (solo
+  existen `@` y `www`, los dos con proxy y HTTPS), preload apagado (difícil de revertir), No-Sniff activado.
 - Rules > Transform Rules > Modify Response Header, para todo el sitio:
   - `X-Frame-Options: SAMEORIGIN` (la web no usa iframes; SAMEORIGIN por si algún día se usa uno propio)
   - `Referrer-Policy: strict-origin-when-cross-origin`
   - `Permissions-Policy: camera=(), microphone=(), geolocation=()` (la web no usa ninguno, revisado el 24-nov)
+  - `Content-Security-Policy`: el valor exacto de `herramientas/csp.txt` (26-nov). Lo genera `herramientas/csp.py`
+    con los hashes de los scripts en línea; el pre-commit falla si cambia uno y la regla no se actualizó. Para
+    probar en local con la cabecera: `python -I herramientas/servidor_csp.py` (configuración `web-csp` de launch.json).
 
 ## 3. Cambio de servidores (solo con el sí del fundador)
 
