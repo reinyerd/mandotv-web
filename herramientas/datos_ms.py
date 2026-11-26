@@ -109,7 +109,7 @@ MARCAS = [
            ('guias', 'Semua panduan untuk mengawal TV dengan telefon')]),
   dict(clave='samsung', color='#3d7bff', corto='Samsung',
     titulo='Aplikasi Alat Kawalan Jauh TV Samsung di Telefon | Mando TV',
-    desc='Telefon atau PC anda sebagai alat kawalan jauh TV Samsung Tizen melalui Wi-Fi. Butang, papan kekunci, apl dan hidupkan TV percuma; pad sentuh dengan Pro. Tanpa iklan.',
+    desc='Telefon atau PC sebagai alat kawalan jauh TV Samsung Tizen melalui Wi-Fi. Butang, papan kekunci, apl dan hidupkan TV percuma; pad sentuh dengan Pro.',
     h1='Alat kawalan jauh TV Samsung sebagai aplikasi di telefon',
     intro='Mando TV ialah aplikasi alat kawalan jauh untuk TV Samsung: ia menjadikan telefon atau komputer anda alat kawalan jauh untuk TV pintar Samsung anda melalui Wi-Fi di rumah. Anda tidak perlukan akaun Samsung dan tidak perlu mendaftarkan TV.',
     compat='TV pintar Samsung dengan Tizen, model 2016 dan ke atas (siri seperti Crystal UHD, QLED, Neo QLED, The Frame dan OLED).',
@@ -213,7 +213,7 @@ MARCAS = [
 GUIAS = [
   dict(clave='lost-tv', corto='Alat kawalan jauh hilang',
     titulo='Alat Kawalan Jauh Hilang? Kawal TV dengan Telefon',
-    desc='Alat kawalan jauh hilang? Hidupkan TV dengan butang pada TV dan guna telefon anda sebagai alat kawalan jauh. Langkah untuk LG, Samsung, Roku, Android TV. Percuma.',
+    desc='Alat kawalan jauh hilang? Hidupkan TV dengan butangnya dan guna telefon sebagai alat kawalan. Langkah untuk LG, Samsung, Roku, Android TV. Percuma.',
     h1='Alat kawalan jauh hilang? Apa yang boleh anda lakukan sekarang',
     intro='Alat kawalan jauh hilang berlaku di mana-mana rumah: ia lesap tepat pada masa anda mahu menonton sesuatu. Berita baiknya, telefon anda boleh menggantikan alat kawalan jauh melalui Wi-Fi di rumah. Berikut ialah apa yang boleh anda lakukan, mengikut urutan.',
     pasos=[
@@ -361,7 +361,7 @@ GUIAS = [
     ]),
   dict(clave='samsung-lost', corto='TV Samsung tanpa alat kawalan jauh',
     titulo='Alat Kawalan Jauh Samsung Hilang? Guna Telefon Anda',
-    desc='Alat kawalan jauh Samsung hilang atau rosak? Guna telefon anda melalui Wi-Fi sebagai alat kawalan jauh untuk TV Tizen. Mudah dengan Mando TV, percuma, tanpa iklan.',
+    desc='Alat kawalan jauh Samsung hilang atau rosak? Guna telefon melalui Wi-Fi sebagai alat kawalan TV Tizen. Mudah dengan Mando TV, percuma, tiada iklan.',
     h1='TV Samsung tanpa alat kawalan jauh asal: cara guna telefon anda',
     intro='Jika alat kawalan jauh Samsung anda hilang atau tidak berfungsi lagi, anda boleh menggunakan telefon sebagai alat kawalan jauh melalui Wi-Fi. Ia berfungsi pada TV Samsung dengan Tizen, model 2016 dan ke atas.',
     pasos=[
@@ -384,7 +384,7 @@ GUIAS = [
     ]),
   dict(clave='wifi', corto='Telefon sebagai alat kawalan jauh melalui Wi-Fi',
     titulo='Guna Telefon sebagai Alat Kawalan Jauh: Kawal TV melalui Wi-Fi',
-    desc='Sambungkan telefon anda ke TV melalui Wi-Fi dan guna sebagai alat kawalan jauh untuk Samsung, LG, Roku dan Google TV. Langkah mengikut jenama dengan Mando TV. Percuma.',
+    desc='Sambungkan telefon ke TV melalui Wi-Fi dan guna sebagai alat kawalan untuk Samsung, LG, Roku, Google TV. Langkah ikut jenama dengan Mando TV. Percuma.',
     h1='Cara menyambungkan telefon anda ke TV melalui Wi-Fi sebagai alat kawalan jauh',
     intro='Anda hanya memerlukan telefon dan TV dalam Wi-Fi yang sama serta aplikasi alat kawalan jauh. Mando TV menjumpai TV anda sendiri dan berfungsi dengan Samsung, LG, Roku, Google TV dan Android TV.',
     pasos=[
@@ -407,7 +407,7 @@ GUIAS = [
     ]),
   dict(clave='pc', corto='Kawal TV dengan PC',
     titulo='Kawal TV dengan PC Windows (Percuma)',
-    desc='Guna PC Windows anda sebagai alat kawalan jauh untuk Samsung, LG, Roku atau Google TV melalui Wi-Fi. Butang, papan kekunci dan apl percuma; pintasan PC dengan Pro.',
+    desc='Guna PC Windows sebagai alat kawalan untuk Samsung, LG, Roku atau Google TV melalui Wi-Fi. Butang, papan kekunci, apl percuma; pintasan PC dengan Pro.',
     h1='Cara mengawal TV anda dengan PC Windows',
     intro='Jika anda menghabiskan hari di hadapan komputer, anda tidak perlu mencari alat kawalan jauh: Mando TV untuk Windows mengawal TV Samsung, LG, Roku, Google TV atau Android TV anda melalui Wi-Fi di rumah. Berguna untuk menukar apl, menguatkan bunyi atau menaip dalam YouTube dengan papan kekunci PC.',
     pasos=[
@@ -431,7 +431,7 @@ GUIAS = [
     ]),
   dict(clave='roku-403', corto='Aplikasi Roku tidak berfungsi',
     titulo='Aplikasi Roku Tidak Berfungsi? Betulkan Ralat 403',
-    desc='Telefon bersambung tetapi Roku tidak bertindak balas? Aktifkan "Kawalan oleh aplikasi mudah alih" dalam 5 langkah dan guna telefon anda sebagai alat kawalan jauh semula.',
+    desc='Telefon bersambung tetapi Roku tidak bertindak balas? Aktifkan "Kawalan oleh aplikasi mudah alih" dalam 5 langkah dan guna telefon sebagai kawalan.',
     h1='Aplikasi Roku tidak berfungsi: cara membetulkannya',
     intro='Jika telefon anda menjumpai Roku dan bersambung, tetapi tiada butang yang berfungsi, hampir selalu puncanya ialah satu tetapan pada Roku itu sendiri yang menyekat aplikasi alat kawalan jauh. Versi Roku yang lebih baharu lebih terhad secara lalai. Dalam menu Roku, ia boleh dibetulkan dalam seminit.',
     pasos=[
@@ -682,7 +682,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Berkuat kuasa sejak 14 November 2026
 GUIAS += [
   dict(clave='no-sub', corto='Aplikasi alat kawalan jauh tanpa langganan', fecha='2026-11-23',
     titulo='Aplikasi Alat Kawalan Jauh TV Tanpa Langganan dan Iklan',
-    desc='Bosan dengan aplikasi alat kawalan jauh yang penuh iklan atau minta langganan mingguan? Mando TV percuma dan tanpa iklan, Pro ialah pembelian sekali sahaja. Perbandingan jujur.',
+    desc='Bosan dengan aplikasi kawalan jauh penuh iklan atau langganan mingguan? Mando TV percuma, tanpa iklan, Pro pembelian sekali. Perbandingan jujur.',
     h1='Aplikasi alat kawalan jauh tanpa langganan dan tanpa iklan',
     intro='Banyak aplikasi alat kawalan jauh universal memaparkan iklan atau meminta langganan mingguan sebelum boleh digunakan. Mando TV memilih cara lain: alat kawalan jauh percuma, tanpa iklan dan tanpa akaun. Pro yang pilihan hanya dibeli sekali. Berikut perbandingannya, termasuk apa yang tidak dapat dilakukan oleh aplikasi ini.',
     pasos=[
@@ -721,7 +721,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Alternatif aplikasi Roku', fecha='2026-11-23',
     titulo='Alternatif Aplikasi Roku: Alat Kawalan Jauh Roku Mudah',
-    desc='Alternatif kepada aplikasi Roku sebagai alat kawalan jauh: Mando TV mengawal TV dan pemain Roku melalui Wi-Fi, tanpa akaun dan iklan, serta Samsung, LG dan Google TV.',
+    desc='Alternatif aplikasi Roku: Mando TV mengawal TV dan pemain Roku melalui Wi-Fi, tanpa akaun dan iklan, serta Samsung, LG dan Google TV.',
     h1='Alternatif aplikasi Roku: satu aplikasi untuk semua TV',
     intro='Aplikasi Roku rasmi boleh melakukan banyak perkara: Kedai Saluran, penghantaran, Private Listening dan alat kawalan jauh. Jika anda hanya mahukan alat kawalan jauh yang pantas, atau di rumah anda juga ada TV Samsung, LG atau Google TV, Mando TV ialah alternatif mudah yang mengawal Roku melalui Wi-Fi anda tanpa akaun.',
     pasos=[
@@ -771,7 +771,7 @@ GUIAS += [
     ]),
   dict(clave='smartthings', corto='Alternatif SmartThings', fecha='2026-11-23',
     titulo='SmartThings Tidak Berfungsi? Alternatif Mudah untuk Samsung',
-    desc='SmartThings terlalu perlahan atau bermasalah? Mando TV mengawal TV Samsung dengan Tizen terus melalui Wi-Fi. Tanpa akaun Samsung, tanpa iklan. Langkah demi langkah.',
+    desc='SmartThings terlalu perlahan? Mando TV mengawal TV Samsung Tizen terus melalui Wi-Fi. Tanpa akaun Samsung, tanpa iklan. Langkah demi langkah.',
     h1='Alternatif SmartThings untuk TV Samsung',
     intro='SmartThings ialah aplikasi Samsung untuk seluruh rumah pintar, dan alat kawalan jauhnya berjalan melalui akaun Samsung anda. Jika ia tidak lagi berfungsi atau anda mahukan penyelesaian pantas, Mando TV mengawal TV Samsung dengan Tizen, buatan 2016 dan ke atas, terus melalui Wi-Fi anda tanpa akaun.',
     pasos=[

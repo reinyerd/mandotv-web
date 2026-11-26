@@ -407,7 +407,7 @@ GUIAS = [
     ]),
   dict(clave='pc', corto='TV’yi bilgisayarla kontrol etme',
     titulo='TV’yi Windows bilgisayarla kontrol et (ücretsiz)',
-    desc='Windows bilgisayarını Samsung, LG, Roku ya da Google TV için Wi-Fi ile kumanda olarak kullan. Tuşlar, klavye ve uygulamalar ücretsiz; bilgisayar kısayolları Pro’da.',
+    desc='Windows bilgisayarını Samsung, LG, Roku ya da Google TV için Wi-Fi ile kumanda yap. Tuşlar, klavye, uygulamalar ücretsiz; kısayollar Pro’da.',
     h1='TV’yi Windows bilgisayarla nasıl kontrol edersin',
     intro='Günü bilgisayarın başında geçiriyorsan kumanda aramana gerek yok: Windows için Mando TV, Samsung, LG, Roku, Google TV ya da Android TV televizyonunu evindeki Wi-Fi üzerinden kontrol eder. Uygulamaları değiştirmek, sesi açmak ya da bilgisayarın klavyesiyle YouTube’da yazmak için çok pratik.',
     pasos=[
@@ -681,7 +681,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">14 Kasım 2026’dan beri geçerlidi
 GUIAS += [
   dict(clave='no-sub', corto='Abonelik gerektirmeyen kumanda uygulaması', fecha='2026-11-23',
     titulo='Abonelik ve reklam olmadan TV kumanda uygulaması',
-    desc='Reklamlı ya da haftalık abonelikli kumanda uygulamalarından bıktın mı? Mando TV ücretsiz ve reklamsız, Pro isteğe bağlı tek seferlik satın alım. Dürüst karşılaştırma.',
+    desc='Reklamlı ya da haftalık abonelikli kumanda uygulamalarından bıktın mı? Mando TV ücretsiz ve reklamsız, Pro isteğe bağlı. Dürüst karşılaştırma.',
     h1='Abonelik ve reklam olmadan bir kumanda uygulaması',
     intro='Birçok evrensel kumanda uygulaması reklam gösterir ya da çalışmadan önce haftalık abonelik ister. Mando TV farklı bir yol izler: kumanda ücretsizdir, reklam ve hesap yoktur. İsteğe bağlı Pro’yu yalnızca bir kez satın alırsın. İşte karşılaştırma, uygulamanın yapamadıklarıyla birlikte.',
     pasos=[
@@ -720,7 +720,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Roku uygulaması alternatifi', fecha='2026-11-23',
     titulo='Roku uygulaması alternatifi: basit Roku kumandası',
-    desc='Kumanda olarak Roku uygulamasına bir alternatif: Mando TV, Roku TV ve oynatıcıları Wi-Fi ile hesapsız ve reklamsız kontrol eder, ayrıca Samsung, LG ve Google TV’yi.',
+    desc='Roku uygulamasına alternatif: Mando TV, Roku TV ve oynatıcıları Wi-Fi ile hesapsız ve reklamsız kontrol eder; Samsung, LG ve Google TV’yi de.',
     h1='Roku uygulaması alternatifi: tüm televizyonlar için tek uygulama',
     intro='Resmî Roku uygulaması çok şey yapar: Channel Store, yayın aktarma, Private Listening ve bir kumanda. Yalnızca hızlı bir kumanda arıyorsan ya da evde bir Samsung, LG veya Google TV de varsa Mando TV, Roku’yu Wi-Fi’ın üzerinden hesapsız kontrol eden basit bir alternatiftir.',
     pasos=[

@@ -213,7 +213,7 @@ MARCAS = [
 GUIAS = [
   dict(clave='lost-tv', corto='Afstandsbediening kwijt',
     titulo='Afstandsbediening kwijt? Bedien je tv met je telefoon',
-    desc='Afstandsbediening kwijt? Zet de tv aan met de knop op het toestel en gebruik je telefoon als afstandsbediening. Stappen voor LG, Samsung, Roku en Android TV. Gratis.',
+    desc='Afstandsbediening kwijt? Zet de tv aan met de knop en gebruik je telefoon als afstandsbediening. Stappen voor LG, Samsung, Roku en Android TV.',
     h1='Afstandsbediening kwijt? Dit kun je nu doen',
     intro='Een kwijtgeraakte afstandsbediening komt in elk huishouden voor: hij is precies weg als je iets wilt kijken. Het goede nieuws: je telefoon kan via het wifi-netwerk thuis de afstandsbediening vervangen. Hier zie je wat je stap voor stap kunt doen.',
     pasos=[
@@ -239,7 +239,7 @@ GUIAS = [
     ]),
   dict(clave='lost-lg', corto='LG afstandsbediening kwijt',
     titulo='LG afstandsbediening kwijt? Gebruik je telefoon',
-    desc='Geen LG afstandsbediening? Zet de tv aan met de knop op het toestel, bevestig de melding en gebruik je telefoon via wifi. Zonder LG-account, zonder advertenties.',
+    desc='Geen LG afstandsbediening? Zet de tv aan met de knop, bevestig de melding en gebruik je telefoon via wifi. Zonder LG-account, zonder advertenties.',
     h1='LG afstandsbediening kwijt? Zo gebruik je je telefoon',
     intro='Als je je LG afstandsbediening kwijt bent of de Magic Remote niet meer werkt, vervangt je telefoon hem via wifi. Dat werkt bij LG-tv’s met webOS, dus bij bijna elke LG Smart-tv sinds 2014. Je hebt geen LG-account en geen ThinQ app nodig.',
     pasos=[
@@ -361,7 +361,7 @@ GUIAS = [
     ]),
   dict(clave='samsung-lost', corto='Samsung tv zonder afstandsbediening',
     titulo='Samsung afstandsbediening kwijt? Gebruik je telefoon',
-    desc='Samsung afstandsbediening kwijt of kapot? Gebruik je telefoon via wifi als afstandsbediening voor Tizen-tv’s. Eenvoudig met Mando TV, gratis, zonder advertenties.',
+    desc='Samsung afstandsbediening kwijt of kapot? Gebruik je telefoon via wifi als afstandsbediening voor Tizen-tv’s. Met Mando TV, gratis, geen advertenties.',
     h1='Samsung tv zonder originele afstandsbediening: zo gebruik je je telefoon',
     intro='Als je je Samsung afstandsbediening kwijt bent of hij niet meer werkt, kun je je telefoon via wifi als afstandsbediening gebruiken. Het werkt bij Samsung-tv’s met Tizen, bouwjaar 2016 en nieuwer.',
     pasos=[
@@ -682,7 +682,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laats
 GUIAS += [
   dict(clave='no-sub', corto='Afstandsbediening-app zonder abonnement', fecha='2026-11-23',
     titulo='Afstandsbediening-app voor tv zonder abonnement en advertenties',
-    desc='Genoeg van afstandsbediening-apps met advertenties of een weekabonnement? Mando TV is gratis en zonder advertenties, Pro is een optionele eenmalige aankoop. Eerlijke vergelijking.',
+    desc='Genoeg van afstandsbediening-apps met advertenties of abonnement? Mando TV is gratis en zonder advertenties, Pro is optioneel. Eerlijke vergelijking.',
     h1='Een afstandsbediening-app zonder abonnement en zonder advertenties',
     intro='Veel universele afstandsbedieningen tonen advertenties of vragen een weekabonnement voordat ze werken. Mando TV kiest een andere weg: de afstandsbediening is gratis, er zijn geen advertenties en geen account. Het optionele Pro koop je maar één keer. Hier de vergelijking, ook met wat de app niet kan.',
     pasos=[
@@ -721,7 +721,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Alternatief voor de Roku app', fecha='2026-11-23',
     titulo='Alternatief voor de Roku app: eenvoudige Roku-afstandsbediening',
-    desc='Een alternatief voor de Roku app als afstandsbediening: Mando TV bedient Roku-tv’s en -spelers via wifi, zonder account en advertenties, plus Samsung, LG en Google TV.',
+    desc='Alternatief voor de Roku app: Mando TV bedient Roku-tv’s en -spelers via wifi, zonder account en advertenties, plus Samsung, LG en Google TV.',
     h1='Alternatief voor de Roku app: één voor alle tv’s',
     intro='De officiële Roku app kan veel: Channel Store, casten, Private Listening en een afstandsbediening. Zoek je alleen een snelle afstandsbediening of heb je thuis ook een Samsung-, LG- of Google TV-tv, dan is Mando TV een eenvoudig alternatief dat Roku via je wifi bedient, zonder account.',
     pasos=[
@@ -746,7 +746,7 @@ GUIAS += [
     ]),
   dict(clave='lg-thinq', corto='Alternatief voor de LG ThinQ app', fecha='2026-11-23',
     titulo='Alternatief voor de LG ThinQ app: LG-afstandsbediening zonder account',
-    desc='Zoek je een alternatief voor de LG ThinQ app, alleen als afstandsbediening? Mando TV bedient LG-tv’s met webOS via wifi, zonder LG-account en zonder advertenties.',
+    desc='Zoek je een LG ThinQ-alternatief, alleen als afstandsbediening? Mando TV bedient LG-tv’s met webOS via wifi, zonder LG-account en advertenties.',
     h1='Alternatief voor de LG ThinQ app voor je LG-tv',
     intro='LG ThinQ is de officiële app van LG, bedoeld voor het hele slimme huis: huishoudapparaten, de tv en meer. Wil je alleen een eenvoudige afstandsbediening voor je LG-tv, dan doet Mando TV precies dat via je wifi thuis, zonder dat je een LG-account hoeft aan te maken en zonder advertenties.',
     pasos=[

@@ -407,7 +407,7 @@ GUIAS = [
     ]),
   dict(clave='pc', corto='Tévé vezérlése számítógéppel',
     titulo='Tévé vezérlése Windows-számítógéppel (ingyen)',
-    desc='Használd a Windows-számítógépedet távirányítóként Samsung, LG, Roku vagy Google TV esetén Wi-Fi-n. Gombok, billentyűzet és appok ingyen; PC-s billentyűparancsok Proval.',
+    desc='Használd a Windows-gépedet távirányítóként Samsung, LG, Roku vagy Google TV-hez Wi-Fi-n. Gombok, billentyűzet és appok ingyen; PC-s parancsok Proval.',
     h1='Így vezérelheted a tévédet Windows-számítógéppel',
     intro='Ha a napot a számítógép előtt töltöd, nem kell a távirányítót keresned: a Mando TV Windowsra az otthoni Wi-Fi-n keresztül vezérli a Samsung, LG, Roku, Google TV vagy Android TV tévédet. Kényelmes appváltáshoz, hangerőállításhoz, vagy ha a YouTube-on a számítógép billentyűzetével szeretnél gépelni.',
     pasos=[
@@ -682,7 +682,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Hatályos 2026. november 14-től. Ut
 GUIAS += [
   dict(clave='no-sub', corto='Távirányító alkalmazás előfizetés nélkül', fecha='2026-11-23',
     titulo='Tévé távirányító alkalmazás előfizetés és reklámok nélkül',
-    desc='Elegged van a reklámos vagy heti előfizetéses távirányító appokból? A Mando TV ingyenes és reklámmentes, a Pro opcionális egyszeri vásárlás. Őszinte összehasonlítás.',
+    desc='Elegged van a reklámos vagy előfizetéses távirányító appokból? A Mando TV ingyenes, reklámmentes, a Pro egyszeri vásárlás. Őszinte összehasonlítás.',
     h1='Távirányító alkalmazás előfizetés és reklámok nélkül',
     intro='Sok univerzális távirányító reklámot mutat, vagy heti előfizetést kér, mielőtt működne. A Mando TV más úton jár: a távirányító ingyenes, nincs reklám és nincs fiók. Az opcionális Prót csak egyszer veszed meg. Itt az összehasonlítás, azzal együtt is, amit az alkalmazás nem tud.',
     pasos=[
@@ -721,7 +721,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='A Roku alkalmazás alternatívája', fecha='2026-11-23',
     titulo='A Roku alkalmazás alternatívája: egyszerű Roku távirányító',
-    desc='A Roku alkalmazás alternatívája távirányítóként: a Mando TV Wi-Fi-n vezérli a Roku TV-ket és lejátszókat, fiók és reklámok nélkül, valamint a Samsungot, LG-t és Google TV-t.',
+    desc='A Roku alkalmazás alternatívája: a Mando TV Wi-Fi-n vezérli a Roku TV-ket és lejátszókat, fiók és reklám nélkül, Samsunggal, LG-vel és Google TV-vel.',
     h1='A Roku alkalmazás alternatívája: egy minden tévéhez',
     intro='A hivatalos Roku alkalmazás sokat tud: Channel Store, átküldés, privát hallgatás és távirányító. Ha csak egy gyors távirányítót keresel, vagy otthon Samsung, LG vagy Google TV tévéd is van, a Mando TV egyszerű alternatíva, amely a Wi-Fi-n keresztül, fiók nélkül vezérli a Rokut.',
     pasos=[
@@ -821,7 +821,7 @@ GUIAS += [
     ]),
   dict(clave='windows', corto='Távirányító Windows-számítógéphez', fecha='2026-11-23',
     titulo='Távirányító alkalmazás Windowsra: tévé vezérlése a számítógépről',
-    desc='Vezérelj Samsung, LG, Roku, Google TV vagy Fire TV tévét Windows-számítógépről a Mando TV-vel: billentyűparancsok, mini távirányító és Wi-Fi. A Microsoft Store-ban.',
+    desc='Vezérelj Samsung, LG, Roku, Google TV vagy Fire TV tévét Windows PC-ről a Mando TV-vel: billentyűparancsok, mini távirányító, Wi-Fi. Microsoft Store.',
     h1='Távirányító alkalmazás Windows-számítógéphez',
     intro='A Mando TV-nek van Windows-alkalmazása, amely az otthoni hálózaton keresztül a számítógépedet vagy laptopodat a tévé távirányítójává alakítja. Gépelj a tévén az igazi billentyűzeteddel, hagyj munka közben egy kis távirányító ablakot az előtérben, és vezérelj Samsungot, LG-t, Rokut, Google TV-t vagy Fire TV-t ugyanazzal az alkalmazással.',
     pasos=[

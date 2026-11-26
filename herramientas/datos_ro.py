@@ -682,7 +682,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">În vigoare din 14 noiembrie 2026. U
 GUIAS += [
   dict(clave='no-sub', corto='Aplicație telecomandă fără abonament', fecha='2026-11-23',
     titulo='Aplicație de telecomandă pentru TV fără abonament și reclame',
-    desc='Te-ai săturat de aplicațiile de telecomandă cu reclame sau abonament săptămânal? Mando TV este gratuită și fără reclame, Pro este o achiziție unică opțională. Comparație cinstită.',
+    desc='Te-ai săturat de aplicații de telecomandă cu reclame sau abonament? Mando TV e gratuită, fără reclame, Pro e opțional. Comparație cinstită.',
     h1='O aplicație de telecomandă fără abonament și fără reclame',
     intro='Multe telecomenzi universale afișează reclame sau cer un abonament săptămânal înainte să funcționeze. Mando TV merge pe alt drum: telecomanda este gratuită, nu există reclame și nici cont. Pro opțional îl cumperi o singură dată. Iată comparația, inclusiv cu ceea ce aplicația nu poate face.',
     pasos=[
@@ -721,7 +721,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Alternativă la aplicația Roku', fecha='2026-11-23',
     titulo='Alternativă la aplicația Roku: telecomandă Roku simplă',
-    desc='O alternativă la aplicația Roku ca telecomandă: Mando TV controlează televizoare și playere Roku prin Wi-Fi, fără cont și reclame, plus Samsung, LG și Google TV.',
+    desc='Alternativă la aplicația Roku: Mando TV controlează televizoare și playere Roku prin Wi-Fi, fără cont și reclame, plus Samsung, LG și Google TV.',
     h1='Alternativă la aplicația Roku: una pentru toate televizoarele',
     intro='Aplicația oficială Roku poate multe: Channel Store, casting, Private Listening și o telecomandă. Dacă îți trebuie doar o telecomandă rapidă sau ai acasă și un televizor Samsung, LG sau Google TV, Mando TV este o alternativă simplă, care controlează Roku prin Wi-Fi-ul tău, fără cont.',
     pasos=[

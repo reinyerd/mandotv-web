@@ -109,7 +109,7 @@ MARCAS = [
            ('guias', 'Kaikki oppaat television ohjaamiseen puhelimella')]),
   dict(clave='samsung', color='#3d7bff', corto='Samsung',
     titulo='Samsung TV -kaukosäädinsovellus puhelimeen | Mando TV',
-    desc='Puhelimesi tai tietokoneesi Samsung TV -kaukosäätimenä Tizenille wifin kautta. Painikkeet, näppäimistö, sovellukset ja käynnistys ilmaiseksi; kosketuslevy Prolla. Ei mainoksia.',
+    desc='Puhelimesi tai tietokoneesi Samsung TV -kaukosäätimenä Tizenille wifillä. Painikkeet, näppäimistö, sovellukset ilmaiseksi; kosketuslevy Prolla.',
     h1='Samsung TV -kaukosäädin sovelluksena puhelimeen',
     intro='Mando TV on Samsung-televisioiden kaukosäädinsovellus: se muuttaa puhelimesi tai tietokoneesi kotisi wifin kautta Samsung-älytelevisiosi kaukosäätimeksi. Et tarvitse Samsung-tiliä etkä tarvitse rekisteröidä televisiota.',
     compat='Samsung-älytelevisiot, joissa on Tizen, valmistusvuosi 2016 tai uudempi (sarjat kuten Crystal UHD, QLED, Neo QLED, The Frame ja OLED).',
@@ -213,7 +213,7 @@ MARCAS = [
 GUIAS = [
   dict(clave='lost-tv', corto='Kaukosäädin hukassa',
     titulo='Kaukosäädin hukassa? Ohjaa televisiota puhelimella',
-    desc='Kaukosäädin hukassa? Käynnistä televisio laitteen painikkeella ja käytä puhelinta kaukosäätimenä. Vaiheet LG:lle, Samsungille, Rokulle ja Android TV:lle. Ilmaiseksi.',
+    desc='Kaukosäädin hukassa? Käynnistä TV laitteen painikkeella ja käytä puhelinta kaukosäätimenä. Ohjeet LG:lle, Samsungille, Rokulle ja Android TV:lle.',
     h1='Kaukosäädin hukassa? Tässä mitä voit tehdä nyt',
     intro='Kaukosäädin katoaa jokaisessa kodissa: se on poissa juuri silloin, kun haluat katsoa jotain. Hyvä uutinen: puhelimesi voi korvata kaukosäätimen kotisi wifin kautta. Tässä järjestyksessä, mitä voit tehdä.',
     pasos=[
@@ -407,7 +407,7 @@ GUIAS = [
     ]),
   dict(clave='pc', corto='Television ohjaus tietokoneella',
     titulo='Ohjaa televisiota Windows-tietokoneella (ilmaiseksi)',
-    desc='Käytä Windows-tietokonettasi kaukosäätimenä Samsungille, LG:lle, Rokulle tai Google TV:lle wifin kautta. Painikkeet, näppäimistö ja sovellukset ilmaiseksi; PC-pikanäppäimet Prolla.',
+    desc='Käytä Windows-tietokonetta kaukosäätimenä Samsungille, LG:lle, Rokulle tai Google TV:lle wifillä. Painikkeet, näppäimistö ja sovellukset ilmaiseksi.',
     h1='Näin ohjaat televisiotasi Windows-tietokoneella',
     intro='Jos vietät päivän tietokoneen ääressä, sinun ei tarvitse etsiä kaukosäädintä: Mando TV Windowsille ohjaa Samsung-, LG-, Roku-, Google TV- tai Android TV -televisiotasi kotisi wifin kautta. Kätevä sovellusten vaihtoon, äänen kovemmalle laittoon tai YouTubessa kirjoittamiseen tietokoneen näppäimistöllä.',
     pasos=[
@@ -721,7 +721,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Roku-sovelluksen vaihtoehto', fecha='2026-11-23',
     titulo='Roku-sovelluksen vaihtoehto: helppo Roku-kaukosäädin',
-    desc='Vaihtoehto Roku-sovellukselle kaukosäätimenä: Mando TV ohjaa Roku-televisioita ja -soittimia wifin kautta, ilman tiliä ja mainoksia, lisäksi Samsungia, LG:tä ja Google TV:tä.',
+    desc='Vaihtoehto Roku-sovellukselle: Mando TV ohjaa Roku-televisioita ja -soittimia wifillä ilman tiliä ja mainoksia, sekä Samsungia, LG:tä ja Google TV:tä.',
     h1='Roku-sovelluksen vaihtoehto: yksi kaikille televisioille',
     intro='Virallinen Roku-sovellus osaa paljon: Channel Store, lähetys, yksityinen kuuntelu ja kaukosäädin. Jos etsit vain nopeaa kaukosäädintä tai kotonasi on myös Samsung-, LG- tai Google TV -televisio, Mando TV on helppo vaihtoehto, joka ohjaa Rokua wifisi kautta ilman tiliä.',
     pasos=[
@@ -771,7 +771,7 @@ GUIAS += [
     ]),
   dict(clave='smartthings', corto='SmartThingsin vaihtoehto', fecha='2026-11-23',
     titulo='SmartThings ei toimi? Helppo vaihtoehto Samsungille',
-    desc='SmartThings liian hidas tai viallinen? Mando TV ohjaa Tizen-pohjaisia Samsung-televisioita suoraan wifin kautta. Ei Samsung-tiliä, ei mainoksia. Vaihe vaiheelta.',
+    desc='SmartThings hidas tai rikki? Mando TV ohjaa Tizen-pohjaisia Samsung-televisioita suoraan wifillä. Ei Samsung-tiliä, ei mainoksia. Askel askeleelta.',
     h1='SmartThingsin vaihtoehto Samsung-televisioille',
     intro='SmartThings on Samsungin sovellus koko älykodille, ja sen kaukosäädin kulkee Samsung-tilisi kautta. Jos se ei enää toimi tai etsit nopeaa ratkaisua, Mando TV ohjaa Tizen-pohjaisia Samsung-televisioita, valmistusvuosi 2016 tai uudempi, suoraan wifisi kautta ilman tiliä.',
     pasos=[
@@ -872,7 +872,7 @@ GUIAS += [
     ]),
   dict(clave='firetv', corto='Fire TV -kaukosäädin', fecha='2026-11-23',
     titulo='Fire TV -kaukosäädinsovellus puhelimelle ja tietokoneelle',
-    desc='Fire TV -kaukosäädin puhelimessa: ohjaa Fire TV Stickiä, Fire TV Cubea tai Fire TV -televisiota wifin kautta 4-numeroisella PIN-koodilla. Ilman Amazon-sovellusta.',
+    desc='Fire TV -kaukosäädin puhelimessa: ohjaa Fire TV Stickiä, Cubea tai Fire TV -televisiota wifillä 4-numeroisella PIN-koodilla. Ilman Amazon-sovellusta.',
     h1='Fire TV -kaukosäädin puhelimelle tai tietokoneelle',
     intro='Jos Fire TV -kaukosäädin on hukassa tai paristot ovat tyhjät, Mando TV ohjaa Fire TV Stickiä, Fire TV Cubea tai televisiota, jossa on sisäänrakennettu Fire TV, wifin kautta. Pariliitos tehdään 4-numeroisella PIN-koodilla. Fire TV on uusi Mando TV:ssä, joten päivitä ensin sovellus.',
     pasos=[

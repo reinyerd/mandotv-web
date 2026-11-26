@@ -722,7 +722,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Alternativ til Roku-appen', fecha='2026-11-23',
     titulo='Alternativ til Roku-appen: enkel Roku-fjernkontroll',
-    desc='Et alternativ til Roku-appen som fjernkontroll: Mando TV styrer Roku TV-er og -spillere via Wi-Fi, uten konto og reklame, i tillegg til Samsung, LG og Google TV.',
+    desc='Alternativ til Roku-appen: Mando TV styrer Roku-TV-er og -spillere via Wi-Fi, uten konto og reklame, pluss Samsung, LG og Google TV.',
     h1='Alternativ til Roku-appen: én for alle TV-er',
     intro='Den offisielle Roku-appen kan mye: Channel Store, casting, privat lytting og en fjernkontroll. Hvis du bare vil ha en rask fjernkontroll eller også har en Samsung-, LG- eller Google TV hjemme, er Mando TV et enkelt alternativ som styrer Roku via Wi-Fi-nettverket ditt uten konto.',
     pasos=[

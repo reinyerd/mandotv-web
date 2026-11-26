@@ -55,6 +55,7 @@ exactamente esas 35 páginas.
   con el texto alemán en `app_de.arb` y usar el valor de esa clave en el idioma (con grep; no leer el archivo entero).
 - Contenido universal: ejemplos y búsquedas que usa la mayoría (música relajante, documentales, fútbol, películas),
   nunca religión ni gustos personales.
+- Meta descriptions de 150 caracteres o menos y títulos de 65 o menos, sin cortar frases.
 - Signos de puntuación propios del idioma (comillas „“ en alemán, « » en francés, 「」 en japonés, etc.).
 
 ## Revisar antes de entregar
@@ -77,3 +78,7 @@ cuando junta todos los idiomas, porque esos scripts tocan las páginas de todos 
 3. Imágenes `social-<k>.png` (`generar_social.py` y captura con Edge sin ventana).
 4. Revisar en el navegador: escritorio, celular, efectos de Windows apagados, árabe y hebreo de derecha a izquierda.
 5. `llms.txt`, sitemap (lo hace `versionar.py`), IndexNow, Search Console y Bing.
+6. Antes de publicar cualquier cambio de páginas (idioma nuevo, guía nueva o textos): `python -I herramientas/escaneo_seo.py`
+   (con `--vivo` después de publicar). No debe listar "título largo" ni "meta description larga" (sale con código 1)
+   ni problemas nuevos de título, H1, canónica, hreflang o datos estructurados. Al escribir: descripción de 150
+   caracteres o menos y título de 65 o menos (`--estricto` lo comprueba).

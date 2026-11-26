@@ -109,7 +109,7 @@ MARCAS = [
            ('guias', 'Tất cả hướng dẫn điều khiển TV bằng điện thoại')]),
   dict(clave='samsung', color='#3d7bff', corto='Samsung',
     titulo='Ứng dụng điều khiển TV Samsung trên điện thoại | Mando TV',
-    desc='Biến điện thoại hoặc máy tính thành điều khiển TV Samsung Tizen qua Wi-Fi. Phím bấm, bàn phím, ứng dụng và bật TV miễn phí; touchpad có trong Pro. Không quảng cáo.',
+    desc='Biến điện thoại hoặc máy tính thành điều khiển TV Samsung Tizen qua Wi-Fi. Phím bấm, bàn phím, ứng dụng, bật TV miễn phí; touchpad trong Pro.',
     h1='Ứng dụng điều khiển TV Samsung trên điện thoại',
     intro='Mando TV là ứng dụng điều khiển dành cho TV Samsung: ứng dụng biến điện thoại hoặc máy tính của bạn thành điều khiển cho Smart TV Samsung qua mạng Wi-Fi trong nhà. Bạn không cần tài khoản Samsung và cũng không phải đăng ký TV.',
     compat='Smart TV Samsung chạy Tizen, sản xuất từ 2016 trở lên (các dòng như Crystal UHD, QLED, Neo QLED, The Frame và OLED).',
@@ -407,7 +407,7 @@ GUIAS = [
     ]),
   dict(clave='pc', corto='Điều khiển TV bằng máy tính',
     titulo='Điều khiển TV bằng máy tính Windows (miễn phí)',
-    desc='Dùng máy tính Windows làm điều khiển cho TV Samsung, LG, Roku hoặc Google TV qua Wi-Fi. Phím bấm, bàn phím và ứng dụng miễn phí; phím tắt trên máy tính có trong Pro.',
+    desc='Dùng máy tính Windows làm điều khiển cho TV Samsung, LG, Roku hoặc Google TV qua Wi-Fi. Phím bấm, bàn phím, ứng dụng miễn phí; phím tắt trong Pro.',
     h1='Cách điều khiển TV bằng máy tính Windows',
     intro='Nếu bạn dành cả ngày trước máy tính, bạn không cần đi tìm điều khiển: Mando TV cho Windows điều khiển TV Samsung, LG, Roku, Google TV hoặc Android TV qua Wi-Fi trong nhà. Rất tiện để đổi ứng dụng, chỉnh âm lượng hoặc gõ tìm kiếm trên YouTube bằng bàn phím máy tính.',
     pasos=[
@@ -616,7 +616,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Tìm TV của bạn</h2>
 
 PRIVACIDAD = dict(
   titulo='Chính sách quyền riêng tư | Mando TV',
-  desc='Mando TV không thu thập dữ liệu cá nhân: không tài khoản, không quảng cáo, không trình theo dõi. Ứng dụng chỉ trò chuyện với TV của bạn trong mạng Wi-Fi của bạn.',
+  desc='Mando TV không thu thập dữ liệu cá nhân: không tài khoản, quảng cáo hay trình theo dõi. Ứng dụng chỉ nói chuyện với TV của bạn trong Wi-Fi của bạn.',
   h1='Quyền riêng tư',
   intro='Nói ngắn gọn: Mando TV không thu thập dữ liệu của bạn. Không có tài khoản, không quảng cáo, không trình theo dõi và không có máy chủ riêng nào lưu lại những gì bạn làm.',
 )
@@ -721,7 +721,7 @@ GUIAS += [
     ]),
   dict(clave='roku-app-alt', corto='Lựa chọn thay thế ứng dụng Roku', fecha='2026-11-23',
     titulo='Lựa chọn thay thế ứng dụng Roku: điều khiển Roku đơn giản',
-    desc='Lựa chọn thay thế ứng dụng Roku làm điều khiển: Mando TV điều khiển Roku TV và Roku Player qua Wi-Fi, không tài khoản, không quảng cáo, cùng cả Samsung, LG và Google TV.',
+    desc='Thay thế ứng dụng Roku: Mando TV điều khiển Roku TV và Roku Player qua Wi-Fi, không tài khoản, không quảng cáo, cùng Samsung, LG và Google TV.',
     h1='Lựa chọn thay thế ứng dụng Roku: một ứng dụng cho mọi TV',
     intro='Ứng dụng Roku chính thức làm được nhiều việc: Channel Store, truyền màn hình, nghe riêng và cả điều khiển. Nếu bạn chỉ cần một chiếc điều khiển nhanh, hoặc trong nhà còn có TV Samsung, LG hay Google TV, Mando TV là lựa chọn thay thế đơn giản, điều khiển Roku qua Wi-Fi mà không cần tài khoản.',
     pasos=[
