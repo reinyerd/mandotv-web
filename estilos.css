@@ -127,7 +127,7 @@ a.oculto[href="#contenido"]:focus { position: fixed; z-index: 1000; top: calc(en
 .vitrina-barras { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; min-width: 60px; }
 .vitrina-barras i { position: relative; height: 4px; border-radius: 4px; overflow: hidden; background: rgba(13, 15, 23, .2); }
 .vitrina-barras i::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: #0d0f17; transform: scaleX(0); transform-origin: left; }
-.vitrina-barras i.vista::after { transform: scaleX(1); }
+.vitrina-barras i.pasada::after { transform: scaleX(1); }
 .vitrina-barras i.activa::after { animation: progreso var(--vuelta, 3500ms) linear forwards; }
 .vitrina.en-pausa .vitrina-barras i.activa::after { animation-play-state: paused; }
 .vitrina.quieta .vitrina-barras i.activa::after { animation: none; transform: scaleX(1); }
@@ -1005,7 +1005,7 @@ summary::after { color: var(--tenue); font-weight: 300; }
 .vitrina-barras i:hover { opacity: .9; }
 .vitrina-barras i.activa { width: 36px; opacity: 1; }
 .vitrina-barras i::after { background: rgba(255, 255, 255, .55); }
-.vitrina-barras i.vista::after { transform: scaleX(0); }
+.vitrina-barras i.pasada::after { transform: scaleX(0); }
 .vitrina { gap: 16px; }
 .vitrina-cuenta { min-width: 0; }
 

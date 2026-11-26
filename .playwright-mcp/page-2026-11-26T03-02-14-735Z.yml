@@ -1,0 +1,536 @@
+- generic [active] [ref=f2e1]:
+  - link "Saltar al contenido" [ref=f2e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - generic [ref=f2e4]:
+    - banner [ref=f2e5]:
+      - link "Mando TV, inicio" [ref=f2e6] [cursor=pointer]:
+        - /url: /es/
+        - img "Mando TV" [ref=f2e7]
+        - text: Mando TV
+      - navigation "Principal" [ref=f2e8]:
+        - 'button "Idioma: Español" [ref=f2e10] [cursor=pointer]':
+          - generic [aria-hidden] [ref=f2e14]: ES
+        - link "Qué hace" [ref=f2e15] [cursor=pointer]:
+          - /url: "#funciones"
+        - link "Precio" [ref=f2e16] [cursor=pointer]:
+          - /url: "#precio"
+        - link "Ayuda" [ref=f2e17] [cursor=pointer]:
+          - /url: /es/soporte.html
+        - link "Contacto" [ref=f2e18] [cursor=pointer]:
+          - /url: "#contacto"
+    - main [ref=f2e19]:
+      - generic [ref=f2e20]:
+        - generic [ref=f2e21]:
+          - paragraph [aria-hidden]: MANDO
+          - img "La app Mando TV abierta en un teléfono, con la cruceta, el botón OK y los botones de volumen y canal." [ref=f2e23]:
+            - generic [ref=f2e25]:
+              - generic [ref=f2e26]: 9:41
+              - generic [ref=f2e41]: Apagar
+              - generic [ref=f2e60]:
+                - generic [ref=f2e62]: TV Samsung
+                - generic [ref=f2e63]:
+                  - generic [ref=f2e64]: Moderno
+                  - generic [ref=f2e65]: Clásico
+              - generic [ref=f2e66]:
+                - generic [ref=f2e67]: Pro
+                - generic [ref=f2e70]: YouTube
+                - generic [ref=f2e73]: Ir y volver
+                - generic [ref=f2e76]: Rutina
+              - generic [ref=f2e79]:
+                - generic [ref=f2e80] [cursor=pointer]: Inicio / Menú
+                - generic [ref=f2e84] [cursor=pointer]: Atrás
+                - generic [ref=f2e88] [cursor=pointer]: Ajustes
+                - generic [ref=f2e92] [cursor=pointer]: Entradas
+              - generic [ref=f2e96] [cursor=pointer]: OK
+              - generic [ref=f2e110]:
+                - generic [ref=f2e111] [cursor=pointer]: VOL
+                - generic [ref=f2e119]:
+                  - generic [ref=f2e120] [cursor=pointer]: Silencio
+                  - generic [ref=f2e124] [cursor=pointer]: Salir
+                - generic [ref=f2e128] [cursor=pointer]: CH
+              - generic [ref=f2e136] [cursor=pointer]: Canales
+              - generic [ref=f2e140]:
+                - generic [ref=f2e141] [cursor=pointer]: Control
+                - generic [ref=f2e145] [cursor=pointer]: Touchpad
+                - generic [ref=f2e149] [cursor=pointer]: Teclado
+                - generic [ref=f2e153] [cursor=pointer]: Apps
+          - generic [ref=f2e158]:
+            - paragraph [aria-hidden] [ref=f2e159]:
+              - generic [ref=f2e160]: Samsung
+            - generic [aria-hidden] [ref=f2e161]:
+              - generic [ref=f2e162] [cursor=pointer]
+              - generic [ref=f2e163] [cursor=pointer]
+              - generic [ref=f2e164] [cursor=pointer]
+              - generic [ref=f2e165] [cursor=pointer]
+        - generic [ref=f2e166]:
+          - paragraph [ref=f2e167]: Para iPhone, iPad, Mac, Android y Windows
+          - heading "Control remoto universal para todos tus TV" [level=1] [ref=f2e168]
+          - paragraph [ref=f2e169]: Maneja tu Samsung, LG, Roku, Google TV o Android TV desde el celular o el computador, por WiFi.
+          - paragraph [ref=f2e170]:
+            - strong [ref=f2e171]: Gratis
+            - generic [ref=f2e172]: Pro con pago único, sin suscripción
+          - generic [ref=f2e173]:
+            - link "Descargar gratis para Windows" [ref=f2e174] [cursor=pointer]:
+              - /url: https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct
+            - link "Ver qué hace" [ref=f2e178] [cursor=pointer]:
+              - /url: "#funciones"
+          - list "Disponible en las tiendas" [ref=f2e179]:
+            - listitem [ref=f2e180]:
+              - link "Descárgalo en App Store" [ref=f2e181] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/id6834927348
+                - generic [ref=f2e184]:
+                  - generic [ref=f2e185]: Descárgalo en
+                  - text: App Store
+            - listitem [ref=f2e186]:
+              - link "Prueba anticipada en Google Play" [ref=f2e187] [cursor=pointer]:
+                - /url: "#android"
+                - generic [ref=f2e193]:
+                  - generic [ref=f2e194]: Prueba anticipada en
+                  - text: Google Play
+            - listitem [ref=f2e195]:
+              - link "Descárgalo en Microsoft Store" [ref=f2e196] [cursor=pointer]:
+                - /url: https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct
+                - generic [ref=f2e202]:
+                  - generic [ref=f2e203]: Descárgalo en
+                  - text: Microsoft Store
+          - list [ref=f2e204]:
+            - listitem [ref=f2e205]: Sin anuncios
+            - listitem [ref=f2e206]: Sin cuentas
+            - listitem [ref=f2e207]: Sin rastreadores
+            - listitem [ref=f2e208]: Pro de pago único
+  - generic [ref=f2e210]:
+    - list "Marcas de TV compatibles" [ref=f2e211]:
+      - listitem [ref=f2e212]: Samsung
+      - listitem [ref=f2e213]: LG
+      - listitem [ref=f2e214]: Roku
+      - listitem [ref=f2e215]: Google TV
+      - listitem [ref=f2e216]: Android TV
+      - listitem [ref=f2e217]: Sony
+      - listitem [ref=f2e218]: Philips
+      - listitem [ref=f2e219]: TCL
+      - listitem [ref=f2e220]: Hisense
+      - listitem [ref=f2e221]: Xiaomi
+      - listitem [ref=f2e222]: Sharp
+      - listitem [ref=f2e223]: Toshiba
+      - listitem [ref=f2e224]: Panasonic
+      - listitem [ref=f2e225]:
+        - text: Apple TV
+        - generic [ref=f2e226]: beta
+      - listitem [ref=f2e227]:
+        - text: Vizio
+        - generic [ref=f2e228]: beta
+    - list [aria-hidden] [ref=f2e229]:
+      - listitem [ref=f2e230]: Samsung
+      - listitem [ref=f2e231]: LG
+      - listitem [ref=f2e232]: Roku
+      - listitem [ref=f2e233]: Google TV
+      - listitem [ref=f2e234]: Android TV
+      - listitem [ref=f2e235]: Sony
+      - listitem [ref=f2e236]: Philips
+      - listitem [ref=f2e237]: TCL
+      - listitem [ref=f2e238]: Hisense
+      - listitem [ref=f2e239]: Xiaomi
+      - listitem [ref=f2e240]: Sharp
+      - listitem [ref=f2e241]: Toshiba
+      - listitem [ref=f2e242]: Panasonic
+      - listitem [ref=f2e243]:
+        - text: Apple TV
+        - generic [ref=f2e244]: beta
+      - listitem [ref=f2e245]:
+        - text: Vizio
+        - generic [ref=f2e246]: beta
+  - region [ref=f2e248]:
+    - heading "Míralo en acción" [level=2] [ref=f2e249]
+    - paragraph [ref=f2e250]: Mira Mando TV en 25 segundos y después el control paso a paso.
+    - figure [ref=f2e251]:
+      - button "Reproducir · 0:25" [ref=f2e254] [cursor=pointer]
+      - generic [ref=f2e258]:
+        - text: "Mando TV en 25 segundos, sin sonido: volumen, flechas y OK, escribir en el TV, entradas, las marcas con las que funciona y qué incluyen Gratis y Pro."
+        - generic [ref=f2e259]:
+          - text: ·
+          - link "YouTube" [ref=f2e260] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=Q_xBRIiufgk
+    - heading "El control, paso a paso" [level=3] [ref=f2e261]
+    - paragraph [ref=f2e262]: "Este es el control de Mando TV en Windows: el volumen, las flechas y OK, y las entradas de tu TV. En iPhone y iPad es el mismo control."
+    - generic [ref=f2e263]:
+      - figure [ref=f2e264]:
+        - 'img "Demostración animada del control de Mando TV en Windows: el volumen sube de 9 a 11 y vuelve a bajar, se pulsan las flechas y OK, y se abre la lista de Entradas para elegir HDMI 1." [ref=f2e265]':
+          - generic [aria-hidden] [ref=f2e266]:
+            - generic [ref=f2e267]:
+              - generic [ref=f2e268]: LG TV
+              - generic [ref=f2e270]:
+                - generic [ref=f2e271]: Moderno
+                - generic [ref=f2e272]: Clásico
+            - generic [ref=f2e273]:
+              - generic [ref=f2e274]: Inicio / Menú
+              - generic [ref=f2e277]: Atrás
+              - generic [ref=f2e280]: Ajustes
+              - generic [ref=f2e283]: Entradas
+            - generic [ref=f2e286]: OK
+            - generic [ref=f2e300]:
+              - generic [ref=f2e301]: VOL
+              - generic [ref=f2e309]:
+                - generic [ref=f2e310]: Silencio
+                - generic [ref=f2e313]: "9"
+                - generic [ref=f2e314]: Salir
+              - generic [ref=f2e317]: CH
+            - generic [ref=f2e325]:
+              - strong [ref=f2e327]: Entradas
+              - list [ref=f2e328]:
+                - listitem [ref=f2e329]:
+                  - generic [ref=f2e332]: TV en vivo
+                - listitem [ref=f2e333]:
+                  - generic [ref=f2e336]: HDMI 1
+                - listitem [ref=f2e337]:
+                  - generic [ref=f2e340]: HDMI 2
+                - listitem [ref=f2e341]:
+                  - generic [ref=f2e344]: HDMI 3
+                - listitem [ref=f2e345]:
+                  - generic [ref=f2e348]: AV
+        - generic [ref=f2e350]:
+          - generic [ref=f2e351]: Volumen
+          - generic [ref=f2e352]: Flechas y OK
+          - generic [ref=f2e353]: Entradas
+          - button "Pausar la demostración" [ref=f2e354] [cursor=pointer]
+      - list "Capturas de pantalla de App Store" [ref=f2e357]:
+        - listitem [ref=f2e358]:
+          - figure "El control" [ref=f2e359]:
+            - 'img "Control universal para tu TV: Samsung, LG, Sony, Roku y más, por WiFi, sin anuncios. El control de Mando TV en un iPhone." [ref=f2e360]'
+        - listitem [ref=f2e362]:
+          - figure "Touchpad (Pro)" [ref=f2e363]:
+            - 'img "Touchpad para moverte más rápido (Pro): desliza un dedo por los menús del TV." [ref=f2e364]'
+  - region [ref=f2e367]:
+    - heading "Todo lo del control, y más" [level=2] [ref=f2e368]
+    - paragraph [ref=f2e369]: "Lo que haces con el control de siempre, más lo que con él cuesta: escribir, abrir apps, cambiar de entrada sin buscar botones y moverte rápido por los menús. Lo marcado con Pro es de pago único."
+    - generic [ref=f2e370]:
+      - list [ref=f2e371]:
+        - listitem [ref=f2e372]:
+          - generic [ref=f2e373]: Botones grandes y claros
+          - generic [ref=f2e374]: Cruceta, OK, Atrás, Inicio, volumen, canales y silencio, con su nombre siempre visible.
+        - listitem [ref=f2e375]:
+          - generic [ref=f2e376]: Touchpad (Pro)
+          - generic [ref=f2e377]: Desliza el dedo para moverte por los menús, o usa el puntero en los televisores que lo tienen.
+        - listitem [ref=f2e378]:
+          - generic [ref=f2e379]: Teclado del teléfono
+          - generic [ref=f2e380]: Escribe una contraseña del WiFi o busca en apps sin pasar letra por letra. En YouTube, la búsqueda aparece directo en el TV.
+        - listitem [ref=f2e381]:
+          - generic [ref=f2e382]: Abre tus apps
+          - generic [ref=f2e383]: Netflix, YouTube y las demás apps del televisor, con un toque.
+        - listitem [ref=f2e384]:
+          - generic [ref=f2e385]: Entradas y sonido
+          - generic [ref=f2e386]: Cambia a HDMI, TV en vivo o la consola. Con Pro, en LG eliges si suena el TV o la barra de sonido.
+        - listitem [ref=f2e387]:
+          - generic [ref=f2e388]: Enciende el televisor
+          - generic [ref=f2e389]: Si está apagado, Mando TV lo enciende por la red y se conecta solo.
+        - listitem [ref=f2e390]:
+          - generic [ref=f2e391]: A tu gusto
+          - generic [ref=f2e392]: Claro u oscuro y vibración gratis. Con Pro, el color de fondo que prefieras, negro puro y control clásico.
+        - listitem [ref=f2e393]:
+          - generic [ref=f2e394]: Comparte un mando con tu familia
+          - generic [ref=f2e395]: Arma un mando sencillo para tu TV y envíalo como enlace, por ejemplo por WhatsApp. Quien lo recibe lo abre en Mando TV y lo guarda; la primera vez, el TV pide permiso para su celular y lo acepta en la pantalla del TV. El enlace no lleva ninguna clave ni contraseña del TV. El mando para invitados es gratis y tiene fecha de vencimiento, de hasta 31 días. Crear el mando fácil, con hasta 6 botones gigantes, es Pro; usarlo es gratis.
+        - listitem [ref=f2e396]:
+          - generic [ref=f2e397]: Duplica la pantalla
+          - generic [ref=f2e398]: Mando TV te guía a Duplicar pantalla del Centro de control para ver tu iPhone o iPad en un TV con AirPlay. En Windows abre Transmitir con Windows + K. Gratis. Y con Pro, Mando TV envía la pantalla del PC a TV LG, Samsung, Hisense o Android TV por la red de la casa (beta, con unos segundos de demora y sin sonido). Pronto en Android.
+        - listitem [ref=f2e399]:
+          - generic [ref=f2e400]: Sin abrir la app (Pro)
+          - generic [ref=f2e401]: Widgets en la pantalla de inicio y en la pantalla bloqueada del iPhone, botones en el Centro de control y frases de Siri y Atajos, como "Silencia el TV con Mando TV". En beta. En Android llega con su versión pública.
+      - generic "Partes de la app" [ref=f2e402]:
+        - 'img "Touchpad de la app (función Pro): se desliza el dedo para moverse por los menús." [ref=f2e403]':
+          - heading [level=3] [aria-hidden] [ref=f2e404]: Touchpad (Pro)
+          - generic [aria-hidden] [ref=f2e405]: Desliza para moverte
+        - img "Teclado de la app escribiendo una búsqueda." [ref=f2e407]:
+          - heading [level=3] [aria-hidden] [ref=f2e408]: Teclado
+          - generic [ref=f2e410]: documentales de volcan
+        - 'img "Selector de entradas: TV en vivo, HDMI 1 y HDMI 2." [ref=f2e412]':
+          - heading [level=3] [aria-hidden] [ref=f2e413]: Entradas
+          - generic [aria-hidden] [ref=f2e414]:
+            - generic [ref=f2e415]: TV en vivo
+            - generic [ref=f2e416]: HDMI 1
+            - generic [ref=f2e417]: HDMI 2
+        - 'img "Widget de Mando TV en la pantalla de inicio del iPhone (función Pro, en beta): encender o apagar, silenciar y subir o bajar el volumen." [ref=f2e418]':
+          - heading [level=3] [aria-hidden] [ref=f2e419]: Widget (Pro)
+          - generic [ref=f2e436]: iPhone · beta
+  - generic [ref=f2e438]:
+    - region [ref=f2e439]:
+      - heading "Listo en un minuto" [level=2] [ref=f2e440]
+      - paragraph [ref=f2e441]: No necesitas crear una cuenta ni instalar nada en el televisor.
+      - list [ref=f2e442]:
+        - listitem [ref=f2e443]:
+          - generic [ref=f2e444]: Misma red WiFi
+          - paragraph [ref=f2e445]: El teléfono y el televisor tienen que estar en la misma red de tu casa.
+        - listitem [ref=f2e446]:
+          - generic [ref=f2e447]: Toca tu televisor
+          - paragraph [ref=f2e448]: Mando TV lo encuentra solo. Si no aparece, escribes su dirección IP.
+        - listitem [ref=f2e449]:
+          - generic [ref=f2e450]: Acepta en la pantalla
+          - paragraph [ref=f2e451]: La primera vez el televisor pide permiso. Lo aceptas una vez y queda guardado.
+    - region [ref=f2e452]:
+      - heading "WiFi, infrarrojo y Bluetooth" [level=2] [ref=f2e453]
+      - paragraph [ref=f2e454]: "Mando TV se conecta por WiFi. Si tu celular Android tiene emisor infrarrojo, también maneja televisores que no son inteligentes o que nunca se conectaron al WiFi. Desde Android 9 también se conecta por Bluetooth (beta): el celular hace de teclado y control del TV, con WiFi o sin él."
+      - list [ref=f2e455]:
+        - listitem [ref=f2e456]:
+          - generic [ref=f2e462]: Disponible
+          - generic [ref=f2e463]: WiFi
+          - paragraph [ref=f2e464]: Samsung, LG, Roku, Google TV y Android TV, desde el teléfono o el computador. El teléfono y el TV solo tienen que estar en la misma red.
+        - listitem [ref=f2e465]:
+          - generic [ref=f2e471]: Nuevo
+          - generic [ref=f2e472]: Infrarrojo
+          - paragraph [ref=f2e473]: "En celulares Android con emisor infrarrojo, común en Xiaomi, Redmi y POCO. Sirve para televisores antiguos o sin internet y puede encender uno que nunca configuraste: solo apunta el celular al TV. No aparece en iPhone, Windows ni en Android sin emisor."
+        - listitem [ref=f2e474]:
+          - generic [ref=f2e477]: Beta
+          - generic [ref=f2e478]: Bluetooth
+          - paragraph [ref=f2e479]: En celulares con Android 9 o más reciente, gratis. El celular se conecta al TV como un teclado y control Bluetooth, así que sirve aunque no haya WiFi. Funciona con Google TV, Android TV y Fire TV; otras marcas que aceptan teclados Bluetooth podrían funcionar. Roku no los acepta. No está en iPhone ni en Windows.
+  - generic [ref=f2e480]:
+    - region [ref=f2e481]:
+      - heading "Pruébalo en Android antes que nadie" [level=2] [ref=f2e482]
+      - paragraph [ref=f2e483]: Mando TV para Android está en prueba anticipada en Google Play. Es gratis, son dos pasos y necesitas un teléfono Android con tu cuenta de Google. La prueba ya tiene la versión 1.1, con el widget para la pantalla de inicio (Pro) y el infrarrojo también para decodificadores, barras de sonido, proyectores y aire acondicionado.
+      - list [ref=f2e484]:
+        - listitem [ref=f2e485]:
+          - generic [ref=f2e486]: 1. Únete al grupo
+          - paragraph [ref=f2e487]: Entra con la misma cuenta de Google de tu teléfono y toca "Unirse al grupo". Por ahí te avisamos de cada versión nueva.
+          - link "Unirme al grupo" [ref=f2e488] [cursor=pointer]:
+            - /url: https://groups.google.com/g/mandotv-testers/about
+        - listitem [ref=f2e489]:
+          - generic [ref=f2e490]: 2. Instálalo desde Google Play
+          - paragraph [ref=f2e491]: "Toca \"Convertirse en tester\" y luego descárgalo. Si Google Play dice que aún no está disponible, la app está en revisión: te avisamos por correo apenas esté lista."
+          - link "Instalar la prueba" [ref=f2e492] [cursor=pointer]:
+            - /url: https://play.google.com/apps/testing/app.mandotv.mando
+      - paragraph [ref=f2e493]:
+        - text: "Déjala instalada y úsala unos días: así Google la publica para todos. ¿Dudas? Escríbenos a"
+        - link "hola@mandotv.app" [ref=f2e494] [cursor=pointer]:
+          - /url: mailto:hola@mandotv.app
+        - text: .
+    - region [ref=f2e495]:
+      - heading "Gratis de verdad" [level=2] [ref=f2e496]
+      - paragraph [ref=f2e497]: El control del TV es gratis y sin anuncios. Pro suma touchpad, voz, rutinas y más con un pago único, sin suscripción.
+      - generic [ref=f2e498]:
+        - generic [ref=f2e499]:
+          - heading "Gratis" [level=3] [ref=f2e500]
+          - paragraph [ref=f2e501]: Gratis, para siempre
+          - list [ref=f2e502]:
+            - listitem [ref=f2e503]: Control con flechas, OK, volumen y canales
+            - listitem [ref=f2e504]: Teclado del celular para escribir en el TV
+            - listitem [ref=f2e505]: Abrir tus apps y cambiar de entrada (HDMI) a un toque
+            - listitem [ref=f2e506]: Encendido por red
+            - listitem [ref=f2e507]: Se conecta al TV por WiFi
+            - listitem [ref=f2e508]: También por infrarrojo, en celulares Android con emisor infrarrojo
+            - listitem [ref=f2e509]: También por Bluetooth en Android 9 o más reciente, aunque no haya WiFi (beta)
+            - listitem [ref=f2e510]: Modo fácil con botones grandes
+            - listitem [ref=f2e511]: Mando para invitados por enlace, con fecha de vencimiento (hasta 31 días)
+            - listitem [ref=f2e512]: Samsung, LG, Roku, Google TV, Android TV y Apple TV (beta)
+            - listitem [ref=f2e513]: Duplicar pantalla con la función del iPhone, el iPad o Windows
+            - listitem [ref=f2e514]: La app en 30 idiomas en iPhone, iPad y Windows
+            - listitem [ref=f2e515]: Sin anuncios y sin cuentas
+        - generic [ref=f2e516]:
+          - heading "Pro" [level=3] [ref=f2e517]
+          - paragraph [ref=f2e518]: Pago único, sin suscripción
+          - list [ref=f2e519]:
+            - listitem [ref=f2e520]: Todo lo de Gratis
+            - listitem [ref=f2e521]: Touchpad para moverte por los menús
+            - listitem [ref=f2e522]: "Voz: \"abre Netflix\", \"sube el volumen\", \"canal 7\""
+            - listitem [ref=f2e523]: Rutinas, apps favoritas y canales favoritos de la TV en vivo (LG y Roku TV)
+            - listitem [ref=f2e524]: Mando fácil para compartir por enlace, con hasta 6 botones gigantes
+            - listitem [ref=f2e525]: "Accesos rápidos: panel de ajustes rápidos de Android e ícono en la bandeja de Windows"
+            - listitem [ref=f2e526]: Temporizador de apagado y encendido programado
+            - listitem [ref=f2e527]: "Modo noche: temporizador, algo para dormir y tope de volumen"
+            - listitem [ref=f2e528]: Fotos y videos al TV desde el celular o el PC
+            - listitem [ref=f2e529]: Control clásico, colores y tema negro puro
+            - listitem [ref=f2e530]: Mini control y teclado del PC en Windows
+            - listitem [ref=f2e531]: "Modo niños: solo sus apps, volumen con tope y salir con tu PIN"
+            - listitem [ref=f2e532]: Voz en 29 idiomas en iPhone, iPad y Windows
+            - listitem [ref=f2e533]: Widgets, Centro de control, Siri y Atajos en iPhone (beta)
+            - listitem [ref=f2e534]: Duplicar pantalla propio en Windows para TV LG, Samsung, Hisense y Android TV (beta)
+            - listitem [ref=f2e535]: "Modo audífonos: el sonido del TV LG en tus audífonos Bluetooth"
+            - listitem [ref=f2e536]: Ayudas a que Mando TV siga creciendo
+    - region [ref=f2e537]:
+      - generic [ref=f2e538]:
+        - generic [ref=f2e539]:
+          - heading "Tu casa es tuya" [level=2] [ref=f2e540]
+          - paragraph [ref=f2e541]: Mando TV habla con tu televisor dentro de tu red WiFi y con nadie más. No tenemos servidores que guarden lo que haces.
+          - paragraph [ref=f2e542]:
+            - link "Lee la política de privacidad completa" [ref=f2e543] [cursor=pointer]:
+              - /url: /es/privacidad.html
+        - list [ref=f2e544]:
+          - listitem [ref=f2e545]: Sin cuentas ni registro
+          - listitem [ref=f2e546]: La app no tiene anuncios ni rastreadores
+          - listitem [ref=f2e547]: Las llaves de conexión se guardan cifradas en tu teléfono
+          - listitem [ref=f2e548]: Lo que escribes va directo al televisor y no se guarda
+    - region [ref=f2e549]:
+      - heading "Control remoto para tu marca" [level=2] [ref=f2e550]
+      - paragraph [ref=f2e551]: Elige tu televisor y mira cómo se conecta, qué puedes hacer y cómo encenderlo desde el celular.
+      - list [ref=f2e552]:
+        - listitem [ref=f2e553]:
+          - link "Control remoto para TV Samsung" [ref=f2e554] [cursor=pointer]:
+            - /url: /es/control-remoto-samsung/
+        - listitem [ref=f2e555]:
+          - link "Control remoto para TV LG" [ref=f2e556] [cursor=pointer]:
+            - /url: /es/control-remoto-lg/
+        - listitem [ref=f2e557]:
+          - link "Control remoto para Roku" [ref=f2e558] [cursor=pointer]:
+            - /url: /es/control-remoto-roku/
+        - listitem [ref=f2e559]:
+          - link "Control remoto para Android TV y Google TV" [ref=f2e560] [cursor=pointer]:
+            - /url: /es/control-remoto-android-tv/
+      - paragraph [ref=f2e561]:
+        - text: También para
+        - link "Master G" [ref=f2e562] [cursor=pointer]:
+          - /url: /es/control-remoto-master-g/
+        - text: ","
+        - link "Kalley" [ref=f2e563] [cursor=pointer]:
+          - /url: /es/control-remoto-kalley/
+        - text: ","
+        - link "Caixun" [ref=f2e564] [cursor=pointer]:
+          - /url: /es/control-remoto-caixun/
+        - text: ","
+        - link "Hyundai" [ref=f2e565] [cursor=pointer]:
+          - /url: /es/control-remoto-hyundai/
+        - text: ","
+        - link "Noblex" [ref=f2e566] [cursor=pointer]:
+          - /url: /es/control-remoto-noblex/
+        - text: "y"
+        - link "BGH" [ref=f2e567] [cursor=pointer]:
+          - /url: /es/control-remoto-bgh/
+        - text: ", en sus modelos con Google TV, Android TV o Roku TV."
+      - paragraph [ref=f2e568]:
+        - text: ¿Perdiste el control del TV? Mira
+        - link "qué hacer ahora" [ref=f2e569] [cursor=pointer]:
+          - /url: /es/guias/perdi-el-control-del-tv/
+        - text: . ¿Quieres jugar y el TV no cambia al HDMI de la consola?
+        - link "Encender el TV y pasar al HDMI de la consola sin control" [ref=f2e570] [cursor=pointer]:
+          - /url: /es/guias/encender-tv-y-hdmi-de-la-consola-sin-control/
+        - text: .
+      - paragraph [ref=f2e571]:
+        - text: ¿Algo no funciona? Mira las
+        - link "guías paso a paso para controlar tu TV con el celular" [ref=f2e572] [cursor=pointer]:
+          - /url: /es/guias/
+        - text: .
+    - region [ref=f2e573]:
+      - heading "Preguntas rápidas" [level=2] [ref=f2e574]
+      - generic [ref=f2e575]:
+        - group [ref=f2e576]:
+          - generic "¿Con qué televisores funciona Mando TV? +" [ref=f2e577] [cursor=pointer]
+        - group [ref=f2e578]:
+          - generic "¿En qué idiomas está Mando TV? +" [ref=f2e579] [cursor=pointer]
+        - group [ref=f2e580]:
+          - generic "¿Necesito internet para usar el control remoto? +" [ref=f2e581] [cursor=pointer]
+        - group [ref=f2e582]:
+          - generic "¿Funciona por infrarrojo o Bluetooth? +" [ref=f2e583] [cursor=pointer]
+        - group [ref=f2e584]:
+          - generic "¿Mando TV puede encender el televisor? +" [ref=f2e585] [cursor=pointer]
+        - group [ref=f2e586]:
+          - generic "¿Mando TV es gratis? +" [ref=f2e587] [cursor=pointer]
+        - group [ref=f2e588]:
+          - generic "¿Dónde lo descargo? +" [ref=f2e589] [cursor=pointer]
+      - paragraph [ref=f2e590]:
+        - link "Ver toda la ayuda" [ref=f2e591] [cursor=pointer]:
+          - /url: /es/soporte.html
+    - region [ref=f2e592]:
+      - heading "Escríbenos" [level=2] [ref=f2e593]
+      - generic [ref=f2e594]:
+        - generic [ref=f2e595]:
+          - paragraph [ref=f2e596]: ¿Tu televisor no aparece, tienes una idea o quieres probar Mando TV antes que nadie? Escríbenos en tu idioma. Respondemos en español o inglés, y en el tuyo con ayuda de un traductor si lo prefieres.
+          - paragraph [ref=f2e597]:
+            - link "hola@mandotv.app" [ref=f2e598] [cursor=pointer]:
+              - /url: mailto:hola@mandotv.app
+        - link "Enviar un correo" [ref=f2e599] [cursor=pointer]:
+          - /url: mailto:hola@mandotv.app?subject=Hola%20Mando%20TV
+  - contentinfo [ref=f2e600]:
+    - generic [ref=f2e601]:
+      - generic [ref=f2e602]:
+        - navigation "Pie de página" [ref=f2e603]:
+          - link "Ayuda" [ref=f2e604] [cursor=pointer]:
+            - /url: /es/soporte.html
+          - link "Privacidad" [ref=f2e605] [cursor=pointer]:
+            - /url: /es/privacidad.html
+          - link "hola@mandotv.app" [ref=f2e606] [cursor=pointer]:
+            - /url: mailto:hola@mandotv.app
+          - button "Cookies" [ref=f2e607] [cursor=pointer]
+        - generic [ref=f2e608]: Hecho en Chile
+      - list "Marcas y guías" [ref=f2e609]:
+        - listitem [ref=f2e610]:
+          - link "Control remoto Samsung" [ref=f2e611] [cursor=pointer]:
+            - /url: /es/control-remoto-samsung/
+        - listitem [ref=f2e612]:
+          - link "Control remoto LG" [ref=f2e613] [cursor=pointer]:
+            - /url: /es/control-remoto-lg/
+        - listitem [ref=f2e614]:
+          - link "Control remoto Roku" [ref=f2e615] [cursor=pointer]:
+            - /url: /es/control-remoto-roku/
+        - listitem [ref=f2e616]:
+          - link "Control remoto Android TV" [ref=f2e617] [cursor=pointer]:
+            - /url: /es/control-remoto-android-tv/
+        - listitem [ref=f2e618]:
+          - link "Todas las guías" [ref=f2e619] [cursor=pointer]:
+            - /url: /es/guias/
+        - listitem [ref=f2e620]:
+          - link "Cómo encender el TV LG con el celular" [ref=f2e621] [cursor=pointer]:
+            - /url: /es/guias/encender-tv-lg-con-el-celular/
+        - listitem [ref=f2e622]:
+          - link "Control remoto Samsung sin el control original" [ref=f2e623] [cursor=pointer]:
+            - /url: /es/guias/control-remoto-samsung-sin-control/
+        - listitem [ref=f2e624]:
+          - link "Cómo conectar el celular al TV por WiFi" [ref=f2e625] [cursor=pointer]:
+            - /url: /es/guias/conectar-celular-al-tv-por-wifi/
+        - listitem [ref=f2e626]:
+          - link "Cómo controlar el TV desde el PC con Windows" [ref=f2e627] [cursor=pointer]:
+            - /url: /es/guias/controlar-el-tv-desde-el-pc/
+        - listitem [ref=f2e628]:
+          - link "Roku no responde al celular (error 403)" [ref=f2e629] [cursor=pointer]:
+            - /url: /es/guias/roku-no-responde-al-celular/
+        - listitem [ref=f2e630]:
+          - link "El celular no encuentra el TV" [ref=f2e631] [cursor=pointer]:
+            - /url: /es/guias/el-celular-no-encuentra-el-tv/
+        - listitem [ref=f2e632]:
+          - link "Android TV pide un código de emparejamiento" [ref=f2e633] [cursor=pointer]:
+            - /url: /es/guias/android-tv-codigo-de-emparejamiento/
+        - listitem [ref=f2e634]:
+          - link "Perdí el control del Roku" [ref=f2e635] [cursor=pointer]:
+            - /url: /es/guias/perdi-el-control-del-roku/
+        - listitem [ref=f2e636]:
+          - link "Encender el TV y pasar al HDMI de la consola sin control" [ref=f2e637] [cursor=pointer]:
+            - /url: /es/guias/encender-tv-y-hdmi-de-la-consola-sin-control/
+        - listitem [ref=f2e638]:
+          - link "Perdí el control del TV" [ref=f2e639] [cursor=pointer]:
+            - /url: /es/guias/perdi-el-control-del-tv/
+        - listitem [ref=f2e640]:
+          - link "Perdí el control del TV LG" [ref=f2e641] [cursor=pointer]:
+            - /url: /es/guias/perdi-el-control-del-lg/
+        - listitem [ref=f2e642]:
+          - link "Cambiar la entrada HDMI sin control" [ref=f2e643] [cursor=pointer]:
+            - /url: /es/guias/cambiar-entrada-hdmi-sin-control/
+        - listitem [ref=f2e644]:
+          - link "Android TV sin control remoto" [ref=f2e645] [cursor=pointer]:
+            - /url: /es/guias/android-tv-sin-control-remoto/
+      - generic [ref=f2e646]:
+        - generic [ref=f2e647]:
+          - link "Mando TV" [ref=f2e648] [cursor=pointer]:
+            - /url: /es/
+            - img "Mando TV" [ref=f2e649]
+            - text: Mando TV
+          - paragraph [ref=f2e650]: El control remoto de todos tus televisores, en el celular o el computador.
+        - generic [ref=f2e651]:
+          - link "Descargar" [ref=f2e652] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct
+          - generic [ref=f2e653]: Para iPhone, iPad, Mac, Android y Windows
+      - generic [ref=f2e654]:
+        - generic [ref=f2e655]: © 2026 Mando TV
+        - group [ref=f2e656]:
+          - 'generic "Idioma: Español" [ref=f2e657] [cursor=pointer]':
+            - generic [ref=f2e658]: "Idioma:"
+            - text: Español
+      - generic [ref=f2e659]: "Mando TV es una app independiente: no está afiliada a los fabricantes de televisores nombrados ni a Google, Amazon, Apple o Roku, ni cuenta con su respaldo. Las marcas pertenecen a sus dueños y se mencionan solo para indicar compatibilidad. Android TV y Google TV son marcas de Google LLC. Apple TV es una marca de Apple Inc."
+  - generic [ref=f2e660]:
+    - link [ref=f2e661] [cursor=pointer]:
+      - /url: "#inicio"
+      - img "Mando TV" [ref=f2e662]
+      - text: Mando TV
+    - link "Descargar" [ref=f2e663] [cursor=pointer]:
+      - /url: https://apps.microsoft.com/detail/9N3D7T1DP2SW?mode=direct
+  - region "Aviso de cookies" [ref=f2e664]:
+    - paragraph [ref=f2e665]:
+      - text: ¿Nos dejas contar tus visitas con cookies? Usamos Google Analytics para saber qué páginas se leen y mejorar la web. Solo se activa si aceptas.
+      - link "Más sobre las cookies" [ref=f2e666] [cursor=pointer]:
+        - /url: /es/privacidad.html#cookies
+    - generic [ref=f2e667]:
+      - button "Aceptar" [ref=f2e668] [cursor=pointer]
+      - button "Rechazar" [ref=f2e669] [cursor=pointer]

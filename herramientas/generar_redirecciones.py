@@ -1,6 +1,6 @@
 # Crea las páginas puente (redirecciones) de las URL viejas de mandotv.app, que ya no existen: GitHub Pages no hace 301,
 # así que cada URL vieja deja un archivo que redirige al instante (mismo patrón que la portada vieja /en/): noindex,
-# canonical a la URL nueva, location.replace (conserva ?consulta y #ancla) y meta refresh. Las URL viejas siguen
+# canonical a la URL nueva, /puente.js con location.replace (conserva ?consulta y #ancla) y meta refresh. Las URL viejas siguen
 # publicadas en Google, en las fichas de las tiendas (privacidad y soporte) y en enlaces de terceros.
 # Esquema nuevo (2026-11-25): inglés en la raíz /, el resto de idiomas bajo su prefijo (/es/, /de/, /fr/, /pt/, /it/).
 # Uso: python -I herramientas/generar_redirecciones.py <carpeta del sitio>
@@ -108,7 +108,7 @@ PLANTILLA = """<!doctype html>
        (Google trata el refresh de 0 s como redirección permanente) y conserva la consulta y el #. -->
   <meta name="robots" content="noindex">
   <link rel="canonical" href="@@url@@@@nueva@@">
-  <script>location.replace('@@nueva@@' + location.search + location.hash);</script>
+  <script src="/puente.js" data-destino="@@nueva@@"></script>
   <meta http-equiv="refresh" content="0; url=@@nueva@@">
 </head>
 <body>

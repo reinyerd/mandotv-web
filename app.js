@@ -492,7 +492,7 @@
     var i = orden.indexOf(actual);
     barras.forEach(function (b, k) {
       b.classList.remove('activa');
-      b.classList.toggle('vista', k < i);
+      b.classList.toggle('pasada', k < i);
     });
     if (barras[i]) requestAnimationFrame(function () { requestAnimationFrame(function () { barras[i].classList.add('activa'); }); });
   }

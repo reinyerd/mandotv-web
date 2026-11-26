@@ -18,4 +18,6 @@ printf '%s\n' "$guardado" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git 
 cambiadas=$(python -I herramientas/versionar.py) || { echo "versionar.py falló"; exit 1; }
 # Python en Windows termina las líneas con \r\n: se quita el \r para que git encuentre los archivos.
 printf '%s\n' "$cambiadas" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git add -- "$f"; done
+# La CSP de Cloudflare permite los scripts en línea por su hash: si uno cambió, no se publica hasta actualizar la regla.
+python -I herramientas/csp.py --verificar || exit 1
 exit 0
