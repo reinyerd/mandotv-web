@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Gidsen: je telefoon als afstandsbediening gebruiken',
   intro='Eenvoudige stappen om de afstandsbediening van je Samsung-, LG-, Roku- of Android TV-tv met Mando TV te koppelen, de tv aan te zetten en problemen op te lossen.',
   h2_guias='Alle gidsen', h2_marcas='Afstandsbediening-app per merk',
+  marcas_extra=[('sony', 'Sony-afstandsbediening'), ('philips', 'Philips-afstandsbediening')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Open Mando TV: je LG-tv verschijnt vanzelf in de lijst. Tik erop.',
       'Op de tv verschijnt een melding die om toestemming vraagt. Bevestig die met je gewone afstandsbediening (alleen de eerste keer).',
     ],
-    encender='Open op de LG-tv Instellingen en zoek naar “Tv aanzetten met mobiele telefoon” (afhankelijk van het model onder Algemeen of Verbinding). Zet “Via wifi aanzetten” aan. Staat er “Quick Start+”, zet die dan ook aan. Daarna vraagt de app, als je de uitgeschakelde tv in Mando TV aantikt, of ze hem moet aanzetten, en maakt vanzelf verbinding.',
+    encender='Open op de LG-tv Instellingen en zoek naar “Tv aanzetten met mobiele telefoon” (onder Algemeen > Apparaten > Externe apparaten, bij oudere modellen onder Verbinding > Beheer van mobiele verbindingen). Zet “Via wifi aanzetten” aan. Staat er “Quick Start+”, zet die dan ook aan. Daarna vraagt de app, als je de uitgeschakelde tv in Mando TV aantikt, of ze hem moet aanzetten, en maakt vanzelf verbinding.',
     faq=[
       ('Heb ik de Magic Remote nodig om Mando TV te gebruiken?', 'Alleen de eerste keer, om de melding op het scherm te bevestigen. Daarna is je telefoon genoeg.'),
       ('Vervangt Mando TV de LG ThinQ app?', 'Om de tv te bedienen wel: je hebt geen LG-account nodig en hoeft de tv niet te registreren. Mando TV maakt rechtstreeks verbinding via je wifi.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Werkt het met oudere Samsung-tv’s?', 'Het werkt met Samsung-tv’s met Tizen, bouwjaar 2016 en nieuwer. Eerdere modellen gebruiken een ander systeem dat we nog niet ondersteunen.'),
     ],
     guias=[('samsung-lost', 'Samsung tv zonder originele afstandsbediening: zo gebruik je je telefoon'),
+           ('smartthings', 'SmartThings-alternatief'),
+           ('turn-on', 'Tv aanzetten zonder afstandsbediening'),
            ('hdmi', 'HDMI-ingang van de tv wisselen zonder afstandsbediening'),
            ('guias', 'Alle gidsen om de tv met je telefoon te bedienen')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Zet je telefoon en Roku op hetzelfde wifi-netwerk.',
       'Open Mando TV: je Roku verschijnt vanzelf in de lijst. Tik erop.',
-      'Lukt de verbinding niet, ga dan op de Roku naar Instellingen > Systeem > Geavanceerde systeeminstellingen > Bediening door mobiele apps en zet de netwerktoegang op Standaard of Permissief.',
+      'Lukt de verbinding niet, ga dan op de Roku naar Instellingen > Systeem > Geavanceerde systeeminstellingen > Bediening door mobiele apps en zet de netwerktoegang op Standaard of Permissief (zet bij nieuwere Roku-software “Bediening door mobiele apps” op Ingeschakeld).',
     ],
     encender='Zet bij Roku TV-toestellen onder Instellingen > Systeem > Stroom de optie “Snelle tv-start” aan. Roku-spelers die op een andere tv zijn aangesloten, kun je zo niet aanzetten. Daarna vraagt de app, als je de uitgeschakelde tv in Mando TV aantikt, of ze hem moet aanzetten, en maakt vanzelf verbinding.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Roku app werkt niet (fout 403)'),
            ('roku-lost', 'Roku afstandsbediening kwijt: zo gebruik je je telefoon'),
+           ('tcl', 'TCL-afstandsbediening'),
+           ('hisense', 'Hisense-afstandsbediening'),
+           ('philips', 'Philips-afstandsbediening'),
            ('guias', 'Alle gidsen om de tv met je telefoon te bedienen')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV en Google TV',
     titulo='Android TV afstandsbediening app voor je telefoon | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Open Mando TV: je Android TV verschijnt vanzelf in de lijst. Tik erop.',
       'De tv toont een code van 6 tekens. Voer die in bij Mando TV (alleen de eerste keer).',
     ],
-    encender='Dat hangt af van de fabrikant. Zoek in de netwerk- of stroominstellingen naar “Wake on LAN”, “Inschakelen via netwerk” of “Netwerk-stand-by”. Sommige modellen hebben deze optie niet. Daarna vraagt de app, als je de uitgeschakelde tv in Mando TV aantikt, of ze hem moet aanzetten, en maakt vanzelf verbinding.',
+    encender='Dat hangt af van de fabrikant. Zoek in de netwerk- of stroominstellingen naar “Wake on LAN”, “Inschakelen via netwerk”, “Netwerk-stand-by” of “Remote start”. Sommige modellen hebben deze optie niet. Daarna vraagt de app, als je de uitgeschakelde tv in Mando TV aantikt, of ze hem moet aanzetten, en maakt vanzelf verbinding.',
     faq=[
       ('Werkt het met Chromecast met Google TV?', 'Ja, het koppelen gaat met de code van 6 tekens die op het scherm verschijnt.'),
       ('Wat is het verschil met de Google TV-app?', 'Mando TV heeft geen Google-account nodig, werkt ook op Windows en bedient tv’s van LG, Samsung en Roku met dezelfde app.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV vraagt om een koppelcode: dit moet je doen'),
            ('androidtv', 'Android TV zonder afstandsbediening: zo gebruik je je telefoon'),
+           ('googletv-alt', 'Alternatief voor de Google TV-afstandsbediening'),
+           ('sony', 'Sony-afstandsbediening'),
+           ('tcl', 'TCL-afstandsbediening'),
+           ('hisense', 'Hisense-afstandsbediening'),
+           ('philips', 'Philips-afstandsbediening'),
            ('guias', 'Alle gidsen om de tv met je telefoon te bedienen')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Kan ik de tv met mijn telefoon aanzetten als ik hem nog nooit heb verbonden?', 'De eerste keer zet je hem aan met de knop op de tv. Nadat je je telefoon hebt verbonden en in de instellingen van de tv het aanzetten via het netwerk hebt aangezet, kun je hem via de app aanzetten.'),
       ('Moet ik een nieuwe afstandsbediening kopen?', 'Niet per se. Met Mando TV heb je toetsen, volume, toetsenbord en aanzetten gratis. Wil je toch liever een echte afstandsbediening, zoek dan op het exacte model van je tv.'),
-      ('Werkt het als de tv geen wifi heeft?', 'Nee. Telefoon en tv moeten op hetzelfde wifi-netwerk zitten. Een tv die geen Smart-tv is, kun je niet met Mando TV bedienen.'),
+      ('Werkt het als de tv geen wifi heeft?', 'Meestal niet. Telefoon en tv moeten meestal op hetzelfde wifi-netwerk zitten. De uitzonderingen zijn infrarood op Android-telefoons met een infraroodzender, dat ook tv’s bedient die geen Smart-tv zijn, en Bluetooth in de bèta vanaf Android 9, dat zonder wifi werkt met Google TV, Android TV en Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='LG afstandsbediening kwijt',
     titulo='LG afstandsbediening kwijt? Gebruik je telefoon',
@@ -287,7 +298,7 @@ GUIAS = [
       'Download Mando TV, dat gratis is en geen Google-account vraagt, en open de app. Tik in de lijst op je tv.',
       'De tv toont een code van 6 letters en cijfers. Typ die op je telefoon in en tik op Koppelen. Daarvoor heb je de afstandsbediening niet nodig.',
       'Nu kun je richtingstoetsen, OK, Terug, Start, volume, dempen en toetsenbord gebruiken. Ze zijn gratis, net als de lijst met apps. Het touchpad is Pro.',
-      'Om de tv de volgende keer vanaf je telefoon aan te zetten, zoek je in de netwerk- of stroominstellingen naar “Wake on LAN”, “Inschakelen via netwerk” of “Netwerk-stand-by”.',
+      'Om de tv de volgende keer vanaf je telefoon aan te zetten, zoek je in de netwerk- of stroominstellingen naar “Wake on LAN”, “Inschakelen via netwerk”, “Netwerk-stand-by” of “Remote start”.',
     ],
     extra=[
       ('Als je tv zich niet vanaf je telefoon laat aanzetten', 'Niet elke Android TV kan via het netwerk worden aangezet; dat hangt af van de fabrikant en het model. Heeft die van jou de functie niet, zet hem dan aan met de knop op de tv en ga op je telefoon verder. Uitzetten kan via de app.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Je kunt een LG-tv met je telefoon aanzetten, maar daarvoor moet je eerst een instelling op de tv aanzetten. Daarna zet je telefoon de LG-tv via je wifi aan, helemaal zonder afstandsbediening. Het kost vijf minuten en je doet het maar één keer.',
     pasos=[
       'Zet je telefoon en de LG-tv op hetzelfde wifi-netwerk.',
-      'Open op de tv Instellingen en zoek naar “Tv aanzetten met mobiele telefoon”. Afhankelijk van het model vind je het onder Algemeen of Verbinding.',
+      'Open op de tv Instellingen en zoek naar “Tv aanzetten met mobiele telefoon”. Je vindt het onder Algemeen > Apparaten > Externe apparaten (bij oudere modellen onder Verbinding > Beheer van mobiele verbindingen).',
       'Zet “Via wifi aanzetten” aan. Is je tv met een netwerkkabel verbonden, zet dan in plaats daarvan de optie voor de kabel aan.',
       'Heeft je tv “Quick Start+”, zet die dan ook aan.',
       'Open met de tv aan Mando TV op je telefoon en tik in de lijst op je LG-tv. Bevestig de melding die op het scherm verschijnt. Zo leert de app hoe ze hem wakker maakt.',
@@ -432,7 +443,7 @@ GUIAS = [
     ],
     extra=[
       ('Zo herken je of dit jouw probleem is', 'Het teken is duidelijk: je telefoon ziet de Roku in de lijst en maakt verbinding, maar er gebeurt niets als je een toets aantikt. Intern antwoordt de Roku met fout 403, wat “verboden” betekent. Mando TV herkent dat bij het verbinden en toont je precies deze stappen op het scherm.'),
-      ('Standaard of Permissief, wat kies ik?', 'Beide werken: Mando TV heeft alleen opdrachten uit je thuisnetwerk nodig. Staat de optie op Uitgeschakeld (bij nieuwere software Beperkt), dan reageert de Roku niet op apps.'),
+      ('Standaard of Permissief, wat kies ik?', 'Standaard is genoeg: het accepteert opdrachten uit je thuisnetwerk, en dat is wat een afstandsbediening nodig heeft. Permissief is opener en alleen nodig op ongewone netwerken. Staat de optie op Uitgeschakeld (bij nieuwere software Beperkt), dan reageert de Roku niet op apps.'),
       ('Als je de Roku-afstandsbediening niet hebt', 'Staat de instelling op Uitgeschakeld, dan kun je hem alleen met de echte Roku-afstandsbediening veranderen. Leen er een om het één keer te veranderen; daarna kun je alles met je telefoon doen. Lees ook [Roku afstandsbediening kwijt](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">De tv vinden</h2>
           <p>De tv vraagt of je de verbinding van Mando TV toestaat. Kies met de afstandsbediening “Toestaan”. Heb je die per ongeluk geweigerd, ga dan naar Instellingen > Algemeen > Extern apparaatbeheer > Apparaatverbindingsbeheer en zet het op toegestaan.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku vraagt niet om toestemming. Lukt de verbinding niet, ga dan op de Roku naar Instellingen > Systeem > Geavanceerde systeeminstellingen > Bediening door mobiele apps en laat de netwerktoegang op Standaard of Permissief staan.</p>
+          <p>Roku vraagt niet om toestemming. Lukt de verbinding niet, ga dan op de Roku naar Instellingen > Systeem > Geavanceerde systeeminstellingen > Bediening door mobiele apps en laat de netwerktoegang op Standaard of Permissief staan (zet bij nieuwere Roku-software “Bediening door mobiele apps” op Ingeschakeld).</p>
         </details>
         <details><summary>Android TV en Google TV</summary>
           <p>De tv toont een code van 6 tekens. Voer hem precies zo in bij Mando TV als hij verschijnt. Het werkt bij Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast met Google TV en andere met Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">De tv vinden</h2>
       <p>Mando TV zet de tv aan via je thuisnetwerk. Daarvoor zijn twee dingen nodig: je hebt minstens één keer verbinding gemaakt terwijl de tv aanstond, en op de tv staat het aanzetten via het netwerk aan. De naam van de instelling verschilt per model; dit zijn de meest voorkomende:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Zoek in de instellingen (afhankelijk van het model onder Algemeen of Verbinding) naar “Tv aanzetten met mobiele telefoon” en zet “Via wifi aanzetten” aan. Staat er “Quick Start+”, zet die dan ook aan.</p>
+          <p>Zoek in de instellingen (onder Algemeen > Apparaten > Externe apparaten, bij oudere modellen onder Verbinding > Beheer van mobiele verbindingen) naar “Tv aanzetten met mobiele telefoon” en zet “Via wifi aanzetten” aan. Staat er “Quick Start+”, zet die dan ook aan.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Zet “Aan met mobiele telefoon” aan onder Instellingen > Algemeen > Netwerk > Expertinstellingen.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">De tv vinden</h2>
           <p>Zet bij Roku TV-toestellen “Snelle tv-start” aan onder Instellingen > Systeem > Stroom. Roku-spelers die op een tv zijn aangesloten, kun je zo niet aanzetten.</p>
         </details>
         <details><summary>Android TV en Google TV</summary>
-          <p>Dat hangt af van de fabrikant. Zoek in de netwerk- of stroominstellingen naar “Wake on LAN”, “Inschakelen via netwerk” of “Netwerk-stand-by”. Sommige modellen hebben deze optie niet.</p>
+          <p>Dat hangt af van de fabrikant. Zoek in de netwerk- of stroominstellingen naar “Wake on LAN”, “Inschakelen via netwerk”, “Netwerk-stand-by” of “Remote start”. Sommige modellen hebben deze optie niet.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infrarood voor oudere tv’s', 'Gratis op Android-telefoons met infraroodzender (nieuw)', 'Sommige apps, alleen bij telefoons met infraroodzender'],
         ['Bluetooth', 'Bèta vanaf Android 9, gratis', 'Afhankelijk van de app'],
         ['Foto’s en video’s naar de tv', 'Pro, via wifi (geen spiegelen)', 'Afhankelijk van de app'],
-        ['Telefoons en computers', 'iPhone, iPad en Windows, plus Android in vroege toegang', 'Verschilt'],
-        ['Schermspiegeling', 'Gratis op iPhone en iPad, via Schermspiegeling in het Control Center (tv’s met AirPlay)', 'Sommige apps bieden het aan'],
+        ['Telefoons en computers', 'iPhone, iPad, Mac en Windows, plus Android in vroege toegang', 'Verschilt'],
+        ['Schermspiegeling', 'Gratis op iPhone, iPad en Windows met de ingebouwde functie van elk apparaat. Op Windows kan Pro het pc-scherm ook spiegelen naar tv’s van LG, Samsung, Hisense en Android TV (bèta)', 'Sommige apps bieden het aan'],
       ],
       nota='Mando TV wordt met geen enkele specifieke app vergeleken. De actuele prijzen staan op de storepagina van de betreffende app.'),
     extra=[
-      ('Wat Mando TV niet doet', 'Een eigen schermspiegeling heeft het niet: op iPhone en iPad verwijst het je naar Schermspiegeling in het Control Center, de functie van de iPhone zelf, die werkt met tv’s met AirPlay. Met Mando TV Pro kan het bovendien foto’s en video’s via je wifi naar de tv sturen. Het bedient Smart-tv’s via het wifi-netwerk thuis. Tv’s zonder Smart-tv-functie kun je met een Android-telefoon met infraroodzender via infrarood bedienen. Vanaf Android 9 kan de telefoon ook via Bluetooth als toetsenbord en afstandsbediening verbinding maken met Google TV, Android TV en Fire TV, helemaal zonder wifi. Deze optie is in de bèta en gratis.'),
+      ('Wat Mando TV niet doet', 'Op iPhone en iPad verwijst het je naar Schermspiegeling in het Control Center, de functie van de iPhone zelf, die werkt met tv’s met AirPlay. Op Windows opent het Casten (Windows + K), en Mando TV Pro kan het pc-scherm via je wifi naar tv’s van LG, Samsung, Hisense en Android TV sturen (bèta, met enkele seconden vertraging en zonder geluid). Met Mando TV Pro kan het bovendien foto’s en video’s via je wifi naar de tv sturen. Het bedient Smart-tv’s via het wifi-netwerk thuis. Tv’s zonder Smart-tv-functie kun je met een Android-telefoon met infraroodzender via infrarood bedienen. Vanaf Android 9 kan de telefoon ook via Bluetooth als toetsenbord en afstandsbediening verbinding maken met Google TV, Android TV en Fire TV, helemaal zonder wifi. Deze optie is in de bèta en gratis.'),
       ('Hoe Mando TV geld verdient', 'Niet met advertenties en niet met jouw gegevens: de app verzamelt er geen. Mando TV wordt gefinancierd door Pro, een optionele eenmalige aankoop voor extra’s. De basisafstandsbediening is gratis.'),
-      ('Op de apparaten die je al hebt', 'iPhone en iPad uit de App Store, Windows-pc’s uit de Microsoft Store en Android via gratis vroege toegang op Google Play. Zie [Afstandsbediening-app voor iPhone](@iphone) en [Afstandsbediening-app voor Windows](@windows).'),
+      ('Op de apparaten die je al hebt', 'iPhone, iPad en Mac uit de App Store, Windows-pc’s uit de Microsoft Store en Android via gratis vroege toegang op Google Play. Zie [Afstandsbediening-app voor iPhone](@iphone) en [Afstandsbediening-app voor Windows](@windows).'),
       ('Privacy', 'Geen account en geen tracking in de app. De communicatie met de tv vindt alleen plaats in het lokale netwerk, de verbindingsgegevens blijven versleuteld op je apparaat. Details in de [privacyverklaring](@privacidad).'),
     ],
     marca=None,
@@ -725,7 +736,7 @@ GUIAS += [
       ('Waar de officiële Roku app beter is', 'Houd de Roku app voor wat ze naast de afstandsbediening biedt, zoals kanalen zoeken en toevoegen uit de Roku Channel Store en het eigen casten en Private Listening (geluid via een koptelefoon op je telefoon). Gebruik beide als je wilt. Ze kunnen op dezelfde telefoon draaien.'),
       ('Roku TV-toestellen en Roku-spelers', 'Beide werken. Dat omvat Roku TV-modellen van TCL, Hisense, Philips en andere, en Roku Express, Streaming Stick en Ultra. Details vind je op de [pagina over de Roku afstandsbediening-app](@roku).'),
       ('Als de Roku app niet meer werkt', 'Reageren de toetsen niet meer, dan blokkeert de Roku meestal de bediening door apps. De gids [Roku app werkt niet](@roku-403) toont de instelling die het probleem oplost.'),
-      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s.'),
+      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Wat Mando TV op een LG-tv doet', 'Het werkt met LG Smart-tv’s met webOS, dus met de meeste modellen sinds 2014, inclusief LED, NanoCell, QNED en OLED. Het biedt je de pijltoetsen, OK, Terug, Start, volume, zenders, dempen, afspeelbediening en een toetsenbord om te typen in YouTube, Netflix of de browser. De lijst met apps en de lijst met ingangen zijn ook gratis. Met Pro krijg je er een aanwijzer bij zoals bij de Magic Remote.'),
       ('Wat Mando TV niet doet', 'Het bedient geen LG-huishoudapparaten, gebruikt je LG-account niet en vervangt de LG-accountdiensten op de tv niet. Het is een afstandsbediening, geen smarthome-hub.'),
       ('Privacy en advertenties', 'Mando TV heeft geen advertenties en geen account. Het praat alleen binnen je thuisnetwerk met de tv en slaat de verbindingssleutel versleuteld op je apparaat op. Alle functies vind je op de pagina [LG afstandsbediening-app](@lg).'),
-      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s.'),
+      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini-afstandsbediening (Pro)', 'Een klein afstandsbedieningvenster dat boven alle andere vensters blijft. Zo verander je het volume of pauzeer je zonder je werk te onderbreken.'),
       ('Typen op de tv vanaf de pc', 'Het schermtoetsenbord van een tv is traag. In Mando TV typ je met je echte toetsenbord en de tekst komt in het zoekveld van de tv terecht. Dit onderdeel is gratis.'),
       ('Meer details', 'De handleiding stap voor stap vind je bij [Tv bedienen met je pc](@pc). Voor de telefoon lees je [Telefoon als afstandsbediening via wifi](@wifi).'),
-      ('Gratis en Pro', 'De pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s. Op Windows koop je Pro via de Microsoft Store.'),
+      ('Gratis en Pro', 'De pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement. Op Windows koop je Pro via de Microsoft Store.'),
       ('Spraakopdrachten vanaf de pc (Pro)', 'Met Pro kun je met de tv praten via de pc-microfoon. De spraak wordt rechtstreeks op de pc herkend: daarvoor heb je geen internet nodig en hoef je niets in Windows in te stellen. Wat je zegt, verlaat de pc nooit en wordt niet opgeslagen. Alleen bij zeer oude processors valt de app terug op de spraakinvoer van Windows. Daarvoor moet online spraakherkenning aanstaan in de privacy-instellingen en moet je taal in Windows zijn toegevoegd.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Werkt met deze tv’s', 'LG webOS, Samsung Tizen (bouwjaar 2016 en nieuwer), Roku TV en Roku-spelers, Google TV en Android TV en Fire TV. De merkpagina’s zijn [Samsung](@samsung), [LG](@lg), [Roku](@roku) en [Android TV](@android).'),
       ('Waarom het om het lokale netwerk vraagt', 'De iPhone blokkeert de toegang van apps tot apparaten in je thuisnetwerk, tenzij je het toestaat. Verschijnt de tv niet in de lijst, open dan Instellingen > Mando TV en zet “Lokaal netwerk” aan. De app communiceert alleen met je tv binnen je thuisnetwerk.'),
       ('Waarom Mando TV en niet de app van de fabrikant', 'Elk tv-merk heeft zijn eigen app en wil een eigen installatie of een eigen account. Mando TV is één app voor iedereen, zonder account.'),
-      ('Gratis en Pro op de iPhone', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s, rechtstreeks in de app.'),
+      ('Gratis en Pro op de iPhone', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement. Je koopt Pro één keer, rechtstreeks in de app.'),
     ],
     marca=None,
     faq=[
-      ('Is Mando TV gratis op de iPhone?', 'De download is gratis, zonder advertenties. De basisafstandsbediening is gratis, net als het openen van apps en het wisselen van ingangen. Extra’s horen bij Mando TV Pro, een optionele eenmalige aankoop.'),
+      ('Is Mando TV gratis op de iPhone?', 'De download is gratis, zonder advertenties. De basisafstandsbediening is gratis, net als het openen van apps en het wisselen van ingangen. Extra’s zoals het touchpad, de spraakopdrachten en de routines horen bij Mando TV Pro, een eenmalige aankoop.'),
       ('Werkt het op de iPad?', 'Ja. Dezelfde app draait op iPhone en iPad.'),
       ('Heeft een afstandsbediening-app voor iPhone Bluetooth of een infraroodzender nodig?', 'Niet op de iPhone. iPhones hebben geen infraroodzender, dus infraroodbediening is daar niet beschikbaar, en de Bluetooth-optie is er alleen voor Android 9 of nieuwer, niet voor de iPhone. Op de iPhone bedient Mando TV Smart-tv’s en Apple TV (bèta) via je wifi thuis.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Gebruik de pijltoetsen, OK, Terug, Start, afspeeltoetsen en het toetsenbord om te zoeken.',
     ],
     extra=[
-      ('Ondersteunde Fire TV-apparaten', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube en tv’s met ingebouwde Fire TV. De ondersteuning is nieuw en we hebben tot nu toe maar weinig echte apparaten kunnen testen. Werkt er iets niet zoals verwacht, schrijf ons dan je model via de helppagina.'),
+      ('Ondersteunde Fire TV-apparaten', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube en tv’s met ingebouwde Fire TV, zoals tv’s uit de Amazon Fire TV Edition-reeks en sommige Hisense-modellen. De ondersteuning is nieuw en we hebben tot nu toe maar weinig echte apparaten kunnen testen. Werkt er iets niet zoals verwacht, schrijf ons dan je model via de helppagina.'),
       ('Fire TV aanzetten', 'Mando TV zet een Fire TV niet via het netwerk aan. Zet de tv aan met de aan-knop op het toestel: een ingestoken Fire TV Stick of Cube wordt meestal wakker via HDMI-CEC, en bij een tv met ingebouwde Fire TV is de tv de Fire TV. Daarna bedien je hem vanaf je telefoon.'),
       ('Als je Fire TV niet verschijnt', 'Zorg dat beide apparaten op hetzelfde wifi-netwerk zitten en de Fire TV wakker is. Sta op een iPhone “Lokaal netwerk” toe voor Mando TV in de instellingen. Zie [Je telefoon vindt de tv niet](@not-found).'),
       ('Helemaal geen afstandsbediening?', 'De Fire TV moet de pincode op het scherm tonen, dus tv en Fire TV moeten aanstaan en een beeld tonen. Staat de tv op een verkeerde ingang, wissel dan met de toetsen op de tv. Zie [Ingang wisselen zonder afstandsbediening](@hdmi).'),
-      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfers, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s.'),
+      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfers, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Probeer eerst de tv-afstandsbediening (HDMI-CEC)', 'Veel tv-afstandsbedieningen kunnen een Fire TV Stick bedienen via HDMI-CEC. Is de Fire TV-interface te zien, druk dan op de pijlen en OK op de afstandsbediening van de tv. Gebeurt er niets, zet CEC dan aan in de instellingen van de tv (Anynet+ bij Samsung, SIMPLINK bij LG, BRAVIA Sync bij Sony) en op de Fire TV de HDMI-CEC-apparaatbediening in de weergave-instellingen (“Weergave en geluid”).'),
       ('Als je van wifi bent gewisseld', 'Zonder afstandsbediening kun je het nieuwe wifi-wachtwoord niet op de Fire TV invoeren, maar er is een uitweg: maak op een tweede telefoon een hotspot met exact dezelfde naam en hetzelfde wachtwoord als je oude wifi. De Fire TV maakt er automatisch verbinding mee. Verbind de telefoon met Mando TV daarmee, koppel hem met de pincode, ga dan op de Fire TV naar Instellingen > Netwerk en kies je nieuwe wifi-netwerk. Verbind ten slotte ook je telefoon met het nieuwe wifi-netwerk.'),
       ('Een vervangende afstandsbediening koppelen', 'De meeste nieuwe Fire TV-afstandsbedieningen koppel je door de Start-toets ongeveer 10 seconden ingedrukt te houden, in de buurt van de Fire TV. Lukt het niet, open dan Instellingen > Controllers en Bluetooth-apparaten > Amazon Fire TV-afstandsbedieningen > Nieuwe afstandsbediening toevoegen. Dit menu bereik je ook vanaf je telefoon met Mando TV.'),
-      ('Fire TV ingebouwd in de tv', 'Bij tv’s met ingebouwde Fire TV werken dezelfde stappen, want de tv zelf is de Fire TV.'),
+      ('Fire TV ingebouwd in de tv', 'Bij tv’s met ingebouwde Fire TV, zoals veel modellen van Insignia en Toshiba, werken dezelfde stappen, want de tv zelf is de Fire TV.'),
       ('Voordat je begint', 'De ondersteuning voor Fire TV is nieuw in Mando TV. Werk de app eerst bij. Reageert je model niet zoals verwacht, schrijf ons dan via de [helppagina](@soporte) en noem het model.'),
       ('Gratis en Pro', 'De afstandsbediening kun je gratis downloaden en gebruiken, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'Zodra de tv aanstaat, stel hem zo in dat je de knop niet meer nodig hebt: zet HDMI-CEC en het aanzetten via het netwerk aan, beide hieronder uitgelegd.',
     ],
     extra=[
-      ('Waar de aan-/uitknop zit, per merk', 'Samsung: een bedieningsknop of joystick onder het midden van het scherm of aan de achterkant bij een onderhoek. LG: bij de meeste modellen een joystickknop onder het LG-logo. TCL en Hisense: meestal een kleine knop onder het midden van het scherm of aan de achterkant in de buurt van een onderhoek. Sony: aan de achterkant of aan een zijrand, onderaan dicht bij de rand. De posities verschillen per model. Kun je hem niet vinden, zoek dan de handleiding op met het modelnummer op het label aan de achterkant.'),
+      ('Waar de aan-/uitknop zit, per merk', 'Samsung: een bedieningsknop of joystick onder het midden van het scherm of aan de achterkant bij een onderhoek. LG: bij de meeste modellen een joystickknop onder het LG-logo. TCL en Hisense: meestal een kleine knop onder het midden van het scherm of aan de achterkant in de buurt van een onderhoek. Sony: aan de achterkant of aan een zijrand, onderaan dicht bij de rand. Vizio: aan de achterkant, linksonder of rechtsonder, of aan de zijkant. De posities verschillen per model. Kun je hem niet vinden, zoek dan de handleiding op met het modelnummer op het label aan de achterkant.'),
       ('De tv aanzetten via een console of streamingapparaat (HDMI-CEC)', 'Met HDMI-CEC aan zet het aanzetten van een PlayStation, een Xbox, een Roku-speler, een Fire TV Stick of een Chromecast ook de tv aan en wisselt hij naar de juiste ingang. Elk merk noemt de instelling anders: Anynet+ bij Samsung, SIMPLINK bij LG, BRAVIA Sync bij Sony en CEC bij de meeste andere. Meer in [Tv aanzetten en naar de HDMI van je spelconsole wisselen](@console).'),
       ('De tv aanzetten via je telefoon', 'Smart-tv’s kunnen via wifi worden wakker gemaakt als je dat één keer toestaat, en dan zet Mando TV ze vanaf je telefoon aan. Zet bij Samsung “Aan met mobiele telefoon” aan onder Instellingen > Algemeen > Netwerk > Expertinstellingen. Zet bij LG “Tv aanzetten met mobiele telefoon” aan ([stap voor stap](@lg-on)). Zet bij een Roku TV “Snelle tv-start” aan onder Instellingen > Systeem > Stroom. Zoek bij Google TV en Android TV naar Wake on LAN of “Inschakelen via netwerk”, als je model dat heeft. Dat doe je één keer, met de tv aan.'),
       ('Als je geen knop vindt', 'Sommige nieuwere tv’s verstoppen de enige knop zo goed dat het lijkt alsof er geen is. Zoek naar een kleine verhoging of een lichtsensorgebied onder het scherm: de knop zit er vaak vlak naast. Via wifi heeft Mando TV nodig dat de tv één keer aan is geweest en verbonden is. Infrarood is de uitzondering: op een Android-telefoon met infraroodzender kan Mando TV een tv aanzetten die nooit is ingesteld, zolang je de telefoon op de tv richt. Infrarood is nieuw en werkt met de merken in de codelijst van de app.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Een TCL-tv vanaf je telefoon aanzetten', 'Zet bij TCL Roku TV “Snelle tv-start” aan onder Instellingen > Systeem > Stroom. Zoek bij TCL Google TV in de netwerk- of stroominstellingen naar een optie voor Wake on LAN, “Inschakelen via netwerk” of externe start. Sommige modellen bieden dit niet. Zet de tv in dat geval aan met de fysieke aan-/uitknop, meestal onderaan in het midden of aan de achterkant.'),
       ('Als je TCL niet verschijnt', 'Controleer of telefoon en tv op hetzelfde wifi-netwerk zitten. Routers met aparte 2,4 GHz- en 5 GHz-netwerken kunnen apparaten voor elkaar verbergen. Sta op de iPhone “Lokaal netwerk” toe voor Mando TV in de instellingen. Je kunt de tv ook toevoegen door zijn IP-adres in te voeren. Lees [Je telefoon vindt de tv niet](@not-found).'),
       ('Meer over je TCL', 'Voor TCL met Roku TV zie [Roku afstandsbediening-app](@roku), voor TCL met Google TV of Android TV [Android TV afstandsbediening-app](@android).'),
-      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfers, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s.'),
+      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfers, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense met Fire TV', 'De ondersteuning voor Fire TV is nieuw in Mando TV. Werk de app bij naar de nieuwste versie uit je store. Hoe het koppelen met pincode werkt, staat op de pagina [Fire TV afstandsbediening-app](@firetv). Werkt er iets niet zoals verwacht, schrijf ons dan via de helppagina en noem je model.'),
       ('Hisense met VIDAA', 'De meeste VIDAA-modellen werken: toetsen, volume, toetsenbord, apps en ingangen. Enkele nieuwere VIDAA-modellen accepteren alleen de officiële Hisense-app. Mando TV herkent dat bij het verbinden en zegt het je duidelijk, in plaats van stilzwijgend te falen. In dat geval zijn de Hisense-app voor je model, de toetsen op de tv of de originele afstandsbediening de juiste weg.'),
       ('Een Hisense vanaf je telefoon aanzetten', 'Zet bij Hisense Roku TV “Snelle tv-start” aan onder Instellingen > Systeem > Stroom. Zoek bij Google TV naar een optie voor Wake on LAN of “Inschakelen via netwerk”. Bestaat die niet, gebruik dan de aan-/uitknop op de tv.'),
-      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Mando TV Pro is een optionele eenmalige aankoop voor extra’s.'),
+      ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan- of uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement.'),
     ],
     marca=None,
     faq=[

@@ -72,6 +72,7 @@ INDICE = dict(
   h1='Guides : utiliser le téléphone comme télécommande',
   intro='Des étapes simples pour connecter, allumer et dépanner la télécommande de votre TV Samsung, LG, Roku ou Android TV avec Mando TV.',
   h2_guias='Tous les guides', h2_marcas='Application télécommande par marque',
+  marcas_extra=[('sony', 'Télécommande Sony'), ('philips', 'Télécommande Philips')],
 )
 
 MARCAS = [
@@ -96,7 +97,7 @@ MARCAS = [
       'Ouvrez Mando TV : votre TV LG apparaît toute seule dans la liste. Touchez-la.',
       "Un message apparaît sur l'écran de la TV pour demander l'autorisation. Acceptez-le avec votre télécommande habituelle (seulement la première fois).",
     ],
-    encender="Sur la TV LG, ouvrez les Paramètres et cherchez « Téléviseur en marche avec mobile » (dans Tous les paramètres > Général > Appareils > Appareils externes). Activez « Allumer via Wi-Fi ». Si « Démarrage rapide+ » existe, activez-le aussi. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
+    encender="Sur la TV LG, ouvrez les Paramètres et cherchez « Téléviseur en marche avec mobile » (dans Général > Appareils > Appareils externes ; sur les modèles plus anciens, dans Connexion > Gestion de la connexion mobile). Activez « Allumer via Wi-Fi ». Si « Démarrage rapide+ » existe, activez-le aussi. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
     faq=[
       ('Ai-je besoin de la Magic Remote pour utiliser Mando TV ?', "Seulement la première fois, pour accepter le message sur l'écran. Ensuite, votre téléphone suffit."),
       ("Mando TV remplace-t-elle l'application LG ThinQ ?", "Pour piloter la TV, oui : il ne faut ni compte LG ni enregistrer la TV. Mando TV se connecte directement par votre Wi-Fi."),
@@ -135,6 +136,8 @@ MARCAS = [
       ('Fonctionne-t-elle avec les anciennes TV Samsung ?', "Elle fonctionne avec les TV Samsung sous Tizen, modèles 2016 et plus récents. Les modèles antérieurs utilisent un autre système que nous ne prenons pas encore en charge."),
     ],
     guias=[('samsung-lost', "TV Samsung sans la télécommande d'origine : utilisez votre téléphone"),
+           ('smartthings', 'Alternative à la télécommande SmartThings'),
+           ('turn-on', 'Allumer la TV sans télécommande'),
            ('hdmi', "Changer d'entrée HDMI sur une TV sans télécommande"),
            ('guias', 'Tous les guides pour piloter la TV avec le téléphone')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -157,7 +160,7 @@ MARCAS = [
     pasos=[
       'Connectez le téléphone et le Roku au même réseau Wi-Fi.',
       'Ouvrez Mando TV : votre Roku apparaît tout seul dans la liste. Touchez-le.',
-      "S'il ne se connecte pas, sur le Roku allez dans Paramètres > Système > Paramètres système avancés > Contrôle par applications mobiles, et réglez l'accès au réseau sur Par défaut ou Permissif.",
+      "S'il ne se connecte pas, sur le Roku allez dans Paramètres > Système > Paramètres système avancés > Contrôle par applications mobiles, et réglez l'accès au réseau sur Par défaut ou Permissif (sur les versions récentes du logiciel Roku, réglez « Contrôle par applications mobiles » sur Activé).",
     ],
     encender="Sur les Roku TV, activez « Démarrage rapide de la TV » dans Paramètres > Système > Alimentation. Les lecteurs Roku branchés sur une autre TV ne peuvent pas être allumés ainsi. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
     faq=[
@@ -167,6 +170,9 @@ MARCAS = [
     ],
     guias=[('roku-403', "L'application Roku ne fonctionne pas (erreur 403)"),
            ('roku-lost', 'Télécommande Roku perdue : utilisez votre téléphone'),
+           ('tcl', 'Télécommande TCL'),
+           ('hisense', 'Télécommande Hisense'),
+           ('philips', 'Télécommande Philips'),
            ('guias', 'Tous les guides pour piloter la TV avec le téléphone')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV et Google TV',
     titulo='Télécommande Android TV sur téléphone | Mando TV',
@@ -189,7 +195,7 @@ MARCAS = [
       'Ouvrez Mando TV : votre Android TV apparaît tout seul dans la liste. Touchez-le.',
       "La TV affiche un code de 6 caractères. Saisissez-le dans Mando TV (seulement la première fois).",
     ],
-    encender="Cela dépend du fabricant. Cherchez dans les paramètres réseau ou d'alimentation l'option « Wake on LAN », « Allumer par le réseau » ou « Activation par le réseau ». Certains modèles ne l'ont pas. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
+    encender="Cela dépend du fabricant. Cherchez dans les paramètres réseau ou d'alimentation l'option « Wake on LAN », « Allumer par le réseau », « Activation par le réseau » ou « Remote start ». Certains modèles ne l'ont pas. Ensuite, quand vous toucherez la TV éteinte dans Mando TV, l'application vous demandera si vous voulez l'allumer et se connectera toute seule.",
     faq=[
       ('Fonctionne-t-elle avec Chromecast avec Google TV ?', "Oui, l'association se fait avec le code de 6 caractères qui apparaît à l'écran."),
       ("En quoi est-elle différente de l'application Google TV ?", "Mando TV n'a pas besoin de compte Google, fonctionne aussi depuis Windows et pilote les TV LG, Samsung et Roku depuis la même application."),
@@ -197,6 +203,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', "Android TV demande un code d'appairage : que faire"),
            ('androidtv', 'Android TV sans télécommande : utilisez votre téléphone'),
+           ('googletv-alt', "Alternative à l'appli télécommande Google TV"),
+           ('sony', 'Télécommande Sony'),
+           ('tcl', 'Télécommande TCL'),
+           ('hisense', 'Télécommande Hisense'),
+           ('philips', 'Télécommande Philips'),
            ('guias', 'Tous les guides pour piloter la TV avec le téléphone')]),
 ]
 
@@ -225,7 +236,7 @@ GUIAS = [
     faq=[
       ("Puis-je allumer la TV avec mon téléphone si je ne l'ai jamais connectée ?", "Cette première fois, allumez-la avec le bouton de la TV. Après avoir connecté votre téléphone et activé l'allumage par le réseau dans les paramètres de la TV, vous pourrez l'allumer depuis l'application."),
       ('Dois-je acheter une nouvelle télécommande ?', "Pas forcément. Avec Mando TV, vous avez gratuitement les touches, le volume, le clavier et l'allumage. Si vous préférez quand même une télécommande physique, cherchez le modèle exact de votre TV."),
-      ("Cela fonctionne-t-il si la TV n'a pas de Wi-Fi ?", "Non. Le téléphone et la TV doivent être sur le même réseau Wi-Fi. Une TV qui n'est pas une Smart TV ne peut pas être pilotée avec Mando TV."),
+      ("Cela fonctionne-t-il si la TV n'a pas de Wi-Fi ?", "Le plus souvent non. Le téléphone et la TV doivent en général être sur le même réseau Wi-Fi. Les exceptions sont l'infrarouge sur les téléphones Android avec émetteur infrarouge, qui pilote aussi les TV qui ne sont pas des Smart TV, et le Bluetooth en bêta sur Android 9 ou plus récent, qui fonctionne sans Wi-Fi avec Google TV, Android TV et Fire TV."),
     ]),
   dict(clave='lost-lg', corto='Télécommande LG perdue',
     titulo='Télécommande LG perdue ? Utilisez votre téléphone',
@@ -288,7 +299,7 @@ GUIAS = [
       "Téléchargez Mando TV, qui est gratuite et ne demande pas de compte Google, puis ouvrez-la. Touchez votre TV dans la liste.",
       "La TV affiche un code de 6 lettres et chiffres. Saisissez-le sur votre téléphone et touchez Associer. Vous n'avez pas besoin de la télécommande pour cela.",
       "Vous pouvez maintenant utiliser les flèches, OK, Retour, Accueil, le volume, le muet et le clavier. Ils sont gratuits, tout comme la liste des applications. Le pavé tactile est Pro.",
-      "Pour l'allumer depuis votre téléphone la prochaine fois, cherchez « Wake on LAN », « Allumer par le réseau » ou « Activation par le réseau » dans les paramètres réseau ou d'alimentation de la TV.",
+      "Pour l'allumer depuis votre téléphone la prochaine fois, cherchez « Wake on LAN », « Allumer par le réseau », « Activation par le réseau » ou « Remote start » dans les paramètres réseau ou d'alimentation de la TV.",
     ],
     extra=[
       ("Si votre TV ne s'allume pas depuis le téléphone", "Toutes les Android TV ne peuvent pas s'allumer par le réseau ; cela dépend du fabricant et du modèle. Si la vôtre n'a pas cette option, allumez-la avec le bouton de la TV et continuez depuis votre téléphone. Vous pouvez l'éteindre depuis l'application."),
@@ -309,7 +320,7 @@ GUIAS = [
     intro="Vous pouvez allumer une TV LG avec votre téléphone, mais il faut d'abord activer un réglage sur la TV. Une fois cela fait, votre téléphone allume la TV LG via votre réseau Wi-Fi, sans télécommande. Cela prend cinq minutes et vous ne le faites qu'une fois.",
     pasos=[
       'Connectez votre téléphone et la TV LG au même réseau Wi-Fi.',
-      "Sur la TV, ouvrez les Paramètres et cherchez « Téléviseur en marche avec mobile ». Il se trouve dans Tous les paramètres > Général > Appareils > Appareils externes.",
+      "Sur la TV, ouvrez les Paramètres et cherchez « Téléviseur en marche avec mobile ». Il se trouve dans Général > Appareils > Appareils externes (sur les modèles plus anciens, Connexion > Gestion de la connexion mobile).",
       "Activez « Allumer via Wi-Fi ». Si votre TV est connectée par un câble réseau, activez plutôt l'option du câble.",
       'Si votre TV a « Démarrage rapide+ », activez-le aussi.',
       "TV allumée, ouvrez Mando TV sur votre téléphone et touchez votre TV LG dans la liste. Acceptez le message qui apparaît à l'écran. C'est ainsi que l'application apprend à la réveiller.",
@@ -548,7 +559,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
           <p>La TV demande si vous autorisez la connexion de Mando TV. Choisissez « Autoriser » avec la télécommande. Si vous avez refusé par erreur, allez dans Paramètres > Général > Gestionnaire de périphériques externes > Gestionnaire de connexion de périphérique et changez en autorisé.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku ne demande pas d'autorisation. Si la connexion échoue, sur le Roku allez dans Paramètres > Système > Paramètres système avancés > Contrôle par applications mobiles et laissez l'accès au réseau sur Par défaut ou Permissif.</p>
+          <p>Roku ne demande pas d'autorisation. Si la connexion échoue, sur le Roku allez dans Paramètres > Système > Paramètres système avancés > Contrôle par applications mobiles et laissez l'accès au réseau sur Par défaut ou Permissif (sur les versions récentes du logiciel Roku, réglez « Contrôle par applications mobiles » sur Activé).</p>
         </details>
         <details><summary>Android TV et Google TV</summary>
           <p>La TV affiche un code de 6 caractères. Saisissez-le dans Mando TV exactement comme il apparaît. Cela fonctionne pour Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast avec Google TV et d'autres sous Android TV.</p>
@@ -559,7 +570,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
       <p>Mando TV allume la TV via votre réseau domestique. Il faut deux choses : vous êtes connecté au moins une fois avec la TV allumée, et l'allumage par le réseau est activé sur la TV. Le nom du réglage change selon le modèle ; voici les plus courants :</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Cherchez « Téléviseur en marche avec mobile » dans les Paramètres (dans Tous les paramètres > Général > Appareils > Appareils externes) et activez « Allumer via Wi-Fi ». Si « Démarrage rapide+ » existe, activez-le aussi.</p>
+          <p>Cherchez « Téléviseur en marche avec mobile » dans les Paramètres (dans Général > Appareils > Appareils externes ; sur les modèles plus anciens, dans Connexion > Gestion de la connexion mobile) et activez « Allumer via Wi-Fi ». Si « Démarrage rapide+ » existe, activez-le aussi.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Activez « Allumer avec un appareil mobile » dans Paramètres > Général > Réseau > Paramètres d'expert.</p>
@@ -568,7 +579,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trouver la TV</h2>
           <p>Sur les Roku TV, activez « Démarrage rapide de la TV » dans Paramètres > Système > Alimentation. Les lecteurs Roku branchés sur une TV ne peuvent pas être allumés ainsi.</p>
         </details>
         <details><summary>Android TV et Google TV</summary>
-          <p>Cela dépend du fabricant. Cherchez « Wake on LAN », « Allumer par le réseau » ou « Activation par le réseau » dans les paramètres réseau ou d'alimentation. Certains modèles ne l'ont pas.</p>
+          <p>Cela dépend du fabricant. Cherchez « Wake on LAN », « Allumer par le réseau », « Activation par le réseau » ou « Remote start » dans les paramètres réseau ou d'alimentation. Certains modèles ne l'ont pas.</p>
         </details>
       </div>
 
@@ -712,14 +723,14 @@ GUIAS += [
         ['Infrarouge pour anciennes TV', 'Gratuit sur les téléphones Android avec émetteur infrarouge (nouveau)', 'Certaines applis, uniquement sur les téléphones avec émetteur infrarouge'],
         ['Bluetooth', 'Bêta sur Android 9 ou plus récent, gratuit', "Varie selon l'appli"],
         ['Photos et vidéos vers la TV', "Pro, en Wi-Fi (pas de recopie d'écran)", "Varie selon l'appli"],
-        ['Téléphones et ordinateurs', 'iPhone, iPad et Windows, et Android en accès anticipé', 'Varie'],
-        ["Recopie de l'écran", "Gratuite sur iPhone et iPad, via Recopie de l'écran dans le Centre de contrôle (TV compatibles AirPlay)", 'Certaines applis le proposent'],
+        ['Téléphones et ordinateurs', 'iPhone, iPad, Mac et Windows, et Android en accès anticipé', 'Varie'],
+        ["Recopie de l'écran", "Gratuite sur iPhone, iPad et Windows avec la fonction intégrée de chacun. Sous Windows, Pro peut aussi recopier l'écran du PC sur les TV LG, Samsung, Hisense et Android TV (bêta)", 'Certaines applis le proposent'],
       ],
       nota="Mando TV n'est comparée à aucune appli en particulier. Consultez la fiche de chaque appli pour ses prix actuels."),
     extra=[
-      ('Ce que Mando TV ne fait pas', "Elle n'a pas de recopie d'écran à elle : sur iPhone et iPad, elle vous guide vers Recopie de l'écran dans le Centre de contrôle, la fonction de l'iPhone lui-même, qui marche avec les TV compatibles AirPlay. Avec Mando TV Pro, elle peut aussi envoyer des photos et des vidéos à la TV via le Wi-Fi de la maison. Elle contrôle les Smart TV via le Wi-Fi de la maison. Une TV qui n'est pas une Smart TV peut être contrôlée par infrarouge depuis un téléphone Android avec un émetteur infrarouge. Sur Android 9 ou plus récent, le téléphone peut aussi se connecter à Google TV, Android TV et Fire TV via Bluetooth comme clavier et télécommande, sans Wi-Fi. Cette option est en bêta et gratuite."),
+      ('Ce que Mando TV ne fait pas', "Sur iPhone et iPad, elle vous guide vers Recopie de l'écran dans le Centre de contrôle, la fonction de l'iPhone lui-même, qui marche avec les TV compatibles AirPlay. Sous Windows, elle ouvre Diffuser (Windows + K), et Mando TV Pro peut envoyer l'écran du PC via votre Wi-Fi vers les TV LG, Samsung, Hisense et Android TV (bêta, avec quelques secondes de décalage et sans son). Avec Mando TV Pro, elle peut aussi envoyer des photos et des vidéos à la TV via le Wi-Fi de la maison. Elle contrôle les Smart TV via le Wi-Fi de la maison. Une TV qui n'est pas une Smart TV peut être contrôlée par infrarouge depuis un téléphone Android avec un émetteur infrarouge. Sur Android 9 ou plus récent, le téléphone peut aussi se connecter à Google TV, Android TV et Fire TV via Bluetooth comme clavier et télécommande, sans Wi-Fi. Cette option est en bêta et gratuite."),
       ("Comment Mando TV gagne de l'argent", "Pas avec des publicités ni avec vos données : l'appli n'en collecte aucune. Mando TV est financée par Pro, un achat unique optionnel pour les extras. La télécommande de base est gratuite."),
-      ('Sur les appareils que vous avez déjà', "iPhone et iPad depuis l'App Store, PC Windows depuis le Microsoft Store, et Android via un accès anticipé gratuit sur Google Play. Voir [appli télécommande TV pour iPhone](@iphone) et [appli télécommande TV pour Windows](@windows)."),
+      ('Sur les appareils que vous avez déjà', "iPhone, iPad et Mac depuis l'App Store, PC Windows depuis le Microsoft Store, et Android via un accès anticipé gratuit sur Google Play. Voir [appli télécommande TV pour iPhone](@iphone) et [appli télécommande TV pour Windows](@windows)."),
       ('Confidentialité', "Pas de compte ni de suivi dans l'appli. Elle communique avec la TV à l'intérieur de votre réseau domestique, et les clés de connexion restent chiffrées sur votre appareil. Détails dans la [politique de confidentialité](@privacidad)."),
     ],
     marca=None,
@@ -745,7 +756,7 @@ GUIAS += [
       ("Où l'application officielle Roku est plus adaptée", "Gardez l'application Roku pour ce qu'elle offre en plus de la télécommande, comme parcourir et ajouter des chaînes depuis la boutique de chaînes Roku, ainsi que ses propres fonctions de diffusion et d'écoute privée. Utilisez les deux si vous voulez. Elles peuvent fonctionner sur le même téléphone."),
       ('TV Roku et lecteurs Roku', "Les deux fonctionnent. Cela inclut les modèles de TV Roku de TCL, Hisense, Philips et d'autres, ainsi que les Roku Express, Streaming Stick et Ultra. Les détails sont sur la [page de l'application télécommande Roku](@roku)."),
       ("Si l'application Roku ne fonctionne plus", "Si les touches ont cessé de répondre, le Roku bloque probablement le contrôle par les applications. Le guide [L'appli Roku ne fonctionne pas](@roku-403) explique comment corriger ce réglage."),
-      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, volume, chaînes, touches numériques, clavier, ouverture d'applications, changement d'entrée, allumage et extinction sont gratuits, sans pub ni abonnement. Mando TV Pro est un achat unique optionnel pour les fonctions supplémentaires."),
+      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, volume, chaînes, touches numériques, clavier, ouverture d'applications, changement d'entrée, allumage et extinction sont gratuits, sans pub ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement."),
     ],
     marca='roku',
     faq=[
@@ -770,7 +781,7 @@ GUIAS += [
       ('Ce que fait Mando TV sur une TV LG', 'Elle fonctionne avec les Smart TV LG sous webOS, ce qui couvre la plupart des modèles depuis 2014, y compris LED, NanoCell, QNED et OLED. Elle vous donne le pavé directionnel, OK, Retour, Accueil, le volume, les chaînes, le muet, les contrôles de lecture et un clavier pour taper dans YouTube, Netflix ou le navigateur. La liste des applications et celle des entrées sont aussi gratuites. Avec Pro, vous avez aussi un pointeur comme la Magic Remote.'),
       ('Ce que Mando TV ne fait pas', "Elle ne contrôle pas l'électroménager LG, elle n'utilise pas votre compte LG et elle ne remplace pas les services du compte LG sur la TV. C'est une télécommande, pas un hub domotique."),
       ('Confidentialité et publicité', "Mando TV n'a ni publicité ni compte. Elle communique avec la TV à l'intérieur de votre réseau domestique et garde la clé de connexion chiffrée sur votre propre appareil. La page [application télécommande LG](@lg) détaille toutes les fonctions."),
-      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture des applications, le changement d'entrées et la mise sous/hors tension sont gratuits, sans publicité ni abonnement. Mando TV Pro est un achat unique optionnel pour les extras."),
+      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture des applications, le changement d'entrées et la mise sous/hors tension sont gratuits, sans publicité ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement."),
     ],
     marca='lg',
     faq=[
@@ -845,7 +856,7 @@ GUIAS += [
       ('Mini-télécommande (Pro)', 'Une petite fenêtre de télécommande qui reste au premier plan par-dessus les autres fenêtres, pour changer le volume ou mettre en pause sans quitter ce que vous faites.'),
       ('Taper du texte sur la TV depuis le PC', "Le clavier à l'écran d'une TV est lent. Dans Mando TV, vous tapez avec votre vrai clavier et le texte va dans la barre de recherche de la TV. Cette partie est gratuite."),
       ('Plus de détails', 'Pour la version étape par étape, consultez [comment contrôler votre TV depuis un PC Windows](@pc). Pour le contrôle via téléphone, lisez [utiliser votre téléphone comme télécommande via Wi-Fi](@wifi).'),
-      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, volume, chaînes, touches numériques, clavier, ouverture d'applications, changement d'entrée, allumage et extinction sont gratuits, sans pub ni abonnement. Mando TV Pro est un achat unique optionnel pour les extras. Sur Windows, Pro s'achète via le Microsoft Store."),
+      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, volume, chaînes, touches numériques, clavier, ouverture d'applications, changement d'entrée, allumage et extinction sont gratuits, sans pub ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement. Sur Windows, Pro s'achète via le Microsoft Store."),
       ('Commandes vocales depuis le PC (Pro)', "Avec Pro, vous pouvez parler à la TV via le microphone du PC. La reconnaissance vocale se fait sur le PC lui-même : elle ne nécessite ni internet ni modification des paramètres Windows. Ce que vous dites ne quitte jamais le PC et n'est pas stocké. Sur les processeurs très anciens, l'application utilise la saisie vocale Windows, qui nécessite l'option « Reconnaissance vocale en ligne » activée dans Paramètres > Confidentialité et sécurité > Voix et votre langue ajoutée dans Windows."),
     ],
     marca=None,
@@ -871,11 +882,11 @@ GUIAS += [
       ('Les TV compatibles', 'LG webOS, Samsung sous Tizen (2016 et après), Roku TV et lecteurs Roku, Google TV et Android TV, et Fire TV. Les pages dédiées sont [Samsung](@samsung), [LG](@lg), [Roku](@roku) et [Android TV](@android).'),
       ("Pourquoi la demande d'accès au réseau local", "L'iPhone empêche les applis de voir les appareils de votre réseau, sauf si vous l'autorisez. Si la TV n'apparaît pas dans la liste, ouvrez Réglages > Mando TV et activez « Réseau local ». L'application communique uniquement avec votre TV à l'intérieur de votre réseau domestique."),
       ("Pourquoi Mando TV et pas l'appli du fabricant", 'Chaque marque de TV a sa propre application, chacune voulant son propre compte ou configuration. Mando TV est une seule application pour toutes, sans compte.'),
-      ('Gratuit et Pro sur iPhone', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture d'applications, le changement de source et l'allumage et l'extinction sont gratuits, sans publicité ni abonnement. Mando TV Pro est un achat unique facultatif pour les fonctions supplémentaires, directement dans l'application."),
+      ('Gratuit et Pro sur iPhone', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture d'applications, le changement de source et l'allumage et l'extinction sont gratuits, sans publicité ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement. Vous achetez Pro une seule fois, directement dans l'application."),
     ],
     marca=None,
     faq=[
-      ('Mando TV est-elle gratuite sur iPhone ?', "Le téléchargement est gratuit, sans publicité. La télécommande de base est gratuite, tout comme l'ouverture d'applications et le changement de source. Les fonctions supplémentaires font partie de Mando TV Pro, un achat unique optionnel."),
+      ('Mando TV est-elle gratuite sur iPhone ?', "Le téléchargement est gratuit, sans publicité. La télécommande de base est gratuite, tout comme l'ouverture d'applications et le changement de source. Les extras comme le pavé tactile, la voix et les routines font partie de Mando TV Pro, un achat unique."),
       ('Cela fonctionne-t-il sur iPad ?', 'Oui. La même application fonctionne sur iPhone et iPad.'),
       ("Une application de télécommande iPhone a-t-elle besoin du Bluetooth ou d'un émetteur infrarouge ?", "Pas sur iPhone. Les iPhone n'ont pas d'émetteur infrarouge, le contrôle infrarouge n'est donc pas disponible, et l'option Bluetooth est uniquement pour Android 9 ou plus récent, pas pour iPhone. Sur iPhone, Mando TV contrôle les Smart TV et l'Apple TV (en bêta) via le Wi-Fi de la maison."),
     ]),
@@ -892,11 +903,11 @@ GUIAS += [
       'Utilisez les touches directionnelles, OK, Retour, Accueil, les boutons de lecture et le clavier pour taper vos recherches.',
     ],
     extra=[
-      ('Appareils Fire TV compatibles', "Fire TV Stick, Fire TV Stick 4K, Fire TV Cube et TV avec Fire TV intégré. La prise en charge est nouvelle et nous l'avons encore peu testée sur de vrais appareils. Si quelque chose ne fonctionne pas correctement, indiquez-nous votre modèle depuis la page d'aide."),
+      ('Appareils Fire TV compatibles', "Fire TV Stick, Fire TV Stick 4K, Fire TV Cube et TV avec Fire TV intégré, comme les TV Amazon Fire TV Edition et certains modèles Hisense. La prise en charge est nouvelle et nous l'avons encore peu testée sur de vrais appareils. Si quelque chose ne fonctionne pas correctement, indiquez-nous votre modèle depuis la page d'aide."),
       ('Allumer un Fire TV', "Mando TV n'allume pas un Fire TV via le réseau. Allumez la TV avec son bouton d'alimentation : un Fire TV Stick ou Cube branché dessus se réveille généralement grâce au HDMI-CEC, et sur une TV avec Fire TV intégré, la TV est le Fire TV. Contrôlez ensuite le tout depuis votre téléphone."),
       ("Si votre Fire TV n'apparaît pas", 'Vérifiez que les deux appareils sont sur le même réseau Wi-Fi et que le Fire TV est actif. Sur un iPhone, autorisez « Réseau local » pour Mando TV dans Réglages. Consultez [Votre téléphone ne trouve pas la TV](@not-found).'),
       ('Pas de télécommande du tout ?', "Le Fire TV doit afficher le code PIN à l'écran, donc la TV et le Fire TV doivent être allumés et afficher une image. Si la TV est sur une entrée incorrecte, changez-la avec les boutons de la TV. Consultez [Changer d'entrée HDMI sans télécommande](@hdmi)."),
-      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture d'applications, le changement d'entrée, l'allumage et l'extinction sont gratuits, sans publicité ni abonnement. Mando TV Pro est un achat unique facultatif pour des fonctionnalités supplémentaires."),
+      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture d'applications, le changement d'entrée, l'allumage et l'extinction sont gratuits, sans publicité ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement."),
     ],
     marca=None,
     faq=[
@@ -921,7 +932,7 @@ GUIAS += [
       ("Essayez d'abord la télécommande de la TV (HDMI-CEC)", "De nombreuses télécommandes de TV peuvent piloter un Fire TV Stick via HDMI-CEC. Avec le Fire TV à l'écran, appuyez sur les flèches et OK avec la télécommande de la TV. Si rien ne se passe, activez le CEC dans les réglages de la TV (Anynet+ chez Samsung, SIMPLINK chez LG, BRAVIA Sync chez Sony) et sur le Fire TV, dans les réglages d'affichage et de son (« Display & Sounds »), l'option de contrôle des appareils HDMI CEC."),
       ('Si vous avez déménagé ou changé de Wi-Fi', "Sans télécommande, vous ne pouvez pas saisir le nouveau mot de passe Wi-Fi sur le Fire TV, mais il y a une solution : sur un deuxième téléphone, créez un point d'accès avec exactement le même nom et mot de passe que votre ancien Wi-Fi. Le Fire TV s'y connecte automatiquement. Connectez le téléphone avec Mando TV à ce point d'accès, appairez-le avec le PIN, puis allez dans Paramètres > Réseau sur le Fire TV pour choisir votre nouveau Wi-Fi. Enfin, connectez aussi votre téléphone au nouveau Wi-Fi."),
       ('Appairer une télécommande de remplacement', "La plupart des nouvelles télécommandes Fire TV s'appairent en maintenant le bouton Accueil enfoncé environ 10 secondes près du Fire TV. Si cela ne fonctionne pas, ouvrez Paramètres > Manettes et appareils Bluetooth > Télécommandes Amazon Fire TV > Ajouter une nouvelle télécommande. Vous pouvez accéder à ce menu depuis votre téléphone avec Mando TV."),
-      ('Fire TV intégré dans la TV', 'Sur les TV avec Fire TV intégré, les mêmes étapes fonctionnent car la TV est le Fire TV.'),
+      ('Fire TV intégré dans la TV', 'Sur les TV avec Fire TV intégré, comme de nombreux modèles Insignia et Toshiba, les mêmes étapes fonctionnent car la TV est le Fire TV.'),
       ('Avant de commencer', "Fire TV est arrivé récemment dans Mando TV : mettez d'abord l'application à jour. Si votre modèle ne se comporte pas correctement, contactez-nous depuis la [page d'aide](@soporte) en indiquant le nom du modèle."),
       ('Gratuit et Pro', 'La télécommande est gratuite à télécharger et à utiliser, sans pub ni abonnement. Mando TV Pro est un achat unique facultatif pour des fonctionnalités supplémentaires.'),
     ],
@@ -944,7 +955,7 @@ GUIAS += [
       "Une fois la TV allumée, configurez-la pour ne plus avoir besoin du bouton : activez le HDMI-CEC et l'allumage par réseau, expliqués ci-dessous.",
     ],
     extra=[
-      ("Où se trouve le bouton d'alimentation par marque", "Samsung : un bouton de contrôle ou un joystick sous le centre de l'écran, ou à l'arrière sur un coin inférieur. LG : un joystick sous le logo LG sur la plupart des modèles. TCL et Hisense : généralement un petit bouton sous le milieu de l'écran ou à l'arrière près d'un coin inférieur. Sony : à l'arrière ou sur un bord latéral, près du bas. L'emplacement varie selon le modèle ; si vous ne le trouvez pas, consultez le manuel avec le numéro de modèle au dos."),
+      ("Où se trouve le bouton d'alimentation par marque", "Samsung : un bouton de contrôle ou un joystick sous le centre de l'écran, ou à l'arrière sur un coin inférieur. LG : un joystick sous le logo LG sur la plupart des modèles. TCL et Hisense : généralement un petit bouton sous le milieu de l'écran ou à l'arrière près d'un coin inférieur. Sony : à l'arrière ou sur un bord latéral, près du bas. Vizio : à l'arrière, en bas à gauche ou en bas à droite, ou sur le côté. L'emplacement varie selon le modèle ; si vous ne le trouvez pas, consultez le manuel avec le numéro de modèle au dos."),
       ('Allumer la TV depuis une console ou un lecteur de streaming (HDMI-CEC)', "Avec le HDMI-CEC activé, l'allumage d'une PlayStation, d'une Xbox, d'un lecteur Roku, d'un Fire TV Stick ou d'un Chromecast allume aussi la TV et passe sur la bonne entrée. Chaque marque nomme ce réglage différemment : Anynet+ chez Samsung, SIMPLINK chez LG, BRAVIA Sync chez Sony, et CEC pour la plupart des autres. Plus de détails dans [Allumer la TV et passer à l'entrée HDMI de votre console](@console)."),
       ('Allumer la TV depuis votre téléphone', "Les Smart TV peuvent se réveiller via le Wi-Fi si vous l'autorisez une fois, puis Mando TV les allume. Sur Samsung, activez « Allumer avec un appareil mobile » dans Paramètres > Général > Réseau > Paramètres d'expert. Sur LG, activez « Téléviseur en marche avec mobile » ([pas à pas](@lg-on)). Sur une Roku TV, activez « Démarrage rapide de la TV » dans Paramètres > Système > Alimentation. Sur Google TV et Android TV, cherchez Wake on LAN ou l'allumage par réseau, si votre modèle le propose. Vous faites cela une fois, TV allumée."),
       ('Si vous ne trouvez aucun bouton', "Certaines TV récentes cachent tellement bien le seul bouton qu'il semble inexistant. Cherchez un petit renflement ou une zone de capteur lumineux sous l'écran : le bouton est souvent juste à côté. En Wi-Fi, Mando TV a besoin que la TV ait été allumée et connectée au moins une fois. L'infrarouge est l'exception : sur un téléphone Android avec émetteur infrarouge, Mando TV peut allumer une TV jamais configurée, tant que vous pointez le téléphone vers la TV. L'infrarouge est nouveau et fonctionne avec les marques de la liste de codes de l'appli."),
@@ -998,7 +1009,7 @@ GUIAS += [
       ('Allumer une TV TCL depuis le téléphone', "Sur les TCL sous Roku TV, activez « Démarrage rapide de la TV » dans Paramètres > Système > Alimentation. Sur les TCL sous Google TV, cherchez Wake on LAN, « Allumer par réseau » ou démarrage à distance dans les paramètres réseau ou d'alimentation. Certains modèles ne proposent pas cette option. Dans ce cas, allumez la TV avec le bouton physique, généralement en bas au centre ou à l'arrière."),
       ("Si votre TCL n'apparaît pas", 'Vérifiez que votre téléphone et la TV sont sur le même réseau Wi-Fi. Les routeurs séparant les réseaux 2,4 GHz et 5 GHz peuvent masquer les appareils entre eux. Sur un iPhone, autorisez « Réseau local » pour Mando TV dans Réglages. Vous pouvez aussi ajouter la TV en saisissant son adresse IP. Lisez [Votre téléphone ne trouve pas la TV](@not-found).'),
       ('Plus de détails pour votre TCL', 'Pour une TCL sous Roku TV, voir [application télécommande Roku](@roku). Pour une TCL sous Google TV ou Android TV, voir [application télécommande Android TV](@android).'),
-      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les chiffres, le clavier, l'ouverture d'applications, le changement d'entrée et l'allumage ou l'extinction sont gratuits, sans pub ni abonnement. Mando TV Pro est un achat unique facultatif pour des fonctionnalités supplémentaires."),
+      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les chiffres, le clavier, l'ouverture d'applications, le changement d'entrée et l'allumage ou l'extinction sont gratuits, sans pub ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement."),
     ],
     marca=None,
     faq=[
@@ -1023,7 +1034,7 @@ GUIAS += [
       ('Hisense avec Fire TV', "La prise en charge de Fire TV est nouvelle dans Mando TV. Mettez à jour l'application vers la dernière version depuis votre boutique, et consultez la page [appli télécommande Fire TV](@firetv) pour comprendre l'appairage par code PIN. Si quelque chose ne se comporte pas normalement, écrivez-nous depuis la page d'aide en indiquant votre modèle."),
       ('Hisense avec VIDAA', "La plupart des modèles VIDAA fonctionnent : boutons, volume, clavier, applications et entrées. Certains modèles VIDAA récents n'acceptent que l'application officielle de Hisense. Mando TV le détecte lors de la connexion et vous l'indique clairement, au lieu d'échouer silencieusement. Dans ce cas, utilisez l'application Hisense pour votre modèle, les boutons physiques de la TV ou la télécommande d'origine."),
       ('Allumer une Hisense depuis le téléphone', "Sur une Hisense Roku TV, activez « Démarrage rapide de la TV » dans Paramètres > Système > Alimentation. Sur Google TV, cherchez une option « Wake on LAN » ou « Allumer via le réseau ». Si aucune n'existe, utilisez le bouton d'alimentation physique de la TV."),
-      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, volume, chaînes, touches numériques, clavier, ouverture d'applications, changement d'entrées et allumage et extinction sont gratuits, sans publicité ni abonnement. Mando TV Pro est un achat unique facultatif pour les fonctionnalités supplémentaires."),
+      ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, volume, chaînes, touches numériques, clavier, ouverture d'applications, changement d'entrées et allumage et extinction sont gratuits, sans publicité ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement."),
     ],
     marca=None,
     faq=[

@@ -1,0 +1,155 @@
+{
+ "_nota": "Textos del video de las guías lost-tv (Short) y windows, por idioma. Los usa herramientas/video_guias.py.",
+ "web": {
+  "en": {
+   "short_h2": "Use your phone as the remote",
+   "short_caption": "15 seconds, no sound: your phone turns the volume up, moves with the arrows and OK, and types a search on the TV.",
+   "win_caption": "Mando TV in 25 seconds, no sound. The video shows the phone app; the Windows app has the same remote, and you type on the TV with your PC keyboard."
+  },
+  "es": {
+   "short_h2": "Usa tu celular como control remoto",
+   "short_caption": "15 segundos, sin sonido: tu celular sube el volumen, se mueve con las flechas y OK, y escribe una búsqueda en el TV.",
+   "win_caption": "Mando TV en 25 segundos, sin sonido. El video muestra la app del celular; la app de Windows tiene el mismo control y escribes en el TV con el teclado de tu PC."
+  },
+  "pt": {
+   "short_h2": "Use o celular como controle remoto",
+   "short_caption": "15 segundos, sem som: o celular aumenta o volume, navega com as setas e OK e digita uma busca na TV.",
+   "win_caption": "Mando TV em 25 segundos, sem som. O vídeo mostra o app do celular; o app para Windows tem o mesmo controle e você digita na TV com o teclado do PC."
+  },
+  "fr": {
+   "short_h2": "Utilisez votre téléphone comme télécommande",
+   "short_caption": "15 secondes, sans le son : votre téléphone monte le volume, se déplace avec les flèches et OK, et saisit une recherche sur la TV.",
+   "win_caption": "Mando TV en 25 secondes, sans le son. La vidéo montre l'app du téléphone ; l'app Windows a la même télécommande, et vous saisissez le texte sur la TV avec le clavier de votre PC."
+  },
+  "de": {
+   "short_h2": "Nutze dein Handy als Fernbedienung",
+   "short_caption": "15 Sekunden, ohne Ton: Dein Handy macht lauter, bewegt sich mit den Pfeilen und OK und tippt eine Suche am TV.",
+   "win_caption": "Mando TV in 25 Sekunden, ohne Ton. Das Video zeigt die Handy-App; die Windows-App hat dieselbe Fernbedienung, und du tippst am TV mit der Tastatur deines PCs."
+  },
+  "it": {
+   "short_h2": "Usa il telefono come telecomando",
+   "short_caption": "15 secondi, senza audio: il telefono alza il volume, si muove con le frecce e OK e scrive una ricerca sulla TV.",
+   "win_caption": "Mando TV in 25 secondi, senza audio. Il video mostra l'app per telefono; l'app per Windows ha lo stesso telecomando e scrivi sulla TV con la tastiera del PC."
+  },
+  "nl": {
+   "short_h2": "Gebruik je telefoon als afstandsbediening",
+   "short_caption": "15 seconden, zonder geluid: je telefoon zet het volume harder, navigeert met de pijltjes en OK en typt een zoekopdracht op de tv.",
+   "win_caption": "Mando TV in 25 seconden, zonder geluid. De video toont de telefoon-app; de Windows-app heeft dezelfde afstandsbediening en je typt op de tv met het toetsenbord van je pc."
+  },
+  "ja": {
+   "short_h2": "スマホをリモコンにしよう",
+   "short_caption": "15秒、音声なし：スマホで音量を上げ、矢印とOKで操作し、テレビで検索の文字を入力します。",
+   "win_caption": "25秒でわかるMando TV（音声なし）。動画はスマホアプリの画面です。Windows版アプリも同じリモコンで、テレビへの文字入力はパソコンのキーボードでできます。"
+  },
+  "ko": {
+   "short_h2": "휴대폰을 리모컨으로 쓰세요",
+   "short_caption": "15초, 소리 없음: 휴대폰으로 음량을 높이고, 방향키와 OK로 이동하고, TV에 검색어를 입력합니다.",
+   "win_caption": "25초로 보는 Mando TV(소리 없음). 영상은 휴대폰 앱 화면입니다. Windows 앱도 같은 리모컨이고, TV에는 PC 키보드로 입력합니다."
+  },
+  "sv": {
+   "short_h2": "Använd mobilen som fjärrkontroll",
+   "short_caption": "15 sekunder, utan ljud: mobilen höjer volymen, flyttar med pilarna och OK och skriver en sökning på tv:n.",
+   "win_caption": "Mando TV på 25 sekunder, utan ljud. Videon visar mobilappen; Windows-appen har samma fjärrkontroll, och du skriver på tv:n med datorns tangentbord."
+  },
+  "da": {
+   "short_h2": "Brug din telefon som fjernbetjening",
+   "short_caption": "15 sekunder, uden lyd: din telefon skruer op for lyden, flytter med piletasterne og OK og skriver en søgning på tv'et.",
+   "win_caption": "Mando TV på 25 sekunder, uden lyd. Videoen viser telefon-appen; Windows-appen har den samme fjernbetjening, og du skriver på tv'et med pc'ens tastatur."
+  },
+  "no": {
+   "short_h2": "Bruk mobilen som fjernkontroll",
+   "short_caption": "15 sekunder, uten lyd: mobilen skrur opp volumet, flytter med pilene og OK og skriver et søk på TV-en.",
+   "win_caption": "Mando TV på 25 sekunder, uten lyd. Videoen viser mobilappen; Windows-appen har den samme fjernkontrollen, og du skriver på TV-en med tastaturet på PC-en."
+  },
+  "fi": {
+   "short_h2": "Käytä puhelinta kaukosäätimenä",
+   "short_caption": "15 sekuntia, ilman ääntä: puhelin nostaa äänenvoimakkuutta, liikkuu nuolilla ja OK:lla ja kirjoittaa haun televisioon.",
+   "win_caption": "Mando TV 25 sekunnissa, ilman ääntä. Video näyttää puhelinsovelluksen; Windows-sovelluksessa on sama kaukosäädin, ja televisioon kirjoitat tietokoneen näppäimistöllä."
+  },
+  "pl": {
+   "short_h2": "Używaj telefonu jako pilota",
+   "short_caption": "15 sekund, bez dźwięku: telefon podgłaśnia, porusza się strzałkami i OK oraz wpisuje wyszukiwanie na telewizorze.",
+   "win_caption": "Mando TV w 25 sekund, bez dźwięku. Film pokazuje aplikację na telefon; aplikacja na Windows ma tego samego pilota, a na telewizorze piszesz klawiaturą komputera."
+  },
+  "tr": {
+   "short_h2": "Telefonunu kumanda olarak kullan",
+   "short_caption": "15 saniye, sessiz: telefonun sesi açar, yön tuşları ve OK ile gezinir ve TV'de arama yazar.",
+   "win_caption": "Mando TV 25 saniyede, sessiz. Video telefon uygulamasını gösteriyor; Windows uygulamasında da aynı kumanda var ve TV'ye bilgisayarının klavyesiyle yazıyorsun."
+  },
+  "ar": {
+   "short_h2": "استخدم هاتفك كجهاز تحكم عن بُعد",
+   "short_caption": "15 ثانية، بدون صوت: هاتفك يرفع مستوى الصوت، ويتنقل بالأسهم وOK، ويكتب عملية بحث على التلفزيون.",
+   "win_caption": "Mando TV في 25 ثانية، بدون صوت. يعرض الفيديو تطبيق الهاتف؛ وتطبيق Windows فيه جهاز التحكم نفسه، وتكتب على التلفزيون بلوحة مفاتيح الكمبيوتر."
+  },
+  "he": {
+   "short_h2": "הפכו את הטלפון לשלט",
+   "short_caption": "15 שניות, בלי קול: הטלפון מגביר את עוצמת הקול, זז עם החצים ו-OK, ומקליד חיפוש בטלוויזיה.",
+   "win_caption": "Mando TV ב-25 שניות, בלי קול. הסרטון מראה את אפליקציית הטלפון; באפליקציית Windows יש את אותו שלט, ומקלידים בטלוויזיה במקלדת של המחשב."
+  },
+  "cs": {
+   "short_h2": "Používejte telefon jako ovladač",
+   "short_caption": "15 sekund, bez zvuku: telefon zesílí zvuk, pohybuje se šipkami a OK a napíše hledání na televizi.",
+   "win_caption": "Mando TV za 25 sekund, bez zvuku. Video ukazuje aplikaci v telefonu; aplikace pro Windows má stejný ovladač a na televizi píšete klávesnicí počítače."
+  },
+  "sk": {
+   "short_h2": "Používajte telefón ako ovládač",
+   "short_caption": "15 sekúnd, bez zvuku: telefón zvýši hlasitosť, pohybuje sa šípkami a OK a napíše hľadanie na televízore.",
+   "win_caption": "Mando TV za 25 sekúnd, bez zvuku. Video ukazuje aplikáciu v telefóne; aplikácia pre Windows má rovnaký ovládač a na televízore píšete klávesnicou počítača."
+  },
+  "ro": {
+   "short_h2": "Folosește telefonul ca telecomandă",
+   "short_caption": "15 secunde, fără sunet: telefonul mărește volumul, se mișcă cu săgețile și OK și scrie o căutare pe TV.",
+   "win_caption": "Mando TV în 25 de secunde, fără sunet. Videoclipul arată aplicația de pe telefon; aplicația Windows are aceeași telecomandă, iar pe TV scrii cu tastatura PC-ului."
+  },
+  "hu": {
+   "short_h2": "Használd a telefonod távirányítóként",
+   "short_caption": "15 másodperc, hang nélkül: a telefonod felhangosít, a nyilakkal és az OK-val mozog, és keresést ír be a tévén.",
+   "win_caption": "A Mando TV 25 másodpercben, hang nélkül. A videó a telefonos appot mutatja; a Windows-app ugyanazt a távirányítót tudja, és a tévén a számítógép billentyűzetével gépelsz."
+  },
+  "el": {
+   "short_h2": "Χρησιμοποίησε το κινητό ως τηλεχειριστήριο",
+   "short_caption": "15 δευτερόλεπτα, χωρίς ήχο: το κινητό δυναμώνει την ένταση, κινείται με τα βελάκια και το OK και πληκτρολογεί μια αναζήτηση στην τηλεόραση.",
+   "win_caption": "Το Mando TV σε 25 δευτερόλεπτα, χωρίς ήχο. Το βίντεο δείχνει την εφαρμογή για κινητό· η εφαρμογή για Windows έχει το ίδιο τηλεχειριστήριο και πληκτρολογείς στην τηλεόραση με το πληκτρολόγιο του υπολογιστή σου."
+  },
+  "uk": {
+   "short_h2": "Використовуйте телефон як пульт",
+   "short_caption": "15 секунд, без звуку: телефон збільшує гучність, рухається стрілками й OK і вводить пошук на телевізорі.",
+   "win_caption": "Mando TV за 25 секунд, без звуку. Відео показує застосунок на телефоні; застосунок для Windows має той самий пульт, а на телевізорі ви вводите текст клавіатурою комп'ютера."
+  },
+  "hi": {
+   "short_h2": "अपने फ़ोन को रिमोट बनाएँ",
+   "short_caption": "15 सेकंड, बिना आवाज़ के: आपका फ़ोन वॉल्यूम बढ़ाता है, ऐरो और OK से आगे बढ़ता है, और टीवी पर सर्च टाइप करता है।",
+   "win_caption": "25 सेकंड में Mando TV, बिना आवाज़ के। वीडियो में फ़ोन ऐप दिख रहा है; Windows ऐप में भी यही रिमोट है, और टीवी पर आप पीसी के कीबोर्ड से टाइप करते हैं।"
+  },
+  "th": {
+   "short_h2": "ใช้โทรศัพท์เป็นรีโมต",
+   "short_caption": "15 วินาที ไม่มีเสียง: โทรศัพท์ของคุณเพิ่มระดับเสียง เลื่อนด้วยปุ่มลูกศรและ OK และพิมพ์ค้นหาบนทีวี",
+   "win_caption": "Mando TV ใน 25 วินาที ไม่มีเสียง วิดีโอแสดงแอปบนโทรศัพท์ แอป Windows มีรีโมตเหมือนกัน และคุณพิมพ์บนทีวีด้วยคีย์บอร์ดของพีซี"
+  },
+  "vi": {
+   "short_h2": "Dùng điện thoại làm remote",
+   "short_caption": "15 giây, không có tiếng: điện thoại tăng âm lượng, di chuyển bằng phím mũi tên và OK, và gõ tìm kiếm trên TV.",
+   "win_caption": "Mando TV trong 25 giây, không có tiếng. Video cho thấy ứng dụng trên điện thoại; ứng dụng Windows có cùng remote, và bạn gõ chữ trên TV bằng bàn phím máy tính."
+  },
+  "id": {
+   "short_h2": "Pakai ponselmu sebagai remote",
+   "short_caption": "15 detik, tanpa suara: ponselmu menaikkan volume, bergerak dengan tombol panah dan OK, dan mengetik pencarian di TV.",
+   "win_caption": "Mando TV dalam 25 detik, tanpa suara. Video menunjukkan aplikasi di ponsel; aplikasi Windows punya remote yang sama, dan kamu mengetik di TV dengan keyboard PC."
+  },
+  "ms": {
+   "short_h2": "Guna telefon anda sebagai alat kawalan jauh",
+   "short_caption": "15 saat, tanpa bunyi: telefon anda menaikkan volum, bergerak dengan anak panah dan OK, dan menaip carian pada TV.",
+   "win_caption": "Mando TV dalam 25 saat, tanpa bunyi. Video menunjukkan aplikasi telefon; aplikasi Windows mempunyai alat kawalan jauh yang sama, dan anda menaip pada TV dengan papan kekunci PC."
+  },
+  "zh": {
+   "short_h2": "把手机当遥控器用",
+   "short_caption": "15 秒，无声：手机调高音量，用方向键和 OK 移动，并在电视上输入搜索内容。",
+   "win_caption": "25 秒了解 Mando TV（无声）。视频展示的是手机应用；Windows 应用有同样的遥控器，在电视上输入文字时可以用电脑键盘。"
+  },
+  "zh-hant": {
+   "short_h2": "把手機當遙控器使用",
+   "short_caption": "15 秒，無聲：手機調高音量，用方向鍵與 OK 移動，並在電視上輸入搜尋內容。",
+   "win_caption": "25 秒了解 Mando TV（無聲）。影片展示的是手機應用程式；Windows 應用程式有同樣的遙控器，在電視上輸入文字時可以用電腦鍵盤。"
+  }
+ }
+}

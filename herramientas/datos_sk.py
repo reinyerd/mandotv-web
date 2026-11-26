@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Návody: mobil ako ovládač televízora',
   intro='Jednoduché postupy, ako pripojiť ovládač televízora Samsung, LG, Roku alebo Android TV cez Mando TV, zapnúť televízor a vyriešiť problémy.',
   h2_guias='Všetky návody', h2_marcas='Aplikácia ovládač podľa značky',
+  marcas_extra=[('sony', 'Aplikácia ovládač Sony'), ('philips', 'Aplikácia ovládač Philips')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Otvorte Mando TV: váš televízor LG sa v zozname zobrazí sám. Klepnite naň.',
       'Na televízore sa zobrazí výzva so žiadosťou o povolenie. Potvrďte ju svojím bežným ovládačom (len pri prvom pripojení).',
     ],
-    encender='Na televízore LG otvorte Nastavenia a nájdite „Turn on TV with Mobile“ (podľa modelu je v časti „General“ alebo „Connection“). Zapnite „Turn on via Wi-Fi“. Ak existuje „Quick Start+“, zapnite aj ten. Potom sa vás aplikácia po klepnutí na vypnutý televízor v Mando TV opýta, či ho má zapnúť, a pripojí sa sama.',
+    encender='Zapnite „Turn on TV with Mobile“ (na niektorých modeloch sa volá „Turn on via Wi-Fi“). Nájdete ho v Settings > General > Devices > External Devices (na starších modeloch Connection > Mobile Connection Management). Potom sa vás aplikácia po klepnutí na vypnutý televízor v Mando TV opýta, či ho má zapnúť, a pripojí sa sama.',
     faq=[
       ('Potrebujem na používanie Mando TV ovládač Magic Remote?', 'Len pri prvom pripojení, aby ste potvrdili výzvu na obrazovke. Potom vám stačí mobil.'),
       ('Nahrádza Mando TV aplikáciu LG ThinQ?', 'Na ovládanie televízora áno: nepotrebujete účet LG ani registráciu televízora. Mando TV sa pripája priamo cez vašu sieť Wi-Fi.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Funguje to so staršími televízormi Samsung?', 'Funguje s televízormi Samsung so systémom Tizen, rok výroby 2016 a novšie. Staršie modely používajú iný systém, ktorý zatiaľ nepodporujeme.'),
     ],
     guias=[('samsung-lost', 'Samsung TV bez pôvodného ovládača: použite mobil'),
+           ('smartthings', 'Alternatíva k SmartThings pre televízory Samsung'),
+           ('turn-on', 'Ako zapnúť televízor bez ovládača'),
            ('hdmi', 'Zmena vstupu HDMI na televízore bez ovládača'),
            ('guias', 'Všetky návody na ovládanie televízora mobilom')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Pripojte mobil a Roku k tej istej sieti Wi-Fi.',
       'Otvorte Mando TV: vaše Roku sa v zozname zobrazí samo. Klepnite naň.',
-      'Ak pripojenie nefunguje, na Roku prejdite do Settings > System > Advanced system settings > Control by mobile apps a nastavte Network access na „Default“ alebo „Permissive“.',
+      'Ak pripojenie nefunguje, na Roku prejdite do Settings > System > Advanced system settings > Control by mobile apps a nastavte Network access na „Default“ alebo „Permissive“ (pri novšom softvéri Roku nastavte „Control by mobile apps“ na „Enabled“).',
     ],
     encender='Na televízoroch Roku TV zapnite v Settings > System > Power možnosť „Fast TV start“. Prehrávače Roku pripojené k inému televízoru sa takto zapnúť nedajú. Potom sa vás aplikácia po klepnutí na vypnutý televízor v Mando TV opýta, či ho má zapnúť, a pripojí sa sama.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Aplikácia Roku nefunguje (chyba 403)'),
            ('roku-lost', 'Stratený ovládač Roku: použite mobil'),
+           ('tcl', 'Aplikácia ovládač TCL'),
+           ('hisense', 'Aplikácia ovládač Hisense'),
+           ('philips', 'Aplikácia ovládač Philips'),
            ('guias', 'Všetky návody na ovládanie televízora mobilom')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV a Google TV',
     titulo='Ovládač Android TV v mobile | Mando TV',
@@ -186,16 +192,21 @@ MARCAS = [
     pasos=[
       'Pripojte mobil a televízor k tej istej sieti Wi-Fi.',
       'Otvorte Mando TV: váš Android TV sa v zozname zobrazí sám. Klepnite naň.',
-      'Televízor zobrazí 6-miestny kód. Zadajte ho v Mando TV (len pri prvom pripojení).',
+      'Televízor zobrazí 6-znakový kód. Zadajte ho v Mando TV (len pri prvom pripojení).',
     ],
-    encender='Závisí od výrobcu. V nastaveniach siete alebo napájania hľadajte „Wake on LAN“, „Network standby“ alebo „Wake on network“. Niektoré modely túto možnosť nemajú. Potom sa vás aplikácia po klepnutí na vypnutý televízor v Mando TV opýta, či ho má zapnúť, a pripojí sa sama.',
+    encender='Závisí od výrobcu. V nastaveniach siete alebo napájania hľadajte „Wake on LAN“, „Network standby“, „Wake on network“ alebo „Remote start“. Niektoré modely túto možnosť nemajú. Potom sa vás aplikácia po klepnutí na vypnutý televízor v Mando TV opýta, či ho má zapnúť, a pripojí sa sama.',
     faq=[
-      ('Funguje to s Chromecastom s Google TV?', 'Áno, párovanie prebieha cez 6-miestny kód, ktorý sa zobrazí na obrazovke.'),
+      ('Funguje to s Chromecastom s Google TV?', 'Áno, párovanie prebieha cez 6-znakový kód, ktorý sa zobrazí na obrazovke.'),
       ('Čím sa líši od aplikácie Google TV?', 'Mando TV nepotrebuje účet Google, funguje aj vo Windowse a jednou aplikáciou ovláda aj televízory LG, Samsung a Roku.'),
       ('Kód sa na obrazovke nezobrazuje. Čo mám robiť?', 'Zatvorte Mando TV, znova otvorte aplikáciu a ešte raz klepnite na televízor. Skontrolujte, či televízor nie je v hlbokom úspornom režime.'),
     ],
     guias=[('androidtv-code', 'Android TV žiada párovací kód: čo robiť'),
            ('androidtv', 'Android TV bez ovládača: použite mobil'),
+           ('googletv-alt', 'Alternatíva k ovládaču Google TV v mobile'),
+           ('sony', 'Aplikácia ovládač Sony'),
+           ('tcl', 'Aplikácia ovládač TCL'),
+           ('hisense', 'Aplikácia ovládač Hisense'),
+           ('philips', 'Aplikácia ovládač Philips'),
            ('guias', 'Všetky návody na ovládanie televízora mobilom')]),
 ]
 
@@ -209,7 +220,7 @@ GUIAS = [
       'Zapnite televízor tlačidlom na ňom. Býva takmer vždy dole uprostred alebo vzadu pri rohu. Niekedy je to jedno tlačidlo, niekedy malý joystick.',
       'Pripojte mobil k tej istej sieti Wi-Fi ako televízor.',
       'Stiahnite si Mando TV, ktoré je zadarmo a nevyžaduje účet, a otvorte aplikáciu. Váš televízor sa v zozname zobrazí sám. Klepnite naň.',
-      'Potvrďte pripojenie podľa svojej značky. Pri LG a Samsung televízor zobrazí výzvu: potvrďte ju tlačidlom alebo joystickom na samotnom televízore. Pri Android TV a Google TV zadáte 6-miestny kód, ktorý sa zobrazí na obrazovke. Roku sa na nič nepýta.',
+      'Potvrďte pripojenie podľa svojej značky. Pri LG a Samsung televízor zobrazí výzvu: potvrďte ju tlačidlom alebo joystickom na samotnom televízore. Pri Android TV a Google TV zadáte 6-znakový kód, ktorý sa zobrazí na obrazovke. Roku sa na nič nepýta.',
       'Hotovo. Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály a klávesnica sú zadarmo.',
       'Nabudúce: v nastaveniach televízora zapnite zapnutie cez sieť (návod pre svoju značku nájdete nižšie). Potom budete môcť televízor zapnúť z mobilu bez toho, aby ste sa ho dotkli.',
     ],
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Môžem televízor zapnúť mobilom, ak som ho ešte nikdy nepripojil?', 'Prvýkrát ho zapnite tlačidlom na televízore. Keď pripojíte mobil a v nastaveniach televízora zapnete zapnutie cez sieť, môžete ho zapínať cez aplikáciu.'),
       ('Musím si kúpiť nový ovládač?', 'Nie nevyhnutne. S Mando TV máte tlačidlá, hlasitosť, klávesnicu aj zapnutie zadarmo. Ak chcete radšej skutočný ovládač, hľadajte ho podľa presného modelu televízora.'),
-      ('Funguje to, ak televízor nemá Wi-Fi?', 'Nie. Mobil a televízor musia byť v tej istej sieti Wi-Fi. Televízor, ktorý nie je Smart TV, sa cez Mando TV ovládať nedá.'),
+      ('Funguje to, ak televízor nemá Wi-Fi?', 'Väčšinou nie. Mobil a televízor musia byť zvyčajne v tej istej sieti Wi-Fi. Výnimkou je infračervený signál na mobiloch s Androidom s infračerveným vysielačom, ktorý ovláda aj televízory bez funkcií Smart TV, a Bluetooth v beta verzii od Androidu 9, ktorý funguje celkom bez Wi-Fi s Google TV, Android TV a Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Stratený ovládač LG',
     titulo='Stratený ovládač LG? Použite mobil',
@@ -278,7 +289,7 @@ GUIAS = [
     ]),
   dict(clave='androidtv', corto='Android TV bez ovládača',
     titulo='Android TV bez ovládača: použite mobil',
-    desc='Nemáte ovládač Android TV alebo Google TV? Pripojte mobil 6-miestnym kódom z obrazovky. Zadarmo, bez účtu, bez reklám.',
+    desc='Nemáte ovládač Android TV alebo Google TV? Pripojte mobil 6-znakovým kódom z obrazovky. Zadarmo, bez účtu, bez reklám.',
     h1='Android TV bez ovládača: takto použijete mobil',
     intro='Ak ste stratili ovládač Android TV alebo Google TV alebo sa v ňom vybili batérie, mobil ho nahradí. Najlepšie je, že na pripojenie ovládač nepotrebujete: televízor zobrazí kód na obrazovke a vy ho napíšete v mobile. Funguje to s televízormi Sony, Philips, TCL, Hisense, Sharp a Xiaomi s Android TV, s Chromecastom s Google TV aj s Nvidia Shield.',
     pasos=[
@@ -287,7 +298,7 @@ GUIAS = [
       'Stiahnite si Mando TV, ktoré je zadarmo a nevyžaduje účet Google, a otvorte aplikáciu. V zozname klepnite na svoj televízor.',
       'Televízor zobrazí kód zložený zo 6 písmen a číslic. Napíšte ho v mobile a klepnite na Spárovať. Ovládač na to nepotrebujete.',
       'Teraz môžete používať smerové tlačidlá, OK, späť, domov, hlasitosť, stlmenie a klávesnicu. Sú zadarmo, rovnako ako zoznam aplikácií. Touchpad je Pro.',
-      'Ak chcete televízor nabudúce zapnúť z mobilu, v nastaveniach siete alebo napájania hľadajte „Wake on LAN“, „Network standby“ alebo „Wake on network“.',
+      'Ak chcete televízor nabudúce zapnúť z mobilu, v nastaveniach siete alebo napájania hľadajte „Wake on LAN“, „Network standby“, „Wake on network“ alebo „Remote start“.',
     ],
     extra=[
       ('Ak sa televízor z mobilu zapnúť nedá', 'Nie každý Android TV sa dá zapnúť cez sieť; závisí to od výrobcu a modelu. Ak ho váš nemá, zapnite ho tlačidlom na televízore a pokračujte v mobile. Vypnúť ho môžete cez aplikáciu.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Televízor LG môžete zapnúť mobilom, ale najprv musíte na televízore zapnúť jedno nastavenie. Potom ho mobil zapne cez vašu sieť Wi-Fi, celkom bez ovládača. Zaberie to päť minút a robí sa to len raz.',
     pasos=[
       'Pripojte mobil a televízor LG k tej istej sieti Wi-Fi.',
-      'Na televízore otvorte Nastavenia a nájdite „Turn on TV with Mobile“. Podľa modelu ho nájdete v časti General alebo Connection.',
+      'Na televízore otvorte Nastavenia a nájdite „Turn on TV with Mobile“. Nájdete ho v Settings > General > Devices > External Devices (na starších modeloch Connection > Mobile Connection Management).',
       'Zapnite „Turn on via Wi-Fi“. Ak je televízor pripojený sieťovým káblom, zapnite namiesto toho možnosť pre kábel.',
       'Ak má televízor „Quick Start+“, zapnite aj ten.',
       'Pri zapnutom televízore otvorte v mobile Mando TV a v zozname klepnite na svoj televízor LG. Potvrďte výzvu, ktorá sa zobrazí na obrazovke. Takto sa aplikácia naučí televízor prebudiť.',
@@ -432,7 +443,7 @@ GUIAS = [
     ],
     extra=[
       ('Ako spoznáte, že ide o váš problém', 'Znak je jasný: mobil vidí Roku v zozname a pripojí sa, ale po klepnutí na tlačidlo sa nič nestane. Roku interne odpovedá chybou 403, čo znamená „zakázané“. Mando TV to pri pripájaní rozpozná a zobrazí presne tieto kroky na obrazovke.'),
-      ('Default alebo Permissive, čo vybrať?', 'Funguje obe: Mando TV potrebuje len príkazy z vašej domácej siete. Ak je možnosť nastavená na Disabled (pri novšom softvéri Restricted), Roku na aplikácie nereaguje.'),
+      ('Default alebo Permissive, čo vybrať?', 'Stačí Default: prijíma príkazy z vašej domácej siete, čo ovládač potrebuje. Permissive je otvorenejší a potrebujete ho len v nezvyčajných sieťach.'),
       ('Ak nemáte ovládač Roku', 'Ak je nastavenie na Disabled, dá sa zmeniť len pôvodným ovládačom Roku. Požičajte si nejaký, zmeňte ho raz; potom už všetko urobíte mobilom. Prečítajte si aj [Stratený ovládač Roku](@roku-lost).'),
     ],
     marca='roku',
@@ -468,9 +479,9 @@ GUIAS = [
     ]),
   dict(clave='androidtv-code', corto='Párovací kód Android TV',
     titulo='Android TV žiada párovací kód: čo robiť',
-    desc='Váš Android TV alebo Google TV zobrazí pri pripájaní 6-miestny kód. Ako ho zadať a čo robiť, ak sa nezobrazí alebo je nesprávny.',
+    desc='Váš Android TV alebo Google TV zobrazí pri pripájaní 6-znakový kód. Ako ho zadať a čo robiť, ak sa nezobrazí alebo je nesprávny.',
     h1='Android TV žiada párovací kód: čo robiť',
-    intro='Keď mobil prvýkrát pripájate k Android TV alebo Google TV, televízor zobrazí na obrazovke 6-miestny kód. Je to normálne a stane sa to len raz: takto je zaručené, že váš televízor nemôže ovládať nikto iný. Tu zistíte, ako ho zadať a čo robiť, ak sa nezobrazí.',
+    intro='Keď mobil prvýkrát pripájate k Android TV alebo Google TV, televízor zobrazí na obrazovke 6-znakový kód. Je to normálne a stane sa to len raz: takto je zaručené, že váš televízor nemôže ovládať nikto iný. Tu zistíte, ako ho zadať a čo robiť, ak sa nezobrazí.',
     pasos=[
       'Zapnite televízor a nechajte zobrazenú domovskú obrazovku.',
       'Otvorte Mando TV v mobile, v tej istej sieti Wi-Fi ako televízor, a v zozname klepnite na svoj televízor.',
@@ -547,10 +558,10 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Nájdenie televízora</h2>
           <p>Televízor sa opýta, či povolíte pripojenie Mando TV. Ovládačom vyberte „Allow“. Ak ste ho omylom odmietli, prejdite do Settings > General > External Device Manager > Device Connection Manager a zmeňte to na povolené.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku sa na povolenie nepýta. Ak pripojenie nefunguje, na Roku prejdite do Settings > System > Advanced system settings > Control by mobile apps a nechajte Network access na „Default“ alebo „Permissive“.</p>
+          <p>Roku sa na povolenie nepýta. Ak pripojenie nefunguje, na Roku prejdite do Settings > System > Advanced system settings > Control by mobile apps a nechajte Network access na „Default“ alebo „Permissive“ (pri novšom softvéri Roku nastavte „Control by mobile apps“ na „Enabled“).</p>
         </details>
         <details><summary>Android TV a Google TV</summary>
-          <p>Televízor zobrazí 6-miestny kód. Zadajte ho v Mando TV presne tak, ako sa zobrazí. Funguje to so Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecastom s Google TV a ďalšími s Android TV.</p>
+          <p>Televízor zobrazí 6-znakový kód. Zadajte ho v Mando TV presne tak, ako sa zobrazí. Funguje to so Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecastom s Google TV a ďalšími s Android TV.</p>
         </details>
       </div>
 
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Nájdenie televízora</h2>
       <p>Mando TV zapína televízor cez vašu domácu sieť. Treba na to dve veci: aspoň raz ste sa pripojili pri zapnutom televízore a na televízore je zapnuté zapnutie cez sieť. Názov nastavenia sa líši podľa modelu; toto sú najčastejšie:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>V nastaveniach (podľa modelu v časti General alebo Connection) hľadajte „Turn on TV with Mobile“ a zapnite „Turn on via Wi-Fi“. Ak existuje „Quick Start+“, zapnite aj ten.</p>
+          <p>Hľadajte „Turn on TV with Mobile“ (alebo „Turn on via Wi-Fi“) v Settings > General > Devices > External Devices (na starších modeloch Connection > Mobile Connection Management) a zapnite ho.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Zapnite „Power On with Mobile“ v Nastavenia > General > Network > Expert Settings.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Nájdenie televízora</h2>
           <p>Na televízoroch Roku TV zapnite „Fast TV start“ v Settings > System > Power. Prehrávače Roku pripojené k televízoru sa takto zapnúť nedajú.</p>
         </details>
         <details><summary>Android TV a Google TV</summary>
-          <p>Závisí od výrobcu. V nastaveniach siete alebo napájania hľadajte „Wake on LAN“, „Network standby“ alebo „Wake on network“. Niektoré modely túto možnosť nemajú.</p>
+          <p>Závisí od výrobcu. V nastaveniach siete alebo napájania hľadajte „Wake on LAN“, „Network standby“, „Wake on network“ alebo „Remote start“. Niektoré modely túto možnosť nemajú.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infračervený signál pre staršie televízory', 'Zadarmo v mobiloch s Androidom s infračerveným vysielačom (novinka)', 'Niektoré aplikácie, len v mobiloch s infračerveným vysielačom'],
         ['Bluetooth', 'Beta od Androidu 9, zadarmo', 'Podľa aplikácie'],
         ['Fotografie a videá do televízora', 'Pro, cez Wi-Fi (nie zrkadlenie)', 'Podľa aplikácie'],
-        ['Mobily a počítače', 'iPhone, iPad a Windows, a Android v predbežnom prístupe', 'Rôzne'],
-        ['Zrkadlenie obrazovky', 'Zadarmo na iPhone a iPad, cez Zrkadlenie obrazovky v Ovládacom centre (televízory s AirPlay)', 'Niektoré aplikácie ho ponúkajú'],
+        ['Mobily a počítače', 'iPhone, iPad, Mac a Windows, a Android v predbežnom prístupe', 'Rôzne'],
+        ['Zrkadlenie obrazovky', 'Zadarmo na iPhone, iPad a vo Windowse s vstavanou funkciou každého systému. Vo Windowse môže Pro navyše zrkadliť obrazovku počítača na televízory LG, Samsung, Hisense a Android TV (beta)', 'Niektoré aplikácie ho ponúkajú'],
       ],
       nota='Mando TV sa neporovnáva so žiadnou konkrétnou aplikáciou. Aktuálne ceny nájdete na stránke každej aplikácie v obchode.'),
     extra=[
-      ('Čo Mando TV nerobí', 'Vlastné zrkadlenie obrazovky nemá: na iPhone a iPad vás privedie k funkcii Zrkadlenie obrazovky v Ovládacom centre, ktorá je súčasťou samotného iPhonu a funguje s televízormi s AirPlay. S Mando TV Pro dokáže navyše posielať fotografie a videá do televízora cez vašu sieť Wi-Fi. Ovláda televízory Smart TV cez domácu sieť Wi-Fi. Televízory bez funkcií Smart TV sa dajú ovládať z mobilu s Androidom s infračerveným vysielačom cez infračervený signál. Od Androidu 9 sa môže mobil pripojiť aj cez Bluetooth ako klávesnica a ovládač k Google TV, Android TV a Fire TV, celkom bez Wi-Fi. Táto možnosť je v beta verzii a zadarmo.'),
+      ('Čo Mando TV nerobí', 'Na iPhone a iPad vás privedie k funkcii Zrkadlenie obrazovky v Ovládacom centre, ktorá je súčasťou samotného iPhonu a funguje s televízormi s AirPlay. Vo Windowse otvorí Prenos (Windows + K) a Mando TV Pro dokáže posielať obrazovku počítača cez vašu sieť Wi-Fi na televízory LG, Samsung, Hisense a Android TV (beta, s oneskorením niekoľkých sekúnd a bez zvuku). S Mando TV Pro dokáže navyše posielať fotografie a videá do televízora cez vašu sieť Wi-Fi. Ovláda televízory Smart TV cez domácu sieť Wi-Fi. Televízory bez funkcií Smart TV sa dajú ovládať z mobilu s Androidom s infračerveným vysielačom cez infračervený signál. Od Androidu 9 sa môže mobil pripojiť aj cez Bluetooth ako klávesnica a ovládač k Google TV, Android TV a Fire TV, celkom bez Wi-Fi. Táto možnosť je v beta verzii a zadarmo.'),
       ('Ako Mando TV zarába', 'Nie reklamami ani vašimi údajmi: aplikácia žiadne nezbiera. Mando TV sa financuje cez Pro, voliteľný jednorazový nákup doplnkov. Základný ovládač je zadarmo.'),
-      ('Na zariadeniach, ktoré už máte', 'iPhone a iPad z App Store, počítače s Windowsom z Microsoft Store a Android cez bezplatný predbežný prístup v Google Play. Pozrite si [Aplikácia ovládač pre iPhone](@iphone) a [Aplikácia ovládač pre Windows](@windows).'),
+      ('Na zariadeniach, ktoré už máte', 'iPhone, iPad a Mac z App Store, počítače s Windowsom z Microsoft Store a Android cez bezplatný predbežný prístup v Google Play. Pozrite si [Aplikácia ovládač pre iPhone](@iphone) a [Aplikácia ovládač pre Windows](@windows).'),
       ('Súkromie', 'Žiadny účet a žiadne sledovanie v aplikácii. Komunikácia s televízorom prebieha len v lokálnej sieti, údaje o pripojení zostávajú zašifrované vo vašom zariadení. Podrobnosti nájdete v [zásadách ochrany súkromia](@privacidad).'),
     ],
     marca=None,
@@ -725,7 +736,7 @@ GUIAS += [
       ('Kde je oficiálna aplikácia Roku lepšia', 'Aplikáciu Roku si nechajte na to, čo ponúka nad rámec ovládača, napríklad prehliadanie a pridávanie kanálov z Roku Channel Store, vlastný prenos obrazu a Private Listening (zvuk cez slúchadlá v mobile). Používajte obe, ak chcete. Môžu bežať v tom istom mobile.'),
       ('Televízory Roku TV a prehrávače Roku', 'Fungujú obe. Zahŕňa to modely Roku TV od TCL, Hisense, Philips a ďalších, ako aj Roku Express, Streaming Stick a Ultra. Podrobnosti nájdete na [stránke aplikácie ovládač Roku](@roku).'),
       ('Ak aplikácia Roku prestala fungovať', 'Ak tlačidlá prestali reagovať, Roku zvyčajne blokuje ovládanie aplikáciami. Návod [Aplikácia Roku nefunguje](@roku-403) ukazuje nastavenie, ktoré problém opraví.'),
-      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov.'),
+      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Čo Mando TV robí na televízore LG', 'Funguje s televízormi LG Smart TV s webOS, teda s väčšinou modelov od roku 2014, vrátane LED, NanoCell, QNED a OLED. Ponúka smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, stlmenie, ovládanie prehrávania a klávesnicu na písanie v YouTube, Netflixe alebo prehliadači. Zoznam aplikácií a zoznam vstupov sú tiež zadarmo. S Pro navyše získate kurzor ako pri Magic Remote.'),
       ('Čo Mando TV nerobí', 'Neovláda domáce spotrebiče LG, nepoužíva váš účet LG a nenahrádza služby účtu LG v televízore. Je to ovládač, nie centrála inteligentnej domácnosti.'),
       ('Súkromie a reklamy', 'Mando TV nemá reklamy ani účet. Komunikuje s televízorom len vo vašej domácej sieti a kľúč pripojenia ukladá zašifrovaný vo vašom zariadení. Všetky funkcie nájdete na stránke [Aplikácia ovládač LG TV](@lg).'),
-      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov.'),
+      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného.'),
     ],
     marca='lg',
     faq=[
@@ -787,11 +798,11 @@ GUIAS += [
     titulo='Ovládač Google TV nefunguje? Alternatíva',
     desc='Ovládač Google TV v mobile nenájde televízor? Mando TV ovláda Google TV a Android TV cez Wi-Fi, bez účtu Google a reklám.',
     h1='Alternatíva k ovládaču Google TV v mobile',
-    intro='Ovládač pre Google TV a Android TV v mobile je súčasťou samotnej aplikácie Google a je prepojený s vaším účtom Google. Ak televízor nenájde, nepohnete sa ďalej. Mando TV je samostatná aplikácia ovládač, ktorá sa páruje 6-miestnym kódom z obrazovky a funguje bez účtu Google, na iPhone, v mobile s Androidom aj na počítači s Windowsom.',
+    intro='Ovládač pre Google TV a Android TV v mobile je súčasťou samotnej aplikácie Google a je prepojený s vaším účtom Google. Ak televízor nenájde, nepohnete sa ďalej. Mando TV je samostatná aplikácia ovládač, ktorá sa páruje 6-znakovým kódom z obrazovky a funguje bez účtu Google, na iPhone, v mobile s Androidom aj na počítači s Windowsom.',
     pasos=[
       'Zapnite televízor a pripojte mobil k tej istej sieti Wi-Fi.',
       'Stiahnite si Mando TV a otvorte aplikáciu. V zozname klepnite na svoj televízor s Google TV alebo Android TV.',
-      'Televízor zobrazí 6-miestny kód. Zadajte ho v Mando TV a klepnite na Spárovať.',
+      'Televízor zobrazí 6-znakový kód. Zadajte ho v Mando TV a klepnite na Spárovať.',
       'Používajte smerové tlačidlá, OK, späť, domov, hlasitosť a klávesnicu. Nikde sa nemusíte prihlasovať.',
       'Voliteľne: v nastaveniach televízora hľadajte Wake on LAN alebo „Wake on network“, aby mohla aplikácia televízor aj zapnúť.',
     ],
@@ -805,7 +816,7 @@ GUIAS += [
     marca='android',
     faq=[
       ('Potrebujem na používanie Mando TV s Google TV účet Google?', 'Nie. Na spárovanie stačí kód na televízore.'),
-      ('Funguje to s Chromecastom s Google TV?', 'Áno. Párovanie prebieha rovnako, 6-miestnym kódom na obrazovke.'),
+      ('Funguje to s Chromecastom s Google TV?', 'Áno. Párovanie prebieha rovnako, 6-znakovým kódom na obrazovke.'),
       ('Môžem to používať z iPhonu?', 'Áno. Mando TV je dostupné v App Store pre iPhone a iPad, v Microsoft Store pre Windows a v bezplatnom predbežnom prístupe v Google Play pre Android.'),
     ]),
   dict(clave='windows', corto='Ovládač pre počítač s Windowsom', fecha='2026-11-23',
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini ovládač (Pro)', 'Malé okno ovládača, ktoré zostáva nad všetkými ostatnými oknami. Takto zmeníte hlasitosť alebo pozastavíte prehrávanie bez prerušenia práce.'),
       ('Písanie na televízore z počítača', 'Klávesnica na obrazovke televízora je pomalá. V Mando TV píšete na skutočnej klávesnici a text sa objaví vo vyhľadávacom poli televízora. Táto časť je zadarmo.'),
       ('Viac podrobností', 'Postup krok za krokom nájdete v návode [Ovládanie televízora z počítača](@pc). Pre mobil si prečítajte [Mobil ako ovládač cez Wi-Fi](@wifi).'),
-      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov. Vo Windowse kúpite Pro cez Microsoft Store.'),
+      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného. Vo Windowse kúpite Pro cez Microsoft Store.'),
       ('Hlasové príkazy z počítača (Pro)', 'S Pro môžete s televízorom hovoriť cez mikrofón počítača. Reč sa rozpoznáva priamo v počítači: nepotrebujete internet ani nič nastavovať vo Windowse. To, čo poviete, počítač nikdy neopustí a neukladá sa. Len pri veľmi starých procesoroch sa aplikácia vráti k hlasovému vstupu Windowsu. Na to musí byť v nastaveniach súkromia zapnuté online rozpoznávanie reči a vo Windowse pridaný váš jazyk.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Funguje s týmito televízormi', 'LG webOS, Samsung Tizen (rok výroby 2016 a novšie), Roku TV a prehrávače Roku, Google TV a Android TV a Fire TV. Stránky značiek sú [Samsung](@samsung), [LG](@lg), [Roku](@roku) a [Android TV](@android).'),
       ('Prečo sa pýta na lokálnu sieť', 'iPhone blokuje aplikáciám prístup k zariadeniam vo vašej domácej sieti, pokiaľ to nepovolíte. Ak sa televízor v zozname nezobrazí, otvorte Nastavenia > Mando TV a zapnite „Lokálna sieť“. Aplikácia komunikuje len s vaším televízorom vo vašej domácej sieti.'),
       ('Prečo Mando TV a nie aplikácia výrobcu', 'Každá značka televízorov má vlastnú aplikáciu a chce vlastné nastavenie alebo účet. Mando TV je jedna aplikácia pre všetky, bez účtu.'),
-      ('Zadarmo a Pro na iPhone', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov, priamo v aplikácii.'),
+      ('Zadarmo a Pro na iPhone', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného. Pro kúpite raz priamo v aplikácii.'),
     ],
     marca=None,
     faq=[
-      ('Je Mando TV na iPhone zadarmo?', 'Stiahnutie je zadarmo, bez reklám. Základný ovládač je zadarmo, rovnako ako otváranie aplikácií a prepínanie vstupov. Doplnky sú súčasťou Mando TV Pro, voliteľného jednorazového nákupu.'),
+      ('Je Mando TV na iPhone zadarmo?', 'Stiahnutie je zadarmo, bez reklám. Základný ovládač je zadarmo, rovnako ako otváranie aplikácií a prepínanie vstupov. Doplnky ako touchpad, hlasové príkazy a rutiny sú súčasťou Mando TV Pro, jednorazového nákupu.'),
       ('Funguje to na iPade?', 'Áno. Tá istá aplikácia beží na iPhone aj iPade.'),
       ('Potrebuje aplikácia ovládač pre iPhone Bluetooth alebo infračervený vysielač?', 'Na iPhone nie. iPhony nemajú infračervený vysielač, preto tam ovládanie infračerveným signálom nie je k dispozícii, a možnosť Bluetooth je len pre Android 9 alebo novší, nie pre iPhone. Na iPhone ovláda Mando TV televízory Smart TV aj Apple TV (beta) cez vašu domácu sieť Wi-Fi.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Používajte smerové tlačidlá, OK, späť, domov, tlačidlá prehrávania a klávesnicu na vyhľadávanie.',
     ],
     extra=[
-      ('Podporované zariadenia Fire TV', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube a televízory s vstavaným Fire TV. Podpora je nová a zatiaľ sme mohli otestovať len málo skutočných zariadení. Ak niečo nefunguje podľa očakávania, napíšte nám model cez stránku pomoci.'),
+      ('Podporované zariadenia Fire TV', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube a televízory s vstavaným Fire TV, napríklad televízory Amazon Fire TV Edition a niektoré modely Hisense. Podpora je nová a zatiaľ sme mohli otestovať len málo skutočných zariadení. Ak niečo nefunguje podľa očakávania, napíšte nám model cez stránku pomoci.'),
       ('Zapnutie Fire TV', 'Mando TV Fire TV cez sieť nezapína. Zapnite televízor tlačidlom napájania na ňom: zapojený Fire TV Stick alebo Cube sa zvyčajne prebudí cez HDMI-CEC a pri televízore s vstavaným Fire TV je televízor samotný Fire TV. Potom ho ovládate z mobilu.'),
       ('Ak sa váš Fire TV nezobrazí', 'Uistite sa, že sú obe zariadenia v tej istej sieti Wi-Fi a Fire TV je prebudený. Na iPhone povoľte pre Mando TV v nastaveniach „Lokálna sieť“. Pozrite si [mobil nenájde televízor](@not-found).'),
       ('Nemáte vôbec žiadny ovládač?', 'Fire TV musí zobraziť PIN na obrazovke, takže televízor aj Fire TV musia byť zapnuté a zobrazovať obraz. Ak je televízor na nesprávnom vstupe, prepnite ho tlačidlami na televízore. Pozrite si [Zmena vstupu bez ovládača](@hdmi).'),
-      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číslice, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov.'),
+      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číslice, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Najprv vyskúšajte ovládač televízora (HDMI-CEC)', 'Mnohé ovládače televízorov dokážu ovládať Fire TV Stick cez HDMI-CEC. Ak vidíte rozhranie Fire TV, stlačte šípky a OK na ovládači televízora. Ak sa nič nestane, zapnite CEC v nastaveniach televízora (Anynet+ u Samsungu, SIMPLINK u LG, BRAVIA Sync u Sony) a vo Fire TV ovládanie zariadení HDMI-CEC v nastaveniach zobrazenia („Display & Sounds“).'),
       ('Ak ste zmenili sieť Wi-Fi', 'Bez ovládača nemôžete na Fire TV zadať heslo novej siete Wi-Fi, ale existuje východisko: na druhom mobile vytvorte hotspot s presne rovnakým názvom a heslom ako vaša stará sieť Wi-Fi. Fire TV sa k nemu pripojí automaticky. Pripojte k tomuto hotspotu mobil s Mando TV, spárujte ho PIN-om, potom na Fire TV prejdite do Nastavenia > Sieť a vyberte svoju novú sieť Wi-Fi. Nakoniec pripojte k novej sieti Wi-Fi aj svoj mobil.'),
       ('Spárovanie náhradného ovládača', 'Väčšina nových ovládačov Fire TV sa páruje podržaním tlačidla Home asi 10 sekúnd v blízkosti Fire TV. Ak to nepomôže, otvorte Nastavenia > Ovládače a zariadenia Bluetooth > Diaľkové ovládače Amazon Fire TV > Pridať nový ovládač. K tejto ponuke sa dostanete aj z mobilu cez Mando TV.'),
-      ('Fire TV vstavaný v televízore', 'Pri televízoroch s vstavaným Fire TV fungujú rovnaké kroky, pretože televízor je samotný Fire TV.'),
+      ('Fire TV vstavaný v televízore', 'Pri televízoroch s vstavaným Fire TV, ako sú mnohé modely Insignia a Toshiba, fungujú rovnaké kroky, pretože televízor je samotný Fire TV.'),
       ('Predtým, než začnete', 'Podpora Fire TV je v Mando TV novinka. Najprv aplikáciu aktualizujte. Ak váš model nereaguje podľa očakávania, napíšte nám cez [stránku pomoci](@soporte) a uveďte model.'),
       ('Zadarmo a Pro', 'Ovládač si môžete stiahnuť a používať zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'Keď je televízor zapnutý, nastavte ho tak, aby ste tlačidlo už nepotrebovali: zapnite HDMI-CEC a zapnutie cez sieť, obe sú vysvetlené nižšie.',
     ],
     extra=[
-      ('Kde je tlačidlo zapnutia podľa značky', 'Samsung: ovládacie tlačidlo alebo joystick pod stredom obrazovky alebo vzadu pri dolnom rohu. LG: joystick pod logom LG pri väčšine modelov. TCL a Hisense: zvyčajne malé tlačidlo pod stredom obrazovky alebo vzadu pri dolnom rohu. Sony: vzadu alebo na bočnom okraji, dole blízko okraja. Polohy sa líšia podľa modelu. Ak ho nenájdete, vyhľadajte návod na obsluhu podľa čísla modelu na štítku vzadu.'),
+      ('Kde je tlačidlo zapnutia podľa značky', 'Samsung: ovládacie tlačidlo alebo joystick pod stredom obrazovky alebo vzadu pri dolnom rohu. LG: joystick pod logom LG pri väčšine modelov. TCL a Hisense: zvyčajne malé tlačidlo pod stredom obrazovky alebo vzadu pri dolnom rohu. Sony: vzadu alebo na bočnom okraji, dole blízko okraja. Vizio: vzadu, dole vľavo alebo dole vpravo, alebo na boku. Polohy sa líšia podľa modelu. Ak ho nenájdete, vyhľadajte návod na obsluhu podľa čísla modelu na štítku vzadu.'),
       ('Zapnutie televízora cez konzolu alebo streamovacie zariadenie (HDMI-CEC)', 'So zapnutým HDMI-CEC zapnutie PlayStation, Xboxu, prehrávača Roku, Fire TV Sticku alebo Chromecastu zapne aj televízor a prepne na správny vstup. Každá značka nastavenie nazýva inak: Anynet+ u Samsungu, SIMPLINK u LG, BRAVIA Sync u Sony a CEC u väčšiny ostatných. Viac v návode [Zapnutie televízora a prepnutie na HDMI konzoly](@console).'),
       ('Zapnutie televízora z mobilu', 'Televízory Smart TV sa dajú prebudiť cez Wi-Fi, keď to raz povolíte, a potom ich Mando TV zapne z mobilu. Na Samsungu zapnite „Power On with Mobile“ v Nastavenia > General > Network > Expert Settings. Na LG zapnite „Turn on TV with Mobile“ ([krok za krokom](@lg-on)). Na Roku TV zapnite „Fast TV start“ v Settings > System > Power. Na Google TV a Android TV hľadajte Wake on LAN alebo „Wake on network“, ak ho váš model má. Robí sa to raz, pri zapnutom televízore.'),
       ('Ak tlačidlo nenájdete', 'Niektoré novšie televízory ukrývajú jediné tlačidlo tak dobre, že pôsobí, akoby žiadne nebolo. Hľadajte malú vypuklinu alebo oblasť svetelného snímača pod obrazovkou: tlačidlo je často hneď vedľa. Cez Wi-Fi potrebuje Mando TV, aby bol televízor raz zapnutý a pripojený. Výnimkou je infračervený signál: v mobile s Androidom s infračerveným vysielačom dokáže Mando TV zapnúť televízor, ktorý nebol nikdy nastavený, ak mobil namierite na televízor. Infračervený signál je novinka a funguje so značkami v zozname kódov aplikácie.'),
@@ -946,7 +957,7 @@ GUIAS += [
       'Skontrolujte, či váš televízor Sony zobrazuje domovskú obrazovku Google TV alebo Android TV. Platí to pre väčšinu televízorov Sony Bravia Smart TV od roku výroby 2015.',
       'Pripojte mobil a televízor k tej istej sieti Wi-Fi.',
       'Otvorte Mando TV a v zozname klepnite na svoj televízor Sony.',
-      'Zadajte 6-miestny kód, ktorý televízor zobrazí na obrazovke (len pri prvom pripojení). Ovládač na to nepotrebujete.',
+      'Zadajte 6-znakový kód, ktorý televízor zobrazí na obrazovke (len pri prvom pripojení). Ovládač na to nepotrebujete.',
       'Používajte smerové tlačidlá, OK, späť, domov, hlasitosť a klávesnicu.',
     ],
     extra=[
@@ -971,20 +982,20 @@ GUIAS += [
       'Zistite, aký systém váš TCL používa. Ak domovská obrazovka zobrazuje jednoduchú mriežku dlaždíc kanálov, je to Roku TV. Ak vyzerá ako Google TV alebo Android TV s radmi plnými odporúčaní, je to Google TV.',
       'Pripojte mobil a televízor TCL k tej istej sieti Wi-Fi.',
       'Otvorte Mando TV. TCL sa v zozname zobrazí sám. Klepnite naň.',
-      'Pri TCL s Roku TV nie je potrebné nič ďalšie. Pri TCL s Google TV zadáte 6-miestny kód, ktorý televízor zobrazí na obrazovke (len pri prvom pripojení).',
+      'Pri TCL s Roku TV nie je potrebné nič ďalšie. Pri TCL s Google TV zadáte 6-znakový kód, ktorý televízor zobrazí na obrazovke (len pri prvom pripojení).',
       'Používajte šípky, OK, späť, domov, hlasitosť a klávesnicu. Televízor zapnite cez aplikáciu, ak ste zapli zapnutie cez sieť (pozrite nižšie).',
     ],
     extra=[
       ('Zapnutie televízora TCL z mobilu', 'Pri TCL Roku TV zapnite „Fast TV start“ v Settings > System > Power. Pri TCL Google TV hľadajte v nastaveniach siete alebo napájania možnosť Wake on LAN, „Wake on network“ alebo vzdialený štart. Niektoré modely ju nemajú. V takom prípade zapnite televízor fyzickým tlačidlom, zvyčajne dole uprostred alebo vzadu.'),
       ('Ak sa váš TCL nezobrazí', 'Skontrolujte, či sú mobil a televízor v tej istej sieti Wi-Fi. Routery s oddelenými sieťami 2,4 GHz a 5 GHz môžu zariadenia pred sebou skrývať. Na iPhone povoľte pre Mando TV v nastaveniach „Lokálna sieť“. Televízor môžete pridať aj zadaním jeho IP adresy. Prečítajte si [Mobil nenájde televízor](@not-found).'),
       ('Viac o vašom TCL', 'Pre TCL s Roku TV pozrite [Aplikácia ovládač Roku](@roku), pre TCL s Google TV alebo Android TV [Aplikácia ovládač Android TV](@android).'),
-      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číslice, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov.'),
+      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číslice, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného.'),
     ],
     marca=None,
     faq=[
       ('Funguje Mando TV s každým televízorom TCL?', 'Funguje s televízormi TCL s Roku TV, Google TV alebo Android TV, teda s väčšinou televízorov TCL Smart TV. TCL, ktorý nie je Smart TV, sa cez Wi-Fi ovládať nedá.'),
       ('Potrebujem aplikáciu TCL alebo účet TCL?', 'Nie. Mando TV sa pripája priamo cez vašu domácu sieť Wi-Fi a nevyžaduje účet.'),
-      ('Môj TCL žiada kód. Kde je?', 'Modely TCL s Google TV a Android TV zobrazia 6-miestny kód na obrazovke. Zadajte ho v Mando TV presne tak, ako sa zobrazí. TCL s Roku TV na kód nežiada.'),
+      ('Môj TCL žiada kód. Kde je?', 'Modely TCL s Google TV a Android TV zobrazia 6-znakový kód na obrazovke. Zadajte ho v Mando TV presne tak, ako sa zobrazí. TCL s Roku TV na kód nežiada.'),
     ]),
   dict(clave='hisense', corto='Ovládač Hisense', fecha='2026-11-23',
     titulo='Aplikácia ovládač Hisense: čo funguje v mobile',
@@ -995,7 +1006,7 @@ GUIAS += [
       'Skontrolujte, aký systém váš Hisense používa. VIDAA je vlastné rozhranie Hisense. Roku TV zobrazuje mriežku dlaždíc kanálov. Google TV zobrazuje rady odporúčaní. Fire TV zobrazuje domovskú obrazovku Fire TV s radmi Amazonu.',
       'Pripojte mobil a televízor Hisense k tej istej sieti Wi-Fi.',
       'Otvorte Mando TV. Televízor sa v zozname zobrazí sám. Klepnite naň.',
-      'Modely VIDAA a Fire TV môžu zobraziť štvorciferný PIN; Google TV zobrazí šesťmiestny kód. Zadajte ho v aplikácii. Roku TV sa na nič nepýta. Urobíte to len raz.',
+      'Modely VIDAA a Fire TV môžu zobraziť štvorciferný PIN; Google TV zobrazí šesťznakový kód. Zadajte ho v aplikácii. Roku TV sa na nič nepýta. Urobíte to len raz.',
       'Používajte šípky, OK, späť, domov, hlasitosť a klávesnicu v mobile.',
     ],
     extra=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense s Fire TV', 'Podpora Fire TV je v Mando TV novinka. Aktualizujte aplikáciu na najnovšiu verziu vo svojom obchode. Ako funguje párovanie s PIN-om, nájdete na stránke [Ovládač Fire TV](@firetv). Ak niečo nefunguje podľa očakávania, napíšte nám cez stránku pomoci a uveďte model.'),
       ('Hisense s VIDAA', 'Väčšina modelov VIDAA funguje: tlačidlá, hlasitosť, klávesnica, aplikácie a vstupy. Niektoré novšie modely VIDAA akceptujú len oficiálnu aplikáciu Hisense. Mando TV to pri pripájaní rozpozná a jasne vám to povie namiesto toho, aby ticho zlyhalo. V takom prípade je správnou cestou aplikácia Hisense pre váš model, tlačidlá na televízore alebo pôvodný ovládač.'),
       ('Zapnutie Hisense z mobilu', 'Pri Hisense Roku TV zapnite „Fast TV start“ v Settings > System > Power. Pri Google TV hľadajte možnosť Wake on LAN alebo „Wake on network“. Ak žiadna neexistuje, použite tlačidlo zapnutia na televízore.'),
-      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Mando TV Pro je voliteľný jednorazový nákup doplnkov.'),
+      ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného.'),
     ],
     marca=None,
     faq=[
@@ -1020,7 +1031,7 @@ GUIAS += [
       'Skontrolujte domovskú obrazovku. Roku TV zobrazuje mriežku dlaždíc. Google TV a Android TV zobrazujú rady odporúčaní od Googlu. Titan OS má vlastnú domovskú obrazovku.',
       'Pripojte mobil a televízor k tej istej sieti Wi-Fi.',
       'Otvorte Mando TV a v zozname klepnite na svoj televízor Philips.',
-      'Roku TV sa na nič nepýta. Google TV a Android TV zobrazia 6-miestny kód: zadajte ho v aplikácii raz.',
+      'Roku TV sa na nič nepýta. Google TV a Android TV zobrazia 6-znakový kód: zadajte ho v aplikácii raz.',
       'Používajte smerové tlačidlá, OK, späť, domov, hlasitosť a klávesnicu.',
     ],
     extra=[

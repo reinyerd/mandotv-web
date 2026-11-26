@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Guider: använd mobilen som fjärrkontroll',
   intro='Enkla steg för att ansluta fjärrkontrollen till din Samsung-, LG-, Roku- eller Android TV-tv med Mando TV, slå på tv:n och lösa problem.',
   h2_guias='Alla guider', h2_marcas='Fjärrkontrollsapp per märke',
+  marcas_extra=[('sony', 'Sony fjärrkontrollsapp'), ('philips', 'Philips fjärrkontrollsapp')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Öppna Mando TV: din LG-tv dyker upp i listan av sig själv. Tryck på den.',
       'På tv:n visas en fråga om tillstånd. Godkänn den med din vanliga fjärrkontroll (bara första gången).',
     ],
-    encender='Öppna Inställningar på LG-tv:n och leta efter "Slå på tv med mobil" (beroende på modell finns den under Allmänt eller Anslutning). Slå på "Slå på via wifi". Om det finns "Quick Start+", slå på den också. Efter det frågar appen om den ska slå på tv:n när du trycker på den avstängda tv:n i Mando TV, och ansluter av sig själv.',
+    encender='Slå på "Slå på tv med mobil" (på vissa modeller heter den "Slå på via wifi"). Du hittar den under Inställningar > Allmänt > Enheter > Externa enheter (på äldre modeller Anslutning > Hantering av mobilanslutning). Efter det frågar appen om den ska slå på tv:n när du trycker på den avstängda tv:n i Mando TV, och ansluter av sig själv.',
     faq=[
       ('Behöver jag Magic Remote för att använda Mando TV?', 'Bara första gången, för att godkänna frågan på skärmen. Efter det räcker mobilen.'),
       ('Ersätter Mando TV appen LG ThinQ?', 'För att styra tv:n, ja: du behöver varken LG-konto eller registrera tv:n. Mando TV ansluter direkt via ditt wifi.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Fungerar det med äldre Samsung-tv?', 'Det fungerar med Samsung-tv med Tizen, tillverkade 2016 och senare. Tidigare modeller använder ett annat system som vi ännu inte stöder.'),
     ],
     guias=[('samsung-lost', 'Samsung-tv utan originalfjärrkontroll: så använder du mobilen'),
+           ('smartthings', 'Alternativ till SmartThings för Samsung-tv'),
+           ('turn-on', 'Så slår du på en tv utan fjärrkontroll'),
            ('hdmi', 'Byt HDMI-ingång på tv:n utan fjärrkontroll'),
            ('guias', 'Alla guider för att styra tv:n med mobilen')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Anslut mobilen och din Roku till samma wifi.',
       'Öppna Mando TV: din Roku dyker upp i listan av sig själv. Tryck på den.',
-      'Om anslutningen inte fungerar, gå till Inställningar > System > Avancerade systeminställningar > Styrning via mobilappar på din Roku och sätt nätverksåtkomsten till Standard eller Aktiverad.',
+      'Om anslutningen inte fungerar, gå till Inställningar > System > Avancerade systeminställningar > Styrning via mobilappar på din Roku och sätt nätverksåtkomsten till Standard eller Permissive (på nyare Roku-programvara, sätt Styrning via mobilappar till Aktiverad).',
     ],
     encender='På Roku TV slår du på "Snabb tv-start" under Inställningar > System > Ström. Roku-spelare som är anslutna till en annan tv kan inte slås på på det här sättet. Efter det frågar appen om den ska slå på tv:n när du trycker på den avstängda tv:n i Mando TV, och ansluter av sig själv.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Roku-appen fungerar inte (fel 403)'),
            ('roku-lost', 'Borttappad Roku fjärrkontroll: så använder du mobilen'),
+           ('tcl', 'TCL fjärrkontrollsapp'),
+           ('hisense', 'Hisense fjärrkontrollsapp'),
+           ('philips', 'Philips fjärrkontrollsapp'),
            ('guias', 'Alla guider för att styra tv:n med mobilen')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV och Google TV',
     titulo='Android TV fjärrkontroll som app i mobilen | Mando TV',
@@ -173,8 +179,8 @@ MARCAS = [
     h1='Android TV fjärrkontroll som app i mobilen',
     intro='Mando TV är en fjärrkontrollsapp för Android TV: den gör mobilen eller datorn till fjärrkontroll för din Android TV- eller Google TV-tv, via wifi hemma. Den fungerar också från iPhone och från Windows.',
     compat='Tv-apparater med Google TV eller Android TV från Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu och andra märken, samt Chromecast med Google TV, Google TV Streamer, onn. och Nvidia Shield. En del av de här märkena säljer också modeller med ett annat system: visar din tv startskärmen för Google TV eller har den Google Play Store, styr Mando TV den.',
-    h2=dict(funciones='Det här kan du göra med din Android TV', como='Så ansluter du din Android TV till Mando TV',
-            encender='Slå på Android TV med mobilen', preguntas='Frågor om Android TV', guias='Guider för Android TV'),
+    h2=dict(funciones='Det här kan du göra med din Android TV och Google TV', como='Så ansluter du din Android TV och Google TV till Mando TV',
+            encender='Slå på Android TV och Google TV med mobilen', preguntas='Frågor om Android TV och Google TV', guias='Guider för Android TV och Google TV'),
     funciones=[
       ('Alla knappar', 'Riktningsknappar, OK, bakåt, hem, volym, ljud av och uppspelning.'),
       ('Touchpad (Pro)', 'Svep med fingret för att snabbt navigera i menyerna i Google TV.'),
@@ -188,7 +194,7 @@ MARCAS = [
       'Öppna Mando TV: din Android TV dyker upp i listan av sig själv. Tryck på den.',
       'Tv:n visar en kod med 6 tecken. Skriv in den i Mando TV (bara första gången).',
     ],
-    encender='Det beror på tillverkaren. Leta i nätverks- eller energiinställningarna efter "Wake on LAN", "Nätverksstandby" eller "Väck via nätverk". En del modeller har inte det alternativet. Efter det frågar appen om den ska slå på tv:n när du trycker på den avstängda tv:n i Mando TV, och ansluter av sig själv.',
+    encender='Det beror på tillverkaren. Leta i nätverks- eller energiinställningarna efter "Wake on LAN", "Nätverksstandby", "Väck via nätverk" eller "Remote start". En del modeller har inte det alternativet. Efter det frågar appen om den ska slå på tv:n när du trycker på den avstängda tv:n i Mando TV, och ansluter av sig själv.',
     faq=[
       ('Fungerar det med Chromecast med Google TV?', 'Ja, kopplingen sker med koden på 6 tecken som visas på skärmen.'),
       ('Vad skiljer det från appen Google TV?', 'Mando TV behöver inget Google-konto, fungerar också i Windows och styr tv från LG, Samsung och Roku med samma app.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV ber om en kopplingskod: det här gör du'),
            ('androidtv', 'Android TV utan fjärrkontroll: så använder du mobilen'),
+           ('googletv-alt', 'Alternativ till Google TV-fjärrkontrollen i mobilen'),
+           ('sony', 'Sony fjärrkontrollsapp'),
+           ('tcl', 'TCL fjärrkontrollsapp'),
+           ('hisense', 'Hisense fjärrkontrollsapp'),
+           ('philips', 'Philips fjärrkontrollsapp'),
            ('guias', 'Alla guider för att styra tv:n med mobilen')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Kan jag slå på tv:n med mobilen om jag aldrig har anslutit den?', 'Första gången slår du på den med knappen på tv:n. När du har anslutit mobilen och slagit på påslagning via nätverket i tv:ns inställningar kan du slå på den från appen.'),
       ('Måste jag köpa en ny fjärrkontroll?', 'Inte nödvändigtvis. Med Mando TV får du knappar, volym, tangentbord och påslagning gratis. Vill du ändå hellre ha en riktig fjärrkontroll, sök efter den exakta modellen på din tv.'),
-      ('Fungerar det om tv:n inte har wifi?', 'Nej. Mobilen och tv:n måste sitta på samma wifi. En tv som inte är en smart-tv går inte att styra med Mando TV.'),
+      ('Fungerar det om tv:n inte har wifi?', 'Oftast nej. Mobilen och tv:n måste vanligtvis sitta på samma wifi. Undantag är infrarött på Android-mobiler med infraröd sändare, som också styr tv utan smart-funktion, och Bluetooth i betan från Android 9, som fungerar helt utan wifi med Google TV, Android TV och Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Borttappad LG fjärrkontroll',
     titulo='Borttappad LG fjärrkontroll? Använd mobilen',
@@ -287,7 +298,7 @@ GUIAS = [
       'Ladda ner Mando TV, som är gratis och inte kräver något Google-konto, och öppna appen. Tryck på din tv i listan.',
       'Tv:n visar en kod med 6 bokstäver och siffror. Skriv in den på mobilen och tryck på Parkoppla. Du behöver inte fjärrkontrollen för det.',
       'Nu kan du använda pilar, OK, bakåt, hem, volym, ljud av och tangentbord. De är gratis, liksom applistan. Touchpad är Pro.',
-      'För att slå på tv:n från mobilen nästa gång, leta i nätverks- eller energiinställningarna efter "Wake on LAN", "Nätverksstandby" eller "Väck via nätverk".',
+      'För att slå på tv:n från mobilen nästa gång, leta i nätverks- eller energiinställningarna efter "Wake on LAN", "Nätverksstandby", "Väck via nätverk" eller "Remote start".',
     ],
     extra=[
       ('Om din tv inte går att slå på från mobilen', 'Inte alla Android TV kan slås på via nätverket; det beror på tillverkare och modell. Om din saknar funktionen, slå på den med knappen på tv:n och fortsätt på mobilen. Du kan stänga av den från appen.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Du kan slå på en LG-tv med mobilen, men först måste du aktivera en inställning på tv:n. Därefter slår mobilen på LG-tv:n via ditt wifi, helt utan fjärrkontroll. Det tar fem minuter och du gör det bara en gång.',
     pasos=[
       'Anslut mobilen och LG-tv:n till samma wifi.',
-      'Öppna Inställningar på tv:n och leta efter "Slå på tv med mobil". Beroende på modell finns den under Allmänt eller Anslutning.',
+      'Öppna Inställningar på tv:n och leta efter "Slå på tv med mobil". Du hittar den under Inställningar > Allmänt > Enheter > Externa enheter (på äldre modeller Anslutning > Hantering av mobilanslutning).',
       'Slå på "Slå på via wifi". Är tv:n ansluten med nätverkskabel, slå i stället på alternativet för kabel.',
       'Om din tv har "Quick Start+", slå på den också.',
       'Med tv:n påslagen öppnar du Mando TV på mobilen och trycker på din LG-tv i listan. Godkänn frågan som visas på skärmen. Så lär sig appen att väcka den.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Tryck på Home på din Roku och gå till Inställningar.',
       'Öppna System och sedan Avancerade systeminställningar.',
       'Gå till "Styrning via mobilappar". På en del modeller heter den "Extern styrning".',
-      'Välj Standard eller Aktiverad under "Nätverksåtkomst". Är det bara en strömbrytare på din modell, låt den stå på Aktiverad.',
+      'Välj Standard eller Permissive under "Nätverksåtkomst". Är det bara en strömbrytare på din modell, låt den stå på Aktiverad.',
       'Gå tillbaka till Mando TV på mobilen och tryck på din Roku. Knapparna reagerar nu.',
     ],
     extra=[
       ('Så vet du om det är ditt problem', 'Tecknet är tydligt: mobilen ser din Roku i listan och ansluter, men ingenting händer när du trycker på en knapp. Internt svarar Roku med fel 403, som betyder "förbjudet". Mando TV upptäcker det vid anslutningen och visar dig exakt de här stegen på skärmen.'),
-      ('Standard eller Aktiverad, vilken väljer jag?', 'Båda fungerar: Mando TV behöver bara kommandon från ditt hemmanätverk. Om alternativet står på Avstängd (Begränsad i nyare programvara) svarar Roku inte på appar.'),
+      ('Standard eller Permissive, vilken väljer jag?', 'Standard räcker: Den tar emot kommandon från ditt hemmanätverk, vilket är vad en fjärrkontroll behöver. Permissive är mer öppen och behövs bara i ovanliga nätverk.'),
       ('Om du inte har Roku-fjärrkontrollen', 'Om inställningen står på Avstängd går den bara att ändra med den riktiga Roku-fjärrkontrollen. Låna en för att ändra det en gång; efter det kan du göra allt med mobilen. Läs också [Borttappad Roku fjärrkontroll](@roku-lost).'),
     ],
     marca='roku',
@@ -528,7 +539,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Hitta tv:n</h2>
             <li>Kontrollera att mobilen och tv:n sitter på samma wifi. Har din router ett 2,4 GHz- och ett 5 GHz-nät med olika namn ser de ibland inte varandra.</li>
             <li>Se till att tv:n är påslagen.</li>
             <li>Kontrollera på iPhone att Mando TV har behörigheten "Lokalt nätverk", under Inställningar, Mando TV.</li>
-            <li>Tryck i tv-listan på knappen för när din tv inte dyker upp: appen kontrollerar de vanligaste orsakerna steg för steg (samma wifi, VPN, behörighet för lokalt nätverk och mer) och visar efter varje åtgärd en knapp för att kontrollera igen.</li>
+            <li>Tryck på knappen "Tv:n dyker inte upp?" i tv-listan: appen kontrollerar de vanligaste orsakerna steg för steg (samma wifi, VPN, behörighet för lokalt nätverk och mer) och visar efter varje åtgärd en knapp för att kontrollera igen.</li>
             <li>Dyker den fortfarande inte upp, tryck på knappen +, välj märke och skriv in tv:ns IP-adress. Du ser den i tv:ns nätverksmeny (till exempel 192.168.1.50).</li>
           </ol>
         </details>
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Hitta tv:n</h2>
           <p>Tv:n frågar om du tillåter anslutningen från Mando TV. Välj "Tillåt" med fjärrkontrollen. Har du nekat av misstag, gå till Inställningar > Allmänt > Hanterare för externa enheter > Enhetsanslutningshanterare och ändra till tillåten.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku frågar inte efter något tillstånd. Fungerar inte anslutningen, gå på Roku till Inställningar > System > Avancerade systeminställningar > Styrning via mobilappar och låt nätverksåtkomsten stå på Standard eller Aktiverad.</p>
+          <p>Roku frågar inte efter något tillstånd. Fungerar inte anslutningen, gå på Roku till Inställningar > System > Avancerade systeminställningar > Styrning via mobilappar och låt nätverksåtkomsten stå på Standard eller Permissive (på nyare Roku-programvara, sätt Styrning via mobilappar till Aktiverad).</p>
         </details>
         <details><summary>Android TV och Google TV</summary>
           <p>Tv:n visar en kod med 6 tecken. Skriv in den exakt som den visas i Mando TV. Det fungerar på Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast med Google TV och andra med Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Hitta tv:n</h2>
       <p>Mando TV slår på tv:n via ditt hemmanätverk. Det krävs två saker: du har anslutit minst en gång med tv:n påslagen, och påslagning via nätverket är aktiverad i tv:n. Inställningens namn skiljer sig beroende på modell; det här är de vanligaste:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Leta i inställningarna (beroende på modell under Allmänt eller Anslutning) efter "Slå på tv med mobil" och slå på "Slå på via wifi". Om det finns "Quick Start+", slå på den också.</p>
+          <p>Leta efter "Slå på tv med mobil" (eller "Slå på via wifi") under Inställningar > Allmänt > Enheter > Externa enheter (på äldre modeller Anslutning > Hantering av mobilanslutning) och slå på den.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Slå på "Slå på med mobil" under Inställningar > Allmänt > Nätverk > Expertinställningar.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Hitta tv:n</h2>
           <p>På Roku TV slår du på "Snabb tv-start" under Inställningar > System > Ström. Roku-spelare som är anslutna till en tv kan inte slås på på det här sättet.</p>
         </details>
         <details><summary>Android TV och Google TV</summary>
-          <p>Det beror på tillverkaren. Leta i nätverks- eller energiinställningarna efter "Wake on LAN", "Nätverksstandby" eller "Väck via nätverk". En del modeller har inte det alternativet.</p>
+          <p>Det beror på tillverkaren. Leta i nätverks- eller energiinställningarna efter "Wake on LAN", "Nätverksstandby", "Väck via nätverk" eller "Remote start". En del modeller har inte det alternativet.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infrarött för äldre tv', 'Gratis på Android-mobiler med infraröd sändare (nytt)', 'Några appar, bara på mobiler med infraröd sändare'],
         ['Bluetooth', 'Beta från Android 9, gratis', 'Beror på appen'],
         ['Foton och videor till tv:n', 'Pro, via wifi (ingen skärmspegling)', 'Beror på appen'],
-        ['Mobiler och datorer', 'iPhone, iPad och Windows, samt Android i tidig åtkomst', 'Varierar'],
-        ['Skärmspegling', 'Gratis på iPhone och iPad, via skärmsynkronisering i Kontrollcenter (tv med AirPlay)', 'Några appar erbjuder det'],
+        ['Mobiler och datorer', 'iPhone, iPad, Mac och Windows, samt Android i tidig åtkomst', 'Varierar'],
+        ['Skärmspegling', 'Gratis på iPhone, iPad och Windows med respektive inbyggd funktion. I Windows kan Pro dessutom spegla datorns skärm till tv från LG, Samsung, Hisense och Android TV (beta)', 'Några appar erbjuder det'],
       ],
       nota='Mando TV jämförs inte med någon särskild app. De aktuella priserna står på butikssidan för respektive app.'),
     extra=[
-      ('Vad Mando TV inte gör', 'Den har ingen egen skärmspegling: på iPhone och iPad leder den dig till skärmsynkronisering i Kontrollcenter, iPhones egen funktion, som fungerar med tv med AirPlay. Med Mando TV Pro kan den dessutom skicka foton och videor till tv:n via ditt wifi. Den styr smarta tv via hemmets wifi. Tv utan smart-funktion kan styras med infrarött från en Android-mobil med infraröd sändare. Från Android 9 kan mobilen också ansluta via Bluetooth som tangentbord och fjärrkontroll till Google TV, Android TV och Fire TV, helt utan wifi. Det alternativet finns i betan och är gratis.'),
+      ('Vad Mando TV inte gör', 'På iPhone och iPad leder den dig till skärmsynkronisering i Kontrollcenter, iPhones egen funktion, som fungerar med tv med AirPlay. I Windows öppnar den Casta (Windows + K), och Mando TV Pro kan skicka datorns skärm via ditt wifi till tv från LG, Samsung, Hisense och Android TV (beta, med några sekunders fördröjning och utan ljud). Med Mando TV Pro kan den dessutom skicka foton och videor till tv:n via ditt wifi. Den styr smarta tv via hemmets wifi. Tv utan smart-funktion kan styras med infrarött från en Android-mobil med infraröd sändare. Från Android 9 kan mobilen också ansluta via Bluetooth som tangentbord och fjärrkontroll till Google TV, Android TV och Fire TV, helt utan wifi. Det alternativet finns i betan och är gratis.'),
       ('Hur Mando TV tjänar pengar', 'Inte på reklam och inte på dina uppgifter: appen samlar inte in några. Mando TV finansieras av Pro, ett valfritt engångsköp för extrafunktioner. Den grundläggande fjärrkontrollen är gratis.'),
-      ('På de enheter du redan har', 'iPhone och iPad från App Store, Windows-datorer från Microsoft Store och Android via gratis tidig åtkomst i Google Play. Se [Fjärrkontrollsapp för iPhone](@iphone) och [Fjärrkontrollsapp för Windows](@windows).'),
+      ('På de enheter du redan har', 'iPhone, iPad och Mac från App Store, Windows-datorer från Microsoft Store och Android via gratis tidig åtkomst i Google Play. Se [Fjärrkontrollsapp för iPhone](@iphone) och [Fjärrkontrollsapp för Windows](@windows).'),
       ('Integritet', 'Inget konto och ingen spårning i appen. Kommunikationen med tv:n sker bara i det lokala nätverket, anslutningsuppgifterna ligger krypterade kvar på din enhet. Detaljer finns i [integritetspolicyn](@privacidad).'),
     ],
     marca=None,
@@ -717,7 +728,7 @@ GUIAS += [
       'Anslut mobilen och Roku till samma wifi.',
       'Ladda ner Mando TV och öppna det. Din Roku TV eller Roku-spelare dyker upp i listan. Tryck på den. Roku frågar inte efter någon kod.',
       'Använd pilknapparna, OK, bakåt, hem, volym och tangentbordet. Skriv sökningar i Rokus kanaler med mobilens tangentbord.',
-      'Om knapparna inte gör något, gå på Roku till Inställningar > System > Avancerade systeminställningar > Styrning via mobilappar och sätt Nätverksåtkomst till Standard eller Aktiverad (på nyare Roku-programvara, sätt Styrning via mobilappar till Aktiverad).',
+      'Om knapparna inte gör något, gå på Roku till Inställningar > System > Avancerade systeminställningar > Styrning via mobilappar och sätt Nätverksåtkomst till Standard eller Permissive (på nyare Roku-programvara, sätt Styrning via mobilappar till Aktiverad).',
       'Valfritt: slå på "Snabb tv-start" på Roku TV under Inställningar > System > Ström, så att Mando TV kan slå på tv:n.',
     ],
     extra=[
@@ -725,7 +736,7 @@ GUIAS += [
       ('Där den officiella Roku-appen är bättre', 'Behåll Roku-appen för det den erbjuder utöver fjärrkontrollen, som att bläddra bland och lägga till kanaler från Roku Channel Store samt den egna castingen och Private Listening (ljud i hörlurar på mobilen). Använd båda om du vill. De kan finnas på samma mobil.'),
       ('Roku TV och Roku-spelare', 'Båda fungerar. Det omfattar Roku TV-modeller från TCL, Hisense, Philips och andra samt Roku Express, Streaming Stick och Ultra. Detaljer finns på [sidan om Roku fjärrkontrollsapp](@roku).'),
       ('Om Roku-appen har slutat fungera', 'Om knapparna inte längre reagerar blockerar Roku oftast styrning via appar. Guiden [Roku-appen fungerar inte](@roku-403) visar inställningen som löser problemet.'),
-      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner.'),
+      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Vad Mando TV gör på en LG-tv', 'Det fungerar med LG Smart TV med webOS, alltså de flesta modeller sedan 2014, inklusive LED, NanoCell, QNED och OLED. Du får pilknapparna, OK, bakåt, hem, volym, kanaler, ljud av, uppspelningsstyrning och ett tangentbord för att skriva i YouTube, Netflix eller webbläsaren. Applistan och listan över ingångar är också gratis. Med Pro får du dessutom en pekare som med Magic Remote.'),
       ('Vad Mando TV inte gör', 'Det styr inga LG-hushållsapparater, använder inte ditt LG-konto och ersätter inte LG:s kontotjänster på tv:n. Det är en fjärrkontroll, inte en nav för det smarta hemmet.'),
       ('Integritet och reklam', 'Mando TV har ingen reklam och inget konto. Det pratar med tv:n bara inom ditt hemmanätverk och sparar anslutningsnyckeln krypterad på din enhet. Alla funktioner hittar du på sidan [LG fjärrkontrollsapp](@lg).'),
-      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner.'),
+      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Minifjärrkontroll (Pro)', 'Ett litet fjärrkontrollsfönster som ligger kvar ovanpå alla andra fönster. Så ändrar du volymen eller pausar utan att avbryta ditt arbete.'),
       ('Skriva på tv:n från datorn', 'Skärmtangentbordet på en tv är långsamt. I Mando TV skriver du med ditt riktiga tangentbord och texten hamnar i tv:ns sökruta. Den delen är gratis.'),
       ('Mer information', 'Steg-för-steg-guiden hittar du i [Styr tv:n med datorn](@pc). För mobilen, läs [Mobilen som fjärrkontroll via wifi](@wifi).'),
-      ('Gratis och Pro', 'Pilknapparna, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner. I Windows köper du Pro via Microsoft Store.'),
+      ('Gratis och Pro', 'Pilknapparna, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration. I Windows köper du Pro via Microsoft Store.'),
       ('Röstkommandon från datorn (Pro)', 'Med Pro kan du prata med tv:n via datorns mikrofon. Talet känns igen direkt på datorn: du behöver inget internet och behöver inte ställa in något i Windows. Det du säger lämnar aldrig datorn och sparas inte. Bara på mycket gamla processorer faller appen tillbaka på röstinmatningen i Windows. Då måste röstigenkänning online vara påslagen i integritetsinställningarna och ditt språk vara tillagt i Windows.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Fungerar med de här tv-apparaterna', 'LG webOS, Samsung Tizen (tillverkade 2016 och senare), Roku TV och Roku-spelare, Google TV och Android TV samt Fire TV. Märkenas sidor är [Samsung](@samsung), [LG](@lg), [Roku](@roku) och [Android TV](@android).'),
       ('Varför den frågar efter lokalt nätverk', 'iPhone blockerar appars åtkomst till enheter i ditt hemmanätverk om du inte tillåter det. Om tv:n inte dyker upp i listan, öppna Inställningar > Mando TV och slå på "Lokalt nätverk". Appen kommunicerar bara med din tv inom ditt hemmanätverk.'),
       ('Varför Mando TV och inte tillverkarens app', 'Varje tv-märke har sin egen app och vill ha en egen inställning eller ett eget konto. Mando TV är en app för alla, utan konto.'),
-      ('Gratis och Pro på iPhone', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner, direkt i appen.'),
+      ('Gratis och Pro på iPhone', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration. Du köper Pro en gång direkt i appen.'),
     ],
     marca=None,
     faq=[
-      ('Är Mando TV gratis på iPhone?', 'Nedladdningen är gratis, utan reklam. Den grundläggande fjärrkontrollen är gratis, liksom att öppna appar och byta ingångar. Extrafunktioner ingår i Mando TV Pro, ett valfritt engångsköp.'),
+      ('Är Mando TV gratis på iPhone?', 'Nedladdningen är gratis, utan reklam. Den grundläggande fjärrkontrollen är gratis, liksom att öppna appar och byta ingångar. Extrafunktioner som touchpad, röstkommandona och rutinerna ingår i Mando TV Pro, ett engångsköp.'),
       ('Fungerar det på iPad?', 'Ja. Samma app fungerar på iPhone och iPad.'),
       ('Behöver en fjärrkontrollsapp för iPhone Bluetooth eller en infraröd sändare?', 'Inte på iPhone. iPhone har ingen infraröd sändare, därför finns inte infraröd styrning där, och Bluetooth-alternativet finns bara för Android 9 eller senare, inte för iPhone. På iPhone styr Mando TV smarta tv samt Apple TV (beta) via ditt wifi hemma.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Använd pilknapparna, OK, bakåt, hem, uppspelningsknapparna och tangentbordet för sökningar.',
     ],
     extra=[
-      ('Fire TV-enheter som stöds', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube och tv med inbyggd Fire TV. Stödet är nytt, och vi har hittills bara kunnat testa några få riktiga enheter. Om något inte fungerar som väntat, skriv till oss med din modell via hjälpsidan.'),
+      ('Fire TV-enheter som stöds', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube och tv med inbyggd Fire TV, som tv i Amazon Fire TV Edition och vissa Hisense-modeller. Stödet är nytt, och vi har hittills bara kunnat testa några få riktiga enheter. Om något inte fungerar som väntat, skriv till oss med din modell via hjälpsidan.'),
       ('Slå på Fire TV', 'Mando TV slår inte på en Fire TV via nätverket. Slå på tv:n med strömknappen på apparaten: en isatt Fire TV Stick eller Cube vaknar oftast via HDMI-CEC, och på en tv med inbyggd Fire TV är tv:n själva Fire TV. Därefter styr du den från mobilen.'),
       ('Om din Fire TV inte dyker upp', 'Se till att båda enheterna sitter på samma wifi och att Fire TV är vaken. Tillåt "Lokalt nätverk" för Mando TV i inställningarna på en iPhone. Se [Mobilen hittar inte tv:n](@not-found).'),
       ('Ingen fjärrkontroll alls?', 'Fire TV måste visa PIN-koden på skärmen, så tv:n och Fire TV måste vara på och visa en bild. Om tv:n står på fel ingång, byt med knapparna på tv:n. Se [Byt ingång utan fjärrkontroll](@hdmi).'),
-      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffror, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner.'),
+      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffror, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Testa först tv:ns fjärrkontroll (HDMI-CEC)', 'Många tv-fjärrkontroller kan styra en Fire TV Stick via HDMI-CEC. Om Fire TV-gränssnittet syns, tryck på pilarna och OK på tv:ns fjärrkontroll. Händer ingenting, slå på CEC i tv:ns inställningar (Anynet+ på Samsung, SIMPLINK på LG, BRAVIA Sync på Sony) och på Fire TV styrningen av HDMI-CEC-enheter i skärminställningarna ("Display & Sounds").'),
       ('Om du har bytt wifi', 'Utan fjärrkontroll kan du inte skriva in det nya wifi-lösenordet på Fire TV, men det finns en utväg: skapa på en andra mobil en hotspot med exakt samma namn och lösenord som ditt gamla wifi. Fire TV ansluter automatiskt till den. Anslut mobilen med Mando TV till den hotspoten, koppla med PIN-koden, gå sedan på Fire TV till Inställningar > Nätverk och välj ditt nya wifi. Anslut till sist även mobilen till det nya wifit.'),
       ('Koppla en ersättningsfjärrkontroll', 'De flesta nya Fire TV-fjärrkontroller kopplas genom att du håller in hemknappen i cirka 10 sekunder nära Fire TV. Om det inte fungerar, öppna Inställningar > Handkontroller och Bluetooth-enheter > Amazon Fire TV-fjärrkontroller > Lägg till ny fjärrkontroll. Den menyn når du också från mobilen med Mando TV.'),
-      ('Fire TV inbyggd i tv:n', 'På tv med inbyggd Fire TV fungerar samma steg, eftersom tv:n själv är Fire TV.'),
+      ('Fire TV inbyggd i tv:n', 'På tv med inbyggd Fire TV, som många modeller från Insignia och Toshiba, fungerar samma steg, eftersom tv:n själv är Fire TV.'),
       ('Innan du börjar', 'Stödet för Fire TV är nytt i Mando TV. Uppdatera appen först. Om din modell inte reagerar som väntat, skriv till oss via [hjälpsidan](@soporte) och ange modellen.'),
       ('Gratis och Pro', 'Fjärrkontrollen kan du ladda ner och använda gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'När tv:n är på, ställ in den så att du slipper knappen: slå på HDMI-CEC och påslagning via nätverket, båda förklaras längre ner.',
     ],
     extra=[
-      ('Var strömknappen sitter, per märke', 'Samsung: en styrknapp eller en joystick under mitten av skärmen eller på baksidan vid ett nedre hörn. LG: en joystickknapp under LG-loggan på de flesta modeller. TCL och Hisense: oftast en liten knapp under mitten av skärmen eller på baksidan nära ett nedre hörn. Sony: på baksidan eller på en sidokant, nere nära kanten. Placeringen varierar beroende på modell. Hittar du den inte, sök efter bruksanvisningen med modellnumret på etiketten på baksidan.'),
+      ('Var strömknappen sitter, per märke', 'Samsung: en styrknapp eller en joystick under mitten av skärmen eller på baksidan vid ett nedre hörn. LG: en joystickknapp under LG-loggan på de flesta modeller. TCL och Hisense: oftast en liten knapp under mitten av skärmen eller på baksidan nära ett nedre hörn. Sony: på baksidan eller på en sidokant, nere nära kanten. Vizio: på baksidan, nere till vänster eller nere till höger, eller på sidan. Placeringen varierar beroende på modell. Hittar du den inte, sök efter bruksanvisningen med modellnumret på etiketten på baksidan.'),
       ('Slå på tv:n från en konsol eller streamingenhet (HDMI-CEC)', 'Med HDMI-CEC påslaget slår en PlayStation, en Xbox, en Roku-spelare, en Fire TV Stick eller en Chromecast också på tv:n och byter till rätt ingång när du slår på den. Varje märke kallar inställningen något annat: Anynet+ på Samsung, SIMPLINK på LG, BRAVIA Sync på Sony och CEC på de flesta andra. Mer i [Slå på tv:n och byt till spelkonsolens HDMI](@console).'),
       ('Slå på tv:n från mobilen', 'Smarta tv kan väckas via wifi om du tillåter det en gång, och då slår Mando TV på dem från mobilen. På Samsung slår du på "Slå på med mobil" under Inställningar > Allmänt > Nätverk > Expertinställningar. På LG slår du på "Slå på tv med mobil" ([steg för steg](@lg-on)). På en Roku TV slår du på "Snabb tv-start" under Inställningar > System > Ström. På Google TV och Android TV, leta efter Wake on LAN eller "Väck via nätverk", om din modell har det. Det gör du en gång, med tv:n påslagen.'),
       ('Om du inte hittar någon knapp', 'Några nyare tv gömmer den enda knappen så bra att det verkar som om det inte finns någon. Leta efter en liten buckla eller ett ljussensorområde under skärmen: knappen sitter ofta alldeles intill. Via wifi kräver Mando TV att tv:n har varit på och ansluten en gång. Infrarött är undantaget: på en Android-mobil med infraröd sändare kan Mando TV slå på en tv som aldrig har ställts in, så länge du riktar mobilen mot tv:n. Infrarött är nytt och fungerar med märkena i appens kodlista.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Slå på en TCL-tv från mobilen', 'På TCL Roku TV slår du på "Snabb tv-start" under Inställningar > System > Ström. På TCL Google TV, leta efter ett alternativ för Wake on LAN, "Väck via nätverk" eller fjärrstart i nätverks- eller energiinställningarna. En del modeller erbjuder inte det. Slå i så fall på tv:n med den fysiska strömknappen, oftast nere i mitten eller på baksidan.'),
       ('Om din TCL inte dyker upp', 'Kontrollera att mobilen och tv:n sitter på samma wifi. Routrar med separata 2,4 GHz- och 5 GHz-nät kan gömma enheter för varandra. Tillåt "Lokalt nätverk" för Mando TV i inställningarna på iPhone. Du kan också lägga till tv:n genom att skriva in dess IP-adress. Läs [Mobilen hittar inte tv:n](@not-found).'),
       ('Mer om din TCL', 'För TCL med Roku TV, se [Roku fjärrkontrollsapp](@roku), för TCL med Google TV eller Android TV [Android TV fjärrkontrollsapp](@android).'),
-      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffror, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner.'),
+      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffror, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense med Fire TV', 'Stödet för Fire TV är nytt i Mando TV. Uppdatera appen till den senaste versionen från din butik. Hur kopplingen med PIN fungerar står på sidan [Fire TV-fjärrkontrollsapp](@firetv). Om något inte fungerar som väntat, skriv till oss via hjälpsidan och ange din modell.'),
       ('Hisense med VIDAA', 'De flesta VIDAA-modeller fungerar: knappar, volym, tangentbord, appar och ingångar. Några nyare VIDAA-modeller accepterar bara den officiella Hisense-appen. Mando TV upptäcker det vid anslutningen och säger det tydligt i stället för att tyst misslyckas. I så fall är Hisense-appen för din modell, knapparna på tv:n eller originalfjärrkontrollen rätt väg.'),
       ('Slå på en Hisense från mobilen', 'På Hisense Roku TV slår du på "Snabb tv-start" under Inställningar > System > Ström. På Google TV, leta efter ett alternativ för Wake on LAN eller "Väck via nätverk". Finns inget, använd strömknappen på tv:n.'),
-      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Mando TV Pro är ett valfritt engångsköp för extrafunktioner.'),
+      ('Gratis och Pro', 'Pilknappar, OK, bakåt, hem, volym, kanaler, siffertangenter, tangentbord, att öppna appar, att byta ingångar och att slå på eller stänga av är gratis, utan reklam och utan prenumeration. Touchpad, röstkommandon, favoritappar, rutiner och sovtimer ingår i Mando TV Pro, ett engångsköp utan prenumeration.'),
     ],
     marca=None,
     faq=[

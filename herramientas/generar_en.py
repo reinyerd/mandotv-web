@@ -787,6 +787,7 @@ def pagina_guia(g):
         ld['@graph'].append({"@type": "VideoObject", "@id": url + "#video", "name": v['name'], "description": v['description'],
           "thumbnailUrl": URL + v['miniatura'], "uploadDate": v['fecha'], "duration": v['duracion'],
           "contentUrl": URL + v['archivo'], "embedUrl": "https://www.youtube.com/embed/" + v['youtube'],
+          "url": "https://www.youtube.com/watch?v=" + v['youtube'],
           "encodingFormat": "video/mp4", "inLanguage": "en", "publisher": {"@id": URL + "/#org"}})
         ancho, alto = (720, 1280) if v.get('vertical') else (1280, 720)
         clase = 'guia-video vertical' if v.get('vertical') else 'guia-video'
@@ -797,7 +798,7 @@ def pagina_guia(g):
             <source src="{v['archivo']}" type="video/mp4">
           </video>
         </div>
-        <figcaption id="video-texto">{e(v['texto'])}</figcaption>
+        <figcaption id="video-texto">{e(v['texto'])}<span class="video-yt"> · <a href="https://www.youtube.com/watch?v={v['youtube']}" target="_blank" rel="noopener">YouTube</a></span></figcaption>
       </figure>
       <script src="/video.js" defer></script>
 

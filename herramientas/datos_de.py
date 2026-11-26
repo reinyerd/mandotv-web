@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Ratgeber: Handy als Fernbedienung nutzen',
   intro='Einfache Schritte, um die Fernbedienung deines Samsung-, LG-, Roku- oder Android-TV-Fernsehers mit Mando TV zu verbinden, den Fernseher einzuschalten und Probleme zu lösen.',
   h2_guias='Alle Ratgeber', h2_marcas='Fernbedienungs-App nach Marke',
+  marcas_extra=[('sony', 'Sony Fernbedienungs-App'), ('philips', 'Philips Fernbedienungs-App')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Öffne Mando TV: Dein LG-Fernseher erscheint von selbst in der Liste. Tippe darauf.',
       'Auf dem Fernseher erscheint eine Abfrage, die um Erlaubnis bittet. Bestätige sie mit deiner gewohnten Fernbedienung (nur beim ersten Mal).',
     ],
-    encender='Öffne am LG-Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“ (je nach Modell unter Allgemein oder Verbindung). Aktiviere „Über WLAN einschalten“. Gibt es „Schnellstart+“, aktiviere es ebenfalls. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
+    encender='Öffne am LG-Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“ (unter Allgemein > Geräte > Externe Geräte, bei älteren Modellen unter Verbindung > Verwaltung der mobilen Verbindung). Aktiviere „Über WLAN einschalten“. Gibt es „Schnellstart+“, aktiviere es ebenfalls. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
     faq=[
       ('Brauche ich die Magic Remote, um Mando TV zu nutzen?', 'Nur beim ersten Mal, um die Abfrage auf dem Bildschirm zu bestätigen. Danach reicht dein Handy.'),
       ('Ersetzt Mando TV die LG ThinQ App?', 'Zum Steuern des Fernsehers ja: Du brauchst weder ein LG-Konto noch musst du den Fernseher registrieren. Mando TV verbindet sich direkt über dein WLAN.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Funktioniert es mit älteren Samsung-Fernsehern?', 'Es funktioniert mit Samsung-Fernsehern mit Tizen, Baujahr 2016 und neuer. Frühere Modelle nutzen ein anderes System, das wir noch nicht unterstützen.'),
     ],
     guias=[('samsung-lost', 'Samsung Fernseher ohne Original-Fernbedienung: So nutzt du dein Handy'),
+           ('smartthings', 'SmartThings-Alternative für Samsung-Fernseher'),
+           ('turn-on', 'So schaltest du einen Fernseher ohne Fernbedienung ein'),
            ('hdmi', 'HDMI-Eingang am Fernseher ohne Fernbedienung wechseln'),
            ('guias', 'Alle Ratgeber, um den Fernseher mit dem Handy zu steuern')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Verbinde Handy und Roku mit demselben WLAN.',
       'Öffne Mando TV: Dein Roku erscheint von selbst in der Liste. Tippe darauf.',
-      'Falls die Verbindung nicht klappt, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und stelle den Netzwerkzugriff auf Standard oder Aktiviert.',
+      'Falls die Verbindung nicht klappt, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und stelle den Netzwerkzugriff auf Standard oder Permissive (bei neuerer Roku-Software stelle „Steuerung durch mobile Apps“ auf Aktiviert).',
     ],
     encender='Aktiviere bei Roku-TV-Geräten unter Einstellungen > System > Energie die Option „TV-Schnellstart“. Roku-Player, die an einen anderen Fernseher angeschlossen sind, lassen sich so nicht einschalten. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Roku App funktioniert nicht (Fehler 403)'),
            ('roku-lost', 'Roku Fernbedienung verloren: So nutzt du dein Handy'),
+           ('tcl', 'TCL Fernbedienungs-App'),
+           ('hisense', 'Hisense Fernbedienungs-App'),
+           ('philips', 'Philips Fernbedienungs-App'),
            ('guias', 'Alle Ratgeber, um den Fernseher mit dem Handy zu steuern')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV und Google TV',
     titulo='Android TV Fernbedienung App fürs Handy | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Öffne Mando TV: Dein Android TV erscheint von selbst in der Liste. Tippe darauf.',
       'Der Fernseher zeigt einen Code mit 6 Zeichen an. Gib ihn in Mando TV ein (nur beim ersten Mal).',
     ],
-    encender='Das hängt vom Hersteller ab. Suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“ oder „Netzwerk-Standby“. Manche Modelle haben diese Option nicht. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
+    encender='Das hängt vom Hersteller ab. Suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“, „Netzwerk-Standby“ oder „Remote start“. Manche Modelle haben diese Option nicht. Danach fragt dich die App, wenn du den ausgeschalteten Fernseher in Mando TV antippst, ob sie ihn einschalten soll, und verbindet sich von selbst.',
     faq=[
       ('Funktioniert es mit Chromecast mit Google TV?', 'Ja, die Kopplung läuft über den Code mit 6 Zeichen, der auf dem Bildschirm erscheint.'),
       ('Was unterscheidet es von der Google-TV-App?', 'Mando TV braucht kein Google-Konto, funktioniert auch unter Windows und steuert Fernseher von LG, Samsung und Roku mit derselben App.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV fragt nach einem Kopplungscode: Das ist zu tun'),
            ('androidtv', 'Android TV ohne Fernbedienung: So nutzt du dein Handy'),
+           ('googletv-alt', 'Alternative zur Google-TV-Fernbedienung auf dem Handy'),
+           ('sony', 'Sony Fernbedienungs-App'),
+           ('tcl', 'TCL Fernbedienungs-App'),
+           ('hisense', 'Hisense Fernbedienungs-App'),
+           ('philips', 'Philips Fernbedienungs-App'),
            ('guias', 'Alle Ratgeber, um den Fernseher mit dem Handy zu steuern')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Kann ich den Fernseher mit dem Handy einschalten, wenn ich ihn noch nie verbunden habe?', 'Beim ersten Mal schaltest du ihn mit der Taste am Fernseher ein. Nachdem du dein Handy verbunden und in den Einstellungen des Fernsehers das Einschalten über das Netzwerk aktiviert hast, kannst du ihn über die App einschalten.'),
       ('Muss ich eine neue Fernbedienung kaufen?', 'Nicht unbedingt. Mit Mando TV bekommst du Tasten, Lautstärke, Tastatur und Einschalten kostenlos. Wenn du trotzdem lieber eine echte Fernbedienung hast, suche nach dem genauen Modell deines Fernsehers.'),
-      ('Funktioniert es, wenn der Fernseher kein WLAN hat?', 'Nein. Handy und Fernseher müssen im selben WLAN sein. Ein Fernseher, der kein Smart-TV ist, lässt sich nicht mit Mando TV steuern.'),
+      ('Funktioniert es, wenn der Fernseher kein WLAN hat?', 'Meistens nein. Handy und Fernseher müssen in der Regel im selben WLAN sein. Ausnahmen sind Infrarot auf Android-Handys mit Infrarotsender, das auch Fernseher ohne Smart-TV-Funktion steuert, und Bluetooth in der Beta ab Android 9, das ganz ohne WLAN mit Google TV, Android TV und Fire TV funktioniert.'),
     ]),
   dict(clave='lost-lg', corto='LG Fernbedienung verloren',
     titulo='LG Fernbedienung verloren? Nutze dein Handy',
@@ -278,7 +289,7 @@ GUIAS = [
     ]),
   dict(clave='androidtv', corto='Android TV ohne Fernbedienung',
     titulo='Android TV ohne Fernbedienung: Nutze dein Handy',
-    desc='Keine Android-TV- oder Google-TV-Fernbedienung? Verbinde dein Handy mit dem 6-stelligen Code auf dem Bildschirm. Gratis, ohne Konto, ohne Werbung.',
+    desc='Keine Android-TV- oder Google-TV-Fernbedienung? Verbinde dein Handy mit dem Code aus 6 Zeichen auf dem Bildschirm. Gratis, ohne Konto, ohne Werbung.',
     h1='Android TV ohne Fernbedienung: So nutzt du dein Handy',
     intro='Wenn du die Fernbedienung deines Android TV oder Google TV verloren hast oder ihre Batterien leer sind, ersetzt dein Handy sie. Das Beste: Für die Verbindung brauchst du die Fernbedienung nicht, denn der Fernseher zeigt einen Code auf dem Bildschirm und du tippst ihn auf dem Handy ein. Es funktioniert bei Fernsehern von Sony, Philips, TCL, Hisense, Sharp und Xiaomi mit Android TV, bei Chromecast mit Google TV und bei Nvidia Shield.',
     pasos=[
@@ -287,7 +298,7 @@ GUIAS = [
       'Lade Mando TV herunter, das kostenlos ist und kein Google-Konto verlangt, und öffne die App. Tippe in der Liste auf deinen Fernseher.',
       'Der Fernseher zeigt einen Code aus 6 Buchstaben und Zahlen. Tippe ihn auf deinem Handy ein und tippe auf Koppeln. Dafür brauchst du die Fernbedienung nicht.',
       'Jetzt kannst du Pfeile, OK, Zurück, Home, Lautstärke, Stummschaltung und Tastatur nutzen. Sie sind kostenlos, ebenso die App-Liste. Das Touchpad ist Pro.',
-      'Um den Fernseher beim nächsten Mal vom Handy aus einzuschalten, suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“ oder „Netzwerk-Standby“.',
+      'Um den Fernseher beim nächsten Mal vom Handy aus einzuschalten, suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“, „Netzwerk-Standby“ oder „Remote start“.',
     ],
     extra=[
       ('Wenn sich dein Fernseher nicht vom Handy aus einschalten lässt', 'Nicht jeder Android TV kann über das Netzwerk eingeschaltet werden; das hängt vom Hersteller und vom Modell ab. Hat deiner die Funktion nicht, schalte ihn mit der Taste am Fernseher ein und mache am Handy weiter. Ausschalten kannst du ihn über die App.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Du kannst einen LG-Fernseher mit dem Handy einschalten, musst dafür aber zuerst eine Einstellung am Fernseher aktivieren. Danach schaltet dein Handy den LG-Fernseher über dein WLAN ein, ganz ohne Fernbedienung. Es dauert fünf Minuten und du machst es nur einmal.',
     pasos=[
       'Verbinde dein Handy und den LG-Fernseher mit demselben WLAN.',
-      'Öffne am Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“. Je nach Modell findest du es unter Allgemein oder Verbindung.',
+      'Öffne am Fernseher die Einstellungen und suche „Fernseher per Mobilgerät einschalten“. Du findest es unter Allgemein > Geräte > Externe Geräte (bei älteren Modellen unter Verbindung > Verwaltung der mobilen Verbindung).',
       'Aktiviere „Über WLAN einschalten“. Ist dein Fernseher per Netzwerkkabel verbunden, aktiviere stattdessen die Option für das Kabel.',
       'Hat dein Fernseher „Schnellstart+“, aktiviere es ebenfalls.',
       'Öffne bei eingeschaltetem Fernseher Mando TV auf deinem Handy und tippe in der Liste auf deinen LG-Fernseher. Bestätige die Abfrage, die auf dem Bildschirm erscheint. So lernt die App, ihn aufzuwecken.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Drücke am Roku Home und gehe zu Einstellungen.',
       'Öffne System und dann Erweiterte Systemeinstellungen.',
       'Gehe zu „Steuerung durch mobile Apps“. Bei manchen Modellen heißt es „Externe Steuerung“.',
-      'Wähle unter „Netzwerkzugriff“ Standard oder Aktiviert. Ist es bei deinem Modell nur ein Schalter, lass ihn auf Aktiviert.',
+      'Wähle unter „Netzwerkzugriff“ Standard oder Permissive. Ist es bei deinem Modell nur ein Schalter, lass ihn auf Aktiviert.',
       'Gehe zurück zu Mando TV auf deinem Handy und tippe auf deinen Roku. Die Tasten reagieren jetzt.',
     ],
     extra=[
       ('So erkennst du, ob das dein Problem ist', 'Das Zeichen ist eindeutig: Dein Handy sieht den Roku in der Liste und verbindet sich, aber nichts passiert, wenn du eine Taste antippst. Intern antwortet der Roku mit Fehler 403, was „verboten“ bedeutet. Mando TV erkennt das beim Verbinden und zeigt dir genau diese Schritte auf dem Bildschirm.'),
-      ('Standard oder Aktiviert, was wähle ich?', 'Beides funktioniert: Mando TV braucht nur Befehle aus deinem Heimnetzwerk. Steht die Option auf Deaktiviert (bei neuerer Software Eingeschränkt), reagiert der Roku nicht auf Apps.'),
+      ('Standard oder Permissive, was wähle ich?', 'Standard reicht: Es nimmt Befehle aus deinem Heimnetzwerk an, und genau das braucht eine Fernbedienung. Permissive ist offener und nur in ungewöhnlichen Netzwerken nötig. Steht die Option auf Deaktiviert (bei neuerer Software Eingeschränkt), reagiert der Roku nicht auf Apps.'),
       ('Wenn du die Roku Fernbedienung nicht hast', 'Steht die Einstellung auf Deaktiviert, lässt sie sich nur mit der echten Roku Fernbedienung ändern. Leihe dir eine aus, um es einmal zu ändern; danach kannst du alles mit deinem Handy machen. Lies auch [Roku Fernbedienung verloren](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
           <p>Der Fernseher fragt, ob du die Verbindung von Mando TV zulässt. Wähle mit der Fernbedienung „Zulassen“. Hast du sie versehentlich abgelehnt, gehe zu Einstellungen > Allgemein > Externer Geräte-Manager > Geräteverbindungs-Manager und ändere es auf erlaubt.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku fragt nicht nach einer Erlaubnis. Klappt die Verbindung nicht, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und lass den Netzwerkzugriff auf Standard oder Aktiviert.</p>
+          <p>Roku fragt nicht nach einer Erlaubnis. Klappt die Verbindung nicht, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und lass den Netzwerkzugriff auf Standard oder Permissive (bei neuerer Roku-Software stelle „Steuerung durch mobile Apps“ auf Aktiviert).</p>
         </details>
         <details><summary>Android TV und Google TV</summary>
           <p>Der Fernseher zeigt einen Code mit 6 Zeichen. Gib ihn genau so in Mando TV ein, wie er erscheint. Es funktioniert bei Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast mit Google TV und anderen mit Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
       <p>Mando TV schaltet den Fernseher über dein Heimnetzwerk ein. Dafür sind zwei Dinge nötig: Du hast dich mindestens einmal bei eingeschaltetem Fernseher verbunden, und am Fernseher ist das Einschalten über das Netzwerk aktiviert. Der Name der Einstellung ändert sich je nach Modell; das sind die häufigsten:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Suche in den Einstellungen (je nach Modell unter Allgemein oder Verbindung) nach „Fernseher per Mobilgerät einschalten“ und aktiviere „Über WLAN einschalten“. Gibt es „Schnellstart+“, aktiviere es ebenfalls.</p>
+          <p>Suche in den Einstellungen (unter Allgemein > Geräte > Externe Geräte, bei älteren Modellen unter Verbindung > Verwaltung der mobilen Verbindung) nach „Fernseher per Mobilgerät einschalten“ und aktiviere „Über WLAN einschalten“. Gibt es „Schnellstart+“, aktiviere es ebenfalls.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Aktiviere „Mit Mobilgerät einschalten“ unter Einstellungen > Allgemein > Netzwerk > Experteneinstellungen.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Den Fernseher finden</h2>
           <p>Aktiviere bei Roku-TV-Geräten „TV-Schnellstart“ unter Einstellungen > System > Energie. Roku-Player, die an einen Fernseher angeschlossen sind, lassen sich so nicht einschalten.</p>
         </details>
         <details><summary>Android TV und Google TV</summary>
-          <p>Das hängt vom Hersteller ab. Suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“ oder „Netzwerk-Standby“. Manche Modelle haben diese Option nicht.</p>
+          <p>Das hängt vom Hersteller ab. Suche in den Netzwerk- oder Energieeinstellungen nach „Wake on LAN“, „Einschalten über Netzwerk“, „Netzwerk-Standby“ oder „Remote start“. Manche Modelle haben diese Option nicht.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infrarot für ältere Fernseher', 'Kostenlos auf Android-Handys mit Infrarotsender (neu)', 'Einige Apps, nur bei Handys mit Infrarotsender'],
         ['Bluetooth', 'Beta ab Android 9, kostenlos', 'Je nach App'],
         ['Fotos und Videos auf den Fernseher', 'Pro, über WLAN (kein Spiegeln)', 'Je nach App'],
-        ['Handys und Computer', 'iPhone, iPad und Windows, dazu Android im frühen Zugang', 'Unterschiedlich'],
-        ['Bildschirmspiegelung', 'Kostenlos auf iPhone und iPad, über die Bildschirmsynchronisierung im Kontrollzentrum (Fernseher mit AirPlay)', 'Einige Apps bieten es an'],
+        ['Handys und Computer', 'iPhone, iPad, Mac und Windows, dazu Android im frühen Zugang', 'Unterschiedlich'],
+        ['Bildschirmspiegelung', 'Kostenlos auf iPhone, iPad und Windows mit der jeweils eingebauten Funktion. Unter Windows kann Pro den PC-Bildschirm außerdem auf Fernseher von LG, Samsung, Hisense und Android TV spiegeln (Beta)', 'Einige Apps bieten es an'],
       ],
       nota='Mando TV wird mit keiner bestimmten App verglichen. Die aktuellen Preise stehen auf der Store-Seite der jeweiligen App.'),
     extra=[
-      ('Was Mando TV nicht macht', 'Eine eigene Bildschirmspiegelung hat es nicht: Auf iPhone und iPad führt es dich zur Bildschirmsynchronisierung im Kontrollzentrum, der Funktion des iPhone selbst, die mit Fernsehern mit AirPlay funktioniert. Mit Mando TV Pro kann es außerdem Fotos und Videos über dein WLAN an den Fernseher senden. Es steuert Smart-TVs über das Heim-WLAN. Fernseher ohne Smart-TV-Funktion lassen sich von einem Android-Handy mit Infrarotsender per Infrarot steuern. Ab Android 9 kann sich das Handy auch per Bluetooth als Tastatur und Fernbedienung mit Google TV, Android TV und Fire TV verbinden, ganz ohne WLAN. Diese Option ist in der Beta und kostenlos.'),
+      ('Was Mando TV nicht macht', 'Auf iPhone und iPad führt es dich zur Bildschirmsynchronisierung im Kontrollzentrum, der Funktion des iPhone selbst, die mit Fernsehern mit AirPlay funktioniert. Unter Windows öffnet es Übertragen (Windows + K), und Mando TV Pro kann den PC-Bildschirm über dein WLAN an Fernseher von LG, Samsung, Hisense und Android TV senden (Beta, mit einigen Sekunden Verzögerung und ohne Ton). Mit Mando TV Pro kann es außerdem Fotos und Videos über dein WLAN an den Fernseher senden. Es steuert Smart-TVs über das Heim-WLAN. Fernseher ohne Smart-TV-Funktion lassen sich von einem Android-Handy mit Infrarotsender per Infrarot steuern. Ab Android 9 kann sich das Handy auch per Bluetooth als Tastatur und Fernbedienung mit Google TV, Android TV und Fire TV verbinden, ganz ohne WLAN. Diese Option ist in der Beta und kostenlos.'),
       ('Wie Mando TV Geld verdient', 'Nicht mit Werbung und nicht mit deinen Daten: Die App sammelt keine. Mando TV wird durch Pro finanziert, einen optionalen Einmalkauf für Extras. Die Basis-Fernbedienung ist kostenlos.'),
-      ('Auf den Geräten, die du bereits hast', 'iPhone und iPad aus dem App Store, Windows-PCs aus dem Microsoft Store und Android über kostenlosen frühen Zugang auf Google Play. Siehe [Fernbedienungs-App fürs iPhone](@iphone) und [Fernbedienungs-App für Windows](@windows).'),
+      ('Auf den Geräten, die du bereits hast', 'iPhone, iPad und Mac aus dem App Store, Windows-PCs aus dem Microsoft Store und Android über kostenlosen frühen Zugang auf Google Play. Siehe [Fernbedienungs-App fürs iPhone](@iphone) und [Fernbedienungs-App für Windows](@windows).'),
       ('Datenschutz', 'Kein Konto und kein Tracking in der App. Die Kommunikation mit dem Fernseher findet nur im lokalen Netzwerk statt, die Verbindungsdaten bleiben auf deinem Gerät verschlüsselt. Details in den [Datenschutzbestimmungen](@privacidad).'),
     ],
     marca=None,
@@ -717,7 +728,7 @@ GUIAS += [
       'Verbinde dein Handy und den Roku mit demselben WLAN.',
       'Lade Mando TV herunter und öffne es. Dein Roku-Fernseher oder Roku-Player erscheint in der Liste. Tippe darauf. Der Roku fragt nicht nach einem Code.',
       'Nutze die Pfeiltasten, OK, Zurück, Home, Lautstärke und die Tastatur. Gib Suchbegriffe in Roku-Kanälen mit der Handy-Tastatur ein.',
-      'Wenn die Tasten nichts tun, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und stelle Netzwerkzugriff auf Standard oder Aktiviert (bei neuerer Roku-Software setze Steuerung durch mobile Apps auf Aktiviert).',
+      'Wenn die Tasten nichts tun, gehe am Roku zu Einstellungen > System > Erweiterte Systemeinstellungen > Steuerung durch mobile Apps und stelle Netzwerkzugriff auf Standard oder Permissive (bei neuerer Roku-Software setze Steuerung durch mobile Apps auf Aktiviert).',
       'Optional: Aktiviere am Roku-Fernseher den „TV-Schnellstart“ unter Einstellungen > System > Energie, damit Mando TV den Fernseher einschalten kann.',
     ],
     extra=[
@@ -725,7 +736,7 @@ GUIAS += [
       ('Wo die offizielle Roku App besser ist', 'Behalte die Roku App für das, was sie über die Fernbedienung hinaus bietet, wie das Durchsuchen und Hinzufügen von Kanälen aus dem Roku Channel Store sowie das eigene Casting und Private Listening (Ton über Kopfhörer am Handy). Nutze beide, wenn du möchtest. Sie können auf demselben Handy laufen.'),
       ('Roku-TV-Geräte und Roku-Player', 'Beide funktionieren. Das umfasst Roku-TV-Modelle von TCL, Hisense, Philips und anderen sowie Roku Express, Streaming Stick und Ultra. Details findest du auf der [Seite zur Roku Fernbedienungs-App](@roku).'),
       ('Wenn die Roku App nicht mehr funktioniert', 'Wenn die Tasten nicht mehr reagieren, blockiert der Roku meist die Steuerung durch Apps. Die Anleitung [Roku App funktioniert nicht](@roku-403) zeigt die Einstellung, die das Problem behebt.'),
-      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Kanäle, Zifferntasten, Tastatur, Öffnen von Apps, Wechseln der Eingänge und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras.'),
+      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Kanäle, Zifferntasten, Tastatur, Öffnen von Apps, Wechseln der Eingänge und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Was Mando TV auf einem LG-Fernseher macht', 'Es funktioniert mit LG-Smart-TVs mit webOS, also mit den meisten Modellen seit 2014, einschließlich LED, NanoCell, QNED und OLED. Es bietet dir die Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Stumm, Wiedergabesteuerung und eine Tastatur zum Tippen in YouTube, Netflix oder dem Browser. Die App-Liste und die Eingangsliste sind ebenfalls kostenlos. Mit Pro bekommst du zusätzlich einen Zeiger wie bei der Magic Remote.'),
       ('Was Mando TV nicht macht', 'Es steuert keine LG-Hausgeräte, es nutzt dein LG-Konto nicht und es ersetzt nicht die LG-Kontodienste auf dem Fernseher. Es ist eine Fernbedienung, kein Smart-Home-Hub.'),
       ('Datenschutz und Werbung', 'Mando TV hat keine Werbung und kein Konto. Es spricht nur innerhalb deines Heimnetzes mit dem Fernseher und speichert den Verbindungsschlüssel verschlüsselt auf deinem Gerät. Alle Funktionen findest du auf der Seite [LG Fernbedienungs-App](@lg).'),
-      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras.'),
+      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini-Fernbedienung (Pro)', 'Ein kleines Fernbedienungsfenster, das über allen anderen Fenstern bleibt. So änderst du die Lautstärke oder pausierst, ohne deine Arbeit zu unterbrechen.'),
       ('Tippen auf dem Fernseher vom PC aus', 'Die Bildschirmtastatur eines Fernsehers ist langsam. In Mando TV tippst du mit deiner echten Tastatur und der Text landet im Suchfeld des Fernsehers. Dieser Teil ist kostenlos.'),
       ('Mehr Details', 'Die Anleitung Schritt für Schritt findest du unter [Fernseher mit dem PC steuern](@pc). Für das Handy lies [Handy als Fernbedienung per WLAN](@wifi).'),
-      ('Kostenlos und Pro', 'Die Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras. Unter Windows kaufst du Pro über den Microsoft Store.'),
+      ('Kostenlos und Pro', 'Die Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo. Unter Windows kaufst du Pro über den Microsoft Store.'),
       ('Sprachbefehle vom PC aus (Pro)', 'Mit Pro kannst du mit dem Fernseher über das PC-Mikrofon sprechen. Die Sprache wird direkt auf dem PC erkannt: Dafür brauchst du kein Internet und musst nichts in Windows einstellen. Was du sagst, verlässt nie den PC und wird nicht gespeichert. Nur bei sehr alten Prozessoren fällt die App auf die Windows-Spracheingabe zurück. Dafür muss die Online-Spracherkennung in den Datenschutz-Einstellungen eingeschaltet und deine Sprache in Windows hinzugefügt sein.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Funktioniert mit diesen Fernsehern', 'LG webOS, Samsung Tizen (Baujahr 2016 und neuer), Roku TV und Roku-Player, Google TV und Android TV sowie Fire TV. Die Seiten der Marken sind [Samsung](@samsung), [LG](@lg), [Roku](@roku) und [Android TV](@android).'),
       ('Warum es nach lokalem Netzwerk fragt', 'Das iPhone blockiert den Zugriff von Apps auf Geräte in deinem Heimnetzwerk, es sei denn, du erlaubst es. Wenn der Fernseher nicht in der Liste erscheint, öffne Einstellungen > Mando TV und aktiviere „Lokales Netzwerk“. Die App kommuniziert nur mit deinem Fernseher innerhalb deines Heimnetzwerks.'),
       ('Warum Mando TV und nicht die App des Herstellers', 'Jede Fernsehmarke hat ihre eigene App und will eine eigene Einrichtung oder ein eigenes Konto. Mando TV ist eine App für alle, ohne Konto.'),
-      ('Kostenlos und Pro auf dem iPhone', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras, direkt in der App.'),
+      ('Kostenlos und Pro auf dem iPhone', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo. Du kaufst Pro einmal direkt in der App.'),
     ],
     marca=None,
     faq=[
-      ('Ist Mando TV auf dem iPhone kostenlos?', 'Der Download ist kostenlos, ohne Werbung. Die Basis-Fernbedienung ist kostenlos, ebenso das Öffnen von Apps und das Wechseln der Eingänge. Extras sind Teil von Mando TV Pro, einem optionalen Einmalkauf.'),
+      ('Ist Mando TV auf dem iPhone kostenlos?', 'Der Download ist kostenlos, ohne Werbung. Die Basis-Fernbedienung ist kostenlos, ebenso das Öffnen von Apps und das Wechseln der Eingänge. Extras wie das Touchpad, die Sprachbefehle und die Routinen sind Teil von Mando TV Pro, einem Einmalkauf.'),
       ('Funktioniert es auf dem iPad?', 'Ja. Die gleiche App läuft auf iPhone und iPad.'),
       ('Braucht eine Fernbedienungs-App fürs iPhone Bluetooth oder einen Infrarotsender?', 'Nicht auf dem iPhone. iPhones haben keinen Infrarotsender, daher ist die Infrarotsteuerung dort nicht verfügbar, und die Bluetooth-Option gibt es nur für Android 9 oder neuer, nicht für das iPhone. Auf dem iPhone steuert Mando TV Smart-TVs sowie Apple TV (Beta) über dein WLAN zu Hause.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Nutze die Pfeiltasten, OK, Zurück, Home, Wiedergabe-Tasten und die Tastatur für Suchanfragen.',
     ],
     extra=[
-      ('Unterstützte Fire-TV-Geräte', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube und Fernseher mit integriertem Fire TV. Die Unterstützung ist neu, und wir konnten bisher nur wenige echte Geräte testen. Wenn etwas nicht wie erwartet funktioniert, schreibe uns dein Modell über die Hilfe-Seite.'),
+      ('Unterstützte Fire-TV-Geräte', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube und Fernseher mit integriertem Fire TV, wie Fernseher der Amazon Fire TV Edition und einige Hisense-Modelle. Die Unterstützung ist neu, und wir konnten bisher nur wenige echte Geräte testen. Wenn etwas nicht wie erwartet funktioniert, schreibe uns dein Modell über die Hilfe-Seite.'),
       ('Fire TV einschalten', 'Mando TV schaltet einen Fire TV nicht über das Netzwerk ein. Schalte den Fernseher mit der Ein-Taste am Gerät ein: Ein eingesteckter Fire TV Stick oder Cube wacht meist durch HDMI-CEC auf, und bei einem Fernseher mit integriertem Fire TV ist der Fernseher der Fire TV. Danach steuerst du ihn vom Handy aus.'),
       ('Wenn dein Fire TV nicht erscheint', 'Stelle sicher, dass beide Geräte im selben WLAN sind und der Fire TV wach ist. Erlaube auf einem iPhone „Lokales Netzwerk“ für Mando TV in den Einstellungen. Siehe [dein Handy findet den Fernseher nicht](@not-found).'),
       ('Gar keine Fernbedienung?', 'Der Fire TV muss den PIN auf dem Bildschirm zeigen, also müssen Fernseher und Fire TV an sein und ein Bild zeigen. Wenn der Fernseher auf einem falschen Eingang steht, wechsle ihn mit den Tasten am Fernseher. Siehe [Eingang wechseln ohne Fernbedienung](@hdmi).'),
-      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Ziffern, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras.'),
+      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Ziffern, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Teste zuerst die Fernseher-Fernbedienung (HDMI-CEC)', 'Viele Fernseher-Fernbedienungen können einen Fire TV Stick über HDMI-CEC steuern. Wenn die Fire-TV-Oberfläche zu sehen ist, drücke die Pfeile und OK auf der Fernbedienung des Fernsehers. Wenn nichts passiert, aktiviere CEC in den Einstellungen des Fernsehers (Anynet+ bei Samsung, SIMPLINK bei LG, BRAVIA Sync bei Sony) und am Fire TV die HDMI-CEC-Gerätesteuerung in den Display-Einstellungen („Display & Sounds“).'),
       ('Wenn du das WLAN gewechselt hast', 'Ohne Fernbedienung kannst du das neue WLAN-Passwort am Fire TV nicht eingeben, aber es gibt einen Ausweg: Erstelle auf einem zweiten Handy einen Hotspot mit exakt demselben Namen und Passwort wie dein altes WLAN. Der Fire TV verbindet sich automatisch damit. Verbinde das Handy mit Mando TV mit diesem Hotspot, kopple ihn mit dem PIN, gehe dann am Fire TV zu Einstellungen > Netzwerk und wähle dein neues WLAN aus. Verbinde zum Schluss auch dein Handy mit dem neuen WLAN.'),
       ('Eine Ersatz-Fernbedienung koppeln', 'Die meisten neuen Fire TV Fernbedienungen koppeln, indem du die Home-Taste etwa 10 Sekunden lang gedrückt hältst, in der Nähe des Fire TV. Falls es nicht klappt, öffne Einstellungen > Controller und Bluetooth-Geräte > Amazon Fire TV-Fernbedienungen > Neue Fernbedienung hinzufügen. Dieses Menü erreichst du auch über dein Handy mit Mando TV.'),
-      ('Fire TV im Fernseher integriert', 'Bei Fernsehern mit integriertem Fire TV funktionieren die gleichen Schritte, da der Fernseher selbst der Fire TV ist.'),
+      ('Fire TV im Fernseher integriert', 'Bei Fernsehern mit integriertem Fire TV, wie vielen Modellen von Insignia und Toshiba, funktionieren die gleichen Schritte, da der Fernseher selbst der Fire TV ist.'),
       ('Bevor du startest', 'Die Fire TV-Unterstützung ist neu in Mando TV. Aktualisiere die App zuerst. Wenn dein Modell nicht wie erwartet reagiert, schreib uns über die [Hilfeseite](@soporte) und nenne das Modell.'),
       ('Kostenlos und Pro', 'Die Fernbedienung kannst du kostenlos laden und nutzen, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'Sobald der Fernseher an ist, richte ihn so ein, dass du die Taste nicht mehr brauchst: Aktiviere HDMI-CEC und das Einschalten über das Netzwerk, beides weiter unten erklärt.',
     ],
     extra=[
-      ('Wo die Ein-/Aus-Taste sitzt, nach Marke', 'Samsung: eine Steuerungs-Taste oder ein Joystick unter der Mitte des Bildschirms oder auf der Rückseite an einer unteren Ecke. LG: eine Joystick-Taste unter dem LG-Logo bei den meisten Modellen. TCL und Hisense: meist eine kleine Taste unter der Mitte des Bildschirms oder auf der Rückseite in der Nähe einer unteren Ecke. Sony: auf der Rückseite oder an einer Seitenkante, unten nah am Rand. Die Positionen ändern sich je nach Modell. Wenn du sie nicht findest, suche die Bedienungsanleitung mit der Modellnummer auf dem Aufkleber auf der Rückseite.'),
+      ('Wo die Ein-/Aus-Taste sitzt, nach Marke', 'Samsung: eine Steuerungs-Taste oder ein Joystick unter der Mitte des Bildschirms oder auf der Rückseite an einer unteren Ecke. LG: eine Joystick-Taste unter dem LG-Logo bei den meisten Modellen. TCL und Hisense: meist eine kleine Taste unter der Mitte des Bildschirms oder auf der Rückseite in der Nähe einer unteren Ecke. Sony: auf der Rückseite oder an einer Seitenkante, unten nah am Rand. Vizio: auf der Rückseite, unten links oder unten rechts, oder an der Seite. Die Positionen ändern sich je nach Modell. Wenn du sie nicht findest, suche die Bedienungsanleitung mit der Modellnummer auf dem Aufkleber auf der Rückseite.'),
       ('Den Fernseher über eine Konsole oder ein Streaming-Gerät einschalten (HDMI-CEC)', 'Mit aktiviertem HDMI-CEC schaltet das Einschalten einer PlayStation, einer Xbox, eines Roku-Players, eines Fire-TV-Sticks oder eines Chromecast auch den Fernseher ein und wechselt auf den richtigen Eingang. Jede Marke nennt die Einstellung anders: Anynet+ bei Samsung, SIMPLINK bei LG, BRAVIA Sync bei Sony und CEC bei den meisten anderen. Mehr in [Fernseher einschalten und auf HDMI der Konsole wechseln](@console).'),
       ('Den Fernseher über dein Handy einschalten', 'Smart-TVs können per WLAN aufgeweckt werden, wenn du das einmal erlaubst, und dann schaltet Mando TV sie von deinem Handy aus ein. Bei Samsung aktiviere „Mit Mobilgerät einschalten“ unter Einstellungen > Allgemein > Netzwerk > Experteneinstellungen. Bei LG aktiviere „Fernseher per Mobilgerät einschalten“ ([Schritt für Schritt](@lg-on)). Bei einem Roku-TV aktiviere „TV-Schnellstart“ unter Einstellungen > System > Energie. Bei Google TV und Android TV suche nach Wake on LAN oder „Einschalten über Netzwerk“, falls dein Modell das hat. Das machst du einmal, bei eingeschaltetem Fernseher.'),
       ('Wenn du keine Taste findest', 'Einige neuere Fernseher verstecken die einzige Taste so gut, dass es wirkt, als gäbe es keine. Suche nach einer kleinen Wölbung oder einem Lichtsensorbereich unter dem Bildschirm: Die Taste sitzt oft direkt daneben. Über WLAN braucht Mando TV, dass der Fernseher einmal an war und verbunden ist. Infrarot ist die Ausnahme: Auf einem Android-Handy mit Infrarotsender kann Mando TV einen Fernseher einschalten, der nie eingerichtet wurde, solange du das Handy auf den Fernseher richtest. Infrarot ist neu und funktioniert mit den Marken in der App-Codeliste.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Einen TCL-Fernseher vom Handy aus einschalten', 'Bei TCL Roku TV aktiviere „TV-Schnellstart“ unter Einstellungen > System > Energie. Bei TCL Google TV suche eine Option für Wake on LAN, „Einschalten über Netzwerk“ oder Fernstart in den Netzwerk- oder Energieeinstellungen. Manche Modelle bieten dies nicht. Schalte den Fernseher in diesem Fall mit der physischen Ein-/Aus-Taste ein, meist unten in der Mitte oder an der Rückseite.'),
       ('Wenn dein TCL nicht erscheint', 'Prüfe, ob Handy und Fernseher im selben WLAN sind. Router mit getrennten 2,4-GHz- und 5-GHz-Netzen können Geräte voneinander verstecken. Erlaube auf dem iPhone „Lokales Netzwerk“ für Mando TV in den Einstellungen. Du kannst den Fernseher auch hinzufügen, indem du seine IP-Adresse eingibst. Lies [Dein Handy findet den Fernseher nicht](@not-found).'),
       ('Mehr zu deinem TCL', 'Für TCL mit Roku TV siehe [Roku Fernbedienungs-App](@roku), für TCL mit Google TV oder Android TV [Android TV Fernbedienungs-App](@android).'),
-      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Kanäle, Ziffern, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras.'),
+      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Kanäle, Ziffern, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense mit Fire TV', 'Die Unterstützung für Fire TV ist neu in Mando TV. Aktualisiere die App auf die neueste Version aus deinem Store. Wie die Kopplung mit PIN funktioniert, steht auf der Seite [Fire-TV-Fernbedienungs-App](@firetv). Wenn etwas nicht wie erwartet funktioniert, schreibe uns über die Hilfe-Seite und nenne dein Modell.'),
       ('Hisense mit VIDAA', 'Die meisten VIDAA-Modelle funktionieren: Tasten, Lautstärke, Tastatur, Apps und Eingänge. Einige neuere VIDAA-Modelle akzeptieren nur die offizielle Hisense-App. Mando TV erkennt das beim Verbinden und sagt es dir klar, statt stillschweigend zu versagen. In diesem Fall sind die Hisense-App für dein Modell, die Tasten am Fernseher oder die Original-Fernbedienung der richtige Weg.'),
       ('Einen Hisense vom Handy aus einschalten', 'Bei Hisense Roku TV aktiviere „TV-Schnellstart“ unter Einstellungen > System > Energie. Bei Google TV suche nach einer Option für Wake on LAN oder „Einschalten über Netzwerk“. Wenn keine existiert, nutze die Ein-/Aus-Taste am Fernseher.'),
-      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Kanäle, Zifferntasten, Tastatur, Öffnen von Apps, Wechseln der Eingänge und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Mando TV Pro ist ein optionaler Einmalkauf für Extras.'),
+      ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Kanäle, Zifferntasten, Tastatur, Öffnen von Apps, Wechseln der Eingänge und Ein- oder Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo.'),
     ],
     marca=None,
     faq=[

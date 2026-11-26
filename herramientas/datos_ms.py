@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Panduan: guna telefon sebagai alat kawalan jauh',
   intro='Langkah mudah untuk menyambungkan alat kawalan jauh TV Samsung, LG, Roku atau Android TV anda dengan Mando TV, menghidupkan TV dan menyelesaikan masalah.',
   h2_guias='Semua panduan', h2_marcas='Aplikasi alat kawalan jauh mengikut jenama',
+  marcas_extra=[('sony', 'Aplikasi alat kawalan jauh Sony'), ('philips', 'Aplikasi alat kawalan jauh Philips')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Buka Mando TV: TV LG anda muncul sendiri dalam senarai. Ketik padanya.',
       'Satu pertanyaan akan muncul pada TV untuk meminta kebenaran. Sahkannya dengan alat kawalan jauh biasa anda (hanya kali pertama).',
     ],
-    encender='Pada TV LG, buka Tetapan dan cari "Hidupkan TV dengan peranti mudah alih" (di bawah Umum atau Sambungan, bergantung pada model). Aktifkan "Hidupkan melalui Wi-Fi". Jika ada "Quick Start+", aktifkan juga. Selepas itu, apabila anda mengetik TV yang dimatikan dalam Mando TV, aplikasi bertanya sama ada anda mahu menghidupkannya dan menyambung sendiri.',
+    encender='Pada TV LG, buka Tetapan dan cari "Hidupkan TV dengan peranti mudah alih" (di bawah Tetapan, Umum, Peranti, Peranti Luaran; pada model lama di Sambungan, Pengurusan Sambungan Mudah Alih). Aktifkan "Hidupkan melalui Wi-Fi". Jika ada "Quick Start+", aktifkan juga. Selepas itu, apabila anda mengetik TV yang dimatikan dalam Mando TV, aplikasi bertanya sama ada anda mahu menghidupkannya dan menyambung sendiri.',
     faq=[
       ('Adakah saya perlukan Magic Remote untuk menggunakan Mando TV?', 'Hanya kali pertama, untuk mengesahkan pertanyaan pada skrin. Selepas itu, telefon anda sudah mencukupi.'),
       ('Adakah Mando TV menggantikan aplikasi LG ThinQ?', 'Untuk mengawal TV, ya: anda tidak perlukan akaun LG dan tidak perlu mendaftarkan TV. Mando TV menyambung terus melalui Wi-Fi anda.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Adakah ia berfungsi dengan TV Samsung yang lebih lama?', 'Ia berfungsi dengan TV Samsung dengan Tizen, model 2016 dan ke atas. Model yang lebih awal menggunakan sistem lain yang belum kami sokong.'),
     ],
     guias=[('samsung-lost', 'TV Samsung tanpa alat kawalan jauh asal: cara guna telefon anda'),
+           ('smartthings', 'Alternatif SmartThings untuk TV Samsung'),
+           ('turn-on', 'Cara menghidupkan TV tanpa alat kawalan jauh'),
            ('hdmi', 'Tukar input HDMI pada TV tanpa alat kawalan jauh'),
            ('guias', 'Semua panduan untuk mengawal TV dengan telefon')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Sambungkan telefon dan Roku ke Wi-Fi yang sama.',
       'Buka Mando TV: Roku anda muncul sendiri dalam senarai. Ketik padanya.',
-      'Jika sambungan tidak berjaya, pada Roku pergi ke Tetapan > Sistem > Tetapan sistem lanjutan > Kawalan oleh aplikasi mudah alih dan tetapkan akses rangkaian kepada Lalai atau Dibenarkan.',
+      'Jika sambungan tidak berjaya, pada Roku pergi ke Tetapan > Sistem > Tetapan sistem lanjutan > Kawalan oleh aplikasi mudah alih dan tetapkan akses rangkaian kepada Lalai atau Permissive (pada perisian Roku yang lebih baharu, tetapkan "Kawalan oleh aplikasi mudah alih" kepada Dibenarkan).',
     ],
     encender='Pada peranti Roku TV, di bawah Tetapan > Sistem > Kuasa, aktifkan "Permulaan pantas TV" (Fast TV start). Pemain Roku yang disambungkan ke TV lain tidak boleh dihidupkan dengan cara ini. Selepas itu, apabila anda mengetik TV yang dimatikan dalam Mando TV, aplikasi bertanya sama ada anda mahu menghidupkannya dan menyambung sendiri.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Aplikasi Roku tidak berfungsi (ralat 403)'),
            ('roku-lost', 'Alat kawalan jauh Roku hilang: cara guna telefon anda'),
+           ('tcl', 'Aplikasi alat kawalan jauh TCL'),
+           ('hisense', 'Aplikasi alat kawalan jauh Hisense'),
+           ('philips', 'Aplikasi alat kawalan jauh Philips'),
            ('guias', 'Semua panduan untuk mengawal TV dengan telefon')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV dan Google TV',
     titulo='Aplikasi Alat Kawalan Jauh Android TV di Telefon | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Buka Mando TV: Android TV anda muncul sendiri dalam senarai. Ketik padanya.',
       'TV memaparkan kod 6 aksara. Masukkannya dalam Mando TV (hanya kali pertama).',
     ],
-    encender='Ini bergantung pada pengeluar. Dalam tetapan rangkaian atau kuasa, cari "Wake on LAN", "Hidupkan melalui rangkaian" atau "Network standby". Sesetengah model tidak mempunyai pilihan ini. Selepas itu, apabila anda mengetik TV yang dimatikan dalam Mando TV, aplikasi bertanya sama ada anda mahu menghidupkannya dan menyambung sendiri.',
+    encender='Ini bergantung pada pengeluar. Dalam tetapan rangkaian atau kuasa, cari "Wake on LAN", "Hidupkan melalui rangkaian", "Network standby" atau "Remote start". Sesetengah model tidak mempunyai pilihan ini. Selepas itu, apabila anda mengetik TV yang dimatikan dalam Mando TV, aplikasi bertanya sama ada anda mahu menghidupkannya dan menyambung sendiri.',
     faq=[
       ('Adakah ia berfungsi dengan Chromecast dengan Google TV?', 'Ya, pemasangan dibuat dengan kod 6 aksara yang muncul pada skrin.'),
       ('Apakah bezanya dengan aplikasi Google TV?', 'Mando TV tidak memerlukan akaun Google, turut berfungsi pada Windows dan mengawal TV LG, Samsung dan Roku dengan aplikasi yang sama.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV meminta kod pasangan: apa yang perlu dibuat'),
            ('androidtv', 'Android TV tanpa alat kawalan jauh: cara guna telefon anda'),
+           ('googletv-alt', 'Alternatif alat kawalan jauh Google TV pada telefon'),
+           ('sony', 'Aplikasi alat kawalan jauh Sony'),
+           ('tcl', 'Aplikasi alat kawalan jauh TCL'),
+           ('hisense', 'Aplikasi alat kawalan jauh Hisense'),
+           ('philips', 'Aplikasi alat kawalan jauh Philips'),
            ('guias', 'Semua panduan untuk mengawal TV dengan telefon')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Bolehkah saya menghidupkan TV dengan telefon jika belum pernah menyambungkannya?', 'Kali pertama, anda menghidupkannya dengan butang pada TV. Selepas anda menyambungkan telefon dan mengaktifkan hidupkan melalui rangkaian dalam tetapan TV, anda boleh menghidupkannya daripada aplikasi.'),
       ('Perlukah saya membeli alat kawalan jauh baharu?', 'Belum tentu. Dengan Mando TV, butang, volum, papan kekunci dan hidupkan TV adalah percuma. Jika anda tetap mahukan alat kawalan jauh sebenar, cari model tepat TV anda.'),
-      ('Adakah ia berfungsi jika TV tiada Wi-Fi?', 'Tidak. Telefon dan TV mesti berada dalam Wi-Fi yang sama. TV yang bukan TV pintar tidak boleh dikawal dengan Mando TV.'),
+      ('Adakah ia berfungsi jika TV tiada Wi-Fi?', 'Kebanyakannya tidak. Telefon dan TV lazimnya mesti berada dalam Wi-Fi yang sama. Pengecualiannya ialah inframerah pada telefon Android yang ada pemancar inframerah, yang juga boleh mengawal TV yang bukan TV pintar, dan Bluetooth dalam beta mulai Android 9, yang berfungsi tanpa Wi-Fi sama sekali dengan Google TV, Android TV dan Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Alat kawalan jauh LG hilang',
     titulo='Alat Kawalan Jauh LG Hilang? Guna Telefon Anda',
@@ -287,7 +298,7 @@ GUIAS = [
       'Muat turun Mando TV, yang percuma dan tidak meminta akaun Google, dan buka aplikasi. Ketik TV anda dalam senarai.',
       'TV memaparkan kod 6 huruf dan nombor. Taipkannya pada telefon anda dan ketik Pasangkan. Anda tidak memerlukan alat kawalan jauh untuk ini.',
       'Sekarang anda boleh menggunakan anak panah, OK, Kembali, Utama, volum, senyap dan papan kekunci. Ia percuma, begitu juga senarai apl. Pad sentuh ialah Pro.',
-      'Untuk menghidupkan TV daripada telefon lain kali, dalam tetapan rangkaian atau kuasa cari "Wake on LAN", "Hidupkan melalui rangkaian" atau "Network standby".',
+      'Untuk menghidupkan TV daripada telefon lain kali, dalam tetapan rangkaian atau kuasa cari "Wake on LAN", "Hidupkan melalui rangkaian", "Network standby" atau "Remote start".',
     ],
     extra=[
       ('Jika TV anda tidak boleh dihidupkan daripada telefon', 'Bukan semua Android TV boleh dihidupkan melalui rangkaian; ia bergantung pada pengeluar dan model. Jika TV anda tiada ciri itu, hidupkannya dengan butang pada TV dan teruskan dengan telefon. Anda boleh mematikannya daripada aplikasi.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Anda boleh menghidupkan TV LG dengan telefon, tetapi anda perlu mengaktifkan satu tetapan pada TV terlebih dahulu. Selepas itu, telefon anda menghidupkan TV LG melalui Wi-Fi, tanpa alat kawalan jauh. Ia mengambil lima minit dan anda hanya perlu melakukannya sekali.',
     pasos=[
       'Sambungkan telefon dan TV LG ke Wi-Fi yang sama.',
-      'Pada TV, buka Tetapan dan cari "Hidupkan TV dengan peranti mudah alih". Bergantung pada model, ia berada di bawah Umum atau Sambungan.',
+      'Pada TV, buka Tetapan dan cari "Hidupkan TV dengan peranti mudah alih". Ia berada di bawah Tetapan, Umum, Peranti, Peranti Luaran (pada model lama di Sambungan, Pengurusan Sambungan Mudah Alih).',
       'Aktifkan "Hidupkan melalui Wi-Fi". Jika TV anda disambungkan dengan kabel rangkaian, aktifkan pilihan untuk kabel sebaliknya.',
       'Jika TV anda ada "Quick Start+", aktifkan juga.',
       'Dengan TV dihidupkan, buka Mando TV pada telefon anda dan ketik TV LG anda dalam senarai. Sahkan pertanyaan yang muncul pada skrin. Dengan cara ini aplikasi belajar untuk membangunkannya.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Pada Roku, tekan Utama dan pergi ke Tetapan.',
       'Buka Sistem dan kemudian Tetapan sistem lanjutan.',
       'Pergi ke "Kawalan oleh aplikasi mudah alih". Pada sesetengah model ia dipanggil "Kawalan luaran".',
-      'Di bawah "Akses rangkaian", pilih Lalai atau Dibenarkan. Jika model anda hanya ada suis, biarkan ia pada Dibenarkan.',
+      'Di bawah "Akses rangkaian", pilih Lalai atau Permissive. Jika model anda hanya ada suis, biarkan ia pada Dibenarkan.',
       'Kembali ke Mando TV pada telefon anda dan ketik Roku anda. Butang kini bertindak balas.',
     ],
     extra=[
       ('Cara mengetahui sama ada ini masalah anda', 'Tandanya jelas: telefon anda melihat Roku dalam senarai dan bersambung, tetapi tiada apa-apa berlaku apabila anda mengetik butang. Secara dalaman, Roku membalas dengan ralat 403, yang bermaksud "dilarang". Mando TV mengesan ini semasa menyambung dan menunjukkan langkah-langkah ini pada skrin.'),
-      ('Lalai atau Dibenarkan, mana yang perlu saya pilih?', 'Kedua-duanya berfungsi: Mando TV hanya memerlukan arahan daripada rangkaian rumah anda. Jika pilihan ditetapkan kepada Dilumpuhkan (pada perisian yang lebih baharu, Terhad), Roku tidak bertindak balas kepada aplikasi.'),
+      ('Lalai atau Permissive, mana yang perlu saya pilih?', 'Lalai sudah memadai: ia menerima arahan daripada rangkaian rumah anda, dan itulah yang diperlukan oleh alat kawalan jauh. Permissive lebih terbuka dan hanya diperlukan pada rangkaian yang luar biasa. Jika pilihan ditetapkan kepada Dilumpuhkan (pada perisian yang lebih baharu, Terhad), Roku tidak bertindak balas kepada aplikasi.'),
       ('Jika anda tiada alat kawalan jauh Roku', 'Jika tetapan itu berada pada Dilumpuhkan, ia hanya boleh diubah dengan alat kawalan jauh Roku yang sebenar. Pinjam satu untuk mengubahnya sekali; selepas itu anda boleh melakukan segala-galanya dengan telefon. Baca juga [Alat kawalan jauh Roku hilang](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Mencari TV</h2>
           <p>TV bertanya sama ada anda membenarkan sambungan daripada Mando TV. Pilih "Benarkan" dengan alat kawalan jauh. Jika anda tertolak secara tidak sengaja, pergi ke Tetapan > Umum > Pengurus Peranti Luaran > Pengurus Sambungan Peranti dan tukar kepada dibenarkan.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku tidak meminta kebenaran. Jika sambungan tidak berjaya, pada Roku pergi ke Tetapan > Sistem > Tetapan sistem lanjutan > Kawalan oleh aplikasi mudah alih dan biarkan akses rangkaian pada Lalai atau Dibenarkan.</p>
+          <p>Roku tidak meminta kebenaran. Jika sambungan tidak berjaya, pada Roku pergi ke Tetapan > Sistem > Tetapan sistem lanjutan > Kawalan oleh aplikasi mudah alih dan biarkan akses rangkaian pada Lalai atau Permissive (pada perisian Roku yang lebih baharu, tetapkan "Kawalan oleh aplikasi mudah alih" kepada Dibenarkan).</p>
         </details>
         <details><summary>Android TV dan Google TV</summary>
           <p>TV memaparkan kod 6 aksara. Masukkannya dalam Mando TV tepat seperti yang dipaparkan. Ia berfungsi pada Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast dengan Google TV dan yang lain dengan Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Mencari TV</h2>
       <p>Mando TV menghidupkan TV melalui rangkaian rumah anda. Untuk itu dua perkara diperlukan: anda pernah bersambung sekurang-kurangnya sekali semasa TV dihidupkan, dan hidupkan melalui rangkaian diaktifkan pada TV. Nama tetapan berubah mengikut model; yang paling biasa ialah:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Dalam tetapan (di bawah Umum atau Sambungan, bergantung pada model), cari "Hidupkan TV dengan peranti mudah alih" dan aktifkan "Hidupkan melalui Wi-Fi". Jika ada "Quick Start+", aktifkan juga.</p>
+          <p>Dalam tetapan (di bawah Tetapan, Umum, Peranti, Peranti Luaran; pada model lama di Sambungan, Pengurusan Sambungan Mudah Alih), cari "Hidupkan TV dengan peranti mudah alih" dan aktifkan "Hidupkan melalui Wi-Fi". Jika ada "Quick Start+", aktifkan juga.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Aktifkan "Hidupkan dengan mudah alih" di bawah Tetapan > Umum > Rangkaian > Tetapan Pakar.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Mencari TV</h2>
           <p>Pada peranti Roku TV, aktifkan "Permulaan pantas TV" di bawah Tetapan > Sistem > Kuasa. Pemain Roku yang disambungkan ke TV tidak boleh dihidupkan dengan cara ini.</p>
         </details>
         <details><summary>Android TV dan Google TV</summary>
-          <p>Ini bergantung pada pengeluar. Dalam tetapan rangkaian atau kuasa, cari "Wake on LAN", "Hidupkan melalui rangkaian" atau "Network standby". Sesetengah model tidak mempunyai pilihan ini.</p>
+          <p>Ini bergantung pada pengeluar. Dalam tetapan rangkaian atau kuasa, cari "Wake on LAN", "Hidupkan melalui rangkaian", "Network standby" atau "Remote start". Sesetengah model tidak mempunyai pilihan ini.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Inframerah untuk TV lama', 'Percuma pada telefon Android yang ada pemancar inframerah (baharu)', 'Sesetengah aplikasi, hanya pada telefon yang ada pemancar inframerah'],
         ['Bluetooth', 'Beta dari Android 9, percuma', 'Bergantung pada aplikasi'],
         ['Foto dan video ke TV', 'Pro, melalui Wi-Fi (bukan pencerminan)', 'Bergantung pada aplikasi'],
-        ['Telefon dan komputer', 'iPhone, iPad dan Windows, serta Android dalam akses awal', 'Berbeza-beza'],
-        ['Pencerminan skrin', 'Percuma pada iPhone dan iPad, melalui Pencerminan Skrin di Pusat Kawalan (TV dengan AirPlay)', 'Sesetengah aplikasi menawarkannya'],
+        ['Telefon dan komputer', 'iPhone, iPad, Mac dan Windows, serta Android dalam akses awal', 'Berbeza-beza'],
+        ['Pencerminan skrin', 'Percuma pada iPhone, iPad dan Windows dengan fungsi terbina dalam masing-masing. Pada Windows, Pro juga boleh mencerminkan skrin PC ke TV LG, Samsung, Hisense dan Android TV (beta)', 'Sesetengah aplikasi menawarkannya'],
       ],
       nota='Mando TV tidak dibandingkan dengan mana-mana aplikasi tertentu. Harga semasa ada pada halaman kedai setiap aplikasi.'),
     extra=[
-      ('Apa yang tidak dilakukan oleh Mando TV', 'Ia tidak mempunyai pencerminan skrin sendiri: pada iPhone dan iPad, ia membimbing anda ke Pencerminan Skrin di Pusat Kawalan, iaitu fungsi iPhone sendiri yang berfungsi dengan TV yang ada AirPlay. Dengan Mando TV Pro, ia juga boleh menghantar foto dan video ke TV melalui Wi-Fi anda. Ia mengawal TV pintar melalui Wi-Fi rumah. TV yang bukan TV pintar boleh dikawal dengan inframerah daripada telefon Android yang ada pemancar inframerah. Dari Android 9, telefon juga boleh menyambung melalui Bluetooth sebagai papan kekunci dan alat kawalan jauh ke Google TV, Android TV dan Fire TV, tanpa Wi-Fi sama sekali. Pilihan ini dalam beta dan percuma.'),
+      ('Apa yang tidak dilakukan oleh Mando TV', 'Pada iPhone dan iPad, ia membimbing anda ke Pencerminan Skrin di Pusat Kawalan, iaitu fungsi iPhone sendiri yang berfungsi dengan TV yang ada AirPlay. Pada Windows, ia membuka Cast (Windows + K), dan Mando TV Pro boleh menghantar skrin PC ke TV LG, Samsung, Hisense dan Android TV melalui Wi-Fi anda (beta, dengan kelewatan beberapa saat dan tanpa bunyi). Dengan Mando TV Pro, ia juga boleh menghantar foto dan video ke TV melalui Wi-Fi anda. Ia mengawal TV pintar melalui Wi-Fi rumah. TV yang bukan TV pintar boleh dikawal dengan inframerah daripada telefon Android yang ada pemancar inframerah. Dari Android 9, telefon juga boleh menyambung melalui Bluetooth sebagai papan kekunci dan alat kawalan jauh ke Google TV, Android TV dan Fire TV, tanpa Wi-Fi sama sekali. Pilihan ini dalam beta dan percuma.'),
       ('Bagaimana Mando TV menjana pendapatan', 'Bukan dengan iklan dan bukan dengan data anda: aplikasi ini tidak mengumpulnya. Mando TV dibiayai oleh Pro, pembelian sekali sahaja yang pilihan untuk tambahan. Alat kawalan jauh asas adalah percuma.'),
-      ('Pada peranti yang sudah anda ada', 'iPhone dan iPad daripada App Store, PC Windows daripada Microsoft Store, dan Android melalui akses awal percuma di Google Play. Lihat [Aplikasi alat kawalan jauh untuk iPhone](@iphone) dan [Aplikasi alat kawalan jauh untuk Windows](@windows).'),
+      ('Pada peranti yang sudah anda ada', 'iPhone, iPad dan Mac daripada App Store, PC Windows daripada Microsoft Store, dan Android melalui akses awal percuma di Google Play. Lihat [Aplikasi alat kawalan jauh untuk iPhone](@iphone) dan [Aplikasi alat kawalan jauh untuk Windows](@windows).'),
       ('Privasi', 'Tiada akaun dan tiada penjejakan dalam aplikasi. Komunikasi dengan TV berlaku dalam rangkaian setempat sahaja, dan data sambungan kekal disulitkan pada peranti anda. Butiran dalam [Dasar privasi](@privacidad).'),
     ],
     marca=None,
@@ -717,7 +728,7 @@ GUIAS += [
       'Sambungkan telefon dan Roku ke Wi-Fi yang sama.',
       'Muat turun Mando TV dan buka. TV Roku atau pemain Roku anda muncul dalam senarai. Ketik padanya. Roku tidak meminta kod.',
       'Gunakan anak panah, OK, Kembali, Utama, volum dan papan kekunci. Taip carian dalam saluran Roku dengan papan kekunci telefon.',
-      'Jika butang tidak berbuat apa-apa, pada Roku pergi ke Tetapan > Sistem > Tetapan sistem lanjutan > Kawalan oleh aplikasi mudah alih dan tetapkan akses rangkaian kepada Lalai atau Dibenarkan (pada perisian Roku yang lebih baharu, tetapkan Kawalan oleh aplikasi mudah alih kepada Dibenarkan).',
+      'Jika butang tidak berbuat apa-apa, pada Roku pergi ke Tetapan > Sistem > Tetapan sistem lanjutan > Kawalan oleh aplikasi mudah alih dan tetapkan akses rangkaian kepada Lalai atau Permissive (pada perisian Roku yang lebih baharu, tetapkan Kawalan oleh aplikasi mudah alih kepada Dibenarkan).',
       'Pilihan: pada TV Roku, aktifkan "Permulaan pantas TV" dalam Tetapan > Sistem > Kuasa supaya Mando TV boleh menghidupkan TV.',
     ],
     extra=[
@@ -725,7 +736,7 @@ GUIAS += [
       ('Di mana aplikasi Roku rasmi lebih baik', 'Kekalkan aplikasi Roku untuk apa yang ditawarkannya selain alat kawalan jauh, seperti menyemak imbas dan menambah saluran daripada Kedai Saluran Roku serta penghantaran dan Private Listening sendiri (bunyi melalui fon kepala pada telefon). Gunakan kedua-duanya jika mahu. Kedua-duanya boleh berada pada telefon yang sama.'),
       ('TV Roku dan pemain Roku', 'Kedua-duanya berfungsi. Ini termasuk model TV Roku daripada TCL, Hisense, Philips dan lain-lain, serta Roku Express, Streaming Stick dan Ultra. Butiran ada pada [halaman aplikasi alat kawalan jauh Roku](@roku).'),
       ('Jika aplikasi Roku tidak berfungsi lagi', 'Jika butang tidak lagi bertindak balas, Roku biasanya menyekat kawalan oleh aplikasi. Panduan [Aplikasi Roku tidak berfungsi](@roku-403) menunjukkan tetapan yang menyelesaikan masalah itu.'),
-      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan.'),
+      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Apa yang dilakukan oleh Mando TV pada TV LG', 'Ia berfungsi dengan TV pintar LG yang menggunakan webOS, iaitu kebanyakan model sejak 2014, termasuk LED, NanoCell, QNED dan OLED. Ia memberi anda anak panah, OK, Kembali, Utama, volum, saluran, senyap, kawalan main semula dan papan kekunci untuk menaip dalam YouTube, Netflix atau pelayar. Senarai apl dan senarai input juga percuma. Dengan Pro, anda mendapat penuding seperti pada Magic Remote.'),
       ('Apa yang tidak dilakukan oleh Mando TV', 'Ia tidak mengawal perkakas rumah LG, tidak menggunakan akaun LG anda dan tidak menggantikan perkhidmatan akaun LG pada TV. Ia ialah alat kawalan jauh, bukan hab rumah pintar.'),
       ('Privasi dan iklan', 'Mando TV tiada iklan dan tiada akaun. Ia hanya berhubung dengan TV dalam rangkaian rumah anda dan menyimpan kunci sambungan secara disulitkan pada peranti anda. Semua fungsi ada pada halaman [Aplikasi alat kawalan jauh LG](@lg).'),
-      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan.'),
+      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Alat kawalan jauh mini (Pro)', 'Tetingkap alat kawalan jauh kecil yang kekal di atas semua tetingkap lain. Dengan itu anda boleh menukar volum atau menjeda tanpa mengganggu kerja anda.'),
       ('Menaip pada TV dari PC', 'Papan kekunci pada skrin TV agak perlahan. Dalam Mando TV, anda menaip dengan papan kekunci sebenar dan teks sampai ke medan carian TV. Bahagian ini percuma.'),
       ('Butiran lanjut', 'Panduan langkah demi langkah ada dalam [Kawal TV dengan PC](@pc). Untuk telefon, baca [Telefon sebagai alat kawalan jauh melalui Wi-Fi](@wifi).'),
-      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan. Pada Windows, anda membeli Pro melalui Microsoft Store.'),
+      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan. Pada Windows, anda membeli Pro melalui Microsoft Store.'),
       ('Arahan suara dari PC (Pro)', 'Dengan Pro, anda boleh bercakap dengan TV melalui mikrofon PC. Suara dikenali terus pada PC: untuk itu anda tidak memerlukan internet dan tidak perlu menetapkan apa-apa dalam Windows. Apa yang anda katakan tidak pernah meninggalkan PC dan tidak disimpan. Hanya pada pemproses yang sangat lama, aplikasi beralih kepada input suara Windows. Untuk itu pengecaman pertuturan dalam talian mesti dihidupkan dalam tetapan privasi dan bahasa anda ditambah dalam Windows.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Berfungsi dengan TV ini', 'LG webOS, Samsung Tizen (buatan 2016 dan ke atas), TV dan pemain Roku, Google TV dan Android TV serta Fire TV. Halaman jenama ialah [Samsung](@samsung), [LG](@lg), [Roku](@roku) dan [Android TV](@android).'),
       ('Mengapa ia meminta rangkaian setempat', 'iPhone menyekat akses aplikasi kepada peranti dalam rangkaian rumah anda melainkan anda membenarkannya. Jika TV tidak muncul dalam senarai, buka Tetapan > Mando TV dan hidupkan "Local Network". Aplikasi hanya berhubung dengan TV anda dalam rangkaian rumah anda.'),
       ('Mengapa Mando TV dan bukan aplikasi pengeluar', 'Setiap jenama TV mempunyai aplikasinya sendiri dan mahukan persediaan atau akaun tersendiri. Mando TV ialah satu aplikasi untuk semua, tanpa akaun.'),
-      ('Percuma dan Pro pada iPhone', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan, terus dalam aplikasi.'),
+      ('Percuma dan Pro pada iPhone', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan. Anda membeli Pro sekali terus dalam aplikasi.'),
     ],
     marca=None,
     faq=[
-      ('Adakah Mando TV percuma pada iPhone?', 'Muat turun adalah percuma, tanpa iklan. Alat kawalan jauh asas percuma, begitu juga membuka apl dan menukar input. Tambahan ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja yang pilihan.'),
+      ('Adakah Mando TV percuma pada iPhone?', 'Muat turun adalah percuma, tanpa iklan. Alat kawalan jauh asas percuma, begitu juga membuka apl dan menukar input. Tambahan seperti pad sentuh, arahan suara dan rutin ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja.'),
       ('Adakah ia berfungsi pada iPad?', 'Ya. Aplikasi yang sama berjalan pada iPhone dan iPad.'),
       ('Adakah aplikasi alat kawalan jauh untuk iPhone memerlukan Bluetooth atau pemancar inframerah?', 'Tidak pada iPhone. iPhone tiada pemancar inframerah, jadi kawalan inframerah tidak ada di situ, dan pilihan Bluetooth hanya ada untuk Android 9 ke atas, bukan untuk iPhone. Pada iPhone, Mando TV mengawal TV pintar serta Apple TV (beta) melalui Wi-Fi rumah anda.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Gunakan anak panah, OK, Kembali, Utama, butang main semula dan papan kekunci untuk carian.',
     ],
     extra=[
-      ('Peranti Fire TV yang disokong', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube dan TV dengan Fire TV terbina dalam. Sokongan ini baharu dan setakat ini kami hanya sempat menguji beberapa peranti sebenar. Jika sesuatu tidak berfungsi seperti dijangka, hantarkan model anda kepada kami melalui halaman bantuan.'),
+      ('Peranti Fire TV yang disokong', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube dan TV dengan Fire TV terbina dalam, seperti TV Amazon Fire TV Edition dan beberapa model Hisense. Sokongan ini baharu dan setakat ini kami hanya sempat menguji beberapa peranti sebenar. Jika sesuatu tidak berfungsi seperti dijangka, hantarkan model anda kepada kami melalui halaman bantuan.'),
       ('Menghidupkan Fire TV', 'Mando TV tidak menghidupkan Fire TV melalui rangkaian. Hidupkan TV dengan butang kuasa pada peranti: Fire TV Stick atau Cube yang dipasang biasanya bangun melalui HDMI-CEC, dan pada TV dengan Fire TV terbina dalam, TV itu sendiri ialah Fire TV. Selepas itu anda mengawalnya dari telefon.'),
       ('Jika Fire TV anda tidak muncul', 'Pastikan kedua-dua peranti berada dalam Wi-Fi yang sama dan Fire TV sedang aktif. Pada iPhone, benarkan "Local Network" untuk Mando TV dalam Tetapan. Lihat [Telefon anda tidak jumpa TV](@not-found).'),
       ('Tiada alat kawalan jauh langsung?', 'Fire TV mesti menunjukkan PIN pada skrin, jadi TV dan Fire TV mesti hidup dan menunjukkan imej. Jika TV berada pada input yang salah, tukarkannya dengan butang pada TV. Lihat [Tukar input HDMI tanpa alat kawalan jauh](@hdmi).'),
-      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan.'),
+      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Cuba dahulu alat kawalan jauh TV (HDMI-CEC)', 'Banyak alat kawalan jauh TV boleh mengawal Fire TV Stick melalui HDMI-CEC. Jika antara muka Fire TV kelihatan, tekan anak panah dan OK pada alat kawalan jauh TV. Jika tiada apa-apa berlaku, aktifkan CEC dalam tetapan TV (Anynet+ pada Samsung, SIMPLINK pada LG, BRAVIA Sync pada Sony) dan pada Fire TV aktifkan kawalan peranti HDMI-CEC dalam tetapan paparan ("Display & Sounds").'),
       ('Jika anda menukar Wi-Fi', 'Tanpa alat kawalan jauh, anda tidak dapat memasukkan kata laluan Wi-Fi baharu pada Fire TV, tetapi ada jalan keluar: pada telefon kedua, cipta hotspot dengan nama dan kata laluan yang sama seperti Wi-Fi lama anda. Fire TV bersambung kepadanya secara automatik. Sambungkan telefon dengan Mando TV ke hotspot itu, pasangkan dengan PIN, kemudian pada Fire TV pergi ke Tetapan > Rangkaian dan pilih Wi-Fi baharu anda. Akhir sekali, sambungkan juga telefon anda ke Wi-Fi baharu.'),
       ('Memasangkan alat kawalan jauh ganti', 'Kebanyakan alat kawalan jauh Fire TV baharu dipasangkan dengan menahan butang Utama kira-kira 10 saat, berhampiran Fire TV. Jika tidak berjaya, buka Tetapan > Pengawal dan Peranti Bluetooth > Alat Kawalan Jauh Amazon Fire TV > Tambah Alat Kawalan Jauh Baharu. Menu ini juga boleh dicapai daripada telefon anda dengan Mando TV.'),
-      ('Fire TV terbina dalam TV', 'Pada TV dengan Fire TV terbina dalam, langkah yang sama berfungsi kerana TV itu sendiri ialah Fire TV.'),
+      ('Fire TV terbina dalam TV', 'Pada TV dengan Fire TV terbina dalam, seperti banyak model Insignia dan Toshiba, langkah yang sama berfungsi kerana TV itu sendiri ialah Fire TV.'),
       ('Sebelum bermula', 'Sokongan Fire TV baharu dalam Mando TV. Kemas kini aplikasi terlebih dahulu. Jika model anda tidak bertindak balas seperti dijangka, hubungi kami melalui [halaman bantuan](@soporte) dan nyatakan modelnya.'),
       ('Percuma dan Pro', 'Anda boleh memuat turun dan menggunakan alat kawalan jauh secara percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan.'),
     ],
@@ -913,7 +924,7 @@ GUIAS += [
     ]),
   dict(clave='turn-on', corto='Hidupkan TV tanpa alat kawalan jauh', fecha='2026-11-23',
     titulo='Hidupkan TV Tanpa Alat Kawalan Jauh (Semua Jenama)',
-    desc='Hidupkan TV tanpa alat kawalan jauh: di mana butang pada Samsung, LG, TCL, Hisense dan Sony. Serta HDMI-CEC dan helah telefon.',
+    desc='Hidupkan TV tanpa alat kawalan jauh: di mana butang pada Samsung, LG, TCL, Hisense, Sony dan Vizio. Serta HDMI-CEC dan helah telefon.',
     h1='Cara menghidupkan TV tanpa alat kawalan jauh',
     intro='Hampir setiap TV masih mempunyai butang kuasa fizikal. Ia cuma tersembunyi dengan baik. Berikut tempatnya pada setiap jenama, serta dua cara untuk tidak perlu mencarinya lagi: HDMI-CEC daripada konsol atau peranti strim, dan menghidupkan TV daripada telefon melalui Wi-Fi.',
     pasos=[
@@ -924,7 +935,7 @@ GUIAS += [
       'Setelah TV hidup, sediakannya supaya anda tidak perlukan butang itu lagi: aktifkan HDMI-CEC dan hidupkan melalui rangkaian, kedua-duanya diterangkan di bawah.',
     ],
     extra=[
-      ('Di mana butang kuasa mengikut jenama', 'Samsung: butang kawalan atau kayu bedik di bawah tengah skrin atau di belakang pada sudut bawah. LG: butang kayu bedik di bawah logo LG pada kebanyakan model. TCL dan Hisense: biasanya butang kecil di bawah tengah skrin atau di belakang berhampiran sudut bawah. Sony: di belakang atau pada tepi sisi, di bawah dekat pinggir. Kedudukannya berbeza mengikut model. Jika anda tidak menjumpainya, cari buku panduan dengan nombor model pada pelekat di belakang.'),
+      ('Di mana butang kuasa mengikut jenama', 'Samsung: butang kawalan atau kayu bedik di bawah tengah skrin atau di belakang pada sudut bawah. LG: butang kayu bedik di bawah logo LG pada kebanyakan model. TCL dan Hisense: biasanya butang kecil di bawah tengah skrin atau di belakang berhampiran sudut bawah. Sony: di belakang atau pada tepi sisi, di bawah dekat pinggir. Vizio: di belakang, di bawah kiri atau bawah kanan, atau pada sisi. Kedudukannya berbeza mengikut model. Jika anda tidak menjumpainya, cari buku panduan dengan nombor model pada pelekat di belakang.'),
       ('Menghidupkan TV melalui konsol atau peranti strim (HDMI-CEC)', 'Dengan HDMI-CEC diaktifkan, menghidupkan PlayStation, Xbox, pemain Roku, Fire TV Stick atau Chromecast turut menghidupkan TV dan menukar ke input yang betul. Setiap jenama menamakan tetapan ini secara berbeza: Anynet+ pada Samsung, SIMPLINK pada LG, BRAVIA Sync pada Sony dan CEC pada kebanyakan yang lain. Lebih lanjut dalam [Hidupkan TV dan tukar ke HDMI konsol](@console).'),
       ('Menghidupkan TV daripada telefon', 'TV pintar boleh dibangunkan melalui Wi-Fi jika anda membenarkannya sekali, dan kemudian Mando TV menghidupkannya daripada telefon anda. Pada Samsung, aktifkan "Hidupkan dengan mudah alih" dalam Tetapan > Umum > Rangkaian > Tetapan Pakar. Pada LG, aktifkan "Hidupkan TV dengan peranti mudah alih" ([langkah demi langkah](@lg-on)). Pada TV Roku, aktifkan "Permulaan pantas TV" dalam Tetapan > Sistem > Kuasa. Pada Google TV dan Android TV, cari Wake on LAN atau "Hidupkan melalui rangkaian" jika model anda ada. Anda melakukannya sekali, semasa TV hidup.'),
       ('Jika anda tidak menjumpai butang', 'Sesetengah TV yang lebih baharu menyembunyikan butang tunggalnya sebegitu rupa sehingga kelihatan seolah-olah tiada. Cari tonjolan kecil atau kawasan penderia cahaya di bawah skrin: butang itu selalunya betul-betul di sebelahnya. Melalui Wi-Fi, Mando TV memerlukan TV pernah dihidupkan dan bersambung. Inframerah ialah pengecualian: pada telefon Android yang ada pemancar inframerah, Mando TV boleh menghidupkan TV yang tidak pernah disediakan, selagi anda menghalakan telefon ke TV. Inframerah ini baharu dan berfungsi dengan jenama dalam senarai kod aplikasi.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Menghidupkan TV TCL daripada telefon', 'Pada TCL Roku TV, aktifkan "Permulaan pantas TV" dalam Tetapan > Sistem > Kuasa. Pada TCL Google TV, cari pilihan Wake on LAN, "Hidupkan melalui rangkaian" atau mula jauh dalam tetapan rangkaian atau kuasa. Sesetengah model tidak menawarkannya. Dalam kes itu, hidupkan TV dengan butang kuasa fizikal, biasanya di bawah tengah atau di belakang.'),
       ('Jika TCL anda tidak muncul', 'Semak sama ada telefon dan TV berada dalam Wi-Fi yang sama. Penghala dengan rangkaian 2.4 GHz dan 5 GHz yang berasingan boleh menyembunyikan peranti antara satu sama lain. Pada iPhone, benarkan "Local Network" untuk Mando TV dalam Tetapan. Anda juga boleh menambah TV dengan memasukkan alamat IPnya. Baca [Telefon anda tidak jumpa TV](@not-found).'),
       ('Lebih lanjut tentang TCL anda', 'Untuk TCL dengan Roku TV, lihat [Aplikasi alat kawalan jauh Roku](@roku), untuk TCL dengan Google TV atau Android TV lihat [Aplikasi alat kawalan jauh Android TV](@android).'),
-      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan.'),
+      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense dengan Fire TV', 'Sokongan Fire TV baharu dalam Mando TV. Kemas kini aplikasi kepada versi terkini daripada kedai anda. Cara pemasangan dengan PIN berfungsi ada pada halaman [Aplikasi alat kawalan jauh Fire TV](@firetv). Jika sesuatu tidak berfungsi seperti dijangka, hubungi kami melalui halaman bantuan dan nyatakan model anda.'),
       ('Hisense dengan VIDAA', 'Kebanyakan model VIDAA berfungsi: butang, volum, papan kekunci, apl dan input. Beberapa model VIDAA yang lebih baharu hanya menerima aplikasi Hisense rasmi. Mando TV mengesannya semasa menyambung dan memberitahu anda dengan jelas, bukannya gagal secara senyap. Dalam kes itu, aplikasi Hisense untuk model anda, butang pada TV atau alat kawalan jauh asal ialah jalan yang betul.'),
       ('Menghidupkan Hisense daripada telefon', 'Pada Hisense Roku TV, aktifkan "Permulaan pantas TV" dalam Tetapan > Sistem > Kuasa. Pada Google TV, cari pilihan Wake on LAN atau "Hidupkan melalui rangkaian". Jika tiada, gunakan butang kuasa pada TV.'),
-      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Mando TV Pro ialah pembelian sekali sahaja yang pilihan untuk tambahan.'),
+      ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan.'),
     ],
     marca=None,
     faq=[

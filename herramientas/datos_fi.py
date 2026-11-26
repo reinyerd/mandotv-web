@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Oppaat: puhelin kaukosäätimenä',
   intro='Helpot vaiheet, joilla yhdistät Samsung-, LG-, Roku- tai Android TV -television kaukosäätimen Mando TV:hen, käynnistät television ja ratkaiset ongelmat.',
   h2_guias='Kaikki oppaat', h2_marcas='Kaukosäädinsovellus merkin mukaan',
+  marcas_extra=[('sony', 'Sony-kaukosäädinsovellus'), ('philips', 'Philips-kaukosäädinsovellus')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Avaa Mando TV: LG-televisiosi tulee listaan itsestään. Napauta sitä.',
       'Televisioon tulee kysymys, jossa pyydetään lupaa. Vahvista se tavallisella kaukosäätimellä (vain ensimmäisellä kerralla).',
     ],
-    encender='Avaa LG-television asetukset ja etsi ”Käynnistä TV mobiililaitteella” (mallista riippuen kohdasta Yleiset tai Yhteys). Ota käyttöön ”Käynnistä wifin kautta”. Jos käytettävissä on ”Pikakäynnistys+”, ota sekin käyttöön. Sen jälkeen, kun napautat sammutettua televisiota Mando TV:ssä, sovellus kysyy, haluatko käynnistää sen, ja yhdistää itse.',
+    encender='Ota käyttöön ”Käynnistä TV mobiililaitteella” (joissakin malleissa sen nimi on ”Käynnistä wifin kautta”). Löydät sen kohdasta Asetukset > Yleiset > Laitteet > Ulkoiset laitteet (vanhemmissa malleissa Yhteys > Mobiiliyhteyden hallinta). Sen jälkeen, kun napautat sammutettua televisiota Mando TV:ssä, sovellus kysyy, haluatko käynnistää sen, ja yhdistää itse.',
     faq=[
       ('Tarvitsenko Magic Remoten Mando TV:n käyttöön?', 'Vain ensimmäisellä kerralla, jotta voit vahvistaa kysymyksen näytöllä. Sen jälkeen puhelimesi riittää.'),
       ('Korvaako Mando TV LG ThinQ -sovelluksen?', 'Television ohjaamiseen kyllä: et tarvitse LG-tiliä etkä tarvitse rekisteröidä televisiota. Mando TV yhdistää suoraan wifisi kautta.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Toimiiko se vanhempien Samsung-televisioiden kanssa?', 'Se toimii Samsung-televisioilla, joissa on Tizen ja valmistusvuosi 2016 tai uudempi. Aiemmat mallit käyttävät toista järjestelmää, jota emme vielä tue.'),
     ],
     guias=[('samsung-lost', 'Samsung-televisio ilman alkuperäistä kaukosäädintä: näin käytät puhelintasi'),
+           ('smartthings', 'SmartThingsin vaihtoehto Samsung-televisioille'),
+           ('turn-on', 'Näin käynnistät television ilman kaukosäädintä'),
            ('hdmi', 'HDMI-tulon vaihto televisiossa ilman kaukosäädintä'),
            ('guias', 'Kaikki oppaat television ohjaamiseen puhelimella')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Yhdistä puhelin ja Roku samaan wifiin.',
       'Avaa Mando TV: Rokusi tulee listaan itsestään. Napauta sitä.',
-      'Jos yhteys ei muodostu, mene Rokussa kohtaan Asetukset > Järjestelmä > Järjestelmän lisäasetukset > Ohjaus mobiilisovelluksilla ja aseta verkon käyttö tilaan Oletus tai Käytössä.',
+      'Jos yhteys ei muodostu, mene Rokussa kohtaan Asetukset > Järjestelmä > Järjestelmän lisäasetukset > Ohjaus mobiilisovelluksilla ja aseta verkon käyttö tilaan Oletus tai Permissive (uudemmassa Roku-ohjelmistossa aseta Ohjaus mobiilisovelluksilla tilaan Käytössä).',
     ],
     encender='Ota Roku TV -laitteissa käyttöön ”TV:n pikakäynnistys” kohdasta Asetukset > Järjestelmä > Virta. Toiseen televisioon kytkettyjä Roku-soittimia ei voi käynnistää näin. Sen jälkeen, kun napautat sammutettua televisiota Mando TV:ssä, sovellus kysyy, haluatko käynnistää sen, ja yhdistää itse.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Roku-sovellus ei toimi (virhe 403)'),
            ('roku-lost', 'Roku-kaukosäädin hukassa: näin käytät puhelintasi'),
+           ('tcl', 'TCL-kaukosäädinsovellus'),
+           ('hisense', 'Hisense-kaukosäädinsovellus'),
+           ('philips', 'Philips-kaukosäädinsovellus'),
            ('guias', 'Kaikki oppaat television ohjaamiseen puhelimella')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV ja Google TV',
     titulo='Android TV -kaukosäädinsovellus puhelimeen | Mando TV',
@@ -173,8 +179,8 @@ MARCAS = [
     h1='Android TV -kaukosäädin sovelluksena puhelimeen',
     intro='Mando TV on Android TV:n kaukosäädinsovellus: se muuttaa puhelimesi tai tietokoneesi kotisi wifin kautta Android TV- tai Google TV -televisiosi kaukosäätimeksi. Se toimii myös iPhonella ja Windowsilla.',
     compat='Televisiot, joissa on Google TV tai Android TV, merkeiltä Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Toshiba, Panasonic, Haier, Skyworth, JVC, Thomson, Motorola, OnePlus, iFFALCON, Kogan, Vu ja muut, sekä Chromecast with Google TV, Google TV Streamer, onn. ja Nvidia Shield. Osa näistä merkeistä myy myös malleja, joissa on toinen järjestelmä: jos televisiosi näyttää Google TV:n aloitusnäytön tai siinä on Google Play Kauppa, Mando TV ohjaa sitä.',
-    h2=dict(funciones='Näin voit käyttää Android TV:täsi', como='Näin yhdistät Android TV:si Mando TV:hen',
-            encender='Android TV:n käynnistys puhelimella', preguntas='Android TV -kysymyksiä', guias='Android TV -oppaat'),
+    h2=dict(funciones='Näin voit käyttää Android TV:tä ja Google TV:tä', como='Näin yhdistät Android TV:n ja Google TV:n Mando TV:hen',
+            encender='Android TV:n ja Google TV:n käynnistys puhelimella', preguntas='Android TV- ja Google TV -kysymyksiä', guias='Android TV- ja Google TV -oppaat'),
     funciones=[
       ('Kaikki painikkeet', 'Suuntapainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, mykistys ja toisto.'),
       ('Kosketuslevy (Pro)', 'Pyyhkäise sormella liikkuaksesi nopeasti Google TV:n valikoissa.'),
@@ -188,7 +194,7 @@ MARCAS = [
       'Avaa Mando TV: Android TV:si tulee listaan itsestään. Napauta sitä.',
       'Televisio näyttää 6-merkkisen koodin. Kirjoita se Mando TV:hen (vain ensimmäisellä kerralla).',
     ],
-    encender='Se riippuu valmistajasta. Etsi verkko- tai virta-asetuksista kohtaa ”Wake on LAN”, ”Käynnistys verkon kautta” tai ”Verkon valmiustila”. Joissakin malleissa tätä asetusta ei ole. Sen jälkeen, kun napautat sammutettua televisiota Mando TV:ssä, sovellus kysyy, haluatko käynnistää sen, ja yhdistää itse.',
+    encender='Se riippuu valmistajasta. Etsi verkko- tai virta-asetuksista kohtaa ”Wake on LAN”, ”Käynnistys verkon kautta”, ”Verkon valmiustila” tai ”Remote start”. Joissakin malleissa tätä asetusta ei ole. Sen jälkeen, kun napautat sammutettua televisiota Mando TV:ssä, sovellus kysyy, haluatko käynnistää sen, ja yhdistää itse.',
     faq=[
       ('Toimiiko se Chromecast with Google TV:n kanssa?', 'Kyllä, pariliitos tehdään näytölle tulevalla 6-merkkisellä koodilla.'),
       ('Miten se eroaa Google TV -sovelluksesta?', 'Mando TV ei tarvitse Google-tiliä, toimii myös Windowsilla ja ohjaa LG-, Samsung- ja Roku-televisioita samalla sovelluksella.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV pyytää pariliitoskoodia: näin toimit'),
            ('androidtv', 'Android TV ilman kaukosäädintä: näin käytät puhelintasi'),
+           ('googletv-alt', 'Google TV -kaukosäätimen vaihtoehto puhelimelle'),
+           ('sony', 'Sony-kaukosäädinsovellus'),
+           ('tcl', 'TCL-kaukosäädinsovellus'),
+           ('hisense', 'Hisense-kaukosäädinsovellus'),
+           ('philips', 'Philips-kaukosäädinsovellus'),
            ('guias', 'Kaikki oppaat television ohjaamiseen puhelimella')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Voinko käynnistää television puhelimella, jos en ole koskaan yhdistänyt sitä?', 'Ensimmäisellä kerralla käynnistät sen television painikkeella. Kun olet yhdistänyt puhelimesi ja ottanut television asetuksissa käyttöön käynnistyksen verkon kautta, voit käynnistää sen sovelluksella.'),
       ('Pitääkö minun ostaa uusi kaukosäädin?', 'Ei välttämättä. Mando TV:ssä painikkeet, äänenvoimakkuus, näppäimistö ja käynnistys ovat ilmaisia. Jos haluat silti oikean kaukosäätimen, etsi television tarkka malli.'),
-      ('Toimiiko se, jos televisiolla ei ole wifiä?', 'Ei. Puhelimen ja television on oltava samassa wifissä. Televisiota, joka ei ole älytelevisio, ei voi ohjata Mando TV:llä.'),
+      ('Toimiiko se, jos televisiolla ei ole wifiä?', 'Yleensä ei. Puhelimen ja television on yleensä oltava samassa wifissä. Poikkeuksia ovat infrapuna Android-puhelimilla, joissa on infrapunalähetin (sillä voi ohjata myös televisioita, jotka eivät ole älytelevisioita), sekä Bluetooth betassa Android 9:stä alkaen (toimii kokonaan ilman wifiä Google TV:n, Android TV:n ja Fire TV:n kanssa).'),
     ]),
   dict(clave='lost-lg', corto='LG-kaukosäädin hukassa',
     titulo='LG-kaukosäädin hukassa? Käytä puhelinta',
@@ -287,7 +298,7 @@ GUIAS = [
       'Lataa Mando TV, joka on ilmainen eikä vaadi Google-tiliä, ja avaa sovellus. Napauta listassa televisiotasi.',
       'Televisio näyttää koodin, jossa on 6 kirjainta ja numeroa. Kirjoita se puhelimeesi ja napauta Muodosta pariliitos. Siihen et tarvitse kaukosäädintä.',
       'Nyt voit käyttää nuolia, OK:ta, Takaisin-, Koti-, äänenvoimakkuus- ja mykistyspainiketta sekä näppäimistöä. Ne ovat ilmaisia, samoin sovellusluettelo. Kosketuslevy on Pro.',
-      'Jotta voit käynnistää television seuraavalla kerralla puhelimesta, etsi verkko- tai virta-asetuksista kohtaa ”Wake on LAN”, ”Käynnistys verkon kautta” tai ”Verkon valmiustila”.',
+      'Jotta voit käynnistää television seuraavalla kerralla puhelimesta, etsi verkko- tai virta-asetuksista kohtaa ”Wake on LAN”, ”Käynnistys verkon kautta”, ”Verkon valmiustila” tai ”Remote start”.',
     ],
     extra=[
       ('Jos televisiota ei voi käynnistää puhelimesta', 'Kaikkia Android TV -televisioita ei voi käynnistää verkon kautta; se riippuu valmistajasta ja mallista. Jos omassasi ei ole ominaisuutta, käynnistä se television painikkeella ja jatka puhelimella. Sammuttaa voit sen sovelluksella.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='LG-television voi käynnistää puhelimella, mutta sitä varten sinun on ensin otettava käyttöön yksi asetus televisiossa. Sen jälkeen puhelimesi käynnistää LG-television wifisi kautta ilman kaukosäädintä. Siihen menee viisi minuuttia ja teet sen vain kerran.',
     pasos=[
       'Yhdistä puhelimesi ja LG-televisio samaan wifiin.',
-      'Avaa televisiossa asetukset ja etsi ”Käynnistä TV mobiililaitteella”. Mallista riippuen löydät sen kohdasta Yleiset tai Yhteys.',
+      'Avaa televisiossa asetukset ja etsi ”Käynnistä TV mobiililaitteella”. Löydät sen kohdasta Asetukset > Yleiset > Laitteet > Ulkoiset laitteet (vanhemmissa malleissa Yhteys > Mobiiliyhteyden hallinta).',
       'Ota käyttöön ”Käynnistä wifin kautta”. Jos televisiosi on yhdistetty verkkokaapelilla, ota sen sijaan käyttöön kaapelia koskeva vaihtoehto.',
       'Jos televisiossasi on ”Pikakäynnistys+”, ota sekin käyttöön.',
       'Avaa television ollessa päällä Mando TV puhelimessasi ja napauta listassa LG-televisiotasi. Vahvista näytölle tuleva kysymys. Näin sovellus oppii herättämään sen.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Paina Rokussa Home ja mene kohtaan Asetukset.',
       'Avaa Järjestelmä ja sitten Järjestelmän lisäasetukset.',
       'Mene kohtaan ”Ohjaus mobiilisovelluksilla”. Joissakin malleissa se on nimeltään ”Ulkoinen ohjaus”.',
-      'Valitse kohdassa ”Verkon käyttö” Oletus tai Käytössä. Jos mallissasi on vain kytkin, jätä se tilaan Käytössä.',
+      'Valitse kohdassa ”Verkon käyttö” Oletus tai Permissive. Jos mallissasi on vain kytkin, jätä se tilaan Käytössä.',
       'Palaa puhelimesi Mando TV:hen ja napauta Rokuasi. Painikkeet reagoivat nyt.',
     ],
     extra=[
       ('Näin tunnistat, onko tämä ongelmasi', 'Merkki on yksiselitteinen: puhelimesi näkee Rokun listassa ja yhdistää, mutta mitään ei tapahdu, kun napautat painiketta. Sisäisesti Roku vastaa virheellä 403, joka tarkoittaa ”kielletty”. Mando TV tunnistaa sen yhdistäessään ja näyttää juuri nämä vaiheet näytöllä.'),
-      ('Oletus vai Käytössä, kumman valitsen?', 'Kumpikin toimii: Mando TV tarvitsee vain kotiverkostasi tulevia komentoja. Jos asetus on Poissa käytöstä (uudemmassa ohjelmistossa Rajoitettu), Roku ei reagoi sovelluksiin.'),
+      ('Oletus vai Permissive, kumman valitsen?', 'Oletus riittää: se hyväksyy kotiverkostasi tulevat komennot, ja niitä kaukosäädin tarvitsee. Permissive on avoimempi, ja sitä tarvitaan vain epätavallisissa verkoissa.'),
       ('Jos sinulla ei ole Roku-kaukosäädintä', 'Jos asetus on Poissa käytöstä, sen voi muuttaa vain oikealla Roku-kaukosäätimellä. Lainaa sellainen muuttaaksesi sen kerran; sen jälkeen voit tehdä kaiken puhelimellasi. Lue myös [Roku-kaukosäädin hukassa](@roku-lost).'),
     ],
     marca='roku',
@@ -528,7 +539,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Television löytäminen</h2>
             <li>Tarkista, että puhelimesi ja televisio ovat samassa wifissä. Jos reitittimessäsi on 2,4 GHz:n ja 5 GHz:n verkko eri nimillä, ne eivät joskus näe toisiaan.</li>
             <li>Varmista, että televisio on päällä.</li>
             <li>Tarkista iPhonella, että Mando TV:llä on ”Lähiverkko”-lupa kohdassa Asetukset, Mando TV.</li>
-            <li>Napauta televisioluettelossa painiketta sitä tilannetta varten, ettei televisiosi näy: sovellus tarkistaa yleisimmät syyt vaihe vaiheelta (sama wifi, VPN, lähiverkon käyttöoikeus ja muuta) ja näyttää jokaisen korjauksen jälkeen painikkeen uudelleen tarkistusta varten.</li>
+            <li>Napauta televisioluettelossa painiketta ”Televisio ei näy?”: sovellus tarkistaa yleisimmät syyt vaihe vaiheelta (sama wifi, VPN, lähiverkon käyttöoikeus ja muuta) ja näyttää jokaisen korjauksen jälkeen painikkeen uudelleen tarkistusta varten.</li>
             <li>Jos se ei vieläkään tule näkyviin, napauta +-painiketta, valitse merkki ja kirjoita television IP-osoite. Näet sen television verkkovalikossa (esimerkiksi 192.168.1.50).</li>
           </ol>
         </details>
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Television löytäminen</h2>
           <p>Televisio kysyy, sallitko Mando TV:n yhteyden. Valitse kaukosäätimellä ”Salli”. Jos kieltäydyit vahingossa, mene kohtaan Asetukset > Yleiset > Ulkoisten laitteiden hallinta > Laiteyhteyksien hallinta ja muuta se sallituksi.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku ei pyydä lupaa. Jos yhteys ei muodostu, mene Rokussa kohtaan Asetukset > Järjestelmä > Järjestelmän lisäasetukset > Ohjaus mobiilisovelluksilla ja jätä verkon käyttö tilaan Oletus tai Käytössä.</p>
+          <p>Roku ei pyydä lupaa. Jos yhteys ei muodostu, mene Rokussa kohtaan Asetukset > Järjestelmä > Järjestelmän lisäasetukset > Ohjaus mobiilisovelluksilla ja jätä verkon käyttö tilaan Oletus tai Permissive (uudemmassa Roku-ohjelmistossa aseta Ohjaus mobiilisovelluksilla tilaan Käytössä).</p>
         </details>
         <details><summary>Android TV ja Google TV</summary>
           <p>Televisio näyttää 6-merkkisen koodin. Kirjoita se Mando TV:hen täsmälleen sellaisena kuin se näkyy. Se toimii Sonyn, Philipsin, TCL:n, Hisensen, Sharpin, Xiaomin, Chromecast with Google TV:n ja muiden Android TV -laitteiden kanssa.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Television löytäminen</h2>
       <p>Mando TV käynnistää television kotiverkkosi kautta. Siihen tarvitaan kaksi asiaa: olet yhdistänyt vähintään kerran television ollessa päällä, ja televisiossa on käytössä käynnistys verkon kautta. Asetuksen nimi vaihtelee mallin mukaan; nämä ovat yleisimmät:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Etsi asetuksista (mallista riippuen kohdasta Yleiset tai Yhteys) ”Käynnistä TV mobiililaitteella” ja ota käyttöön ”Käynnistä wifin kautta”. Jos käytettävissä on ”Pikakäynnistys+”, ota sekin käyttöön.</p>
+          <p>Etsi ”Käynnistä TV mobiililaitteella” (tai ”Käynnistä wifin kautta”) kohdasta Asetukset > Yleiset > Laitteet > Ulkoiset laitteet (vanhemmissa malleissa Yhteys > Mobiiliyhteyden hallinta) ja ota se käyttöön.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Ota käyttöön ”Käynnistä mobiililaitteella” kohdasta Asetukset > Yleiset > Verkko > Asiantuntija-asetukset.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Television löytäminen</h2>
           <p>Ota Roku TV -laitteissa käyttöön ”TV:n pikakäynnistys” kohdasta Asetukset > Järjestelmä > Virta. Televisioon kytkettyjä Roku-soittimia ei voi käynnistää näin.</p>
         </details>
         <details><summary>Android TV ja Google TV</summary>
-          <p>Se riippuu valmistajasta. Etsi verkko- tai virta-asetuksista kohtaa ”Wake on LAN”, ”Käynnistys verkon kautta” tai ”Verkon valmiustila”. Joissakin malleissa tätä asetusta ei ole.</p>
+          <p>Se riippuu valmistajasta. Etsi verkko- tai virta-asetuksista kohtaa ”Wake on LAN”, ”Käynnistys verkon kautta”, ”Verkon valmiustila” tai ”Remote start”. Joissakin malleissa tätä asetusta ei ole.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infrapuna vanhemmille televisioille', 'Ilmainen Android-puhelimilla, joissa on infrapunalähetin (uutta)', 'Joissakin sovelluksissa, vain infrapunalähettimellä varustetuilla puhelimilla'],
         ['Bluetooth', 'Beta Android 9:stä alkaen, ilmainen', 'Sovelluksesta riippuen'],
         ['Kuvat ja videot televisioon', 'Pro, wifin kautta (ei peilausta)', 'Sovelluksesta riippuen'],
-        ['Puhelimet ja tietokoneet', 'iPhone, iPad ja Windows, lisäksi Android ennakkokäytössä', 'Vaihtelee'],
-        ['Näytön peilaus', 'Ilmainen iPhonella ja iPadilla Ohjauskeskuksen näytön peilauksella (televisiot, joissa on AirPlay)', 'Joissakin sovelluksissa'],
+        ['Puhelimet ja tietokoneet', 'iPhone, iPad, Mac ja Windows, lisäksi Android ennakkokäytössä', 'Vaihtelee'],
+        ['Näytön peilaus', 'Ilmainen iPhonella, iPadilla ja Windowsissa kunkin omalla sisäänrakennetulla toiminnolla. Windowsissa Pro voi lisäksi peilata tietokoneen näytön LG:n, Samsungin, Hisensen ja Android TV:n televisioihin (beta)', 'Joissakin sovelluksissa'],
       ],
       nota='Mando TV:tä ei verrata mihinkään tiettyyn sovellukseen. Ajankohtaiset hinnat näkyvät kunkin sovelluksen kauppasivulla.'),
     extra=[
-      ('Mitä Mando TV ei tee', 'Sillä ei ole omaa näytön peilausta: iPhonella ja iPadilla se ohjaa sinut Ohjauskeskuksen näytön peilaukseen, joka on iPhonen oma toiminto ja toimii televisioilla, joissa on AirPlay. Mando TV Prolla se voi lisäksi lähettää kuvia ja videoita televisioon wifisi kautta. Se ohjaa älytelevisioita kotiwifin kautta. Televisioita, jotka eivät ole älytelevisioita, voi ohjata Android-puhelimella, jossa on infrapunalähetin, infrapunalla. Android 9:stä alkaen puhelin voi myös yhdistyä Bluetoothilla näppäimistönä ja kaukosäätimenä Google TV:hen, Android TV:hen ja Fire TV:hen kokonaan ilman wifiä. Tämä vaihtoehto on betassa ja ilmainen.'),
+      ('Mitä Mando TV ei tee', 'iPhonella ja iPadilla se ohjaa sinut Ohjauskeskuksen näytön peilaukseen, joka on iPhonen oma toiminto ja toimii televisioilla, joissa on AirPlay. Windowsissa se avaa Lähetä-toiminnon (Windows + K), ja Mando TV Pro voi lähettää tietokoneen näytön wifisi kautta LG:n, Samsungin, Hisensen ja Android TV:n televisioihin (beta, muutaman sekunnin viiveellä ja ilman ääntä). Mando TV Prolla se voi lisäksi lähettää kuvia ja videoita televisioon wifisi kautta. Se ohjaa älytelevisioita kotiwifin kautta. Televisioita, jotka eivät ole älytelevisioita, voi ohjata Android-puhelimella, jossa on infrapunalähetin, infrapunalla. Android 9:stä alkaen puhelin voi myös yhdistyä Bluetoothilla näppäimistönä ja kaukosäätimenä Google TV:hen, Android TV:hen ja Fire TV:hen kokonaan ilman wifiä. Tämä vaihtoehto on betassa ja ilmainen.'),
       ('Miten Mando TV ansaitsee rahaa', 'Ei mainoksilla eikä tiedoillasi: sovellus ei kerää niitä. Mando TV rahoitetaan Prolla, valinnaisella kertaostolla lisäominaisuuksiin. Perus-kaukosäädin on ilmainen.'),
-      ('Laitteilla, jotka sinulla jo on', 'iPhone ja iPad App Storesta, Windows-tietokoneet Microsoft Storesta ja Android ilmaisella ennakkokäytöllä Google Playssa. Katso [Kaukosäädinsovellus iPhonelle](@iphone) ja [Kaukosäädinsovellus Windowsille](@windows).'),
+      ('Laitteilla, jotka sinulla jo on', 'iPhone, iPad ja Mac App Storesta, Windows-tietokoneet Microsoft Storesta ja Android ilmaisella ennakkokäytöllä Google Playssa. Katso [Kaukosäädinsovellus iPhonelle](@iphone) ja [Kaukosäädinsovellus Windowsille](@windows).'),
       ('Tietosuoja', 'Ei tiliä eikä seurantaa sovelluksessa. Yhteys televisioon tapahtuu vain paikallisessa verkossa, ja yhteystiedot pysyvät laitteellasi salattuina. Lisätietoja [tietosuojaselosteessa](@privacidad).'),
     ],
     marca=None,
@@ -717,7 +728,7 @@ GUIAS += [
       'Yhdistä puhelimesi ja Roku samaan wifiin.',
       'Lataa Mando TV ja avaa se. Roku-televisiosi tai Roku-soittimesi tulee listaan. Napauta sitä. Roku ei pyydä koodia.',
       'Käytä nuolipainikkeita, OK:ta, Takaisin-, Koti- ja äänenvoimakkuuspainiketta sekä näppäimistöä. Kirjoita hakusanat Roku-kanavissa puhelimen näppäimistöllä.',
-      'Jos painikkeet eivät tee mitään, mene Rokussa kohtaan Asetukset > Järjestelmä > Järjestelmän lisäasetukset > Ohjaus mobiilisovelluksilla ja aseta verkon käytöksi Oletus tai Käytössä (uudemmassa Roku-ohjelmistossa aseta Ohjaus mobiilisovelluksilla tilaan Käytössä).',
+      'Jos painikkeet eivät tee mitään, mene Rokussa kohtaan Asetukset > Järjestelmä > Järjestelmän lisäasetukset > Ohjaus mobiilisovelluksilla ja aseta verkon käytöksi Oletus tai Permissive (uudemmassa Roku-ohjelmistossa aseta Ohjaus mobiilisovelluksilla tilaan Käytössä).',
       'Valinnainen: ota Roku-televisiossa käyttöön ”TV:n pikakäynnistys” kohdasta Asetukset > Järjestelmä > Virta, jotta Mando TV voi käynnistää television.',
     ],
     extra=[
@@ -725,7 +736,7 @@ GUIAS += [
       ('Missä virallinen Roku-sovellus on parempi', 'Pidä Roku-sovellus siihen, mitä se tarjoaa kaukosäätimen lisäksi, kuten kanavien selaamiseen ja lisäämiseen Roku Channel Storesta sekä sen omaan lähetykseen ja yksityiseen kuunteluun (ääni kuulokkeilla puhelimessa). Käytä molempia, jos haluat. Ne voivat toimia samassa puhelimessa.'),
       ('Roku TV -laitteet ja Roku-soittimet', 'Molemmat toimivat. Tähän kuuluvat TCL:n, Hisensen, Philipsin ja muiden Roku TV -mallit sekä Roku Express, Streaming Stick ja Ultra. Lisätietoja löydät [Roku-kaukosäädinsovelluksen sivulta](@roku).'),
       ('Jos Roku-sovellus ei enää toimi', 'Jos painikkeet eivät enää reagoi, Roku estää yleensä ohjauksen sovelluksilla. Opas [Roku-sovellus ei toimi](@roku-403) näyttää asetuksen, joka korjaa ongelman.'),
-      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin.'),
+      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Mitä Mando TV tekee LG-televisiossa', 'Se toimii webOS-pohjaisilla LG-älytelevisioilla eli useimmilla malleilla vuodesta 2014, mukaan lukien LED, NanoCell, QNED ja OLED. Se antaa sinulle nuolipainikkeet, OK:n, Takaisin-, Koti-, äänenvoimakkuus-, kanava-, mykistys- ja toistopainikkeet sekä näppäimistön kirjoittamiseen YouTubessa, Netflixissä tai selaimessa. Sovellusluettelo ja tuloluettelo ovat myös ilmaisia. Prolla saat lisäksi osoittimen kuten Magic Remotessa.'),
       ('Mitä Mando TV ei tee', 'Se ei ohjaa LG:n kodinkoneita, se ei käytä LG-tiliäsi eikä korvaa television LG-tilipalveluja. Se on kaukosäädin, ei älykodin keskus.'),
       ('Tietosuoja ja mainokset', 'Mando TV:ssä ei ole mainoksia eikä tiliä. Se puhuu televisiolle vain kotiverkkosi sisällä ja tallentaa yhteysavaimen salattuna laitteellesi. Kaikki ominaisuudet löydät sivulta [LG-kaukosäädinsovellus](@lg).'),
-      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin.'),
+      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Pieni kaukosäädin (Pro)', 'Pieni kaukosäädinikkuna, joka pysyy kaikkien muiden ikkunoiden päällä. Näin muutat äänenvoimakkuutta tai pysäytät katkaisematta työtäsi.'),
       ('Kirjoittaminen televisioon tietokoneelta', 'Television näyttönäppäimistö on hidas. Mando TV:ssä kirjoitat oikealla näppäimistölläsi ja teksti päätyy television hakukenttään. Tämä osa on ilmainen.'),
       ('Lisätietoja', 'Vaihe vaiheelta -ohjeen löydät oppaasta [Television ohjaus tietokoneella](@pc). Puhelinta varten lue [Puhelin kaukosäätimenä wifin kautta](@wifi).'),
-      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin. Windowsissa ostat Pron Microsoft Storen kautta.'),
+      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta. Windowsissa ostat Pron Microsoft Storen kautta.'),
       ('Puhekomennot tietokoneelta (Pro)', 'Prolla voit puhua televisiolle tietokoneen mikrofonilla. Puhe tunnistetaan suoraan tietokoneella: siihen et tarvitse internetiä etkä tarvitse muuttaa mitään Windowsissa. Se, mitä sanot, ei koskaan poistu tietokoneelta eikä sitä tallenneta. Vain hyvin vanhoilla suorittimilla sovellus turvautuu Windowsin puhesyöttöön. Silloin verkkopohjaisen puheentunnistuksen on oltava päällä tietosuoja-asetuksissa ja kielesi lisättynä Windowsiin.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Toimii näillä televisioilla', 'LG webOS, Samsung Tizen (valmistusvuosi 2016 tai uudempi), Roku TV ja Roku-soittimet, Google TV ja Android TV sekä Fire TV. Merkkien sivut ovat [Samsung](@samsung), [LG](@lg), [Roku](@roku) ja [Android TV](@android).'),
       ('Miksi se kysyy lähiverkkoa', 'iPhone estää sovelluksia käyttämästä kotiverkkosi laitteita, ellet salli sitä. Jos televisio ei tule listaan, avaa Asetukset > Mando TV ja ota käyttöön ”Lähiverkko”. Sovellus puhuu vain televisiosi kanssa kotiverkkosi sisällä.'),
       ('Miksi Mando TV eikä valmistajan sovellus', 'Jokaisella televisiomerkillä on oma sovelluksensa, ja se haluaa oman määrityksensä tai tilinsä. Mando TV on yksi sovellus kaikille, ilman tiliä.'),
-      ('Ilmainen ja Pro iPhonella', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin, suoraan sovelluksessa.'),
+      ('Ilmainen ja Pro iPhonella', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta. Ostat Pron kerran suoraan sovelluksessa.'),
     ],
     marca=None,
     faq=[
-      ('Onko Mando TV ilmainen iPhonella?', 'Lataus on ilmainen, ilman mainoksia. Perus-kaukosäädin on ilmainen, samoin sovellusten avaaminen ja tulojen vaihto. Lisäominaisuudet kuuluvat Mando TV Pro -versioon, joka on valinnainen kertaosto.'),
+      ('Onko Mando TV ilmainen iPhonella?', 'Lataus on ilmainen, ilman mainoksia. Perus-kaukosäädin on ilmainen, samoin sovellusten avaaminen ja tulojen vaihto. Lisäominaisuudet, kuten kosketuslevy, puhekomennot ja rutiinit, kuuluvat Mando TV Pro -versioon, joka on kertaosto.'),
       ('Toimiiko se iPadilla?', 'Kyllä. Sama sovellus toimii iPhonella ja iPadilla.'),
       ('Tarvitseeko iPhonen kaukosäädinsovellus Bluetoothin tai infrapunalähettimen?', 'Ei iPhonella. iPhoneissa ei ole infrapunalähetintä, joten infrapunaohjaus ei ole siellä käytettävissä, ja Bluetooth-vaihtoehto on vain Android 9:lle tai uudemmalle, ei iPhonelle. iPhonella Mando TV ohjaa älytelevisioita sekä Apple TV:tä (beta) kotisi wifin kautta.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Käytä nuolipainikkeita, OK:ta, Takaisin-, Koti- ja toistopainikkeita sekä näppäimistöä hakuihin.',
     ],
     extra=[
-      ('Tuetut Fire TV -laitteet', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube ja televisiot, joissa on sisäänrakennettu Fire TV. Tuki on uusi, ja olemme voineet testata toistaiseksi vain muutamaa oikeaa laitetta. Jos jokin ei toimi odotetusti, kerro mallisi meille Ohje-sivun kautta.'),
+      ('Tuetut Fire TV -laitteet', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube ja televisiot, joissa on sisäänrakennettu Fire TV, kuten Amazon Fire TV Edition -televisiot ja jotkin Hisense-mallit. Tuki on uusi, ja olemme voineet testata toistaiseksi vain muutamaa oikeaa laitetta. Jos jokin ei toimi odotetusti, kerro mallisi meille Ohje-sivun kautta.'),
       ('Fire TV:n käynnistys', 'Mando TV ei käynnistä Fire TV:tä verkon kautta. Käynnistä televisio laitteen virtapainikkeella: kytketty Fire TV Stick tai Cube herää yleensä HDMI-CEC:n kautta, ja televisiossa, jossa on sisäänrakennettu Fire TV, televisio on Fire TV. Sen jälkeen ohjaat sitä puhelimesta.'),
       ('Jos Fire TV ei tule näkyviin', 'Varmista, että molemmat laitteet ovat samassa wifissä ja Fire TV on hereillä. Salli iPhonella Mando TV:lle ”Lähiverkko” asetuksissa. Katso [Puhelimesi ei löydä televisiota](@not-found).'),
       ('Ei lainkaan kaukosäädintä?', 'Fire TV:n on näytettävä PIN-koodi näytöllä, joten television ja Fire TV:n on oltava päällä ja näytettävä kuva. Jos televisio on väärässä tulossa, vaihda se television painikkeilla. Katso [Tulon vaihto ilman kaukosäädintä](@hdmi).'),
-      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numerot, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin.'),
+      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numerot, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Kokeile ensin television kaukosäädintä (HDMI-CEC)', 'Monet television kaukosäätimet voivat ohjata Fire TV Stickiä HDMI-CEC:n kautta. Kun Fire TV:n käyttöliittymä on näkyvissä, paina television kaukosäätimen nuolia ja OK:ta. Jos mitään ei tapahdu, ota CEC käyttöön television asetuksissa (Anynet+ Samsungilla, SIMPLINK LG:llä, BRAVIA Sync Sonylla) ja Fire TV:ssä HDMI-CEC-laiteohjaus näyttöasetuksissa (”Näyttö ja äänet”).'),
       ('Jos olet vaihtanut wifin', 'Ilman kaukosäädintä et voi kirjoittaa uutta wifin salasanaa Fire TV:hen, mutta on keino: luo toisella puhelimella hotspot täsmälleen samalla nimellä ja salasanalla kuin vanhalla wifillä. Fire TV yhdistää siihen automaattisesti. Yhdistä Mando TV -puhelin tähän hotspotiin, tee pariliitos PIN-koodilla, mene sitten Fire TV:ssä kohtaan Asetukset > Verkko ja valitse uusi wifisi. Yhdistä lopuksi myös puhelimesi uuteen wifiin.'),
       ('Korvaavan kaukosäätimen pariliitos', 'Useimmat uudet Fire TV -kaukosäätimet liitetään pitämällä Koti-painiketta alhaalla noin 10 sekuntia Fire TV:n lähellä. Jos se ei onnistu, avaa Asetukset > Ohjaimet ja Bluetooth-laitteet > Amazon Fire TV -kaukosäätimet > Lisää uusi kaukosäädin. Tähän valikkoon pääset myös puhelimestasi Mando TV:llä.'),
-      ('Television sisäänrakennettu Fire TV', 'Televisioissa, joissa on sisäänrakennettu Fire TV, samat vaiheet toimivat, koska televisio itse on Fire TV.'),
+      ('Television sisäänrakennettu Fire TV', 'Televisioissa, joissa on sisäänrakennettu Fire TV, kuten monissa Insignia- ja Toshiba-malleissa, samat vaiheet toimivat, koska televisio itse on Fire TV.'),
       ('Ennen kuin aloitat', 'Fire TV -tuki on uusi Mando TV:ssä. Päivitä sovellus ensin. Jos mallisi ei reagoi odotetusti, kirjoita meille [Ohje-sivun](@soporte) kautta ja kerro malli.'),
       ('Ilmainen ja Pro', 'Kaukosäätimen voi ladata ja sitä voi käyttää ilmaiseksi, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'Kun televisio on päällä, määritä se niin, ettet tarvitse painiketta enää: ota käyttöön HDMI-CEC ja käynnistys verkon kautta, molemmat selitetään alempana.',
     ],
     extra=[
-      ('Missä virtapainike on, merkin mukaan', 'Samsung: ohjauspainike tai ohjaussauva näytön keskikohdan alla tai takana alakulmassa. LG: ohjaussauvapainike LG-logon alla useimmissa malleissa. TCL ja Hisense: yleensä pieni painike näytön keskikohdan alla tai takana alakulman lähellä. Sony: takana tai sivureunassa, alhaalla lähellä reunaa. Paikat vaihtelevat mallin mukaan. Jos et löydä sitä, etsi käyttöohje takana olevan tarran mallinumerolla.'),
+      ('Missä virtapainike on, merkin mukaan', 'Samsung: ohjauspainike tai ohjaussauva näytön keskikohdan alla tai takana alakulmassa. LG: ohjaussauvapainike LG-logon alla useimmissa malleissa. TCL ja Hisense: yleensä pieni painike näytön keskikohdan alla tai takana alakulman lähellä. Sony: takana tai sivureunassa, alhaalla lähellä reunaa. Vizio: takana alavasemmalla tai alaoikealla tai sivussa. Paikat vaihtelevat mallin mukaan. Jos et löydä sitä, etsi käyttöohje takana olevan tarran mallinumerolla.'),
       ('Television käynnistys konsolilla tai suoratoistolaitteella (HDMI-CEC)', 'Kun HDMI-CEC on käytössä, PlayStationin, Xboxin, Roku-soittimen, Fire TV Stickin tai Chromecastin käynnistäminen käynnistää myös television ja vaihtaa oikeaan tuloon. Jokainen merkki nimeää asetuksen eri tavalla: Anynet+ Samsungilla, SIMPLINK LG:llä, BRAVIA Sync Sonylla ja CEC useimmilla muilla. Lisää oppaassa [Television käynnistys ja konsolin HDMI-tuloon vaihto](@console).'),
       ('Television käynnistys puhelimella', 'Älytelevisiot voidaan herättää wifin kautta, kun sallit sen kerran, ja sitten Mando TV käynnistää ne puhelimestasi. Samsungilla ota käyttöön ”Käynnistä mobiililaitteella” kohdasta Asetukset > Yleiset > Verkko > Asiantuntija-asetukset. LG:llä ota käyttöön ”Käynnistä TV mobiililaitteella” ([vaihe vaiheelta](@lg-on)). Roku TV:ssä ota käyttöön ”TV:n pikakäynnistys” kohdasta Asetukset > Järjestelmä > Virta. Google TV:ssä ja Android TV:ssä etsi Wake on LAN tai ”Käynnistys verkon kautta”, jos mallissasi on se. Teet sen kerran, television ollessa päällä.'),
       ('Jos et löydä painiketta', 'Jotkin uudemmat televisiot piilottavat ainoan painikkeen niin hyvin, että tuntuu kuin sitä ei olisi. Etsi pientä kohoumaa tai valoanturin aluetta näytön alta: painike on usein heti sen vieressä. Wifin kautta Mando TV tarvitsee, että televisio on ollut kerran päällä ja yhdistetty. Infrapuna on poikkeus: Android-puhelimella, jossa on infrapunalähetin, Mando TV voi käynnistää television, jota ei ole koskaan määritetty, kunhan osoitat puhelimella televisiota. Infrapuna on uusi ja toimii sovelluksen koodiluettelon merkeillä.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('TCL-television käynnistys puhelimella', 'TCL Roku TV:ssä ota käyttöön ”TV:n pikakäynnistys” kohdasta Asetukset > Järjestelmä > Virta. TCL Google TV:ssä etsi verkko- tai virta-asetuksista Wake on LAN, ”Käynnistys verkon kautta” tai etäkäynnistys. Joissakin malleissa sitä ei ole. Käynnistä televisio silloin fyysisellä virtapainikkeella, yleensä alhaalla keskellä tai takana.'),
       ('Jos TCL ei tule näkyviin', 'Tarkista, että puhelin ja televisio ovat samassa wifissä. Reitittimet, joissa 2,4 GHz:n ja 5 GHz:n verkot on eroteltu, voivat piilottaa laitteet toisiltaan. Salli iPhonella Mando TV:lle ”Lähiverkko” asetuksissa. Voit myös lisätä television kirjoittamalla sen IP-osoitteen. Lue [Puhelimesi ei löydä televisiota](@not-found).'),
       ('Lisää TCL:stäsi', 'TCL:lle, jossa on Roku TV, katso [Roku-kaukosäädinsovellus](@roku), TCL:lle, jossa on Google TV tai Android TV, [Android TV -kaukosäädinsovellus](@android).'),
-      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numerot, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin.'),
+      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numerot, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense ja Fire TV', 'Fire TV -tuki on uusi Mando TV:ssä. Päivitä sovellus uusimpaan versioon kaupastasi. Miten pariliitos PIN-koodilla toimii, kerrotaan sivulla [Fire TV -kaukosäädinsovellus](@firetv). Jos jokin ei toimi odotetusti, kirjoita meille Ohje-sivun kautta ja kerro mallisi.'),
       ('Hisense ja VIDAA', 'Useimmat VIDAA-mallit toimivat: painikkeet, äänenvoimakkuus, näppäimistö, sovellukset ja tulot. Jotkin uudemmat VIDAA-mallit hyväksyvät vain virallisen Hisense-sovelluksen. Mando TV tunnistaa sen yhdistäessään ja kertoo siitä selvästi sen sijaan, että epäonnistuisi hiljaa. Silloin oikea tie on mallisi Hisense-sovellus, television painikkeet tai alkuperäinen kaukosäädin.'),
       ('Hisensen käynnistys puhelimella', 'Hisense Roku TV:ssä ota käyttöön ”TV:n pikakäynnistys” kohdasta Asetukset > Järjestelmä > Virta. Google TV:ssä etsi Wake on LAN- tai ”Käynnistys verkon kautta” -asetusta. Jos sellaista ei ole, käytä television virtapainiketta.'),
-      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Mando TV Pro on valinnainen kertaosto lisäominaisuuksiin.'),
+      ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta.'),
     ],
     marca=None,
     faq=[

@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Ghiduri: folosește telefonul ca telecomandă',
   intro='Pași simpli pentru a conecta telecomanda televizorului tău Samsung, LG, Roku sau Android TV cu Mando TV, pentru a-l porni și a rezolva problemele.',
   h2_guias='Toate ghidurile', h2_marcas='Aplicație telecomandă în funcție de marcă',
+  marcas_extra=[('sony', 'Aplicație telecomandă Sony'), ('philips', 'Aplicație telecomandă Philips')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Deschide Mando TV: televizorul tău LG apare singur în listă. Atinge-l.',
       'Pe televizor apare o fereastră care cere permisiunea. Confirm-o cu telecomanda obișnuită (doar prima dată).',
     ],
-    encender='Pe televizorul LG, deschide setările și caută „Pornire TV de pe dispozitiv mobil” (în funcție de model, la General sau Conexiune). Activează „Pornire prin Wi-Fi”. Dacă există „Quick Start+”, activează-l și pe acesta. După aceea, când atingi în Mando TV televizorul oprit, aplicația te întreabă dacă vrei să îl pornească și se conectează singură.',
+    encender='Activează „Pornire TV de pe dispozitiv mobil” (la unele modele se numește „Pornire prin Wi-Fi”). O găsești la Setări > General > Dispozitive > Dispozitive externe (la modelele mai vechi: Conexiune > Gestionare conexiune mobilă). După aceea, când atingi în Mando TV televizorul oprit, aplicația te întreabă dacă vrei să îl pornească și se conectează singură.',
     faq=[
       ('Am nevoie de Magic Remote ca să folosesc Mando TV?', 'Doar prima dată, ca să confirmi fereastra de pe ecran. După aceea îți ajunge telefonul.'),
       ('Înlocuiește Mando TV aplicația LG ThinQ?', 'Pentru controlul televizorului, da: nu ai nevoie de cont LG și nici nu trebuie să înregistrezi televizorul. Mando TV se conectează direct prin Wi-Fi-ul tău.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Funcționează cu televizoarele Samsung mai vechi?', 'Funcționează cu televizoarele Samsung cu Tizen, fabricate în 2016 sau mai recent. Modelele mai vechi folosesc alt sistem, pe care încă nu îl acceptăm.'),
     ],
     guias=[('samsung-lost', 'Televizor Samsung fără telecomanda originală: folosește telefonul'),
+           ('smartthings', 'Alternativă la SmartThings pentru televizoare Samsung'),
+           ('turn-on', 'Cum pornești un televizor fără telecomandă'),
            ('hdmi', 'Schimbă intrarea HDMI a televizorului fără telecomandă'),
            ('guias', 'Toate ghidurile pentru a controla televizorul cu telefonul')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Conectează telefonul și Roku-ul la același Wi-Fi.',
       'Deschide Mando TV: Roku-ul tău apare singur în listă. Atinge-l.',
-      'Dacă nu se conectează, mergi pe Roku la Setări > Sistem > Setări avansate de sistem > Control prin aplicații mobile și setează accesul la rețea pe Implicit sau Permisiv.',
+      'Dacă nu se conectează, mergi pe Roku la Setări > Sistem > Setări avansate de sistem > Control prin aplicații mobile și setează accesul la rețea pe Implicit sau Permisiv (la software-ul Roku mai nou, setează „Control prin aplicații mobile” pe Activat).',
     ],
     encender='La televizoarele Roku TV, activează la Setări > Sistem > Alimentare opțiunea „Pornire rapidă TV”. Playerele Roku conectate la alt televizor nu pot fi pornite astfel. După aceea, când atingi în Mando TV televizorul oprit, aplicația te întreabă dacă vrei să îl pornească și se conectează singură.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Aplicația Roku nu funcționează (eroarea 403)'),
            ('roku-lost', 'Telecomandă Roku pierdută: folosește telefonul'),
+           ('tcl', 'Aplicație telecomandă TCL'),
+           ('hisense', 'Aplicație telecomandă Hisense'),
+           ('philips', 'Aplicație telecomandă Philips'),
            ('guias', 'Toate ghidurile pentru a controla televizorul cu telefonul')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV și Google TV',
     titulo='Aplicație telecomandă Android TV pentru telefon | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Deschide Mando TV: Android TV-ul tău apare singur în listă. Atinge-l.',
       'Televizorul afișează un cod de 6 caractere. Introdu-l în Mando TV (doar prima dată).',
     ],
-    encender='Depinde de producător. Caută în setările de rețea sau de alimentare „Wake on LAN”, „Pornire prin rețea” sau „Standby în rețea”. Unele modele nu au această opțiune. După aceea, când atingi în Mando TV televizorul oprit, aplicația te întreabă dacă vrei să îl pornească și se conectează singură.',
+    encender='Depinde de producător. Caută în setările de rețea sau de alimentare „Wake on LAN”, „Pornire prin rețea”, „Standby în rețea” sau „Remote start”. Unele modele nu au această opțiune. După aceea, când atingi în Mando TV televizorul oprit, aplicația te întreabă dacă vrei să îl pornească și se conectează singură.',
     faq=[
       ('Funcționează cu Chromecast cu Google TV?', 'Da, asocierea se face cu codul de 6 caractere care apare pe ecran.'),
       ('Cu ce diferă de aplicația Google TV?', 'Mando TV nu cere cont Google, funcționează și pe Windows și controlează televizoare LG, Samsung și Roku cu aceeași aplicație.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV cere un cod de asociere: ce ai de făcut'),
            ('androidtv', 'Android TV fără telecomandă: folosește telefonul'),
+           ('googletv-alt', 'Alternativă la telecomanda Google TV de pe telefon'),
+           ('sony', 'Aplicație telecomandă Sony'),
+           ('tcl', 'Aplicație telecomandă TCL'),
+           ('hisense', 'Aplicație telecomandă Hisense'),
+           ('philips', 'Aplicație telecomandă Philips'),
            ('guias', 'Toate ghidurile pentru a controla televizorul cu telefonul')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Pot porni televizorul cu telefonul dacă nu l-am conectat niciodată?', 'Prima dată îl pornești cu butonul de pe televizor. După ce ai conectat telefonul și ai activat în setările televizorului pornirea prin rețea, îl poți porni din aplicație.'),
       ('Trebuie să cumpăr o telecomandă nouă?', 'Nu neapărat. Cu Mando TV ai gratuit butoanele, volumul, tastatura și pornirea. Dacă totuși preferi o telecomandă adevărată, caută modelul exact al televizorului tău.'),
-      ('Funcționează dacă televizorul nu are Wi-Fi?', 'Nu. Telefonul și televizorul trebuie să fie în același Wi-Fi. Un televizor care nu este Smart TV nu poate fi controlat cu Mando TV.'),
+      ('Funcționează dacă televizorul nu are Wi-Fi?', 'De cele mai multe ori nu. Telefonul și televizorul trebuie, de regulă, să fie în același Wi-Fi. Excepțiile sunt infraroșul pe telefoanele Android cu emițător de infraroșu, care controlează și televizoare fără funcție Smart TV, și Bluetooth-ul din versiunea beta, de la Android 9, care funcționează fără Wi-Fi cu Google TV, Android TV și Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Telecomandă LG pierdută',
     titulo='Telecomandă LG pierdută? Folosește telefonul',
@@ -287,7 +298,7 @@ GUIAS = [
       'Descarcă Mando TV, care este gratuită și nu cere cont Google, și deschide aplicația. Atinge în listă televizorul tău.',
       'Televizorul afișează un cod de 6 litere și cifre. Scrie-l pe telefon și atinge Asociază. Pentru asta nu ai nevoie de telecomandă.',
       'Acum poți folosi săgețile, OK, Înapoi, Acasă, volumul, mut și tastatura. Sunt gratuite, la fel ca lista de aplicații. Touchpadul este Pro.',
-      'Ca să pornești televizorul de pe telefon data viitoare, caută în setările de rețea sau de alimentare „Wake on LAN”, „Pornire prin rețea” sau „Standby în rețea”.',
+      'Ca să pornești televizorul de pe telefon data viitoare, caută în setările de rețea sau de alimentare „Wake on LAN”, „Pornire prin rețea”, „Standby în rețea” sau „Remote start”.',
     ],
     extra=[
       ('Dacă televizorul nu pornește de pe telefon', 'Nu orice Android TV poate fi pornit prin rețea; depinde de producător și de model. Dacă al tău nu are funcția, pornește-l cu butonul de pe televizor și continuă de pe telefon. Îl poți opri din aplicație.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Poți porni un televizor LG cu telefonul, dar mai întâi trebuie să activezi o setare pe televizor. După aceea, telefonul pornește televizorul LG prin Wi-Fi-ul tău, fără telecomandă. Durează cinci minute și o faci o singură dată.',
     pasos=[
       'Conectează telefonul și televizorul LG la același Wi-Fi.',
-      'Pe televizor, deschide setările și caută „Pornire TV de pe dispozitiv mobil”. În funcție de model, o găsești la General sau Conexiune.',
+      'Pe televizor, deschide setările și caută „Pornire TV de pe dispozitiv mobil”. O găsești la Setări > General > Dispozitive > Dispozitive externe (la modelele mai vechi: Conexiune > Gestionare conexiune mobilă).',
       'Activează „Pornire prin Wi-Fi”. Dacă televizorul tău este legat prin cablu de rețea, activează în schimb opțiunea pentru cablu.',
       'Dacă televizorul are „Quick Start+”, activează-l și pe acesta.',
       'Cu televizorul pornit, deschide Mando TV pe telefon și atinge în listă televizorul tău LG. Confirmă fereastra care apare pe ecran. Așa învață aplicația să îl trezească.',
@@ -432,7 +443,7 @@ GUIAS = [
     ],
     extra=[
       ('Cum îți dai seama dacă asta este problema ta', 'Semnul este clar: telefonul vede Roku-ul în listă și se conectează, dar nu se întâmplă nimic când atingi un buton. Intern, Roku răspunde cu eroarea 403, adică „interzis”. Mando TV detectează asta la conectare și îți arată chiar acești pași pe ecran.'),
-      ('Implicit sau Permisiv, ce aleg?', 'Ambele funcționează: Mando TV are nevoie doar de comenzi din rețeaua ta de acasă. Dacă opțiunea este pe Dezactivat (la software mai nou, Restricționat), Roku nu răspunde aplicațiilor.'),
+      ('Implicit sau Permisiv, ce aleg?', 'Implicit este suficient: acceptă comenzile care vin din rețeaua ta de acasă, iar o telecomandă are nevoie doar de asta. Permisiv este mai deschis și este necesar doar în rețele neobișnuite.'),
       ('Dacă nu ai telecomanda Roku', 'Dacă setarea este pe Dezactivat, poate fi schimbată doar cu telecomanda Roku adevărată. Împrumut-o pe una ca să o schimbi o singură dată; după aceea poți face totul cu telefonul. Citește și [Telecomandă Roku pierdută](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Găsirea televizorului</h2>
           <p>Televizorul te întreabă dacă permiți conexiunea Mando TV. Alege cu telecomanda „Permite”. Dacă ai refuzat-o din greșeală, mergi la Setări > General > Manager dispozitive externe > Manager conexiuni dispozitive și schimb-o pe permis.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku nu cere permisiune. Dacă nu se conectează, mergi pe Roku la Setări > Sistem > Setări avansate de sistem > Control prin aplicații mobile și lasă accesul la rețea pe Implicit sau Permisiv.</p>
+          <p>Roku nu cere permisiune. Dacă nu se conectează, mergi pe Roku la Setări > Sistem > Setări avansate de sistem > Control prin aplicații mobile și lasă accesul la rețea pe Implicit sau Permisiv (la software-ul Roku mai nou, setează „Control prin aplicații mobile” pe Activat).</p>
         </details>
         <details><summary>Android TV și Google TV</summary>
           <p>Televizorul afișează un cod de 6 caractere. Introdu-l în Mando TV exact cum apare. Funcționează la Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast cu Google TV și altele cu Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Găsirea televizorului</h2>
       <p>Mando TV pornește televizorul prin rețeaua ta de acasă. Pentru asta sunt necesare două lucruri: te-ai conectat cel puțin o dată cu televizorul pornit, iar pe televizor este activată pornirea prin rețea. Numele setării se schimbă în funcție de model; acestea sunt cele mai frecvente:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Caută în setări (în funcție de model, la General sau Conexiune) „Pornire TV de pe dispozitiv mobil” și activează „Pornire prin Wi-Fi”. Dacă există „Quick Start+”, activează-l și pe acesta.</p>
+          <p>Caută „Pornire TV de pe dispozitiv mobil” (sau „Pornire prin Wi-Fi”) la Setări > General > Dispozitive > Dispozitive externe (la modelele mai vechi: Conexiune > Gestionare conexiune mobilă) și activeaz-o.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Activează „Pornire cu dispozitiv mobil” la Setări > General > Rețea > Setări expert.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Găsirea televizorului</h2>
           <p>La televizoarele Roku TV, activează „Pornire rapidă TV” la Setări > Sistem > Alimentare. Playerele Roku conectate la un televizor nu pot fi pornite astfel.</p>
         </details>
         <details><summary>Android TV și Google TV</summary>
-          <p>Depinde de producător. Caută în setările de rețea sau de alimentare „Wake on LAN”, „Pornire prin rețea” sau „Standby în rețea”. Unele modele nu au această opțiune.</p>
+          <p>Depinde de producător. Caută în setările de rețea sau de alimentare „Wake on LAN”, „Pornire prin rețea”, „Standby în rețea” sau „Remote start”. Unele modele nu au această opțiune.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infraroșu pentru televizoare mai vechi', 'Gratis pe telefoane Android cu emițător de infraroșu (nou)', 'Unele aplicații, doar pe telefoane cu emițător de infraroșu'],
         ['Bluetooth', 'Beta de la Android 9, gratis', 'În funcție de aplicație'],
         ['Fotografii și videoclipuri pe televizor', 'Pro, prin Wi-Fi (fără oglindire)', 'În funcție de aplicație'],
-        ['Telefoane și computere', 'iPhone, iPad și Windows, plus Android în acces anticipat', 'Diferit'],
-        ['Oglindirea ecranului', 'Gratis pe iPhone și iPad, prin Oglindirea ecranului din Centrul de control (televizoare cu AirPlay)', 'Unele aplicații o oferă'],
+        ['Telefoane și computere', 'iPhone, iPad, Mac și Windows, plus Android în acces anticipat', 'Diferit'],
+        ['Oglindirea ecranului', 'Gratis pe iPhone, iPad și Windows, cu funcția încorporată a fiecăruia. Pe Windows, Pro poate oglindi și ecranul PC-ului pe televizoare LG, Samsung, Hisense și Android TV (beta)', 'Unele aplicații o oferă'],
       ],
       nota='Mando TV nu este comparată cu o anumită aplicație. Prețurile actuale se află pe pagina din magazin a fiecărei aplicații.'),
     extra=[
-      ('Ce nu face Mando TV', 'Nu are oglindire proprie a ecranului: pe iPhone și iPad te duce la Oglindirea ecranului din Centrul de control, funcția iPhone-ului însuși, care merge cu televizoare cu AirPlay. Cu Mando TV Pro poate trimite și fotografii și videoclipuri la televizor prin Wi-Fi. Controlează Smart TV-uri prin Wi-Fi-ul de acasă. Televizoarele fără funcție Smart TV pot fi controlate prin infraroșu de pe un telefon Android cu emițător de infraroșu. De la Android 9, telefonul se poate conecta și prin Bluetooth, ca tastatură și telecomandă, la Google TV, Android TV și Fire TV, fără Wi-Fi. Această opțiune este în versiunea beta și gratuită.'),
+      ('Ce nu face Mando TV', 'Pe iPhone și iPad te duce la Oglindirea ecranului din Centrul de control, funcția iPhone-ului însuși, care merge cu televizoare cu AirPlay. Pe Windows deschide Cast (Windows + K), iar Mando TV Pro poate trimite ecranul PC-ului la televizoare LG, Samsung, Hisense și Android TV prin Wi-Fi (beta, cu o întârziere de câteva secunde și fără sunet). Cu Mando TV Pro poate trimite și fotografii și videoclipuri la televizor prin Wi-Fi. Controlează Smart TV-uri prin Wi-Fi-ul de acasă. Televizoarele fără funcție Smart TV pot fi controlate prin infraroșu de pe un telefon Android cu emițător de infraroșu. De la Android 9, telefonul se poate conecta și prin Bluetooth, ca tastatură și telecomandă, la Google TV, Android TV și Fire TV, fără Wi-Fi. Această opțiune este în versiunea beta și gratuită.'),
       ('Cum câștigă bani Mando TV', 'Nu din reclame și nu din datele tale: aplicația nu colectează niciuna. Mando TV se finanțează prin Pro, o achiziție unică opțională pentru extra. Telecomanda de bază este gratuită.'),
-      ('Pe dispozitivele pe care le ai deja', 'iPhone și iPad din App Store, PC-uri cu Windows din Microsoft Store și Android prin accesul anticipat gratuit de pe Google Play. Vezi [Aplicație telecomandă pentru iPhone](@iphone) și [Aplicație telecomandă pentru Windows](@windows).'),
+      ('Pe dispozitivele pe care le ai deja', 'iPhone, iPad și Mac din App Store, PC-uri cu Windows din Microsoft Store și Android prin accesul anticipat gratuit de pe Google Play. Vezi [Aplicație telecomandă pentru iPhone](@iphone) și [Aplicație telecomandă pentru Windows](@windows).'),
       ('Confidențialitate', 'Fără cont și fără urmărire în aplicație. Comunicarea cu televizorul are loc doar în rețeaua locală, iar datele de conectare rămân criptate pe dispozitivul tău. Detalii în [Politica de confidențialitate](@privacidad).'),
     ],
     marca=None,
@@ -725,7 +736,7 @@ GUIAS += [
       ('Unde este mai bună aplicația oficială Roku', 'Păstreaz-o pe cea Roku pentru ceea ce oferă dincolo de telecomandă, ca navigarea și adăugarea de canale din Roku Channel Store, precum și castingul propriu și Private Listening (sunetul în căștile de la telefon). Folosește-le pe amândouă, dacă vrei. Pot rula pe același telefon.'),
       ('Televizoare Roku TV și playere Roku', 'Ambele funcționează. Asta include modele Roku TV de la TCL, Hisense, Philips și altele, precum și Roku Express, Streaming Stick și Ultra. Detalii găsești pe [pagina aplicației de telecomandă Roku](@roku).'),
       ('Dacă aplicația Roku nu mai funcționează', 'Dacă butoanele nu mai reacționează, Roku blochează de obicei controlul prin aplicații. Ghidul [Aplicația Roku nu funcționează](@roku-403) arată setarea care rezolvă problema.'),
-      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra.'),
+      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Ce face Mando TV pe un televizor LG', 'Funcționează cu Smart TV-uri LG cu webOS, adică cu majoritatea modelelor din 2014 încoace, inclusiv LED, NanoCell, QNED și OLED. Îți oferă săgețile, OK, Înapoi, Acasă, volum, canale, mut, controlul redării și o tastatură pentru a scrie în YouTube, Netflix sau în browser. Lista de aplicații și lista de intrări sunt tot gratuite. Cu Pro primești în plus un cursor ca la Magic Remote.'),
       ('Ce nu face Mando TV', 'Nu controlează electrocasnice LG, nu folosește contul tău LG și nu înlocuiește serviciile contului LG de pe televizor. Este o telecomandă, nu un hub de casă inteligentă.'),
       ('Confidențialitate și reclame', 'Mando TV nu are reclame și nici cont. Vorbește cu televizorul doar în interiorul rețelei tale de acasă și păstrează cheia de conectare criptată pe dispozitivul tău. Toate funcțiile le găsești pe pagina [Aplicație telecomandă LG](@lg).'),
-      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra.'),
+      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini telecomandă (Pro)', 'O mică fereastră de telecomandă care rămâne deasupra tuturor celorlalte ferestre. Așa schimbi volumul sau pui pauză fără să-ți întrerupi munca.'),
       ('Scrie pe televizor de pe PC', 'Tastatura de pe ecran a unui televizor este lentă. În Mando TV scrii cu tastatura ta reală, iar textul ajunge în câmpul de căutare al televizorului. Această parte este gratuită.'),
       ('Mai multe detalii', 'Ghidul pas cu pas îl găsești la [Controlează televizorul de pe PC](@pc). Pentru telefon, citește [Telefonul ca telecomandă prin Wi-Fi](@wifi).'),
-      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra. Pe Windows cumperi Pro prin Microsoft Store.'),
+      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament. Pe Windows cumperi Pro prin Microsoft Store.'),
       ('Comenzi vocale de pe PC (Pro)', 'Cu Pro poți vorbi cu televizorul prin microfonul PC-ului. Vorbirea este recunoscută direct pe PC: nu ai nevoie de internet și nu trebuie să setezi nimic în Windows. Ce spui nu părăsește niciodată PC-ul și nu este salvat. Doar la procesoare foarte vechi aplicația revine la dictarea din Windows. Atunci trebuie activată recunoașterea vocală online în setările de confidențialitate și adăugată limba ta în Windows.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Funcționează cu aceste televizoare', 'LG webOS, Samsung Tizen (fabricate în 2016 sau mai recent), Roku TV și playere Roku, Google TV și Android TV, precum și Fire TV. Paginile mărcilor sunt [Samsung](@samsung), [LG](@lg), [Roku](@roku) și [Android TV](@android).'),
       ('De ce cere acces la rețeaua locală', 'iPhone-ul blochează accesul aplicațiilor la dispozitivele din rețeaua ta de acasă, dacă nu permiți. Dacă televizorul nu apare în listă, deschide Setări > Mando TV și activează „Rețea locală”. Aplicația comunică doar cu televizorul tău, în interiorul rețelei de acasă.'),
       ('De ce Mando TV și nu aplicația producătorului', 'Fiecare marcă de televizoare are aplicația ei și vrea o configurare sau un cont propriu. Mando TV este o singură aplicație pentru toate, fără cont.'),
-      ('Gratis și Pro pe iPhone', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra, direct în aplicație.'),
+      ('Gratis și Pro pe iPhone', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament. Cumperi Pro o singură dată, direct în aplicație.'),
     ],
     marca=None,
     faq=[
-      ('Este Mando TV gratuită pe iPhone?', 'Descărcarea este gratuită și fără reclame. Telecomanda de bază este gratuită, la fel deschiderea aplicațiilor și schimbarea intrărilor. Extra fac parte din Mando TV Pro, o achiziție unică opțională.'),
+      ('Este Mando TV gratuită pe iPhone?', 'Descărcarea este gratuită și fără reclame. Telecomanda de bază este gratuită, la fel deschiderea aplicațiilor și schimbarea intrărilor. Extra, precum touchpadul, comenzile vocale și rutinele, fac parte din Mando TV Pro, o achiziție unică.'),
       ('Funcționează pe iPad?', 'Da. Aceeași aplicație rulează pe iPhone și pe iPad.'),
       ('Are o aplicație de telecomandă pentru iPhone nevoie de Bluetooth sau de emițător de infraroșu?', 'Nu pe iPhone. iPhone-urile nu au emițător de infraroșu, deci controlul prin infraroșu nu este disponibil acolo, iar opțiunea Bluetooth există doar pentru Android 9 sau mai nou, nu pentru iPhone. Pe iPhone, Mando TV controlează Smart TV-uri, precum și Apple TV (beta), prin Wi-Fi-ul tău de acasă.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Folosește săgețile, OK, Înapoi, Acasă, butoanele de redare și tastatura pentru căutări.',
     ],
     extra=[
-      ('Dispozitive Fire TV compatibile', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube și televizoare cu Fire TV integrat. Suportul este nou și până acum am putut testa doar câteva dispozitive reale. Dacă ceva nu merge cum te aștepți, scrie-ne modelul tău prin pagina de ajutor.'),
+      ('Dispozitive Fire TV compatibile', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube și televizoare cu Fire TV integrat, cum ar fi televizoarele Amazon Fire TV Edition și unele modele Hisense. Suportul este nou și până acum am putut testa doar câteva dispozitive reale. Dacă ceva nu merge cum te aștepți, scrie-ne modelul tău prin pagina de ajutor.'),
       ('Cum pornești Fire TV', 'Mando TV nu pornește un Fire TV prin rețea. Pornește televizorul cu butonul de pe aparat: un Fire TV Stick sau Cube conectat se trezește de obicei prin HDMI-CEC, iar la un televizor cu Fire TV integrat, televizorul este chiar Fire TV. După aceea îl controlezi de pe telefon.'),
       ('Dacă Fire TV nu apare', 'Asigură-te că ambele dispozitive sunt în același Wi-Fi și că Fire TV este pornit. Pe iPhone, permite „Rețea locală” pentru Mando TV în Setări. Vezi [Telefonul nu găsește televizorul](@not-found).'),
       ('Nu ai deloc telecomandă?', 'Fire TV trebuie să arate PIN-ul pe ecran, deci televizorul și Fire TV trebuie să fie pornite și să afișeze imaginea. Dacă televizorul este pe o intrare greșită, schimb-o cu butoanele de pe televizor. Vezi [Schimbă intrarea fără telecomandă](@hdmi).'),
-      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, cifrele, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra.'),
+      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, cifrele, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Încearcă mai întâi telecomanda televizorului (HDMI-CEC)', 'Multe telecomenzi de televizor pot controla un Fire TV Stick prin HDMI-CEC. Dacă vezi interfața Fire TV, apasă săgețile și OK de pe telecomanda televizorului. Dacă nu se întâmplă nimic, activează CEC în setările televizorului (Anynet+ la Samsung, SIMPLINK la LG, BRAVIA Sync la Sony) și, pe Fire TV, controlul dispozitivelor HDMI-CEC în setările de afișare („Display & Sounds”).'),
       ('Dacă ai schimbat Wi-Fi-ul', 'Fără telecomandă nu poți introduce parola noului Wi-Fi pe Fire TV, dar există o soluție: creează pe un al doilea telefon un hotspot cu exact același nume și aceeași parolă ca vechiul tău Wi-Fi. Fire TV se conectează singur la el. Conectează telefonul cu Mando TV la acel hotspot, asociază-l cu PIN-ul, apoi mergi pe Fire TV la Setări > Rețea și alege noul tău Wi-Fi. La final, conectează și telefonul la noul Wi-Fi.'),
       ('Asocierea unei telecomenzi de schimb', 'Cele mai multe telecomenzi Fire TV noi se asociază ținând apăsat butonul Acasă cam 10 secunde, aproape de Fire TV. Dacă nu merge, deschide Setări > Controlere și dispozitive Bluetooth > Telecomenzi Amazon Fire TV > Adaugă o telecomandă nouă. Poți ajunge la acest meniu și de pe telefon, cu Mando TV.'),
-      ('Fire TV integrat în televizor', 'La televizoarele cu Fire TV integrat se aplică aceiași pași, pentru că televizorul însuși este Fire TV.'),
+      ('Fire TV integrat în televizor', 'La televizoarele cu Fire TV integrat, cum sunt multe modele Insignia și Toshiba, se aplică aceiași pași, pentru că televizorul însuși este Fire TV.'),
       ('Înainte de a începe', 'Suportul pentru Fire TV este nou în Mando TV. Actualizează mai întâi aplicația. Dacă modelul tău nu reacționează cum te aștepți, scrie-ne prin [pagina de ajutor](@soporte) și spune-ne modelul.'),
       ('Gratis și Pro', 'Telecomanda o poți descărca și folosi gratuit, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra.'),
     ],
@@ -913,7 +924,7 @@ GUIAS += [
     ]),
   dict(clave='turn-on', corto='Pornește televizorul fără telecomandă', fecha='2026-11-23',
     titulo='Cum pornești televizorul fără telecomandă (toate mărcile)',
-    desc='Pornește televizorul fără telecomandă: unde e butonul la Samsung, LG, TCL, Hisense și Sony. Plus HDMI-CEC și trucuri cu telefonul.',
+    desc='Pornește televizorul fără telecomandă: unde e butonul la Samsung, LG, TCL, Hisense, Sony și Vizio. Plus HDMI-CEC și trucuri cu telefonul.',
     h1='Cum pornești un televizor fără telecomandă',
     intro='Aproape orice televizor are încă un buton fizic de pornire și oprire. Doar că este bine ascuns. Aici vezi unde se află la fiecare marcă, plus două moduri de a nu mai căuta data viitoare: HDMI-CEC de la o consolă sau un dispozitiv de streaming și pornirea televizorului de pe telefon, prin Wi-Fi.',
     pasos=[
@@ -924,7 +935,7 @@ GUIAS += [
       'Imediat ce televizorul e pornit, setează-l ca să nu mai ai nevoie de buton: activează HDMI-CEC și pornirea prin rețea, ambele explicate mai jos.',
     ],
     extra=[
-      ('Unde se află butonul de pornire, în funcție de marcă', 'Samsung: un buton de control sau un joystick sub mijlocul ecranului ori în spate, într-un colț de jos. LG: un buton joystick sub sigla LG la majoritatea modelelor. TCL și Hisense: de obicei un mic buton sub mijlocul ecranului sau în spate, lângă un colț de jos. Sony: în spate sau pe o margine laterală, jos, aproape de margine. Pozițiile diferă de la model la model. Dacă nu le găsești, caută manualul cu numărul modelului de pe eticheta din spate.'),
+      ('Unde se află butonul de pornire, în funcție de marcă', 'Samsung: un buton de control sau un joystick sub mijlocul ecranului ori în spate, într-un colț de jos. LG: un buton joystick sub sigla LG la majoritatea modelelor. TCL și Hisense: de obicei un mic buton sub mijlocul ecranului sau în spate, lângă un colț de jos. Sony: în spate sau pe o margine laterală, jos, aproape de margine. Vizio: în spate, jos în stânga sau jos în dreapta, ori pe lateral. Pozițiile diferă de la model la model. Dacă nu le găsești, caută manualul cu numărul modelului de pe eticheta din spate.'),
       ('Pornește televizorul de la o consolă sau de la un dispozitiv de streaming (HDMI-CEC)', 'Cu HDMI-CEC activat, pornirea unui PlayStation, a unui Xbox, a unui player Roku, a unui Fire TV Stick sau a unui Chromecast pornește și televizorul și trece pe intrarea corectă. Fiecare marcă numește setarea altfel: Anynet+ la Samsung, SIMPLINK la LG, BRAVIA Sync la Sony și CEC la majoritatea celorlalte. Mai mult la [Pornește televizorul și treci pe HDMI-ul consolei](@console).'),
       ('Pornește televizorul de pe telefon', 'Smart TV-urile pot fi trezite prin Wi-Fi dacă permiți asta o dată, iar apoi Mando TV le pornește de pe telefon. La Samsung, activează „Pornire cu dispozitiv mobil” la Setări > General > Rețea > Setări expert. La LG, activează „Pornire TV de pe dispozitiv mobil” ([pas cu pas](@lg-on)). La un televizor Roku, activează „Pornire rapidă TV” la Setări > Sistem > Alimentare. La Google TV și Android TV, caută Wake on LAN sau „Pornire prin rețea”, dacă modelul tău o are. Faci asta o singură dată, cu televizorul pornit.'),
       ('Dacă nu găsești niciun buton', 'Unele televizoare noi ascund singurul buton atât de bine, încât pare că nu există. Caută o mică proeminență sau o zonă cu senzor de lumină sub ecran: butonul este adesea chiar lângă ea. Prin Wi-Fi, Mando TV are nevoie ca televizorul să fi fost pornit o dată și conectat. Infraroșul este excepția: pe un telefon Android cu emițător de infraroșu, Mando TV poate porni un televizor care nu a fost niciodată configurat, atâta timp cât îndrepți telefonul spre televizor. Infraroșul este nou și funcționează cu mărcile din lista de coduri a aplicației.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Pornește un televizor TCL de pe telefon', 'La TCL cu Roku TV, activează „Pornire rapidă TV” la Setări > Sistem > Alimentare. La TCL cu Google TV, caută o opțiune pentru Wake on LAN, „Pornire prin rețea” sau pornire de la distanță în setările de rețea sau de alimentare. Unele modele nu o au. În acest caz, pornește televizorul cu butonul fizic, de obicei jos la mijloc sau în spate.'),
       ('Dacă TCL-ul tău nu apare', 'Verifică dacă telefonul și televizorul sunt în același Wi-Fi. Routerele cu rețele separate de 2,4 GHz și 5 GHz pot ascunde dispozitivele unele de altele. Pe iPhone, permite „Rețea locală” pentru Mando TV în Setări. Poți adăuga televizorul și introducând adresa lui IP. Citește [Telefonul nu găsește televizorul](@not-found).'),
       ('Mai multe despre TCL-ul tău', 'Pentru TCL cu Roku TV vezi [Aplicație telecomandă Roku](@roku), iar pentru TCL cu Google TV sau Android TV [Aplicație telecomandă Android TV](@android).'),
-      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, cifrele, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra.'),
+      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, cifrele, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense cu Fire TV', 'Suportul pentru Fire TV este nou în Mando TV. Actualizează aplicația la ultima versiune din magazinul tău. Cum funcționează asocierea cu PIN găsești pe pagina [Aplicație telecomandă Fire TV](@firetv). Dacă ceva nu merge cum te aștepți, scrie-ne prin pagina de ajutor și spune-ne modelul.'),
       ('Hisense cu VIDAA', 'Majoritatea modelelor VIDAA funcționează: butoane, volum, tastatură, aplicații și intrări. Unele modele VIDAA mai noi acceptă doar aplicația oficială Hisense. Mando TV observă asta la conectare și îți spune clar, în loc să eșueze în tăcere. În acest caz, aplicația Hisense pentru modelul tău, butoanele de pe televizor sau telecomanda originală sunt calea potrivită.'),
       ('Pornește un Hisense de pe telefon', 'La Hisense cu Roku TV, activează „Pornire rapidă TV” la Setări > Sistem > Alimentare. La Google TV, caută o opțiune pentru Wake on LAN sau „Pornire prin rețea”. Dacă nu există, folosește butonul de pornire de pe televizor.'),
-      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Mando TV Pro este o achiziție unică opțională pentru extra.'),
+      ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea sau oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament.'),
     ],
     marca=None,
     faq=[

@@ -1,2 +1,14 @@
 .taste-skill/
 __pycache__/
+# Nunca subir claves ni credenciales (el repositorio es público)
+.env
+.env.*
+*.p8
+*.p12
+*.pem
+*.key
+*.jks
+*.keystore
+*service-account*.json
+*credentials*.json
+*client_secret*.json

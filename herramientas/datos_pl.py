@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Poradniki: telefon jako pilot do telewizora',
   intro='Proste kroki, które pomogą Ci połączyć pilota do telewizora Samsung, LG, Roku lub Android TV z Mando TV, włączyć telewizor i rozwiązać problemy.',
   h2_guias='Wszystkie poradniki', h2_marcas='Aplikacja pilot według marki',
+  marcas_extra=[('sony', 'Pilot Sony'), ('philips', 'Pilot Philips')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Otwórz Mando TV: Twój telewizor LG sam pojawi się na liście. Stuknij go.',
       'Na telewizorze pojawi się prośba o zgodę. Zaakceptuj ją zwykłym pilotem (tylko za pierwszym razem).',
     ],
-    encender='W telewizorze LG otwórz Ustawienia i znajdź opcję „Włącz TV przez urządzenie mobilne” (zależnie od modelu jest w Ogólne lub w Połączenie). Włącz „Włącz przez Wi-Fi”. Jeśli jest „Quick Start+”, włącz też tę opcję. Potem, gdy stukniesz wyłączony telewizor w Mando TV, aplikacja zapyta, czy go włączyć, i połączy się sama.',
+    encender='W telewizorze LG otwórz Ustawienia i znajdź opcję „Włącz TV przez urządzenie mobilne” (znajdziesz ją w Ogólne > Urządzenia > Urządzenia zewnętrzne, w starszych modelach w Połączenie > Zarządzanie połączeniem mobilnym). Włącz „Włącz przez Wi-Fi”. Jeśli jest „Quick Start+”, włącz też tę opcję. Potem, gdy stukniesz wyłączony telewizor w Mando TV, aplikacja zapyta, czy go włączyć, i połączy się sama.',
     faq=[
       ('Czy potrzebuję pilota Magic Remote, żeby używać Mando TV?', 'Tylko za pierwszym razem, żeby zaakceptować prośbę na ekranie. Potem wystarczy Twój telefon.'),
       ('Czy Mando TV zastępuje aplikację LG ThinQ?', 'Do sterowania telewizorem tak: nie potrzebujesz konta LG ani rejestracji telewizora. Mando TV łączy się bezpośrednio przez Twoją sieć Wi-Fi.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Czy działa ze starszymi telewizorami Samsung?', 'Działa z telewizorami Samsung z Tizen, rocznik 2016 i nowsze. Wcześniejsze modele używają innego systemu, którego jeszcze nie obsługujemy.'),
     ],
     guias=[('samsung-lost', 'Telewizor Samsung bez oryginalnego pilota: jak użyć telefonu'),
+           ('smartthings', 'Alternatywa dla SmartThings'),
+           ('turn-on', 'Włączanie telewizora bez pilota'),
            ('hdmi', 'Jak zmienić wejście HDMI w telewizorze bez pilota'),
            ('guias', 'Wszystkie poradniki o sterowaniu telewizorem z telefonu')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Połącz telefon i Roku z tą samą siecią Wi-Fi.',
       'Otwórz Mando TV: Twoje Roku samo pojawi się na liście. Stuknij je.',
-      'Jeśli połączenie się nie uda, w Roku otwórz Ustawienia > System > Zaawansowane ustawienia systemu > Sterowanie przez aplikacje mobilne i ustaw Dostęp do sieci na Domyślny lub Zezwalający.',
+      'Jeśli połączenie się nie uda, w Roku otwórz Ustawienia > System > Zaawansowane ustawienia systemu > Sterowanie przez aplikacje mobilne i ustaw Dostęp do sieci na Domyślny lub Zezwalający (w nowszym oprogramowaniu Roku ustaw „Sterowanie przez aplikacje mobilne” na Włączone).',
     ],
     encender='W telewizorach Roku TV otwórz Ustawienia > System > Zasilanie i włącz „Szybkie uruchamianie TV”. Odtwarzaczy Roku podłączonych do innego telewizora nie da się w ten sposób włączyć. Potem, gdy stukniesz wyłączony telewizor w Mando TV, aplikacja zapyta, czy go włączyć, i połączy się sama.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Aplikacja Roku nie działa (błąd 403)'),
            ('roku-lost', 'Zgubiony pilot Roku: jak użyć telefonu'),
+           ('tcl', 'Pilot TCL'),
+           ('hisense', 'Pilot Hisense'),
+           ('philips', 'Pilot Philips'),
            ('guias', 'Wszystkie poradniki o sterowaniu telewizorem z telefonu')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV i Google TV',
     titulo='Pilot do Android TV na telefon | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Otwórz Mando TV: Twój Android TV sam pojawi się na liście. Stuknij go.',
       'Telewizor pokaże 6-znakowy kod. Wpisz go w Mando TV (tylko za pierwszym razem).',
     ],
-    encender='To zależy od producenta. W ustawieniach sieci lub zasilania poszukaj opcji „Wake on LAN”, „Włączanie przez sieć” albo „Network standby”. Niektóre modele nie mają tej opcji. Potem, gdy stukniesz wyłączony telewizor w Mando TV, aplikacja zapyta, czy go włączyć, i połączy się sama.',
+    encender='To zależy od producenta. W ustawieniach sieci lub zasilania poszukaj opcji „Wake on LAN”, „Włączanie przez sieć”, „Network standby” albo „Remote start”. Niektóre modele nie mają tej opcji. Potem, gdy stukniesz wyłączony telewizor w Mando TV, aplikacja zapyta, czy go włączyć, i połączy się sama.',
     faq=[
       ('Czy działa z Chromecast z Google TV?', 'Tak, parowanie odbywa się 6-znakowym kodem, który pojawia się na ekranie.'),
       ('Czym różni się od aplikacji Google TV?', 'Mando TV nie wymaga konta Google, działa też w Windows i steruje telewizorami LG, Samsung i Roku tą samą aplikacją.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV prosi o kod parowania: co zrobić'),
            ('androidtv', 'Android TV bez pilota: jak użyć telefonu'),
+           ('googletv-alt', 'Alternatywa dla pilota Google TV'),
+           ('sony', 'Pilot Sony'),
+           ('tcl', 'Pilot TCL'),
+           ('hisense', 'Pilot Hisense'),
+           ('philips', 'Pilot Philips'),
            ('guias', 'Wszystkie poradniki o sterowaniu telewizorem z telefonu')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Czy mogę włączyć telewizor telefonem, jeśli nigdy go nie łączyłem?', 'Za pierwszym razem włącz go przyciskiem na telewizorze. Gdy połączysz telefon i włączysz w ustawieniach telewizora włączanie przez sieć, będziesz mógł go włączać z aplikacji.'),
       ('Czy muszę kupić nowego pilota?', 'Niekoniecznie. Z Mando TV przyciski, głośność, klawiaturę i włączanie masz za darmo. Jeśli mimo to wolisz prawdziwego pilota, wyszukaj dokładny model swojego telewizora.'),
-      ('Czy działa, gdy telewizor nie ma Wi-Fi?', 'Nie. Telefon i telewizor muszą być w tej samej sieci Wi-Fi. Telewizora, który nie jest smart TV, nie da się sterować przez Mando TV.'),
+      ('Czy działa, gdy telewizor nie ma Wi-Fi?', 'Zwykle nie. Telefon i telewizor zazwyczaj muszą być w tej samej sieci Wi-Fi. Wyjątkiem jest podczerwień w telefonach z Androidem z nadajnikiem podczerwieni, która steruje też telewizorami bez funkcji smart TV, oraz Bluetooth w wersji beta od Androida 9, który działa bez Wi-Fi z Google TV, Android TV i Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Zgubiony pilot LG',
     titulo='Zgubiony pilot LG? Użyj telefonu jako pilota',
@@ -287,7 +298,7 @@ GUIAS = [
       'Pobierz Mando TV, które jest darmowe i nie wymaga konta Google, i otwórz aplikację. Stuknij swój telewizor na liście.',
       'Telewizor pokaże kod z 6 liter i cyfr. Wpisz go w telefonie i stuknij Sparuj. Pilot nie jest do tego potrzebny.',
       'Teraz możesz używać strzałek, OK, Wstecz, Ekranu głównego, głośności, wyciszenia i klawiatury. Są darmowe, podobnie jak lista aplikacji. Touchpad jest w Pro.',
-      'Żeby następnym razem włączyć telewizor z telefonu, poszukaj w ustawieniach sieci lub zasilania opcji „Wake on LAN”, „Włączanie przez sieć” albo „Network standby”.',
+      'Żeby następnym razem włączyć telewizor z telefonu, poszukaj w ustawieniach sieci lub zasilania opcji „Wake on LAN”, „Włączanie przez sieć”, „Network standby” albo „Remote start”.',
     ],
     extra=[
       ('Jeśli telewizora nie da się włączyć z telefonu', 'Nie każdy Android TV da się włączyć przez sieć; zależy to od producenta i modelu. Jeśli Twój nie ma tej funkcji, włącz go przyciskiem na telewizorze i kontynuuj na telefonie. Wyłączyć możesz go z aplikacji.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Możesz włączyć telewizor LG telefonem, ale najpierw trzeba włączyć jedno ustawienie w telewizorze. Potem telefon włącza telewizor LG przez Twoją sieć Wi-Fi, zupełnie bez pilota. Zajmuje to pięć minut i robisz to tylko raz.',
     pasos=[
       'Połącz telefon i telewizor LG z tą samą siecią Wi-Fi.',
-      'W telewizorze otwórz Ustawienia i znajdź „Włącz TV przez urządzenie mobilne”. Zależnie od modelu jest w Ogólne lub w Połączenie.',
+      'W telewizorze otwórz Ustawienia i znajdź „Włącz TV przez urządzenie mobilne”. Znajdziesz ją w Ogólne > Urządzenia > Urządzenia zewnętrzne (w starszych modelach w Połączenie > Zarządzanie połączeniem mobilnym).',
       'Włącz „Włącz przez Wi-Fi”. Jeśli telewizor jest podłączony kablem sieciowym, włącz zamiast tego opcję dla kabla.',
       'Jeśli telewizor ma „Quick Start+”, włącz też tę opcję.',
       'Przy włączonym telewizorze otwórz Mando TV w telefonie i stuknij na liście swój telewizor LG. Zaakceptuj prośbę, która pojawi się na ekranie. W ten sposób aplikacja uczy się go budzić.',
@@ -432,7 +443,7 @@ GUIAS = [
     ],
     extra=[
       ('Jak rozpoznać, że to Twój problem', 'Objaw jest jednoznaczny: telefon widzi Roku na liście i łączy się, ale nic się nie dzieje po stuknięciu przycisku. Wewnętrznie Roku odpowiada błędem 403, co znaczy „zabronione”. Mando TV rozpoznaje to przy łączeniu i pokazuje Ci dokładnie te kroki na ekranie.'),
-      ('Domyślny czy Zezwalający, co wybrać?', 'Obie opcje działają: Mando TV potrzebuje tylko poleceń z Twojej sieci domowej. Jeśli opcja jest ustawiona na Wyłączony (w nowszym oprogramowaniu Ograniczony), Roku nie reaguje na aplikacje.'),
+      ('Domyślny czy Zezwalający, co wybrać?', 'Wystarczy Domyślny: przyjmuje polecenia z Twojej sieci domowej, a tego potrzebuje pilot. Zezwalający jest bardziej otwarty i potrzebny tylko w nietypowych sieciach. Jeśli opcja jest ustawiona na Wyłączony (w nowszym oprogramowaniu Ograniczony), Roku nie reaguje na aplikacje.'),
       ('Jeśli nie masz pilota Roku', 'Jeśli ustawienie jest na Wyłączony, można je zmienić tylko prawdziwym pilotem Roku. Pożycz go, żeby zmienić to jednorazowo; potem wszystko zrobisz telefonem. Przeczytaj też [Zgubiony pilot Roku](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Znajdowanie telewizora</h2>
           <p>Telewizor zapyta, czy zezwalasz na połączenie z Mando TV. Pilotem wybierz „Zezwól”. Jeśli przez pomyłkę odrzucisz zgodę, wejdź w Ustawienia > Ogólne > Menedżer urządzeń zewnętrznych > Menedżer połączeń urządzeń i zmień ją na dozwoloną.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku nie prosi o zgodę. Jeśli połączenie się nie uda, w Roku wejdź w Ustawienia > System > Zaawansowane ustawienia systemu > Sterowanie przez aplikacje mobilne i zostaw Dostęp do sieci na Domyślny lub Zezwalający.</p>
+          <p>Roku nie prosi o zgodę. Jeśli połączenie się nie uda, w Roku wejdź w Ustawienia > System > Zaawansowane ustawienia systemu > Sterowanie przez aplikacje mobilne i zostaw Dostęp do sieci na Domyślny lub Zezwalający (w nowszym oprogramowaniu Roku ustaw „Sterowanie przez aplikacje mobilne” na Włączone).</p>
         </details>
         <details><summary>Android TV i Google TV</summary>
           <p>Telewizor pokaże 6-znakowy kod. Wpisz go w Mando TV dokładnie tak, jak się pojawił. Działa z Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast z Google TV i innymi z Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Znajdowanie telewizora</h2>
       <p>Mando TV włącza telewizor przez Twoją sieć domową. Potrzebne są dwie rzeczy: raz połączyłeś się przy włączonym telewizorze, a w telewizorze jest włączone włączanie przez sieć. Nazwa ustawienia zmienia się zależnie od modelu; oto najczęstsze:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>W ustawieniach (zależnie od modelu w Ogólne lub w Połączenie) poszukaj „Włącz TV przez urządzenie mobilne” i włącz „Włącz przez Wi-Fi”. Jeśli jest „Quick Start+”, włącz też tę opcję.</p>
+          <p>W ustawieniach (w Ogólne > Urządzenia > Urządzenia zewnętrzne, w starszych modelach w Połączenie > Zarządzanie połączeniem mobilnym) poszukaj „Włącz TV przez urządzenie mobilne” i włącz „Włącz przez Wi-Fi”. Jeśli jest „Quick Start+”, włącz też tę opcję.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Włącz „Włączanie przez urządzenie mobilne” w Ustawienia > Ogólne > Sieć > Ustawienia ekspertów.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Znajdowanie telewizora</h2>
           <p>W telewizorach Roku TV włącz „Szybkie uruchamianie TV” w Ustawienia > System > Zasilanie. Odtwarzaczy Roku podłączonych do telewizora nie da się w ten sposób włączyć.</p>
         </details>
         <details><summary>Android TV i Google TV</summary>
-          <p>To zależy od producenta. W ustawieniach sieci lub zasilania poszukaj „Wake on LAN”, „Włączanie przez sieć” albo „Network standby”. Niektóre modele nie mają tej opcji.</p>
+          <p>To zależy od producenta. W ustawieniach sieci lub zasilania poszukaj „Wake on LAN”, „Włączanie przez sieć”, „Network standby” albo „Remote start”. Niektóre modele nie mają tej opcji.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Podczerwień dla starszych telewizorów', 'Za darmo w telefonach z Androidem z nadajnikiem podczerwieni (nowość)', 'Niektóre aplikacje, tylko w telefonach z nadajnikiem podczerwieni'],
         ['Bluetooth', 'Beta od Androida 9, za darmo', 'Zależy od aplikacji'],
         ['Zdjęcia i filmy na telewizor', 'Pro, przez Wi-Fi (bez duplikowania ekranu)', 'Zależy od aplikacji'],
-        ['Telefony i komputery', 'iPhone, iPad i Windows, a także Android we wczesnym dostępie', 'Różnie'],
-        ['Duplikowanie ekranu', 'Za darmo na iPhone i iPad, przez Powielanie ekranu w Centrum sterowania (telewizory z AirPlay)', 'Niektóre aplikacje to oferują'],
+        ['Telefony i komputery', 'iPhone, iPad, Mac i Windows, a także Android we wczesnym dostępie', 'Różnie'],
+        ['Duplikowanie ekranu', 'Za darmo na iPhone, iPad i Windows dzięki wbudowanej funkcji każdego z nich. W Windows Pro może też duplikować ekran komputera na telewizory LG, Samsung, Hisense i Android TV (beta)', 'Niektóre aplikacje to oferują'],
       ],
       nota='Mando TV nie jest porównywane z żadną konkretną aplikacją. Aktualne ceny są na stronie danej aplikacji w sklepie.'),
     extra=[
-      ('Czego Mando TV nie robi', 'Nie ma własnego duplikowania ekranu: na iPhone i iPad kieruje Cię do Powielania ekranu w Centrum sterowania, czyli funkcji samego iPhone, która działa z telewizorami z AirPlay. Z Mando TV Pro może też wysyłać zdjęcia i filmy na telewizor przez Twoje Wi-Fi. Steruje smart TV przez domowe Wi-Fi. Telewizory bez funkcji smart TV można sterować podczerwienią z telefonu z Androidem z nadajnikiem podczerwieni. Od Androida 9 telefon może też połączyć się przez Bluetooth jako klawiatura i pilot z Google TV, Android TV i Fire TV, zupełnie bez Wi-Fi. Ta opcja jest w wersji beta i za darmo.'),
+      ('Czego Mando TV nie robi', 'Na iPhone i iPad kieruje Cię do Powielania ekranu w Centrum sterowania, czyli funkcji samego iPhone, która działa z telewizorami z AirPlay. W Windows otwiera funkcję Prześlij (Windows + K), a Mando TV Pro może wysyłać ekran komputera przez Twoje Wi-Fi na telewizory LG, Samsung, Hisense i Android TV (beta, z kilkusekundowym opóźnieniem i bez dźwięku). Z Mando TV Pro może też wysyłać zdjęcia i filmy na telewizor przez Twoje Wi-Fi. Steruje smart TV przez domowe Wi-Fi. Telewizory bez funkcji smart TV można sterować podczerwienią z telefonu z Androidem z nadajnikiem podczerwieni. Od Androida 9 telefon może też połączyć się przez Bluetooth jako klawiatura i pilot z Google TV, Android TV i Fire TV, zupełnie bez Wi-Fi. Ta opcja jest w wersji beta i za darmo.'),
       ('Jak Mando TV zarabia', 'Nie na reklamach i nie na Twoich danych: aplikacja żadnych nie zbiera. Mando TV utrzymuje się z Pro, opcjonalnego jednorazowego zakupu z dodatkami. Podstawowy pilot jest darmowy.'),
-      ('Na urządzeniach, które już masz', 'iPhone i iPad z App Store, komputery z Windows z Microsoft Store i Android przez darmowy wczesny dostęp w Google Play. Zobacz [Aplikacja pilot na iPhone](@iphone) i [Aplikacja pilot na Windows](@windows).'),
+      ('Na urządzeniach, które już masz', 'iPhone, iPad i Mac z App Store, komputery z Windows z Microsoft Store i Android przez darmowy wczesny dostęp w Google Play. Zobacz [Aplikacja pilot na iPhone](@iphone) i [Aplikacja pilot na Windows](@windows).'),
       ('Prywatność', 'Bez konta i bez śledzenia w aplikacji. Komunikacja z telewizorem odbywa się tylko w sieci lokalnej, a dane połączenia zostają zaszyfrowane na Twoim urządzeniu. Szczegóły w [Polityce prywatności](@privacidad).'),
     ],
     marca=None,
@@ -725,7 +736,7 @@ GUIAS += [
       ('Gdzie oficjalna aplikacja Roku jest lepsza', 'Zostaw aplikację Roku do tego, co oferuje poza pilotem, jak przeglądanie i dodawanie kanałów ze sklepu Roku Channel Store oraz własne przesyłanie i Private Listening (dźwięk w słuchawkach podłączonych do telefonu). Używaj obu, jeśli chcesz. Mogą działać na tym samym telefonie.'),
       ('Telewizory Roku TV i odtwarzacze Roku', 'Działają oba. Obejmuje to modele Roku TV marek TCL, Hisense, Philips i innych oraz Roku Express, Streaming Stick i Ultra. Szczegóły znajdziesz na [stronie aplikacji pilot do Roku](@roku).'),
       ('Gdy aplikacja Roku przestała działać', 'Jeśli przyciski przestały reagować, Roku zwykle blokuje sterowanie przez aplikacje. Poradnik [Aplikacja Roku nie działa](@roku-403) pokazuje ustawienie, które rozwiązuje problem.'),
-      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami.'),
+      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Co Mando TV robi w telewizorze LG', 'Działa ze smart TV LG z webOS, czyli z większością modeli od 2014 roku, w tym LED, NanoCell, QNED i OLED. Daje strzałki, OK, Wstecz, Ekran główny, głośność, kanały, wyciszenie, sterowanie odtwarzaniem i klawiaturę do pisania w YouTube, Netflix lub przeglądarce. Lista aplikacji i lista źródeł też są darmowe. W Pro dostajesz dodatkowo wskaźnik jak w Magic Remote.'),
       ('Czego Mando TV nie robi', 'Nie steruje sprzętem AGD LG, nie używa Twojego konta LG i nie zastępuje usług konta LG w telewizorze. To pilot, a nie centrala smart home.'),
       ('Prywatność i reklamy', 'Mando TV nie ma reklam ani konta. Rozmawia z telewizorem tylko w Twojej sieci domowej i zapisuje klucz połączenia w zaszyfrowanej postaci na Twoim urządzeniu. Wszystkie funkcje znajdziesz na stronie [Aplikacja pilot do LG](@lg).'),
-      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami.'),
+      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini pilot (Pro)', 'Małe okno pilota, które zostaje nad wszystkimi innymi oknami. Dzięki temu zmienisz głośność albo wstrzymasz odtwarzanie bez przerywania pracy.'),
       ('Pisanie w telewizorze z komputera', 'Klawiatura ekranowa telewizora jest powolna. W Mando TV piszesz na prawdziwej klawiaturze, a tekst trafia do pola wyszukiwania telewizora. Ta część jest darmowa.'),
       ('Więcej szczegółów', 'Instrukcję krok po kroku znajdziesz w [Sterowanie telewizorem z komputera](@pc). Dla telefonu przeczytaj [Telefon jako pilot przez Wi-Fi](@wifi).'),
-      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami. W Windows Pro kupujesz przez Microsoft Store.'),
+      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji. W Windows Pro kupujesz przez Microsoft Store.'),
       ('Polecenia głosowe z komputera (Pro)', 'W Pro możesz mówić do telewizora przez mikrofon komputera. Mowa jest rozpoznawana bezpośrednio na komputerze: nie potrzebujesz internetu i nie musisz niczego ustawiać w Windows. To, co mówisz, nigdy nie opuszcza komputera i nie jest zapisywane. Tylko w bardzo starych procesorach aplikacja przechodzi na pisanie głosowe Windows. Wtedy musi być włączone rozpoznawanie mowy online w ustawieniach prywatności i dodany w Windows Twój język.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Działa z tymi telewizorami', 'LG webOS, Samsung Tizen (rocznik 2016 i nowsze), Roku TV i odtwarzacze Roku, Google TV i Android TV oraz Fire TV. Strony marek to [Samsung](@samsung), [LG](@lg), [Roku](@roku) i [Android TV](@android).'),
       ('Dlaczego prosi o sieć lokalną', 'iPhone blokuje aplikacjom dostęp do urządzeń w Twojej sieci domowej, dopóki na to nie zezwolisz. Jeśli telewizor nie pojawia się na liście, otwórz Ustawienia > Mando TV i włącz „Sieć lokalna”. Aplikacja komunikuje się tylko z Twoim telewizorem w Twojej sieci domowej.'),
       ('Dlaczego Mando TV, a nie aplikacja producenta', 'Każda marka telewizorów ma własną aplikację i chce własnej konfiguracji lub konta. Mando TV to jedna aplikacja do wszystkich, bez konta.'),
-      ('Za darmo i Pro na iPhone', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami, prosto w aplikacji.'),
+      ('Za darmo i Pro na iPhone', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji. Pro kupujesz raz, prosto w aplikacji.'),
     ],
     marca=None,
     faq=[
-      ('Czy Mando TV na iPhone jest darmowe?', 'Pobranie jest darmowe, bez reklam. Podstawowy pilot jest darmowy, tak samo jak otwieranie aplikacji i zmiana źródeł. Dodatki należą do Mando TV Pro, opcjonalnego jednorazowego zakupu.'),
+      ('Czy Mando TV na iPhone jest darmowe?', 'Pobranie jest darmowe, bez reklam. Podstawowy pilot jest darmowy, tak samo jak otwieranie aplikacji i zmiana źródeł. Dodatki, takie jak touchpad, polecenia głosowe i rutyny, należą do Mando TV Pro, jednorazowego zakupu.'),
       ('Czy działa na iPad?', 'Tak. Ta sama aplikacja działa na iPhone i iPad.'),
       ('Czy aplikacja pilot na iPhone potrzebuje Bluetooth albo nadajnika podczerwieni?', 'Nie na iPhone. iPhone nie ma nadajnika podczerwieni, więc sterowanie podczerwienią nie jest tam dostępne, a opcja Bluetooth jest tylko dla Androida 9 lub nowszego, nie dla iPhone. Na iPhone Mando TV steruje smart TV oraz Apple TV (beta) przez Twoje domowe Wi-Fi.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Używaj strzałek, OK, Wstecz, Ekranu głównego, przycisków odtwarzania i klawiatury do wyszukiwania.',
     ],
     extra=[
-      ('Obsługiwane urządzenia Fire TV', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube i telewizory z wbudowanym Fire TV. Obsługa jest nowa i dotąd mogliśmy przetestować tylko kilka prawdziwych urządzeń. Jeśli coś nie działa tak, jak powinno, napisz do nas, jaki masz model, przez stronę pomocy.'),
+      ('Obsługiwane urządzenia Fire TV', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube i telewizory z wbudowanym Fire TV, takie jak telewizory Amazon Fire TV Edition i niektóre modele Hisense. Obsługa jest nowa i dotąd mogliśmy przetestować tylko kilka prawdziwych urządzeń. Jeśli coś nie działa tak, jak powinno, napisz do nas, jaki masz model, przez stronę pomocy.'),
       ('Włączanie Fire TV', 'Mando TV nie włącza Fire TV przez sieć. Włącz telewizor przyciskiem zasilania na obudowie: podłączony Fire TV Stick lub Cube zwykle budzi się przez HDMI-CEC, a w telewizorze z wbudowanym Fire TV telewizor jest Fire TV. Potem sterujesz nim z telefonu.'),
       ('Jeśli Twój Fire TV się nie pojawia', 'Upewnij się, że oba urządzenia są w tej samej sieci Wi-Fi, a Fire TV nie śpi. Na iPhone zezwól w ustawieniach na „Sieć lokalna” dla Mando TV. Zobacz [Telefon nie widzi telewizora](@not-found).'),
       ('Nie masz żadnego pilota?', 'Fire TV musi pokazać kod PIN na ekranie, więc telewizor i Fire TV muszą być włączone i pokazywać obraz. Jeśli telewizor jest na złym wejściu, zmień je przyciskami na telewizorze. Zobacz [Zmiana wejścia bez pilota](@hdmi).'),
-      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, cyfry, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami.'),
+      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, cyfry, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Najpierw wypróbuj pilota od telewizora (HDMI-CEC)', 'Wiele pilotów do telewizorów potrafi sterować Fire TV Stick przez HDMI-CEC. Gdy widać interfejs Fire TV, naciśnij strzałki i OK na pilocie telewizora. Jeśli nic się nie dzieje, włącz CEC w ustawieniach telewizora (Anynet+ w Samsung, SIMPLINK w LG, BRAVIA Sync w Sony), a w Fire TV włącz sterowanie urządzeniami HDMI CEC w ustawieniach wyświetlacza („Wyświetlacz i dźwięki”).'),
       ('Jeśli zmieniłeś Wi-Fi', 'Bez pilota nie wpiszesz hasła nowego Wi-Fi w Fire TV, ale jest wyjście: na drugim telefonie utwórz hotspot z dokładnie taką samą nazwą i hasłem jak stare Wi-Fi. Fire TV połączy się z nim automatycznie. Połącz telefon z Mando TV z tym hotspotem, sparuj go kodem PIN, potem w Fire TV wejdź w Ustawienia > Sieć i wybierz nowe Wi-Fi. Na koniec połącz też telefon z nowym Wi-Fi.'),
       ('Parowanie zapasowego pilota', 'Większość nowych pilotów Fire TV paruje się przez przytrzymanie przycisku Home przez około 10 sekund, w pobliżu Fire TV. Jeśli się nie uda, otwórz Ustawienia > Kontrolery i urządzenia Bluetooth > Piloty Amazon Fire TV > Dodaj nowy pilot. To menu osiągniesz też z telefonu przez Mando TV.'),
-      ('Fire TV wbudowany w telewizor', 'W telewizorach z wbudowanym Fire TV obowiązują te same kroki, bo telewizor sam jest Fire TV.'),
+      ('Fire TV wbudowany w telewizor', 'W telewizorach z wbudowanym Fire TV, takich jak wiele modeli Insignia i Toshiba, obowiązują te same kroki, bo telewizor sam jest Fire TV.'),
       ('Zanim zaczniesz', 'Obsługa Fire TV to nowość w Mando TV. Najpierw zaktualizuj aplikację. Jeśli Twój model nie reaguje tak, jak powinien, napisz do nas przez [stronę pomocy](@soporte) i podaj model.'),
       ('Za darmo i Pro', 'Pilot możesz pobrać i używać za darmo, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'Gdy telewizor jest włączony, ustaw go tak, żebyś nie potrzebował przycisku: włącz HDMI-CEC i włączanie przez sieć, oba opisane niżej.',
     ],
     extra=[
-      ('Gdzie jest przycisk zasilania, według marki', 'Samsung: przycisk sterowania lub joystick pod środkiem ekranu albo z tyłu przy dolnym rogu. LG: przycisk joystick pod logo LG w większości modeli. TCL i Hisense: zwykle mały przycisk pod środkiem ekranu albo z tyłu blisko dolnego rogu. Sony: z tyłu lub na bocznej krawędzi, na dole blisko brzegu. Położenie zmienia się zależnie od modelu. Jeśli nie możesz go znaleźć, poszukaj instrukcji po numerze modelu z naklejki na tylnej ściance.'),
+      ('Gdzie jest przycisk zasilania, według marki', 'Samsung: przycisk sterowania lub joystick pod środkiem ekranu albo z tyłu przy dolnym rogu. LG: przycisk joystick pod logo LG w większości modeli. TCL i Hisense: zwykle mały przycisk pod środkiem ekranu albo z tyłu blisko dolnego rogu. Sony: z tyłu lub na bocznej krawędzi, na dole blisko brzegu. Vizio: z tyłu, w lewym lub prawym dolnym rogu, albo z boku. Położenie zmienia się zależnie od modelu. Jeśli nie możesz go znaleźć, poszukaj instrukcji po numerze modelu z naklejki na tylnej ściance.'),
       ('Włączanie telewizora z konsoli lub urządzenia do streamingu (HDMI-CEC)', 'Przy włączonym HDMI-CEC włączenie PlayStation, Xbox, odtwarzacza Roku, Fire TV Stick lub Chromecast włącza też telewizor i przełącza na właściwe wejście. Każda marka nazywa to ustawienie inaczej: Anynet+ w Samsung, SIMPLINK w LG, BRAVIA Sync w Sony i CEC w większości innych. Więcej w [Jak włączyć telewizor i przełączyć na HDMI konsoli](@console).'),
       ('Włączanie telewizora telefonem', 'Smart TV można obudzić przez Wi-Fi, jeśli raz na to zezwolisz, a wtedy Mando TV włącza je z telefonu. W Samsung włącz „Włączanie przez urządzenie mobilne” w Ustawienia > Ogólne > Sieć > Ustawienia ekspertów. W LG włącz „Włącz TV przez urządzenie mobilne” ([krok po kroku](@lg-on)). W Roku TV włącz „Szybkie uruchamianie TV” w Ustawienia > System > Zasilanie. W Google TV i Android TV poszukaj Wake on LAN albo „Włączanie przez sieć”, jeśli Twój model to ma. Robisz to raz, przy włączonym telewizorze.'),
       ('Jeśli nie możesz znaleźć przycisku', 'Niektóre nowsze telewizory chowają jedyny przycisk tak dobrze, że wygląda, jakby go nie było. Poszukaj małego wybrzuszenia albo czujnika światła pod ekranem: przycisk często jest tuż obok. Przez Wi-Fi Mando TV potrzebuje, żeby telewizor raz był włączony i połączony. Wyjątkiem jest podczerwień: w telefonie z Androidem z nadajnikiem podczerwieni Mando TV może włączyć telewizor, który nigdy nie był konfigurowany, o ile skierujesz telefon na telewizor. Podczerwień to nowość i działa z markami z listy kodów w aplikacji.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Włączanie telewizora TCL z telefonu', 'W TCL z Roku TV włącz „Szybkie uruchamianie TV” w Ustawienia > System > Zasilanie. W TCL z Google TV poszukaj w ustawieniach sieci lub zasilania opcji Wake on LAN, „Włączanie przez sieć” albo zdalnego uruchamiania. Niektóre modele jej nie mają. W takim razie włącz telewizor fizycznym przyciskiem zasilania, zwykle na dole pośrodku albo z tyłu.'),
       ('Jeśli Twój TCL się nie pojawia', 'Sprawdź, czy telefon i telewizor są w tej samej sieci Wi-Fi. Routery z oddzielnymi sieciami 2,4 GHz i 5 GHz mogą ukrywać urządzenia przed sobą. Na iPhone zezwól w ustawieniach na „Sieć lokalna” dla Mando TV. Możesz też dodać telewizor, wpisując jego adres IP. Przeczytaj [Telefon nie widzi telewizora](@not-found).'),
       ('Więcej o Twoim TCL', 'Dla TCL z Roku TV zobacz [Aplikacja pilot do Roku](@roku), a dla TCL z Google TV lub Android TV [Aplikacja pilot do Android TV](@android).'),
-      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, cyfry, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami.'),
+      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, cyfry, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense z Fire TV', 'Obsługa Fire TV to nowość w Mando TV. Zaktualizuj aplikację do najnowszej wersji w swoim sklepie. Jak działa parowanie kodem PIN, opisuje strona [Aplikacja pilot do Fire TV](@firetv). Jeśli coś nie działa tak, jak powinno, napisz do nas przez stronę pomocy i podaj model.'),
       ('Hisense z VIDAA', 'Większość modeli VIDAA działa: przyciski, głośność, klawiatura, aplikacje i źródła. Niektóre nowsze modele VIDAA akceptują tylko oficjalną aplikację Hisense. Mando TV rozpoznaje to przy łączeniu i mówi Ci o tym wprost, zamiast cicho nie działać. W takim przypadku właściwą drogą jest aplikacja Hisense dla Twojego modelu, przyciski na telewizorze albo oryginalny pilot.'),
       ('Włączanie Hisense z telefonu', 'W Hisense z Roku TV włącz „Szybkie uruchamianie TV” w Ustawienia > System > Zasilanie. W Google TV poszukaj opcji Wake on LAN albo „Włączanie przez sieć”. Jeśli jej nie ma, użyj przycisku zasilania na telewizorze.'),
-      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Mando TV Pro to opcjonalny jednorazowy zakup z dodatkami.'),
+      ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji.'),
     ],
     marca=None,
     faq=[

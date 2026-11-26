@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Útmutatók: a telefon mint távirányító',
   intro='Egyszerű lépések, hogy a Samsung, LG, Roku vagy Android TV tévéd távirányítóját összekösd a Mando TV-vel, bekapcsold a tévét és megoldd a problémákat.',
   h2_guias='Összes útmutató', h2_marcas='Távirányító alkalmazás márkák szerint',
+  marcas_extra=[('sony', 'Sony távirányító alkalmazás'), ('philips', 'Philips távirányító alkalmazás')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Nyisd meg a Mando TV-t: az LG tévéd magától megjelenik a listában. Koppints rá.',
       'A tévén megjelenik egy kérdés, amely engedélyt kér. Fogadd el a megszokott távirányítóddal (csak az első alkalommal).',
     ],
-    encender='Nyisd meg az LG tévén a Beállításokat, és keresd a „Tévé bekapcsolása mobilról” opciót (típustól függően az Általános vagy a Csatlakozás alatt). Kapcsold be a „Bekapcsolás Wi-Fi-n keresztül” lehetőséget. Ha van „Gyorsindítás+”, azt is kapcsold be. Ezután, amikor a kikapcsolt tévére koppintasz a Mando TV-ben, az alkalmazás megkérdezi, bekapcsolja-e, és magától csatlakozik.',
+    encender='Kapcsold be a „Tévé bekapcsolása mobilról” opciót (egyes modelleken „Bekapcsolás Wi-Fi-n keresztül” a neve). Itt találod: Beállítások > Általános > Eszközök > Külső eszközök (régebbi modelleken Csatlakozás > Mobilcsatlakozás-kezelés). Ezután, amikor a kikapcsolt tévére koppintasz a Mando TV-ben, az alkalmazás megkérdezi, bekapcsolja-e, és magától csatlakozik.',
     faq=[
       ('Kell a Magic Remote a Mando TV használatához?', 'Csak az első alkalommal, hogy elfogadd a képernyőn megjelenő kérdést. Utána elég a telefonod.'),
       ('Kiváltja a Mando TV az LG ThinQ alkalmazást?', 'A tévé vezérlésére igen: nincs szükséged LG-fiókra, és a tévét sem kell regisztrálnod. A Mando TV közvetlenül a Wi-Fi-n keresztül csatlakozik.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Működik régebbi Samsung tévékkel?', 'A 2016-os és újabb, Tizen rendszerű Samsung tévékkel működik. A korábbi modellek más rendszert használnak, amelyet még nem támogatunk.'),
     ],
     guias=[('samsung-lost', 'Samsung tévé az eredeti távirányító nélkül: így használd a telefonod'),
+           ('smartthings', 'SmartThings-alternatíva Samsung tévékhez'),
+           ('turn-on', 'Így kapcsold be a tévét távirányító nélkül'),
            ('hdmi', 'HDMI-bemenet váltása a tévén távirányító nélkül'),
            ('guias', 'Összes útmutató a tévé telefonnal való vezérléséhez')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Csatlakoztasd a telefonod és a Rokut ugyanarra a Wi-Fi-re.',
       'Nyisd meg a Mando TV-t: a Rokud magától megjelenik a listában. Koppints rá.',
-      'Ha a kapcsolat nem sikerül, menj a Rokun a Beállítások > Rendszer > Speciális rendszerbeállítások > Vezérlés mobilappokkal menübe, és állítsd a hálózati hozzáférést Alapértelmezett vagy Engedélyezett értékre.',
+      'Ha a kapcsolat nem sikerül, menj a Rokun a Beállítások > Rendszer > Speciális rendszerbeállítások > Vezérlés mobilappokkal menübe, és állítsd a hálózati hozzáférést Alapértelmezett vagy Permissive értékre (újabb Roku-szoftvernél állítsd a „Vezérlés mobilappokkal” opciót Engedélyezett értékre).',
     ],
     encender='Roku TV készüléken kapcsold be a Beállítások > Rendszer > Energia menüben a „TV gyorsindítás” opciót. A más tévéhez csatlakoztatott Roku lejátszók így nem kapcsolhatók be. Ezután, amikor a kikapcsolt tévére koppintasz a Mando TV-ben, az alkalmazás megkérdezi, bekapcsolja-e, és magától csatlakozik.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'A Roku alkalmazás nem működik (403-as hiba)'),
            ('roku-lost', 'Elveszett Roku távirányító: így használd a telefonod'),
+           ('tcl', 'TCL távirányító alkalmazás'),
+           ('hisense', 'Hisense távirányító alkalmazás'),
+           ('philips', 'Philips távirányító alkalmazás'),
            ('guias', 'Összes útmutató a tévé telefonnal való vezérléséhez')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV és Google TV',
     titulo='Android TV távirányító alkalmazás telefonra | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Nyisd meg a Mando TV-t: az Android TV-d magától megjelenik a listában. Koppints rá.',
       'A tévé egy 6 karakteres kódot jelenít meg. Írd be a Mando TV-ben (csak az első alkalommal).',
     ],
-    encender='Ez a gyártótól függ. A hálózati vagy energiabeállításokban keresd a „Wake on LAN”, „Bekapcsolás hálózaton keresztül” vagy „Hálózati készenlét” opciót. Néhány modellnek nincs ilyen opciója. Ezután, amikor a kikapcsolt tévére koppintasz a Mando TV-ben, az alkalmazás megkérdezi, bekapcsolja-e, és magától csatlakozik.',
+    encender='Ez a gyártótól függ. A hálózati vagy energiabeállításokban keresd a „Wake on LAN”, „Bekapcsolás hálózaton keresztül”, „Hálózati készenlét” vagy „Távoli indítás” opciót. Néhány modellnek nincs ilyen opciója. Ezután, amikor a kikapcsolt tévére koppintasz a Mando TV-ben, az alkalmazás megkérdezi, bekapcsolja-e, és magától csatlakozik.',
     faq=[
       ('Működik Chromecast Google TV-vel?', 'Igen, a párosítás a képernyőn megjelenő 6 karakteres kóddal történik.'),
       ('Miben más, mint a Google TV alkalmazás?', 'A Mando TV-hez nem kell Google-fiók, Windowson is működik, és ugyanazzal az alkalmazással vezérli az LG, a Samsung és a Roku tévéket.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Az Android TV párosítási kódot kér: ezt kell tenned'),
            ('androidtv', 'Android TV távirányító nélkül: így használd a telefonod'),
+           ('googletv-alt', 'A Google TV telefonos távirányítójának alternatívája'),
+           ('sony', 'Sony távirányító alkalmazás'),
+           ('tcl', 'TCL távirányító alkalmazás'),
+           ('hisense', 'Hisense távirányító alkalmazás'),
+           ('philips', 'Philips távirányító alkalmazás'),
            ('guias', 'Összes útmutató a tévé telefonnal való vezérléséhez')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Bekapcsolhatom a tévét a telefonnal, ha még sosem csatlakoztattam?', 'Az első alkalommal a tévén lévő gombbal kapcsolod be. Miután összekötötted a telefonodat, és bekapcsoltad a tévé beállításaiban a hálózaton keresztüli bekapcsolást, az alkalmazással is be tudod kapcsolni.'),
       ('Venni kell új távirányítót?', 'Nem feltétlenül. A Mando TV-vel a gombok, a hangerő, a billentyűzet és a bekapcsolás ingyen van. Ha mégis inkább igazi távirányítót szeretnél, keresd a tévéd pontos típusát.'),
-      ('Működik, ha a tévének nincs Wi-Fi-je?', 'Nem. A telefonnak és a tévének ugyanazon a Wi-Fi-n kell lennie. Az olyan tévét, amely nem okostévé, nem lehet a Mando TV-vel vezérelni.'),
+      ('Működik, ha a tévének nincs Wi-Fi-je?', 'Többnyire nem. A telefonnak és a tévének általában ugyanazon a Wi-Fi-n kell lennie. Kivétel az infravörös az infravörös adóval rendelkező Android telefonokon, amely a nem okos tévéket is vezérli, és a Bluetooth bétában Android 9-től, amely Wi-Fi nélkül működik Google TV-vel, Android TV-vel és Fire TV-vel.'),
     ]),
   dict(clave='lost-lg', corto='Elveszett LG távirányító',
     titulo='Elveszett az LG távirányító? Használd a telefonod',
@@ -287,7 +298,7 @@ GUIAS = [
       'Töltsd le a Mando TV-t, amely ingyenes és nem kér Google-fiókot, és nyisd meg az alkalmazást. Koppints a listában a tévédre.',
       'A tévé egy 6 betűből és számból álló kódot mutat. Írd be a telefonodon, és koppints a Párosítás gombra. Ehhez nincs szükséged a távirányítóra.',
       'Most már használhatod az iránygombokat, az OK-t, a Vissza, a Home, a hangerő, a némítás gombot és a billentyűzetet. Ezek ingyenesek, akárcsak az appok listája. Az érintőpad Pro.',
-      'Hogy legközelebb a telefonodról kapcsold be a tévét, keresd a hálózati vagy energiabeállításokban a „Wake on LAN”, „Bekapcsolás hálózaton keresztül” vagy „Hálózati készenlét” opciót.',
+      'Hogy legközelebb a telefonodról kapcsold be a tévét, keresd a hálózati vagy energiabeállításokban a „Wake on LAN”, „Bekapcsolás hálózaton keresztül”, „Hálózati készenlét” vagy „Távoli indítás” opciót.',
     ],
     extra=[
       ('Ha a tévéd nem kapcsolható be a telefonról', 'Nem minden Android TV kapcsolható be a hálózaton keresztül; ez a gyártótól és a típustól függ. Ha a tiéd nem tudja, kapcsold be a tévén lévő gombbal, és folytasd a telefonon. Kikapcsolni az alkalmazásból tudod.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Az LG tévét bekapcsolhatod a telefonnal, de ehhez előbb be kell kapcsolnod egy beállítást a tévén. Utána a telefonod a Wi-Fi-n keresztül, távirányító nélkül bekapcsolja az LG tévét. Öt percig tart, és csak egyszer kell megcsinálnod.',
     pasos=[
       'Csatlakoztasd a telefonodat és az LG tévét ugyanarra a Wi-Fi-re.',
-      'Nyisd meg a tévén a Beállításokat, és keresd a „Tévé bekapcsolása mobilról” opciót. Típustól függően az Általános vagy a Csatlakozás alatt találod.',
+      'Nyisd meg a tévén a Beállításokat, és keresd a „Tévé bekapcsolása mobilról” opciót. Itt találod: Beállítások > Általános > Eszközök > Külső eszközök (régebbi modelleken Csatlakozás > Mobilcsatlakozás-kezelés).',
       'Kapcsold be a „Bekapcsolás Wi-Fi-n keresztül” opciót. Ha a tévéd hálózati kábellel csatlakozik, ehelyett a kábelhez tartozó opciót kapcsold be.',
       'Ha a tévédnek van „Gyorsindítás+” funkciója, azt is kapcsold be.',
       'Bekapcsolt tévénél nyisd meg a Mando TV-t a telefonodon, és koppints a listában az LG tévédre. Fogadd el a képernyőn megjelenő kérdést. Így tanulja meg az alkalmazás, hogyan ébressze fel.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Nyomd meg a Rokun a Home gombot, és menj a Beállításokhoz.',
       'Nyisd meg a Rendszert, majd a Speciális rendszerbeállításokat.',
       'Menj a „Vezérlés mobilappokkal” pontra. Néhány modellen „Külső vezérlés” a neve.',
-      'A „Hálózati hozzáférés” alatt válaszd az Alapértelmezett vagy az Engedélyezett értéket. Ha a te modelleden ez csak egy kapcsoló, hagyd Engedélyezettre.',
+      'A „Hálózati hozzáférés” alatt válaszd az Alapértelmezett vagy a Permissive értéket. Ha a te modelleden ez csak egy kapcsoló, hagyd Engedélyezettre.',
       'Térj vissza a telefonodon a Mando TV-hez, és koppints a Rokudra. A gombok most már reagálnak.',
     ],
     extra=[
       ('Így ismered fel, hogy ez a problémád', 'A jel egyértelmű: a telefonod látja a Rokut a listában, és csatlakozik, de nem történik semmi, amikor egy gombra koppintasz. Belül a Roku 403-as hibával válaszol, ami azt jelenti: „tiltott”. A Mando TV ezt csatlakozáskor felismeri, és pontosan ezeket a lépéseket mutatja a képernyőn.'),
-      ('Alapértelmezett vagy Engedélyezett, melyiket válasszam?', 'Mindkettő jó: a Mando TV-nek csak az otthoni hálózatodról érkező parancsokra van szüksége. Ha az opció Letiltott (újabb szoftvernél Korlátozott) értéken áll, a Roku nem reagál az appokra.'),
+      ('Alapértelmezett vagy Permissive, melyiket válasszam?', 'Az Alapértelmezett elég: elfogadja az otthoni hálózatodról érkező parancsokat, és a távirányítónak ennyi kell. A Permissive nyitottabb, és csak szokatlan hálózatokon van rá szükség.'),
       ('Ha nincs meg a Roku távirányító', 'Ha a beállítás Letiltott értéken áll, csak az igazi Roku távirányítóval módosítható. Kérj kölcsön egyet, hogy egyszer átállítsd; utána mindent a telefonoddal csinálhatsz. Olvasd el az [Elveszett Roku távirányító](@roku-lost) útmutatót is.'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">A tévé megtalálása</h2>
           <p>A tévé megkérdezi, engedélyezed-e a Mando TV csatlakozását. A távirányítóval válaszd az „Engedélyezés” lehetőséget. Ha véletlenül elutasítottad, menj a Beállítások > Általános > Külső eszközök kezelője > Eszközcsatlakozás-kezelő menübe, és állítsd engedélyezettre.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>A Roku nem kér engedélyt. Ha a kapcsolat nem sikerül, menj a Rokun a Beállítások > Rendszer > Speciális rendszerbeállítások > Vezérlés mobilappokkal menübe, és hagyd a hálózati hozzáférést Alapértelmezett vagy Engedélyezett értéken.</p>
+          <p>A Roku nem kér engedélyt. Ha a kapcsolat nem sikerül, menj a Rokun a Beállítások > Rendszer > Speciális rendszerbeállítások > Vezérlés mobilappokkal menübe, és hagyd a hálózati hozzáférést Alapértelmezett vagy Permissive értéken (újabb Roku-szoftvernél állítsd a „Vezérlés mobilappokkal” opciót Engedélyezett értékre).</p>
         </details>
         <details><summary>Android TV és Google TV</summary>
           <p>A tévé egy 6 karakteres kódot mutat. Pontosan úgy írd be a Mando TV-ben, ahogy megjelenik. Működik Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast Google TV-vel és más Android TV-s eszközökkel.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">A tévé megtalálása</h2>
       <p>A Mando TV az otthoni hálózaton keresztül kapcsolja be a tévét. Ehhez két dolog kell: legalább egyszer csatlakoztál bekapcsolt tévénél, és a tévén be van kapcsolva a hálózaton keresztüli bekapcsolás. A beállítás neve típusonként változik; ezek a leggyakoribbak:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Keresd a beállításokban (típustól függően az Általános vagy a Csatlakozás alatt) a „Tévé bekapcsolása mobilról” opciót, és kapcsold be a „Bekapcsolás Wi-Fi-n keresztül” lehetőséget. Ha van „Gyorsindítás+”, azt is kapcsold be.</p>
+          <p>Keresd a „Tévé bekapcsolása mobilról” (vagy „Bekapcsolás Wi-Fi-n keresztül”) opciót itt: Beállítások > Általános > Eszközök > Külső eszközök (régebbi modelleken Csatlakozás > Mobilcsatlakozás-kezelés), és kapcsold be.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Kapcsold be a „Bekapcsolás mobilról” opciót a Beállítások > Általános > Hálózat > Szakértői beállítások menüben.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">A tévé megtalálása</h2>
           <p>Roku TV készülékeken kapcsold be a „TV gyorsindítás” opciót a Beállítások > Rendszer > Energia menüben. A tévéhez csatlakoztatott Roku lejátszók így nem kapcsolhatók be.</p>
         </details>
         <details><summary>Android TV és Google TV</summary>
-          <p>Ez a gyártótól függ. A hálózati vagy energiabeállításokban keresd a „Wake on LAN”, „Bekapcsolás hálózaton keresztül” vagy „Hálózati készenlét” opciót. Néhány modellnek nincs ilyen opciója.</p>
+          <p>Ez a gyártótól függ. A hálózati vagy energiabeállításokban keresd a „Wake on LAN”, „Bekapcsolás hálózaton keresztül”, „Hálózati készenlét” vagy „Távoli indítás” opciót. Néhány modellnek nincs ilyen opciója.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Infravörös régebbi tévékhez', 'Ingyenes infravörös adós Android telefonokon (új)', 'Néhány app, csak infravörös adós telefonokon'],
         ['Bluetooth', 'Béta Android 9-től, ingyenes', 'Appfüggő'],
         ['Fényképek és videók a tévére', 'Pro, Wi-Fi-n (nem képernyőtükrözés)', 'Appfüggő'],
-        ['Telefonok és számítógépek', 'iPhone, iPad és Windows, valamint Android korai hozzáféréssel', 'Változó'],
-        ['Képernyőtükrözés', 'Ingyenes iPhone-on és iPaden, a Vezérlőközpont képernyőtükrözésével (AirPlay-es tévék)', 'Néhány app kínálja'],
+        ['Telefonok és számítógépek', 'iPhone, iPad, Mac és Windows, valamint Android korai hozzáféréssel', 'Változó'],
+        ['Képernyőtükrözés', 'Ingyenes iPhone-on, iPaden és Windowson a rendszer beépített funkciójával. Windowson a Pro ezenkívül tükrözheti a számítógép képernyőjét LG, Samsung, Hisense és Android TV tévékre (béta)', 'Néhány app kínálja'],
       ],
       nota='A Mando TV-t nem hasonlítjuk egyetlen konkrét apphoz sem. A naprakész árak az adott alkalmazás áruházi oldalán találhatók.'),
     extra=[
-      ('Mit nem csinál a Mando TV', 'Saját képernyőtükrözése nincs: iPhone-on és iPaden a Vezérlőközpont képernyőtükrözéséhez vezet, amely az iPhone saját funkciója, és AirPlay-es tévékkel működik. A Mando TV Proval ezenkívül fényképeket és videókat tud küldeni a tévére a Wi-Fi-n keresztül. Okostévéket vezérel az otthoni Wi-Fi-n. A nem okos tévéket infravörös adóval rendelkező Android telefonról infravörösön vezérelheted. Android 9-től a telefon Bluetooth-on is csatlakozhat billentyűzetként és távirányítóként Google TV-hez, Android TV-hez és Fire TV-hez, Wi-Fi nélkül. Ez az opció bétában van, és ingyenes.'),
+      ('Mit nem csinál a Mando TV', 'iPhone-on és iPaden a Vezérlőközpont képernyőtükrözéséhez vezet, amely az iPhone saját funkciója, és AirPlay-es tévékkel működik. Windowson megnyitja az Átküldést (Windows + K), a Mando TV Pro pedig el tudja küldeni a számítógép képernyőjét az otthoni Wi-Fi-n keresztül LG, Samsung, Hisense és Android TV tévékre (béta, néhány másodperc késéssel és hang nélkül). A Mando TV Proval ezenkívül fényképeket és videókat tud küldeni a tévére a Wi-Fi-n keresztül. Okostévéket vezérel az otthoni Wi-Fi-n. A nem okos tévéket infravörös adóval rendelkező Android telefonról infravörösön vezérelheted. Android 9-től a telefon Bluetooth-on is csatlakozhat billentyűzetként és távirányítóként Google TV-hez, Android TV-hez és Fire TV-hez, Wi-Fi nélkül. Ez az opció bétában van, és ingyenes.'),
       ('Miből él a Mando TV', 'Nem reklámból, és nem az adataidból: az alkalmazás nem gyűjt. A Mando TV-t a Pro finanszírozza, egy opcionális egyszeri vásárlás extrákért. Az alap távirányító ingyenes.'),
-      ('A már meglévő eszközeiden', 'iPhone és iPad az App Store-ból, Windows-számítógépek a Microsoft Store-ból, Android pedig ingyenes korai hozzáféréssel a Google Playen. Lásd a [Távirányító alkalmazás iPhone-ra](@iphone) és a [Távirányító alkalmazás Windowsra](@windows) útmutatót.'),
+      ('A már meglévő eszközeiden', 'iPhone, iPad és Mac az App Store-ból, Windows-számítógépek a Microsoft Store-ból, Android pedig ingyenes korai hozzáféréssel a Google Playen. Lásd a [Távirányító alkalmazás iPhone-ra](@iphone) és a [Távirányító alkalmazás Windowsra](@windows) útmutatót.'),
       ('Adatvédelem', 'Az alkalmazásban nincs fiók és nincs követés. A tévével való kommunikáció csak a helyi hálózaton belül zajlik, a csatlakozási adatok titkosítva maradnak az eszközödön. A részleteket az [Adatvédelmi nyilatkozatban](@privacidad) találod.'),
     ],
     marca=None,
@@ -717,7 +728,7 @@ GUIAS += [
       'Csatlakoztasd a telefonodat és a Rokut ugyanarra a Wi-Fi-re.',
       'Töltsd le és nyisd meg a Mando TV-t. A Roku TV-d vagy Roku lejátszód megjelenik a listában. Koppints rá. A Roku nem kér kódot.',
       'Használd az iránygombokat, az OK-t, a Vissza, a Home gombot, a hangerőt és a billentyűzetet. A keresőszavakat a Roku csatornáin a telefon billentyűzetével add meg.',
-      'Ha a gombok nem csinálnak semmit, menj a Rokun a Beállítások > Rendszer > Speciális rendszerbeállítások > Vezérlés mobilappokkal menübe, és állítsd a hálózati hozzáférést Alapértelmezett vagy Engedélyezett értékre (újabb Roku-szoftvernél a Vezérlés mobilappokkal legyen Engedélyezett).',
+      'Ha a gombok nem csinálnak semmit, menj a Rokun a Beállítások > Rendszer > Speciális rendszerbeállítások > Vezérlés mobilappokkal menübe, és állítsd a hálózati hozzáférést Alapértelmezett vagy Permissive értékre (újabb Roku-szoftvernél a Vezérlés mobilappokkal legyen Engedélyezett).',
       'Opcionális: kapcsold be a Roku TV-n a „TV gyorsindítás” opciót a Beállítások > Rendszer > Energia menüben, hogy a Mando TV be tudja kapcsolni a tévét.',
     ],
     extra=[
@@ -725,7 +736,7 @@ GUIAS += [
       ('Ahol a hivatalos Roku alkalmazás jobb', 'Tartsd meg a Roku alkalmazást arra, amit a távirányítón túl nyújt, például a Roku Channel Store csatornáinak böngészésére és hozzáadására, valamint a saját átküldésére és a privát hallgatásra (hang a telefonra csatlakoztatott fejhallgatón). Használd mindkettőt, ha szeretnéd. Futhatnak ugyanazon a telefonon.'),
       ('Roku TV készülékek és Roku lejátszók', 'Mindkettő működik. Ide tartoznak a TCL, Hisense, Philips és más gyártók Roku TV modelljei, valamint a Roku Express, a Streaming Stick és az Ultra. A részleteket a [Roku távirányító alkalmazás oldalán](@roku) találod.'),
       ('Ha a Roku alkalmazás már nem működik', 'Ha a gombok nem reagálnak, a Roku általában blokkolja az appokkal való vezérlést. A [A Roku alkalmazás nem működik](@roku-403) útmutató megmutatja a beállítást, amely megoldja a problémát.'),
-      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért.'),
+      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Mit tud a Mando TV LG tévén', 'Működik webOS-es LG okostévékkel, vagyis a legtöbb modellel 2014 óta, beleértve a LED, NanoCell, QNED és OLED tévéket. Kínálja az iránygombokat, az OK-t, a Vissza, a Home gombot, a hangerőt, a csatornákat, a némítást, a lejátszásvezérlőket és egy billentyűzetet a YouTube-on, a Netflixen vagy a böngészőben való gépeléshez. Az appok listája és a bemenetek listája szintén ingyenes. A Proval ráadásul kapsz egy mutatót, mint a Magic Remote-nál.'),
       ('Mit nem csinál a Mando TV', 'Nem vezérel LG háztartási gépeket, nem használja az LG-fiókodat, és nem helyettesíti a tévén lévő LG-fiókszolgáltatásokat. Távirányító, nem okosotthon-központ.'),
       ('Adatvédelem és reklámok', 'A Mando TV-ben nincs reklám és nincs fiók. Csak az otthoni hálózaton belül kommunikál a tévével, és a csatlakozási kulcsot titkosítva tárolja az eszközödön. Az összes funkciót az [LG távirányító alkalmazás](@lg) oldalon találod.'),
-      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért.'),
+      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini távirányító (Pro)', 'Egy kis távirányító ablak, amely minden más ablak felett marad. Így hangerőt állíthatsz vagy szünetelhetsz anélkül, hogy megszakítanád a munkádat.'),
       ('Gépelés a tévén a számítógépről', 'A tévé képernyőbillentyűzete lassú. A Mando TV-ben az igazi billentyűzeteddel gépelsz, és a szöveg a tévé keresőmezőjébe kerül. Ez a rész ingyenes.'),
       ('További részletek', 'A lépésről lépésre útmutatót a [Tévé vezérlése számítógéppel](@pc) oldalon találod. A telefonhoz olvasd el a [Telefon távirányítóként Wi-Fi-n](@wifi) útmutatót.'),
-      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért. Windowson a Prót a Microsoft Store-on keresztül veszed meg.'),
+      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül. Windowson a Prót a Microsoft Store-on keresztül veszed meg.'),
       ('Hangparancsok a számítógépről (Pro)', 'A Proval a számítógép mikrofonján keresztül beszélhetsz a tévével. A beszédet közvetlenül a számítógép ismeri fel: ehhez nincs szükséged internetre, és semmit nem kell beállítanod a Windowsban. Amit mondasz, soha nem hagyja el a számítógépet, és nem kerül mentésre. Csak nagyon régi processzoroknál esik vissza az alkalmazás a Windows hangbevitelére. Ehhez az adatvédelmi beállításokban be kell kapcsolni az online beszédfelismerést, és a nyelvedet hozzá kell adni a Windowshoz.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Ezekkel a tévékkel működik', 'LG webOS, Samsung Tizen (2016-os és újabb gyártású), Roku TV és Roku lejátszók, Google TV és Android TV, valamint Fire TV. A márkák oldalai: [Samsung](@samsung), [LG](@lg), [Roku](@roku) és [Android TV](@android).'),
       ('Miért kér helyi hálózatot', 'Az iPhone blokkolja, hogy az appok hozzáférjenek az otthoni hálózatodon lévő eszközökhöz, hacsak nem engedélyezed. Ha a tévé nem jelenik meg a listában, nyisd meg a Beállítások > Mando TV menüt, és kapcsold be a „Helyi hálózat” opciót. Az alkalmazás csak a tévéddel kommunikál, az otthoni hálózatodon belül.'),
       ('Miért a Mando TV, és nem a gyártó alkalmazása', 'Minden tévémárkának saját alkalmazása van, és saját beállítást vagy fiókot akar. A Mando TV egy alkalmazás mindenkinek, fiók nélkül.'),
-      ('Ingyenes és Pro iPhone-on', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért, közvetlenül az alkalmazásban.'),
+      ('Ingyenes és Pro iPhone-on', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül. A Prót egyszer veszed meg, közvetlenül az alkalmazásban.'),
     ],
     marca=None,
     faq=[
-      ('Ingyenes a Mando TV iPhone-on?', 'A letöltés ingyenes, reklámok nélkül. Az alap távirányító ingyenes, akárcsak az appok megnyitása és a bemenetek váltása. Az extrák a Mando TV Pro részei, amely opcionális egyszeri vásárlás.'),
+      ('Ingyenes a Mando TV iPhone-on?', 'A letöltés ingyenes, reklámok nélkül. Az alap távirányító ingyenes, akárcsak az appok megnyitása és a bemenetek váltása. Az olyan extrák, mint az érintőpad, a hangparancsok és a rutinok, a Mando TV Pro részei, amely egyszeri vásárlás.'),
       ('Működik iPaden?', 'Igen. Ugyanaz az alkalmazás fut iPhone-on és iPaden.'),
       ('Kell az iPhone-os távirányító alkalmazáshoz Bluetooth vagy infravörös adó?', 'iPhone-on nem. Az iPhone-oknak nincs infravörös adójuk, ezért az infravörös vezérlés ott nem érhető el, a Bluetooth opció pedig csak Android 9 vagy újabb rendszerhez van, iPhone-hoz nem. iPhone-on a Mando TV az okostévéket, valamint az Apple TV-t (béta) az otthoni Wi-Fi-n keresztül vezérli.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Használd az iránygombokat, az OK-t, a Vissza, a Home gombot, a lejátszógombokat és a billentyűzetet a kereséshez.',
     ],
     extra=[
-      ('Támogatott Fire TV eszközök', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube és beépített Fire TV-s tévék. A támogatás új, és eddig csak kevés valódi eszközön tudtuk tesztelni. Ha valami nem a várt módon működik, írd meg nekünk a modelledet a Súgó oldalon.'),
+      ('Támogatott Fire TV eszközök', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube és beépített Fire TV-s tévék, például az Amazon Fire TV Edition tévék és néhány Hisense modell. A támogatás új, és eddig csak kevés valódi eszközön tudtuk tesztelni. Ha valami nem a várt módon működik, írd meg nekünk a modelledet a Súgó oldalon.'),
       ('A Fire TV bekapcsolása', 'A Mando TV nem kapcsol be hálózaton keresztül Fire TV-t. Kapcsold be a tévét a készüléken lévő bekapcsológombbal: a bedugott Fire TV Stick vagy Cube általában a HDMI-CEC-nek köszönhetően felébred, és beépített Fire TV-s tévénél a tévé maga a Fire TV. Utána a telefonodról vezérled.'),
       ('Ha a Fire TV-d nem jelenik meg', 'Győződj meg róla, hogy mindkét eszköz ugyanazon a Wi-Fi-n van, és a Fire TV fel van ébredve. iPhone-on engedélyezd a „Helyi hálózat” opciót a Mando TV-nek a Beállításokban. Lásd a [A telefonod nem találja a tévét](@not-found) útmutatót.'),
       ('Egyáltalán nincs távirányító?', 'A Fire TV-nek meg kell mutatnia a PIN-t a képernyőn, ezért a tévének és a Fire TV-nek be kell lennie kapcsolva, és képet kell mutatnia. Ha a tévé rossz bemeneten áll, váltsd át a tévén lévő gombokkal. Lásd a [Bemenet váltása távirányító nélkül](@hdmi) útmutatót.'),
-      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért.'),
+      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Először próbáld ki a tévé távirányítóját (HDMI-CEC)', 'Sok tévétávirányító HDMI-CEC-en keresztül tud vezérelni egy Fire TV Sticket. Ha a Fire TV felülete látszik, nyomd meg a tévé távirányítóján az iránygombokat és az OK-t. Ha nem történik semmi, kapcsold be a CEC-et a tévé beállításaiban (Samsungnál Anynet+, LG-nél SIMPLINK, Sonynál BRAVIA Sync), a Fire TV-n pedig a HDMI-CEC eszközvezérlést a kijelzőbeállításokban („Kijelző és hangok”).'),
       ('Ha Wi-Fi-t cseréltél', 'Távirányító nélkül nem tudod beírni az új Wi-Fi-jelszót a Fire TV-n, de van kiút: hozz létre egy második telefonon hotspotot pontosan ugyanazzal a névvel és jelszóval, mint a régi Wi-Fi-d. A Fire TV magától csatlakozik hozzá. Csatlakoztasd a Mando TV-s telefont ehhez a hotspothoz, párosítsd a PIN-nel, majd a Fire TV-n menj a Beállítások > Hálózat pontra, és válaszd ki az új Wi-Fi-det. Végül a telefonodat is csatlakoztasd az új Wi-Fi-re.'),
       ('Pótló távirányító párosítása', 'A legtöbb új Fire TV távirányító úgy párosítható, hogy a Fire TV közelében körülbelül 10 másodpercig nyomva tartod a Home gombot. Ha nem sikerül, nyisd meg a Beállítások > Vezérlők és Bluetooth-eszközök > Amazon Fire TV távirányítók > Új távirányító hozzáadása menüt. Ezt a menüt a telefonodról is eléred a Mando TV-vel.'),
-      ('A tévébe beépített Fire TV', 'A beépített Fire TV-s tévéknél ugyanezek a lépések működnek, mert maga a tévé a Fire TV.'),
+      ('A tévébe beépített Fire TV', 'A beépített Fire TV-s tévéknél, például sok Insignia és Toshiba modellnél, ugyanezek a lépések működnek, mert maga a tévé a Fire TV.'),
       ('Mielőtt nekilátsz', 'A Fire TV támogatása új a Mando TV-ben. Először frissítsd az alkalmazást. Ha a modelled nem a várt módon reagál, írj nekünk a [Súgó oldalon](@soporte), és add meg a modellt.'),
       ('Ingyenes és Pro', 'A távirányítót ingyen töltheted le és használhatod, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért.'),
     ],
@@ -924,7 +935,7 @@ GUIAS += [
       'Miután a tévé bekapcsolt, állítsd be úgy, hogy többé ne legyen szükséged a gombra: kapcsold be a HDMI-CEC-et és a hálózaton keresztüli bekapcsolást, mindkettőt lejjebb magyarázzuk.',
     ],
     extra=[
-      ('Hol van a be-/kikapcsoló gomb, márkánként', 'Samsung: egy vezérlőgomb vagy joystick a képernyő közepe alatt vagy a hátoldalon az egyik alsó sarokban. LG: a legtöbb modellen egy joystickgomb az LG-logó alatt. TCL és Hisense: többnyire egy kis gomb a képernyő közepe alatt vagy a hátoldalon az egyik alsó sarok közelében. Sony: a hátoldalon vagy az egyik oldalélen, alul, a széléhez közel. A helyek modellenként változnak. Ha nem találod, keresd meg a kezelési útmutatót a hátoldali címkén lévő típusszámmal.'),
+      ('Hol van a be-/kikapcsoló gomb, márkánként', 'Samsung: egy vezérlőgomb vagy joystick a képernyő közepe alatt vagy a hátoldalon az egyik alsó sarokban. LG: a legtöbb modellen egy joystickgomb az LG-logó alatt. TCL és Hisense: többnyire egy kis gomb a képernyő közepe alatt vagy a hátoldalon az egyik alsó sarok közelében. Sony: a hátoldalon vagy az egyik oldalélen, alul, a széléhez közel. Vizio: a hátoldalon, alul balra vagy alul jobbra, vagy az oldalán. A helyek modellenként változnak. Ha nem találod, keresd meg a kezelési útmutatót a hátoldali címkén lévő típusszámmal.'),
       ('A tévé bekapcsolása konzollal vagy streamingeszközzel (HDMI-CEC)', 'Bekapcsolt HDMI-CEC mellett egy PlayStation, Xbox, Roku lejátszó, Fire TV Stick vagy Chromecast bekapcsolása a tévét is bekapcsolja, és a megfelelő bemenetre vált. Minden márka másként nevezi a beállítást: Samsungnál Anynet+, LG-nél SIMPLINK, Sonynál BRAVIA Sync, a legtöbb másnál CEC. Többet olvashatsz a [Tévé bekapcsolása és váltás a konzol HDMI-bemenetére](@console) útmutatóban.'),
       ('A tévé bekapcsolása a telefonoddal', 'Az okostévék Wi-Fi-n felébreszthetők, ha ezt egyszer engedélyezed, és akkor a Mando TV a telefonodról bekapcsolja őket. Samsungnál kapcsold be a „Bekapcsolás mobilról” opciót a Beállítások > Általános > Hálózat > Szakértői beállítások menüben. LG-nél kapcsold be a „Tévé bekapcsolása mobilról” opciót ([lépésről lépésre](@lg-on)). Roku TV-nél kapcsold be a „TV gyorsindítás” opciót a Beállítások > Rendszer > Energia menüben. Google TV-nél és Android TV-nél keresd a Wake on LAN vagy a „Bekapcsolás hálózaton keresztül” opciót, ha a modelled rendelkezik vele. Ezt egyszer kell megtenned, bekapcsolt tévénél.'),
       ('Ha nem találsz gombot', 'Néhány újabb tévé olyan jól elrejti az egyetlen gombot, hogy úgy tűnik, nincs is. Keress egy kis dudort vagy fényérzékelő területet a képernyő alatt: a gomb gyakran közvetlenül mellette van. Wi-Fi-n a Mando TV-nek az kell, hogy a tévé egyszer be legyen kapcsolva és csatlakoztatva. Kivétel az infravörös: infravörös adós Android telefonon a Mando TV be tud kapcsolni egy sosem beállított tévét is, amíg a tévére irányítod a telefont. Az infravörös új, és az alkalmazás kódlistájában szereplő márkákkal működik.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('TCL tévé bekapcsolása a telefonról', 'TCL Roku TV-nél kapcsold be a „TV gyorsindítás” opciót a Beállítások > Rendszer > Energia menüben. TCL Google TV-nél keress egy Wake on LAN, „Bekapcsolás hálózaton keresztül” vagy távoli indítás opciót a hálózati vagy energiabeállításokban. Néhány modell ezt nem kínálja. Ilyenkor kapcsold be a tévét a fizikai be-/kikapcsoló gombbal, többnyire alul középen vagy a hátoldalon.'),
       ('Ha a TCL-ed nem jelenik meg', 'Ellenőrizd, hogy a telefon és a tévé ugyanazon a Wi-Fi-n van-e. A külön 2,4 GHz-es és 5 GHz-es hálózatú routerek elrejthetik egymás elől az eszközöket. iPhone-on engedélyezd a „Helyi hálózat” opciót a Mando TV-nek a Beállításokban. A tévét az IP-címének megadásával is hozzáadhatod. Olvasd el a [A telefonod nem találja a tévét](@not-found) útmutatót.'),
       ('Továbbiak a TCL-edről', 'Roku TV-s TCL-hez lásd a [Roku távirányító alkalmazás](@roku) oldalt, Google TV-s vagy Android TV-s TCL-hez az [Android TV távirányító alkalmazás](@android) oldalt.'),
-      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért.'),
+      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense Fire TV-vel', 'A Fire TV támogatása új a Mando TV-ben. Frissítsd az alkalmazást a legújabb verzióra az áruházadból. Azt, hogyan működik a PIN-kódos párosítás, a [Fire TV távirányító alkalmazás](@firetv) oldalon olvashatod. Ha valami nem úgy működik, ahogy várod, írj nekünk a Súgó oldalon, és add meg a modelledet.'),
       ('Hisense VIDAA-val', 'A legtöbb VIDAA modell működik: gombok, hangerő, billentyűzet, appok és bemenetek. Néhány újabb VIDAA modell csak a hivatalos Hisense alkalmazást fogadja el. A Mando TV ezt csatlakozáskor felismeri, és világosan megmondja, ahelyett hogy csendben cserbenhagyna. Ilyenkor a modelledhez való Hisense alkalmazás, a tévén lévő gombok vagy az eredeti távirányító a megoldás.'),
       ('Hisense bekapcsolása a telefonról', 'Hisense Roku TV-nél kapcsold be a „TV gyorsindítás” opciót a Beállítások > Rendszer > Energia menüben. Google TV-nél keress egy Wake on LAN vagy „Bekapcsolás hálózaton keresztül” opciót. Ha nincs ilyen, használd a tévén lévő be-/kikapcsoló gombot.'),
-      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. A Mando TV Pro opcionális egyszeri vásárlás extrákért.'),
+      ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be- vagy kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül.'),
     ],
     marca=None,
     faq=[

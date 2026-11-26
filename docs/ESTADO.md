@@ -1,5 +1,37 @@
 # Estado de la web mandotv.app
 
+## 25-nov (noche): todos los idiomas iguales al inglés + revisión de seguridad (PUBLICADO)
+
+Resultado: corregido el contenido de los 29 idiomas en 3 rondas (workflows `paridad-contenido-idiomas` y
+`paridad-ronda-final`; la verificación bajó de 72 diferencias a 13 y luego se corrigieron). `revisar_idioma.py`: los 24
+NUEVOS con 0 errores (aviso previo en la portada de hu, tr, ar, hi, ko y ja: 377 textos contra 378 del alemán, sin
+revisar todavía). `generar_idiomas.py` admite `INDICE['marcas_extra']` (Sony y Philips en el índice de guías). Quedan
+a propósito: guías de marcas de EE. UU. solo en inglés, marcas de Latinoamérica solo en español, fechas de privacidad
+más nuevas en algunos idiomas. Los nombres de menús de Windows y LG traducidos por la IA (Cast, Dispositivos externos)
+no se compararon con las pantallas reales de cada idioma.
+
+Pedido del fundador: "como está la página de inglés así tienen que estar todas" y revisar que no se haya filtrado
+ninguna clave.
+- **Videos en guías**: `herramientas/video_guias.py` (nuevo, idempotente) pone en las guías lost-tv (Short vertical
+  por idioma, `media/lost-your-tv-remote-short-<k>-720p.mp4`, sacados de `mandotv-videos/out/idiomas/<c>/` con
+  ffmpeg, póster = cuadro 75) y windows (video largo) de los 29 idiomas el mismo bloque que el inglés, con enlace a
+  YouTube del idioma y `VideoObject`. Textos en `herramientas/video_guias_textos.json` (Sonnet). Las 2 guías inglesas
+  y `generar_en.py` también llevan ahora el enlace a YouTube y `url` en el VideoObject.
+- **Orden de construcción** (comprobado en una copia: regenerar no pierde nada salvo `it/privacy.html` y
+  `pt/privacidade.html`, que hay que restaurar con `git checkout` después): generadores (`generar_en.py`,
+  `generar_guias.py`, `generar_marcas.py`, `generar_idiomas.py`) -> `demo_portadas.py` -> `video_guias.py` -> commit
+  (el pre-commit corre `pie_firma.py`, `idioma_guardado.py`, `versionar.py`).
+- **Paridad de contenido**: auditoría (workflow) confirmó 72 diferencias en ja, es, de, pt (FAQ "sin Wi-Fi" sin
+  infrarrojo ni Bluetooth, lista de funciones Pro faltante en 7 guías, comparativa sin suscripción desactualizada,
+  enlaces de guías, notas de Roku y Samsung, Vizio en "encender sin control"; es: sin sección "Esta guía en otros
+  idiomas"). Corrección en curso con el workflow `paridad-contenido-idiomas` (plantilla `datos_de.py`, español en
+  `generar_guias.py`/`generar_marcas.py`, luego 27 idiomas). Hallazgos en el scratchpad de la sesión.
+- **Seguridad** (auditoría con verificación): 0 claves, contraseñas o llaves en los 199 commits, objetos sueltos ni
+  archivos; sin datos del trabajo del fundador; imágenes sin GPS. 15 hallazgos, todos bajos. Hecho: `.gitignore` con
+  patrones de claves, pre-commit que bloquea claves, meta referrer duplicada quitada en `/r/` y `/m/`. **Pendiente
+  con OK del fundador**: el repo de GitHub es público (docs/ con métricas y notas internas se leen en GitHub; la web
+  no los sirve); CSP para todo el sitio y HSTS con includeSubDomains (reglas de Cloudflare).
+
 ## 25-nov (noche): video de cada idioma en las 30 portadas (PUBLICADO, `main` = `29a08acd`)
 
 Pedido del fundador ("ve colocando los videos de youtube en sus respectivos idiomas"). Cada portada muestra su video

@@ -323,7 +323,7 @@ class Idioma:
              {"@type": "ListItem", "position": n, "name": t, "url": URL + self.r(k)}
              for n, (k, t) in enumerate(d.OTRAS_GUIAS, 1)]}}]}
         lista = '\n'.join(f'        <li><a href="{self.r(k)}">{e(t)}</a>: {e(gd[k])}</li>' for k, t in d.OTRAS_GUIAS)
-        marcas = '\n'.join(f'        <li><a href="{self.r(k)}">{e(n)}</a></li>' for k, n in d.PIE[:4])
+        marcas = '\n'.join(f'        <li><a href="{self.r(k)}">{e(n)}</a></li>' for k, n in list(d.PIE[:4]) + list(d.INDICE.get('marcas_extra', ())))
         return (self.cabecera(titulo, desc, url, 'guias', '#3d7bff', 'website', ld) + f'''      <nav class="migas" aria-label="{e(U['aria_ruta'])}"><a href="{self.home}">{e(U['inicio'])}</a> / <span>{e(U['g_guias'])}</span></nav>
       <h1>{e(d.INDICE['h1'])}</h1>
       <p>{e(d.INDICE['intro'])}</p>

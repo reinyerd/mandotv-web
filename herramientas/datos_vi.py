@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Hướng dẫn: dùng điện thoại làm điều khiển TV',
   intro='Các bước đơn giản để kết nối điều khiển TV Samsung, LG, Roku hoặc Android TV với Mando TV, bật TV và xử lý sự cố.',
   h2_guias='Tất cả hướng dẫn', h2_marcas='Ứng dụng điều khiển theo hãng',
+  marcas_extra=[('sony', 'Ứng dụng điều khiển TV Sony'), ('philips', 'Ứng dụng điều khiển TV Philips')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Mở Mando TV: TV LG của bạn tự xuất hiện trong danh sách. Hãy chạm vào TV đó.',
       'Trên TV sẽ hiện một yêu cầu xin quyền. Hãy xác nhận bằng điều khiển quen thuộc của bạn (chỉ lần đầu tiên).',
     ],
-    encender='Trên TV LG, hãy mở Cài đặt và tìm "Turn on TV with Mobile" (tùy model, mục này nằm trong General hoặc Connection). Bật "Turn on via Wi-Fi". Nếu có "Quick Start+", hãy bật luôn. Sau đó, khi bạn chạm vào TV đang tắt trong Mando TV, ứng dụng sẽ hỏi có muốn bật TV không và tự động kết nối.',
+    encender='Trên TV LG, hãy mở Cài đặt và tìm "Turn on TV with Mobile" (mục này nằm trong Settings, General, Devices, External Devices; ở model cũ hơn là Connection, Mobile Connection Management). Bật "Turn on via Wi-Fi". Nếu có "Quick Start+", hãy bật luôn. Sau đó, khi bạn chạm vào TV đang tắt trong Mando TV, ứng dụng sẽ hỏi có muốn bật TV không và tự động kết nối.',
     faq=[
       ('Tôi có cần Magic Remote để dùng Mando TV không?', 'Chỉ lần đầu tiên, để xác nhận yêu cầu trên màn hình. Sau đó chỉ cần điện thoại của bạn.'),
       ('Mando TV có thay thế được ứng dụng LG ThinQ không?', 'Để điều khiển TV thì có: bạn không cần tài khoản LG và cũng không phải đăng ký TV. Mando TV kết nối trực tiếp qua Wi-Fi của bạn.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Có dùng được với TV Samsung đời cũ không?', 'Ứng dụng dùng được với TV Samsung chạy Tizen, sản xuất từ 2016 trở lên. Các model trước đó dùng hệ thống khác mà chúng tôi chưa hỗ trợ.'),
     ],
     guias=[('samsung-lost', 'TV Samsung không có điều khiển gốc: dùng điện thoại thay thế'),
+           ('smartthings', 'Lựa chọn thay thế SmartThings cho TV Samsung'),
+           ('turn-on', 'Cách bật TV khi không có điều khiển'),
            ('hdmi', 'Đổi cổng HDMI trên TV khi không có điều khiển'),
            ('guias', 'Tất cả hướng dẫn điều khiển TV bằng điện thoại')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Kết nối điện thoại và Roku với cùng một mạng Wi-Fi.',
       'Mở Mando TV: Roku của bạn tự xuất hiện trong danh sách. Hãy chạm vào Roku đó.',
-      'Nếu không kết nối được, trên Roku hãy vào Settings > System > Advanced system settings > Control by mobile apps và đặt Network access thành Default hoặc Permissive.',
+      'Nếu không kết nối được, trên Roku hãy vào Settings > System > Advanced system settings > Control by mobile apps và đặt Network access thành Default hoặc Permissive (với phần mềm Roku mới hơn, hãy đặt Control by mobile apps thành Enabled).',
     ],
     encender='Với Roku TV, hãy vào Settings > System > Power và bật "Fast TV start". Roku Player cắm vào một TV khác không thể bật theo cách này. Sau đó, khi bạn chạm vào TV đang tắt trong Mando TV, ứng dụng sẽ hỏi có muốn bật TV không và tự động kết nối.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Ứng dụng Roku không hoạt động (lỗi 403)'),
            ('roku-lost', 'Mất điều khiển Roku: dùng điện thoại thay thế'),
+           ('tcl', 'Ứng dụng điều khiển TV TCL'),
+           ('hisense', 'Ứng dụng điều khiển TV Hisense'),
+           ('philips', 'Ứng dụng điều khiển TV Philips'),
            ('guias', 'Tất cả hướng dẫn điều khiển TV bằng điện thoại')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV và Google TV',
     titulo='Ứng dụng điều khiển Android TV trên điện thoại | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Mở Mando TV: Android TV của bạn tự xuất hiện trong danh sách. Hãy chạm vào TV đó.',
       'TV sẽ hiện một mã gồm 6 ký tự. Hãy nhập mã đó vào Mando TV (chỉ lần đầu tiên).',
     ],
-    encender='Tùy vào hãng. Hãy tìm trong cài đặt mạng hoặc nguồn điện mục "Wake on LAN", "Wake on network" hoặc "Network standby" rồi bật lên. Một số model không có tùy chọn này. Sau đó, khi bạn chạm vào TV đang tắt trong Mando TV, ứng dụng sẽ hỏi có muốn bật TV không và tự động kết nối.',
+    encender='Tùy vào hãng. Hãy tìm trong cài đặt mạng hoặc nguồn điện mục "Wake on LAN", "Wake on network", "Network standby" hoặc "Remote start" rồi bật lên. Một số model không có tùy chọn này. Sau đó, khi bạn chạm vào TV đang tắt trong Mando TV, ứng dụng sẽ hỏi có muốn bật TV không và tự động kết nối.',
     faq=[
       ('Có dùng được với Chromecast với Google TV không?', 'Có, việc ghép nối dùng mã 6 ký tự hiện trên màn hình.'),
       ('Khác gì so với ứng dụng Google TV?', 'Mando TV không cần tài khoản Google, dùng được cả trên Windows và điều khiển TV LG, Samsung và Roku bằng cùng một ứng dụng.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV yêu cầu mã ghép nối: cần làm gì'),
            ('androidtv', 'Android TV không có điều khiển: dùng điện thoại thay thế'),
+           ('googletv-alt', 'Lựa chọn thay thế điều khiển Google TV trên điện thoại'),
+           ('sony', 'Ứng dụng điều khiển TV Sony'),
+           ('tcl', 'Ứng dụng điều khiển TV TCL'),
+           ('hisense', 'Ứng dụng điều khiển TV Hisense'),
+           ('philips', 'Ứng dụng điều khiển TV Philips'),
            ('guias', 'Tất cả hướng dẫn điều khiển TV bằng điện thoại')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Tôi có thể bật TV bằng điện thoại nếu chưa từng kết nối không?', 'Lần đầu bạn bật TV bằng nút trên máy. Sau khi kết nối điện thoại và bật tính năng bật nguồn qua mạng trong cài đặt TV, bạn có thể bật TV từ ứng dụng.'),
       ('Tôi có cần mua điều khiển mới không?', 'Không nhất thiết. Với Mando TV, phím bấm, âm lượng, bàn phím và bật TV đều miễn phí. Nếu bạn vẫn thích điều khiển thật, hãy tìm đúng model TV của mình.'),
-      ('Có dùng được khi TV không có Wi-Fi không?', 'Không. Điện thoại và TV phải dùng cùng mạng Wi-Fi. TV không phải Smart TV thì không điều khiển được bằng Mando TV.'),
+      ('Có dùng được khi TV không có Wi-Fi không?', 'Thường là không. Điện thoại và TV thường phải dùng cùng mạng Wi-Fi. Ngoại lệ là hồng ngoại trên điện thoại Android có bộ phát hồng ngoại, cũng điều khiển được TV không phải Smart TV, và Bluetooth trong bản beta từ Android 9, hoạt động hoàn toàn không cần Wi-Fi với Google TV, Android TV và Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Mất điều khiển TV LG',
     titulo='Mất điều khiển TV LG? Dùng điện thoại thay thế',
@@ -287,7 +298,7 @@ GUIAS = [
       'Tải Mando TV, hoàn toàn miễn phí và không cần tài khoản Google, rồi mở ứng dụng. Chạm vào TV của bạn trong danh sách.',
       'TV hiện một mã gồm 6 chữ cái và số. Nhập mã đó trên điện thoại rồi chạm vào Ghép nối. Bạn không cần điều khiển cho bước này.',
       'Bây giờ bạn có thể dùng phím mũi tên, OK, Quay lại, Home, âm lượng, tắt tiếng và bàn phím. Tất cả đều miễn phí, cả danh sách ứng dụng cũng vậy. Touchpad là Pro.',
-      'Để lần sau bật TV từ điện thoại, hãy tìm trong cài đặt mạng hoặc nguồn điện mục "Wake on LAN", "Wake on network" hoặc "Network standby".',
+      'Để lần sau bật TV từ điện thoại, hãy tìm trong cài đặt mạng hoặc nguồn điện mục "Wake on LAN", "Wake on network", "Network standby" hoặc "Remote start".',
     ],
     extra=[
       ('Nếu TV không bật được từ điện thoại', 'Không phải Android TV nào cũng bật được qua mạng; điều này tùy hãng và model. Nếu TV của bạn không có tính năng này, hãy bật bằng nút trên TV rồi tiếp tục trên điện thoại. Bạn vẫn tắt TV được từ ứng dụng.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Bạn có thể bật TV LG bằng điện thoại, nhưng trước hết cần bật một tùy chọn trong TV. Sau đó điện thoại sẽ bật TV LG qua Wi-Fi mà không cần điều khiển. Chỉ mất năm phút và bạn chỉ làm một lần.',
     pasos=[
       'Kết nối điện thoại và TV LG với cùng một mạng Wi-Fi.',
-      'Trên TV, hãy mở Cài đặt và tìm "Turn on TV with Mobile". Tùy model, mục này nằm trong General hoặc Connection.',
+      'Trên TV, hãy mở Cài đặt và tìm "Turn on TV with Mobile". Mục này nằm trong Settings, General, Devices, External Devices (ở model cũ hơn là Connection, Mobile Connection Management).',
       'Bật "Turn on via Wi-Fi". Nếu TV nối mạng bằng dây, hãy bật tùy chọn dành cho dây mạng.',
       'Nếu TV có "Quick Start+", hãy bật luôn.',
       'Khi TV đang bật, mở Mando TV trên điện thoại và chạm vào TV LG trong danh sách. Xác nhận yêu cầu hiện trên màn hình. Nhờ vậy ứng dụng học được cách đánh thức TV.',
@@ -432,7 +443,7 @@ GUIAS = [
     ],
     extra=[
       ('Cách nhận biết đây có phải vấn đề của bạn', 'Dấu hiệu rất rõ: điện thoại thấy Roku trong danh sách và kết nối được, nhưng chạm vào phím nào cũng không có gì xảy ra. Bên trong, Roku trả lời bằng lỗi 403, nghĩa là "bị cấm". Mando TV nhận ra điều này khi kết nối và hiện đúng các bước này trên màn hình.'),
-      ('Default hay Enabled, nên chọn gì?', 'Cả hai đều được: Mando TV chỉ cần các lệnh từ mạng gia đình của bạn. Nếu tùy chọn đang là Disabled (ở phần mềm mới hơn là Restricted), Roku sẽ không phản hồi ứng dụng.'),
+      ('Default hay Permissive, nên chọn gì?', 'Default là đủ: nó nhận lệnh từ mạng gia đình của bạn, đúng thứ mà một chiếc điều khiển cần. Permissive mở hơn và chỉ cần trên những mạng khác thường. Nếu tùy chọn đang là Disabled (ở phần mềm mới hơn là Restricted), Roku sẽ không phản hồi ứng dụng.'),
       ('Nếu bạn không có điều khiển Roku', 'Nếu cài đặt đang là Disabled, chỉ có thể đổi bằng điều khiển Roku thật. Hãy mượn một chiếc để đổi một lần; sau đó bạn làm mọi thứ bằng điện thoại. Hãy đọc thêm [Mất điều khiển Roku](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Tìm TV của bạn</h2>
           <p>TV hỏi bạn có cho phép kết nối từ Mando TV không. Dùng điều khiển để chọn "Allow". Nếu bạn lỡ từ chối, hãy vào Settings > General > External Device Manager > Device Connection Manager và đổi thành cho phép.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku không hỏi quyền. Nếu không kết nối được, trên Roku hãy vào Settings > System > Advanced system settings > Control by mobile apps và để Network access ở Default hoặc Permissive.</p>
+          <p>Roku không hỏi quyền. Nếu không kết nối được, trên Roku hãy vào Settings > System > Advanced system settings > Control by mobile apps và để Network access ở Default hoặc Permissive (với phần mềm Roku mới hơn, hãy đặt Control by mobile apps thành Enabled).</p>
         </details>
         <details><summary>Android TV và Google TV</summary>
           <p>TV hiện một mã gồm 6 ký tự. Hãy nhập đúng như mã hiện ra vào Mando TV. Dùng được với Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast với Google TV và các TV khác chạy Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Tìm TV của bạn</h2>
       <p>Mando TV bật TV qua mạng gia đình của bạn. Cần hai điều: bạn đã kết nối ít nhất một lần khi TV đang bật, và trên TV đã bật tính năng bật nguồn qua mạng. Tên của cài đặt này thay đổi tùy model; đây là những tên phổ biến nhất:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Tìm trong Cài đặt (tùy model, nằm trong General hoặc Connection) mục "Turn on TV with Mobile" và bật "Turn on via Wi-Fi". Nếu có "Quick Start+", hãy bật luôn.</p>
+          <p>Tìm trong Cài đặt (nằm trong Settings, General, Devices, External Devices; ở model cũ hơn là Connection, Mobile Connection Management) mục "Turn on TV with Mobile" và bật "Turn on via Wi-Fi". Nếu có "Quick Start+", hãy bật luôn.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Bật "Power On with Mobile" trong Settings > General > Network > Expert Settings.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Tìm TV của bạn</h2>
           <p>Với Roku TV, bật "Fast TV start" trong Settings > System > Power. Roku Player cắm vào một TV khác không thể bật theo cách này.</p>
         </details>
         <details><summary>Android TV và Google TV</summary>
-          <p>Tùy vào hãng. Hãy tìm trong cài đặt mạng hoặc nguồn điện mục "Wake on LAN", "Wake on network" hoặc "Network standby". Một số model không có tùy chọn này.</p>
+          <p>Tùy vào hãng. Hãy tìm trong cài đặt mạng hoặc nguồn điện mục "Wake on LAN", "Wake on network", "Network standby" hoặc "Remote start". Một số model không có tùy chọn này.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Hồng ngoại cho TV đời cũ', 'Miễn phí trên điện thoại Android có bộ phát hồng ngoại (mới)', 'Một số ứng dụng, chỉ với điện thoại có bộ phát hồng ngoại'],
         ['Bluetooth', 'Beta từ Android 9, miễn phí', 'Tùy ứng dụng'],
         ['Ảnh và video lên TV', 'Pro, qua Wi-Fi (không phản chiếu màn hình)', 'Tùy ứng dụng'],
-        ['Điện thoại và máy tính', 'iPhone, iPad và Windows, cùng Android trong giai đoạn truy cập sớm', 'Tùy ứng dụng'],
-        ['Phản chiếu màn hình', 'Miễn phí trên iPhone và iPad, qua tính năng Phản chiếu màn hình trong Trung tâm điều khiển (TV có AirPlay)', 'Một số ứng dụng có cung cấp'],
+        ['Điện thoại và máy tính', 'iPhone, iPad, Mac và Windows, cùng Android trong giai đoạn truy cập sớm', 'Tùy ứng dụng'],
+        ['Phản chiếu màn hình', 'Miễn phí trên iPhone, iPad và Windows bằng tính năng có sẵn của từng thiết bị. Trên Windows, Pro còn phản chiếu được màn hình máy tính lên TV LG, Samsung, Hisense và Android TV (beta)', 'Một số ứng dụng có cung cấp'],
       ],
       nota='Mando TV không được so sánh với một ứng dụng cụ thể nào. Giá hiện hành có trên trang cửa hàng của từng ứng dụng.'),
     extra=[
-      ('Những gì Mando TV không làm', 'Ứng dụng không có tính năng phản chiếu màn hình riêng: trên iPhone và iPad, ứng dụng hướng bạn đến tính năng Phản chiếu màn hình trong Trung tâm điều khiển, là tính năng của chính iPhone, dùng được với TV có AirPlay. Với Mando TV Pro, ứng dụng còn gửi được ảnh và video lên TV qua Wi-Fi của bạn. Ứng dụng điều khiển Smart TV qua Wi-Fi trong nhà. TV không phải Smart TV có thể được điều khiển bằng hồng ngoại từ điện thoại Android có bộ phát hồng ngoại. Từ Android 9, điện thoại cũng có thể kết nối qua Bluetooth như bàn phím và điều khiển với Google TV, Android TV và Fire TV, hoàn toàn không cần Wi-Fi. Tùy chọn này đang ở bản beta và miễn phí.'),
+      ('Những gì Mando TV không làm', 'Trên iPhone và iPad, ứng dụng hướng bạn đến tính năng Phản chiếu màn hình trong Trung tâm điều khiển, là tính năng của chính iPhone, dùng được với TV có AirPlay. Trên Windows, ứng dụng mở Cast (Windows + K), và Mando TV Pro có thể gửi màn hình máy tính lên TV LG, Samsung, Hisense và Android TV qua Wi-Fi của bạn (beta, trễ vài giây và không có âm thanh). Với Mando TV Pro, ứng dụng còn gửi được ảnh và video lên TV qua Wi-Fi của bạn. Ứng dụng điều khiển Smart TV qua Wi-Fi trong nhà. TV không phải Smart TV có thể được điều khiển bằng hồng ngoại từ điện thoại Android có bộ phát hồng ngoại. Từ Android 9, điện thoại cũng có thể kết nối qua Bluetooth như bàn phím và điều khiển với Google TV, Android TV và Fire TV, hoàn toàn không cần Wi-Fi. Tùy chọn này đang ở bản beta và miễn phí.'),
       ('Mando TV kiếm tiền như thế nào', 'Không bằng quảng cáo và không bằng dữ liệu của bạn: ứng dụng không thu thập dữ liệu nào. Mando TV được duy trì nhờ Pro, gói mua một lần tùy chọn cho các tính năng bổ sung. Điều khiển cơ bản miễn phí.'),
-      ('Trên những thiết bị bạn đã có', 'iPhone và iPad từ App Store, máy tính Windows từ Microsoft Store và Android qua truy cập sớm miễn phí trên Google Play. Xem [Ứng dụng điều khiển TV cho iPhone](@iphone) và [Ứng dụng điều khiển TV cho Windows](@windows).'),
+      ('Trên những thiết bị bạn đã có', 'iPhone, iPad và Mac từ App Store, máy tính Windows từ Microsoft Store và Android qua truy cập sớm miễn phí trên Google Play. Xem [Ứng dụng điều khiển TV cho iPhone](@iphone) và [Ứng dụng điều khiển TV cho Windows](@windows).'),
       ('Quyền riêng tư', 'Không tài khoản và không theo dõi trong ứng dụng. Việc trao đổi với TV chỉ diễn ra trong mạng cục bộ, dữ liệu kết nối được mã hóa và lưu trên thiết bị của bạn. Chi tiết trong [Chính sách quyền riêng tư](@privacidad).'),
     ],
     marca=None,
@@ -725,7 +736,7 @@ GUIAS += [
       ('Ứng dụng Roku chính thức tốt hơn ở đâu', 'Hãy giữ ứng dụng Roku cho những gì nó có ngoài phần điều khiển, như duyệt và thêm kênh từ Roku Channel Store, cùng tính năng truyền màn hình và nghe riêng (âm thanh qua tai nghe cắm vào điện thoại). Dùng cả hai nếu bạn muốn. Chúng có thể chạy trên cùng một điện thoại.'),
       ('Roku TV và Roku Player', 'Cả hai đều dùng được. Bao gồm các model Roku TV của TCL, Hisense, Philips và các hãng khác, cùng Roku Express, Streaming Stick và Ultra. Chi tiết có trên [trang ứng dụng điều khiển Roku](@roku).'),
       ('Khi ứng dụng Roku không còn hoạt động', 'Khi các phím không còn phản hồi, thường là Roku đang chặn việc điều khiển bằng ứng dụng. Hướng dẫn [Ứng dụng Roku không hoạt động](@roku-403) chỉ cho bạn cài đặt khắc phục vấn đề này.'),
-      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung.'),
+      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Mando TV làm gì trên TV LG', 'Ứng dụng dùng được với Smart TV LG chạy webOS, tức là hầu hết các model từ 2014, gồm LED, NanoCell, QNED và OLED. Ứng dụng có phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, tắt tiếng, điều khiển phát và một bàn phím để gõ trong YouTube, Netflix hay trình duyệt. Danh sách ứng dụng và danh sách nguồn vào cũng miễn phí. Với Pro, bạn có thêm con trỏ như Magic Remote.'),
       ('Những gì Mando TV không làm', 'Ứng dụng không điều khiển đồ gia dụng LG, không dùng tài khoản LG của bạn và không thay thế các dịch vụ tài khoản LG trên TV. Đây là một chiếc điều khiển, không phải trung tâm nhà thông minh.'),
       ('Quyền riêng tư và quảng cáo', 'Mando TV không có quảng cáo và không có tài khoản. Ứng dụng chỉ trò chuyện với TV trong mạng gia đình của bạn và lưu khóa kết nối được mã hóa trên thiết bị của bạn. Bạn xem toàn bộ tính năng trên trang [Ứng dụng điều khiển TV LG](@lg).'),
-      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung.'),
+      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Điều khiển mini (Pro)', 'Một cửa sổ điều khiển nhỏ luôn nằm trên mọi cửa sổ khác. Nhờ vậy bạn chỉnh âm lượng hoặc tạm dừng mà không làm gián đoạn công việc.'),
       ('Gõ trên TV từ máy tính', 'Bàn phím trên màn hình của TV rất chậm. Trong Mando TV, bạn gõ bằng bàn phím thật và nội dung hiện vào ô tìm kiếm của TV. Phần này miễn phí.'),
       ('Xem thêm chi tiết', 'Hướng dẫn từng bước có tại [Điều khiển TV bằng máy tính](@pc). Với điện thoại, hãy đọc [Điện thoại làm điều khiển qua Wi-Fi](@wifi).'),
-      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung. Trên Windows, bạn mua Pro qua Microsoft Store.'),
+      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký. Trên Windows, bạn mua Pro qua Microsoft Store.'),
       ('Lệnh bằng giọng nói từ máy tính (Pro)', 'Với Pro, bạn có thể nói chuyện với TV qua micro của máy tính. Giọng nói được nhận dạng ngay trên máy tính: bạn không cần internet và không phải cài đặt gì trong Windows. Những gì bạn nói không bao giờ rời khỏi máy tính và không được lưu. Chỉ với bộ xử lý rất cũ, ứng dụng mới chuyển sang tính năng nhập bằng giọng nói của Windows. Khi đó cần bật nhận dạng giọng nói trực tuyến trong cài đặt quyền riêng tư và thêm ngôn ngữ của bạn vào Windows.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Dùng được với những TV này', 'LG webOS, Samsung Tizen (sản xuất từ 2016 trở lên), Roku TV và Roku Player, Google TV và Android TV, cùng Fire TV. Các trang theo hãng là [Samsung](@samsung), [LG](@lg), [Roku](@roku) và [Android TV](@android).'),
       ('Vì sao ứng dụng hỏi về mạng cục bộ', 'iPhone chặn ứng dụng truy cập các thiết bị trong mạng gia đình của bạn, trừ khi bạn cho phép. Nếu TV không hiện trong danh sách, hãy mở Cài đặt > Mando TV và bật "Local Network". Ứng dụng chỉ trò chuyện với TV của bạn trong mạng gia đình.'),
       ('Vì sao dùng Mando TV thay vì ứng dụng của hãng', 'Mỗi hãng TV có ứng dụng riêng và muốn bạn thiết lập hoặc tạo tài khoản riêng. Mando TV là một ứng dụng cho tất cả, không cần tài khoản.'),
-      ('Miễn phí và Pro trên iPhone', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung, ngay trong ứng dụng.'),
+      ('Miễn phí và Pro trên iPhone', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký. Bạn mua Pro một lần ngay trong ứng dụng.'),
     ],
     marca=None,
     faq=[
-      ('Mando TV trên iPhone có miễn phí không?', 'Tải về miễn phí, không quảng cáo. Điều khiển cơ bản miễn phí, cũng như mở ứng dụng và đổi nguồn vào. Các tính năng bổ sung thuộc Mando TV Pro, gói mua một lần tùy chọn.'),
+      ('Mando TV trên iPhone có miễn phí không?', 'Tải về miễn phí, không quảng cáo. Điều khiển cơ bản miễn phí, cũng như mở ứng dụng và đổi nguồn vào. Các tính năng bổ sung như touchpad, lệnh thoại và quy trình thuộc Mando TV Pro, gói mua một lần.'),
       ('Có dùng được trên iPad không?', 'Có. Cùng một ứng dụng chạy trên iPhone và iPad.'),
       ('Ứng dụng điều khiển cho iPhone có cần Bluetooth hay bộ phát hồng ngoại không?', 'Không trên iPhone. iPhone không có bộ phát hồng ngoại nên điều khiển hồng ngoại không có ở đó, và tùy chọn Bluetooth chỉ dành cho Android 9 trở lên, không dành cho iPhone. Trên iPhone, Mando TV điều khiển Smart TV và Apple TV (beta) qua Wi-Fi trong nhà.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Dùng phím mũi tên, OK, Quay lại, Home, các phím phát và bàn phím để tìm kiếm.',
     ],
     extra=[
-      ('Các thiết bị Fire TV được hỗ trợ', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube và TV có Fire TV tích hợp. Việc hỗ trợ còn mới và cho đến nay chúng tôi mới thử được trên rất ít thiết bị thật. Nếu có gì không hoạt động như mong đợi, hãy cho chúng tôi biết model của bạn qua trang trợ giúp.'),
+      ('Các thiết bị Fire TV được hỗ trợ', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube và TV có Fire TV tích hợp, như TV Amazon Fire TV Edition và một số model Hisense. Việc hỗ trợ còn mới và cho đến nay chúng tôi mới thử được trên rất ít thiết bị thật. Nếu có gì không hoạt động như mong đợi, hãy cho chúng tôi biết model của bạn qua trang trợ giúp.'),
       ('Bật Fire TV', 'Mando TV không bật Fire TV qua mạng. Hãy bật TV bằng nút nguồn trên máy: Fire TV Stick hoặc Cube đang cắm thường tự thức dậy nhờ HDMI-CEC, còn với TV có Fire TV tích hợp thì chính TV là Fire TV. Sau đó bạn điều khiển từ điện thoại.'),
       ('Nếu Fire TV của bạn không hiện', 'Hãy đảm bảo cả hai thiết bị ở cùng Wi-Fi và Fire TV đang thức. Trên iPhone, hãy cho phép "Local Network" cho Mando TV trong Cài đặt. Xem [Điện thoại không tìm thấy TV](@not-found).'),
       ('Không có điều khiển nào cả?', 'Fire TV cần hiện PIN trên màn hình, vì vậy TV và Fire TV phải bật và có hình. Nếu TV đang ở nguồn vào sai, hãy đổi bằng các nút trên TV. Xem [Đổi nguồn vào khi không có điều khiển](@hdmi).'),
-      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung.'),
+      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Thử điều khiển của TV trước (HDMI-CEC)', 'Nhiều điều khiển TV có thể điều khiển Fire TV Stick qua HDMI-CEC. Khi thấy giao diện Fire TV, hãy bấm phím mũi tên và OK trên điều khiển của TV. Nếu không có gì xảy ra, hãy bật CEC trong cài đặt của TV (Anynet+ trên Samsung, SIMPLINK trên LG, BRAVIA Sync trên Sony) và trên Fire TV bật HDMI CEC Device Control trong cài đặt hiển thị ("Display & Sounds").'),
       ('Nếu bạn đã đổi Wi-Fi', 'Không có điều khiển, bạn không nhập được mật khẩu Wi-Fi mới trên Fire TV, nhưng có một cách: trên một điện thoại thứ hai, hãy tạo điểm phát Wi-Fi có đúng tên và mật khẩu như Wi-Fi cũ. Fire TV sẽ tự kết nối. Kết nối điện thoại chạy Mando TV vào điểm phát đó, ghép nối bằng PIN, rồi trên Fire TV vào Settings > Network và chọn Wi-Fi mới của bạn. Cuối cùng, hãy kết nối cả điện thoại với Wi-Fi mới.'),
       ('Ghép nối điều khiển thay thế', 'Hầu hết điều khiển Fire TV mới ghép nối bằng cách giữ nút Home khoảng 10 giây, ở gần Fire TV. Nếu không được, hãy mở Settings > Controllers & Bluetooth Devices > Amazon Fire TV Remotes > Add New Remote. Bạn cũng vào được menu này từ điện thoại bằng Mando TV.'),
-      ('Fire TV tích hợp trong TV', 'Với TV có Fire TV tích hợp, các bước đều giống nhau vì chính TV là Fire TV.'),
+      ('Fire TV tích hợp trong TV', 'Với TV có Fire TV tích hợp, như nhiều model của Insignia và Toshiba, các bước đều giống nhau vì chính TV là Fire TV.'),
       ('Trước khi bắt đầu', 'Hỗ trợ Fire TV là tính năng mới trong Mando TV. Hãy cập nhật ứng dụng trước. Nếu model của bạn không phản hồi như mong đợi, hãy viết cho chúng tôi qua [trang trợ giúp](@soporte) và cho biết model.'),
       ('Miễn phí và Pro', 'Bạn tải và dùng điều khiển miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung.'),
     ],
@@ -913,7 +924,7 @@ GUIAS += [
     ]),
   dict(clave='turn-on', corto='Bật TV không cần điều khiển', fecha='2026-11-23',
     titulo='Bật TV không cần điều khiển (mọi hãng)',
-    desc='Bật TV khi không có điều khiển: nút nguồn nằm ở đâu trên Samsung, LG, TCL, Hisense và Sony. Kèm mẹo HDMI-CEC và điện thoại.',
+    desc='Bật TV khi không có điều khiển: nút nguồn nằm ở đâu trên Samsung, LG, TCL, Hisense, Sony và Vizio. Kèm mẹo HDMI-CEC và điện thoại.',
     h1='Cách bật TV khi không có điều khiển',
     intro='Hầu như TV nào cũng còn một nút nguồn vật lý. Chỉ là nó được giấu khá kỹ. Dưới đây là vị trí nút ở từng hãng, cùng hai cách để lần sau khỏi phải tìm: HDMI-CEC từ máy chơi game hoặc thiết bị phát, và bật TV bằng điện thoại qua Wi-Fi.',
     pasos=[
@@ -924,7 +935,7 @@ GUIAS += [
       'Khi TV đã bật, hãy thiết lập để bạn không còn cần đến nút đó nữa: bật HDMI-CEC và bật nguồn qua mạng, cả hai được giải thích bên dưới.',
     ],
     extra=[
-      ('Vị trí nút nguồn theo từng hãng', 'Samsung: một nút điều khiển hoặc cần điều khiển dưới giữa màn hình, hoặc ở mặt sau gần một góc dưới. LG: một nút cần điều khiển dưới logo LG ở hầu hết các model. TCL và Hisense: thường là một nút nhỏ dưới giữa màn hình hoặc ở mặt sau gần một góc dưới. Sony: ở mặt sau hoặc cạnh bên, phía dưới sát mép. Vị trí thay đổi theo từng model. Nếu không tìm thấy, hãy tra sách hướng dẫn bằng số model ghi trên nhãn ở mặt sau.'),
+      ('Vị trí nút nguồn theo từng hãng', 'Samsung: một nút điều khiển hoặc cần điều khiển dưới giữa màn hình, hoặc ở mặt sau gần một góc dưới. LG: một nút cần điều khiển dưới logo LG ở hầu hết các model. TCL và Hisense: thường là một nút nhỏ dưới giữa màn hình hoặc ở mặt sau gần một góc dưới. Sony: ở mặt sau hoặc cạnh bên, phía dưới sát mép. Vizio: ở mặt sau, phía dưới bên trái hoặc dưới bên phải, hoặc ở cạnh bên. Vị trí thay đổi theo từng model. Nếu không tìm thấy, hãy tra sách hướng dẫn bằng số model ghi trên nhãn ở mặt sau.'),
       ('Bật TV từ máy chơi game hoặc thiết bị phát (HDMI-CEC)', 'Khi HDMI-CEC được bật, việc bật PlayStation, Xbox, Roku Player, Fire TV Stick hoặc Chromecast cũng bật TV và chuyển sang đúng nguồn vào. Mỗi hãng gọi cài đặt này một tên: Anynet+ ở Samsung, SIMPLINK ở LG, BRAVIA Sync ở Sony và CEC ở hầu hết các hãng khác. Xem thêm trong [Bật TV và chuyển sang HDMI của máy chơi game](@console).'),
       ('Bật TV bằng điện thoại', 'Smart TV có thể được đánh thức qua Wi-Fi nếu bạn cho phép một lần, và khi đó Mando TV bật TV từ điện thoại của bạn. Với Samsung, hãy bật "Power On with Mobile" trong Settings > General > Network > Expert Settings. Với LG, hãy bật "Turn on TV with Mobile" ([từng bước](@lg-on)). Với Roku TV, hãy bật "Fast TV start" trong Settings > System > Power. Với Google TV và Android TV, hãy tìm Wake on LAN hoặc "Wake on network" nếu model của bạn có. Bạn chỉ làm một lần, khi TV đang bật.'),
       ('Nếu bạn không tìm thấy nút nào', 'Một số TV đời mới giấu nút duy nhất kỹ đến mức tưởng như không có. Hãy tìm một chỗ lồi nhỏ hoặc vùng cảm biến ánh sáng dưới màn hình: nút thường nằm ngay cạnh đó. Qua Wi-Fi, Mando TV cần TV đã từng bật và đã kết nối. Hồng ngoại là ngoại lệ: trên điện thoại Android có bộ phát hồng ngoại, Mando TV có thể bật một chiếc TV chưa từng được thiết lập, miễn là bạn hướng điện thoại vào TV. Hồng ngoại là tính năng mới và dùng được với các hãng có trong danh sách mã của ứng dụng.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Bật TV TCL từ điện thoại', 'Với TCL Roku TV, hãy bật "Fast TV start" trong Settings > System > Power. Với TCL Google TV, hãy tìm tùy chọn Wake on LAN, "Wake on network" hoặc khởi động từ xa trong cài đặt mạng hoặc nguồn điện. Một số model không có tùy chọn này. Khi đó, hãy bật TV bằng nút nguồn vật lý, thường ở dưới giữa hoặc ở mặt sau.'),
       ('Nếu TV TCL của bạn không hiện', 'Kiểm tra điện thoại và TV có cùng Wi-Fi không. Router có mạng 2,4 GHz và 5 GHz tách riêng có thể làm các thiết bị không thấy nhau. Trên iPhone, hãy cho phép "Local Network" cho Mando TV trong Cài đặt. Bạn cũng có thể thêm TV bằng cách nhập địa chỉ IP của nó. Hãy đọc [Điện thoại không tìm thấy TV](@not-found).'),
       ('Xem thêm về TCL của bạn', 'Với TCL dùng Roku TV, xem [Ứng dụng điều khiển Roku](@roku), với TCL dùng Google TV hoặc Android TV, xem [Ứng dụng điều khiển Android TV](@android).'),
-      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung.'),
+      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense dùng Fire TV', 'Hỗ trợ Fire TV là tính năng mới trong Mando TV. Hãy cập nhật ứng dụng lên phiên bản mới nhất từ cửa hàng của bạn. Cách ghép nối bằng PIN có trên trang [Ứng dụng điều khiển Fire TV](@firetv). Nếu có gì không hoạt động như mong đợi, hãy viết cho chúng tôi qua trang trợ giúp và cho biết model của bạn.'),
       ('Hisense dùng VIDAA', 'Hầu hết các model VIDAA đều dùng được: phím bấm, âm lượng, bàn phím, ứng dụng và nguồn vào. Một số model VIDAA mới hơn chỉ chấp nhận ứng dụng chính thức của Hisense. Mando TV nhận ra điều này khi kết nối và nói rõ cho bạn, thay vì âm thầm không chạy. Trong trường hợp đó, ứng dụng Hisense dành cho model của bạn, các nút trên TV hoặc điều khiển gốc là cách đúng.'),
       ('Bật Hisense từ điện thoại', 'Với Hisense Roku TV, hãy bật "Fast TV start" trong Settings > System > Power. Với Google TV, hãy tìm tùy chọn Wake on LAN hoặc "Wake on network". Nếu không có, hãy dùng nút nguồn trên TV.'),
-      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Mando TV Pro là gói mua một lần tùy chọn cho các tính năng bổ sung.'),
+      ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật hoặc tắt TV đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký.'),
     ],
     marca=None,
     faq=[

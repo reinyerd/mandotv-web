@@ -27,7 +27,7 @@ MARCAS = [
       'Abre Mando TV: tu TV LG aparece solo en la lista. Tócalo.',
       'En la pantalla del televisor aparece un aviso pidiendo permiso. Acéptalo con el control de siempre (solo la primera vez).',
     ],
-    encender='Activa "Encender TV con móvil" (en algunos modelos se llama "Encendido por Wi-Fi"). Está en Configuración, General o Conexión, Configuración de dispositivos móviles.',
+    encender='Activa "Encender TV con móvil" (en algunos modelos se llama "Encendido por Wi-Fi"). Está en Configuración, General, Dispositivos, Dispositivos externos (en modelos antiguos, Conexión, Administración de conexión móvil).',
     faq=[
       ('¿Necesito el Magic Remote para usar Mando TV?', 'Solo la primera vez, para aceptar el permiso en la pantalla. Después puedes usar solo el celular.'),
       ('¿Mando TV reemplaza a LG ThinQ?', 'Para manejar el televisor, sí: no necesitas cuenta de LG ni registrar el TV. Mando TV se conecta directo por tu WiFi.'),
@@ -60,7 +60,7 @@ MARCAS = [
       ('¿Mando TV reemplaza a SmartThings?', 'Para manejar el televisor, sí, y sin cuenta Samsung. Mando TV se conecta directo por tu WiFi.'),
       ('¿Funciona con televisores Samsung antiguos?', 'Funciona con los Samsung con Tizen, de 2016 en adelante. Los modelos anteriores usan otro sistema que todavía no soportamos.'),
     ],
-    guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
+    guias=[('control-remoto-samsung-sin-control', 'Control remoto Samsung sin el control original'), ('alternativa-a-smartthings', 'Alternativa a SmartThings para televisores Samsung'), ('encender-el-tv-sin-control', 'Cómo encender el TV sin el control remoto'), ('cambiar-entrada-hdmi-sin-control', 'Cambiar la entrada HDMI del TV sin control remoto')]),
   dict(slug='es/control-remoto-roku', nombre='Roku', corto='Roku', color='#a77bff',
     titulo='Control remoto para Roku en tu celular, gratis | Mando TV',
     desc='Tu celular o PC como control remoto de tu Roku TV o reproductor Roku por WiFi. Botones, teclado, canales, entradas y encendido gratis.',
@@ -113,7 +113,7 @@ MARCAS = [
       ('¿En qué se diferencia de la app de Google TV?', 'Mando TV no necesita cuenta de Google, funciona también desde Windows, y maneja además televisores LG, Samsung y Roku desde la misma app.'),
       ('El código no aparece en la pantalla, ¿qué hago?', 'Cierra Mando TV, vuelve a abrirla y toca el televisor otra vez. Revisa que el TV no esté en modo de ahorro de energía profundo.'),
     ],
-    guias=[('android-tv-codigo-de-emparejamiento', 'Android TV pide un código para conectar el celular'), ('android-tv-sin-control-remoto', 'Android TV sin control remoto: cómo usarlo desde el celular')]),
+    guias=[('android-tv-codigo-de-emparejamiento', 'Android TV pide un código para conectar el celular'), ('android-tv-sin-control-remoto', 'Android TV sin control remoto: cómo usarlo desde el celular'), ('alternativa-a-la-app-google-tv', 'Alternativa al control de Google TV en el celular')]),
 ]
 
 # 2026-11-21: marcas de Latinoamérica con Google TV / Android TV o Roku TV (fuentes en marcas_latam.py).

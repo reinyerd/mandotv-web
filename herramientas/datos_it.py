@@ -4,13 +4,14 @@
 # el nombre en inglés que muestran las TV.
 
 # Opciones de las TV que se repiten en varios textos.
-LG_OPC = "l'opzione per accendere la TV con il cellulare (in inglese \"TV On With Mobile\"), che si trova in Generali > Dispositivi > Dispositivi esterni (sui modelli più vecchi, in Connessione)"
+LG_OPC = "l'opzione per accendere la TV con il cellulare (in inglese \"TV On With Mobile\"), che si trova in Generali > Dispositivi > Dispositivi esterni (sui modelli più vecchi, in Connessione > Gestione della connessione mobile)"
 LG_WIFI = "l'accensione via Wi-Fi (\"Turn on via Wi-Fi\")"
 SAM_RUTA = "Impostazioni > Generali > Rete > Impostazioni expert (Expert Settings) e attiva l'opzione per accendere con un dispositivo mobile (\"Power On with Mobile\")"
 SAM_PERM = "Impostazioni > Generali > Gestione dispositivi esterni > Gestione connessione dispositivi (\"Device Connection Manager\") e imposta Mando TV come consentito"
 ROKU_APPS = "Impostazioni > Sistema > Impostazioni di sistema avanzate > Controllo tramite app mobili (\"Control by mobile apps\")"
 ROKU_RAPIDO = "l'avvio rapido della TV (\"Fast TV start\") in Impostazioni > Sistema > Alimentazione"
 AND_WOL = "\"Wake on LAN\" o un'opzione per accendere tramite rete"
+AND_WOL_RS = "\"Wake on LAN\", \"Accendi tramite rete\" o \"Remote start\""
 
 UI = dict(
   locale='it_IT',
@@ -79,6 +80,7 @@ INDICE = dict(
   h1='Guide: usa lo smartphone come telecomando della TV',
   intro='Passaggi semplici per collegare, accendere e risolvere i problemi del telecomando della tua TV Samsung, LG, Roku o Android TV con Mando TV.',
   h2_guias='Tutte le guide', h2_marcas='App telecomando per marca',
+  marcas_extra=[('sony', 'App telecomando Sony'), ('philips', 'Telecomando Philips')],
 )
 
 MARCAS = [
@@ -142,6 +144,8 @@ MARCAS = [
       ('Funziona con le TV Samsung più vecchie?', "Funziona con le TV Samsung con Tizen, modelli dal 2016 in poi. I modelli precedenti usano un altro sistema che non supportiamo ancora."),
     ],
     guias=[('samsung-lost', 'TV Samsung senza il telecomando originale: usa lo smartphone'),
+           ('smartthings', 'Alternativa a SmartThings per TV'),
+           ('turn-on', 'Accendere la TV senza telecomando'),
            ('hdmi', 'Come cambiare ingresso HDMI su una TV senza telecomando'),
            ('guias', 'Tutte le guide per controllare la TV con lo smartphone')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -174,6 +178,9 @@ MARCAS = [
     ],
     guias=[('roku-403', "L'app Roku non funziona (errore 403)"),
            ('roku-lost', 'Telecomando Roku perso: usa lo smartphone'),
+           ('tcl', 'App telecomando TCL'),
+           ('hisense', 'App telecomando Hisense'),
+           ('philips', 'Telecomando Philips'),
            ('guias', 'Tutte le guide per controllare la TV con lo smartphone')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV e Google TV',
     titulo='Telecomando Android TV sullo smartphone | Mando TV',
@@ -196,7 +203,7 @@ MARCAS = [
       "Apri Mando TV: la tua Android TV compare da sola nell'elenco. Toccala.",
       'La TV mostra un codice di 6 caratteri. Inseriscilo in Mando TV (solo la prima volta).',
     ],
-    encender="Dipende dal produttore. Cerca nelle impostazioni di rete o di alimentazione l'opzione " + AND_WOL + ". Alcuni modelli non ce l'hanno. Poi, quando tocchi la TV spenta in Mando TV, l'app ti chiede se vuoi accenderla e si collega da sola.",
+    encender="Dipende dal produttore. Cerca nelle impostazioni di rete o di alimentazione le opzioni " + AND_WOL_RS + ". Alcuni modelli non ce l'hanno. Poi, quando tocchi la TV spenta in Mando TV, l'app ti chiede se vuoi accenderla e si collega da sola.",
     faq=[
       ('Funziona con il Chromecast con Google TV?', "Sì, l'associazione si fa con il codice di 6 caratteri che compare sullo schermo."),
       ("Che differenza c'è con l'app Google TV?", "Mando TV non richiede un account Google, funziona anche da Windows e controlla TV LG, Samsung e Roku con la stessa app."),
@@ -204,6 +211,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV chiede un codice di associazione: cosa fare'),
            ('androidtv', 'Android TV senza telecomando: usa lo smartphone'),
+           ('googletv-alt', 'Alternativa al telecomando Google TV'),
+           ('sony', 'App telecomando Sony'),
+           ('tcl', 'App telecomando TCL'),
+           ('hisense', 'App telecomando Hisense'),
+           ('philips', 'Telecomando Philips'),
            ('guias', 'Tutte le guide per controllare la TV con lo smartphone')]),
 ]
 
@@ -232,7 +244,7 @@ GUIAS = [
     faq=[
       ("Posso accendere la TV con lo smartphone se non l'ho mai collegata?", "Questa prima volta accendila con il tasto della TV. Dopo aver collegato lo smartphone e attivato l'accensione tramite rete nelle impostazioni della TV, potrai accenderla dall'app."),
       ('Devo comprare un telecomando nuovo?', "Non necessariamente. Con Mando TV hai gratis i tasti, il volume, la tastiera e l'accensione. Se preferisci comunque un telecomando fisico, cerca il modello esatto della tua TV."),
-      ("Funziona se la TV non ha il Wi-Fi?", "No. Smartphone e TV devono essere sulla stessa rete Wi-Fi. Una TV che non è una Smart TV non si può controllare con Mando TV."),
+      ("Funziona se la TV non ha il Wi-Fi?", "Di solito no. Smartphone e TV di norma devono essere sulla stessa rete Wi-Fi. Le eccezioni sono l'infrarosso sugli smartphone Android con trasmettitore a infrarossi, che controlla anche le TV che non sono Smart TV, e il Bluetooth in beta su Android 9 o versioni successive, che funziona senza Wi-Fi con Google TV, Android TV e Fire TV."),
     ]),
   dict(clave='lost-lg', corto='Telecomando LG perso',
     titulo='Telecomando LG perso? Usa lo smartphone | Mando TV',
@@ -295,7 +307,7 @@ GUIAS = [
       "Scarica Mando TV, che è gratis e non chiede un account Google, e aprila. Tocca la tua TV nell'elenco.",
       "La TV mostra un codice di 6 lettere e numeri. Inseriscilo nello smartphone e tocca Associa. Per questo non ti serve il telecomando.",
       "Ora puoi usare frecce, OK, Indietro, Home, volume, muto e tastiera. Sono gratis, come l'elenco delle app. Il touchpad è Pro.",
-      "Per accenderla dallo smartphone la prossima volta, cerca nelle impostazioni di rete o di alimentazione della TV l'opzione " + AND_WOL + ".",
+      "Per accenderla dallo smartphone la prossima volta, cerca nelle impostazioni di rete o di alimentazione della TV le opzioni " + AND_WOL_RS + ".",
     ],
     extra=[
       ("Se la TV non si accende dallo smartphone", "Non tutte le Android TV si possono accendere tramite la rete; dipende dal produttore e dal modello. Se la tua non ha questa opzione, accendila con il tasto della TV e continua dallo smartphone. Puoi spegnerla dall'app."),
@@ -575,7 +587,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Trovare la TV</h2>
           <p>Sulle Roku TV attiva ''' + ROKU_RAPIDO + '''. I dispositivi Roku collegati a una TV non si possono accendere così.</p>
         </details>
         <details><summary>Android TV e Google TV</summary>
-          <p>Dipende dal produttore. Cerca nelle impostazioni di rete o di alimentazione l'opzione ''' + AND_WOL + '''. Alcuni modelli non ce l'hanno.</p>
+          <p>Dipende dal produttore. Cerca nelle impostazioni di rete o di alimentazione le opzioni ''' + AND_WOL_RS + '''. Alcuni modelli non ce l'hanno.</p>
         </details>
       </div>
 
@@ -644,6 +656,10 @@ PRIVACIDAD_HTML = '''      <p class="fecha">In vigore dal 14 novembre 2026. Ulti
       <h2>Microfono e voce</h2>
       <p>La ricerca vocale usa il microfono solo mentre tocchi il pulsante per parlare. Ciò che dici viene convertito in testo dal riconoscimento vocale del tuo sistema: Apple su iPhone e Mac e Google su Android, secondo le rispettive informative sulla privacy. Su Windows la voce viene riconosciuta sul tuo PC e non esce dal computer; solo sui processori molto vecchi l'app usa la dettatura vocale di Windows, di Microsoft, secondo la sua informativa sulla privacy. Mando TV non registra né conserva l'audio, e il testo ottenuto va direttamente alla tua TV, come ciò che scrivi con la tastiera.</p>
 
+      <h2>Casa: dispositivi di Apple Casa e Google Home</h2>
+      <p>Se apri la sezione Casa (in prova), l'app chiede il permesso di vedere i dispositivi che hai già nell'app Casa di Apple (HomeKit) o in Google Home. Con questo permesso legge il loro nome, la stanza e lo stato (acceso o spento, luminosità, temperatura o a che punto del programma si trova un elettrodomestico) per mostrarli e inviare loro ciò che tocchi. Tutto avviene tra il tuo smartphone e il sistema di Apple o di Google: Mando TV non memorizza questo elenco, non lo invia a noi né a terze parti e non lo usa per pubblicità o analisi. Su Android, Google Home funziona con il tuo account Google, secondo l'informativa sulla privacy di Google. Puoi revocare il permesso in qualsiasi momento: su iPhone, in Impostazioni &gt; Privacy e sicurezza &gt; HomeKit; su Android, nelle impostazioni del tuo account Google.</p>
+      <p>Se tocchi "Come ha funzionato Casa per te?", si apre la tua app di posta con un messaggio a hola@mandotv.app che contiene un riepilogo tecnico: la versione dell'app, il sistema e quanti dispositivi di ogni tipo sono apparsi e se rispondono. Non include nomi di dispositivi, stanze o della tua casa, e il messaggio viene inviato solo se lo invii tu.</p>
+
       <h2>Rapporto di prova</h2>
       <p>L'app ha un pulsante "Copia rapporto di prova" per aiutarci a correggere gli errori. Il rapporto resta solo nella memoria dell'app finché è aperta e non viene mai inviato da solo: sei tu a decidere se copiarlo e condividerlo. Non include chiavi di connessione, codici di associazione né nulla di ciò che scrivi; solo i passaggi seguiti dall'app, come la ricerca, la connessione e gli errori.</p>
 
@@ -696,14 +712,14 @@ GUIAS += [
         ['Infrarossi per TV più vecchie', 'Gratis su smartphone Android con trasmettitore a infrarossi (nuovo)', 'Alcune app, solo su smartphone con trasmettitore a infrarossi'],
         ['Bluetooth', 'Beta su Android 9 e versioni successive, gratis', 'Varia per app'],
         ['Foto e video sulla TV', 'Pro, via Wi-Fi (non è il mirroring)', 'Varia per app'],
-        ['Smartphone e computer', 'iPhone, iPad e Windows, e Android in accesso anticipato', 'Varia'],
-        ['Mirroring dello schermo', 'Gratis su iPhone e iPad, con Duplica schermo nel Centro di Controllo (TV con AirPlay)', 'Alcune app la offrono'],
+        ['Smartphone e computer', 'iPhone, iPad, Mac e Windows, e Android in accesso anticipato', 'Varia'],
+        ['Mirroring dello schermo', 'Gratis su iPhone, iPad e Windows con la funzione integrata di ciascuno. Su Windows, Pro può anche duplicare lo schermo del PC sulle TV LG, Samsung, Hisense e Android TV (beta)', 'Alcune app la offrono'],
       ],
       nota='Il confronto non riguarda nessuna app in particolare. Controlla la scheda di ogni app nello store per i prezzi attuali.'),
     extra=[
-      ('Cosa Mando TV non fa', "Non ha un mirroring dello schermo suo: su iPhone e iPad ti porta a Duplica schermo nel Centro di Controllo, la funzione dell'iPhone stesso, che funziona con le TV compatibili con AirPlay. Con Mando TV Pro può anche inviare foto e video alla TV tramite il Wi-Fi di casa. Controlla le Smart TV tramite il Wi-Fi di casa. Una TV che non è una Smart TV si può controllare a infrarossi da uno smartphone Android con un trasmettitore a infrarossi. Su Android 9 o versioni successive, lo smartphone può anche collegarsi a Google TV, Android TV e Fire TV tramite Bluetooth come tastiera e telecomando, senza Wi-Fi. Questa opzione è in beta ed è gratuita."),
+      ('Cosa Mando TV non fa', "Su iPhone e iPad ti porta a Duplica schermo nel Centro di Controllo, la funzione dell'iPhone stesso, che funziona con le TV compatibili con AirPlay. Su Windows apre Trasmetti (Windows + K) e Mando TV Pro può inviare lo schermo del PC tramite il Wi-Fi di casa alle TV LG, Samsung, Hisense e Android TV (beta, con qualche secondo di ritardo e senza audio). Con Mando TV Pro può anche inviare foto e video alla TV tramite il Wi-Fi di casa. Controlla le Smart TV tramite il Wi-Fi di casa. Una TV che non è una Smart TV si può controllare a infrarossi da uno smartphone Android con un trasmettitore a infrarossi. Su Android 9 o versioni successive, lo smartphone può anche collegarsi a Google TV, Android TV e Fire TV tramite Bluetooth come tastiera e telecomando, senza Wi-Fi. Questa opzione è in beta ed è gratuita."),
       ('Come Mando TV guadagna', "Non con la pubblicità e non con i tuoi dati: l'app non ne raccoglie alcuno. Mando TV è finanziata da Pro, un acquisto unico facoltativo per funzionalità extra. Il telecomando base è gratuito."),
-      ('Sui dispositivi che hai già', "iPhone e iPad dall'App Store, PC Windows dal Microsoft Store, e Android tramite accesso anticipato gratuito su Google Play. Vedi [App telecomando TV per iPhone](@iphone) e [App telecomando TV per Windows](@windows)."),
+      ('Sui dispositivi che hai già', "iPhone, iPad e Mac dall'App Store, PC Windows dal Microsoft Store, e Android tramite accesso anticipato gratuito su Google Play. Vedi [App telecomando TV per iPhone](@iphone) e [App telecomando TV per Windows](@windows)."),
       ('Privacy', "Nessun account e nessun tracciamento nell'app. Comunica con la TV solo dentro la rete di casa e le chiavi di connessione alla TV rimangono crittografate sul tuo dispositivo. Dettagli nella [informativa sulla privacy](@privacidad)."),
     ],
     marca=None,
@@ -729,7 +745,7 @@ GUIAS += [
       ("Dove l'app ufficiale Roku è migliore", "Tieni l'app Roku per ciò che offre oltre al telecomando, come sfogliare e aggiungere canali dallo store Roku e le sue funzioni di casting e ascolto privato. Se vuoi, usale tutte e due: possono stare sullo stesso smartphone."),
       ('Roku TV e player Roku', 'Funzionano entrambi: i modelli Roku TV di TCL, Hisense, Philips e altre marche, e i player Roku Express, Streaming Stick e Ultra. I dettagli sono nella pagina [app telecomando per Roku](@roku).'),
       ("Se l'app Roku ha smesso di funzionare", "Se i tasti non rispondono più, la Roku sta probabilmente bloccando il controllo da parte delle app. La guida [L'app Roku non funziona](@roku-403) spiega come risolvere."),
-      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Mando TV Pro è un acquisto unico facoltativo per le funzioni extra.'),
+      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento.'),
     ],
     marca='roku',
     faq=[
@@ -754,7 +770,7 @@ GUIAS += [
       ('Cosa fa Mando TV su una TV LG', "Funziona con le Smart TV LG con webOS, cioè la maggior parte dei modelli dal 2014 in poi, inclusi LED, NanoCell, QNED e OLED. Ti dà le frecce, OK, Indietro, Home, volume, canali, muto, controlli di riproduzione e una tastiera per scrivere su YouTube, Netflix o nel browser. L'elenco delle app e quello degli ingressi sono gratis. Con Pro hai anche un puntatore come la Magic Remote."),
       ('Cosa non fa Mando TV', "Non controlla gli elettrodomestici LG, non usa il tuo account LG e non sostituisce i servizi dell'account LG sulla TV. È un telecomando, non un hub per la casa intelligente."),
       ('Privacy e pubblicità', 'Mando TV non ha pubblicità né account. Comunica con la TV solo dentro la rete di casa e tiene la chiave di connessione crittografata sul tuo dispositivo. Tutte le funzioni sono nella pagina [app telecomando per LG](@lg).'),
-      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Mando TV Pro è un acquisto unico facoltativo per le funzioni extra.'),
+      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento.'),
     ],
     marca='lg',
     faq=[
@@ -829,7 +845,7 @@ GUIAS += [
       ('Mini telecomando (Pro)', 'Una piccola finestra del telecomando che resta in primo piano rispetto alle altre finestre, così puoi cambiare il volume o mettere in pausa senza lasciare ciò che stai facendo.'),
       ('Digitare sulla TV dal PC', 'La tastiera a schermo di una TV è lenta. In Mando TV digiti con la tua tastiera reale e il testo va alla casella di ricerca della TV. Questa parte è gratis.'),
       ('Altri dettagli', 'Per la versione passo dopo passo vedi [come controllare la TV dal PC con Windows](@pc). Per lo smartphone leggi [smartphone come telecomando via Wi-Fi](@wifi).'),
-      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità e senza abbonamento. Mando TV Pro è un acquisto unico facoltativo per le funzioni extra. Su Windows, Pro si acquista tramite Microsoft Store.'),
+      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità e senza abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento. Su Windows, Pro si acquista tramite Microsoft Store.'),
       ('Comandi vocali dal PC (Pro)', 'Con Pro puoi parlare alla TV attraverso il microfono del PC. La voce viene riconosciuta direttamente sul PC: non serve internet e non devi cambiare le impostazioni di Windows. Quello che dici non lascia mai il PC e non viene memorizzato. Solo su processori molto vecchi l\'app passa alla digitazione vocale di Windows, che richiede "Riconoscimento vocale online" attivo in Impostazioni > Privacy e sicurezza > Voce e la tua lingua aggiunta in Windows.'),
     ],
     marca=None,
@@ -855,11 +871,11 @@ GUIAS += [
       ('Le TV compatibili', 'LG con webOS, Samsung con Tizen (dal 2016 in poi), Roku TV e dispositivi Roku, Google TV e Android TV, e Fire TV. Le pagine per marca sono [Samsung](@samsung), [LG](@lg), [Roku](@roku) e [Android TV](@android).'),
       ("Perché chiede l'accesso alla rete locale", "L'iPhone non lascia che le app vedano i dispositivi della rete di casa senza il tuo permesso. Se la TV non compare nell'elenco, apri Impostazioni > Mando TV e attiva Rete locale. L'app comunica con la TV solo dentro la rete di casa."),
       ("Perché Mando TV e non l'app del produttore", "Ogni marca di TV ha la propria app e vuole la sua configurazione o il suo account. Mando TV è un'unica app per tutte, senza bisogno di account."),
-      ('Gratis e Pro su iPhone', "Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Mando TV Pro è un acquisto unico facoltativo per le funzioni extra, direttamente nell'app."),
+      ('Gratis e Pro su iPhone', "Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento. Acquisti Pro una sola volta, direttamente nell'app."),
     ],
     marca=None,
     faq=[
-      ('Mando TV è gratis su iPhone?', "Il download è gratis, senza pubblicità. Il telecomando base è gratuito, così come l'apertura delle app e il cambio degli ingressi. Le funzioni extra fanno parte di Mando TV Pro, un acquisto unico facoltativo."),
+      ('Mando TV è gratis su iPhone?', "Il download è gratis, senza pubblicità. Il telecomando base è gratuito, così come l'apertura delle app e il cambio degli ingressi. Le funzioni extra come il touchpad, i comandi vocali e le routine fanno parte di Mando TV Pro, un acquisto unico."),
       ('Funziona su iPad?', 'Sì. La stessa app gira su iPhone e iPad.'),
       ("Un'app telecomando per iPhone ha bisogno di Bluetooth o di un trasmettitore a infrarossi?", "Su iPhone no. Gli iPhone non hanno un trasmettitore a infrarossi, quindi il controllo tramite infrarossi non è disponibile e l'opzione Bluetooth serve solo per Android 9 o versioni successive, non per iPhone. Su iPhone, Mando TV controlla le Smart TV e l'Apple TV (in beta) tramite il Wi-Fi di casa."),
     ]),
@@ -876,11 +892,11 @@ GUIAS += [
       'Usa le frecce, OK, Indietro, Home, i tasti di riproduzione e la tastiera per digitare le ricerche.',
     ],
     extra=[
-      ('Dispositivi Fire TV supportati', "Fire TV Stick, Fire TV Stick 4K, Fire TV Cube e TV con Fire TV integrato. Il supporto è nuovo e finora l'abbiamo provato su pochi dispositivi reali. Se qualcosa non funziona come previsto, indicaci il tuo modello dalla pagina di assistenza."),
+      ('Dispositivi Fire TV supportati', "Fire TV Stick, Fire TV Stick 4K, Fire TV Cube e TV con Fire TV integrato, come le TV Amazon Fire TV Edition e alcuni modelli Hisense. Il supporto è nuovo e finora l'abbiamo provato su pochi dispositivi reali. Se qualcosa non funziona come previsto, indicaci il tuo modello dalla pagina di assistenza."),
       ('Accendere una Fire TV', "Mando TV non accende una Fire TV tramite la rete. Accendi la TV con il suo tasto di alimentazione: una Fire TV Stick o un Cube collegato di solito si avvia insieme alla TV grazie all'HDMI-CEC, e su una TV con Fire TV integrato la TV è la Fire TV stessa. Poi controlla tutto dallo smartphone."),
       ('Se la tua Fire TV non appare', 'Assicurati che entrambi i dispositivi siano sulla stessa rete Wi-Fi e che la Fire TV sia attiva. Su iPhone, consenti "Rete locale" per Mando TV in Impostazioni. Vedi [lo smartphone non trova la TV](@not-found).'),
       ('Nessun telecomando?', "La Fire TV deve mostrare il PIN sullo schermo, quindi la TV e la Fire TV devono essere accese e mostrare l'immagine. Se la TV è su un ingresso sbagliato, cambialo con i tasti fisici della TV. Vedi [cambiare l'ingresso HDMI senza telecomando](@hdmi)."),
-      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione e spegnimento sono gratis, senza pubblicità e senza abbonamento. Mando TV Pro è un acquisto unico facoltativo per funzionalità extra.'),
+      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione e spegnimento sono gratis, senza pubblicità e senza abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento.'),
     ],
     marca=None,
     faq=[
@@ -905,7 +921,7 @@ GUIAS += [
       ('Prova prima il telecomando della TV (HDMI-CEC)', 'Molti telecomandi delle TV possono controllare una Fire TV Stick tramite HDMI-CEC. Con la Fire TV sullo schermo, premi le frecce e OK sul telecomando della TV. Se non succede nulla, attiva l\'HDMI-CEC nelle impostazioni della TV (Anynet+ su Samsung, SIMPLINK su LG, BRAVIA Sync su Sony) e sulla Fire TV, nelle impostazioni di schermo e audio ("Display & Sounds"), attiva il controllo dei dispositivi HDMI CEC.'),
       ('Se hai traslocato o cambiato Wi-Fi', "Senza telecomando non puoi digitare la nuova password del Wi-Fi sulla Fire TV, ma c'è una soluzione: su un secondo smartphone, crea un hotspot con esattamente lo stesso nome e la stessa password della tua vecchia rete Wi-Fi. La Fire TV si connetterà da sola. Collega lo smartphone con Mando TV a quell'hotspot, associalo con il PIN, poi vai su Impostazioni > Rete sulla Fire TV e scegli il tuo nuovo Wi-Fi. Infine, collega anche il tuo smartphone al nuovo Wi-Fi."),
       ('Abbinare un telecomando di ricambio', 'La maggior parte dei nuovi telecomandi Fire TV si associano tenendo premuto il tasto Home per circa 10 secondi vicino alla Fire TV. Se non si associa, vai su Impostazioni > Controller e dispositivi Bluetooth > Telecomandi Amazon Fire TV > Aggiungi nuovo telecomando. Puoi raggiungere quel menu dal tuo smartphone con Mando TV.'),
-      ('Fire TV integrato nella TV', 'Sulle TV con Fire TV integrato, gli stessi passaggi funzionano perché la TV è essa stessa una Fire TV.'),
+      ('Fire TV integrato nella TV', 'Sulle TV con Fire TV integrato, come molti modelli Insignia e Toshiba, gli stessi passaggi funzionano perché la TV è essa stessa una Fire TV.'),
       ('Prima di iniziare', "Il supporto per Fire TV è arrivato recentemente in Mando TV, quindi aggiorna prima l'app. Se il tuo modello non si comporta come previsto, scrivici dalla [pagina di assistenza](@soporte) includendo il nome del modello."),
       ('Gratis e Pro', 'Il telecomando è gratuito da scaricare e usare, senza pubblicità né abbonamenti. Mando TV Pro è un acquisto unico facoltativo per funzionalità extra.'),
     ],
@@ -928,7 +944,7 @@ GUIAS += [
       "Una volta accesa, configurala per non dover più usare quel tasto: attiva HDMI-CEC e l'accensione tramite rete, come spiegato sotto.",
     ],
     extra=[
-      ('Dove si trova il tasto di accensione, per marca', "Samsung: un tasto di controllo o joystick sotto il centro dello schermo, o sul retro in un angolo inferiore. LG: un joystick sotto il logo LG sulla maggior parte dei modelli. TCL e Hisense: di solito un piccolo tasto sotto il centro dello schermo o sul retro vicino a un angolo inferiore. Sony: sul retro o su un bordo laterale, vicino al fondo. Le posizioni cambiano per modello; se non lo trovi, cerca il manuale con il numero di modello sull'etichetta sul retro."),
+      ('Dove si trova il tasto di accensione, per marca', "Samsung: un tasto di controllo o joystick sotto il centro dello schermo, o sul retro in un angolo inferiore. LG: un joystick sotto il logo LG sulla maggior parte dei modelli. TCL e Hisense: di solito un piccolo tasto sotto il centro dello schermo o sul retro vicino a un angolo inferiore. Sony: sul retro o su un bordo laterale, vicino al fondo. Vizio: sul retro, in basso a sinistra o in basso a destra, oppure di lato. Le posizioni cambiano per modello; se non lo trovi, cerca il manuale con il numero di modello sull'etichetta sul retro."),
       ('Accendere la TV da una console o lettore streaming (HDMI-CEC)', "Con HDMI-CEC attivo, accendendo PlayStation, Xbox, Roku, Fire TV Stick o Chromecast si accende anche la TV e passa all'ingresso giusto. Ogni marchio chiama questa impostazione in modo diverso: Anynet+ su Samsung, SIMPLINK su LG, BRAVIA Sync su Sony, e CEC sulle altre. Di più in [accendere la TV e passare all'HDMI della console](@console)."),
       ('Accendere la TV dallo smartphone', 'Le Smart TV possono accendersi via Wi-Fi se lo consenti una volta, dopodiché Mando TV le accende dallo smartphone. Su Samsung, in Impostazioni > Generali > Rete > Impostazioni expert (Expert Settings) attiva l\'opzione per accendere con un dispositivo mobile ("Power On with Mobile"). Su LG, attiva l\'opzione per accendere la TV con il cellulare ([passo dopo passo](@lg-on)). Su una Roku TV, attiva l\'avvio rapido della TV ("Fast TV start") in Impostazioni > Sistema > Alimentazione. Su Google TV e Android TV, cerca "Wake on LAN" o un\'opzione per accendere tramite rete, se il tuo modello ce l\'ha. Lo fai una volta sola, con la TV accesa.'),
       ('Se non trovi nessun tasto', "Alcune TV recenti nascondono così bene l'unico tasto che sembra non esista. Cerca un piccolo rilievo o un sensore di luce sotto lo schermo: il tasto è spesso proprio accanto. Via Wi-Fi, Mando TV ha bisogno che la TV sia stata accesa e connessa almeno una volta. L'infrarosso è l'eccezione: su uno smartphone Android con trasmettitore a infrarossi, Mando TV può accendere una TV mai configurata, basta puntare lo smartphone verso la TV. L'infrarosso è una funzione nuova e funziona con i marchi nell'elenco dei codici dell'app."),
@@ -982,7 +998,7 @@ GUIAS += [
       ('Accendere una TCL dallo smartphone', 'Su TCL con Roku TV, attiva l\'avvio rapido della TV ("Fast TV start") in Impostazioni > Sistema > Alimentazione. Su TCL con Google TV, cerca "Wake on LAN" o un\'opzione per accendere tramite rete nelle impostazioni di rete o alimentazione. Alcuni modelli non la offrono. In tal caso accendi la TV con il tasto fisico, di solito in basso al centro o sul retro.'),
       ('Se la tua TCL non compare', 'Controlla che smartphone e TV siano sulla stessa rete Wi-Fi. I router con reti separate a 2,4 GHz e 5 GHz possono nascondere i dispositivi l\'uno all\'altro. Su iPhone, consenti "Rete locale" per Mando TV in Impostazioni. Puoi anche aggiungere la TV digitando il suo indirizzo IP. Leggi [Lo smartphone non trova la TV](@not-found).'),
       ('Altri dettagli per la tua TCL', 'Per una TCL con Roku TV vedi [app telecomando per Roku](@roku). Per una TCL con Google TV o Android TV vedi [app telecomando per Android TV](@android).'),
-      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità e senza abbonamento. Mando TV Pro è un acquisto unico facoltativo per le funzioni extra.'),
+      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità e senza abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento.'),
     ],
     marca=None,
     faq=[
@@ -1007,7 +1023,7 @@ GUIAS += [
       ('Hisense con Fire TV', "Il supporto Fire TV è nuovo in Mando TV. Aggiorna l'app all'ultima versione dal tuo store e leggi [app telecomando Fire TV](@firetv) per capire come funziona l'associazione con il PIN. Se qualcosa non si comporta come previsto, scrivici dalla pagina di assistenza indicando il tuo modello."),
       ('Hisense con VIDAA', "La maggior parte dei modelli VIDAA funziona: pulsanti, volume, tastiera, app e ingressi. Alcuni modelli VIDAA recenti accettano solo l'app ufficiale di Hisense. Mando TV lo rileva al momento della connessione e te lo dice chiaramente, invece di fallire in silenzio. In quel caso, usa l'app Hisense per il tuo modello, i pulsanti sulla TV o il telecomando originale."),
       ('Accendere una Hisense dallo smartphone', 'Sulla Hisense con Roku TV, attiva l\'avvio rapido della TV ("Fast TV start") in Impostazioni > Sistema > Alimentazione. Su Google TV, cerca "Wake on LAN" o un\'opzione per accendere tramite rete. Se non esiste, usa il tasto di accensione sulla TV.'),
-      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione e spegnimento sono gratis, senza pubblicità né abbonamento. Mando TV Pro è un acquisto unico facoltativo per le funzioni extra.'),
+      ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione e spegnimento sono gratis, senza pubblicità né abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento.'),
     ],
     marca=None,
     faq=[

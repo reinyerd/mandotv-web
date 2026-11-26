@@ -4,13 +4,14 @@
 # el nombre en inglés que muestran las TV.
 
 # Opciones de las TV que se repiten en varios textos.
-LG_OPC = 'a opção de ligar a TV com o celular (em inglês, "TV On With Mobile"), que fica em Geral > Dispositivos > Dispositivos externos (nos modelos mais antigos, em Conexão)'
+LG_OPC = 'a opção de ligar a TV com o celular (em inglês, "TV On With Mobile"), que fica em Geral > Dispositivos > Dispositivos externos (nos modelos mais antigos, em Conexão > Gerenciamento de conexão móvel)'
 LG_WIFI = 'a ativação via Wi-Fi ("Turn on via Wi-Fi")'
 SAM_RUTA = 'Configurações > Geral > Rede > Configurações de especialista (Expert Settings) e ative a opção de ligar com um dispositivo móvel ("Power On with Mobile")'
 SAM_PERM = 'Configurações > Geral > Gerenciador de dispositivos externos > Gerenciador de conexão de dispositivos ("Device Connection Manager") e deixe o Mando TV como permitido'
 ROKU_APPS = 'Configurações > Sistema > Configurações avançadas do sistema > Controle por aplicativos móveis ("Control by mobile apps")'
 ROKU_RAPIDO = 'a opção de início rápido da TV ("Fast TV start") em Configurações > Sistema > Energia'
 AND_WOL = '"Wake on LAN" ou uma opção de ligar pela rede'
+AND_WOL_RS = '"Wake on LAN", "Ligar pela rede" ou "Remote start"'
 
 UI = dict(
   locale='pt_BR',
@@ -79,6 +80,7 @@ INDICE = dict(
   h1='Guias: use o celular como controle remoto da TV',
   intro='Passos simples para conectar, ligar e resolver problemas do controle da sua TV Samsung, LG, Roku ou Android TV com o Mando TV.',
   h2_guias='Todos os guias', h2_marcas='App de controle remoto por marca',
+  marcas_extra=[('sony', 'Controle remoto Sony'), ('philips', 'Controle remoto Philips')],
 )
 
 MARCAS = [
@@ -142,6 +144,8 @@ MARCAS = [
       ('Funciona em TVs Samsung mais antigas?', 'Funciona em TVs Samsung com Tizen, modelos de 2016 em diante. Os modelos anteriores usam outro sistema, que ainda não é compatível.'),
     ],
     guias=[('samsung-lost', 'TV Samsung sem o controle original: use o celular'),
+           ('smartthings', 'Alternativa ao controle do SmartThings'),
+           ('turn-on', 'Ligar a TV sem o controle'),
            ('hdmi', 'Como trocar a entrada HDMI da TV sem controle'),
            ('guias', 'Todos os guias para controlar a TV pelo celular')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -174,6 +178,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'O app da Roku não funciona (erro 403)'),
            ('roku-lost', 'Perdi o controle da Roku: use o celular'),
+           ('tcl', 'Controle remoto TCL'),
+           ('hisense', 'Controle remoto Hisense'),
+           ('philips', 'Controle remoto Philips'),
            ('guias', 'Todos os guias para controlar a TV pelo celular')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV e Google TV',
     titulo='Controle remoto Android TV pelo celular | Mando TV',
@@ -196,7 +203,7 @@ MARCAS = [
       'Abra o Mando TV: a sua Android TV aparece sozinha na lista. Toque nela.',
       'A TV mostra um código de 6 caracteres. Digite no Mando TV (só na primeira vez).',
     ],
-    encender='Depende do fabricante. Procure nas configurações de rede ou de energia a opção ' + AND_WOL + '. Alguns modelos não têm essa opção. Depois, quando você tocar na TV desligada no Mando TV, o app pergunta se você quer ligá-la e conecta sozinho.',
+    encender='Depende do fabricante. Procure nas configurações de rede ou de energia as opções ' + AND_WOL_RS + '. Alguns modelos não têm essa opção. Depois, quando você tocar na TV desligada no Mando TV, o app pergunta se você quer ligá-la e conecta sozinho.',
     faq=[
       ('Funciona com o Chromecast com Google TV?', 'Sim, o pareamento é feito com o código de 6 caracteres que aparece na tela.'),
       ('Qual a diferença para o app Google TV?', 'O Mando TV não precisa de conta Google, funciona também no Windows e controla TVs LG, Samsung e Roku no mesmo app.'),
@@ -204,6 +211,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'A Android TV pede um código de pareamento: o que fazer'),
            ('androidtv', 'Android TV sem controle remoto: use o celular'),
+           ('googletv-alt', 'Alternativa ao controle do Google TV'),
+           ('sony', 'Controle remoto Sony'),
+           ('tcl', 'Controle remoto TCL'),
+           ('hisense', 'Controle remoto Hisense'),
+           ('philips', 'Controle remoto Philips'),
            ('guias', 'Todos os guias para controlar a TV pelo celular')]),
 ]
 
@@ -232,7 +244,7 @@ GUIAS = [
     faq=[
       ('Dá para ligar a TV pelo celular se eu nunca a conectei?', 'Nessa primeira vez, ligue pelo botão da TV. Depois de conectar o celular e ativar a ativação pela rede nas configurações da TV, você poderá ligá-la pelo app.'),
       ('Preciso comprar um controle novo?', 'Não necessariamente. Com o Mando TV você tem de graça as teclas, o volume, o teclado e o ligar. Se mesmo assim preferir um controle físico, procure o modelo exato da sua TV.'),
-      ('Funciona se a TV não tiver Wi-Fi?', 'Não. O celular e a TV precisam estar no mesmo Wi-Fi. Uma TV que não seja Smart TV não pode ser controlada com o Mando TV.'),
+      ('Funciona se a TV não tiver Wi-Fi?', 'Na maioria dos casos, não. O celular e a TV normalmente precisam estar no mesmo Wi-Fi. As exceções são o infravermelho em celulares Android com emissor infravermelho, que também controla TVs que não são smart, e o Bluetooth em beta no Android 9 ou mais recente, que funciona sem Wi-Fi com Google TV, Android TV e Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Perdi o controle da LG',
     titulo='Perdi o controle da LG: use o celular | Mando TV',
@@ -295,7 +307,7 @@ GUIAS = [
       'Baixe o Mando TV, que é grátis e não pede conta Google, e abra o app. Toque na sua TV na lista.',
       'A TV mostra um código de 6 letras e números. Digite no celular e toque em Parear. Você não precisa do controle para isso.',
       'Agora você já pode usar as setas, OK, Voltar, Início, volume, mudo e teclado. São grátis, assim como a lista de aplicativos. O touchpad é Pro.',
-      'Para ligar pelo celular da próxima vez, procure nas configurações de rede ou de energia da TV a opção ' + AND_WOL + '.',
+      'Para ligar pelo celular da próxima vez, procure nas configurações de rede ou de energia da TV as opções ' + AND_WOL_RS + '.',
     ],
     extra=[
       ('Se a TV não liga pelo celular', 'Nem toda Android TV pode ser ligada pela rede; depende do fabricante e do modelo. Se a sua não tem essa opção, ligue pelo botão da TV e siga pelo celular. Você pode desligá-la pelo app.'),
@@ -575,7 +587,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Encontrar a TV</h2>
           <p>Nas Roku TV, ative ''' + ROKU_RAPIDO + '''. Os aparelhos Roku ligados em uma TV não podem ser ligados assim.</p>
         </details>
         <details><summary>Android TV e Google TV</summary>
-          <p>Depende do fabricante. Procure nas configurações de rede ou de energia a opção ''' + AND_WOL + '''. Alguns modelos não têm.</p>
+          <p>Depende do fabricante. Procure nas configurações de rede ou de energia as opções ''' + AND_WOL_RS + '''. Alguns modelos não têm.</p>
         </details>
       </div>
 
@@ -644,6 +656,10 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Em vigor desde 14 de novembro de 202
       <h2>Microfone e voz</h2>
       <p>A busca por voz só usa o microfone enquanto você toca no botão para falar. O que você diz é convertido em texto pelo reconhecimento de voz do seu sistema: Apple no iPhone e no Mac e Google no Android, conforme as políticas de privacidade deles. No Windows, a voz é reconhecida no seu próprio PC e não sai do computador; só em processadores muito antigos o app usa a digitação por voz do Windows, da Microsoft, conforme a política de privacidade dela. O Mando TV não grava nem guarda o áudio, e o texto obtido vai direto para a sua TV, como o que você digita no teclado.</p>
 
+      <h2>Casa: aparelhos do Apple Casa e do Google Home</h2>
+      <p>Se você abrir a seção Casa (em teste), o app pede permissão para ver os aparelhos que você já tem no app Casa da Apple (HomeKit) ou no Google Home. Com essa permissão, ele lê o nome, o cômodo e o estado deles (ligado ou desligado, brilho, temperatura ou em que ponto do programa está um eletrodoméstico) para mostrá-los e enviar o que você tocar. Tudo acontece entre o seu celular e o sistema da Apple ou do Google: o Mando TV não guarda essa lista, não a envia para nós nem para terceiros e não a usa para publicidade nem para análises. No Android, o Google Home funciona com a sua própria conta do Google, conforme a política de privacidade do Google. Você pode retirar a permissão quando quiser: no iPhone, em Ajustes &gt; Privacidade e Segurança &gt; HomeKit; no Android, nas configurações da sua conta do Google.</p>
+      <p>Se você tocar em "Como a Casa funcionou para você?", o seu app de e-mail abre com uma mensagem para hola@mandotv.app contendo um resumo técnico: a versão do app, o sistema e quantos aparelhos de cada tipo apareceram e se eles respondem. Ele não inclui nomes de aparelhos, de cômodos nem da sua casa, e a mensagem só é enviada se você mesmo enviar.</p>
+
       <h2>Relatório de teste</h2>
       <p>O app tem um botão "Copiar relatório de teste" para nos ajudar a corrigir erros. O relatório fica só na memória do app enquanto ele está aberto e nunca é enviado sozinho: é você quem decide copiá-lo e compartilhá-lo. Ele não inclui chaves de conexão, códigos de pareamento nem nada do que você digita; apenas os passos que o app seguiu, como a busca, a conexão e os erros.</p>
 
@@ -696,14 +712,14 @@ GUIAS += [
         ['Infravermelho para TVs mais antigas', 'Grátis em celulares Android com emissor infravermelho (novo)', 'Alguns apps, só em celulares com emissor infravermelho'],
         ['Bluetooth', 'Beta no Android 9 e mais recente, grátis', 'Varia por app'],
         ['Fotos e vídeos para a TV', 'Pro, pelo Wi-Fi (não é espelhamento)', 'Varia por app'],
-        ['Celulares e computadores', 'iPhone, iPad e Windows, e Android em teste antecipado', 'Varia'],
-        ['Espelhamento de tela', 'Grátis no iPhone e no iPad, pelo Espelhar Tela da Central de Controle (TVs com AirPlay)', 'Alguns apps oferecem'],
+        ['Celulares e computadores', 'iPhone, iPad, Mac e Windows, e Android em teste antecipado', 'Varia'],
+        ['Espelhamento de tela', 'Grátis no iPhone, no iPad e no Windows, com o recurso integrado de cada um. No Windows, o Pro também pode espelhar a tela do PC em TVs LG, Samsung, Hisense e Android TV (beta)', 'Alguns apps oferecem'],
       ],
       nota='A comparação não se refere a nenhum app em particular. Confira a página de cada app na loja para ver os preços atuais.'),
     extra=[
-      ('O que o Mando TV não faz', 'Ele não tem espelhamento de tela próprio: no iPhone e no iPad, ele leva você ao Espelhar Tela da Central de Controle, o recurso do próprio iPhone, que funciona com TVs compatíveis com AirPlay. Com o Mando TV Pro, ele também pode enviar fotos e vídeos para a TV pelo Wi-Fi da sua casa. Ele controla Smart TVs pelo Wi-Fi da sua casa. Uma TV que não é smart pode ser controlada por infravermelho de um celular Android com emissor infravermelho. No Android 9 ou mais recente, o celular também pode se conectar ao Google TV, Android TV e Fire TV pelo Bluetooth como teclado e controle, sem Wi-Fi. Essa opção está em beta e é grátis.'),
+      ('O que o Mando TV não faz', 'No iPhone e no iPad, ele leva você ao Espelhar Tela da Central de Controle, o recurso do próprio iPhone, que funciona com TVs compatíveis com AirPlay. No Windows, ele abre o Transmitir (Windows + K), e o Mando TV Pro pode enviar a tela do PC pelo Wi-Fi da sua casa para TVs LG, Samsung, Hisense e Android TV (beta, com alguns segundos de atraso e sem som). Com o Mando TV Pro, ele também pode enviar fotos e vídeos para a TV pelo Wi-Fi da sua casa. Ele controla Smart TVs pelo Wi-Fi da sua casa. Uma TV que não é smart pode ser controlada por infravermelho de um celular Android com emissor infravermelho. No Android 9 ou mais recente, o celular também pode se conectar ao Google TV, Android TV e Fire TV pelo Bluetooth como teclado e controle, sem Wi-Fi. Essa opção está em beta e é grátis.'),
       ('Como o Mando TV ganha dinheiro', 'Não com anúncios nem com seus dados: o app não coleta nenhum. O Mando TV é pago pelo Pro, uma compra única opcional para recursos extras. O controle básico é grátis.'),
-      ('Nos dispositivos que você já tem', 'iPhone e iPad pela App Store, PCs com Windows pela Microsoft Store, e Android por meio do teste antecipado grátis no Google Play. Veja [App de controle remoto para iPhone](@iphone) e [App de controle remoto para Windows](@windows).'),
+      ('Nos dispositivos que você já tem', 'iPhone, iPad e Mac pela App Store, PCs com Windows pela Microsoft Store, e Android por meio do teste antecipado grátis no Google Play. Veja [App de controle remoto para iPhone](@iphone) e [App de controle remoto para Windows](@windows).'),
       ('Privacidade', 'Sem conta e sem rastreamento no app. Ele se comunica com a TV só dentro da rede da sua casa, e as chaves de conexão com a TV ficam criptografadas no seu dispositivo. Detalhes na [política de privacidade](@privacidad).'),
     ],
     marca=None,
@@ -729,7 +745,7 @@ GUIAS += [
       ('Quando o app oficial da Roku é melhor', 'Mantenha o app da Roku para o que ele oferece além do controle remoto, como navegar e adicionar canais na Loja de Canais da Roku, além das funções próprias de transmissão de conteúdo e escuta privada. Use os dois se preferir. Eles podem rodar no mesmo celular.'),
       ('TVs Roku e players Roku', 'Os dois funcionam. Inclui modelos de Roku TV de marcas como TCL, Hisense, Philips e outras, além dos players Roku Express, Streaming Stick e Ultra. Detalhes estão na [página do app de controle remoto para Roku](@roku).'),
       ('Se o app da Roku parou de funcionar', 'Se as teclas pararam de responder, a Roku provavelmente está bloqueando o controle por apps. O guia [Roku não responde ao celular](@roku-403) mostra como resolver.'),
-      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras.'),
+      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura.'),
     ],
     marca='roku',
     faq=[
@@ -754,7 +770,7 @@ GUIAS += [
       ('O que o Mando TV faz na TV LG', 'Funciona com Smart TVs LG com webOS, ou seja, a maioria dos modelos desde 2014, incluindo LED, NanoCell, QNED e OLED. Oferece as setas, OK, Voltar, Início, volume, canais, mudo, controles de reprodução e um teclado para digitar no YouTube, Netflix ou navegador. A lista de apps e a de entradas também são grátis. Com o Pro você ainda tem um ponteiro como o do Magic Remote.'),
       ('O que o Mando TV não faz', 'Não controla eletrodomésticos LG, não usa sua conta LG e não substitui os serviços da conta LG na TV. É só um controle remoto, não um hub de casa inteligente.'),
       ('Privacidade e anúncios', 'O Mando TV não tem anúncios nem pede conta. Ele se comunica com a TV dentro da sua rede doméstica e guarda a chave de conexão criptografada no seu dispositivo. A [página do app de controle remoto para LG](@lg) tem a lista completa de recursos.'),
-      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras.'),
+      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura.'),
     ],
     marca='lg',
     faq=[
@@ -829,7 +845,7 @@ GUIAS += [
       ('Mini controle (Pro)', 'Uma janela de controle pequena que fica sobre as outras janelas, para você mudar o volume ou pausar sem sair do que está fazendo.'),
       ('Digitar na TV pelo PC', 'O teclado na tela da TV é lento. No Mando TV você digita com seu teclado real e o texto vai direto para a busca da TV. Essa parte é grátis.'),
       ('Mais detalhes', 'Para a versão passo a passo, veja [como controlar a TV pelo PC](@pc). Para controle pelo celular, leia [celular como controle remoto pelo Wi-Fi](@wifi).'),
-      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, teclas numéricas, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras. No Windows, o Pro é comprado pela Microsoft Store.'),
+      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, teclas numéricas, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura. No Windows, o Pro é comprado pela Microsoft Store.'),
       ('Comandos de voz pelo PC (Pro)', 'Com o Pro, você fala com a TV pelo microfone do PC. O reconhecimento de voz acontece no próprio PC: não precisa de internet nem de mudar configurações do Windows. O que você diz nunca sai do PC e não é armazenado. Apenas em processadores muito antigos o app usa a digitação por voz do Windows, que exige "Reconhecimento de fala online" ligado em Configurações > Privacidade e segurança > Fala e seu idioma adicionado no Windows.'),
     ],
     marca=None,
@@ -855,11 +871,11 @@ GUIAS += [
       ('Funciona com estas TVs', 'LG com webOS, Samsung com Tizen (2016 em diante), Roku TV e aparelhos Roku, Google TV e Android TV, e Fire TV. As páginas de cada marca são [Samsung](@samsung), [LG](@lg), [Roku](@roku) e [Android TV](@android).'),
       ('Por que o app pede a Rede Local', 'O iPhone não deixa os apps verem os aparelhos da sua rede sem a sua permissão. Se a TV não aparecer na lista, abra Ajustes > Mando TV e ative Rede Local. O app só conversa com sua TV dentro da sua casa.'),
       ('Por que um app para iPhone e não o da marca da TV', 'Cada marca de TV tem seu próprio app, e cada uma quer sua própria configuração ou conta. O Mando TV é um app para todas elas, sem conta.'),
-      ('Grátis e Pro no iPhone', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras, feita dentro do app.'),
+      ('Grátis e Pro no iPhone', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura. Você compra o Pro uma única vez, direto no app.'),
     ],
     marca=None,
     faq=[
-      ('O Mando TV é grátis no iPhone?', 'O download é grátis, sem anúncios. O controle básico é grátis, assim como abrir apps e trocar entradas. Os extras fazem parte do Mando TV Pro, uma compra única opcional.'),
+      ('O Mando TV é grátis no iPhone?', 'O download é grátis, sem anúncios. O controle básico é grátis, assim como abrir apps e trocar entradas. Extras como o touchpad, os comandos de voz e as rotinas fazem parte do Mando TV Pro, uma compra única.'),
       ('Funciona no iPad?', 'Sim. O mesmo app roda no iPhone e no iPad.'),
       ('Um app de controle para iPhone precisa de Bluetooth ou emissor infravermelho?', 'No iPhone, não. O iPhone não tem emissor infravermelho, então o controle por infravermelho não está disponível lá, e a opção Bluetooth é só para Android 9 ou mais novo, não para iPhone. No iPhone, o Mando TV controla Smart TVs e Apple TV (beta) pela sua rede Wi-Fi.'),
     ]),
@@ -876,11 +892,11 @@ GUIAS += [
       'Use as setas, OK, Voltar, Início, botões de reprodução e o teclado para digitar buscas.',
     ],
     extra=[
-      ('Dispositivos Fire TV compatíveis', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube e TVs com Fire TV integrado. O suporte é novo e os testes em dispositivos reais são limitados. Se algo não funcionar como esperado, informe o modelo pela página de Ajuda.'),
+      ('Dispositivos Fire TV compatíveis', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube e TVs com Fire TV integrado, como as TVs Amazon Fire TV Edition e alguns modelos Hisense. O suporte é novo e os testes em dispositivos reais são limitados. Se algo não funcionar como esperado, informe o modelo pela página de Ajuda.'),
       ('Como ligar o Fire TV', 'O Mando TV não liga o Fire TV pela rede. Ligue a TV pelo botão de energia: um Fire TV Stick ou Cube conectado a ela geralmente acorda junto por HDMI-CEC; em uma TV com Fire TV integrado, a própria TV é o Fire TV. Depois, controle-a pelo celular.'),
       ('Se o Fire TV não aparecer', 'Confira se os dois dispositivos estão no mesmo Wi-Fi e se o Fire TV está ligado. No iPhone, permita a Rede Local para o Mando TV nos Ajustes. Veja [O celular não encontra a TV](@not-found).'),
       ('Sem controle nenhum?', 'Você precisa que o Fire TV mostre o PIN na tela; portanto, a TV e o Fire TV devem estar ligados e exibindo imagem. Se a TV estiver em uma entrada errada, mude-a com os botões físicos da TV. Veja [mudar a entrada HDMI sem controle](@hdmi).'),
-      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar de entrada e ligar ou desligar são grátis, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras.'),
+      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar de entrada e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura.'),
     ],
     marca=None,
     faq=[
@@ -905,7 +921,7 @@ GUIAS += [
       ('Tente usar o controle da TV primeiro (HDMI-CEC)', 'Muitos controles de TV podem comandar um Fire TV Stick através do HDMI-CEC. Com a tela do Fire TV visível, pressione as setas e OK no controle da TV. Se nada acontecer, ative o CEC nas configurações da TV (Anynet+ na Samsung, SIMPLINK na LG, BRAVIA Sync na Sony) e, no Fire TV, ative o controle de dispositivos HDMI CEC nas configurações de tela e som ("Display & Sounds").'),
       ('Se você mudou ou trocou o Wi-Fi', 'Sem o controle, não é possível digitar a nova senha do Wi-Fi no Fire TV, mas há uma solução: em um segundo celular, crie um ponto de acesso com exatamente o mesmo nome e senha da sua rede Wi-Fi antiga. O Fire TV se conecta a ele automaticamente. Conecte o celular com o Mando TV a esse ponto de acesso, pareie com o PIN, vá depois em Configurações > Rede no Fire TV e escolha seu novo Wi-Fi. Por fim, conecte também o seu celular à nova rede.'),
       ('Parear um controle substituto', 'A maioria dos controles novos do Fire TV pareia ao segurar o botão Início por cerca de 10 segundos perto do Fire TV. Se não parear, vá em Configurações > Controles e dispositivos Bluetooth > Controles remotos Amazon Fire TV > Adicionar novo controle remoto. Você pode acessar esse menu pelo celular com o Mando TV.'),
-      ('Fire TV integrado à TV', 'Em TVs com Fire TV integrado, os mesmos passos funcionam porque a própria TV é o Fire TV.'),
+      ('Fire TV integrado à TV', 'Em TVs com Fire TV integrado, como muitos modelos Insignia e Toshiba, os mesmos passos funcionam porque a própria TV é o Fire TV.'),
       ('Antes de começar', 'O suporte ao Fire TV chegou recentemente ao Mando TV; atualize o app primeiro. Se o seu modelo não funcionar como esperado, avise-nos na [página de ajuda](@soporte) incluindo o nome do modelo.'),
       ('Grátis e Pro', 'O controle é gratuito para baixar e usar, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras.'),
     ],
@@ -928,7 +944,7 @@ GUIAS += [
       'Com a TV ligada, configure-a para não precisar mais do botão: ative o HDMI-CEC e o ligar pela rede, explicados abaixo.',
     ],
     extra=[
-      ('Onde fica o botão de ligar por marca', 'Samsung: um botão ou joystick sob o centro da tela ou na parte de trás em um canto inferior. LG: um joystick sob a logo LG na maioria dos modelos. TCL e Hisense: geralmente um botão pequeno sob o meio da tela ou atrás perto de um canto inferior. Sony: na parte de trás ou numa borda lateral, perto da base. Os locais mudam por modelo; se não encontrar, procure o manual pelo número do modelo na etiqueta de trás.'),
+      ('Onde fica o botão de ligar por marca', 'Samsung: um botão ou joystick sob o centro da tela ou na parte de trás em um canto inferior. LG: um joystick sob a logo LG na maioria dos modelos. TCL e Hisense: geralmente um botão pequeno sob o meio da tela ou atrás perto de um canto inferior. Sony: na parte de trás ou numa borda lateral, perto da base. Vizio: na parte de trás, no canto inferior esquerdo ou inferior direito, ou na lateral. Os locais mudam por modelo; se não encontrar, procure o manual pelo número do modelo na etiqueta de trás.'),
       ('Ligar a TV por console ou aparelho de streaming (HDMI-CEC)', 'Com HDMI-CEC ativado, ligar um PlayStation, Xbox, Roku, Fire TV Stick ou Chromecast também liga a TV e muda para a entrada correta. Cada marca dá um nome diferente à configuração: Anynet+ na Samsung, SIMPLINK na LG, BRAVIA Sync na Sony e CEC na maioria das outras. Mais em [ligar a TV e mudar para o HDMI do console](@console).'),
       ('Ligar a TV pelo celular', 'Smart TVs podem ligar via Wi-Fi se você permitir uma vez, e então o Mando TV as liga pelo celular. Na Samsung, em Configurações > Geral > Rede > Configurações de especialista, ative a opção de ligar com um dispositivo móvel ("Power On with Mobile"). Na LG, ative a opção de ligar a TV com o celular ("TV On With Mobile") ([passo a passo](@lg-on)). Em uma Roku TV, ative o início rápido da TV ("Fast TV start") em Configurações > Sistema > Energia. No Google TV e Android TV, procure "Wake on LAN" ou uma opção de ligar pela rede, se o modelo tiver. Você faz isso uma vez, com a TV ligada.'),
       ('Se não encontrar nenhum botão', 'Algumas TVs recentes escondem tanto o único botão que parece que não existe. Procure um pequeno relevo ou área de sensor de luz sob a tela: o botão costuma ficar ao lado. Pelo Wi-Fi, o Mando TV precisa que a TV tenha estado ligada e conectada uma vez. A exceção é o infravermelho: em um celular Android com emissor infravermelho, o Mando TV pode ligar uma TV nunca configurada, bastando apontar o celular para ela. O infravermelho é novo e funciona com as marcas na lista de códigos do app.'),
@@ -982,7 +998,7 @@ GUIAS += [
       ('Ligar a TCL pelo celular', 'Na TCL com Roku TV, ative o início rápido da TV ("Fast TV start") em Configurações > Sistema > Energia. Na TCL com Google TV, procure "Wake on LAN" ou uma opção de ligar pela rede nas configurações de rede ou energia. Alguns modelos não oferecem isso. Nesse caso, ligue a TV pelo botão físico, geralmente no centro inferior ou atrás.'),
       ('Se a sua TCL não aparecer', 'Confira se o celular e a TV estão na mesma rede Wi-Fi. Roteadores com redes separadas de 2,4 GHz e 5 GHz podem esconder dispositivos uns dos outros. No iPhone, permita Rede Local para o Mando TV em Ajustes. Você também pode adicionar a TV digitando o endereço IP dela. Veja [O celular não encontra a TV](@not-found).'),
       ('Mais detalhes para a sua TCL', 'Para uma TCL com Roku TV, veja [app de controle remoto para Roku](@roku). Para uma TCL com Google TV ou Android TV, veja [app de controle remoto para Android TV](@android).'),
-      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, teclas numéricas, teclado, abrir apps, trocar de entrada e ligar ou desligar são grátis, sem anúncios e sem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras.'),
+      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, teclas numéricas, teclado, abrir apps, trocar de entrada e ligar ou desligar são grátis, sem anúncios e sem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura.'),
     ],
     marca=None,
     faq=[
@@ -1007,7 +1023,7 @@ GUIAS += [
       ('Hisense com Fire TV', 'O suporte ao Fire TV é novo no Mando TV. Atualize o app para a versão mais recente na sua loja e veja [controle remoto do Fire TV](@firetv) para entender como funciona o pareamento pelo PIN. Se algo não funcionar como esperado, escreva para nós pela página de Ajuda informando seu modelo.'),
       ('Hisense com VIDAA', 'A maioria dos modelos VIDAA funciona: botões, volume, teclado, aplicativos e entradas. Alguns modelos recentes de VIDAA aceitam apenas o app oficial da Hisense. O Mando TV detecta isso ao conectar e avisa claramente, em vez de falhar sem aviso. Nesse caso, use o app Hisense para seu modelo, os botões físicos da TV ou o controle original.'),
       ('Ligar a Hisense pelo celular', 'Na Hisense com Roku TV, ative o início rápido ("Fast TV start") em Configurações > Sistema > Energia. No Google TV, procure "Wake on LAN" ou uma opção de ligar pela rede. Se não existir, use o botão de ligar da própria TV.'),
-      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir aplicativos, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O Mando TV Pro é uma compra única opcional para recursos extras.'),
+      ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir aplicativos, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura.'),
     ],
     marca=None,
     faq=[

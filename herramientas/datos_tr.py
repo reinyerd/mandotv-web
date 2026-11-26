@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Rehberler: telefonu kumanda olarak kullanma',
   intro='Samsung, LG, Roku veya Android TV televizyonunun kumandasını Mando TV ile bağlamak, TV’yi açmak ve sorunları çözmek için basit adımlar.',
   h2_guias='Tüm rehberler', h2_marcas='Markaya göre kumanda uygulaması',
+  marcas_extra=[('sony', 'Sony kumanda uygulaması'), ('philips', 'Philips kumanda uygulaması')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Mando TV’yi aç: LG TV’n listede kendiliğinden görünür. Üzerine dokun.',
       'TV’de izin isteyen bir soru çıkar. Alışık olduğun kumandayla onayla (yalnızca ilk seferde).',
     ],
-    encender='LG TV’nin ayarlarını aç ve “Mobil cihazla TV’yi aç” seçeneğini ara (modele göre Genel veya Bağlantı altında). “Wi-Fi üzerinden aç”ı etkinleştir. “Hızlı Başlatma+” varsa onu da etkinleştir. Bundan sonra, kapalı TV’ye Mando TV’de dokunduğunda uygulama açmak isteyip istemediğini sorar ve kendiliğinden bağlanır.',
+    encender='LG TV’nin ayarlarını aç ve “Mobil cihazla TV’yi aç” seçeneğini ara (Ayarlar, Genel, Cihazlar, Harici Cihazlar altında; eski modellerde Bağlantı, Mobil Bağlantı Yönetimi). “Wi-Fi üzerinden aç”ı etkinleştir. “Hızlı Başlatma+” varsa onu da etkinleştir. Bundan sonra, kapalı TV’ye Mando TV’de dokunduğunda uygulama açmak isteyip istemediğini sorar ve kendiliğinden bağlanır.',
     faq=[
       ('Mando TV’yi kullanmak için Magic Remote’a ihtiyacım var mı?', 'Yalnızca ilk seferde, ekrandaki soruyu onaylamak için. Sonrasında telefonun yeter.'),
       ('Mando TV, LG ThinQ uygulamasının yerini tutar mı?', 'TV’yi kontrol etmek için evet: LG hesabına ihtiyacın yok ve TV’yi kaydettirmen gerekmiyor. Mando TV doğrudan Wi-Fi ağın üzerinden bağlanır.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Eski Samsung TV’lerle çalışır mı?', 'Tizen’li, 2016 ve sonrası Samsung TV’lerle çalışır. Daha eski modeller henüz desteklemediğimiz farklı bir sistem kullanır.'),
     ],
     guias=[('samsung-lost', 'Orijinal kumandasız Samsung TV: telefonunu böyle kullanırsın'),
+           ('smartthings', 'Samsung TV’ler için SmartThings alternatifi'),
+           ('turn-on', 'Kumandasız TV nasıl açılır'),
            ('hdmi', 'Kumandasız TV’nin HDMI girişini değiştirme'),
            ('guias', 'TV’yi telefonla kontrol etmek için tüm rehberler')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Telefonunu ve Roku’yu aynı Wi-Fi ağına bağla.',
       'Mando TV’yi aç: Roku’n listede kendiliğinden görünür. Üzerine dokun.',
-      'Bağlantı kurulmazsa Roku’da Ayarlar > Sistem > Gelişmiş sistem ayarları > Mobil uygulamalarla kontrol’e git ve ağ erişimini Varsayılan veya Etkin yap.',
+      'Bağlantı kurulmazsa Roku’da Ayarlar > Sistem > Gelişmiş sistem ayarları > Mobil uygulamalarla kontrol’e git ve ağ erişimini Varsayılan veya Permissive yap (daha yeni Roku yazılımında “Mobil uygulamalarla kontrol” ayarını Etkin yap).',
     ],
     encender='Roku TV cihazlarında Ayarlar > Sistem > Güç altında “TV hızlı başlatma”yı etkinleştir. Başka bir TV’ye takılı Roku oynatıcılar bu şekilde açılamaz. Bundan sonra, kapalı TV’ye Mando TV’de dokunduğunda uygulama açmak isteyip istemediğini sorar ve kendiliğinden bağlanır.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Roku uygulaması çalışmıyor (403 hatası)'),
            ('roku-lost', 'Roku kumanda kayboldu: telefonunu böyle kullanırsın'),
+           ('tcl', 'TCL kumanda uygulaması'),
+           ('hisense', 'Hisense kumanda uygulaması'),
+           ('philips', 'Philips kumanda uygulaması'),
            ('guias', 'TV’yi telefonla kontrol etmek için tüm rehberler')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV ve Google TV',
     titulo='Android TV kumanda uygulaması, telefonda | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Mando TV’yi aç: Android TV’n listede kendiliğinden görünür. Üzerine dokun.',
       'TV 6 karakterli bir kod gösterir. Kodu Mando TV’ye gir (yalnızca ilk seferde).',
     ],
-    encender='Bu üreticiye göre değişir. Ağ veya güç ayarlarında “Wake on LAN”, “Ağ üzerinden aç” ya da “Ağ beklemesi” seçeneğini ara. Bazı modellerde bu seçenek yoktur. Bundan sonra, kapalı TV’ye Mando TV’de dokunduğunda uygulama açmak isteyip istemediğini sorar ve kendiliğinden bağlanır.',
+    encender='Bu üreticiye göre değişir. Ağ veya güç ayarlarında “Wake on LAN”, “Ağ üzerinden aç”, “Ağ beklemesi” ya da “Remote start” seçeneğini ara. Bazı modellerde bu seçenek yoktur. Bundan sonra, kapalı TV’ye Mando TV’de dokunduğunda uygulama açmak isteyip istemediğini sorar ve kendiliğinden bağlanır.',
     faq=[
       ('Google TV’li Chromecast ile çalışır mı?', 'Evet, eşleştirme ekranda çıkan 6 karakterli kodla yapılır.'),
       ('Google TV uygulamasından farkı ne?', 'Mando TV Google hesabı istemez, Windows’ta da çalışır ve LG, Samsung ve Roku televizyonlarını aynı uygulamayla kontrol eder.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV eşleştirme kodu istiyor: yapman gerekenler'),
            ('androidtv', 'Kumandasız Android TV: telefonunu böyle kullanırsın'),
+           ('googletv-alt', 'Telefonda Google TV kumanda alternatifi'),
+           ('sony', 'Sony kumanda uygulaması'),
+           ('tcl', 'TCL kumanda uygulaması'),
+           ('hisense', 'Hisense kumanda uygulaması'),
+           ('philips', 'Philips kumanda uygulaması'),
            ('guias', 'TV’yi telefonla kontrol etmek için tüm rehberler')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('TV’yi hiç bağlamadıysam telefonla açabilir miyim?', 'İlk seferde TV’deki tuşla açarsın. Telefonunu bağladıktan ve TV’nin ayarlarında ağ üzerinden açmayı etkinleştirdikten sonra uygulamadan açabilirsin.'),
       ('Yeni bir kumanda almam gerekir mi?', 'Şart değil. Mando TV ile tuşlar, ses, klavye ve açma ücretsiz. Yine de gerçek bir kumanda istersen TV’nin tam modelini ara.'),
-      ('TV’nin Wi-Fi’ı yoksa çalışır mı?', 'Hayır. Telefon ve TV aynı Wi-Fi ağında olmalı. Akıllı TV olmayan bir televizyon Mando TV ile kontrol edilemez.'),
+      ('TV’nin Wi-Fi’ı yoksa çalışır mı?', 'Çoğunlukla hayır. Telefon ve TV genellikle aynı Wi-Fi ağında olmalı. İstisnalar, kızılötesi vericisi olan Android telefonlarda kızılötesi (akıllı TV özelliği olmayan televizyonları da kontrol eder) ve Android 9’dan itibaren betadaki Bluetooth (Google TV, Android TV ve Fire TV ile hiç Wi-Fi olmadan çalışır).'),
     ]),
   dict(clave='lost-lg', corto='LG kumanda kayboldu',
     titulo='LG kumanda kayboldu mu? Telefonunu kullan',
@@ -287,7 +298,7 @@ GUIAS = [
       'Ücretsiz olan ve Google hesabı istemeyen Mando TV’yi indir ve uygulamayı aç. Listede TV’ne dokun.',
       'TV, 6 harf ve rakamdan oluşan bir kod gösterir. Onu telefonuna yaz ve Eşleştir’e dokun. Bunun için kumandaya ihtiyacın yok.',
       'Şimdi yön tuşlarını, OK’i, geri, ana ekran, sesi, sessizi ve klavyeyi kullanabilirsin. Bunlar ücretsiz, uygulama listesi de öyle. Dokunmatik yüzey Pro’dur.',
-      'Bir dahaki sefer TV’yi telefondan açmak için ağ ya da güç ayarlarında “Wake on LAN”, “Ağ üzerinden aç” ya da “Ağ beklemesi” seçeneğini ara.',
+      'Bir dahaki sefer TV’yi telefondan açmak için ağ ya da güç ayarlarında “Wake on LAN”, “Ağ üzerinden aç”, “Ağ beklemesi” ya da “Remote start” seçeneğini ara.',
     ],
     extra=[
       ('TV’n telefondan açılmıyorsa', 'Her Android TV ağ üzerinden açılamaz; bu üreticiye ve modele bağlıdır. Seninkinde bu özellik yoksa TV’yi üzerindeki tuşla aç ve telefondan devam et. Kapatmayı uygulamadan yapabilirsin.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='LG TV’yi telefonla açabilirsin, ama bunun için önce TV’de bir ayarı etkinleştirmen gerekir. Bundan sonra telefonun, LG TV’yi Wi-Fi ağın üzerinden kumandasız açar. Beş dakika sürer ve bunu yalnızca bir kez yaparsın.',
     pasos=[
       'Telefonunu ve LG TV’yi aynı Wi-Fi ağına bağla.',
-      'TV’de ayarları aç ve “Mobil cihazla TV’yi aç”ı ara. Modele göre Genel ya da Bağlantı altında bulursun.',
+      'TV’de ayarları aç ve “Mobil cihazla TV’yi aç”ı ara. Ayarlar, Genel, Cihazlar, Harici Cihazlar altında bulursun (eski modellerde Bağlantı, Mobil Bağlantı Yönetimi).',
       '“Wi-Fi üzerinden aç”ı etkinleştir. TV’n ağ kablosuyla bağlıysa onun yerine kablo seçeneğini etkinleştir.',
       'TV’nde “Hızlı Başlatma+” varsa onu da etkinleştir.',
       'TV açıkken telefonunda Mando TV’yi aç ve listede LG TV’ne dokun. Ekranda çıkan soruyu onayla. Uygulama onu uyandırmayı böyle öğrenir.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Roku’da Ana ekran’a bas ve Ayarlar’a git.',
       'Sistem’i, ardından Gelişmiş sistem ayarları’nı aç.',
       '“Mobil uygulamalarla kontrol”e git. Bazı modellerde adı “Harici kontrol”dür.',
-      '“Ağ erişimi” altında Varsayılan ya da Etkin’i seç. Modelinde yalnızca bir anahtar varsa Etkin’de bırak.',
+      '“Ağ erişimi” altında Varsayılan ya da Permissive’i seç. Modelinde yalnızca bir anahtar varsa Etkin’de bırak.',
       'Telefonundaki Mando TV’ye dön ve Roku’na dokun. Tuşlar artık tepki verir.',
     ],
     extra=[
       ('Sorunun bu olup olmadığını nasıl anlarsın', 'İşaret açık: telefonun Roku’yu listede görüyor ve bağlanıyor, ama bir tuşa dokunduğunda hiçbir şey olmuyor. Roku arka planda “yasak” anlamına gelen 403 hatasıyla yanıt verir. Mando TV bunu bağlanırken fark eder ve sana bu adımları ekranda gösterir.'),
-      ('Varsayılan mı, Etkin mi, hangisini seçeyim?', 'İkisi de işe yarar: Mando TV’nin tek ihtiyacı ev ağından gelen komutlardır. Seçenek Devre dışı (yeni yazılımlarda Kısıtlı) olarak duruyorsa Roku uygulamalara yanıt vermez.'),
+      ('Varsayılan mı, Permissive mi, hangisini seçeyim?', 'Varsayılan yeterli: ev ağından gelen komutları kabul eder, bir kumandanın ihtiyacı da budur. Permissive daha açıktır ve yalnızca alışılmadık ağlarda gerekir. Seçenek Devre dışı (yeni yazılımlarda Kısıtlı) olarak duruyorsa Roku uygulamalara yanıt vermez.'),
       ('Roku kumandan yoksa', 'Ayar Devre dışı olarak duruyorsa yalnızca gerçek Roku kumandasıyla değiştirilebilir. Bir kez değiştirmek için birinden ödünç al; sonrasında her şeyi telefonunla yapabilirsin. [Roku kumanda kayboldu](@roku-lost) rehberini de oku.'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">TV’yi bulma</h2>
           <p>TV, Mando TV’nin bağlanmasına izin verip vermediğini sorar. Kumandayla “İzin ver”i seç. Yanlışlıkla reddettiysen Ayarlar > Genel > Harici Aygıt Yöneticisi > Aygıt Bağlantı Yöneticisi’ne git ve izinli olarak değiştir.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku izin sormaz. Bağlantı kurulmazsa Roku’da Ayarlar > Sistem > Gelişmiş sistem ayarları > Mobil uygulamalarla kontrol’e git ve ağ erişimini Varsayılan veya Etkin olarak bırak.</p>
+          <p>Roku izin sormaz. Bağlantı kurulmazsa Roku’da Ayarlar > Sistem > Gelişmiş sistem ayarları > Mobil uygulamalarla kontrol’e git ve ağ erişimini Varsayılan veya Permissive olarak bırak (daha yeni Roku yazılımında “Mobil uygulamalarla kontrol” ayarını Etkin yap).</p>
         </details>
         <details><summary>Android TV ve Google TV</summary>
           <p>TV 6 karakterli bir kod gösterir. Onu Mando TV’ye çıktığı gibi aynen gir. Android TV’li Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Google TV’li Chromecast ve diğerlerinde çalışır.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">TV’yi bulma</h2>
       <p>Mando TV, TV’yi ev ağın üzerinden açar. Bunun için iki şey gerekir: TV açıkken en az bir kez bağlanmış olman ve TV’de ağ üzerinden açmanın etkin olması. Ayarın adı modele göre değişir; en yaygın olanlar şunlar:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Ayarlarda (modele göre Genel ya da Bağlantı altında) “Mobil cihazla TV’yi aç”ı ara ve “Wi-Fi üzerinden aç”ı etkinleştir. “Hızlı Başlatma+” varsa onu da etkinleştir.</p>
+          <p>Ayarlarda (Ayarlar, Genel, Cihazlar, Harici Cihazlar altında; eski modellerde Bağlantı, Mobil Bağlantı Yönetimi) “Mobil cihazla TV’yi aç”ı ara ve “Wi-Fi üzerinden aç”ı etkinleştir. “Hızlı Başlatma+” varsa onu da etkinleştir.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Ayarlar > Genel > Ağ > Uzman Ayarları altında “Mobil Cihazla Aç”ı etkinleştir.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">TV’yi bulma</h2>
           <p>Roku TV cihazlarında Ayarlar > Sistem > Güç altında “TV hızlı başlatma”yı etkinleştir. Bir TV’ye takılı Roku oynatıcılar bu şekilde açılamaz.</p>
         </details>
         <details><summary>Android TV ve Google TV</summary>
-          <p>Bu üreticiye göre değişir. Ağ ya da güç ayarlarında “Wake on LAN”, “Ağ üzerinden aç” ya da “Ağ beklemesi” seçeneğini ara. Bazı modellerde bu seçenek yoktur.</p>
+          <p>Bu üreticiye göre değişir. Ağ ya da güç ayarlarında “Wake on LAN”, “Ağ üzerinden aç”, “Ağ beklemesi” ya da “Remote start” seçeneğini ara. Bazı modellerde bu seçenek yoktur.</p>
         </details>
       </div>
 
@@ -691,14 +702,14 @@ GUIAS += [
         ['Eski televizyonlar için kızılötesi', 'Kızılötesi vericisi olan Android telefonlarda ücretsiz (yeni)', 'Bazı uygulamalar, yalnızca kızılötesi vericisi olan telefonlarda'],
         ['Bluetooth', 'Android 9’dan itibaren beta, ücretsiz', 'Uygulamaya göre değişir'],
         ['TV’ye fotoğraf ve video', 'Pro, Wi-Fi ile (yansıtma değil)', 'Uygulamaya göre değişir'],
-        ['Telefonlar ve bilgisayarlar', 'iPhone, iPad ve Windows, ayrıca erken erişimde Android', 'Değişir'],
-        ['Ekran yansıtma', 'iPhone ve iPad’de ücretsiz, Denetim Merkezi’ndeki Ekran Yansıtma ile (AirPlay’li TV’ler)', 'Bazı uygulamalar sunar'],
+        ['Telefonlar ve bilgisayarlar', 'iPhone, iPad, Mac ve Windows, ayrıca erken erişimde Android', 'Değişir'],
+        ['Ekran yansıtma', 'iPhone, iPad ve Windows’ta her birinin kendi yerleşik özelliğiyle ücretsiz. Windows’ta Pro, bilgisayar ekranını LG, Samsung, Hisense ve Android TV televizyonlara da yansıtabilir (beta)', 'Bazı uygulamalar sunar'],
       ],
       nota='Mando TV belirli bir uygulamayla karşılaştırılmıyor. Güncel fiyatlar her uygulamanın mağaza sayfasında yer alır.'),
     extra=[
-      ('Mando TV’nin yapmadıkları', 'Kendi ekran yansıtması yoktur: iPhone ve iPad’de seni Denetim Merkezi’ndeki Ekran Yansıtma’ya yönlendirir; bu, iPhone’un kendi özelliğidir ve AirPlay’li televizyonlarla çalışır. Mando TV Pro ile ayrıca fotoğrafları ve videoları Wi-Fi’ın üzerinden TV’ne gönderebilir. Akıllı TV’leri ev Wi-Fi’ı üzerinden kontrol eder. Akıllı TV özelliği olmayan televizyonlar, kızılötesi vericisi olan bir Android telefondan kızılötesiyle kontrol edilebilir. Android 9’dan itibaren telefon, Google TV, Android TV ve Fire TV’ye Wi-Fi’a hiç gerek kalmadan Bluetooth klavye ve kumanda olarak da bağlanabilir. Bu seçenek betadadır ve ücretsizdir.'),
+      ('Mando TV’nin yapmadıkları', 'iPhone ve iPad’de seni Denetim Merkezi’ndeki Ekran Yansıtma’ya yönlendirir; bu, iPhone’un kendi özelliğidir ve AirPlay’li televizyonlarla çalışır. Windows’ta Yayınla’yı (Windows + K) açar ve Mando TV Pro, bilgisayar ekranını Wi-Fi’ın üzerinden LG, Samsung, Hisense ve Android TV televizyonlara gönderebilir (beta, birkaç saniye gecikmeli ve sessiz). Mando TV Pro ile ayrıca fotoğrafları ve videoları Wi-Fi’ın üzerinden TV’ne gönderebilir. Akıllı TV’leri ev Wi-Fi’ı üzerinden kontrol eder. Akıllı TV özelliği olmayan televizyonlar, kızılötesi vericisi olan bir Android telefondan kızılötesiyle kontrol edilebilir. Android 9’dan itibaren telefon, Google TV, Android TV ve Fire TV’ye Wi-Fi’a hiç gerek kalmadan Bluetooth klavye ve kumanda olarak da bağlanabilir. Bu seçenek betadadır ve ücretsizdir.'),
       ('Mando TV nasıl para kazanır', 'Reklamla değil, verilerinle de değil: uygulama hiç veri toplamaz. Mando TV, ekstralar için isteğe bağlı tek seferlik bir satın alım olan Pro ile finanse edilir. Temel kumanda ücretsizdir.'),
-      ('Zaten sahip olduğun cihazlarda', 'iPhone ve iPad için App Store’dan, Windows bilgisayarlar için Microsoft Store’dan ve Android için Google Play’deki ücretsiz erken erişimden. Bkz. [iPhone kumanda uygulaması](@iphone) ve [Windows kumanda uygulaması](@windows).'),
+      ('Zaten sahip olduğun cihazlarda', 'iPhone, iPad ve Mac için App Store’dan, Windows bilgisayarlar için Microsoft Store’dan ve Android için Google Play’deki ücretsiz erken erişimden. Bkz. [iPhone kumanda uygulaması](@iphone) ve [Windows kumanda uygulaması](@windows).'),
       ('Gizlilik', 'Uygulamada hesap ve izleme yok. TV’yle iletişim yalnızca yerel ağda gerçekleşir, bağlantı verileri cihazında şifreli olarak kalır. Ayrıntılar [Gizlilik Politikası](@privacidad) sayfasında.'),
     ],
     marca=None,
@@ -716,7 +727,7 @@ GUIAS += [
       'Telefonunu ve Roku’yu aynı Wi-Fi ağına bağla.',
       'Mando TV’yi indir ve aç. Roku TV’n ya da Roku oynatıcın listede görünür. Üzerine dokun. Roku kod istemez.',
       'Yön tuşlarını, OK’i, geri, ana ekran, sesi ve klavyeyi kullan. Roku kanallarında aramaları telefonun klavyesiyle yaz.',
-      'Tuşlar hiçbir şey yapmıyorsa Roku’da Ayarlar > Sistem > Gelişmiş sistem ayarları > Mobil uygulamalarla kontrol’e git ve ağ erişimini Varsayılan veya Etkin yap (yeni Roku yazılımında Mobil uygulamalarla kontrol’ü Etkin yap).',
+      'Tuşlar hiçbir şey yapmıyorsa Roku’da Ayarlar > Sistem > Gelişmiş sistem ayarları > Mobil uygulamalarla kontrol’e git ve ağ erişimini Varsayılan veya Permissive yap (yeni Roku yazılımında Mobil uygulamalarla kontrol’ü Etkin yap).',
       'İsteğe bağlı: Mando TV’nin TV’yi açabilmesi için Roku TV’de Ayarlar > Sistem > Güç altında “TV hızlı başlatma”yı etkinleştir.',
     ],
     extra=[
@@ -724,7 +735,7 @@ GUIAS += [
       ('Resmî Roku uygulamasının daha iyi olduğu yerler', 'Roku uygulamasını, kumandanın ötesinde sunduğu şeyler için tut: Roku Channel Store’dan kanal gezmek ve eklemek, kendi yayın aktarması ve Private Listening (sesi telefondaki kulaklıktan dinleme). İstersen ikisini de kullan. Aynı telefonda çalışabilirler.'),
       ('Roku TV cihazları ve Roku oynatıcılar', 'İkisi de çalışır. Buna TCL, Hisense, Philips ve diğerlerinin Roku TV modelleri ile Roku Express, Streaming Stick ve Ultra dahildir. Ayrıntılar [Roku kumanda uygulaması sayfasında](@roku).'),
       ('Roku uygulaması artık çalışmıyorsa', 'Tuşlar artık tepki vermiyorsa Roku genellikle uygulamalarla kontrolü engelliyordur. [Roku uygulaması çalışmıyor](@roku-403) rehberi sorunu çözen ayarı gösterir.'),
-      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır.'),
+      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır.'),
     ],
     marca='roku',
     faq=[
@@ -749,7 +760,7 @@ GUIAS += [
       ('Mando TV bir LG TV’de ne yapar', 'webOS’lu LG akıllı TV’lerle, yani 2014’ten bu yana çoğu modelle çalışır; LED, NanoCell, QNED ve OLED dahil. Sana yön tuşlarını, OK, geri, ana ekran, ses, kanal, sessiz, oynatma kontrollerini ve YouTube’da, Netflix’te ya da tarayıcıda yazmak için bir klavye sunar. Uygulama listesi ve giriş listesi de ücretsizdir. Pro ile ayrıca Magic Remote gibi bir imleç gelir.'),
       ('Mando TV’nin yapmadıkları', 'LG ev aletlerini kontrol etmez, LG hesabını kullanmaz ve TV’deki LG hesap hizmetlerinin yerini tutmaz. Bir kumandadır, akıllı ev merkezi değil.'),
       ('Gizlilik ve reklam', 'Mando TV’de reklam ve hesap yoktur. TV’yle yalnızca ev ağının içinde konuşur ve bağlantı anahtarını cihazında şifreli olarak saklar. Tüm özellikleri [LG kumanda uygulaması](@lg) sayfasında bulabilirsin.'),
-      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır.'),
+      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır.'),
     ],
     marca='lg',
     faq=[
@@ -824,7 +835,7 @@ GUIAS += [
       ('Mini kumanda (Pro)', 'Diğer tüm pencerelerin üstünde duran küçük bir kumanda penceresi. Böylece işini bölmeden sesi değiştirir ya da duraklatırsın.'),
       ('Bilgisayardan TV’de yazma', 'TV’nin ekran klavyesi yavaştır. Mando TV’de gerçek klavyenle yazarsın ve metin TV’nin arama kutusuna gider. Bu kısım ücretsiz.'),
       ('Daha fazla ayrıntı', 'Adım adım rehberi [TV’yi bilgisayarla kontrol etme](@pc) sayfasında bulabilirsin. Telefon için [Telefonu Wi-Fi ile kumanda olarak kullanma](@wifi) sayfasını oku.'),
-      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır. Windows’ta Pro’yu Microsoft Store üzerinden satın alırsın.'),
+      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır. Windows’ta Pro’yu Microsoft Store üzerinden satın alırsın.'),
       ('Bilgisayardan sesli komutlar (Pro)', 'Pro ile TV’yle bilgisayarın mikrofonundan konuşabilirsin. Konuşma doğrudan bilgisayarda tanınır: internete ihtiyacın yok ve Windows’ta hiçbir şey ayarlaman gerekmez. Söylediğin bilgisayardan asla çıkmaz ve kaydedilmez. Yalnızca çok eski işlemcilerde uygulama Windows ses girişine geçer. Bunun için gizlilik ayarlarında çevrimiçi konuşma tanıma açık olmalı ve dilin Windows’a eklenmiş olmalı.'),
     ],
     marca=None,
@@ -850,11 +861,11 @@ GUIAS += [
       ('Şu televizyonlarla çalışır', 'LG webOS, Samsung Tizen (2016 ve sonrası), Roku TV ve Roku oynatıcılar, Google TV ve Android TV ile Fire TV. Marka sayfaları: [Samsung](@samsung), [LG](@lg), [Roku](@roku) ve [Android TV](@android).'),
       ('Neden yerel ağı soruyor', 'iPhone, sen izin vermedikçe uygulamaların ev ağındaki cihazlara erişmesini engeller. TV listede görünmüyorsa Ayarlar > Mando TV’yi aç ve “Yerel Ağ”ı etkinleştir. Uygulama yalnızca ev ağının içinde TV’nle iletişim kurar.'),
       ('Neden üreticinin uygulaması değil de Mando TV', 'Her televizyon markasının kendi uygulaması var ve kendi kurulumunu ya da hesabını ister. Mando TV herkes için tek uygulamadır, hesapsız.'),
-      ('iPhone’da ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır, doğrudan uygulamada.'),
+      ('iPhone’da ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır. Pro’yu bir kez doğrudan uygulamada satın alırsın.'),
     ],
     marca=None,
     faq=[
-      ('Mando TV iPhone’da ücretsiz mi?', 'İndirme ücretsiz ve reklamsız. Temel kumanda ücretsizdir, uygulama açma ve girişleri değiştirme de öyle. Ekstralar, isteğe bağlı tek seferlik bir satın alım olan Mando TV Pro’ya dahildir.'),
+      ('Mando TV iPhone’da ücretsiz mi?', 'İndirme ücretsiz ve reklamsız. Temel kumanda ücretsizdir, uygulama açma ve girişleri değiştirme de öyle. Touchpad, sesli komutlar ve rutinler gibi ekstralar, tek seferlik bir satın alım olan Mando TV Pro’ya dahildir.'),
       ('iPad’de çalışır mı?', 'Evet. Aynı uygulama iPhone’da ve iPad’de çalışır.'),
       ('iPhone için bir kumanda uygulaması Bluetooth ya da kızılötesi verici gerektirir mi?', 'iPhone’da hayır. iPhone’larda kızılötesi verici yoktur, bu yüzden kızılötesi kontrol orada kullanılamaz ve Bluetooth seçeneği yalnızca Android 9 ve sonrası içindir, iPhone için değil. iPhone’da Mando TV, akıllı TV’leri ve Apple TV’yi (beta) evindeki Wi-Fi üzerinden kontrol eder.'),
     ]),
@@ -871,11 +882,11 @@ GUIAS += [
       'Yön tuşlarını, OK, geri, ana ekran, oynatma tuşlarını ve arama için klavyeyi kullan.',
     ],
     extra=[
-      ('Desteklenen Fire TV cihazları', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube ve Fire TV’si yerleşik televizyonlar. Destek yenidir ve şimdiye kadar yalnızca birkaç gerçek cihazı test edebildik. Bir şey beklediğin gibi çalışmazsa modelini yardım sayfasından bize yaz.'),
+      ('Desteklenen Fire TV cihazları', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube ve Fire TV’si yerleşik televizyonlar, örneğin Amazon Fire TV Edition televizyonlar ve bazı Hisense modelleri. Destek yenidir ve şimdiye kadar yalnızca birkaç gerçek cihazı test edebildik. Bir şey beklediğin gibi çalışmazsa modelini yardım sayfasından bize yaz.'),
       ('Fire TV’yi açma', 'Mando TV bir Fire TV’yi ağ üzerinden açmaz. TV’yi üzerindeki açma tuşuyla aç: takılı bir Fire TV Stick ya da Cube genellikle HDMI-CEC ile uyanır; Fire TV’si yerleşik bir televizyonda TV’nin kendisi Fire TV’dir. Sonra onu telefondan kontrol edersin.'),
       ('Fire TV’n görünmüyorsa', 'İki cihazın da aynı Wi-Fi’da olduğundan ve Fire TV’nin uyanık olduğundan emin ol. iPhone’da ayarlarda Mando TV için “Yerel Ağ”a izin ver. Bkz. [telefonun TV’yi bulamıyor](@not-found).'),
       ('Hiç kumandan yok mu?', 'Fire TV’nin PIN’i ekranda göstermesi gerekir, yani TV ve Fire TV açık olmalı ve görüntü vermeli. TV yanlış girişteyse TV’nin üzerindeki tuşlarla değiştir. Bkz. [Kumandasız girişi değiştirme](@hdmi).'),
-      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakamlar, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır.'),
+      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakamlar, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır.'),
     ],
     marca=None,
     faq=[
@@ -900,7 +911,7 @@ GUIAS += [
       ('Önce TV’nin kumandasını dene (HDMI-CEC)', 'Birçok TV kumandası bir Fire TV Stick’i HDMI-CEC ile kontrol edebilir. Fire TV arayüzü görünüyorsa TV’nin kumandasındaki yön tuşlarına ve OK’e bas. Hiçbir şey olmazsa TV ayarlarında CEC’i etkinleştir (Samsung’da Anynet+, LG’de SIMPLINK, Sony’de BRAVIA Sync) ve Fire TV’de görüntü ayarlarında (“Görüntü ve Sesler”) HDMI-CEC cihaz kontrolünü etkinleştir.'),
       ('Wi-Fi’ı değiştirdiysen', 'Kumanda olmadan Fire TV’ye yeni Wi-Fi şifresini giremezsin, ama bir çıkış yolu var: ikinci bir telefonda eski Wi-Fi’ınla tamamen aynı ad ve şifreye sahip bir hotspot oluştur. Fire TV ona kendiliğinden bağlanır. Mando TV’li telefonu bu hotspot’a bağla, PIN ile eşleştir, ardından Fire TV’de Ayarlar > Ağ’a git ve yeni Wi-Fi’ını seç. Sonunda telefonunu da yeni Wi-Fi’a bağla.'),
       ('Yedek bir kumandayı eşleştirme', 'Çoğu yeni Fire TV kumandası, Fire TV’nin yakınında Ana ekran tuşunu yaklaşık 10 saniye basılı tutarak eşleşir. Olmazsa Ayarlar > Kontrolcüler ve Bluetooth Cihazlar > Amazon Fire TV Kumandaları > Yeni Kumanda Ekle’yi aç. Bu menüye Mando TV’li telefonundan da ulaşabilirsin.'),
-      ('Televizyona yerleşik Fire TV', 'Fire TV’si yerleşik televizyonlarda aynı adımlar işe yarar, çünkü televizyonun kendisi Fire TV’dir.'),
+      ('Televizyona yerleşik Fire TV', 'Insignia ve Toshiba’nın birçok modeli gibi Fire TV’si yerleşik televizyonlarda aynı adımlar işe yarar, çünkü televizyonun kendisi Fire TV’dir.'),
       ('Başlamadan önce', 'Fire TV desteği Mando TV’de yenidir. Önce uygulamayı güncelle. Modelin beklediğin gibi tepki vermezse [Yardım sayfası](@soporte) üzerinden bize yaz ve modeli belirt.'),
       ('Ücretsiz ve Pro', 'Kumandayı ücretsiz indirip kullanabilirsin, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır.'),
     ],
@@ -912,7 +923,7 @@ GUIAS += [
     ]),
   dict(clave='turn-on', corto='Kumandasız TV açma', fecha='2026-11-23',
     titulo='Kumandasız TV açma (tüm markalar)',
-    desc='Kumandasız TV açma: Samsung, LG, TCL, Hisense ve Sony’de tuş nerede. Ayrıca HDMI-CEC ve telefon hileleri.',
+    desc='Kumandasız TV açma: Samsung, LG, TCL, Hisense, Sony ve Vizio’da tuş nerede. Ayrıca HDMI-CEC ve telefon hileleri.',
     h1='Kumandasız TV nasıl açılır',
     intro='Neredeyse her televizyonda hâlâ fiziksel bir açma/kapama tuşu vardır. Sadece iyi saklanmıştır. İşte her markada nerede olduğu ve bir dahaki sefere aramayı ortadan kaldıracak iki yol: bir konsoldan ya da medya cihazından HDMI-CEC ve TV’yi telefonundan Wi-Fi ile açma.',
     pasos=[
@@ -923,7 +934,7 @@ GUIAS += [
       'TV açıldığında bir daha tuşa ihtiyacın olmayacak şekilde ayarla: HDMI-CEC’i ve ağ üzerinden açmayı etkinleştir, ikisi de aşağıda anlatılıyor.',
     ],
     extra=[
-      ('Açma/kapama tuşu markaya göre nerede', 'Samsung: ekranın ortasının altında ya da arkada alt köşelerden birinde bir kontrol tuşu veya joystick. LG: çoğu modelde LG logosunun altında bir joystick tuşu. TCL ve Hisense: genellikle ekranın ortasının altında ya da arkada bir alt köşenin yakınında küçük bir tuş. Sony: arkada ya da bir yan kenarda, altta kenara yakın. Konumlar modele göre değişir. Bulamazsan arkadaki etiketteki model numarasıyla kullanım kılavuzunu ara.'),
+      ('Açma/kapama tuşu markaya göre nerede', 'Samsung: ekranın ortasının altında ya da arkada alt köşelerden birinde bir kontrol tuşu veya joystick. LG: çoğu modelde LG logosunun altında bir joystick tuşu. TCL ve Hisense: genellikle ekranın ortasının altında ya da arkada bir alt köşenin yakınında küçük bir tuş. Sony: arkada ya da bir yan kenarda, altta kenara yakın. Vizio: arkada, sol altta ya da sağ altta, veya yan tarafta. Konumlar modele göre değişir. Bulamazsan arkadaki etiketteki model numarasıyla kullanım kılavuzunu ara.'),
       ('TV’yi bir konsoldan ya da medya cihazından açma (HDMI-CEC)', 'HDMI-CEC etkinken bir PlayStation, Xbox, Roku oynatıcı, Fire TV Stick ya da Chromecast’i açmak TV’yi de açar ve doğru girişe geçer. Her marka ayara farklı bir ad verir: Samsung’da Anynet+, LG’de SIMPLINK, Sony’de BRAVIA Sync ve diğerlerinin çoğunda CEC. Daha fazlası için [Kumandasız TV’yi açma ve konsolun HDMI girişine geçme](@console).'),
       ('TV’yi telefonundan açma', 'Bunu bir kez onaylarsan akıllı TV’ler Wi-Fi ile uyandırılabilir ve Mando TV onları telefonundan açar. Samsung’da Ayarlar > Genel > Ağ > Uzman Ayarları altında “Mobil Cihazla Aç”ı etkinleştir. LG’de “Mobil cihazla TV’yi aç”ı etkinleştir ([adım adım](@lg-on)). Roku TV’de Ayarlar > Sistem > Güç altında “TV hızlı başlatma”yı etkinleştir. Google TV ve Android TV’de modelinde varsa Wake on LAN ya da “Ağ üzerinden aç”ı ara. Bunu TV açıkken bir kez yaparsın.'),
       ('Hiç tuş bulamıyorsan', 'Bazı yeni televizyonlar tek tuşu o kadar iyi saklar ki hiç yokmuş gibi görünür. Ekranın altında küçük bir kabartı ya da ışık sensörü bölgesi ara: tuş çoğu zaman hemen yanındadır. Wi-Fi ile Mando TV’nin çalışması için TV’nin bir kez açılmış ve bağlanmış olması gerekir. İstisna kızılötesidir: kızılötesi vericisi olan bir Android telefonda, telefonu TV’ye doğrulttuğun sürece Mando TV hiç kurulmamış bir TV’yi açabilir. Kızılötesi yenidir ve uygulamadaki kod listesinde bulunan markalarla çalışır.'),
@@ -977,7 +988,7 @@ GUIAS += [
       ('TCL TV’yi telefondan açma', 'TCL Roku TV’de Ayarlar > Sistem > Güç altında “TV hızlı başlatma”yı etkinleştir. TCL Google TV’de ağ ya da güç ayarlarında Wake on LAN, “Ağ üzerinden aç” ya da uzaktan başlatma seçeneğini ara. Bazı modeller bunu sunmaz. Bu durumda TV’yi fiziksel açma/kapama tuşuyla aç; genellikle alt ortada ya da arkadadır.'),
       ('TCL’n görünmüyorsa', 'Telefonun ve TV’nin aynı Wi-Fi’da olduğunu kontrol et. Ayrı 2,4 GHz ve 5 GHz ağlı router’lar cihazları birbirinden gizleyebilir. iPhone’da ayarlarda Mando TV için “Yerel Ağ”a izin ver. TV’yi IP adresini girerek de ekleyebilirsin. [Telefonun TV’yi bulamıyor](@not-found) sayfasını oku.'),
       ('TCL’n hakkında daha fazlası', 'Roku TV’li TCL için [Roku kumanda uygulaması](@roku), Google TV ya da Android TV’li TCL için [Android TV kumanda uygulaması](@android) sayfasına bak.'),
-      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakamlar, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır.'),
+      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakamlar, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır.'),
     ],
     marca=None,
     faq=[
@@ -1002,7 +1013,7 @@ GUIAS += [
       ('Fire TV’li Hisense', 'Fire TV desteği Mando TV’de yenidir. Uygulamayı mağazandan en son sürüme güncelle. PIN ile eşleştirmenin nasıl çalıştığı [Fire TV kumanda uygulaması](@firetv) sayfasında. Bir şey beklediğin gibi çalışmazsa yardım sayfasından modelini belirterek bize yaz.'),
       ('VIDAA’lı Hisense', 'Çoğu VIDAA modeli çalışır: tuşlar, ses, klavye, uygulamalar ve girişler. Bazı yeni VIDAA modelleri yalnızca resmî Hisense uygulamasını kabul eder. Mando TV bunu bağlanırken fark eder ve sessizce başarısız olmak yerine sana açıkça söyler. Bu durumda modelin için Hisense uygulaması, TV’deki tuşlar ya da orijinal kumanda doğru yoldur.'),
       ('Hisense’i telefondan açma', 'Hisense Roku TV’de Ayarlar > Sistem > Güç altında “TV hızlı başlatma”yı etkinleştir. Google TV’de Wake on LAN ya da “Ağ üzerinden aç” seçeneğini ara. Yoksa TV’deki açma/kapama tuşunu kullan.'),
-      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Mando TV Pro, ekstralar için isteğe bağlı tek seferlik bir satın alımdır.'),
+      ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma ya da kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır.'),
     ],
     marca=None,
     faq=[

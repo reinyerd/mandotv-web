@@ -71,6 +71,7 @@ INDICE = dict(
   h1='Panduan: pakai HP sebagai remote TV',
   intro='Langkah-langkah mudah untuk menghubungkan remote TV Samsung, LG, Roku, atau Android TV kamu dengan Mando TV, menyalakan TV, dan mengatasi masalah.',
   h2_guias='Semua panduan', h2_marcas='Aplikasi remote menurut merek',
+  marcas_extra=[('sony', 'Aplikasi remote Sony'), ('philips', 'Aplikasi remote Philips')],
 )
 
 MARCAS = [
@@ -95,7 +96,7 @@ MARCAS = [
       'Buka Mando TV: TV LG kamu muncul sendiri di daftar. Ketuk TV tersebut.',
       'Di TV akan muncul permintaan izin. Setujui dengan remote yang biasa kamu pakai (hanya sekali, saat pertama kali).',
     ],
-    encender='Di TV LG, buka Pengaturan dan cari "Nyalakan TV dengan perangkat seluler" (tergantung model, ada di Umum atau Koneksi). Aktifkan "Nyalakan lewat Wi-Fi". Kalau ada "Quick Start+", aktifkan juga. Setelah itu, saat kamu mengetuk TV yang sedang mati di Mando TV, aplikasi akan bertanya apakah mau menyalakannya, lalu tersambung sendiri.',
+    encender='Di TV LG, buka Pengaturan dan cari "Nyalakan TV dengan perangkat seluler" (ada di Pengaturan, Umum, Perangkat, Perangkat Eksternal; pada model lama di Koneksi, Manajemen Koneksi Seluler). Aktifkan "Nyalakan lewat Wi-Fi". Kalau ada "Quick Start+", aktifkan juga. Setelah itu, saat kamu mengetuk TV yang sedang mati di Mando TV, aplikasi akan bertanya apakah mau menyalakannya, lalu tersambung sendiri.',
     faq=[
       ('Apakah saya butuh Magic Remote untuk memakai Mando TV?', 'Hanya sekali, saat pertama kali, untuk menyetujui permintaan di layar. Setelah itu HP kamu sudah cukup.'),
       ('Apakah Mando TV menggantikan aplikasi LG ThinQ?', 'Untuk mengontrol TV, ya: kamu tidak butuh akun LG dan tidak perlu mendaftarkan TV. Mando TV tersambung langsung lewat Wi-Fi kamu.'),
@@ -134,6 +135,8 @@ MARCAS = [
       ('Apakah berfungsi dengan TV Samsung lama?', 'Berfungsi dengan TV Samsung ber-Tizen tahun 2016 ke atas. Model sebelumnya memakai sistem lain yang belum kami dukung.'),
     ],
     guias=[('samsung-lost', 'TV Samsung tanpa remote asli: pakai HP kamu'),
+           ('smartthings', 'Alternatif SmartThings untuk TV Samsung'),
+           ('turn-on', 'Cara menyalakan TV tanpa remote'),
            ('hdmi', 'Ganti input HDMI di TV tanpa remote'),
            ('guias', 'Semua panduan untuk mengontrol TV dengan HP')]),
   dict(clave='roku', color='#a77bff', corto='Roku',
@@ -156,7 +159,7 @@ MARCAS = [
     pasos=[
       'Hubungkan HP dan Roku ke Wi-Fi yang sama.',
       'Buka Mando TV: Roku kamu muncul sendiri di daftar. Ketuk Roku tersebut.',
-      'Kalau koneksi gagal, di Roku buka Pengaturan > Sistem > Pengaturan sistem lanjutan > Kontrol oleh aplikasi seluler, lalu atur akses jaringan ke Default atau Diaktifkan.',
+      'Kalau koneksi gagal, di Roku buka Pengaturan > Sistem > Pengaturan sistem lanjutan > Kontrol oleh aplikasi seluler, lalu atur akses jaringan ke Default atau Permissive (pada software Roku yang lebih baru, atur "Kontrol oleh aplikasi seluler" ke Diaktifkan).',
     ],
     encender='Di perangkat Roku TV, aktifkan "Quick Start TV" di Pengaturan > Sistem > Daya. Roku Player yang dipasang ke TV lain tidak bisa dinyalakan dengan cara ini. Setelah itu, saat kamu mengetuk TV yang sedang mati di Mando TV, aplikasi akan bertanya apakah mau menyalakannya, lalu tersambung sendiri.',
     faq=[
@@ -166,6 +169,9 @@ MARCAS = [
     ],
     guias=[('roku-403', 'Aplikasi Roku tidak berfungsi (error 403)'),
            ('roku-lost', 'Remote Roku hilang: pakai HP kamu'),
+           ('tcl', 'Aplikasi remote TCL'),
+           ('hisense', 'Aplikasi remote Hisense'),
+           ('philips', 'Aplikasi remote Philips'),
            ('guias', 'Semua panduan untuk mengontrol TV dengan HP')]),
   dict(clave='android', color='#2fbf8f', corto='Android TV dan Google TV',
     titulo='Aplikasi remote Android TV di HP | Mando TV',
@@ -188,7 +194,7 @@ MARCAS = [
       'Buka Mando TV: Android TV kamu muncul sendiri di daftar. Ketuk TV tersebut.',
       'TV menampilkan kode 6 karakter. Masukkan kode itu di Mando TV (hanya sekali, saat pertama kali).',
     ],
-    encender='Ini tergantung produsennya. Cari "Wake on LAN", "Nyalakan lewat jaringan", atau "Siaga jaringan" di pengaturan jaringan atau daya. Beberapa model tidak punya opsi ini. Setelah itu, saat kamu mengetuk TV yang sedang mati di Mando TV, aplikasi akan bertanya apakah mau menyalakannya, lalu tersambung sendiri.',
+    encender='Ini tergantung produsennya. Cari "Wake on LAN", "Nyalakan lewat jaringan", "Siaga jaringan", atau "Remote start" di pengaturan jaringan atau daya. Beberapa model tidak punya opsi ini. Setelah itu, saat kamu mengetuk TV yang sedang mati di Mando TV, aplikasi akan bertanya apakah mau menyalakannya, lalu tersambung sendiri.',
     faq=[
       ('Apakah berfungsi dengan Chromecast with Google TV?', 'Ya, pemasangannya lewat kode 6 karakter yang muncul di layar.'),
       ('Apa bedanya dengan aplikasi Google TV?', 'Mando TV tidak butuh akun Google, berfungsi juga di Windows, dan mengontrol TV LG, Samsung, dan Roku dengan satu aplikasi yang sama.'),
@@ -196,6 +202,11 @@ MARCAS = [
     ],
     guias=[('androidtv-code', 'Android TV meminta kode pemasangan: begini caranya'),
            ('androidtv', 'Android TV tanpa remote: pakai HP kamu'),
+           ('googletv-alt', 'Alternatif remote Google TV di HP'),
+           ('sony', 'Aplikasi remote Sony'),
+           ('tcl', 'Aplikasi remote TCL'),
+           ('hisense', 'Aplikasi remote Hisense'),
+           ('philips', 'Aplikasi remote Philips'),
            ('guias', 'Semua panduan untuk mengontrol TV dengan HP')]),
 ]
 
@@ -224,7 +235,7 @@ GUIAS = [
     faq=[
       ('Bisakah saya menyalakan TV dengan HP kalau belum pernah menyambungkannya?', 'Pertama kali, nyalakan dengan tombol di TV. Setelah HP tersambung dan kamu mengaktifkan fitur menyalakan lewat jaringan di pengaturan TV, kamu bisa menyalakannya dari aplikasi.'),
       ('Apakah saya harus membeli remote baru?', 'Belum tentu. Dengan Mando TV, tombol, volume, keyboard, dan menyalakan TV gratis. Kalau kamu tetap lebih suka remote fisik, cari sesuai model TV kamu.'),
-      ('Apakah berfungsi kalau TV tidak punya Wi-Fi?', 'Tidak. HP dan TV harus berada di Wi-Fi yang sama. TV yang bukan Smart TV tidak bisa dikontrol dengan Mando TV.'),
+      ('Apakah berfungsi kalau TV tidak punya Wi-Fi?', 'Biasanya tidak. HP dan TV umumnya harus berada di Wi-Fi yang sama. Pengecualiannya adalah inframerah pada HP Android dengan pemancar inframerah, yang juga bisa mengontrol TV yang bukan Smart TV, dan Bluetooth di versi beta mulai Android 9, yang berfungsi tanpa Wi-Fi sama sekali dengan Google TV, Android TV, dan Fire TV.'),
     ]),
   dict(clave='lost-lg', corto='Remote LG hilang',
     titulo='Remote LG hilang? Pakai HP kamu',
@@ -287,7 +298,7 @@ GUIAS = [
       'Unduh Mando TV, yang gratis dan tidak meminta akun Google, lalu buka aplikasinya. Ketuk TV kamu di daftar.',
       'TV menampilkan kode berisi 6 huruf dan angka. Ketik di HP kamu lalu ketuk Pasangkan. Untuk ini kamu tidak butuh remote.',
       'Sekarang kamu bisa memakai tombol arah, OK, Kembali, Beranda, volume, bisukan, dan keyboard. Semuanya gratis, begitu juga daftar aplikasi. Touchpad adalah fitur Pro.',
-      'Agar lain kali TV bisa dinyalakan dari HP, cari "Wake on LAN", "Nyalakan lewat jaringan", atau "Siaga jaringan" di pengaturan jaringan atau daya.',
+      'Agar lain kali TV bisa dinyalakan dari HP, cari "Wake on LAN", "Nyalakan lewat jaringan", "Siaga jaringan", atau "Remote start" di pengaturan jaringan atau daya.',
     ],
     extra=[
       ('Kalau TV kamu tidak bisa dinyalakan dari HP', 'Tidak semua Android TV bisa dinyalakan lewat jaringan; itu tergantung produsen dan model. Kalau TV kamu tidak punya fitur ini, nyalakan dengan tombol di TV lalu lanjutkan dari HP. Untuk mematikan, kamu bisa memakai aplikasi.'),
@@ -308,7 +319,7 @@ GUIAS = [
     intro='Kamu bisa menyalakan TV LG dengan HP, tapi sebelumnya harus mengaktifkan satu pengaturan di TV. Setelah itu HP kamu menyalakan TV LG lewat Wi-Fi, tanpa remote sama sekali. Butuh lima menit dan hanya dilakukan satu kali.',
     pasos=[
       'Hubungkan HP dan TV LG ke Wi-Fi yang sama.',
-      'Di TV, buka Pengaturan dan cari "Nyalakan TV dengan perangkat seluler". Tergantung model, ada di Umum atau Koneksi.',
+      'Di TV, buka Pengaturan dan cari "Nyalakan TV dengan perangkat seluler". Ada di Pengaturan, Umum, Perangkat, Perangkat Eksternal (pada model lama di Koneksi, Manajemen Koneksi Seluler).',
       'Aktifkan "Nyalakan lewat Wi-Fi". Kalau TV kamu tersambung dengan kabel jaringan, aktifkan opsi untuk kabel.',
       'Kalau TV kamu punya "Quick Start+", aktifkan juga.',
       'Dengan TV menyala, buka Mando TV di HP dan ketuk TV LG kamu di daftar. Setujui permintaan yang muncul di layar. Dengan begitu aplikasi belajar cara membangunkannya.',
@@ -427,12 +438,12 @@ GUIAS = [
       'Di Roku, tekan Beranda lalu buka Pengaturan.',
       'Buka Sistem, lalu Pengaturan sistem lanjutan.',
       'Masuk ke "Kontrol oleh aplikasi seluler". Di beberapa model namanya "Kontrol eksternal".',
-      'Di "Akses jaringan", pilih Default atau Diaktifkan. Kalau di model kamu hanya berupa tombol geser, biarkan Diaktifkan.',
+      'Di "Akses jaringan", pilih Default atau Permissive. Kalau di model kamu hanya berupa tombol geser, biarkan Diaktifkan.',
       'Kembali ke Mando TV di HP dan ketuk Roku kamu. Sekarang tombolnya bereaksi.',
     ],
     extra=[
       ('Cara mengetahui apakah ini masalahmu', 'Tandanya jelas: HP melihat Roku di daftar dan tersambung, tapi tidak terjadi apa-apa saat kamu mengetuk tombol. Di dalam, Roku menjawab dengan error 403, artinya "dilarang". Mando TV mendeteksinya saat menyambung dan menampilkan langkah-langkah ini di layar.'),
-      ('Default atau Diaktifkan, mana yang dipilih?', 'Keduanya berfungsi: Mando TV hanya butuh perintah dari jaringan rumah kamu. Kalau opsinya Dinonaktifkan (di perangkat lunak yang lebih baru: Dibatasi), Roku tidak merespons aplikasi.'),
+      ('Default atau Permissive, mana yang dipilih?', 'Default sudah cukup: ia menerima perintah dari jaringan rumah kamu, dan itu yang dibutuhkan sebuah remote. Permissive lebih terbuka dan hanya perlu di jaringan yang tidak biasa. Kalau opsinya Dinonaktifkan (di perangkat lunak yang lebih baru: Dibatasi), Roku tidak merespons aplikasi.'),
       ('Kalau kamu tidak punya remote Roku', 'Kalau pengaturannya Dinonaktifkan, hanya bisa diubah dengan remote Roku yang asli. Pinjam satu untuk mengubahnya sekali; setelah itu semuanya bisa kamu lakukan dengan HP. Baca juga [Remote Roku hilang](@roku-lost).'),
     ],
     marca='roku',
@@ -547,7 +558,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Menemukan TV</h2>
           <p>TV bertanya apakah kamu mengizinkan koneksi dari Mando TV. Pilih "Izinkan" dengan remote. Kalau tidak sengaja menolaknya, buka Pengaturan > Umum > Pengelola Perangkat Eksternal > Pengelola Koneksi Perangkat dan ubah menjadi diizinkan.</p>
         </details>
         <details><summary>Roku</summary>
-          <p>Roku tidak meminta izin. Kalau koneksi gagal, di Roku buka Pengaturan > Sistem > Pengaturan sistem lanjutan > Kontrol oleh aplikasi seluler dan biarkan akses jaringan di Default atau Diaktifkan.</p>
+          <p>Roku tidak meminta izin. Kalau koneksi gagal, di Roku buka Pengaturan > Sistem > Pengaturan sistem lanjutan > Kontrol oleh aplikasi seluler dan biarkan akses jaringan di Default atau Permissive (pada software Roku yang lebih baru, atur "Kontrol oleh aplikasi seluler" ke Diaktifkan).</p>
         </details>
         <details><summary>Android TV dan Google TV</summary>
           <p>TV menampilkan kode 6 karakter. Masukkan persis seperti yang muncul di Mando TV. Berfungsi di Sony, Philips, TCL, Hisense, Sharp, Xiaomi, Chromecast with Google TV, dan merek lain dengan Android TV.</p>
@@ -558,7 +569,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Menemukan TV</h2>
       <p>Mando TV menyalakan TV lewat jaringan rumah kamu. Untuk itu ada dua syarat: kamu pernah tersambung setidaknya satu kali saat TV menyala, dan di TV fitur menyalakan lewat jaringan sudah diaktifkan. Nama pengaturannya berubah tergantung model; ini yang paling umum:</p>
       <div class="preguntas">
         <details><summary>LG</summary>
-          <p>Cari "Nyalakan TV dengan perangkat seluler" di pengaturan (tergantung model, ada di Umum atau Koneksi) dan aktifkan "Nyalakan lewat Wi-Fi". Kalau ada "Quick Start+", aktifkan juga.</p>
+          <p>Cari "Nyalakan TV dengan perangkat seluler" di pengaturan (ada di Pengaturan, Umum, Perangkat, Perangkat Eksternal; pada model lama di Koneksi, Manajemen Koneksi Seluler) dan aktifkan "Nyalakan lewat Wi-Fi". Kalau ada "Quick Start+", aktifkan juga.</p>
         </details>
         <details><summary>Samsung</summary>
           <p>Aktifkan "Nyalakan dengan perangkat seluler" di Pengaturan > Umum > Jaringan > Pengaturan Pakar.</p>
@@ -567,7 +578,7 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Menemukan TV</h2>
           <p>Di perangkat Roku TV, aktifkan "Quick Start TV" di Pengaturan > Sistem > Daya. Roku Player yang dipasang ke TV tidak bisa dinyalakan dengan cara ini.</p>
         </details>
         <details><summary>Android TV dan Google TV</summary>
-          <p>Ini tergantung produsennya. Cari "Wake on LAN", "Nyalakan lewat jaringan", atau "Siaga jaringan" di pengaturan jaringan atau daya. Beberapa model tidak punya opsi ini.</p>
+          <p>Ini tergantung produsennya. Cari "Wake on LAN", "Nyalakan lewat jaringan", "Siaga jaringan", atau "Remote start" di pengaturan jaringan atau daya. Beberapa model tidak punya opsi ini.</p>
         </details>
       </div>
 
@@ -692,14 +703,14 @@ GUIAS += [
         ['Inframerah untuk TV lama', 'Gratis di HP Android dengan pemancar inframerah (baru)', 'Beberapa aplikasi, hanya di HP dengan pemancar inframerah'],
         ['Bluetooth', 'Beta mulai Android 9, gratis', 'Tergantung aplikasinya'],
         ['Foto dan video ke TV', 'Pro, lewat Wi-Fi (bukan mirroring)', 'Tergantung aplikasinya'],
-        ['HP dan komputer', 'iPhone, iPad, dan Windows, ditambah Android dalam akses awal', 'Bervariasi'],
-        ['Mirroring layar', 'Gratis di iPhone dan iPad, lewat Pencerminan Layar di Pusat Kontrol (TV dengan AirPlay)', 'Beberapa aplikasi menawarkannya'],
+        ['HP dan komputer', 'iPhone, iPad, Mac, dan Windows, ditambah Android dalam akses awal', 'Bervariasi'],
+        ['Mirroring layar', 'Gratis di iPhone, iPad, dan Windows dengan fitur bawaan masing-masing. Di Windows, Pro juga bisa mencerminkan layar PC ke TV LG, Samsung, Hisense, dan Android TV (beta)', 'Beberapa aplikasi menawarkannya'],
       ],
       nota='Mando TV tidak dibandingkan dengan aplikasi tertentu. Harga terkini ada di halaman toko masing-masing aplikasi.'),
     extra=[
-      ('Yang tidak dilakukan Mando TV', 'Aplikasi ini tidak punya mirroring layar sendiri: di iPhone dan iPad, aplikasi mengarahkan kamu ke Pencerminan Layar di Pusat Kontrol, fitur iPhone itu sendiri yang berfungsi dengan TV ber-AirPlay. Dengan Mando TV Pro, aplikasi juga bisa mengirim foto dan video ke TV lewat Wi-Fi kamu. Aplikasi ini mengontrol Smart TV lewat Wi-Fi rumah. TV yang bukan Smart TV bisa dikontrol lewat inframerah dari HP Android dengan pemancar inframerah. Mulai Android 9, HP juga bisa tersambung lewat Bluetooth sebagai keyboard dan remote ke Google TV, Android TV, dan Fire TV, tanpa Wi-Fi sama sekali. Opsi ini dalam versi beta dan gratis.'),
+      ('Yang tidak dilakukan Mando TV', 'Di iPhone dan iPad, aplikasi mengarahkan kamu ke Pencerminan Layar di Pusat Kontrol, fitur iPhone itu sendiri yang berfungsi dengan TV ber-AirPlay. Di Windows, aplikasi membuka Cast (Windows + K), dan Mando TV Pro bisa mengirim layar PC ke TV LG, Samsung, Hisense, dan Android TV lewat Wi-Fi kamu (beta, dengan jeda beberapa detik dan tanpa suara). Dengan Mando TV Pro, aplikasi juga bisa mengirim foto dan video ke TV lewat Wi-Fi kamu. Aplikasi ini mengontrol Smart TV lewat Wi-Fi rumah. TV yang bukan Smart TV bisa dikontrol lewat inframerah dari HP Android dengan pemancar inframerah. Mulai Android 9, HP juga bisa tersambung lewat Bluetooth sebagai keyboard dan remote ke Google TV, Android TV, dan Fire TV, tanpa Wi-Fi sama sekali. Opsi ini dalam versi beta dan gratis.'),
       ('Bagaimana Mando TV menghasilkan uang', 'Bukan dari iklan dan bukan dari datamu: aplikasi ini tidak mengumpulkannya. Mando TV dibiayai oleh Pro, pembelian sekali bayar yang opsional untuk fitur ekstra. Remote dasarnya gratis.'),
-      ('Di perangkat yang sudah kamu punya', 'iPhone dan iPad dari App Store, PC Windows dari Microsoft Store, dan Android lewat akses awal gratis di Google Play. Lihat [Aplikasi remote TV untuk iPhone](@iphone) dan [Aplikasi remote TV untuk Windows](@windows).'),
+      ('Di perangkat yang sudah kamu punya', 'iPhone, iPad, dan Mac dari App Store, PC Windows dari Microsoft Store, dan Android lewat akses awal gratis di Google Play. Lihat [Aplikasi remote TV untuk iPhone](@iphone) dan [Aplikasi remote TV untuk Windows](@windows).'),
       ('Privasi', 'Tanpa akun dan tanpa pelacakan di aplikasi. Komunikasi dengan TV hanya terjadi di jaringan lokal, dan data koneksi tetap tersimpan terenkripsi di perangkat kamu. Detailnya ada di [Kebijakan Privasi](@privacidad).'),
     ],
     marca=None,
@@ -717,7 +728,7 @@ GUIAS += [
       'Hubungkan HP dan Roku ke Wi-Fi yang sama.',
       'Unduh Mando TV dan buka. Roku TV atau Roku Player kamu muncul di daftar. Ketuk. Roku tidak meminta kode.',
       'Pakai tombol arah, OK, Kembali, Beranda, volume, dan keyboard. Ketik kata pencarian di kanal Roku dengan keyboard HP.',
-      'Kalau tombolnya tidak melakukan apa-apa, di Roku buka Pengaturan > Sistem > Pengaturan sistem lanjutan > Kontrol oleh aplikasi seluler dan atur akses jaringan ke Default atau Diaktifkan (di perangkat lunak Roku yang lebih baru, atur Kontrol oleh aplikasi seluler ke Diaktifkan).',
+      'Kalau tombolnya tidak melakukan apa-apa, di Roku buka Pengaturan > Sistem > Pengaturan sistem lanjutan > Kontrol oleh aplikasi seluler dan atur akses jaringan ke Default atau Permissive (di perangkat lunak Roku yang lebih baru, atur Kontrol oleh aplikasi seluler ke Diaktifkan).',
       'Opsional: di Roku TV, aktifkan "Quick Start TV" di Pengaturan > Sistem > Daya agar Mando TV bisa menyalakan TV.',
     ],
     extra=[
@@ -725,7 +736,7 @@ GUIAS += [
       ('Di mana aplikasi Roku resmi lebih baik', 'Pertahankan aplikasi Roku untuk hal-hal yang ditawarkannya di luar remote, seperti menelusuri dan menambah kanal dari Roku Channel Store, serta casting dan Private Listening (suara lewat headphone di HP). Pakai keduanya kalau kamu mau. Keduanya bisa ada di HP yang sama.'),
       ('Roku TV dan Roku Player', 'Keduanya berfungsi. Termasuk model Roku TV dari TCL, Hisense, Philips, dan lainnya, serta Roku Express, Streaming Stick, dan Ultra. Detailnya ada di [halaman aplikasi remote Roku](@roku).'),
       ('Kalau aplikasi Roku tidak berfungsi lagi', 'Kalau tombol berhenti bereaksi, biasanya Roku memblokir kontrol oleh aplikasi. Panduan [Aplikasi Roku tidak berfungsi](@roku-403) menunjukkan pengaturan yang menyelesaikan masalah ini.'),
-      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra.'),
+      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan.'),
     ],
     marca='roku',
     faq=[
@@ -750,7 +761,7 @@ GUIAS += [
       ('Apa yang dilakukan Mando TV di TV LG', 'Berfungsi dengan Smart TV LG webOS, yaitu sebagian besar model sejak 2014, termasuk LED, NanoCell, QNED, dan OLED. Aplikasi menyediakan tombol arah, OK, Kembali, Beranda, volume, saluran, bisukan, kontrol pemutaran, dan keyboard untuk mengetik di YouTube, Netflix, atau browser. Daftar aplikasi dan daftar input juga gratis. Dengan Pro kamu mendapat tambahan penunjuk seperti Magic Remote.'),
       ('Yang tidak dilakukan Mando TV', 'Aplikasi ini tidak mengontrol peralatan rumah LG, tidak memakai akun LG kamu, dan tidak menggantikan layanan akun LG di TV. Ini adalah remote, bukan hub smart home.'),
       ('Privasi dan iklan', 'Mando TV tidak punya iklan dan tidak punya akun. Aplikasi hanya berbicara dengan TV di dalam jaringan rumah kamu dan menyimpan kunci koneksi terenkripsi di perangkat kamu. Semua fiturnya ada di halaman [Aplikasi remote LG](@lg).'),
-      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra.'),
+      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan.'),
     ],
     marca='lg',
     faq=[
@@ -825,7 +836,7 @@ GUIAS += [
       ('Mini remote (Pro)', 'Jendela remote kecil yang tetap berada di atas jendela lain. Dengan begitu kamu bisa mengubah volume atau menjeda tanpa mengganggu pekerjaan.'),
       ('Mengetik di TV dari PC', 'Keyboard layar di TV itu lambat. Di Mando TV kamu mengetik dengan keyboard asli dan teksnya masuk ke kolom pencarian TV. Bagian ini gratis.'),
       ('Detail lainnya', 'Panduan langkah demi langkahnya ada di [Kontrol TV dari PC](@pc). Untuk HP, baca [HP jadi remote lewat Wi-Fi](@wifi).'),
-      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra. Di Windows, kamu membeli Pro lewat Microsoft Store.'),
+      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan. Di Windows, kamu membeli Pro lewat Microsoft Store.'),
       ('Perintah suara dari PC (Pro)', 'Dengan Pro kamu bisa berbicara ke TV lewat mikrofon PC. Suara dikenali langsung di PC: untuk itu kamu tidak butuh internet dan tidak perlu mengatur apa pun di Windows. Apa yang kamu ucapkan tidak pernah keluar dari PC dan tidak disimpan. Hanya pada prosesor yang sangat lama aplikasi beralih ke input suara Windows. Untuk itu, pengenalan suara online harus diaktifkan di pengaturan privasi dan bahasa kamu harus ditambahkan di Windows.'),
     ],
     marca=None,
@@ -851,11 +862,11 @@ GUIAS += [
       ('Berfungsi dengan TV ini', 'LG webOS, Samsung Tizen (tahun 2016 ke atas), Roku TV dan Roku Player, Google TV dan Android TV, serta Fire TV. Halaman per merek: [Samsung](@samsung), [LG](@lg), [Roku](@roku), dan [Android TV](@android).'),
       ('Kenapa aplikasi meminta jaringan lokal', 'iPhone memblokir akses aplikasi ke perangkat di jaringan rumah kamu kecuali kamu mengizinkannya. Kalau TV tidak muncul di daftar, buka Pengaturan > Mando TV dan aktifkan "Jaringan Lokal". Aplikasi hanya berkomunikasi dengan TV kamu di dalam jaringan rumah.'),
       ('Kenapa Mando TV dan bukan aplikasi dari produsen', 'Setiap merek TV punya aplikasi sendiri dan menginginkan pengaturan atau akun sendiri. Mando TV adalah satu aplikasi untuk semuanya, tanpa akun.'),
-      ('Gratis dan Pro di iPhone', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra, langsung di dalam aplikasi.'),
+      ('Gratis dan Pro di iPhone', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan. Kamu membeli Pro sekali langsung di dalam aplikasi.'),
     ],
     marca=None,
     faq=[
-      ('Apakah Mando TV gratis di iPhone?', 'Unduhannya gratis, tanpa iklan. Remote dasar gratis, begitu juga membuka aplikasi dan mengganti input. Fitur ekstra adalah bagian dari Mando TV Pro, pembelian sekali bayar yang opsional.'),
+      ('Apakah Mando TV gratis di iPhone?', 'Unduhannya gratis, tanpa iklan. Remote dasar gratis, begitu juga membuka aplikasi dan mengganti input. Fitur ekstra seperti touchpad, perintah suara, dan rutinitas adalah bagian dari Mando TV Pro, pembelian sekali bayar.'),
       ('Apakah berfungsi di iPad?', 'Ya. Aplikasi yang sama berjalan di iPhone dan iPad.'),
       ('Apakah aplikasi remote untuk iPhone butuh Bluetooth atau pemancar inframerah?', 'Tidak di iPhone. iPhone tidak punya pemancar inframerah, jadi kontrol inframerah tidak tersedia di sana, dan opsi Bluetooth hanya untuk Android 9 atau lebih baru, bukan untuk iPhone. Di iPhone, Mando TV mengontrol Smart TV serta Apple TV (beta) lewat Wi-Fi di rumah kamu.'),
     ]),
@@ -872,11 +883,11 @@ GUIAS += [
       'Pakai tombol arah, OK, Kembali, Beranda, tombol putar, dan keyboard untuk pencarian.',
     ],
     extra=[
-      ('Perangkat Fire TV yang didukung', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube, dan TV dengan Fire TV bawaan. Dukungannya baru, dan sejauh ini kami baru bisa menguji beberapa perangkat nyata. Kalau ada yang tidak berfungsi sesuai harapan, tulis model kamu lewat halaman Bantuan.'),
+      ('Perangkat Fire TV yang didukung', 'Fire TV Stick, Fire TV Stick 4K, Fire TV Cube, dan TV dengan Fire TV bawaan, seperti TV Amazon Fire TV Edition dan beberapa model Hisense. Dukungannya baru, dan sejauh ini kami baru bisa menguji beberapa perangkat nyata. Kalau ada yang tidak berfungsi sesuai harapan, tulis model kamu lewat halaman Bantuan.'),
       ('Menyalakan Fire TV', 'Mando TV tidak menyalakan Fire TV lewat jaringan. Nyalakan TV dengan tombol daya di TV: Fire TV Stick atau Cube yang terpasang biasanya ikut bangun lewat HDMI-CEC, dan pada TV dengan Fire TV bawaan, TV itu sendiri adalah Fire TV. Setelah itu kamu mengontrolnya dari HP.'),
       ('Kalau Fire TV kamu tidak muncul', 'Pastikan kedua perangkat berada di Wi-Fi yang sama dan Fire TV dalam keadaan aktif. Di iPhone, izinkan "Jaringan Lokal" untuk Mando TV di Pengaturan. Lihat [HP tidak menemukan TV](@not-found).'),
       ('Sama sekali tidak punya remote?', 'Fire TV harus menampilkan PIN di layar, jadi TV dan Fire TV harus menyala dan menampilkan gambar. Kalau TV berada di input yang salah, ganti dengan tombol di TV. Lihat [Ganti input tanpa remote](@hdmi).'),
-      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra.'),
+      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan.'),
     ],
     marca=None,
     faq=[
@@ -901,7 +912,7 @@ GUIAS += [
       ('Coba dulu remote TV (HDMI-CEC)', 'Banyak remote TV bisa mengontrol Fire TV Stick lewat HDMI-CEC. Kalau antarmuka Fire TV terlihat, tekan panah dan OK di remote TV. Kalau tidak terjadi apa-apa, aktifkan CEC di pengaturan TV (Anynet+ di Samsung, SIMPLINK di LG, BRAVIA Sync di Sony) dan di Fire TV aktifkan kontrol perangkat HDMI-CEC di pengaturan tampilan ("Tampilan & Suara").'),
       ('Kalau kamu mengganti Wi-Fi', 'Tanpa remote kamu tidak bisa memasukkan kata sandi Wi-Fi baru di Fire TV, tapi ada jalan keluarnya: di HP kedua, buat hotspot dengan nama dan kata sandi yang persis sama dengan Wi-Fi lama kamu. Fire TV tersambung otomatis ke hotspot itu. Sambungkan HP dengan Mando TV ke hotspot itu, pasangkan dengan PIN, lalu di Fire TV buka Pengaturan > Jaringan dan pilih Wi-Fi baru kamu. Terakhir, sambungkan juga HP kamu ke Wi-Fi yang baru.'),
       ('Memasangkan remote pengganti', 'Sebagian besar remote Fire TV baru dipasangkan dengan menahan tombol Beranda sekitar 10 detik, di dekat Fire TV. Kalau tidak berhasil, buka Pengaturan > Pengontrol & Perangkat Bluetooth > Remote Amazon Fire TV > Tambahkan remote baru. Menu ini juga bisa kamu capai dari HP dengan Mando TV.'),
-      ('Fire TV bawaan di dalam TV', 'Pada TV dengan Fire TV bawaan, langkahnya sama, karena TV itu sendiri adalah Fire TV.'),
+      ('Fire TV bawaan di dalam TV', 'Pada TV dengan Fire TV bawaan, seperti banyak model Insignia dan Toshiba, langkahnya sama, karena TV itu sendiri adalah Fire TV.'),
       ('Sebelum mulai', 'Dukungan Fire TV baru ada di Mando TV. Perbarui aplikasinya terlebih dahulu. Kalau model kamu tidak merespons sesuai harapan, tulis ke kami lewat [halaman Bantuan](@soporte) dan sebutkan modelnya.'),
       ('Gratis dan Pro', 'Remote bisa kamu unduh dan pakai gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra.'),
     ],
@@ -913,7 +924,7 @@ GUIAS += [
     ]),
   dict(clave='turn-on', corto='Menyalakan TV tanpa remote', fecha='2026-11-23',
     titulo='Menyalakan TV tanpa remote (semua merek)',
-    desc='Menyalakan TV tanpa remote: di mana letak tombolnya di Samsung, LG, TCL, Hisense, dan Sony. Plus trik HDMI-CEC dan HP.',
+    desc='Menyalakan TV tanpa remote: di mana letak tombolnya di Samsung, LG, TCL, Hisense, Sony, dan Vizio. Plus trik HDMI-CEC dan HP.',
     h1='Cara menyalakan TV tanpa remote',
     intro='Hampir semua TV masih punya tombol daya fisik. Hanya saja tersembunyi dengan baik. Berikut letaknya di setiap merek, ditambah dua cara supaya lain kali kamu tidak perlu mencarinya: HDMI-CEC dari konsol atau perangkat streaming, dan menyalakan TV dari HP lewat Wi-Fi.',
     pasos=[
@@ -924,7 +935,7 @@ GUIAS += [
       'Begitu TV menyala, atur supaya kamu tidak butuh tombol itu lagi: aktifkan HDMI-CEC dan menyalakan lewat jaringan, keduanya dijelaskan di bawah.',
     ],
     extra=[
-      ('Letak tombol daya menurut merek', 'Samsung: satu tombol kontrol atau joystick di bawah bagian tengah layar atau di belakang pada salah satu sudut bawah. LG: tombol joystick di bawah logo LG pada sebagian besar model. TCL dan Hisense: biasanya tombol kecil di bawah bagian tengah layar atau di belakang dekat salah satu sudut bawah. Sony: di belakang atau di tepi samping, di bawah dekat pinggir. Letaknya berbeda tergantung model. Kalau tidak ketemu, cari buku petunjuk dengan nomor model di stiker di bagian belakang.'),
+      ('Letak tombol daya menurut merek', 'Samsung: satu tombol kontrol atau joystick di bawah bagian tengah layar atau di belakang pada salah satu sudut bawah. LG: tombol joystick di bawah logo LG pada sebagian besar model. TCL dan Hisense: biasanya tombol kecil di bawah bagian tengah layar atau di belakang dekat salah satu sudut bawah. Sony: di belakang atau di tepi samping, di bawah dekat pinggir. Vizio: di belakang, di bawah kiri atau bawah kanan, atau di sisi. Letaknya berbeda tergantung model. Kalau tidak ketemu, cari buku petunjuk dengan nomor model di stiker di bagian belakang.'),
       ('Menyalakan TV lewat konsol atau perangkat streaming (HDMI-CEC)', 'Dengan HDMI-CEC aktif, menyalakan PlayStation, Xbox, Roku Player, Fire TV Stick, atau Chromecast juga menyalakan TV dan pindah ke input yang benar. Setiap merek menamai pengaturannya berbeda: Anynet+ di Samsung, SIMPLINK di LG, BRAVIA Sync di Sony, dan CEC di sebagian besar lainnya. Selengkapnya di [Nyalakan TV dan pindah ke HDMI konsol](@console).'),
       ('Menyalakan TV dari HP', 'Smart TV bisa dibangunkan lewat Wi-Fi kalau kamu mengizinkannya sekali, lalu Mando TV menyalakannya dari HP. Di Samsung, aktifkan "Nyalakan dengan perangkat seluler" di Pengaturan > Umum > Jaringan > Pengaturan Pakar. Di LG, aktifkan "Nyalakan TV dengan perangkat seluler" ([langkah demi langkah](@lg-on)). Di Roku TV, aktifkan "Quick Start TV" di Pengaturan > Sistem > Daya. Di Google TV dan Android TV, cari Wake on LAN atau "Nyalakan lewat jaringan" kalau model kamu punya. Ini dilakukan sekali, saat TV menyala.'),
       ('Kalau kamu tidak menemukan tombolnya', 'Beberapa TV baru menyembunyikan satu-satunya tombol dengan sangat baik sampai terasa seperti tidak ada. Cari tonjolan kecil atau area sensor cahaya di bawah layar: tombolnya sering tepat di sebelahnya. Lewat Wi-Fi, Mando TV membutuhkan TV pernah menyala dan tersambung satu kali. Inframerah adalah pengecualian: di HP Android dengan pemancar inframerah, Mando TV bisa menyalakan TV yang belum pernah diatur, asalkan HP diarahkan ke TV. Inframerah itu baru dan berfungsi dengan merek-merek di daftar kode aplikasi.'),
@@ -978,7 +989,7 @@ GUIAS += [
       ('Menyalakan TV TCL dari HP', 'Di TCL Roku TV, aktifkan "Quick Start TV" di Pengaturan > Sistem > Daya. Di TCL Google TV, cari opsi Wake on LAN, "Nyalakan lewat jaringan", atau start jarak jauh di pengaturan jaringan atau daya. Beberapa model tidak menyediakannya. Kalau begitu, nyalakan TV dengan tombol daya fisik, biasanya di bawah bagian tengah atau di belakang.'),
       ('Kalau TCL kamu tidak muncul', 'Pastikan HP dan TV berada di Wi-Fi yang sama. Router dengan jaringan 2,4 GHz dan 5 GHz yang terpisah bisa membuat perangkat saling tidak terlihat. Di iPhone, izinkan "Jaringan Lokal" untuk Mando TV di Pengaturan. Kamu juga bisa menambahkan TV dengan memasukkan alamat IP-nya. Baca [HP tidak menemukan TV](@not-found).'),
       ('Selengkapnya tentang TCL kamu', 'Untuk TCL dengan Roku TV, lihat [Aplikasi remote Roku](@roku); untuk TCL dengan Google TV atau Android TV, lihat [Aplikasi remote Android TV](@android).'),
-      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra.'),
+      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan.'),
     ],
     marca=None,
     faq=[
@@ -1003,7 +1014,7 @@ GUIAS += [
       ('Hisense dengan Fire TV', 'Dukungan Fire TV baru ada di Mando TV. Perbarui aplikasi ke versi terbaru dari toko kamu. Cara pemasangan dengan PIN dijelaskan di halaman [Aplikasi remote Fire TV](@firetv). Kalau ada yang tidak berfungsi sesuai harapan, tulis ke kami lewat halaman Bantuan dan sebutkan model kamu.'),
       ('Hisense dengan VIDAA', 'Sebagian besar model VIDAA berfungsi: tombol, volume, keyboard, aplikasi, dan input. Beberapa model VIDAA yang lebih baru hanya menerima aplikasi Hisense resmi. Mando TV mendeteksinya saat menyambung dan memberi tahu kamu dengan jelas, bukannya gagal diam-diam. Dalam kasus itu, aplikasi Hisense untuk model kamu, tombol di TV, atau remote asli adalah jalan yang tepat.'),
       ('Menyalakan Hisense dari HP', 'Di Hisense Roku TV, aktifkan "Quick Start TV" di Pengaturan > Sistem > Daya. Di Google TV, cari opsi Wake on LAN atau "Nyalakan lewat jaringan". Kalau tidak ada, pakai tombol daya di TV.'),
-      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Mando TV Pro adalah pembelian sekali bayar yang opsional untuk fitur ekstra.'),
+      ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan.'),
     ],
     marca=None,
     faq=[
