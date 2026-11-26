@@ -29,7 +29,10 @@ https://claude.ai/code/artifact/da7ed0b5-4c62-468f-848d-c3e2d68dfecd
   correctamente") e indexación pedida de `/es/`, `/`, `/android-tv-remote/`, `/es/control-remoto-android-tv/` (estaba
   "Descubierta, actualmente sin indexar"), `/pt/`, `/de/` y `/fr/`.
 - **Pendiente**: pedir indexación de las otras portadas y páginas de Android TV en los próximos días (cupo diario).
-  Bing Webmaster Tools sin sesión iniciada en Chrome: falta reenviar ahí el sitemap (Bing ya tiene las URL por IndexNow).
+- **Bing Webmaster Tools: sitemap reenviado el 26-nov ~12:55** (el fundador inició sesión en el navegador integrado).
+  Respuesta de Bing: "Success: https://mandotv.app/sitemap.xml is successfully submitted for processing". Leído de
+  vuelta: último envío 26-nov-2026, estado "Processing", 223 URL del envío anterior (446 descubiertas en total).
+  Sin avisos: 0 sitemaps con errores, Recomendaciones sin datos. Rendimiento en Bing al 24-nov: 1 clic y 13 impresiones.
 - No hecho a propósito: Web 5 (prueba gratis), Web 6 y 7 (tanda 2), "Early access" de Play, precios en el HTML.
 
 ## 26-nov: CSP y HSTS con subdominios en Cloudflare (HECHO, pedido del fundador)
