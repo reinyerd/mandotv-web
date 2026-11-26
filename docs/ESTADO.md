@@ -1,10 +1,9 @@
 # Estado de la web mandotv.app
 
-## 26-nov: tanda 1 de la evaluación de las 4 IA (LISTA, ESPERA EL SÍ DEL FUNDADOR; sin publicar)
+## 26-nov: tanda 1 de la evaluación de las 4 IA (PUBLICADA con el sí del fundador, `main` = 33f29fad)
 
 Debate: `ai-company/debates/2026-11-26-evaluacion-de-la-app-y-la-web-pantalla-por-pantall/` (09-claude-cierre.md).
-Trabajo en la rama `tanda1-web` (worktree `C:\server\htdocs\mandotv-web-tanda1`), **sin fusionar en `main` ni subir**
-hasta el sí: así ninguna otra sesión lo publica por accidente. Comparación lado a lado para el fundador:
+Se preparó en una rama aparte y se publicó con el sí del fundador. Comparación lado a lado para el fundador:
 https://claude.ai/code/artifact/da7ed0b5-4c62-468f-848d-c3e2d68dfecd
 - **Web 2, barra**: la píldora blanca "Contacto" pasa a "Descargar" en las 1063 páginas; Contacto queda como texto.
   Lo hace `pie_firma.py` (`barra_descargar`, corre en cada commit), así los generadores no se tocaron. En las
@@ -23,8 +22,14 @@ https://claude.ai/code/artifact/da7ed0b5-4c62-468f-848d-c3e2d68dfecd
 - Comprobado en local (servidor con CSP): 30/30 portadas con botón de precio, Fire TV y VIDAA; 30/30 páginas de
   Android TV con Google TV en título y H1; 0 páginas con la barra vieja; JSON-LD válido; `csp.py --verificar` OK;
   capturas en escritorio, celular, movimiento reducido, ja y ar. hu: meta description de 165 caracteres (algo larga).
-- **Al recibir el sí**: commit en la rama, fusionar en `main`, push, borrar rama y worktree (`git cherry`), IndexNow,
-  sitemap en Search Console y Bing, pedir indexación (es, en y las páginas de Android TV primero).
+- **Publicado (26-nov, con el sí)**: fusionado en `main` y subido; rama `tanda1-web` y worktree borrados (`git cherry`
+  vacío). Comprobado en vivo: 60/60 páginas (30 portadas y 30 de Android TV) con el cambio; en `/es/` los botones de
+  la barra, del precio y el principal van a la misma tienda; CSP sin bloqueos; HSTS y cabeceras OK.
+- IndexNow: aceptó las 1063 URL (HTTP 200). Search Console: sitemap reenviado ("Se ha enviado el sitemap
+  correctamente") e indexación pedida de `/es/`, `/`, `/android-tv-remote/`, `/es/control-remoto-android-tv/` (estaba
+  "Descubierta, actualmente sin indexar"), `/pt/`, `/de/` y `/fr/`.
+- **Pendiente**: pedir indexación de las otras portadas y páginas de Android TV en los próximos días (cupo diario).
+  Bing Webmaster Tools sin sesión iniciada en Chrome: falta reenviar ahí el sitemap (Bing ya tiene las URL por IndexNow).
 - No hecho a propósito: Web 5 (prueba gratis), Web 6 y 7 (tanda 2), "Early access" de Play, precios en el HTML.
 
 ## 26-nov: CSP y HSTS con subdominios en Cloudflare (HECHO, pedido del fundador)
