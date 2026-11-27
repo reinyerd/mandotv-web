@@ -19,7 +19,7 @@ BLOQUE = re.compile(r'  <div class="contenedor">\n    <section id="demo".*?</sec
 FUNCIONES = '  <div class="contenedor">\n    <section id="funciones"'
 FIGURA_VIDEO = re.compile(r'      <figure class="video-premium.*?</figure>\n', re.S)
 # Video "Mando TV in action" de cada idioma en YouTube (canal @mandotvapp, ID de cada uno en
-# C:/server/htdocs/mandotv-videos/out/youtube/ids.tsv). Si un idioma no está aquí, su video queda sin enlace a YouTube.
+# la lista de IDs del estudio de video). Si un idioma no está aquí, su video queda sin enlace a YouTube.
 YT = {'en': 'RyhvFz0ZUDk', 'es': 'Q_xBRIiufgk', 'ar': 'Vxk8IQPLSWg', 'de': 'AhRW1BrGioA', 'el': 'x5vlufspkpI',
       'fr': 'XUnpE7703os', 'hu': 'WuKjH4Euzj8', 'it': '5Ss8KlwbeG4', 'ja': 'csRLl6Rj2lc', 'ko': 'WrpGsXpAN2c',
       'ms': '_rR1d8fcjvs', 'no': 'km_ohKVyhnk', 'nl': 'yh7euESWfdU', 'pl': 'VKcvvg1wkKA', 'pt': 'pUOjCuRVeLU',
@@ -27,7 +27,7 @@ YT = {'en': 'RyhvFz0ZUDk', 'es': 'Q_xBRIiufgk', 'ar': 'Vxk8IQPLSWg', 'de': 'AhRW
       'uk': 'Db0iqUvaiCw', 'vi': '0V149Qm08Sw', 'zh': 'To1FTqE888E', 'zh-hant': 'titOlDxNBQY', 'cs': 'r8Ry2sSFprs',
       'da': 'Sw6PfIEHJXA', 'fi': 'wy8CNHwThao', 'he': 'z1DkNeGVCVU', 'hi': 'I1gihsq_FXE', 'id': 'pj6gauxMMXk'}
 # Título y descripción de YouTube de cada idioma, para el VideoObject (mismos textos que en YouTube).
-VIDEOS_TEXTOS = 'C:/server/htdocs/mandotv-videos/idiomas'
+VIDEOS_TEXTOS = os.environ.get('MANDOTV_VIDEOS_TEXTOS', '')  # carpeta con los textos de YouTube de cada idioma
 LD = re.compile(r'(<script type="application/ld\+json">\n.*?)(\n    \]\n  \}\n  </script>)', re.S)
 VIDEO_LD = re.compile(r',\n      \{\n        "@type": "VideoObject".*?\n      \}(?=\n    \]\n  \}\n  </script>)', re.S)
 YT_ENLACE = re.compile(r'<span class="video-yt">.*?</span>')

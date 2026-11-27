@@ -1,6 +1,6 @@
 # Guías en inglés para búsquedas de EE. UU. (solo en inglés, sin gemelas en otros idiomas).
 # Las usa generar_en.py (se añaden a GUIAS); las rutas viven en idiomas_sitio.py.
-# Hechos comprobados contra el código de la app (C:\server\htdocs\control):
+# Hechos comprobados contra el código de la app:
 #   - Marcas con driver: LG webOS, Samsung (Tizen y 2010-2015), Roku, Android TV / Google TV, Fire TV (PIN de 4 dígitos,
 #     lib/drivers/fire_tv.dart, desde la 1.0.8) y Hisense VIDAA (lib/drivers/vidaa.dart, publicado desde la 1.0.9:
 #     "la mayoría de los modelos; algunos VIDAA recientes solo aceptan la app oficial de Hisense y la app lo avisa").

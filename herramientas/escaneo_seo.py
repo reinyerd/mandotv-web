@@ -7,7 +7,7 @@ Uso: python -I herramientas/escaneo_seo.py [--vivo] [--estricto]
   --estricto: avisa desde 151 caracteres en la descripción y 66 en el título (nuestro tope al escribir), en vez de
   los 160 y 70 de Bing.
 Los avisos de "corto" en chino (zh, zh-hant) son falsos positivos: en chino cada carácter dice más.
-Nació el 26-nov-2026 (escaneo de la sesión de ai-company); detalle en docs/ESTADO.md.
+Nació el 26-nov-2026.
 """
 import concurrent.futures
 import json

@@ -16,7 +16,7 @@ import idiomas_sitio  # noqa: E402
 URL = 'https://mandotv.app'
 TX = json.load(open(os.path.join(AQUI, 'video_guias_textos.json'), encoding='utf-8'))['web']
 DEMO = json.load(open(os.path.join(AQUI, 'demo_textos.json'), encoding='utf-8'))['web']
-VIDEOS_TEXTOS = 'C:/server/htdocs/mandotv-videos/idiomas'
+VIDEOS_TEXTOS = os.environ.get('MANDOTV_VIDEOS_TEXTOS', '')  # carpeta con los textos de YouTube de cada idioma
 # Carpeta web -> archivo de textos de YouTube del estudio de video
 YT_TXT = {'no': 'nb', 'zh-hant': 'zh_Hant'}
 # Claves de PAGINAS por carpeta web

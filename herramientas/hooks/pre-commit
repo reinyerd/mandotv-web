@@ -2,11 +2,19 @@
 # Antes de cada commit: actualiza la versión de css, js e imágenes en todas las páginas (ver herramientas/versionar.py).
 cd "$(git rev-parse --show-toplevel)" || exit 1
 # El repositorio es público: si lo que se va a subir parece una clave, una contraseña o una llave privada, no se sube.
-# (Revisión de seguridad del 25-nov.) Si es un falso positivo, revisarlo y hacer el commit con --no-verify.
-claves='(AIza[0-9A-Za-z_-]{35}|AKIA[0-9A-Z]{16}|gh[pousr]_[0-9A-Za-z]{36}|github_pat_[0-9A-Za-z_]{40,}|sk_live_[0-9A-Za-z]{20,}|rk_live_[0-9A-Za-z]{20,}|sk-ant-[0-9A-Za-z_-]{20,}|sk-(proj-)?[0-9A-Za-z_-]{32,}|tvly-[0-9A-Za-z_-]{20,}|fc-[0-9a-f]{32}|(pk|sk)1_[0-9a-f]{40,}|xox[baprs]-[0-9A-Za-z-]{10,}|hooks\.slack\.com/services/|discord(app)?\.com/api/webhooks/|-----BEGIN [A-Z ]*PRIVATE KEY-----|"private_key":)'
-if git diff --cached -U0 --no-color -- . ':!herramientas/hooks/pre-commit' | grep '^+' | grep -v '^+++' | grep -Eq "$claves"; then
+# (Revisión de seguridad del 25-nov; patrones ampliados el 27-nov, mismo detector que la app.) Si es un falso positivo, revisarlo y hacer el commit con --no-verify.
+claves='(AIza[0-9A-Za-z_-]{35}|AKIA[0-9A-Z]{16}|gh[pousr]_[0-9A-Za-z]{36}|github_pat_[0-9A-Za-z_]{40,}|sk_live_[0-9A-Za-z]{20,}|rk_live_[0-9A-Za-z]{20,}|sk-ant-[0-9A-Za-z_-]{20,}|sk-(proj-)?[0-9A-Za-z_-]{32,}|tvly-[0-9A-Za-z_-]{20,}|fc-[0-9a-f]{32}|(pk|sk)1_[0-9a-f]{40,}|xox[baprs]-[0-9A-Za-z-]{10,}|hooks\.slack\.com/services/|discord(app)?\.com/api/webhooks/|-----BEGIN [A-Z ]*PRIVATE KEY-----|"private_key":|[0-9A-Za-z]{3}8Q~[0-9A-Za-z_.~-]{30,}|eyJ[0-9A-Za-z_-]{20,}\.eyJ[0-9A-Za-z_-]{20,}\.[0-9A-Za-z_-]{20,}|^\+[[:space:]]*(storePassword|keyPassword)=.+)'
+cambio() { git diff --cached -U0 --no-color -- . ':!herramientas/hooks/pre-commit' | grep '^+' | grep -v '^+++'; }
+if cambio | grep -Eq "$claves"; then
   echo "pre-commit: el cambio parece contener una clave o credencial; no se sube (el repositorio es público)."
-  git diff --cached -U0 --no-color -- . ':!herramientas/hooks/pre-commit' | grep '^+' | grep -v '^+++' | grep -Eo "$claves" | cut -c1-8 | sed 's/$/... (revisar)/'
+  cambio | grep -Eo "$claves" | cut -c1-8 | sed 's/$/... (revisar)/'
+  exit 1
+fi
+# Archivos que nunca van al repositorio aunque alguien los agregue a la fuerza (git add -f).
+prohibidos=$(git diff --cached --name-only --diff-filter=AM | grep -Ei '(^|/)(\.env(\..*)?|key\.properties|.*\.(p8|p12|pfx|pem|key|jks|keystore|mobileprovision|har)|.*service-account.*\.json|.*credentials.*\.json|.*client_secret.*\.json)$')
+if [ -n "$prohibidos" ]; then
+  echo "pre-commit: estos archivos son de claves y no van en git:"
+  printf '%s\n' "$prohibidos"
   exit 1
 fi
 # Primero el cierre del pie (firma, Descargar, copyright e idioma) en todas las páginas (ver herramientas/pie_firma.py).

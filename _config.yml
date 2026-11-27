@@ -1,4 +1,7 @@
 # GitHub Pages (Jekyll): herramientas/ son scripts internos y docs/ son notas internas: no se publican en la web.
+# .well-known/ (security.txt, RFC 9116) se publica a propósito: Jekyll omite por defecto las carpetas que empiezan con punto.
 exclude:
   - herramientas
   - docs
+include:
+  - .well-known

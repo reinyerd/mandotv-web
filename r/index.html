@@ -179,7 +179,8 @@
     // Lee la rutina del fragmento (#...), que nunca se envía a ningún servidor. Se muestra solo con textContent.
     (function () {
       var MAX_TEXTO = 4000, MAX_NOMBRE = 24, MAX_PASO = 80, MAX_PASOS = 10;
-      var prohibidos = /[\u0000-\u001F\u007F-\u009F\u202A-\u202E\u2066-\u2069]/;
+      // Mismas reglas que /m/: controles, invisibles, bidi, separadores de linea y etiquetas U+E0000-E007F (ocultan o suplantan texto).
+      var prohibidos = /[\u0000-\u001F\u007F-\u009F\u00AD\u061C\u180E\u200B\u200C\u200E\u200F\u2028\u2029\u202A-\u202E\u2060-\u2064\u2066-\u2069\uFEFF\uFFF9-\uFFFB\u{E0000}-\u{E007F}]/u;
       function leer(hash) {
         try {
           var t = (hash || '').replace(/^#/, '');

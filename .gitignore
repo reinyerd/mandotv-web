@@ -1,4 +1,5 @@
 .taste-skill/
+.claude/
 __pycache__/
 # Nunca subir claves ni credenciales (el repositorio es público)
 .env
@@ -12,6 +13,19 @@ __pycache__/
 *service-account*.json
 *credentials*.json
 *client_secret*.json
+*.pfx
+*.cer
+*.mobileprovision
+*.har
+*.sqlite
+*.log
+id_rsa*
+.npmrc
+.netrc
+.dev.vars
+wrangler.toml
+google-services.json
+GoogleService-Info.plist
 
 # Capturas y registros de pruebas con Playwright
 .playwright-mcp/

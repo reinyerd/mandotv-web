@@ -1,0 +1,5 @@
+Contact: mailto:hola@mandotv.app
+Expires: 2027-11-26T00:00:00.000Z
+Preferred-Languages: en, es
+Canonical: https://mandotv.app/.well-known/security.txt
+Policy: https://github.com/reinyerd/mandotv-web/blob/main/SECURITY.md
