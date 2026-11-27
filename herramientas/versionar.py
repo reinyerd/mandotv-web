@@ -30,6 +30,13 @@ FUERA_DEL_SITEMAP = {'404.html'}  # además, todo lo que lleve noindex y las car
 CARPETAS_FUERA = {'herramientas', 'r', 'app', '.git', '.taste-skill'}
 
 
+def paginas():
+    """Todas las páginas del sitio, sin carpetas ocultas (.git, .claude con worktrees de otras sesiones, etc.)."""
+    for p in sorted(RAIZ.rglob('*.html')):
+        if not any(parte.startswith('.') for parte in p.relative_to(RAIZ).parts[:-1]):
+            yield p
+
+
 def huella(archivo):
     if archivo not in _cache:
         _cache[archivo] = hashlib.sha256(archivo.read_bytes()).hexdigest()[:10]
@@ -80,7 +87,7 @@ def url_de(pagina):
 
 
 def paginas_indexables():
-    for p in sorted(RAIZ.rglob('*.html')):
+    for p in paginas():
         rel = p.relative_to(RAIZ)
         if rel.parts[0] in CARPETAS_FUERA or rel.as_posix() in FUERA_DEL_SITEMAP:
             continue
@@ -139,7 +146,7 @@ def sitemap():
 
 
 def main():
-    cambiadas = [p.relative_to(RAIZ).as_posix() for p in sorted(RAIZ.rglob('*.html')) if '.git' not in p.parts and versionar(p)]
+    cambiadas = [p.relative_to(RAIZ).as_posix() for p in paginas() if versionar(p)]
     if sitemap():
         cambiadas.append('sitemap.xml')
     for p in cambiadas:
