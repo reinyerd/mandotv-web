@@ -1552,7 +1552,7 @@ body:has(> .escena) {
     mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
 
   /* Secciones: mismo ritmo vertical y textos claros */
-  & section { padding-top: clamp(96px, 10vw, 150px); }
+  & section { padding-top: clamp(80px, 8vw, 120px); }
   & .franja { margin-top: clamp(40px, 5vw, 72px); }
   & .titulo-seccion { color: var(--perla); text-wrap: balance; }
   & .intro, & .nota, & .precio-accion p, & .video-premium figcaption, & .demo-intro { color: var(--texto-2); }
@@ -1728,4 +1728,200 @@ body:has(> .escena) {
   body:has(> .escena) .avisos { left: 10px; right: 10px; bottom: 10px; max-width: none; }
   body:has(> .escena) .aviso-cookies { padding: 12px 14px; gap: 10px; }
   body:has(> .escena) .aviso-cookies p { font-size: 13px; }
+}
+
+/* =====================================================================================================================
+   Modo claro de la portada (27-nov, pedido del fundador: "los dos modos, light y dark, pero por defecto el dark").
+   El oscuro sigue siendo el de siempre; el claro se elige con el botón sol/luna de la barra y se recuerda (tema.js pone
+   data-tema="claro" en <html> antes de pintar, sin parpadeo). Lenguaje de Apple en claro: gris perla #f5f5f7, tarjetas
+   blancas con una sombra fina, la misma luz de la marca detrás del teléfono y el teléfono con la app en tema claro.
+   Quedan oscuros a propósito: la demostración y las piezas (son la app) y el pie (ancla de la página).
+   ===================================================================================================================== */
+:root[data-tema="claro"] { background: #f5f5f7; } /* rebote del scroll en claro, arriba y abajo */
+:root[data-tema="claro"] body:has(> .escena) {
+  --fondo-claro: #f5f5f7;
+  --texto-2: #565d6e;
+  --tarjeta: #fff;
+  --tarjeta-filo: inset 0 0 0 1px rgba(17, 21, 34, .06);
+  --tarjeta-sombra: 0 1px 2px rgba(17, 21, 34, .04), 0 18px 40px -24px rgba(17, 21, 34, .22);
+  --vidrio-fondo: var(--tarjeta);
+  --vidrio-filo: var(--tarjeta-filo), var(--tarjeta-sombra);
+  color-scheme: light; background: var(--fondo-claro); color: var(--tinta);
+
+  /* Portada: perla con la luz de la marca, más suave que en oscuro */
+  & .escena { background-color: var(--fondo-claro); color: var(--tinta); }
+  & .escena::before { opacity: .3; }
+  & .escena::after { opacity: .16; }
+  & .escena :focus-visible { outline-color: var(--tinta); }
+  & .escaparate::before { opacity: .42; }
+  & .sombra-suelo { background: radial-gradient(closest-side, rgba(17, 21, 34, .28), rgba(17, 21, 34, 0)); }
+  & .boton-barra { background: var(--tinta); color: #fff; }
+  & .antetitulo, & .bajada, & .precio span, & .ficha #marca-nota, & .boton-nota, & .pruebas li { color: var(--texto-2); }
+  & .pruebas li::before { background: var(--texto-2); }
+  & .ficha h1, & .precio strong, & .etiqueta-grupo, & .vitrina-cuenta { color: var(--tinta); }
+  & #boton-principal { background: var(--tinta); color: #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .18) inset, 0 14px 34px -14px color-mix(in srgb, var(--marca) 75%, transparent); }
+  & #boton-principal:hover { background: #000; }
+  & .escena .boton.claro { color: var(--tinta); }
+  & .escena .boton.claro:hover { color: #000; }
+  & .ficha .tienda { background: rgba(255, 255, 255, .72); color: var(--tinta); box-shadow: inset 0 0 0 1px rgba(17, 21, 34, .1);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+  & .ficha .tienda:hover { background: #fff; }
+  & .vitrina-barras i::after { background: var(--tinta); }
+  & .ficha a.pro-enlace .pro-precio, & .pro-precio { background: rgba(17, 21, 34, .05); color: var(--tinta); box-shadow: inset 0 0 0 1px rgba(17, 21, 34, .1); }
+  & .ficha a.pro-enlace:hover .pro-precio { background: rgba(17, 21, 34, .09); }
+  & .redondo { color: var(--tinta); background: color-mix(in srgb, var(--marca) 14%, rgba(255, 255, 255, .7)); }
+
+  /* Banda de marcas: blanca, letras en tinta */
+  & .banda { background: #fff; box-shadow: inset 0 1px 0 rgba(17, 21, 34, .06), inset 0 -1px 0 rgba(17, 21, 34, .06); }
+  & .banda li { color: var(--tinta); }
+
+  /* Secciones */
+  & .titulo-seccion, & section a:not(.boton), & .lista-funciones b, & summary, & .correo { color: var(--tinta); }
+  & section .boton, & .contacto .boton { background: var(--tinta); color: #fff; }
+  & .franja { background: radial-gradient(70% 60% at 50% 0%, color-mix(in srgb, var(--marca) 9%, transparent), transparent 70%), #ebecf1;
+    color: var(--tinta); box-shadow: none; }
+  & .pasos li, & .promesa li, & #marcas li a, & .plan { color: var(--tinta); }
+  & .tec-icono { color: #fff; }
+  & .tec-estado.ya { background: rgba(17, 21, 34, .06); color: var(--tinta); box-shadow: inset 0 0 0 1px rgba(17, 21, 34, .12); }
+  & .pasos-dos li { background: radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--magenta) 14%, transparent), transparent 65%), var(--tarjeta);
+    color: var(--tinta); }
+  & .pasos-dos .boton { background: var(--tinta); color: #fff; }
+  & .plan:not(.pro) li { color: #2c3242; }
+  & .plan li::before { background: var(--tinta); }
+  & .plan .mas { background: rgba(17, 21, 34, .06); color: var(--tinta); box-shadow: inset 0 0 0 1px rgba(17, 21, 34, .12); }
+  & .plan .mas:hover { background: rgba(17, 21, 34, .1); }
+  /* Pro sigue siendo la tarjeta oscura con la luz de la marca: la elegida resalta sobre lo claro */
+  & .plan.pro { color: var(--perla); }
+  & .plan.pro li { color: #e3e6ee; }
+  & .plan.pro li::before { background: var(--perla); }
+  & .plan.pro .mas { background: rgba(255, 255, 255, .12); color: var(--perla); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16); }
+  & .plan.pro .mas:hover { background: rgba(255, 255, 255, .2); }
+  & .promesa li::before { box-shadow: inset 0 0 0 7px #fff; }
+  & #marcas li a:hover { background: #fff; box-shadow: var(--tarjeta-filo), 0 22px 44px -22px rgba(17, 21, 34, .3); }
+  & .preguntas { border-top-color: rgba(17, 21, 34, .12); }
+  & details { border-bottom-color: rgba(17, 21, 34, .12); }
+  & #funciones::before { opacity: .1; }
+  & #precio::before { opacity: .12; }
+  & #privacidad::before { opacity: .08; }
+
+  /* La demostración (con sus pasos) es la app: queda oscura como el video */
+  & .video-play { box-shadow: 0 10px 30px -12px rgba(17, 21, 34, .4); }
+
+  /* Barra fija, idioma, menú y avisos: vidrio claro */
+  & .barra-fija { background: rgba(247, 248, 251, .9); -webkit-backdrop-filter: saturate(1.4) blur(20px); backdrop-filter: saturate(1.4) blur(20px); color: var(--tinta); box-shadow: 0 1px 0 rgba(17, 21, 34, .08); }
+  & .barra-fija a.boton { background: var(--tinta); color: #fff; }
+  & .barra-idioma ul { background: rgba(255, 255, 255, .94); border-color: rgba(17, 21, 34, .08); box-shadow: 0 28px 60px -18px rgba(17, 21, 34, .35); }
+  & .barra nav .barra-idioma li a { color: var(--tinta); }
+  & .barra nav .barra-idioma li a:hover { background: rgba(17, 21, 34, .05); }
+  & .barra nav .barra-idioma li a[aria-current]::after { color: var(--magenta); }
+  & .franja-idioma { background: #e9eaef; color: var(--tinta); box-shadow: inset 0 -1px 0 rgba(17, 21, 34, .08); }
+  & .franja-idioma .aviso-idioma p { color: #3c4252; }
+  & .franja-idioma .aviso-idioma .boton { background: var(--tinta); color: #fff; }
+  & .franja-idioma .aviso-idioma-cerrar:hover { background: rgba(17, 21, 34, .08); }
+  & .franja-idioma .aviso-idioma :focus-visible { outline-color: var(--tinta); }
+  & .aviso-idioma, & .aviso-cookies { background: rgba(255, 255, 255, .96); color: var(--tinta); border-color: rgba(17, 21, 34, .08);
+    box-shadow: inset 0 0 0 1px rgba(17, 21, 34, .08), 0 24px 60px -20px rgba(17, 21, 34, .35); }
+  & .aviso-idioma .boton, & .aviso-cookies .boton { background: var(--tinta); color: #fff; }
+  & .aviso-idioma :focus-visible, & .aviso-cookies :focus-visible { outline-color: var(--tinta); }
+}
+
+/* Botón de tema en la barra (sol en oscuro, luna en claro). Mismo vidrio que el botón de idioma: toma el color del texto. */
+.barra-tema {
+  display: inline-grid; place-items: center; width: 36px; height: 36px; margin: 0; padding: 0; flex: none;
+  border: 1px solid color-mix(in srgb, currentColor 24%, transparent); border-radius: 999px;
+  background: color-mix(in srgb, currentColor 7%, transparent); color: inherit; cursor: pointer;
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: background-color .2s, border-color .2s;
+}
+.barra-tema[hidden] { display: none; }
+.barra-tema:hover { background: color-mix(in srgb, currentColor 13%, transparent); border-color: color-mix(in srgb, currentColor 40%, transparent); }
+.barra-tema:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.barra-tema svg { width: 18px; height: 18px; grid-area: 1 / 1; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.barra-tema .ico-luna, :root[data-tema="claro"] .barra-tema .ico-sol { display: none; }
+:root[data-tema="claro"] .barra-tema .ico-luna { display: block; }
+/* Zona táctil de 44 px sin agrandar el círculo */
+.barra-tema { position: relative; }
+.barra-tema::after { content: ""; position: absolute; inset: -4px; }
+
+/* Cierre final de la portada (27-nov, jurado): el ícono de la app, una frase y el botón de descarga, centrados, con la
+   luz de la marca detrás. El botón va a la misma tienda que el principal (app.js). */
+body:has(> .escena) .cierre {
+  position: relative; isolation: isolate; display: grid; justify-items: center; text-align: center;
+  padding-bottom: clamp(96px, 10vw, 150px);
+}
+body:has(> .escena) .cierre::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; left: 50%; top: 40%; width: min(900px, 100vw); height: 520px;
+  translate: -50% -50%; border-radius: 50%; filter: blur(40px); opacity: .32;
+  background: radial-gradient(closest-side, var(--magenta), color-mix(in srgb, var(--violeta) 60%, transparent) 60%, transparent);
+}
+body:has(> .escena) .cierre-icono {
+  width: 88px; height: 88px; margin-bottom: 28px; border-radius: 22px;
+  box-shadow: 0 24px 60px -18px var(--magenta), 0 0 0 1px rgba(255, 255, 255, .1);
+}
+body:has(> .escena) .cierre .titulo-seccion { max-width: 16ch; margin-inline: auto; }
+body:has(> .escena) .cierre .intro { max-width: 44ch; margin: 16px auto 0; }
+body:has(> .escena) .cierre .boton { margin-top: 32px; min-width: 220px; justify-content: center; }
+:root[data-tema="claro"] body:has(> .escena) .cierre::before { opacity: .16; }
+:root[data-tema="claro"] body:has(> .escena) .cierre-icono { box-shadow: 0 24px 60px -20px color-mix(in srgb, var(--magenta) 70%, transparent), 0 0 0 1px rgba(17, 21, 34, .06); }
+/* Barra en el celular con el botón de tema: todo en una línea, sin partir "Mando TV" (27-nov). Hasta 440 px (alemán y
+   ucraniano tienen el Descargar más largo) el botón de idioma queda solo con el globo (su nombre sigue en aria-label). */
+@media (max-width: 560px) {
+  .barra .logo { white-space: nowrap; flex: none; }
+  .barra nav { gap: 8px; }
+  .barra .boton-barra { padding: 8px 14px; }
+}
+@media (max-width: 440px) {
+  .barra-idioma-boton { width: 36px; padding: 0; justify-content: center; }
+  .barra-idioma-boton span { display: none; }
+  .barra .logo { font-size: 0; gap: 0; } /* solo el ícono; el nombre queda en su aria-label y en el alt */
+}
+
+/* ---------- Jurado ronda 3 (27-nov): arreglos sin textos nuevos ---------- */
+body:has(> .escena) {
+  /* El teléfono es el protagonista también en oscuro: filo de luz y halo de la marca detrás */
+  & .escena .telefono {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .32), inset 0 0 0 2.2px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .16),
+      0 0 90px -6px color-mix(in srgb, var(--marca) 55%, transparent), 0 70px 110px -36px rgba(0, 0, 0, .9);
+  }
+  /* Un solo acento de marca en los puntos de la promesa de privacidad, en los dos temas */
+  & .promesa li::before { background: var(--degradado-marca); }
+  /* Banda de marcas: fundido más largo en los bordes, sin letras cortadas */
+  & .banda { -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+  /* Preguntas al ancho de la grilla (las respuestas mantienen su largo de línea legible) */
+  & .preguntas { max-width: none; }
+  /* Cierre final pegado al pie, sin hueco */
+  & .cierre { padding-bottom: clamp(72px, 8vw, 112px); }
+  & .pie { margin-top: 0; }
+}
+:root[data-tema="claro"] body:has(> .escena) .escena .telefono {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .32), inset 0 0 0 2.2px rgba(0, 0, 0, .45), 0 0 0 1px rgba(0, 0, 0, .7),
+    0 60px 100px -40px rgba(17, 21, 34, .55), 0 24px 44px -26px rgba(17, 21, 34, .45);
+}
+@media (max-width: 560px) {
+  body:has(> .escena) .aviso-cookies { padding: 10px 12px; gap: 8px; }
+  body:has(> .escena) .aviso-cookies p { font-size: 12.5px; line-height: 1.4; }
+  body:has(> .escena) .aviso-cookies .boton { min-height: 44px; font-size: 14px; }
+}
+/* Pie claro en modo claro: la página entera en un solo tema, sin corte negro al final */
+:root[data-tema="claro"] body:has(> .escena) {
+  & .pie { background: #ebecf1; color: var(--tinta); border-top-color: rgba(17, 21, 34, .08); }
+  & .pie::before { opacity: .08; }
+  & .pie-marcas a, & .pie-marcas a:hover { color: #4a5060; }
+  & .pie-marcas a:hover, & .pie-marcas li:nth-child(-n+4) a { color: var(--tinta); }
+  & .pie-enlaces a, & .enlace-cookies, & .pie-logo { color: var(--tinta); }
+  & .pie-enlaces a:hover, & .enlace-cookies:hover { color: #000; }
+  & .pie-enlaces > span, & .pie small, & .pie-firma p, & .pie-accion span, & .pie-base { color: #4a5060; }
+  & .pie-redes a { color: var(--tinta); border-color: rgba(17, 21, 34, .16); background: rgba(255, 255, 255, .6); }
+  & .pie-redes a:hover { background: #fff; border-color: rgba(17, 21, 34, .28); }
+  & .pie-redes a:focus-visible, & .pie-idioma summary:focus-visible { outline-color: var(--tinta); }
+  & .pie-accion .boton { background: var(--tinta); color: #fff; }
+  & .pie-accion .boton:hover { background: #000; }
+  & .pie-idioma summary { color: var(--tinta); border-color: rgba(17, 21, 34, .16); }
+  & .pie-idioma summary:hover, & .pie-idioma[open] summary { background: rgba(17, 21, 34, .05); border-color: rgba(17, 21, 34, .28); }
+  & .pie-idioma ul { background: rgba(255, 255, 255, .96); border-color: rgba(17, 21, 34, .1); box-shadow: 0 28px 60px -18px rgba(17, 21, 34, .35); }
+  & .pie-idioma a { color: var(--tinta); }
+  & .pie-idioma a:hover { background: rgba(17, 21, 34, .05); }
+  & .pie-idioma a[aria-current]::after { color: var(--magenta); }
+  & .pie-cierre, & .pie-base { border-top-color: rgba(17, 21, 34, .1); }
 }

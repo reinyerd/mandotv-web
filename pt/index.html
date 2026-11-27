@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">Ir para o conteúdo</a>
@@ -232,6 +233,7 @@
           <a href="#precio">Preços</a>
           <a href="/pt/ajuda.html">Ajuda</a>
           <a href="#contacto">Contato</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="Modo claro" title="Modo claro"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">Baixar</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Veja o Mando TV em 25 segundos e depois o controle passo a passo.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="Reproduzir · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-pt.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-pt.webp?v=6df968ab73" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-pt-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>Entradas e som</b><span>Mude para HDMI, TV ao vivo ou o seu console. Com o Pro, na LG, você escolhe se o som sai da TV ou da soundbar.</span></li>
           <li class="aparece"><b>Ligar a TV</b><span>Se estiver desligada, o Mando TV liga pela rede e conecta sozinho.</span></li>
           <li class="aparece"><b>Do seu jeito</b><span>Claro ou escuro e vibração são grátis. Com o Pro, a cor de fundo que você gosta, o preto puro e o controle clássico.</span></li>
-          <li class="aparece"><b>Compartilhe um controle com a sua família</b><span>Monte um controle simples para a sua TV e envie como link, por exemplo pelo WhatsApp. Quem recebe abre o link no Mando TV e salva o controle; na primeira vez, a TV pede permissão para o celular dessa pessoa e ela aceita na tela da TV. O link não leva nenhuma chave nem senha da TV. O controle para convidados é grátis e tem data de expiração, de até 31 dias. Criar o controle fácil, com até 6 botões gigantes, é Pro; usar é grátis.</span></li>
-          <li class="aparece"><b>Espelhe a tela</b><span>O Mando TV mostra o caminho até Espelhar Tela, na Central de Controle, para ver seu iPhone ou iPad em uma TV com AirPlay. No Windows, abre Transmitir com Windows + K. Grátis. E com o Pro, o Mando TV envia a tela do PC para TVs LG, Samsung, Hisense ou Android TV pela rede de casa (beta, com alguns segundos de atraso e sem som). Em breve no Android.</span></li>
-          <li class="aparece"><b>Sem abrir o app (Pro)</b><span>Widgets na Tela de Início e na Tela Bloqueada do iPhone, botões na Central de Controle e frases para a Siri e os Atalhos, como "Silencie a TV com Mando TV". Em beta. No Android, chega com a versão pública.</span></li>
+          <li class="aparece"><b>Compartilhe um controle com a sua família</b><span>Monte um controle simples e envie por link, por exemplo pelo WhatsApp. O link não leva nenhuma chave nem senha da TV, e a TV pede para aceitar o celular da pessoa só uma vez. O controle para convidados é grátis e dura até 31 dias; criar o controle fácil, com até 6 botões gigantes, é Pro.</span></li>
+          <li class="aparece"><b>Espelhe a tela</b><span>Grátis com o que o seu aparelho já tem: AirPlay no iPhone e no iPad, e Windows + K no Windows. O Mando TV leva você até lá. Com o Pro, a tela do PC vai para TVs LG, Samsung, Hisense e Android TV pela rede de casa (beta: sem som e com alguns segundos de atraso). Em breve no Android.</span></li>
+          <li class="aparece"><b>Sem abrir o app (Pro)</b><span>Widgets, Central de Controle e frases para a Siri como "Silencie a TV com Mando TV". Em beta no iPhone; no Android, chega com a versão pública.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="Elementos do app">
           <div class="pieza aparece" role="img" aria-label="Touchpad do app (recurso Pro): deslize o dedo para se mover pelos menus.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">Baixar grátis</a>
-        <p>O Pro é comprado dentro do app.</p>
+        <p>O Pro é comprado uma só vez dentro do app. Celular novo? Restaure a compra em Configurações com a mesma conta da loja.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">Um app de controle remoto para a sua marca</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">Controle remoto de TV para cada marca de TV</h2>
       <p class="intro aparece">Escolha a sua TV e veja como ela se conecta, o que você pode fazer e como ligá-la pelo celular.</p>
       <ul class="aparece">
         <li><a href="/pt/controle-remoto-samsung/">App de controle remoto para Samsung</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Ol%C3%A1%20Mando%20TV">Enviar e-mail</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">Sua TV, na palma da mão</h2>
+      <p class="intro aparece">Grátis, sem anúncios e sem conta. Pronto em um minuto.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">Baixar grátis</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

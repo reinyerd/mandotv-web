@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">Přejít na obsah</a>
@@ -232,6 +233,7 @@
           <a href="#precio">Ceník</a>
           <a href="/cs/support.html">Nápověda</a>
           <a href="#contacto">Kontakt</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="Světlý režim" title="Světlý režim"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">Stáhnout</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Podívejte se na Mando TV za 25 sekund a pak na ovladač krok za krokem.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="Přehrát · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-cs.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-cs.webp?v=a9d460fd8b" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-cs-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>Vstupy a zvuk</b><span>Přepněte na HDMI, živé vysílání nebo herní konzoli. S Pro si u LG vyberete, zda hraje televize, nebo soundbar.</span></li>
           <li class="aparece"><b>Zapnutí televize</b><span>Je-li vypnutá, Mando TV ji zapne přes síť a samo se připojí.</span></li>
           <li class="aparece"><b>Podle vašeho gusta</b><span>Světlý nebo tmavý vzhled a vibrace jsou zdarma. S Pro přibude barva pozadí, která se vám líbí, čistě černá a klasický ovladač.</span></li>
-          <li class="aparece"><b>Sdílejte ovladač s rodinou</b><span>Vytvořte jednoduchý ovladač pro svou televizi a pošlete ho jako odkaz, například přes WhatsApp. Kdo odkaz dostane, otevře ho v Mando TV a ovladač si uloží; při prvním použití se televize zeptá, zda mobil povolit, a potvrdí se to na obrazovce televize. Odkaz neobsahuje žádný klíč ani heslo k televizi. Hostovský ovladač je zdarma a má datum vypršení, až 31 dní. Vytvořit jednoduchý ovladač až se 6 obřími tlačítky je funkce Pro; používat ho je zdarma.</span></li>
-          <li class="aparece"><b>Zrcadlení obrazovky</b><span>Mando TV vás zavede k zrcadlení obrazovky v ovládacím centru, aby se váš iPhone nebo iPad zobrazil na televizi s AirPlay. Ve Windows otevře Mando TV přenos pomocí Windows + K. Zdarma. A s Pro pošle Mando TV obrazovku počítače přes domácí síť do televizí LG, Samsung, Hisense nebo s Android TV (beta, s několikavteřinovým zpožděním a bez zvuku). Brzy i na Androidu.</span></li>
-          <li class="aparece"><b>Bez otevření aplikace (Pro)</b><span>Widgety na domovské obrazovce a na zamčené obrazovce iPhonu, tlačítka v ovládacím centru a věty pro Siri a zkratky, například „Ztlum televizi pomocí Mando TV“. V betě. Na Androidu přijde s veřejnou verzí.</span></li>
+          <li class="aparece"><b>Sdílejte ovladač s rodinou</b><span>Vytvořte jednoduchý ovladač a pošlete ho odkazem, například přes WhatsApp. Odkaz neobsahuje žádný klíč ani heslo k televizi a televize se zeptá, zda mobil povolit, jen jednou. Hostovský ovladač je zdarma a platí až 31 dní; vytvořit jednoduchý ovladač až se 6 obřími tlačítky je funkce Pro.</span></li>
+          <li class="aparece"><b>Zrcadlení obrazovky</b><span>Zdarma s tím, co už vaše zařízení umí: AirPlay na iPhonu a iPadu a Windows + K ve Windows. Mando TV vás tam zavede. S Pro jde obrazovka počítače do televizí LG, Samsung, Hisense a Android TV přes domácí síť (beta: bez zvuku a s několikavteřinovým zpožděním). Brzy i na Androidu.</span></li>
+          <li class="aparece"><b>Bez otevření aplikace (Pro)</b><span>Widgety, ovládací centrum a věty pro Siri, například "Ztlum televizi pomocí Mando TV". Na iPhonu v betě; na Androidu přijde s veřejnou verzí.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="Části aplikace">
           <div class="pieza aparece" role="img" aria-label="Touchpad aplikace (funkce Pro): procházejte nabídky přejížděním prstu.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">Stáhnout zdarma</a>
-        <p>Pro se kupuje přímo v aplikaci.</p>
+        <p>Pro se kupuje jednou přímo v aplikaci. Nový telefon? Obnovte nákup v Nastavení se stejným účtem obchodu.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">Ovládací aplikace pro vaši značku</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">Dálkový ovladač pro každou značku televize</h2>
       <p class="intro aparece">Vyberte svou televizi a zjistěte, jak se připojí, co všechno můžete dělat a jak ji zapnete z mobilu.</p>
       <ul class="aparece">
         <li><a href="/cs/samsung-dalkovy-ovladac/">Ovládací aplikace pro Samsung</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Dobr%C3%BD%20den%20Mando%20TV">Napsat e-mail</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">Vaše televize z telefonu</h2>
+      <p class="intro aparece">Zdarma, bez reklam a bez účtu. Hotovo za minutu.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">Stáhnout zdarma</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

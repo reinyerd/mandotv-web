@@ -1,0 +1,10 @@
+{
+  "f8": "Bygg en enkel fjärrkontroll och skicka den som en länk, till exempel via WhatsApp. Länken innehåller ingen nyckel och inget lösenord till tv:n, och tv:n frågar bara en gång om tillstånd för mobilen. Gästfjärrkontrollen är gratis och gäller i upp till 31 dagar; att skapa den enkla fjärrkontrollen med upp till 6 jättestora knappar är Pro.",
+  "f9": "Gratis med det din enhet redan har: AirPlay på iPhone och iPad och Windows + K i Windows. Mando TV tar dig dit. Med Pro skickas datorns skärm till LG, Samsung, Hisense och Android TV via hemmanätverket (beta: utan ljud och med några sekunders fördröjning). Snart även på Android.",
+  "f10": "Widgets, Kontrollcenter och Siri-fraser som \"Stäng av ljudet på tv:n med Mando TV\". I beta på iPhone; på Android kommer det med den öppna versionen.",
+  "marcas_h2": "Tv fjärrkontroll för varje tv-märke",
+  "nota_pro": "Pro köps en gång i appen. Ny mobil? Återställ ditt köp i Inställningar med samma konto i App Store, Google Play eller Microsoft Store.",
+  "cierre_h2": "Din tv, från din mobil",
+  "cierre_p": "Gratis, utan reklam och utan konto. Redo på en minut.",
+  "tema_claro": "Ljust läge"
+}

@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">Przejdź do treści</a>
@@ -232,6 +233,7 @@
           <a href="#precio">Cennik</a>
           <a href="/pl/support.html">Pomoc</a>
           <a href="#contacto">Kontakt</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="Tryb jasny" title="Tryb jasny"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">Pobierz</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Obejrzyj Mando TV w 25 sekund, a potem pilota krok po kroku.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="Odtwórz · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-pl.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-pl.webp?v=41f71b536e" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-pl-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>Źródła i dźwięk</b><span>Przełączaj na HDMI, telewizję na żywo albo konsolę. W Pro wybierasz w LG, czy gra telewizor, czy soundbar.</span></li>
           <li class="aparece"><b>Włączanie telewizora</b><span>Gdy jest wyłączony, Mando TV włącza go przez sieć i łączy się samo.</span></li>
           <li class="aparece"><b>Tak, jak lubisz</b><span>Jasny lub ciemny motyw i wibracje są za darmo. W Pro dochodzą wybrany kolor tła, czysta czerń i klasyczny pilot.</span></li>
-          <li class="aparece"><b>Udostępnij pilota rodzinie</b><span>Zrób prosty pilot do swojego telewizora i wyślij go jako link, na przykład przez WhatsApp. Kto dostanie link, otwiera go w Mando TV i zapisuje pilota; za pierwszym razem telewizor prosi o zgodę dla telefonu i potwierdza się ją na ekranie telewizora. Link nie zawiera klucza ani hasła telewizora. Pilot dla gości jest darmowy i ma datę ważności, do 31 dni. Tworzenie prostego pilota z maksymalnie 6 gigantycznymi przyciskami jest w Pro; korzystanie z niego jest za darmo.</span></li>
-          <li class="aparece"><b>Powielanie ekranu</b><span>Mando TV prowadzi Cię do powielania ekranu w Centrum sterowania, żeby ekran Twojego iPhone lub iPada pojawił się na telewizorze z AirPlay. W Windows Mando TV otwiera przesyłanie skrótem Windows + K. Za darmo. A w Pro Mando TV wysyła ekran komputera przez sieć domową na telewizory LG, Samsung, Hisense lub z Android TV (beta, z kilkusekundowym opóźnieniem i bez dźwięku). Wkrótce także na Androidzie.</span></li>
-          <li class="aparece"><b>Bez otwierania aplikacji (Pro)</b><span>Widżety na ekranie głównym i ekranie blokady iPhone, przyciski w Centrum sterowania oraz zwroty dla Siri i Skrótów, na przykład „Wycisz telewizor w Mando TV”. W wersji beta. Na Androidzie pojawi się w wersji publicznej.</span></li>
+          <li class="aparece"><b>Udostępnij pilota rodzinie</b><span>Zrób prosty pilot i wyślij go linkiem, na przykład przez WhatsApp. Link nie zawiera klucza ani hasła telewizora, a telewizor prosi o zgodę dla telefonu tylko raz. Pilot dla gości jest darmowy i działa do 31 dni; stworzenie prostego pilota z maksymalnie 6 gigantycznymi przyciskami jest w Pro.</span></li>
+          <li class="aparece"><b>Powielanie ekranu</b><span>Za darmo dzięki temu, co ma już Twoje urządzenie: AirPlay na iPhonie i iPadzie oraz Windows + K w Windows. Mando TV Cię tam zaprowadzi. W Pro ekran komputera trafia na telewizory LG, Samsung, Hisense i Android TV przez sieć domową (beta: bez dźwięku i z kilkusekundowym opóźnieniem). Wkrótce także na Androidzie.</span></li>
+          <li class="aparece"><b>Bez otwierania aplikacji (Pro)</b><span>Widżety, Centrum sterowania i zwroty dla Siri, na przykład "Wycisz telewizor w Mando TV". Na iPhonie w wersji beta; na Androidzie pojawi się w wersji publicznej.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="Elementy aplikacji">
           <div class="pieza aparece" role="img" aria-label="Touchpad aplikacji (funkcja Pro): przesuwaj palcem po menu.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">Pobierz za darmo</a>
-        <p>Pro kupisz w aplikacji.</p>
+        <p>Pro kupujesz raz, w aplikacji. Nowy telefon? Przywróć zakup w Ustawieniach, używając tego samego konta sklepu.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">Aplikacja pilot do Twojej marki</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">Pilot do telewizora na każdą markę telewizora</h2>
       <p class="intro aparece">Wybierz swój telewizor i zobacz, jak się łączy, co możesz zrobić i jak włączyć go z telefonu.</p>
       <ul class="aparece">
         <li><a href="/pl/pilot-samsung/">Aplikacja pilot do Samsung</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Witaj%20Mando%20TV">Wyślij e-mail</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">Twój telewizor w Twoim telefonie</h2>
+      <p class="intro aparece">Za darmo, bez reklam i bez konta. Gotowe w minutę.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">Pobierz za darmo</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

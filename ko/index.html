@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">본문으로 건너뛰기</a>
@@ -232,6 +233,7 @@
           <a href="#precio">요금</a>
           <a href="/ko/support.html">도움말</a>
           <a href="#contacto">문의</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="라이트 모드" title="라이트 모드"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">다운로드</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Mando TV를 25초 만에 보고, 리모컨을 단계별로 살펴보세요.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="재생 · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-ko.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-ko.webp?v=e9549ea6c3" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-ko-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>입력과 소리</b><span>HDMI, 라이브 TV, 게임기로 바로 바꿔요. Pro에서는 LG에서 TV와 사운드바 중 어디로 소리를 낼지 고를 수 있어요.</span></li>
           <li class="aparece"><b>TV 켜기</b><span>TV가 꺼져 있으면 Mando TV가 네트워크로 켜고 알아서 다시 연결해요.</span></li>
           <li class="aparece"><b>내 취향대로</b><span>라이트와 다크, 진동은 무료예요. Pro에서는 마음에 드는 배경색, 완전한 블랙, 클래식 리모컨을 쓸 수 있어요.</span></li>
-          <li class="aparece"><b>가족과 리모컨 공유하기</b><span>내 TV용 간편 리모컨을 만들어 링크로 보내세요. 예를 들어 카카오톡으로요. 링크를 받은 사람은 Mando TV에서 열어 리모컨을 저장해요. 처음에는 TV가 스마트폰의 허용 여부를 묻고, TV 화면에서 확인하면 돼요. 링크에는 TV의 키나 비밀번호가 들어 있지 않아요. 게스트 리모컨은 무료이고 유효기간은 최대 31일이에요. 최대 6개의 초대형 버튼이 있는 간편 리모컨은 만드는 것은 Pro이고, 쓰는 것은 무료예요.</span></li>
-          <li class="aparece"><b>화면 미러링</b><span>iPhone이나 iPad는 제어 센터의 화면 미러링으로 AirPlay TV에 화면을 띄우도록 Mando TV가 안내해요. Windows에서는 Mando TV가 Windows + K 전송 창을 열어 줘요. 무료예요. Pro에서는 Mando TV가 집 네트워크로 PC 화면을 LG, 삼성, Hisense, Android TV에 보내요(베타, 몇 초 지연되고 소리는 나오지 않아요). Android에서도 곧 지원해요.</span></li>
-          <li class="aparece"><b>앱을 열지 않고 조작(Pro)</b><span>iPhone의 홈 화면과 잠금 화면 위젯, 제어 센터 버튼, Siri와 단축어 문장으로 조작해요. 예를 들면 "Mando TV로 TV 음소거해 줘"예요. 베타예요. Android에서는 정식 버전에서 지원해요.</span></li>
+          <li class="aparece"><b>가족과 리모컨 공유하기</b><span>간편 리모컨을 만들어 카카오톡 같은 메신저로 링크를 보내세요. 링크에는 TV의 키나 비밀번호가 들어 있지 않고, TV는 상대방의 스마트폰을 처음 한 번만 확인해요. 게스트 리모컨은 무료이고 최대 31일 동안 쓸 수 있어요. 최대 6개의 초대형 버튼이 있는 간편 리모컨을 만드는 것은 Pro예요.</span></li>
+          <li class="aparece"><b>화면 미러링</b><span>기기에 이미 있는 기능으로 무료로 쓸 수 있어요. iPhone과 iPad는 AirPlay, Windows는 Windows + K예요. Mando TV가 안내해 드려요. Pro에서는 집 네트워크로 PC 화면을 LG, 삼성, Hisense, Android TV에 보내요(베타, 소리 없이 몇 초 지연돼요). Android에서도 곧 지원해요.</span></li>
+          <li class="aparece"><b>앱을 열지 않고 조작(Pro)</b><span>위젯, 제어 센터, 그리고 "Mando TV로 TV 음소거해 줘" 같은 Siri 문장으로 조작해요. iPhone에서는 베타이고, Android에서는 정식 버전에서 지원해요.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="앱의 구성 요소">
           <div class="pieza aparece" role="img" aria-label="앱의 터치패드(Pro 기능): 손가락을 밀어 메뉴를 이동해요.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">무료 다운로드</a>
-        <p>Pro는 앱 안에서 구매해요.</p>
+        <p>Pro는 앱 안에서 한 번만 구매해요. 새 스마트폰이라면 같은 스토어 계정으로 설정에서 구매를 복원하세요.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">내 브랜드에 맞는 리모컨 앱</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">모든 TV 브랜드를 위한 TV 리모컨 앱</h2>
       <p class="intro aparece">내 TV를 골라 연결 방법, 할 수 있는 일, 스마트폰으로 켜는 방법을 확인해 보세요.</p>
       <ul class="aparece">
         <li><a href="/ko/samsung-tv-remote/">삼성 리모컨 앱</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%20Mando%20TV">이메일 보내기</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">스마트폰으로 TV를 한 번에</h2>
+      <p class="intro aparece">무료, 광고 없음, 계정 필요 없음. 1분이면 준비 끝.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">무료 다운로드</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

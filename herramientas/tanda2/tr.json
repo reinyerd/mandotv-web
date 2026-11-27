@@ -1,0 +1,10 @@
+{
+  "f8": "Basit bir kumanda hazırla ve bağlantıyla gönder, örneğin WhatsApp’tan. Bağlantıda TV’nin anahtarı da şifresi de yoktur; TV, o kişinin telefonunu yalnızca bir kez onaylamanı ister. Misafir kumandası ücretsizdir ve en fazla 31 gün sürer; en fazla 6 dev tuşlu basit kumandayı oluşturmak Pro’dur.",
+  "f9": "Cihazında zaten olanla ücretsiz: iPhone ve iPad’de AirPlay, Windows’ta Windows + K. Mando TV seni oraya götürür. Pro ile bilgisayar ekranı, ev ağı üzerinden LG, Samsung, Hisense ve Android TV’lere gider (beta: sessiz ve birkaç saniye gecikmeli). Yakında Android’de.",
+  "f10": "Widget’lar, Denetim Merkezi ve Siri cümleleri, örneğin \"Mando TV ile TV’yi sessize al\". iPhone’da beta; Android’de herkese açık sürümle gelecek.",
+  "marcas_h2": "Her TV markası için TV kumanda uygulaması",
+  "nota_pro": "Pro, uygulamanın içinden bir kez satın alınır. Yeni telefon mu? Satın alımı Ayarlar’dan, aynı mağaza hesabıyla geri yükle.",
+  "cierre_h2": "TV’n, telefonunda",
+  "cierre_p": "Ücretsiz, reklamsız ve hesapsız. Bir dakikada hazır.",
+  "tema_claro": "Açık mod"
+}
