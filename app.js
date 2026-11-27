@@ -965,3 +965,86 @@
     });
   });
 })();
+
+// Portada oscura (27-nov, jurado de diseño). Dos ajustes que no necesitan textos nuevos en los 31 idiomas:
+// 1) La tarjeta Pro muestra sus 10 primeras ventajas y un botón "+N" para ver el resto (el HTML trae la lista completa,
+//    así que buscadores e IA la siguen leyendo entera).
+// 2) El aviso de idioma va en una franja arriba de la página, sin tapar nada.
+(function () {
+  if (!document.querySelector('body > .escena')) return;
+
+  var lista = document.querySelector('.plan.pro ul');
+  var VISIBLES = 10;
+  if (lista && lista.children.length > VISIBLES + 2) {
+    var extra = Array.prototype.slice.call(lista.children, VISIBLES);
+    extra.forEach(function (li) { li.hidden = true; });
+    var mas = document.createElement('button');
+    mas.type = 'button';
+    mas.className = 'mas';
+    mas.textContent = '+' + extra.length;
+    mas.dir = 'ltr';
+    lista.id = lista.id || 'pro-ventajas';
+    mas.setAttribute('aria-controls', lista.id);
+    mas.setAttribute('aria-expanded', 'false');
+    var tituloPro = lista.closest('.plan') && lista.closest('.plan').querySelector('h3');
+    mas.setAttribute('aria-label', '+' + extra.length + ' (' + (tituloPro ? tituloPro.textContent.trim() : 'Pro') + ')');
+    mas.addEventListener('click', function () {
+      extra.forEach(function (li, i) {
+        li.hidden = false;
+        if (li.animate) li.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
+          { duration: 300, delay: i * 25, easing: 'cubic-bezier(.23, 1, .32, 1)', fill: 'backwards' });
+      });
+      extra[0].tabIndex = -1;
+      extra[0].focus({ preventScroll: true });
+      mas.remove();
+    });
+    lista.after(mas);
+  }
+
+  // El aviso de idioma pasa a una franja arriba de la página, dentro del contenido (como el aviso de región de Apple):
+  // ya no flota sobre el botón de descarga ni sobre los títulos. cookies.js lo crea cuando cargan las fuentes.
+  function subirAviso(aviso) {
+    var franja = document.querySelector('.franja-idioma');
+    if (!franja) {
+      franja = document.createElement('div');
+      franja.className = 'franja-idioma';
+      document.body.insertBefore(franja, document.querySelector('body > .escena'));
+    }
+    franja.appendChild(aviso);
+    var frase = aviso.querySelector('p');
+    if (frase) {
+      frase.id = frase.id || 'franja-idioma-texto';
+      franja.setAttribute('role', 'region');
+      franja.setAttribute('aria-labelledby', frase.id);
+      var destino = aviso.querySelector('[hreflang]');
+      if (destino) franja.lang = destino.getAttribute('hreflang');
+    }
+  }
+
+  // El precio de Pro de la portada (lo agrega precio.js) lleva a los planes.
+  function enlazarPrecio() {
+    var chip = document.querySelector('.ficha .pro-precio');
+    if (!chip || chip.parentElement.classList.contains('pro-enlace')) return !!chip;
+    var a = document.createElement('a');
+    a.className = 'pro-enlace';
+    a.href = '#precio';
+    chip.before(a);
+    a.appendChild(chip);
+    return true;
+  }
+  if (!enlazarPrecio() && window.MutationObserver) {
+    var vigiaPrecio = new MutationObserver(function () { if (enlazarPrecio()) vigiaPrecio.disconnect(); });
+    vigiaPrecio.observe(document.querySelector('.ficha') || document.body, { childList: true, subtree: true });
+    setTimeout(function () { vigiaPrecio.disconnect(); }, 15000);
+  }
+  var yaEsta = document.querySelector('.avisos .aviso-idioma');
+  if (yaEsta) subirAviso(yaEsta);
+  else if (window.MutationObserver) {
+    var vigia = new MutationObserver(function () {
+      var aviso = document.querySelector('.avisos .aviso-idioma');
+      if (aviso) { vigia.disconnect(); subirAviso(aviso); }
+    });
+    vigia.observe(document.body, { childList: true, subtree: true });
+    setTimeout(function () { vigia.disconnect(); }, 15000);
+  }
+})();
