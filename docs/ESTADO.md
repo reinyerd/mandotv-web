@@ -1,5 +1,30 @@
 # Estado de la web mandotv.app
 
+## 27-nov: el teclado ya no promete escribir en YouTube y Netflix; "Dos teclados" (PUBLICADO, `e42917d1`)
+
+- Origen: quejas de usuarios. YouTube y Netflix en el TV solo aceptan su propio teclado en pantalla. Enfoque del
+  fundador: dos teclados. El normal (gratis) escribe en el buscador del TV y en la mayoría de las apps; para YouTube
+  está el **Teclado de YouTube (Pro)** (nombre por idioma = texto antes de los dos puntos de
+  `proBeneficioTecladoYoutube` en `control/lib/l10n/app_<k>.arb`, igual que la app y las fichas). Netflix: nunca
+  prometer escritura; solo "se usa con las flechas y OK".
+- Cambiado en los 30 idiomas (216 páginas): viñeta "Dos teclados" en las páginas de LG, Samsung, Android TV y Roku
+  (y marcas de Latinoamérica), FAQ del teclado (visible y JSON-LD), frase del teclado en las guías de LG y FAQ de Sony.
+- **Regla de las guías de marca**: `datos_en_nuevas.py` y `marcas_latam.py` prohíben nombrar Pro (assert). Ahí el
+  texto dice que Mando TV "también tiene un Teclado de YouTube" sin la palabra Pro.
+- Texto decidido por dos revisores aparte, UX y Marketing (con SEO y GEO), mirando las páginas: etiqueta "Dos
+  teclados", primero lo que el teclado gratis sí hace, el de YouTube como motivo para Pro, FAQ que empieza con "Sí",
+  Netflix solo con flechas y OK para que ninguna IA repita que se escribe en Netflix. Traducción Sonnet (4 grupos)
+  con retrotraducción.
+- Comprobado: la cadena de generadores reproduce exactamente las páginas (it/pt privacidad restauradas, como
+  siempre); `escaneo_seo.py` sin avisos nuevos; JSON-LD válido; `csp.py --verificar` OK; vista en escritorio y
+  celular sin desborde; en vivo, 216/216 páginas sin ninguna frase vieja.
+- Buscadores: IndexNow aceptó las 216 URL (HTTP 200). Search Console: sitemap reenviado ("27 nov 2026, Correcto,
+  1.063 páginas"); pedir indexación dio "Cuota superada" (cupo del día gastado). **Pendiente**: pedir indexación de
+  `/lg-tv-remote/`, `/samsung-tv-remote/`, `/android-tv-remote/`, `/guides/android-tv-without-remote/`,
+  `/es/control-remoto-lg/` y `/es/guias/android-tv-sin-control-remoto/` en los próximos días. Bing Webmaster Tools:
+  la sesión no está iniciada en el navegador integrado, sitemap no reenviado (IndexNow ya avisó a Bing).
+- Queda igual a propósito: "Escribe búsquedas en los canales de Roku" en el paso de la guía de Roku (no nombra YouTube).
+
 ## 26-nov: 53 meta descriptions y 2 títulos acortados (PUBLICADO con el sí del fundador, commit `99193116`)
 
 - Origen: escaneo propio de las 1063 páginas (sesión de ai-company) con las reglas del Site Scan de Bing: 53
