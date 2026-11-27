@@ -20,4 +20,10 @@ cambiadas=$(python -I herramientas/versionar.py) || { echo "versionar.py falló"
 printf '%s\n' "$cambiadas" | tr -d '\r' | while read -r f; do [ -n "$f" ] && git add -- "$f"; done
 # La CSP de Cloudflare permite los scripts en línea por su hash: si uno cambió, no se publica hasta actualizar la regla.
 python -I herramientas/csp.py --verificar || exit 1
+# Las apps (desde la 1.2.6) solo aplican la configuración firmada: si config.json cambió y no se volvió a firmar, no se publica.
+if command -v node >/dev/null 2>&1; then
+  node herramientas/verificar_config.mjs || exit 1
+else
+  echo "pre-commit: falta Node; no se pudo comprobar la firma de app/config.firmado.json"
+fi
 exit 0
