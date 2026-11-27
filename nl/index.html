@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">Ga naar de inhoud</a>
@@ -232,6 +233,7 @@
           <a href="#precio">Prijzen</a>
           <a href="/nl/support.html">Help</a>
           <a href="#contacto">Contact</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="Lichte modus" title="Lichte modus"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">Download</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Bekijk Mando TV in 25 seconden en daarna de afstandsbediening stap voor stap.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="Afspelen · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-nl.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-nl.webp?v=3d6751309f" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-nl-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>Ingangen en geluid</b><span>Wissel naar HDMI, live-tv of je spelconsole. Met Pro kies je bij LG of de tv of de soundbar speelt.</span></li>
           <li class="aparece"><b>Tv aanzetten</b><span>Staat hij uit, dan zet Mando TV hem via het netwerk aan en maakt vanzelf verbinding.</span></li>
           <li class="aparece"><b>Zoals jij het wilt</b><span>Licht of donker en trillen zijn gratis. Met Pro komen de achtergrondkleur die je mooi vindt, puur zwart en de klassieke afstandsbediening erbij.</span></li>
-          <li class="aparece"><b>Deel een afstandsbediening met je gezin</b><span>Maak een eenvoudige afstandsbediening voor je tv en stuur hem als link, bijvoorbeeld via WhatsApp. Wie de link krijgt, opent hem in Mando TV en slaat de afstandsbediening op; de eerste keer vraagt de tv om toestemming voor de telefoon, en die bevestig je op het scherm van de tv. De link bevat geen sleutel en geen wachtwoord van de tv. De gastafstandsbediening is gratis en heeft een vervaldatum, tot 31 dagen. De eenvoudige afstandsbediening met maximaal 6 reusachtige toetsen maken is Pro; hem gebruiken is gratis.</span></li>
-          <li class="aparece"><b>Scherm spiegelen</b><span>Mando TV brengt je naar Schermspiegeling in het Control Center, zodat je iPhone of iPad op een tv met AirPlay verschijnt. Op Windows opent Mando TV het uitzenden met Windows + K. Gratis. En met Pro stuurt Mando TV het scherm van de pc via het thuisnetwerk naar tv’s van LG, Samsung, Hisense of met Android TV (bèta, met een paar seconden vertraging en zonder geluid). Binnenkort ook op Android.</span></li>
-          <li class="aparece"><b>Zonder de app te openen (Pro)</b><span>Widgets op het beginscherm en het toegangsscherm van de iPhone, knoppen in het Control Center en zinnen voor Siri en Opdrachten, bijvoorbeeld “Zet de tv met Mando TV op dempen”. In de bèta. Op Android komt het met de openbare versie.</span></li>
+          <li class="aparece"><b>Deel een afstandsbediening met je gezin</b><span>Maak een eenvoudige afstandsbediening en stuur hem als link, bijvoorbeeld via WhatsApp. De link bevat geen sleutel en geen wachtwoord van de tv, en de tv vraagt maar één keer om de telefoon te accepteren. De gastafstandsbediening is gratis en is tot 31 dagen geldig; de eenvoudige afstandsbediening met maximaal 6 reusachtige toetsen maken is Pro.</span></li>
+          <li class="aparece"><b>Scherm spiegelen</b><span>Gratis met wat je apparaat al heeft: AirPlay op iPhone en iPad, Windows + K op Windows. Mando TV brengt je erheen. Met Pro gaat het pc-scherm via het thuisnetwerk naar tv's van LG, Samsung, Hisense en Android TV (bèta: zonder geluid en met een paar seconden vertraging). Binnenkort ook op Android.</span></li>
+          <li class="aparece"><b>Zonder de app te openen (Pro)</b><span>Widgets, Control Center en Siri-zinnen zoals "Zet de tv met Mando TV op dempen". Op iPhone in de bèta; op Android komt het met de openbare versie.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="Onderdelen van de app">
           <div class="pieza aparece" role="img" aria-label="Touchpad van de app (Pro-functie): veeg met je vinger door de menu’s.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">Download gratis</a>
-        <p>Pro koop je in de app.</p>
+        <p>Pro koop je één keer in de app. Nieuwe telefoon? Herstel je aankoop in Instellingen met hetzelfde store-account.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">Een afstandsbediening-app voor jouw merk</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">Tv afstandsbediening app voor elk tv-merk</h2>
       <p class="intro aparece">Kies je tv en zie hoe hij verbindt, wat je kunt doen en hoe je hem vanaf je telefoon aanzet.</p>
       <ul class="aparece">
         <li><a href="/nl/samsung-afstandsbediening/">Samsung afstandsbediening-app</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Hallo%20Mando%20TV">E-mail sturen</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">Je tv, vanaf je telefoon</h2>
+      <p class="intro aparece">Gratis, zonder advertenties en zonder account. In een minuut klaar.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">Download gratis</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

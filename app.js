@@ -634,7 +634,8 @@
   // También el botón de la barra de arriba y el de la sección de precio (tanda 1, 26-nov): todos van a la misma tienda.
   function sincronizarBarra() {
     if (!principal) return;
-    [barraDescargar, document.querySelector('.barra .boton-barra'), document.getElementById('precio-descargar')].forEach(function (b) {
+    [barraDescargar, document.querySelector('.barra .boton-barra'), document.getElementById('precio-descargar'),
+      document.getElementById('cierre-descargar')].forEach(function (b) {
       if (!b) return;
       b.href = principal.getAttribute('href');
       ['target', 'rel'].forEach(function (a) {
@@ -675,12 +676,13 @@
   sincronizarBarra();
 
   var nombreTema = document.getElementById('tema-nombre');
-  document.querySelectorAll('[data-tema]').forEach(function (p) {
+  // Solo los puntos del teléfono: <html data-tema> es el tema de la página (tema.js), no un botón.
+  document.querySelectorAll('.punto[data-tema]').forEach(function (p) {
     p.addEventListener('click', function () {
       var claro = p.dataset.tema === 'claro';
       telefono.classList.toggle('claro', claro);
       if (nombreTema) nombreTema.textContent = claro ? T.claro : T.oscuro;
-      document.querySelectorAll('[data-tema]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === p)); });
+      document.querySelectorAll('.punto[data-tema]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === p)); });
     });
   });
 
@@ -1037,6 +1039,32 @@
     vigiaPrecio.observe(document.querySelector('.ficha') || document.body, { childList: true, subtree: true });
     setTimeout(function () { vigiaPrecio.disconnect(); }, 15000);
   }
+  // Modo claro u oscuro (27-nov): oscuro por defecto; el botón sol/luna de la barra cambia y lo recuerda. tema.js lo
+  // aplica antes de pintar en la próxima visita. El teléfono de la portada muestra la app en el mismo tema.
+  var raiz = document.documentElement;
+  var botonTema = document.querySelector('.barra-tema');
+  var telefonoPortada = document.getElementById('telefono');
+  function pintarTema() {
+    var claro = raiz.dataset.tema === 'claro';
+    if (botonTema) botonTema.setAttribute('aria-pressed', String(claro));
+    if (telefonoPortada) telefonoPortada.classList.toggle('claro', claro);
+  }
+  if (botonTema) {
+    botonTema.hidden = false;
+    botonTema.addEventListener('click', function () {
+      var claro = raiz.dataset.tema !== 'claro';
+      function cambiar() {
+        if (claro) raiz.dataset.tema = 'claro'; else delete raiz.dataset.tema;
+        pintarTema();
+      }
+      try { localStorage.setItem('mando-tema', claro ? 'claro' : 'oscuro'); } catch (e) {}
+      // Fundido suave entre temas. Windows con los efectos apagados también lo ve (pedido del fundador).
+      if (document.startViewTransition) document.startViewTransition(cambiar);
+      else cambiar();
+    });
+  }
+  pintarTema();
+
   var yaEsta = document.querySelector('.avisos .aviso-idioma');
   if (yaEsta) subirAviso(yaEsta);
   else if (window.MutationObserver) {

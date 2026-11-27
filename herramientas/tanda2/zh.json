@@ -1,0 +1,10 @@
+{
+  "f8": "做一个简易遥控器，用链接发出去，例如通过微信或 WhatsApp。链接不含电视的密钥或密码，电视只需确认对方的手机一次。访客遥控器免费，最长 31 天；创建最多 6 个超大按键的简易遥控器需要 Pro。",
+  "f9": "免费使用设备自带功能：iPhone 和 iPad 用 AirPlay，Windows 用 Windows + K，Mando TV 带你直达。使用 Pro，电脑屏幕可通过家里的网络投到 LG、Samsung、Hisense 和 Android TV（Beta：没有声音，有几秒延迟）。Android 版即将支持。",
+  "f10": "小组件、控制中心，以及 Siri 口令，例如\"用 Mando TV 把电视静音\"。iPhone 上为 Beta；Android 版将随正式版推出。",
+  "marcas_h2": "适用每个电视品牌的电视遥控器 App",
+  "nota_pro": "Pro 在应用内一次性购买。换了新手机？在设置中用同一个商店账号恢复购买即可。",
+  "cierre_h2": "用手机，掌控你的电视",
+  "cierre_p": "免费，无广告，无需账号。一分钟即可上手。",
+  "tema_claro": "浅色模式"
+}

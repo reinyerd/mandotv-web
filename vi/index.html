@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">Chuyển đến nội dung</a>
@@ -232,6 +233,7 @@
           <a href="#precio">Giá</a>
           <a href="/vi/support.html">Trợ giúp</a>
           <a href="#contacto">Liên hệ</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="Chế độ sáng" title="Chế độ sáng"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">Tải về</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Xem Mando TV trong 25 giây, rồi xem điều khiển từng bước.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="Phát · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-vi.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-vi.webp?v=5838543abb" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-vi-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>Nguồn vào và âm thanh</b><span>Chuyển sang HDMI, TV trực tiếp hoặc máy chơi game của bạn. Với Pro, trên LG bạn chọn phát ra TV hay loa thanh.</span></li>
           <li class="aparece"><b>Bật TV</b><span>Khi TV đang tắt, Mando TV bật TV qua mạng và tự động kết nối.</span></li>
           <li class="aparece"><b>Theo cách bạn thích</b><span>Giao diện sáng hoặc tối và rung đều miễn phí. Với Pro, bạn có thêm màu nền yêu thích, màu đen tuyền và điều khiển cổ điển.</span></li>
-          <li class="aparece"><b>Chia sẻ một chiếc điều khiển với gia đình</b><span>Tạo một chiếc điều khiển đơn giản cho TV của bạn và gửi dưới dạng liên kết, chẳng hạn qua WhatsApp. Ai nhận được liên kết sẽ mở nó trong Mando TV và lưu chiếc điều khiển đó; ở lần đầu, TV sẽ hỏi quyền cho điện thoại, và quyền này được xác nhận trên màn hình TV. Liên kết không chứa khóa hay mật khẩu của TV. Điều khiển cho khách là miễn phí và có ngày hết hạn, tối đa 31 ngày. Tạo điều khiển đơn giản với tối đa 6 phím khổng lồ là tính năng Pro; còn sử dụng nó thì miễn phí.</span></li>
-          <li class="aparece"><b>Phản chiếu màn hình</b><span>Mando TV đưa bạn đến tính năng Phản chiếu màn hình trong Trung tâm điều khiển, để iPhone hoặc iPad của bạn hiện trên TV có AirPlay. Trên Windows, Mando TV mở phần truyền màn hình bằng Windows + K. Miễn phí. Và với Pro, Mando TV gửi màn hình máy tính qua mạng gia đình tới TV của LG, Samsung, Hisense hoặc TV dùng Android TV (beta, trễ vài giây và không có âm thanh). Sắp có trên Android.</span></li>
-          <li class="aparece"><b>Không cần mở ứng dụng (Pro)</b><span>Widget trên màn hình chính và màn hình khóa của iPhone, các nút trong Trung tâm điều khiển và câu lệnh cho Siri và Phím tắt, chẳng hạn “Tắt tiếng TV bằng Mando TV”. Ở bản beta. Trên Android sẽ có cùng phiên bản công khai.</span></li>
+          <li class="aparece"><b>Chia sẻ một chiếc điều khiển với gia đình</b><span>Tạo một chiếc điều khiển đơn giản và gửi bằng liên kết, chẳng hạn qua WhatsApp. Liên kết không chứa khóa hay mật khẩu của TV, và TV chỉ hỏi quyền cho điện thoại của họ đúng một lần. Điều khiển cho khách miễn phí và dùng được tối đa 31 ngày; tạo điều khiển đơn giản với tối đa 6 phím khổng lồ là tính năng Pro.</span></li>
+          <li class="aparece"><b>Phản chiếu màn hình</b><span>Miễn phí với những gì thiết bị của bạn đã có: AirPlay trên iPhone và iPad, Windows + K trên Windows. Mando TV đưa bạn đến đúng nơi. Với Pro, màn hình máy tính được gửi tới TV LG, Samsung, Hisense và Android TV qua mạng gia đình (beta: không có âm thanh và trễ vài giây). Sắp có trên Android.</span></li>
+          <li class="aparece"><b>Không cần mở ứng dụng (Pro)</b><span>Widget, Trung tâm điều khiển và câu lệnh cho Siri, chẳng hạn "Tắt tiếng TV bằng Mando TV". Đang ở bản beta trên iPhone; sẽ có trên Android cùng bản công khai.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="Các phần của ứng dụng">
           <div class="pieza aparece" role="img" aria-label="Touchpad của ứng dụng (tính năng Pro): vuốt ngón tay để lướt qua các menu.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">Tải miễn phí</a>
-        <p>Pro được mua ngay trong ứng dụng.</p>
+        <p>Pro chỉ mua một lần trong ứng dụng. Đổi điện thoại mới? Khôi phục giao dịch mua trong Cài đặt bằng cùng tài khoản cửa hàng.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">Một ứng dụng điều khiển cho hãng của bạn</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">Ứng dụng điều khiển TV cho mọi hãng TV</h2>
       <p class="intro aparece">Chọn TV của bạn và xem cách kết nối, những gì bạn làm được và cách bật TV từ điện thoại.</p>
       <ul class="aparece">
         <li><a href="/vi/dieu-khien-tv-samsung/">Ứng dụng điều khiển TV Samsung</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Hallo%20Mando%20TV">Gửi email</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">Điều khiển TV ngay từ điện thoại</h2>
+      <p class="intro aparece">Miễn phí, không quảng cáo, không cần tài khoản. Sẵn sàng trong một phút.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">Tải miễn phí</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

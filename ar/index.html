@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">الانتقال إلى المحتوى</a>
@@ -232,6 +233,7 @@
           <a href="#precio">الأسعار</a>
           <a href="/ar/support.html">المساعدة</a>
           <a href="#contacto">تواصل معنا</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="الوضع الفاتح" title="الوضع الفاتح"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">تنزيل</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">شاهد Mando TV في 25 ثانية، ثم شاهد الريموت خطوة بخطوة.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="تشغيل · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-ar.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-ar.webp?v=3e0755a65a" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-ar-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>المدخلات والصوت</b><span>انتقل إلى HDMI أو البث المباشر أو جهاز الألعاب. ومع Pro تختار في LG هل يصدر الصوت من التلفزيون أو من مكبر الصوت.</span></li>
           <li class="aparece"><b>تشغيل التلفزيون</b><span>إذا كان مطفأً، يشغّله Mando TV عبر الشبكة ويتصل به تلقائيًا.</span></li>
           <li class="aparece"><b>على ذوقك</b><span>المظهر الفاتح أو الداكن والاهتزاز مجانيان. ومع Pro تضيف لون الخلفية الذي يعجبك والأسود الصافي والريموت الكلاسيكي.</span></li>
-          <li class="aparece"><b>شارك ريموتًا مع عائلتك</b><span>أنشئ ريموتًا مبسّطًا لتلفزيونك وأرسله كرابط، مثلًا عبر WhatsApp. من يستلم الرابط يفتحه في Mando TV ويحفظ الريموت؛ وفي المرة الأولى يطلب التلفزيون إذنًا للجوال، ويتم تأكيده على شاشة التلفزيون. لا يحتوي الرابط على مفتاح التلفزيون ولا على كلمة مروره. ريموت الضيف مجاني وله تاريخ انتهاء، حتى 31 يومًا. وإنشاء الريموت المبسّط بما يصل إلى 6 أزرار ضخمة من Pro، أما استخدامه فمجاني.</span></li>
-          <li class="aparece"><b>مشاركة الشاشة</b><span>يأخذك Mando TV إلى مشاركة الشاشة في مركز التحكم لتظهر شاشة iPhone أو iPad على تلفزيون يدعم AirPlay. وعلى Windows يفتح Mando TV البث بالاختصار Windows + K. مجانًا. ومع Pro يرسل Mando TV شاشة الكمبيوتر عبر الشبكة المنزلية إلى تلفزيونات LG وSamsung وHisense أو التلفزيونات التي تعمل بنظام Android TV (تجريبي، مع تأخير بضع ثوانٍ وبدون صوت). وقريبًا على Android أيضًا.</span></li>
-          <li class="aparece"><b>بدون فتح التطبيق (Pro)</b><span>ودجات على الشاشة الرئيسية وشاشة القفل في iPhone، وأزرار في مركز التحكم، وجمل لـ Siri والاختصارات، مثل "اكتم صوت التلفزيون بواسطة Mando TV". في نسخة تجريبية. وعلى Android يصل مع الإصدار العام.</span></li>
+          <li class="aparece"><b>شارك ريموتًا مع عائلتك</b><span>أنشئ ريموتًا مبسّطًا وأرسله كرابط، مثلًا عبر WhatsApp. لا يحتوي الرابط على مفتاح التلفزيون ولا كلمة مروره، ويطلب التلفزيون قبول جوالهم مرة واحدة فقط. ريموت الضيف مجاني ويدوم حتى 31 يومًا؛ أما إنشاء الريموت المبسّط بما يصل إلى 6 أزرار ضخمة فمن Pro.</span></li>
+          <li class="aparece"><b>مشاركة الشاشة</b><span>مجانًا بما يوفره جهازك أصلًا: AirPlay على iPhone وiPad، وWindows + K على Windows. ويأخذك Mando TV إليه. ومع Pro تصل شاشة الكمبيوتر إلى تلفزيونات LG وSamsung وHisense وAndroid TV عبر شبكة المنزل (تجريبي: بدون صوت وبتأخير بضع ثوانٍ). وقريبًا على Android.</span></li>
+          <li class="aparece"><b>بدون فتح التطبيق (Pro)</b><span>ودجات ومركز التحكم وجمل Siri مثل "اكتم صوت التلفزيون بواسطة Mando TV". تجريبي على iPhone، ويصل إلى Android مع إصداره العام.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="أجزاء من التطبيق">
           <div class="pieza aparece" role="img" aria-label="لوحة اللمس في التطبيق (ميزة Pro): مرّر إصبعك للتنقل بين القوائم.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">نزّل مجانًا</a>
-        <p>يُشترى Pro من داخل التطبيق.</p>
+        <p>يُشترى Pro مرة واحدة داخل التطبيق. هل غيّرت جوالك؟ استعد مشترياتك من الإعدادات بحساب المتجر نفسه.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">تطبيق ريموت لعلامة تلفزيونك</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">ريموت تلفزيون لكل ماركة تلفزيون</h2>
       <p class="intro aparece">اختر تلفزيونك وتعرّف على طريقة اتصاله وما يمكنك فعله وكيف تشغّله من الجوال.</p>
       <ul class="aparece">
         <li><a href="/ar/samsung-tv-remote/">تطبيق ريموت Samsung</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Hello%20Mando%20TV">أرسل رسالة</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">تلفزيونك من جوالك</h2>
+      <p class="intro aparece">مجاني وبلا إعلانات وبلا حساب. جاهز في دقيقة.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">نزّل مجانًا</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>

@@ -215,7 +215,8 @@
   </script>
   <link rel="icon" href="/icono.svg?v=8cbaa68330" type="image/svg+xml">
   <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/estilos.css?v=8f22fd47a5">
+  <script src="/tema.js?v=fa0bf16422"></script>
+  <link rel="stylesheet" href="/estilos.css?v=b44048847e">
 </head>
 <body>
   <a class="oculto" href="#contenido">Hoppa till innehållet</a>
@@ -232,6 +233,7 @@
           <a href="#precio">Priser</a>
           <a href="/sv/support.html">Hjälp</a>
           <a href="#contacto">Kontakt</a>
+          <button class="barra-tema" type="button" hidden aria-pressed="false" aria-label="Ljust läge" title="Ljust läge"><svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
           <a class="boton-barra" href="#tiendas">Ladda ner</a>
         </nav>
       </header>
@@ -326,7 +328,7 @@
       <p class="intro aparece">Se Mando TV på 25 sekunder och sedan fjärrkontrollen steg för steg.</p>
       <figure class="video-premium aparece">
         <div class="video-marco" data-play="Spela upp · 0:25">
-          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-sv.webp" aria-describedby="video-texto">
+          <video controls muted playsinline preload="none" loading="lazy" width="1280" height="720" poster="/media/mando-tv-in-action-sv.webp?v=3e417ec021" aria-describedby="video-texto">
             <source src="/media/mando-tv-in-action-sv-720p.mp4" type="video/mp4">
           </video>
         </div>
@@ -371,9 +373,9 @@
           <li class="aparece"><b>Ingångar och ljud</b><span>Byt till HDMI, live-tv eller din konsol. Med Pro väljer du på LG om tv:n eller soundbaren ska spela.</span></li>
           <li class="aparece"><b>Slå på tv:n</b><span>Om den är avstängd slår Mando TV på den via nätverket och ansluter av sig själv.</span></li>
           <li class="aparece"><b>Som du vill ha det</b><span>Ljust eller mörkt och vibration är gratis. Med Pro får du bakgrundsfärgen du gillar, rent svart och den klassiska fjärrkontrollen.</span></li>
-          <li class="aparece"><b>Dela en fjärrkontroll med din familj</b><span>Bygg en enkel fjärrkontroll till din tv och skicka den som en länk, till exempel via WhatsApp. Den som får länken öppnar den i Mando TV och sparar fjärrkontrollen; första gången frågar tv:n om tillstånd för mobilen, och det godkänns på tv-skärmen. Länken innehåller ingen nyckel och inget lösenord från tv:n. Gästfjärrkontrollen är gratis och har ett utgångsdatum, upp till 31 dagar. Att skapa den enkla fjärrkontrollen med upp till 6 jättestora knappar är Pro; att använda den är gratis.</span></li>
-          <li class="aparece"><b>Spegla skärmen</b><span>Mando TV leder dig till skärmsynkronisering i Kontrollcenter, så att din iPhone eller iPad visas på en tv med AirPlay. I Windows öppnar Mando TV överföringen med Windows + K. Gratis. Och med Pro skickar Mando TV datorns skärm via hemmanätverket till tv från LG, Samsung, Hisense eller med Android TV (beta, med några sekunders fördröjning och utan ljud). Snart även på Android.</span></li>
-          <li class="aparece"><b>Utan att öppna appen (Pro)</b><span>Widgets på iPhones hemskärm och låsskärm, knappar i Kontrollcenter och fraser för Siri och Genvägar, till exempel "Stäng av ljudet på tv:n med Mando TV". I betan. På Android kommer det med den öppna versionen.</span></li>
+          <li class="aparece"><b>Dela en fjärrkontroll med din familj</b><span>Bygg en enkel fjärrkontroll och skicka den som en länk, till exempel via WhatsApp. Länken innehåller ingen nyckel och inget lösenord till tv:n, och tv:n frågar bara en gång om tillstånd för mobilen. Gästfjärrkontrollen är gratis och gäller i upp till 31 dagar; att skapa den enkla fjärrkontrollen med upp till 6 jättestora knappar är Pro.</span></li>
+          <li class="aparece"><b>Spegla skärmen</b><span>Gratis med det din enhet redan har: AirPlay på iPhone och iPad och Windows + K i Windows. Mando TV tar dig dit. Med Pro skickas datorns skärm till LG, Samsung, Hisense och Android TV via hemmanätverket (beta: utan ljud och med några sekunders fördröjning). Snart även på Android.</span></li>
+          <li class="aparece"><b>Utan att öppna appen (Pro)</b><span>Widgets, Kontrollcenter och Siri-fraser som "Stäng av ljudet på tv:n med Mando TV". I beta på iPhone; på Android kommer det med den öppna versionen.</span></li>
         </ul>
         <div class="piezas" data-ui aria-label="Delar av appen">
           <div class="pieza aparece" role="img" aria-label="Appens touchpad (Pro-funktion): svep med fingret genom menyerna.">
@@ -480,7 +482,7 @@
       </div>
       <div class="precio-accion aparece">
         <a class="boton" id="precio-descargar" href="#tiendas">Ladda ner gratis</a>
-        <p>Pro köps i appen.</p>
+        <p>Pro köps en gång i appen. Ny mobil? Återställ ditt köp i Inställningar med samma konto i App Store, Google Play eller Microsoft Store.</p>
       </div>
     </section>
 
@@ -501,7 +503,7 @@
     </section>
 
     <section id="marcas" aria-labelledby="t-marcas">
-      <h2 class="titulo-seccion aparece" id="t-marcas">En fjärrkontrollsapp för ditt märke</h2>
+      <h2 class="titulo-seccion aparece" id="t-marcas">Tv fjärrkontroll för varje tv-märke</h2>
       <p class="intro aparece">Välj din tv och se hur den ansluts, vad du kan göra och hur du slår på den från mobilen.</p>
       <ul class="aparece">
         <li><a href="/sv/samsung-fjarrkontroll/">Samsung fjärrkontrollsapp</a></li>
@@ -536,6 +538,13 @@
         </div>
         <a class="boton aparece" href="mailto:hola@mandotv.app?subject=Hej%20Mando%20TV">Skicka mejl</a>
       </div>
+    </section>
+
+    <section id="empezar" class="cierre" aria-labelledby="t-empezar">
+      <img class="cierre-icono aparece" src="/icono.svg?v=8cbaa68330" alt="Mando TV" width="88" height="88" loading="lazy">
+      <h2 class="titulo-seccion aparece" id="t-empezar">Din tv, från din mobil</h2>
+      <p class="intro aparece">Gratis, utan reklam och utan konto. Redo på en minut.</p>
+      <a class="boton aparece" id="cierre-descargar" href="#tiendas">Ladda ner gratis</a>
     </section>
   </div>
 
@@ -661,7 +670,7 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=63b22c5922" defer></script>
+  <script src="/app.js?v=a85d02a927" defer></script>
   <script src="/demo.js?v=50fd3da6fd" defer></script>
   <script src="/video.js?v=263fba24ff" defer></script>
   <script src="/correo.js?v=775be249ef" defer></script>
