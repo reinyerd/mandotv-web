@@ -15,3 +15,7 @@ __pycache__/
 
 # Capturas y registros de pruebas con Playwright
 .playwright-mcp/
+
+# Notas internas (estado, ventas, DNS, directorios): solo en este equipo, nunca en el repositorio público
+# (auditoría de seguridad del 27-nov).
+docs/
