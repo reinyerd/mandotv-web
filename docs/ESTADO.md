@@ -18,6 +18,15 @@
   sameAs en la Organization es lo correcto; Google Play se agrega cuando sea pública. Privacidad: sin terceros; se
   quitó de este archivo el ID del canal personal del fundador (sigue en el historial de git).
 - Comparación lado a lado: https://claude.ai/code/artifact/d19032c4-d622-4661-9c53-7e5919581f1a
+- **Publicado el 27-nov (`dedd2338`)**: en vivo a los ~40 s. Muestra de 75 páginas (las 35 portadas del sitemap y 40
+  al azar): 75/75 con los 6 íconos en orden y 65/65 con Organization `#org` con los 6 en `sameAs` (las otras 10 son
+  páginas de marca, que no tienen Organization). `llms.txt` y `estilos.css` nuevos en vivo; HSTS, CSP y cabeceras OK.
+  Validador de schema.org en `/es/`: 0 errores y 0 advertencias.
+- Buscadores: IndexNow aceptó las 1063 URL (HTTP 200). Search Console: sitemap reenviado (27-nov, "Correcto", 1063
+  páginas) e indexación pedida de `/`. **Bing Webmaster Tools: no se reenvió el sitemap** (pide iniciar sesión en el
+  navegador integrado); Bing ya recibió las URL por IndexNow. Reenviarlo cuando el fundador inicie sesión.
+- Pendiente: pedir indexación de otras portadas en los próximos días (cupo diario) y agregar Google Play al `sameAs`
+  (y a la lista `REDES` si corresponde) cuando la ficha sea pública (~1-dic).
 
 ## 27-nov: el teclado ya no promete escribir en YouTube y Netflix; "Dos teclados" (PUBLICADO, `e42917d1`)
 
