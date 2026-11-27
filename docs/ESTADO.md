@@ -23,8 +23,9 @@
   páginas de marca, que no tienen Organization). `llms.txt` y `estilos.css` nuevos en vivo; HSTS, CSP y cabeceras OK.
   Validador de schema.org en `/es/`: 0 errores y 0 advertencias.
 - Buscadores: IndexNow aceptó las 1063 URL (HTTP 200). Search Console: sitemap reenviado (27-nov, "Correcto", 1063
-  páginas) e indexación pedida de `/`. **Bing Webmaster Tools: no se reenvió el sitemap** (pide iniciar sesión en el
-  navegador integrado); Bing ya recibió las URL por IndexNow. Reenviarlo cuando el fundador inicie sesión.
+  páginas) e indexación pedida de `/`. Bing Webmaster Tools: sitemap reenviado el 27-nov
+  (el fundador inició sesión): "Success: https://mandotv.app/sitemap.xml is successfully submitted for processing";
+  0 sitemaps con errores o advertencias.
 - Pendiente: pedir indexación de otras portadas en los próximos días (cupo diario) y agregar Google Play al `sameAs`
   (y a la lista `REDES` si corresponde) cuando la ficha sea pública (~1-dic).
 
