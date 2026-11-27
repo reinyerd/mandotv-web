@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Všetky tlačidlá', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, stlmenie a prehrávanie.'),
       ('Kurzor ako pri Magic Remote (Pro)', 'Šípku posúvate prstom po obrazovke, presne ako s diaľkovým ovládačom LG Magic Remote.'),
-      ('Klávesnica', 'Píšte v YouTube, Netflixe alebo v prehliadači televízora na klávesnici mobilu.'),
+      ('Dve klávesnice', 'Píšte vo vyhľadávaní televízora a vo väčšine aplikácií na klávesnici mobilu. S Klávesnicou YouTube (Pro) napíšete alebo poviete, čo chcete pozerať, a YouTube sa otvorí na televízore s výsledkami.'),
       ('Aplikácie a vstupy', 'Otvorte svoje aplikácie a prepnite na HDMI, živé vysielanie, AirPlay alebo Screen Share.'),
       ('Výstup zvuku (Pro)', 'Prepínajte medzi reproduktormi televízora a soundbarom.'),
       ('Zapnutie televízora', 'Ak je vypnutý, Mando TV ho zapne cez sieť a pripojí sa samo.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Všetky tlačidlá', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, stlmenie a zdroj.'),
       ('Touchpad (Pro)', 'Prstom prechádzajte ponukami bez hľadania smerových tlačidiel.'),
-      ('Klávesnica', 'Vyhľadávané výrazy a heslá píšte na klávesnici mobilu.'),
+      ('Dve klávesnice', 'Píšte vo vyhľadávaní televízora a vo väčšine aplikácií na klávesnici mobilu. S Klávesnicou YouTube (Pro) napíšete alebo poviete, čo chcete pozerať, a YouTube sa otvorí na televízore s výsledkami.'),
       ('Aplikácie', 'Netflix, YouTube, Prime Video a ďalšie aplikácie otvoríte jedným klepnutím.'),
       ('Zapnutie televízora', 'Ak je vypnutý, Mando TV ho zapne cez sieť a pripojí sa samo.'),
       ('Bez účtu', 'Pripojenie ide priamo cez vašu sieť Wi-Fi, bez obchádzky cez internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Zapnutie Roku mobilom', preguntas='Otázky o Roku', guias='Návody pre Roku'),
     funciones=[
       ('Všetky tlačidlá', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, stlmenie, opakovanie a prehrávanie.'),
-      ('Klávesnica', 'Vyhľadávané výrazy v kanáloch Roku píšte na klávesnici mobilu.'),
+      ('Dve klávesnice', 'Píšte vo vyhľadávaní Roku a v kanáloch, ktoré to umožňujú, na klávesnici mobilu. S Klávesnicou YouTube (Pro) napíšete alebo poviete, čo chcete pozerať, a YouTube sa otvorí na televízore s výsledkami.'),
       ('Kanály', 'Netflix, YouTube a ďalšie kanály Roku otvoríte jedným klepnutím.'),
       ('Vstupy', 'Na Roku TV prepínajte v aplikácii medzi HDMI, anténou alebo AV.'),
       ('Zapnutie televízora', 'Na televízoroch Roku TV s rýchlym štartom ich Mando TV zapne z mobilu.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Všetky tlačidlá', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, stlmenie a prehrávanie.'),
       ('Touchpad (Pro)', 'Prejdením prsta rýchlo prechádzajte ponukami Google TV.'),
-      ('Klávesnica', 'Vyhľadávané výrazy a heslá píšte na klávesnici mobilu.'),
+      ('Dve klávesnice', 'Píšte vo vyhľadávaní televízora a vo väčšine aplikácií na klávesnici mobilu. S Klávesnicou YouTube (Pro) napíšete alebo poviete, čo chcete pozerať, a YouTube sa otvorí na televízore s výsledkami.'),
       ('Aplikácie', 'YouTube, Netflix, Disney+ a ďalšie aplikácie otvoríte jedným klepnutím.'),
       ('Zapnutie televízora', 'Na modeloch so zapnutím cez sieť Mando TV televízor zapne a pripojí sa samo.'),
       ('iPhone, Android a PC', 'Funguje rovnako na každom mobile aj počítači.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Potrebujem na spárovanie mobilu ovládač?', 'Nie. Kód sa zobrazí na obrazovke televízora a vy ho napíšete v mobile. Stačí televízor zapnúť, v prípade potreby tlačidlom na ňom.'),
       ('Funguje to s Hisense?', 'S televízormi Hisense s Android TV alebo Google TV áno. Televízory Hisense s iným systémom nie sú kompatibilné.'),
-      ('Môžem písať na klávesnici mobilu?', 'Áno. Klávesnica je zadarmo a funguje na vyhľadávanie v YouTube, Netflixe aj v ostatných aplikáciách.'),
+      ('Môžem písať na klávesnici mobilu?', 'Áno, sú dve. Bezplatná klávesnica píše vo vyhľadávaní a v textových poliach televízora aj vo väčšine aplikácií. YouTube a Netflix prijímajú iba vlastnú klávesnicu na obrazovke, a preto je pre YouTube Klávesnica YouTube (Pro): napíšete alebo poviete, čo chcete pozerať, a YouTube sa otvorí na televízore s výsledkami. Netflix sa ovláda smerovými tlačidlami a OK.'),
     ]),
   dict(clave='lg-on', corto='Zapnutie LG mobilom',
     titulo='Zapnutie televízora LG mobilom (návod)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV alebo LG ThinQ: čo na čo', 'ThinQ používajte, ak chcete spravovať domáce spotrebiče LG, ako je práčka, chladnička alebo klimatizácia, alebo potrebujete funkcie účtu LG. Mando TV používajte, ak chcete rýchly a jednoduchý ovládač televízora, ktorý funguje aj pre Samsung, Roku a Google TV v tej istej aplikácii. Mnohí si nechávajú obe: ThinQ pre spotrebiče, Mando TV pre televízor.'),
-      ('Čo Mando TV robí na televízore LG', 'Funguje s televízormi LG Smart TV s webOS, teda s väčšinou modelov od roku 2014, vrátane LED, NanoCell, QNED a OLED. Ponúka smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, stlmenie, ovládanie prehrávania a klávesnicu na písanie v YouTube, Netflixe alebo prehliadači. Zoznam aplikácií a zoznam vstupov sú tiež zadarmo. S Pro navyše získate kurzor ako pri Magic Remote.'),
+      ('Čo Mando TV robí na televízore LG', 'Funguje s televízormi LG Smart TV s webOS, teda s väčšinou modelov od roku 2014, vrátane LED, NanoCell, QNED a OLED. Ponúka smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, stlmenie, ovládanie prehrávania a klávesnicu na písanie vo vyhľadávaní televízora a vo väčšine aplikácií. Zoznam aplikácií a zoznam vstupov sú tiež zadarmo. S Pro navyše získate kurzor ako pri Magic Remote.'),
       ('Čo Mando TV nerobí', 'Neovláda domáce spotrebiče LG, nepoužíva váš účet LG a nenahrádza služby účtu LG v televízore. Je to ovládač, nie centrála inteligentnej domácnosti.'),
       ('Súkromie a reklamy', 'Mando TV nemá reklamy ani účet. Komunikuje s televízorom len vo vašej domácej sieti a kľúč pripojenia ukladá zašifrovaný vo vašom zariadení. Všetky funkcie nájdete na stránke [Aplikácia ovládač LG TV](@lg).'),
       ('Zadarmo a Pro', 'Smerové tlačidlá, OK, späť, domov, hlasitosť, kanály, číselné tlačidlá, klávesnica, otváranie aplikácií, prepínanie vstupov a zapnutie alebo vypnutie sú zadarmo, bez reklám a bez predplatného. Touchpad, hlasové príkazy, obľúbené aplikácie, rutiny a časovač vypnutia sú súčasťou Mando TV Pro, jednorazového nákupu bez predplatného.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Funguje Mando TV s televízormi Sony Bravia?', 'Áno, s televízormi Sony, ktoré používajú Google TV alebo Android TV. Zahŕňa to väčšinu televízorov Sony Smart TV od roku výroby 2015.'),
       ('Potrebujem aplikáciu Sony alebo účet Google?', 'Nie. Mando TV sa páruje kódom na obrazovke televízora a nevyžaduje účet.'),
       ('Funguje to so staršími televízormi Sony Bravia bez Androidu?', 'Áno, v beta verzii, pri modeloch Bravia z rokov 2013 až 2015 bez Androidu. Párovanie prebieha 4-miestnym PIN-om, ktorý televízor zobrazí.'),
-      ('Môžem na televízore Sony písať z mobilu?', 'Áno. Klávesnica je zadarmo a funguje v YouTube, Netflixe aj vo vyhľadávaní televízora.'),
+      ('Môžem na televízore Sony písať z mobilu?', 'Áno. Klávesnica mobilu je zadarmo a píše vo vyhľadávaní televízora aj v ďalších textových poliach. Pre YouTube má Mando TV aj Klávesnicu YouTube: napíšete alebo poviete, čo chcete pozerať, a YouTube sa otvorí na televízore s výsledkami. Netflix prijíma iba vlastnú klávesnicu na obrazovke, a preto tam používajte smerové tlačidlá a OK.'),
     ]),
   dict(clave='tcl', corto='Ovládač TCL', fecha='2026-11-23',
     titulo='Aplikácia ovládač TCL pre mobil a počítač',

@@ -350,7 +350,7 @@ GUIAS = [
     faq=[
       ('¿Necesito el control para emparejar el celular?', 'No. El código aparece en la pantalla del TV y lo escribes en el celular. Solo tienes que encender el TV, con el botón del televisor si hace falta.'),
       ('¿Sirve con un Hisense?', 'Con los Hisense que traen Android TV o Google TV, sí. Los Hisense con otro sistema no son compatibles.'),
-      ('¿Puedo escribir con el teclado del celular?', 'Sí. El teclado es gratis y sirve para buscar en YouTube, Netflix y el resto de las apps.'),
+      ('¿Puedo escribir con el teclado del celular?', 'Sí, hay dos. El teclado gratis escribe en el buscador y en los campos de texto del TV y de la mayoría de las apps. YouTube y Netflix solo aceptan su propio teclado en pantalla, así que para YouTube está el Teclado de YouTube (Pro): escribes o dices qué quieres ver y YouTube se abre en el TV con los resultados. Netflix se usa con las flechas y OK.'),
     ]),
 ]
 
@@ -436,7 +436,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV o LG ThinQ: cuál usar', 'Usa ThinQ si quieres gestionar electrodomésticos LG como una lavadora, un refrigerador o un aire acondicionado, o las funciones de la cuenta de LG. Usa Mando TV si buscas un control rápido y sencillo para el TV que también funciona con Samsung, Roku y Google TV en la misma app. Mucha gente usa las dos: ThinQ para electrodomésticos y Mando TV para el TV.'),
-      ('Qué hace Mando TV en un TV LG', 'Funciona con los Smart TV LG con webOS, que son la mayoría de los modelos desde 2014, incluidos LED, NanoCell, QNED y OLED. Tiene las flechas, OK, Atrás, Inicio, volumen, canales, silencio, controles de reproducción y un teclado para escribir en YouTube, Netflix o el navegador. La lista de apps y la de entradas también son gratis. Con Pro tienes además un puntero como el del Magic Remote.'),
+      ('Qué hace Mando TV en un TV LG', 'Funciona con los Smart TV LG con webOS, que son la mayoría de los modelos desde 2014, incluidos LED, NanoCell, QNED y OLED. Tiene las flechas, OK, Atrás, Inicio, volumen, canales, silencio, controles de reproducción y un teclado para escribir en el buscador del TV y en la mayoría de las apps. La lista de apps y la de entradas también son gratis. Con Pro tienes además un puntero como el del Magic Remote.'),
       ('Qué no hace Mando TV', 'No controla electrodomésticos LG, no usa tu cuenta de LG ni reemplaza los servicios de la cuenta de LG en el TV. Es un control remoto, no un centro para el hogar inteligente.'),
       ('Privacidad y anuncios', 'Mando TV no tiene anuncios ni cuenta. Se comunica con el TV dentro de la red de tu casa y guarda cifrada en tu equipo la clave de conexión con el TV. La [página del control remoto LG](/es/control-remoto-lg/) tiene la lista completa de funciones.'),
       ('Qué es gratis y qué es Pro', 'Las flechas, OK, Atrás, Inicio, volumen, canales, teclas numéricas, teclado, abrir apps, cambiar de entrada y encender o apagar son gratis, sin anuncios ni suscripción. El touchpad, los comandos de voz, las apps favoritas, las rutinas y el temporizador de apagado forman parte de Mando TV Pro, un pago único sin suscripción.'),
@@ -649,7 +649,7 @@ GUIAS += [
       ('¿Mando TV funciona con los TV Sony Bravia?', 'Sí, con los que usan Google TV o Android TV, que son la mayoría de los Smart TV Sony desde 2015.'),
       ('¿Necesito una app de Sony o cuenta de Google?', 'No. Mando TV se empareja con el código en pantalla y no pide cuenta.'),
       ('¿Funciona con Bravia antiguos sin Android?', 'En beta, sí, en modelos de 2013 a 2015 sin Android. Se empareja con un PIN de 4 dígitos que muestra el TV.'),
-      ('¿Puedo escribir en mi Sony desde el celular?', 'Sí. El teclado es gratis y escribe en YouTube, Netflix y la caja de búsqueda del TV.'),
+      ('¿Puedo escribir en mi Sony desde el celular?', 'Sí. El teclado del celular es gratis y escribe en el buscador del TV y en otros campos de texto. Para YouTube, Mando TV también tiene un Teclado de YouTube: escribe o di qué ver y YouTube se abre en el TV con los resultados. Netflix solo acepta su propio teclado en pantalla, así que ahí usa las flechas y OK.'),
     ]),
   dict(slug='es/guias/control-remoto-tcl', corto='Control remoto TCL', fecha='2026-11-23',
     titulo='Control remoto TCL para iPhone, Android y PC | Mando TV',

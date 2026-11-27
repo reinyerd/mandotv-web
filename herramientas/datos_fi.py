@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Kaikki painikkeet', 'Suuntapainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, mykistys ja toisto.'),
       ('Osoitin kuten Magic Remotessa (Pro)', 'Liikuta nuolta sormella näytöllä, aivan kuten LG Magic Remotella.'),
-      ('Näppäimistö', 'Kirjoita YouTubessa, Netflixissä tai television selaimessa puhelimesi näppäimistöllä.'),
+      ('Kaksi näppäimistöä', 'Kirjoita television hakuun ja useimmissa sovelluksissa puhelimesi näppäimistöllä. YouTube-näppäimistöllä (Pro) kirjoitat tai sanot, mitä haluat katsoa, ja YouTube avautuu televisiossa tuloksineen.'),
       ('Sovellukset ja tulot', 'Avaa sovelluksesi ja vaihda HDMI-, live-TV-, AirPlay- tai Screen Share -tuloon.'),
       ('Äänen ulostulo (Pro)', 'Vaihda television kaiuttimien ja soundbarin välillä.'),
       ('Television käynnistys', 'Jos televisio on sammutettu, Mando TV käynnistää sen verkon kautta ja yhdistää itse.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Kaikki painikkeet', 'Suuntapainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, mykistys ja lähde.'),
       ('Kosketuslevy (Pro)', 'Pyyhkäise sormella valikoissa ilman, että etsit nuolipainikkeita.'),
-      ('Näppäimistö', 'Kirjoita hakusanat ja salasanat puhelimesi näppäimistöllä.'),
+      ('Kaksi näppäimistöä', 'Kirjoita television hakuun ja useimmissa sovelluksissa puhelimesi näppäimistöllä. YouTube-näppäimistöllä (Pro) kirjoitat tai sanot, mitä haluat katsoa, ja YouTube avautuu televisiossa tuloksineen.'),
       ('Sovellukset', 'Avaa Netflix, YouTube, Prime Video ja muut sovelluksesi yhdellä napautuksella.'),
       ('Television käynnistys', 'Jos televisio on sammutettu, Mando TV käynnistää sen verkon kautta ja yhdistää itse.'),
       ('Ilman tiliä', 'Yhteys kulkee suoraan wifisi kautta, ilman kiertoa internetin kautta.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Rokun käynnistys puhelimella', preguntas='Roku-kysymyksiä', guias='Roku-oppaat'),
     funciones=[
       ('Kaikki painikkeet', 'Suuntapainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, mykistys, toisto uudelleen ja toisto.'),
-      ('Näppäimistö', 'Kirjoita hakusanat Roku-kanavissa puhelimesi näppäimistöllä.'),
+      ('Kaksi näppäimistöä', 'Kirjoita Rokun hakuun ja kanavissa, jotka sen sallivat, puhelimesi näppäimistöllä. YouTube-näppäimistöllä (Pro) kirjoitat tai sanot, mitä haluat katsoa, ja YouTube avautuu televisiossa tuloksineen.'),
       ('Kanavat', 'Avaa Netflix, YouTube ja muut Roku-kanavasi yhdellä napautuksella.'),
       ('Tulot', 'Vaihda Roku TV:ssä sovelluksesta HDMI-, antenni- tai AV-tuloon.'),
       ('Television käynnistys', 'Pikakäynnistyksellä varustetuissa Roku TV -laitteissa Mando TV käynnistää television puhelimestasi.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Kaikki painikkeet', 'Suuntapainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, mykistys ja toisto.'),
       ('Kosketuslevy (Pro)', 'Pyyhkäise sormella liikkuaksesi nopeasti Google TV:n valikoissa.'),
-      ('Näppäimistö', 'Kirjoita hakusanat ja salasanat puhelimesi näppäimistöllä.'),
+      ('Kaksi näppäimistöä', 'Kirjoita television hakuun ja useimmissa sovelluksissa puhelimesi näppäimistöllä. YouTube-näppäimistöllä (Pro) kirjoitat tai sanot, mitä haluat katsoa, ja YouTube avautuu televisiossa tuloksineen.'),
       ('Sovellukset', 'Avaa YouTube, Netflix, Disney+ ja muut sovelluksesi yhdellä napautuksella.'),
       ('Television käynnistys', 'Malleissa, joissa on käynnistys verkon kautta, Mando TV käynnistää television ja yhdistää itse.'),
       ('iPhone, Android ja tietokone', 'Se toimii samalla tavalla jokaisella puhelimella ja tietokoneella.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Tarvitsenko kaukosäätimen puhelimen pariliitokseen?', 'Et. Koodi tulee television näytölle ja kirjoitat sen puhelimeen. Sinun tarvitsee vain käynnistää televisio, tarvittaessa laitteen painikkeella.'),
       ('Toimiiko se Hisensen kanssa?', 'Hisense-televisioissa, joissa on Android TV tai Google TV, kyllä. Hisense-televisiot, joissa on toinen järjestelmä, eivät ole yhteensopivia.'),
-      ('Voinko kirjoittaa puhelimeni näppäimistöllä?', 'Kyllä. Näppäimistö on ilmainen ja toimii hakuihin YouTubessa, Netflixissä ja muissa sovelluksissa.'),
+      ('Voinko kirjoittaa puhelimeni näppäimistöllä?', 'Kyllä, niitä on kaksi. Ilmainen näppäimistö kirjoittaa television ja useimpien sovellusten hakuun ja tekstikenttiin. YouTube ja Netflix hyväksyvät vain oman näytön näppäimistönsä, joten YouTubea varten on YouTube-näppäimistö (Pro): kirjoita tai sano, mitä haluat katsoa, ja YouTube avautuu televisiossa tuloksineen. Netflixiä käytetään nuolilla ja OK:lla.'),
     ]),
   dict(clave='lg-on', corto='LG-televisio päälle puhelimella',
     titulo='LG-television käynnistys puhelimella (ohje)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV vai LG ThinQ: kumpi mihinkin', 'Käytä ThinQ:ta, jos haluat hallita LG:n kodinkoneita, kuten pesukonetta, jääkaappia tai ilmastointilaitetta, tai tarvitset LG-tilin toimintoja. Käytä Mando TV:tä, jos haluat nopean ja helpon television kaukosäätimen, joka toimii samassa sovelluksessa myös Samsungille, Rokulle ja Google TV:lle. Moni pitää molemmat: ThinQ kodinkoneille, Mando TV televisiolle.'),
-      ('Mitä Mando TV tekee LG-televisiossa', 'Se toimii webOS-pohjaisilla LG-älytelevisioilla eli useimmilla malleilla vuodesta 2014, mukaan lukien LED, NanoCell, QNED ja OLED. Se antaa sinulle nuolipainikkeet, OK:n, Takaisin-, Koti-, äänenvoimakkuus-, kanava-, mykistys- ja toistopainikkeet sekä näppäimistön kirjoittamiseen YouTubessa, Netflixissä tai selaimessa. Sovellusluettelo ja tuloluettelo ovat myös ilmaisia. Prolla saat lisäksi osoittimen kuten Magic Remotessa.'),
+      ('Mitä Mando TV tekee LG-televisiossa', 'Se toimii webOS-pohjaisilla LG-älytelevisioilla eli useimmilla malleilla vuodesta 2014, mukaan lukien LED, NanoCell, QNED ja OLED. Se antaa sinulle nuolipainikkeet, OK:n, Takaisin-, Koti-, äänenvoimakkuus-, kanava-, mykistys- ja toistopainikkeet sekä näppäimistön kirjoittamiseen television haussa ja useimmissa sovelluksissa. Sovellusluettelo ja tuloluettelo ovat myös ilmaisia. Prolla saat lisäksi osoittimen kuten Magic Remotessa.'),
       ('Mitä Mando TV ei tee', 'Se ei ohjaa LG:n kodinkoneita, se ei käytä LG-tiliäsi eikä korvaa television LG-tilipalveluja. Se on kaukosäädin, ei älykodin keskus.'),
       ('Tietosuoja ja mainokset', 'Mando TV:ssä ei ole mainoksia eikä tiliä. Se puhuu televisiolle vain kotiverkkosi sisällä ja tallentaa yhteysavaimen salattuna laitteellesi. Kaikki ominaisuudet löydät sivulta [LG-kaukosäädinsovellus](@lg).'),
       ('Ilmainen ja Pro', 'Nuolipainikkeet, OK, Takaisin, Koti, äänenvoimakkuus, kanavat, numeronäppäimet, näppäimistö, sovellusten avaaminen, tulojen vaihto sekä käynnistys ja sammutus ovat ilmaisia, ilman mainoksia ja ilman tilausta. Kosketuslevy, puhekomennot, suosikkisovellukset, rutiinit ja uniajastin kuuluvat Mando TV Pro -versioon, joka on kertaosto ilman tilausta.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Toimiiko Mando TV Sony Bravia -televisioiden kanssa?', 'Kyllä, Sony-televisioiden kanssa, joissa on Google TV tai Android TV. Se kattaa useimmat Sony-älytelevisiot valmistusvuodesta 2015 alkaen.'),
       ('Tarvitsenko Sony-sovelluksen tai Google-tilin?', 'Et. Mando TV tekee pariliitoksen television näytön koodilla eikä vaadi tiliä.'),
       ('Toimiiko se vanhempien Sony Bravia -televisioiden kanssa ilman Androidia?', 'Kyllä, betatilassa, vuosien 2013-2015 Bravia-malleilla ilman Androidia. Pariliitos tehdään televisiossa näytettävällä 4-numeroisella PIN-koodilla.'),
-      ('Voinko kirjoittaa Sony-televisioon puhelimesta?', 'Kyllä. Näppäimistö on ilmainen ja toimii YouTubessa, Netflixissä ja television haussa.'),
+      ('Voinko kirjoittaa Sony-televisioon puhelimesta?', 'Kyllä. Puhelimen näppäimistö on ilmainen ja kirjoittaa television hakuun ja muihin tekstikenttiin. YouTubea varten Mando TV:ssä on myös YouTube-näppäimistö: kirjoita tai sano, mitä haluat katsoa, ja YouTube avautuu televisiossa tuloksineen. Netflix hyväksyy vain oman näytön näppäimistönsä, joten käytä siinä nuolia ja OK:ta.'),
     ]),
   dict(clave='tcl', corto='TCL-kaukosäädin', fecha='2026-11-23',
     titulo='TCL-kaukosäädinsovellus puhelimelle ja tietokoneelle',

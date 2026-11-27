@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Semua tombol', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, bisukan, dan putar.'),
       ('Penunjuk seperti Magic Remote (Pro)', 'Gerakkan panah di layar dengan jarimu, persis seperti memakai Magic Remote LG.'),
-      ('Keyboard', 'Ketik di YouTube, Netflix, atau browser TV dengan keyboard HP kamu.'),
+      ('Dua keyboard', 'Ketik di pencarian TV dan di sebagian besar aplikasi dengan keyboard HP kamu. Dengan Keyboard YouTube (Pro), ketik atau ucapkan apa yang mau ditonton, lalu YouTube terbuka di TV dengan hasilnya.'),
       ('Aplikasi dan input', 'Buka aplikasi favoritmu dan pindah ke HDMI, TV langsung, AirPlay, atau Screen Share.'),
       ('Keluaran audio (Pro)', 'Pindah antara speaker TV dan soundbar kamu.'),
       ('Menyalakan TV', 'Kalau TV mati, Mando TV menyalakannya lewat jaringan dan tersambung sendiri.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Semua tombol', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, bisukan, dan sumber.'),
       ('Touchpad (Pro)', 'Geser jari untuk menjelajah menu, tanpa perlu mencari tombol arah.'),
-      ('Keyboard', 'Ketik kata pencarian dan kata sandi dengan keyboard HP kamu.'),
+      ('Dua keyboard', 'Ketik di pencarian TV dan di sebagian besar aplikasi dengan keyboard HP kamu. Dengan Keyboard YouTube (Pro), ketik atau ucapkan apa yang mau ditonton, lalu YouTube terbuka di TV dengan hasilnya.'),
       ('Aplikasi', 'Buka Netflix, YouTube, Prime Video, dan aplikasi lainnya dengan satu ketukan.'),
       ('Menyalakan TV', 'Kalau TV mati, Mando TV menyalakannya lewat jaringan dan tersambung sendiri.'),
       ('Tanpa akun', 'Koneksi berjalan langsung lewat Wi-Fi kamu, tanpa melewati internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Menyalakan Roku dengan HP', preguntas='Pertanyaan tentang Roku', guias='Panduan untuk Roku'),
     funciones=[
       ('Semua tombol', 'Tombol arah, OK, Kembali, Beranda, volume, bisukan, ulangi, dan putar.'),
-      ('Keyboard', 'Ketik kata pencarian di kanal Roku dengan keyboard HP kamu.'),
+      ('Dua keyboard', 'Ketik di pencarian Roku dan di kanal yang mendukungnya dengan keyboard HP kamu. Dengan Keyboard YouTube (Pro), ketik atau ucapkan apa yang mau ditonton, lalu YouTube terbuka di TV dengan hasilnya.'),
       ('Kanal', 'Buka Netflix, YouTube, dan kanal Roku lainnya dengan satu ketukan.'),
       ('Input', 'Di Roku TV, pindah ke HDMI, antena, atau AV langsung dari aplikasi.'),
       ('Menyalakan TV', 'Di perangkat Roku TV dengan Quick Start, Mando TV menyalakannya dari HP kamu.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Semua tombol', 'Tombol arah, OK, Kembali, Beranda, volume, bisukan, dan putar.'),
       ('Touchpad (Pro)', 'Geser jari untuk berpindah cepat di menu Google TV.'),
-      ('Keyboard', 'Ketik kata pencarian dan kata sandi dengan keyboard HP kamu.'),
+      ('Dua keyboard', 'Ketik di pencarian TV dan di sebagian besar aplikasi dengan keyboard HP kamu. Dengan Keyboard YouTube (Pro), ketik atau ucapkan apa yang mau ditonton, lalu YouTube terbuka di TV dengan hasilnya.'),
       ('Aplikasi', 'Buka YouTube, Netflix, Disney+, dan aplikasi lainnya dengan satu ketukan.'),
       ('Menyalakan TV', 'Di model yang bisa dinyalakan lewat jaringan, Mando TV menyalakan TV dan tersambung sendiri.'),
       ('iPhone, Android, dan PC', 'Berfungsi sama di HP dan komputer mana pun.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Apakah saya butuh remote untuk memasangkan HP?', 'Tidak. Kode muncul di layar TV dan kamu mengetiknya di HP. Kamu hanya perlu menyalakan TV, kalau perlu dengan tombol di badan TV.'),
       ('Apakah berfungsi dengan Hisense?', 'Di TV Hisense dengan Android TV atau Google TV, ya. TV Hisense dengan sistem lain tidak kompatibel.'),
-      ('Bisakah saya mengetik dengan keyboard HP?', 'Bisa. Keyboard gratis dan berfungsi untuk pencarian di YouTube, Netflix, dan aplikasi lainnya.'),
+      ('Bisakah saya mengetik dengan keyboard HP?', 'Bisa, ada dua. Keyboard gratis mengetik di pencarian dan kolom teks TV serta sebagian besar aplikasi. YouTube dan Netflix hanya menerima keyboard di layarnya sendiri, jadi untuk YouTube ada Keyboard YouTube (Pro): ketik atau ucapkan apa yang mau kamu tonton, lalu YouTube terbuka di TV dengan hasilnya. Netflix dipakai dengan tombol arah dan OK.'),
     ]),
   dict(clave='lg-on', corto='Menyalakan TV LG dengan HP',
     titulo='Cara menyalakan TV LG dengan HP (panduan)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV atau LG ThinQ: untuk apa masing-masing', 'Pakai ThinQ kalau kamu ingin mengelola peralatan LG seperti mesin cuci, kulkas, atau AC, atau butuh fitur akun LG. Pakai Mando TV kalau kamu ingin remote TV yang cepat dan sederhana yang juga berfungsi untuk Samsung, Roku, dan Google TV dalam satu aplikasi. Banyak orang menyimpan keduanya: ThinQ untuk peralatan rumah, Mando TV untuk TV.'),
-      ('Apa yang dilakukan Mando TV di TV LG', 'Berfungsi dengan Smart TV LG webOS, yaitu sebagian besar model sejak 2014, termasuk LED, NanoCell, QNED, dan OLED. Aplikasi menyediakan tombol arah, OK, Kembali, Beranda, volume, saluran, bisukan, kontrol pemutaran, dan keyboard untuk mengetik di YouTube, Netflix, atau browser. Daftar aplikasi dan daftar input juga gratis. Dengan Pro kamu mendapat tambahan penunjuk seperti Magic Remote.'),
+      ('Apa yang dilakukan Mando TV di TV LG', 'Berfungsi dengan Smart TV LG webOS, yaitu sebagian besar model sejak 2014, termasuk LED, NanoCell, QNED, dan OLED. Aplikasi menyediakan tombol arah, OK, Kembali, Beranda, volume, saluran, bisukan, kontrol pemutaran, dan keyboard untuk mengetik di pencarian TV dan di sebagian besar aplikasi. Daftar aplikasi dan daftar input juga gratis. Dengan Pro kamu mendapat tambahan penunjuk seperti Magic Remote.'),
       ('Yang tidak dilakukan Mando TV', 'Aplikasi ini tidak mengontrol peralatan rumah LG, tidak memakai akun LG kamu, dan tidak menggantikan layanan akun LG di TV. Ini adalah remote, bukan hub smart home.'),
       ('Privasi dan iklan', 'Mando TV tidak punya iklan dan tidak punya akun. Aplikasi hanya berbicara dengan TV di dalam jaringan rumah kamu dan menyimpan kunci koneksi terenkripsi di perangkat kamu. Semua fiturnya ada di halaman [Aplikasi remote LG](@lg).'),
       ('Gratis dan Pro', 'Tombol arah, OK, Kembali, Beranda, volume, saluran, tombol angka, keyboard, membuka aplikasi, mengganti input, dan menyalakan atau mematikan TV gratis, tanpa iklan dan tanpa langganan. Touchpad, perintah suara, aplikasi favorit, rutinitas, dan timer tidur adalah bagian dari Mando TV Pro, pembelian sekali bayar tanpa langganan.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Apakah Mando TV berfungsi dengan TV Sony Bravia?', 'Ya, dengan TV Sony yang memakai Google TV atau Android TV. Itu mencakup sebagian besar Smart TV Sony sejak tahun 2015.'),
       ('Apakah saya butuh aplikasi Sony atau akun Google?', 'Tidak. Mando TV dipasangkan dengan kode di layar TV dan tidak meminta akun.'),
       ('Apakah berfungsi dengan TV Sony Bravia lama tanpa Android?', 'Ya, dalam status beta, pada model Bravia 2013 sampai 2015 tanpa Android. Pemasangannya lewat PIN 4 digit yang ditampilkan di TV.'),
-      ('Bisakah saya mengetik dari HP di TV Sony saya?', 'Bisa. Keyboard gratis dan berfungsi di YouTube, Netflix, dan pencarian TV.'),
+      ('Bisakah saya mengetik dari HP di TV Sony saya?', 'Bisa. Keyboard HP gratis dan mengetik di kotak pencarian TV dan kolom teks lainnya. Untuk YouTube, Mando TV juga punya Keyboard YouTube: ketik atau ucapkan apa yang mau ditonton, lalu YouTube terbuka di TV dengan hasilnya. Netflix hanya menerima keyboard di layarnya sendiri, jadi di sana pakai tombol arah dan OK.'),
     ]),
   dict(clave='tcl', corto='Remote TCL', fecha='2026-11-23',
     titulo='Aplikasi remote TCL untuk HP dan PC',

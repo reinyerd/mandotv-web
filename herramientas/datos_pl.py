@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Wszystkie przyciski', 'Krzyżak kierunkowy, OK, Wstecz, Ekran główny, głośność, kanały, wyciszenie i odtwarzanie.'),
       ('Wskaźnik jak w Magic Remote (Pro)', 'Poruszaj strzałką po ekranie palcem, dokładnie jak w pilocie LG Magic Remote.'),
-      ('Klawiatura', 'Pisz w YouTube, Netflix lub w przeglądarce telewizora na klawiaturze telefonu.'),
+      ('Dwie klawiatury', 'Pisz w wyszukiwarce telewizora i w większości aplikacji na klawiaturze telefonu. Z Klawiaturą YouTube (Pro) wpisujesz lub mówisz, co chcesz obejrzeć, a YouTube otwiera się na telewizorze z wynikami.'),
       ('Aplikacje i źródła', 'Otwieraj swoje aplikacje i przełączaj na HDMI, telewizję na żywo, AirPlay lub Screen Share.'),
       ('Wyjście audio (Pro)', 'Przełączaj dźwięk między głośnikami telewizora a soundbarem.'),
       ('Włączanie telewizora', 'Gdy jest wyłączony, Mando TV włącza go przez sieć i łączy się samo.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Wszystkie przyciski', 'Krzyżak kierunkowy, OK, Wstecz, Ekran główny, głośność, kanały, wyciszenie i źródło.'),
       ('Touchpad (Pro)', 'Przesuwaj palcem po menu, bez szukania strzałek.'),
-      ('Klawiatura', 'Wpisuj wyszukiwane hasła i hasła do kont na klawiaturze telefonu.'),
+      ('Dwie klawiatury', 'Pisz w wyszukiwarce telewizora i w większości aplikacji na klawiaturze telefonu. Z Klawiaturą YouTube (Pro) wpisujesz lub mówisz, co chcesz obejrzeć, a YouTube otwiera się na telewizorze z wynikami.'),
       ('Aplikacje', 'Otwieraj Netflix, YouTube, Prime Video i inne aplikacje jednym stuknięciem.'),
       ('Włączanie telewizora', 'Gdy jest wyłączony, Mando TV włącza go przez sieć i łączy się samo.'),
       ('Bez konta', 'Połączenie idzie bezpośrednio przez Twoją sieć Wi-Fi, bez pośrednictwa internetu.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Włączanie Roku telefonem', preguntas='Pytania o Roku', guias='Poradniki dla Roku'),
     funciones=[
       ('Wszystkie przyciski', 'Krzyżak kierunkowy, OK, Wstecz, Ekran główny, głośność, wyciszenie, powtórka i odtwarzanie.'),
-      ('Klawiatura', 'Wpisuj wyszukiwane hasła w kanałach Roku na klawiaturze telefonu.'),
+      ('Dwie klawiatury', 'Pisz w wyszukiwarce Roku i w kanałach, które na to pozwalają, na klawiaturze telefonu. Z Klawiaturą YouTube (Pro) wpisujesz lub mówisz, co chcesz obejrzeć, a YouTube otwiera się na telewizorze z wynikami.'),
       ('Kanały', 'Otwieraj Netflix, YouTube i inne kanały Roku jednym stuknięciem.'),
       ('Źródła', 'W Roku TV przełączaj w aplikacji na HDMI, antenę lub AV.'),
       ('Włączanie telewizora', 'W telewizorach Roku TV z szybkim uruchamianiem Mando TV włącza je z Twojego telefonu.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Wszystkie przyciski', 'Krzyżak kierunkowy, OK, Wstecz, Ekran główny, głośność, wyciszenie i odtwarzanie.'),
       ('Touchpad (Pro)', 'Przesuwaj palcem, żeby szybko poruszać się po menu Google TV.'),
-      ('Klawiatura', 'Wpisuj wyszukiwane hasła i hasła do kont na klawiaturze telefonu.'),
+      ('Dwie klawiatury', 'Pisz w wyszukiwarce telewizora i w większości aplikacji na klawiaturze telefonu. Z Klawiaturą YouTube (Pro) wpisujesz lub mówisz, co chcesz obejrzeć, a YouTube otwiera się na telewizorze z wynikami.'),
       ('Aplikacje', 'Otwieraj YouTube, Netflix, Disney+ i inne aplikacje jednym stuknięciem.'),
       ('Włączanie telewizora', 'W modelach z włączaniem przez sieć Mando TV włącza telewizor i łączy się samo.'),
       ('iPhone, Android i komputer', 'Działa tak samo na każdym telefonie i komputerze.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Czy potrzebuję pilota, żeby sparować telefon?', 'Nie. Kod pojawia się na ekranie telewizora, a Ty wpisujesz go w telefonie. Wystarczy włączyć telewizor, w razie potrzeby przyciskiem na obudowie.'),
       ('Czy działa z Hisense?', 'W telewizorach Hisense z Android TV lub Google TV tak. Telewizory Hisense z innym systemem nie są zgodne.'),
-      ('Czy mogę pisać na klawiaturze telefonu?', 'Tak. Klawiatura jest darmowa i działa przy wyszukiwaniu w YouTube, Netflix i innych aplikacjach.'),
+      ('Czy mogę pisać na klawiaturze telefonu?', 'Tak, są dwie. Darmowa klawiatura pisze w wyszukiwarce i polach tekstowych telewizora oraz większości aplikacji. YouTube i Netflix przyjmują tylko własną klawiaturę ekranową, więc dla YouTube jest Klawiatura YouTube (Pro): wpisujesz lub mówisz, co chcesz obejrzeć, a YouTube otwiera się na telewizorze z wynikami. Netflixa obsługujesz strzałkami i OK.'),
     ]),
   dict(clave='lg-on', corto='Włączanie LG telefonem',
     titulo='Włączanie telewizora LG telefonem (instrukcja)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV czy LG ThinQ: co do czego', 'Używaj ThinQ, gdy chcesz zarządzać sprzętem AGD LG, jak pralka, lodówka czy klimatyzator, albo potrzebujesz funkcji konta LG. Używaj Mando TV, gdy chcesz szybkiego, prostego pilota do telewizora, który w tej samej aplikacji działa też z Samsung, Roku i Google TV. Wiele osób zostawia obie: ThinQ do sprzętu AGD, Mando TV do telewizora.'),
-      ('Co Mando TV robi w telewizorze LG', 'Działa ze smart TV LG z webOS, czyli z większością modeli od 2014 roku, w tym LED, NanoCell, QNED i OLED. Daje strzałki, OK, Wstecz, Ekran główny, głośność, kanały, wyciszenie, sterowanie odtwarzaniem i klawiaturę do pisania w YouTube, Netflix lub przeglądarce. Lista aplikacji i lista źródeł też są darmowe. W Pro dostajesz dodatkowo wskaźnik jak w Magic Remote.'),
+      ('Co Mando TV robi w telewizorze LG', 'Działa ze smart TV LG z webOS, czyli z większością modeli od 2014 roku, w tym LED, NanoCell, QNED i OLED. Daje strzałki, OK, Wstecz, Ekran główny, głośność, kanały, wyciszenie, sterowanie odtwarzaniem i klawiaturę do pisania w wyszukiwarce telewizora i w większości aplikacji. Lista aplikacji i lista źródeł też są darmowe. W Pro dostajesz dodatkowo wskaźnik jak w Magic Remote.'),
       ('Czego Mando TV nie robi', 'Nie steruje sprzętem AGD LG, nie używa Twojego konta LG i nie zastępuje usług konta LG w telewizorze. To pilot, a nie centrala smart home.'),
       ('Prywatność i reklamy', 'Mando TV nie ma reklam ani konta. Rozmawia z telewizorem tylko w Twojej sieci domowej i zapisuje klucz połączenia w zaszyfrowanej postaci na Twoim urządzeniu. Wszystkie funkcje znajdziesz na stronie [Aplikacja pilot do LG](@lg).'),
       ('Za darmo i Pro', 'Strzałki, OK, Wstecz, Ekran główny, głośność, kanały, klawisze cyfr, klawiatura, otwieranie aplikacji, zmiana źródeł oraz włączanie i wyłączanie są darmowe, bez reklam i bez subskrypcji. Touchpad, polecenia głosowe, ulubione aplikacje, rutyny i wyłącznik czasowy należą do Mando TV Pro, jednorazowego zakupu bez subskrypcji.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Czy Mando TV działa z telewizorami Sony Bravia?', 'Tak, z telewizorami Sony, które używają Google TV lub Android TV. Obejmuje to większość smart TV Sony od rocznika 2015.'),
       ('Czy potrzebuję aplikacji Sony albo konta Google?', 'Nie. Mando TV paruje się kodem z ekranu telewizora i nie wymaga konta.'),
       ('Czy działa ze starszymi telewizorami Sony Bravia bez Androida?', 'Tak, w wersji beta, z modelami Bravia z lat 2013 do 2015 bez Androida. Parowanie odbywa się 4-cyfrowym kodem PIN pokazywanym na telewizorze.'),
-      ('Czy mogę pisać w telewizorze Sony z telefonu?', 'Tak. Klawiatura jest darmowa i działa w YouTube, Netflix i w wyszukiwarce telewizora.'),
+      ('Czy mogę pisać w telewizorze Sony z telefonu?', 'Tak. Klawiatura w telefonie jest darmowa i pisze w wyszukiwarce telewizora i w innych polach tekstowych. Dla YouTube Mando TV ma też Klawiaturę YouTube: wpisujesz lub mówisz, co chcesz obejrzeć, a YouTube otwiera się na telewizorze z wynikami. Netflix przyjmuje tylko własną klawiaturę ekranową, więc tam używaj strzałek i OK.'),
     ]),
   dict(clave='tcl', corto='Pilot TCL', fecha='2026-11-23',
     titulo='Aplikacja pilot do telewizora TCL na telefon i komputer',

@@ -215,7 +215,7 @@ MARCAS = [
     funciones=[
       ('All the buttons', 'D-pad, OK, Back, Home, volume, channels, mute and playback.'),
       ('Pointer like the Magic Remote (Pro)', 'Move the arrow around the screen with your finger, just like with the LG Magic Remote.'),
-      ('Keyboard', 'Type in YouTube, Netflix or the TV browser with your phone keyboard.'),
+      ('Two keyboards', 'Type in the TV search and most apps with your phone keyboard. With the YouTube Keyboard (Pro), type or say what to watch and YouTube opens on the TV with the results.'),
       ('Apps and inputs', 'Open your apps and switch to HDMI, live TV, AirPlay or Screen Share.'),
       ('Audio output (Pro)', 'Switch between the TV speakers and your soundbar.'),
       ('Turn on the TV', 'If it is off, Mando TV turns it on over the network and connects by itself.'),
@@ -246,7 +246,7 @@ MARCAS = [
     funciones=[
       ('All the buttons', 'D-pad, OK, Return, Home, volume, channels, mute and source.'),
       ('Touchpad (Pro)', 'Swipe your finger to move through the menus without hunting for arrows.'),
-      ('Keyboard', 'Type searches and passwords with your phone keyboard.'),
+      ('Two keyboards', 'Type in the TV search and most apps with your phone keyboard. With the YouTube Keyboard (Pro), type or say what to watch and YouTube opens on the TV with the results.'),
       ('Apps', 'Open Netflix, YouTube, Prime Video and your other apps with one tap.'),
       ('Turn on the TV', 'If it is off, Mando TV turns it on over the network and connects by itself.'),
       ('No account', 'It connects directly over your Wi-Fi, without going through the internet.'),
@@ -276,7 +276,7 @@ MARCAS = [
     compat='Roku TV sets (TCL, Hisense, Philips, Sharp, JVC and others) and Roku players (Express, Streaming Stick, Ultra).',
     funciones=[
       ('All the buttons', 'D-pad, OK, Back, Home, volume, mute, replay and playback.'),
-      ('Keyboard', 'Type searches in Roku channels with your phone keyboard.'),
+      ('Two keyboards', 'Type in the Roku search and in channels that accept it with your phone keyboard. With the YouTube Keyboard (Pro), type or say what to watch and YouTube opens on the TV with the results.'),
       ('Channels', 'Open Netflix, YouTube and your other Roku channels with one tap.'),
       ('Inputs', 'On a Roku TV, switch to HDMI, antenna or AV from the app.'),
       ('Turn on the TV', 'On Roku TV sets with fast start, Mando TV turns them on from your phone.'),
@@ -308,7 +308,7 @@ MARCAS = [
     funciones=[
       ('All the buttons', 'D-pad, OK, Back, Home, volume, mute and playback.'),
       ('Touchpad (Pro)', 'Swipe your finger to move quickly through the Google TV menus.'),
-      ('Keyboard', 'Type searches and passwords with your phone keyboard.'),
+      ('Two keyboards', 'Type in the TV search and most apps with your phone keyboard. With the YouTube Keyboard (Pro), type or say what to watch and YouTube opens on the TV with the results.'),
       ('Apps', 'Open YouTube, Netflix, Disney+ and your other apps with one tap.'),
       ('Turn on the TV', 'On models with power-on over the network, Mando TV turns the TV on and connects by itself.'),
       ('iPhone, Android and PC', 'It works the same from any phone or computer.'),
@@ -513,7 +513,7 @@ GUIAS = [
     faq=[
       ('Do I need the remote to pair my phone?', 'No. The code appears on the TV screen and you type it on your phone. You only have to turn on the TV, with the button on the TV if needed.'),
       ('Does it work with a Hisense?', 'On Hisense TVs that have Android TV or Google TV, yes. Hisense TVs with another system are not compatible.'),
-      ('Can I type with my phone keyboard?', 'Yes. The keyboard is free and works for searching in YouTube, Netflix and the rest of the apps.'),
+      ('Can I type with my phone keyboard?', 'Yes, there are two. The free keyboard types into the search and text boxes of the TV and of most apps. YouTube and Netflix only accept their own on-screen keyboard, so for YouTube there is the YouTube Keyboard (Pro): type or say what you want to watch and YouTube opens on the TV with the results. Netflix is used with the arrows and OK.'),
     ]),
   dict(clave='lg-on', corto='Turn on LG TV with phone',
     titulo='How to Turn On an LG TV With Your Phone (Step by Step)',

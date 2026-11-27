@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Alle knapper', 'Piletaster, OK, Tilbage, Hjem, lydstyrke, kanaler, lydløs og afspilning.'),
       ('Markør som på Magic Remote (Pro)', 'Flyt pilen rundt på skærmen med fingeren, ligesom med LG Magic Remote.'),
-      ('Tastatur', 'Skriv i YouTube, Netflix eller tv\'ets browser med din mobils tastatur.'),
+      ('To tastaturer', "Skriv i tv'ets søgning og i de fleste apps med din mobils tastatur. Med YouTube-tastatur (Pro) kan du skrive eller sige, hvad du vil se, og YouTube åbner på tv'et med resultaterne."),
       ('Apps og indgange', 'Åbn dine apps og skift til HDMI, live-tv, AirPlay eller Screen Share.'),
       ('Lydudgang (Pro)', 'Skift mellem tv\'ets højttalere og din soundbar.'),
       ('Tænd tv\'et', 'Hvis det er slukket, tænder Mando TV det via netværket og forbinder af sig selv.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Alle knapper', 'Piletaster, OK, Tilbage, Hjem, lydstyrke, kanaler, lydløs og kilde.'),
       ('Touchpad (Pro)', 'Stryg med fingeren gennem menuerne uden at lede efter piletasterne.'),
-      ('Tastatur', 'Skriv søgeord og adgangskoder med din mobils tastatur.'),
+      ('To tastaturer', "Skriv i tv'ets søgning og i de fleste apps med din mobils tastatur. Med YouTube-tastatur (Pro) kan du skrive eller sige, hvad du vil se, og YouTube åbner på tv'et med resultaterne."),
       ('Apps', 'Åbn Netflix, YouTube, Prime Video og dine andre apps med et tryk.'),
       ('Tænd tv\'et', 'Hvis det er slukket, tænder Mando TV det via netværket og forbinder af sig selv.'),
       ('Uden konto', 'Forbindelsen kører direkte via dit wifi, uden omvej over internettet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Tænd Roku med mobilen', preguntas='Spørgsmål om Roku', guias='Guider til Roku'),
     funciones=[
       ('Alle knapper', 'Piletaster, OK, Tilbage, Hjem, lydstyrke, lydløs, gentag og afspilning.'),
-      ('Tastatur', 'Skriv søgeord i Roku-kanaler med din mobils tastatur.'),
+      ('To tastaturer', "Skriv i Roku-søgningen og i kanaler, der tillader det, med din mobils tastatur. Med YouTube-tastatur (Pro) kan du skrive eller sige, hvad du vil se, og YouTube åbner på tv'et med resultaterne."),
       ('Kanaler', 'Åbn Netflix, YouTube og dine andre Roku-kanaler med et tryk.'),
       ('Indgange', 'Skift på et Roku TV til HDMI, antenne eller AV i appen.'),
       ('Tænd tv\'et', 'På Roku TV med hurtig start tænder Mando TV dem fra din mobil.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Alle knapper', 'Piletaster, OK, Tilbage, Hjem, lydstyrke, lydløs og afspilning.'),
       ('Touchpad (Pro)', 'Stryg med fingeren for hurtigt at navigere gennem menuerne i Google TV.'),
-      ('Tastatur', 'Skriv søgeord og adgangskoder med din mobils tastatur.'),
+      ('To tastaturer', "Skriv i tv'ets søgning og i de fleste apps med din mobils tastatur. Med YouTube-tastatur (Pro) kan du skrive eller sige, hvad du vil se, og YouTube åbner på tv'et med resultaterne."),
       ('Apps', 'Åbn YouTube, Netflix, Disney+ og dine andre apps med et tryk.'),
       ('Tænd tv\'et', 'På modeller med tænd via netværket tænder Mando TV tv\'et og forbinder af sig selv.'),
       ('iPhone, Android og pc', 'Det virker ens på alle mobiler og alle computere.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Skal jeg bruge fjernbetjeningen for at parre min mobil?', 'Nej. Koden vises på tv\'ets skærm, og du taster den ind på mobilen. Du skal bare tænde tv\'et, om nødvendigt med knappen på apparatet.'),
       ('Virker det med et Hisense?', 'På Hisense-tv med Android TV eller Google TV, ja. Hisense-tv med et andet system er ikke kompatible.'),
-      ('Kan jeg skrive med min mobils tastatur?', 'Ja. Tastaturet er gratis og virker til søgning i YouTube, Netflix og de andre apps.'),
+      ('Kan jeg skrive med min mobils tastatur?', "Ja, der er to. Det gratis tastatur skriver i søgningen og i tekstfelterne på tv'et og i de fleste apps. YouTube og Netflix accepterer kun deres eget tastatur på skærmen, så til YouTube findes YouTube-tastatur (Pro): skriv eller sig, hvad du vil se, og YouTube åbner på tv'et med resultaterne. Netflix bruges med piletasterne og OK."),
     ]),
   dict(clave='lg-on', corto='Tænd LG-tv med mobilen',
     titulo='Tænd LG-tv med mobilen (vejledning)',
@@ -757,7 +757,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV eller LG ThinQ: hvad til hvad', 'Brug ThinQ, hvis du vil styre LG-husholdningsapparater som en vaskemaskine, et køleskab eller et klimaanlæg eller har brug for LG-kontofunktioner. Brug Mando TV, hvis du vil have en hurtig, enkel fjernbetjening til tv\'et, der også virker til Samsung, Roku og Google TV i den samme app. Mange beholder begge: ThinQ til apparaterne, Mando TV til tv\'et.'),
-      ('Hvad Mando TV gør på et LG-tv', 'Det virker med LG smart-tv med webOS, altså de fleste modeller siden 2014, herunder LED, NanoCell, QNED og OLED. Det giver dig piletaster, OK, Tilbage, Hjem, lydstyrke, kanaler, lydløs, afspilningsstyring og et tastatur til at skrive i YouTube, Netflix eller browseren. Listen over apps og listen over indgange er også gratis. Med Pro får du desuden en markør som på Magic Remote.'),
+      ('Hvad Mando TV gør på et LG-tv', "Det virker med LG smart-tv med webOS, altså de fleste modeller siden 2014, herunder LED, NanoCell, QNED og OLED. Det giver dig piletaster, OK, Tilbage, Hjem, lydstyrke, kanaler, lydløs, afspilningsstyring og et tastatur til at skrive i tv'ets søgning og i de fleste apps. Listen over apps og listen over indgange er også gratis. Med Pro får du desuden en markør som på Magic Remote."),
       ('Hvad Mando TV ikke gør', 'Det styrer ingen LG-husholdningsapparater, det bruger ikke din LG-konto, og det erstatter ikke LG\'s kontotjenester på tv\'et. Det er en fjernbetjening, ikke en smart home-hub.'),
       ('Privatliv og reklamer', 'Mando TV har ingen reklamer og ingen konto. Det taler kun inde i dit hjemmenetværk med tv\'et og gemmer forbindelsesnøglen krypteret på din enhed. Alle funktioner finder du på siden [LG fjernbetjening-app](@lg).'),
       ('Gratis og Pro', 'Piletaster, OK, Tilbage, Hjem, lydstyrke, kanaler, taltaster, tastatur, at åbne apps, at skifte indgange og tænd/sluk er gratis, uden reklamer og uden abonnement. Touchpad, talekommandoer, yndlingsapps, rutiner og sovetimer hører til Mando TV Pro, et engangskøb uden abonnement.'),
@@ -970,7 +970,7 @@ GUIAS += [
       ('Virker Mando TV med Sony Bravia-tv?', 'Ja, med Sony-tv, der bruger Google TV eller Android TV. Det omfatter de fleste Sony smart-tv fra årgang 2015.'),
       ('Skal jeg have en Sony-app eller en Google-konto?', 'Nej. Mando TV parrer med koden på tv-skærmen og kræver ingen konto.'),
       ('Virker det med ældre Sony Bravia-tv uden Android?', 'Ja, i beta, på Bravia-modeller fra 2013 til 2015 uden Android. Parringen sker med en 4-cifret pinkode, der vises på tv\'et.'),
-      ('Kan jeg skrive fra mobilen på mit Sony-tv?', 'Ja. Tastaturet er gratis og virker i YouTube, Netflix og tv\'ets søgning.'),
+      ('Kan jeg skrive fra mobilen på mit Sony-tv?', "Ja. Mobilens tastatur er gratis og skriver i tv'ets søgefelt og i andre tekstfelter. Til YouTube har Mando TV også et YouTube-tastatur: skriv eller sig, hvad du vil se, og YouTube åbner på tv'et med resultaterne. Netflix accepterer kun sit eget tastatur på skærmen, så brug piletasterne og OK dér."),
     ]),
   dict(clave='tcl', corto='TCL-fjernbetjening', fecha='2026-11-23',
     titulo='TCL fjernbetjening-app til mobil og pc',

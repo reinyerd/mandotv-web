@@ -14,7 +14,7 @@ _PRECIO = 'El control remoto es gratis, sin anuncios y sin suscripción. Pro es 
 
 _FUNCIONES_GTV = [
   ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio y reproducción.'),
-  ('Teclado', 'Escribe en YouTube, Netflix y el buscador del TV con el teclado de tu celular.'),
+  ('Dos teclados', 'Escribe en el buscador del TV y en la mayoría de las apps con el teclado de tu celular. Para YouTube, Mando TV también tiene un Teclado de YouTube: escribe o di qué ver y YouTube se abre en el TV con los resultados.'),
   ('Encender el TV', 'En los modelos con encendido por red, Mando TV lo enciende y se conecta solo.'),
   ('Sin cuenta', 'No pide cuenta de Google ni registrarte: se conecta directo por tu WiFi.'),
   ('iPhone, Android y PC', 'Funciona igual desde cualquier celular o computador con Windows.'),
@@ -22,7 +22,7 @@ _FUNCIONES_GTV = [
 ]
 _FUNCIONES_ROKU_GTV = [
   ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio y reproducción.'),
-  ('Teclado', 'Escribe búsquedas en YouTube, Netflix y los demás canales con el teclado de tu celular.'),
+  ('Dos teclados', 'Escribe en el buscador de Roku y en los canales que lo permiten con el teclado de tu celular. Para YouTube, Mando TV también tiene un Teclado de YouTube: escribe o di qué ver y YouTube se abre en el TV con los resultados.'),
   ('Encender el TV', 'En los modelos Roku TV con inicio rápido y en los Google TV con encendido por red, Mando TV lo enciende.'),
   ('Sin cuenta', 'No pide cuenta de Roku ni de Google: se conecta directo por tu WiFi.'),
   ('iPhone, Android y PC', 'Funciona igual desde cualquier celular o computador con Windows.'),

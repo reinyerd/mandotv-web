@@ -29,7 +29,7 @@ GUIAS_EEUU = [
     ],
     extra=[
       ('Mando TV vs LG ThinQ, in plain terms', 'Use ThinQ if you want to manage LG appliances such as a washer, a fridge or an air conditioner, or LG account features. Use Mando TV if you want a fast, simple remote for the TV that also works for Samsung, Roku and Google TV in the same app. Many people keep both: ThinQ for appliances, Mando TV for the TV.'),
-      ('What Mando TV does on an LG TV', 'It works with LG smart TVs running webOS, which covers most LG smart TV models since 2014, including LED, NanoCell, QNED and OLED. It gives you the d-pad, OK, Back, Home, volume, channels, mute, playback controls and a keyboard for typing in YouTube, Netflix or the browser. The apps list and the inputs list are free too. With Pro you also get a pointer like the Magic Remote.'),
+      ('What Mando TV does on an LG TV', 'It works with LG smart TVs running webOS, which covers most LG smart TV models since 2014, including LED, NanoCell, QNED and OLED. It gives you the d-pad, OK, Back, Home, volume, channels, mute, playback controls and a keyboard for typing in the TV search and in most apps. The apps list and the inputs list are free too. With Pro you also get a pointer like the Magic Remote.'),
       ('What Mando TV does not do', 'It does not control LG appliances, it does not use your LG account and it does not replace the LG account services on the TV. It is a remote, not a smart home hub.'),
       ('Privacy and ads', 'Mando TV has no ads and no account. It talks to the TV inside your home network and keeps the TV connection key encrypted on your own device. The [LG TV remote page](/lg-tv-remote/) has the full list of features.'),
       ('What is free and what is Pro', FREE_PRO),

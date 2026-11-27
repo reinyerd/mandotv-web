@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Đầy đủ phím bấm', 'Phím điều hướng, OK, Quay lại, Home, âm lượng, kênh, tắt tiếng và phát nội dung.'),
       ('Con trỏ như Magic Remote (Pro)', 'Di chuyển mũi tên trên màn hình bằng ngón tay, giống hệt Magic Remote của LG.'),
-      ('Bàn phím', 'Gõ trong YouTube, Netflix hoặc trình duyệt của TV bằng bàn phím điện thoại.'),
+      ('Hai bàn phím', 'Gõ trong phần tìm kiếm của TV và hầu hết ứng dụng bằng bàn phím điện thoại. Với Bàn phím YouTube (Pro), gõ hoặc nói bạn muốn xem gì, YouTube sẽ mở trên TV với kết quả.'),
       ('Ứng dụng và nguồn vào', 'Mở các ứng dụng của bạn và chuyển sang HDMI, TV trực tiếp, AirPlay hoặc Screen Share.'),
       ('Đầu ra âm thanh (Pro)', 'Chuyển qua lại giữa loa của TV và loa thanh của bạn.'),
       ('Bật TV', 'Khi TV đang tắt, Mando TV bật TV qua mạng và tự động kết nối.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Đầy đủ phím bấm', 'Phím điều hướng, OK, Quay lại, Home, âm lượng, kênh, tắt tiếng và nguồn vào.'),
       ('Touchpad (Pro)', 'Vuốt ngón tay để lướt qua các menu mà không cần tìm phím mũi tên.'),
-      ('Bàn phím', 'Gõ từ khóa tìm kiếm và mật khẩu bằng bàn phím điện thoại.'),
+      ('Hai bàn phím', 'Gõ trong phần tìm kiếm của TV và hầu hết ứng dụng bằng bàn phím điện thoại. Với Bàn phím YouTube (Pro), gõ hoặc nói bạn muốn xem gì, YouTube sẽ mở trên TV với kết quả.'),
       ('Ứng dụng', 'Mở Netflix, YouTube, Prime Video và các ứng dụng khác chỉ với một chạm.'),
       ('Bật TV', 'Khi TV đang tắt, Mando TV bật TV qua mạng và tự động kết nối.'),
       ('Không cần tài khoản', 'Kết nối đi thẳng qua Wi-Fi của bạn, không qua internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Bật Roku bằng điện thoại', preguntas='Câu hỏi về Roku', guias='Hướng dẫn cho Roku'),
     funciones=[
       ('Đầy đủ phím bấm', 'Phím điều hướng, OK, Quay lại, Home, âm lượng, tắt tiếng, phát lại và phát nội dung.'),
-      ('Bàn phím', 'Gõ từ khóa tìm kiếm trong các kênh Roku bằng bàn phím điện thoại.'),
+      ('Hai bàn phím', 'Gõ trong phần tìm kiếm của Roku và trong các kênh có hỗ trợ bằng bàn phím điện thoại. Với Bàn phím YouTube (Pro), gõ hoặc nói bạn muốn xem gì, YouTube sẽ mở trên TV với kết quả.'),
       ('Kênh', 'Mở Netflix, YouTube và các kênh Roku khác chỉ với một chạm.'),
       ('Nguồn vào', 'Với Roku TV, chuyển sang HDMI, ăng-ten hoặc AV ngay trong ứng dụng.'),
       ('Bật TV', 'Với Roku TV có Fast TV start, Mando TV bật TV từ điện thoại của bạn.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Đầy đủ phím bấm', 'Phím điều hướng, OK, Quay lại, Home, âm lượng, tắt tiếng và phát nội dung.'),
       ('Touchpad (Pro)', 'Vuốt ngón tay để di chuyển nhanh qua các menu của Google TV.'),
-      ('Bàn phím', 'Gõ từ khóa tìm kiếm và mật khẩu bằng bàn phím điện thoại.'),
+      ('Hai bàn phím', 'Gõ trong phần tìm kiếm của TV và hầu hết ứng dụng bằng bàn phím điện thoại. Với Bàn phím YouTube (Pro), gõ hoặc nói bạn muốn xem gì, YouTube sẽ mở trên TV với kết quả.'),
       ('Ứng dụng', 'Mở YouTube, Netflix, Disney+ và các ứng dụng khác chỉ với một chạm.'),
       ('Bật TV', 'Với các model có bật qua mạng, Mando TV bật TV và tự động kết nối.'),
       ('iPhone, Android và máy tính', 'Hoạt động giống hệt nhau trên mọi điện thoại và máy tính.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Tôi có cần điều khiển để ghép nối điện thoại không?', 'Không. Mã hiện trên màn hình TV và bạn nhập mã trên điện thoại. Bạn chỉ cần bật TV, nếu cần thì bằng nút trên máy.'),
       ('Có dùng được với Hisense không?', 'Với TV Hisense chạy Android TV hoặc Google TV thì có. TV Hisense dùng hệ thống khác thì không tương thích.'),
-      ('Tôi có thể gõ bằng bàn phím điện thoại không?', 'Có. Bàn phím miễn phí và dùng được để tìm kiếm trong YouTube, Netflix và các ứng dụng khác.'),
+      ('Tôi có thể gõ bằng bàn phím điện thoại không?', 'Có, có hai loại. Bàn phím miễn phí gõ được vào ô tìm kiếm và các ô văn bản của TV và của hầu hết ứng dụng. YouTube và Netflix chỉ nhận bàn phím trên màn hình của riêng chúng, nên với YouTube có Bàn phím YouTube (Pro): gõ hoặc nói bạn muốn xem gì, YouTube sẽ mở trên TV với kết quả. Netflix dùng bằng phím mũi tên và OK.'),
     ]),
   dict(clave='lg-on', corto='Bật TV LG bằng điện thoại',
     titulo='Bật TV LG bằng điện thoại (hướng dẫn)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV hay LG ThinQ: dùng cái nào cho việc gì', 'Hãy dùng ThinQ nếu bạn muốn quản lý đồ gia dụng LG như máy giặt, tủ lạnh hay máy lạnh, hoặc cần các tính năng của tài khoản LG. Hãy dùng Mando TV nếu bạn muốn một chiếc điều khiển nhanh, đơn giản cho TV, dùng được cả cho Samsung, Roku và Google TV trong cùng một ứng dụng. Nhiều người giữ cả hai: ThinQ cho đồ gia dụng, Mando TV cho TV.'),
-      ('Mando TV làm gì trên TV LG', 'Ứng dụng dùng được với Smart TV LG chạy webOS, tức là hầu hết các model từ 2014, gồm LED, NanoCell, QNED và OLED. Ứng dụng có phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, tắt tiếng, điều khiển phát và một bàn phím để gõ trong YouTube, Netflix hay trình duyệt. Danh sách ứng dụng và danh sách nguồn vào cũng miễn phí. Với Pro, bạn có thêm con trỏ như Magic Remote.'),
+      ('Mando TV làm gì trên TV LG', 'Ứng dụng dùng được với Smart TV LG chạy webOS, tức là hầu hết các model từ 2014, gồm LED, NanoCell, QNED và OLED. Ứng dụng có phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, tắt tiếng, điều khiển phát và một bàn phím để gõ trong phần tìm kiếm của TV và hầu hết ứng dụng. Danh sách ứng dụng và danh sách nguồn vào cũng miễn phí. Với Pro, bạn có thêm con trỏ như Magic Remote.'),
       ('Những gì Mando TV không làm', 'Ứng dụng không điều khiển đồ gia dụng LG, không dùng tài khoản LG của bạn và không thay thế các dịch vụ tài khoản LG trên TV. Đây là một chiếc điều khiển, không phải trung tâm nhà thông minh.'),
       ('Quyền riêng tư và quảng cáo', 'Mando TV không có quảng cáo và không có tài khoản. Ứng dụng chỉ trò chuyện với TV trong mạng gia đình của bạn và lưu khóa kết nối được mã hóa trên thiết bị của bạn. Bạn xem toàn bộ tính năng trên trang [Ứng dụng điều khiển TV LG](@lg).'),
       ('Miễn phí và Pro', 'Phím mũi tên, OK, Quay lại, Home, âm lượng, kênh, phím số, bàn phím, mở ứng dụng, đổi nguồn vào và bật/tắt đều miễn phí, không quảng cáo và không đăng ký. Touchpad, lệnh thoại, ứng dụng yêu thích, quy trình và hẹn giờ tắt là một phần của Mando TV Pro, gói mua một lần không cần đăng ký.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Mando TV có dùng được với TV Sony Bravia không?', 'Có, với các TV Sony chạy Google TV hoặc Android TV. Điều này bao gồm hầu hết Smart TV Sony sản xuất từ 2015.'),
       ('Tôi có cần ứng dụng Sony hay tài khoản Google không?', 'Không. Mando TV ghép nối bằng mã trên màn hình TV và không đòi tài khoản.'),
       ('Có dùng được với TV Sony Bravia đời cũ không dùng Android không?', 'Có, ở trạng thái beta, với các model Bravia từ 2013 đến 2015 không dùng Android. Việc ghép nối dùng PIN 4 chữ số hiện trên TV.'),
-      ('Tôi có thể gõ từ điện thoại trên TV Sony không?', 'Có. Bàn phím miễn phí và dùng được trong YouTube, Netflix và phần tìm kiếm của TV.'),
+      ('Tôi có thể gõ từ điện thoại trên TV Sony không?', 'Có. Bàn phím điện thoại miễn phí và gõ được vào ô tìm kiếm của TV và các ô văn bản khác. Với YouTube, Mando TV còn có Bàn phím YouTube: gõ hoặc nói bạn muốn xem gì, YouTube sẽ mở trên TV với kết quả. Netflix chỉ nhận bàn phím trên màn hình của riêng nó, nên ở đó hãy dùng phím mũi tên và OK.'),
     ]),
   dict(clave='tcl', corto='Điều khiển TCL', fecha='2026-11-23',
     titulo='Ứng dụng điều khiển TV TCL cho điện thoại và máy tính',

@@ -17,7 +17,7 @@ MARCAS = [
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, canales, silencio y reproducción.'),
       ('Puntero como el Magic Remote (Pro)', 'Mueve la flecha por la pantalla con el dedo, igual que con el control mágico de LG.'),
-      ('Teclado', 'Escribe en YouTube, Netflix o el navegador del TV con el teclado de tu celular.'),
+      ('Dos teclados', 'Escribe en el buscador del TV y en la mayoría de las apps con el teclado de tu celular. Con el Teclado de YouTube (Pro) escribe o di qué ver y YouTube se abre en el TV con los resultados.'),
       ('Apps y entradas', 'Abre tus apps y cambia a HDMI, TV en vivo, AirPlay o Screen Share.'),
       ('Salida de audio (Pro)', 'Cambia entre los parlantes del TV y tu barra de sonido.'),
       ('Encender el TV', 'Si está apagado, Mando TV lo enciende por la red y se conecta solo.'),
@@ -44,7 +44,7 @@ MARCAS = [
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Volver, Inicio, volumen, canales, silencio y fuente.'),
       ('Touchpad (Pro)', 'Desliza el dedo para moverte por los menús sin buscar flechas.'),
-      ('Teclado', 'Escribe búsquedas y contraseñas con el teclado de tu celular.'),
+      ('Dos teclados', 'Escribe en el buscador del TV y en la mayoría de las apps con el teclado de tu celular. Con el Teclado de YouTube (Pro) escribe o di qué ver y YouTube se abre en el TV con los resultados.'),
       ('Apps', 'Abre Netflix, YouTube, Prime Video y tus otras apps con un toque.'),
       ('Encender el TV', 'Si está apagado, Mando TV lo enciende por la red y se conecta solo.'),
       ('Sin cuenta', 'Se conecta directo por tu WiFi, sin pasar por internet.'),
@@ -69,7 +69,7 @@ MARCAS = [
     compat='Televisores Roku TV (TCL, Hisense, Philips, Sharp, JVC y otros) y reproductores Roku (Express, Streaming Stick, Ultra).',
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio, repetir y reproducción.'),
-      ('Teclado', 'Escribe búsquedas en los canales de Roku con el teclado de tu celular.'),
+      ('Dos teclados', 'Escribe en el buscador de Roku y en los canales que lo permiten con el teclado de tu celular. Con el Teclado de YouTube (Pro) escribe o di qué ver y YouTube se abre en el TV con los resultados.'),
       ('Canales', 'Abre Netflix, YouTube y tus otros canales de Roku con un toque.'),
       ('Entradas', 'En Roku TV, cambia a HDMI, antena o AV desde la app.'),
       ('Encender el TV', 'En televisores Roku TV con inicio rápido, Mando TV lo enciende desde el celular.'),
@@ -97,7 +97,7 @@ MARCAS = [
     funciones=[
       ('Todos los botones', 'Cruceta, OK, Atrás, Inicio, volumen, silencio y reproducción.'),
       ('Touchpad (Pro)', 'Desliza el dedo para moverte rápido por los menús de Google TV.'),
-      ('Teclado', 'Escribe búsquedas y contraseñas con el teclado de tu celular.'),
+      ('Dos teclados', 'Escribe en el buscador del TV y en la mayoría de las apps con el teclado de tu celular. Con el Teclado de YouTube (Pro) escribe o di qué ver y YouTube se abre en el TV con los resultados.'),
       ('Apps', 'Abre YouTube, Netflix, Disney+ y tus otras apps con un toque.'),
       ('Encender el TV', 'En los modelos con encendido por red, Mando TV lo enciende y se conecta solo.'),
       ('iPhone, Android y PC', 'Funciona igual desde cualquier celular o computador.'),

@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Tüm tuşlar', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, sessiz ve oynatma.'),
       ('Magic Remote gibi imleç (Pro)', 'Parmağınla ekranda oku hareket ettir, tıpkı LG Magic Remote’ta olduğu gibi.'),
-      ('Klavye', 'YouTube’da, Netflix’te veya TV’nin tarayıcısında telefonunun klavyesiyle yaz.'),
+      ('İki klavye', 'TV’nin aramasına ve çoğu uygulamaya telefonunun klavyesiyle yaz. YouTube Klavyesi (Pro) ile ne izleyeceğini yaz ya da söyle, YouTube TV’de sonuçlarla açılır.'),
       ('Uygulamalar ve girişler', 'Uygulamalarını aç ve HDMI, canlı TV, AirPlay veya Screen Share’e geç.'),
       ('Ses çıkışı (Pro)', 'TV hoparlörleri ile ses çubuğun arasında geçiş yap.'),
       ('TV’yi açma', 'Kapalıysa Mando TV onu ağ üzerinden açar ve kendiliğinden bağlanır.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Tüm tuşlar', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, sessiz ve kaynak.'),
       ('Dokunmatik yüzey (Pro)', 'Yön tuşlarını aramadan menülerde parmağını kaydırarak gez.'),
-      ('Klavye', 'Aramaları ve şifreleri telefonunun klavyesiyle yaz.'),
+      ('İki klavye', 'TV’nin aramasına ve çoğu uygulamaya telefonunun klavyesiyle yaz. YouTube Klavyesi (Pro) ile ne izleyeceğini yaz ya da söyle, YouTube TV’de sonuçlarla açılır.'),
       ('Uygulamalar', 'Netflix’i, YouTube’u, Prime Video’yu ve diğer uygulamalarını tek dokunuşla aç.'),
       ('TV’yi açma', 'Kapalıysa Mando TV onu ağ üzerinden açar ve kendiliğinden bağlanır.'),
       ('Hesapsız', 'Bağlantı doğrudan Wi-Fi ağın üzerinden kurulur, internete çıkmadan.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Roku’yu telefonla açma', preguntas='Roku hakkında sorular', guias='Roku için rehberler'),
     funciones=[
       ('Tüm tuşlar', 'Yön tuşları, OK, geri, ana ekran, ses, sessiz, tekrar ve oynatma.'),
-      ('Klavye', 'Roku kanallarında aramaları telefonunun klavyesiyle yaz.'),
+      ('İki klavye', 'Roku aramasına ve izin veren kanallara telefonunun klavyesiyle yaz. YouTube Klavyesi (Pro) ile ne izleyeceğini yaz ya da söyle, YouTube TV’de sonuçlarla açılır.'),
       ('Kanallar', 'Netflix’i, YouTube’u ve diğer Roku kanallarını tek dokunuşla aç.'),
       ('Girişler', 'Roku TV’de uygulamadan HDMI, anten veya AV’ye geç.'),
       ('TV’yi açma', 'Hızlı başlatması olan Roku TV cihazlarını Mando TV telefonundan açar.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Tüm tuşlar', 'Yön tuşları, OK, geri, ana ekran, ses, sessiz ve oynatma.'),
       ('Dokunmatik yüzey (Pro)', 'Google TV menülerinde hızlı gezinmek için parmağını kaydır.'),
-      ('Klavye', 'Aramaları ve şifreleri telefonunun klavyesiyle yaz.'),
+      ('İki klavye', 'TV’nin aramasına ve çoğu uygulamaya telefonunun klavyesiyle yaz. YouTube Klavyesi (Pro) ile ne izleyeceğini yaz ya da söyle, YouTube TV’de sonuçlarla açılır.'),
       ('Uygulamalar', 'YouTube’u, Netflix’i, Disney+’ı ve diğer uygulamalarını tek dokunuşla aç.'),
       ('TV’yi açma', 'Ağ üzerinden açmayı destekleyen modellerde Mando TV TV’yi açar ve kendiliğinden bağlanır.'),
       ('iPhone, Android ve bilgisayar', 'Her telefonda ve her bilgisayarda aynı şekilde çalışır.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Telefonumu eşleştirmek için kumandaya ihtiyacım var mı?', 'Hayır. Kod TV’nin ekranında çıkar ve sen onu telefonuna yazarsın. Yalnızca TV’yi açman gerekir; gerekirse üzerindeki tuşla.'),
       ('Hisense ile çalışır mı?', 'Android TV veya Google TV’li Hisense televizyonlarda evet. Farklı sistemli Hisense televizyonlar uyumlu değildir.'),
-      ('Telefonumun klavyesiyle yazabilir miyim?', 'Evet. Klavye ücretsizdir ve YouTube, Netflix ve diğer uygulamalarda aramalar için çalışır.'),
+      ('Telefonumun klavyesiyle yazabilir miyim?', 'Evet, iki tane var. Ücretsiz klavye TV’nin ve çoğu uygulamanın arama ve metin kutularına yazar. YouTube ve Netflix yalnızca kendi ekran klavyesini kabul eder, bu yüzden YouTube için YouTube Klavyesi (Pro) var: ne izlemek istediğini yazarsın ya da söylersin, YouTube TV’de sonuçlarla açılır. Netflix oklar ve OK ile kullanılır.'),
     ]),
   dict(clave='lg-on', corto='LG TV’yi telefonla açma',
     titulo='LG TV’yi telefonla açma (rehber)',
@@ -757,7 +757,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV mi, LG ThinQ mu: hangisi ne için', 'Çamaşır makinesi, buzdolabı ya da klima gibi LG ev aletlerini yönetmek istiyorsan veya LG hesabı özelliklerine ihtiyacın varsa ThinQ’yu kullan. TV için hızlı, basit ve aynı uygulamada Samsung, Roku ve Google TV’de de çalışan bir kumanda istiyorsan Mando TV’yi kullan. Birçok kişi ikisini de tutar: ev aletleri için ThinQ, TV için Mando TV.'),
-      ('Mando TV bir LG TV’de ne yapar', 'webOS’lu LG akıllı TV’lerle, yani 2014’ten bu yana çoğu modelle çalışır; LED, NanoCell, QNED ve OLED dahil. Sana yön tuşlarını, OK, geri, ana ekran, ses, kanal, sessiz, oynatma kontrollerini ve YouTube’da, Netflix’te ya da tarayıcıda yazmak için bir klavye sunar. Uygulama listesi ve giriş listesi de ücretsizdir. Pro ile ayrıca Magic Remote gibi bir imleç gelir.'),
+      ('Mando TV bir LG TV’de ne yapar', 'webOS’lu LG akıllı TV’lerle, yani 2014’ten bu yana çoğu modelle çalışır; LED, NanoCell, QNED ve OLED dahil. Sana yön tuşlarını, OK, geri, ana ekran, ses, kanal, sessiz, oynatma kontrollerini ve TV aramasında ve çoğu uygulamada yazmak için bir klavye sunar. Uygulama listesi ve giriş listesi de ücretsizdir. Pro ile ayrıca Magic Remote gibi bir imleç gelir.'),
       ('Mando TV’nin yapmadıkları', 'LG ev aletlerini kontrol etmez, LG hesabını kullanmaz ve TV’deki LG hesap hizmetlerinin yerini tutmaz. Bir kumandadır, akıllı ev merkezi değil.'),
       ('Gizlilik ve reklam', 'Mando TV’de reklam ve hesap yoktur. TV’yle yalnızca ev ağının içinde konuşur ve bağlantı anahtarını cihazında şifreli olarak saklar. Tüm özellikleri [LG kumanda uygulaması](@lg) sayfasında bulabilirsin.'),
       ('Ücretsiz ve Pro', 'Yön tuşları, OK, geri, ana ekran, ses, kanallar, rakam tuşları, klavye, uygulama açma, girişleri değiştirme ve açma/kapatma ücretsizdir, reklamsız ve aboneliksiz. Touchpad, sesli komutlar, favori uygulamalar, rutinler ve uyku zamanlayıcısı, aboneliksiz tek seferlik bir satın alım olan Mando TV Pro’nun parçasıdır.'),
@@ -970,7 +970,7 @@ GUIAS += [
       ('Mando TV Sony Bravia televizyonlarla çalışır mı?', 'Evet, Google TV ya da Android TV kullanan Sony televizyonlarla. Bu, 2015’ten itibaren üretilen çoğu Sony akıllı TV’yi kapsar.'),
       ('Sony uygulamasına ya da Google hesabına ihtiyacım var mı?', 'Hayır. Mando TV, TV ekranındaki kodla eşleşir ve hesap istemez.'),
       ('Android’siz eski Sony Bravia televizyonlarla çalışır mı?', 'Evet, beta olarak, Android’siz 2013-2015 arası Bravia modellerinde. Eşleştirme, TV’de gösterilen 4 haneli bir PIN ile yapılır.'),
-      ('Sony TV’mde telefondan yazabilir miyim?', 'Evet. Klavye ücretsizdir ve YouTube’da, Netflix’te ve TV aramasında çalışır.'),
+      ('Sony TV’mde telefondan yazabilir miyim?', 'Evet. Telefon klavyesi ücretsizdir ve TV’nin arama kutusuna ve diğer metin kutularına yazar. YouTube için Mando TV’de bir YouTube Klavyesi de var: ne izleyeceğini yaz ya da söyle, YouTube TV’de sonuçlarla açılır. Netflix yalnızca kendi ekran klavyesini kabul eder, orada oklar ve OK kullan.'),
     ]),
   dict(clave='tcl', corto='TCL kumanda', fecha='2026-11-23',
     titulo='Telefon ve bilgisayar için TCL kumanda uygulaması',

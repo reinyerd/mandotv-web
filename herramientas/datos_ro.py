@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Toate butoanele', 'Săgeți, OK, Înapoi, Acasă, volum, canale, mut și redare.'),
       ('Cursor ca la Magic Remote (Pro)', 'Mută săgeata pe ecran cu degetul, exact ca la LG Magic Remote.'),
-      ('Tastatură', 'Scrie în YouTube, Netflix sau în browserul televizorului cu tastatura telefonului.'),
+      ('Două tastaturi', 'Scrie în căutarea televizorului și în majoritatea aplicațiilor cu tastatura telefonului. Cu Tastatura YouTube (Pro), scrii sau spui ce vrei să vezi, iar YouTube se deschide pe televizor cu rezultatele.'),
       ('Aplicații și intrări', 'Deschide-ți aplicațiile și treci pe HDMI, TV live, AirPlay sau Screen Share.'),
       ('Ieșire audio (Pro)', 'Comută între difuzoarele televizorului și soundbar.'),
       ('Pornește televizorul', 'Dacă este oprit, Mando TV îl pornește prin rețea și se conectează singură.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Toate butoanele', 'Săgeți, OK, Înapoi, Acasă, volum, canale, mut și sursă.'),
       ('Touchpad (Pro)', 'Glisează cu degetul prin meniuri, fără să cauți săgețile.'),
-      ('Tastatură', 'Scrie căutări și parole cu tastatura telefonului.'),
+      ('Două tastaturi', 'Scrie în căutarea televizorului și în majoritatea aplicațiilor cu tastatura telefonului. Cu Tastatura YouTube (Pro), scrii sau spui ce vrei să vezi, iar YouTube se deschide pe televizor cu rezultatele.'),
       ('Aplicații', 'Deschide Netflix, YouTube, Prime Video și celelalte aplicații cu o atingere.'),
       ('Pornește televizorul', 'Dacă este oprit, Mando TV îl pornește prin rețea și se conectează singură.'),
       ('Fără cont', 'Conexiunea merge direct prin Wi-Fi-ul tău, fără să treacă prin internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Pornește Roku cu telefonul', preguntas='Întrebări despre Roku', guias='Ghiduri pentru Roku'),
     funciones=[
       ('Toate butoanele', 'Săgeți, OK, Înapoi, Acasă, volum, mut, reluare și redare.'),
-      ('Tastatură', 'Scrie căutări în canalele Roku cu tastatura telefonului.'),
+      ('Două tastaturi', 'Scrie în căutarea Roku și în canalele care o acceptă cu tastatura telefonului. Cu Tastatura YouTube (Pro), scrii sau spui ce vrei să vezi, iar YouTube se deschide pe televizor cu rezultatele.'),
       ('Canale', 'Deschide Netflix, YouTube și celelalte canale Roku cu o atingere.'),
       ('Intrări', 'La un Roku TV, treci din aplicație pe HDMI, antenă sau AV.'),
       ('Pornește televizorul', 'La televizoarele Roku TV cu pornire rapidă, Mando TV le pornește de pe telefon.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Toate butoanele', 'Săgeți, OK, Înapoi, Acasă, volum, mut și redare.'),
       ('Touchpad (Pro)', 'Glisează cu degetul ca să te miști rapid prin meniurile Google TV.'),
-      ('Tastatură', 'Scrie căutări și parole cu tastatura telefonului.'),
+      ('Două tastaturi', 'Scrie în căutarea televizorului și în majoritatea aplicațiilor cu tastatura telefonului. Cu Tastatura YouTube (Pro), scrii sau spui ce vrei să vezi, iar YouTube se deschide pe televizor cu rezultatele.'),
       ('Aplicații', 'Deschide YouTube, Netflix, Disney+ și celelalte aplicații cu o atingere.'),
       ('Pornește televizorul', 'La modelele cu pornire prin rețea, Mando TV pornește televizorul și se conectează singură.'),
       ('iPhone, Android și PC', 'Funcționează la fel pe orice telefon și pe orice computer.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Am nevoie de telecomandă ca să asociez telefonul?', 'Nu. Codul apare pe ecranul televizorului, iar tu îl scrii pe telefon. Trebuie doar să pornești televizorul, la nevoie cu butonul de pe aparat.'),
       ('Funcționează cu un Hisense?', 'La televizoarele Hisense cu Android TV sau Google TV, da. Televizoarele Hisense cu alt sistem nu sunt compatibile.'),
-      ('Pot scrie cu tastatura telefonului?', 'Da. Tastatura este gratuită și funcționează pentru căutarea în YouTube, Netflix și celelalte aplicații.'),
+      ('Pot scrie cu tastatura telefonului?', 'Da, sunt două. Tastatura gratuită scrie în căutarea și în câmpurile de text ale televizorului și ale majorității aplicațiilor. YouTube și Netflix acceptă doar propria tastatură de pe ecran, așa că pentru YouTube există Tastatura YouTube (Pro): scrii sau spui ce vrei să vezi, iar YouTube se deschide pe televizor cu rezultatele. Netflix se folosește cu săgețile și OK.'),
     ]),
   dict(clave='lg-on', corto='Pornește televizorul LG cu telefonul',
     titulo='Pornește televizorul LG cu telefonul (ghid)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV sau LG ThinQ: care pentru ce', 'Folosește ThinQ dacă vrei să gestionezi electrocasnice LG, ca o mașină de spălat, un frigider sau un aparat de aer condiționat, sau dacă îți trebuie funcții ale contului LG. Folosește Mando TV dacă vrei o telecomandă rapidă și simplă pentru televizor, care funcționează în aceeași aplicație și pentru Samsung, Roku și Google TV. Mulți le păstrează pe amândouă: ThinQ pentru electrocasnice, Mando TV pentru televizor.'),
-      ('Ce face Mando TV pe un televizor LG', 'Funcționează cu Smart TV-uri LG cu webOS, adică cu majoritatea modelelor din 2014 încoace, inclusiv LED, NanoCell, QNED și OLED. Îți oferă săgețile, OK, Înapoi, Acasă, volum, canale, mut, controlul redării și o tastatură pentru a scrie în YouTube, Netflix sau în browser. Lista de aplicații și lista de intrări sunt tot gratuite. Cu Pro primești în plus un cursor ca la Magic Remote.'),
+      ('Ce face Mando TV pe un televizor LG', 'Funcționează cu Smart TV-uri LG cu webOS, adică cu majoritatea modelelor din 2014 încoace, inclusiv LED, NanoCell, QNED și OLED. Îți oferă săgețile, OK, Înapoi, Acasă, volum, canale, mut, controlul redării și o tastatură pentru a scrie în căutarea televizorului și în majoritatea aplicațiilor. Lista de aplicații și lista de intrări sunt tot gratuite. Cu Pro primești în plus un cursor ca la Magic Remote.'),
       ('Ce nu face Mando TV', 'Nu controlează electrocasnice LG, nu folosește contul tău LG și nu înlocuiește serviciile contului LG de pe televizor. Este o telecomandă, nu un hub de casă inteligentă.'),
       ('Confidențialitate și reclame', 'Mando TV nu are reclame și nici cont. Vorbește cu televizorul doar în interiorul rețelei tale de acasă și păstrează cheia de conectare criptată pe dispozitivul tău. Toate funcțiile le găsești pe pagina [Aplicație telecomandă LG](@lg).'),
       ('Gratis și Pro', 'Săgețile, OK, Înapoi, Acasă, volumul, canalele, tastele numerice, tastatura, deschiderea aplicațiilor, schimbarea intrărilor și pornirea/oprirea sunt gratuite, fără reclame și fără abonament. Touchpadul, comenzile vocale, aplicațiile favorite, rutinele și temporizatorul de oprire fac parte din Mando TV Pro, o achiziție unică fără abonament.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Funcționează Mando TV cu televizoarele Sony Bravia?', 'Da, cu televizoarele Sony care folosesc Google TV sau Android TV. Asta cuprinde majoritatea Smart TV-urilor Sony fabricate din 2015 încoace.'),
       ('Am nevoie de o aplicație Sony sau de cont Google?', 'Nu. Mando TV se asociază cu codul de pe ecranul televizorului și nu cere cont.'),
       ('Funcționează cu televizoare Sony Bravia mai vechi, fără Android?', 'Da, în versiune beta, la modelele Bravia din 2013 până în 2015 fără Android. Asocierea se face cu un PIN de 4 cifre afișat pe televizor.'),
-      ('Pot scrie de pe telefon pe televizorul Sony?', 'Da. Tastatura este gratuită și funcționează în YouTube, Netflix și în căutarea televizorului.'),
+      ('Pot scrie de pe telefon pe televizorul Sony?', 'Da. Tastatura telefonului este gratuită și scrie în căutarea televizorului și în alte câmpuri de text. Pentru YouTube, Mando TV are și Tastatura YouTube: scrii sau spui ce vrei să vezi, iar YouTube se deschide pe televizor cu rezultatele. Netflix acceptă doar propria tastatură de pe ecran, așa că acolo folosește săgețile și OK.'),
     ]),
   dict(clave='tcl', corto='Telecomandă TCL', fecha='2026-11-23',
     titulo='Aplicație telecomandă TCL pentru telefon și PC',

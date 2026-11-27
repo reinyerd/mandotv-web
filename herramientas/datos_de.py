@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Alle Tasten', 'Steuerkreuz, OK, Zurück, Home, Lautstärke, Programme, Stummschaltung und Wiedergabe.'),
       ('Zeiger wie bei der Magic Remote (Pro)', 'Bewege den Pfeil mit dem Finger über den Bildschirm, genau wie mit der LG Magic Remote.'),
-      ('Tastatur', 'Tippe in YouTube, Netflix oder im Browser des Fernsehers mit der Tastatur deines Handys.'),
+      ('Zwei Tastaturen', 'Tippe in der Suche des Fernsehers und in den meisten Apps mit der Tastatur deines Handys. Mit der YouTube-Tastatur (Pro) tippst oder sagst du, was du sehen willst, und YouTube öffnet sich auf dem Fernseher mit den Ergebnissen.'),
       ('Apps und Eingänge', 'Öffne deine Apps und wechsle zu HDMI, Live-TV, AirPlay oder Screen Share.'),
       ('Audioausgabe (Pro)', 'Wechsle zwischen den Lautsprechern des Fernsehers und deiner Soundbar.'),
       ('Fernseher einschalten', 'Ist er aus, schaltet Mando TV ihn über das Netzwerk ein und verbindet sich von selbst.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Alle Tasten', 'Steuerkreuz, OK, Zurück, Home, Lautstärke, Programme, Stummschaltung und Quelle.'),
       ('Touchpad (Pro)', 'Wische mit dem Finger durch die Menüs, ohne nach den Pfeiltasten zu suchen.'),
-      ('Tastatur', 'Tippe Suchbegriffe und Passwörter mit der Tastatur deines Handys.'),
+      ('Zwei Tastaturen', 'Tippe in der Suche des Fernsehers und in den meisten Apps mit der Tastatur deines Handys. Mit der YouTube-Tastatur (Pro) tippst oder sagst du, was du sehen willst, und YouTube öffnet sich auf dem Fernseher mit den Ergebnissen.'),
       ('Apps', 'Öffne Netflix, YouTube, Prime Video und deine anderen Apps mit einem Tipp.'),
       ('Fernseher einschalten', 'Ist er aus, schaltet Mando TV ihn über das Netzwerk ein und verbindet sich von selbst.'),
       ('Ohne Konto', 'Die Verbindung läuft direkt über dein WLAN, ohne Umweg über das Internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Roku mit dem Handy einschalten', preguntas='Fragen zu Roku', guias='Ratgeber für Roku'),
     funciones=[
       ('Alle Tasten', 'Steuerkreuz, OK, Zurück, Home, Lautstärke, Stummschaltung, Wiederholen und Wiedergabe.'),
-      ('Tastatur', 'Tippe Suchbegriffe in Roku-Kanälen mit der Tastatur deines Handys.'),
+      ('Zwei Tastaturen', 'Tippe in der Roku-Suche und in Kanälen, die es zulassen, mit der Tastatur deines Handys. Mit der YouTube-Tastatur (Pro) tippst oder sagst du, was du sehen willst, und YouTube öffnet sich auf dem Fernseher mit den Ergebnissen.'),
       ('Kanäle', 'Öffne Netflix, YouTube und deine anderen Roku-Kanäle mit einem Tipp.'),
       ('Eingänge', 'Wechsle bei einem Roku TV in der App zu HDMI, Antenne oder AV.'),
       ('Fernseher einschalten', 'Bei Roku-TV-Geräten mit Schnellstart schaltet Mando TV sie von deinem Handy aus ein.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Alle Tasten', 'Steuerkreuz, OK, Zurück, Home, Lautstärke, Stummschaltung und Wiedergabe.'),
       ('Touchpad (Pro)', 'Wische mit dem Finger, um schnell durch die Menüs von Google TV zu navigieren.'),
-      ('Tastatur', 'Tippe Suchbegriffe und Passwörter mit der Tastatur deines Handys.'),
+      ('Zwei Tastaturen', 'Tippe in der Suche des Fernsehers und in den meisten Apps mit der Tastatur deines Handys. Mit der YouTube-Tastatur (Pro) tippst oder sagst du, was du sehen willst, und YouTube öffnet sich auf dem Fernseher mit den Ergebnissen.'),
       ('Apps', 'Öffne YouTube, Netflix, Disney+ und deine anderen Apps mit einem Tipp.'),
       ('Fernseher einschalten', 'Bei Modellen mit Einschalten über das Netzwerk schaltet Mando TV den Fernseher ein und verbindet sich von selbst.'),
       ('iPhone, Android und PC', 'Es funktioniert auf jedem Handy und jedem Computer gleich.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Brauche ich die Fernbedienung, um mein Handy zu koppeln?', 'Nein. Der Code erscheint auf dem Bildschirm des Fernsehers und du tippst ihn auf dem Handy ein. Du musst nur den Fernseher einschalten, bei Bedarf mit der Taste am Gerät.'),
       ('Funktioniert es mit einem Hisense?', 'Bei Hisense-Fernsehern mit Android TV oder Google TV ja. Hisense-Fernseher mit einem anderen System sind nicht kompatibel.'),
-      ('Kann ich mit der Tastatur meines Handys tippen?', 'Ja. Die Tastatur ist kostenlos und funktioniert für die Suche in YouTube, Netflix und den übrigen Apps.'),
+      ('Kann ich mit der Tastatur meines Handys tippen?', 'Ja, es gibt zwei. Die kostenlose Tastatur tippt in die Suche und in die Textfelder des Fernsehers und der meisten Apps. YouTube und Netflix akzeptieren nur ihre eigene Bildschirmtastatur, deshalb gibt es für YouTube die YouTube-Tastatur (Pro): Tippe oder sag, was du sehen willst, und YouTube öffnet sich auf dem Fernseher mit den Ergebnissen. Netflix bedienst du mit den Pfeiltasten und OK.'),
     ]),
   dict(clave='lg-on', corto='LG Fernseher mit Handy einschalten',
     titulo='LG Fernseher mit dem Handy einschalten (Anleitung)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV oder LG ThinQ: was wofür', 'Nutze ThinQ, wenn du LG-Hausgeräte wie eine Waschmaschine, einen Kühlschrank oder eine Klimaanlage verwalten willst oder LG-Kontofunktionen brauchst. Nutze Mando TV, wenn du eine schnelle, einfache Fernbedienung für den Fernseher willst, die auch für Samsung, Roku und Google TV in derselben App funktioniert. Viele behalten beide: ThinQ für die Hausgeräte, Mando TV für den Fernseher.'),
-      ('Was Mando TV auf einem LG-Fernseher macht', 'Es funktioniert mit LG-Smart-TVs mit webOS, also mit den meisten Modellen seit 2014, einschließlich LED, NanoCell, QNED und OLED. Es bietet dir die Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Stumm, Wiedergabesteuerung und eine Tastatur zum Tippen in YouTube, Netflix oder dem Browser. Die App-Liste und die Eingangsliste sind ebenfalls kostenlos. Mit Pro bekommst du zusätzlich einen Zeiger wie bei der Magic Remote.'),
+      ('Was Mando TV auf einem LG-Fernseher macht', 'Es funktioniert mit LG-Smart-TVs mit webOS, also mit den meisten Modellen seit 2014, einschließlich LED, NanoCell, QNED und OLED. Es bietet dir die Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Stumm, Wiedergabesteuerung und eine Tastatur zum Tippen in der Fernsehsuche und in den meisten Apps. Die App-Liste und die Eingangsliste sind ebenfalls kostenlos. Mit Pro bekommst du zusätzlich einen Zeiger wie bei der Magic Remote.'),
       ('Was Mando TV nicht macht', 'Es steuert keine LG-Hausgeräte, es nutzt dein LG-Konto nicht und es ersetzt nicht die LG-Kontodienste auf dem Fernseher. Es ist eine Fernbedienung, kein Smart-Home-Hub.'),
       ('Datenschutz und Werbung', 'Mando TV hat keine Werbung und kein Konto. Es spricht nur innerhalb deines Heimnetzes mit dem Fernseher und speichert den Verbindungsschlüssel verschlüsselt auf deinem Gerät. Alle Funktionen findest du auf der Seite [LG Fernbedienungs-App](@lg).'),
       ('Kostenlos und Pro', 'Pfeiltasten, OK, Zurück, Home, Lautstärke, Sender, Zifferntasten, Tastatur, Apps öffnen, Eingänge wechseln und Ein-/Ausschalten sind kostenlos, ohne Werbung und ohne Abo. Touchpad, Sprachbefehle, Lieblings-Apps, Routinen und Ausschalttimer sind Teil von Mando TV Pro, einem Einmalkauf ohne Abo.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Funktioniert Mando TV mit Sony-Bravia-Fernsehern?', 'Ja, mit Sony-Fernsehern, die Google TV oder Android TV nutzen. Das umfasst die meisten Sony Smart-TVs ab Baujahr 2015.'),
       ('Brauche ich eine Sony-App oder ein Google-Konto?', 'Nein. Mando TV koppelt sich mit dem Code auf dem Fernsehbildschirm und verlangt kein Konto.'),
       ('Funktioniert es mit älteren Sony-Bravia-Fernsehern ohne Android?', 'Ja, im Beta-Status, bei Bravia-Modellen von 2013 bis 2015 ohne Android. Die Kopplung erfolgt über einen 4-stelligen PIN, der auf dem Fernseher angezeigt wird.'),
-      ('Kann ich auf meinem Sony-Fernseher vom Handy aus tippen?', 'Ja. Die Tastatur ist kostenlos und funktioniert in YouTube, Netflix und der Fernsehsuche.'),
+      ('Kann ich auf meinem Sony-Fernseher vom Handy aus tippen?', 'Ja. Die Handytastatur ist kostenlos und tippt in die Suche des Fernsehers und in andere Textfelder. Für YouTube hat Mando TV außerdem eine YouTube-Tastatur: Tippe oder sag, was du sehen willst, und YouTube öffnet sich auf dem Fernseher mit den Ergebnissen. Netflix nimmt nur seine eigene Bildschirmtastatur an, nutze dort die Pfeiltasten und OK.'),
     ]),
   dict(clave='tcl', corto='TCL-Fernbedienung', fecha='2026-11-23',
     titulo='TCL Fernbedienungs-App für Handy und PC',

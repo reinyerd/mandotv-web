@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Minden gomb', 'Iránygombok, OK, Vissza, Home, hangerő, csatornák, némítás és lejátszás.'),
       ('Mutató, mint a Magic Remote-on (Pro)', 'Az ujjaddal mozgasd a nyilat a képernyőn, pont úgy, mint az LG Magic Remote-tal.'),
-      ('Billentyűzet', 'Gépelj a YouTube-on, a Netflixen vagy a tévé böngészőjében a telefonod billentyűzetével.'),
+      ('Két billentyűzet', 'Gépelj a tévé keresőjében és a legtöbb appban a telefonod billentyűzetével. A YouTube-billentyűzettel (Pro) írd be vagy mondd el, mit nézzél, és a YouTube megnyílik a tévén az eredményekkel.'),
       ('Appok és bemenetek', 'Nyisd meg az appjaidat, és válts HDMI-re, élő tévére, AirPlayre vagy Screen Sharere.'),
       ('Hangkimenet (Pro)', 'Válts a tévé hangszórói és a hangprojektorod között.'),
       ('Tévé bekapcsolása', 'Ha ki van kapcsolva, a Mando TV a hálózaton keresztül bekapcsolja, és magától csatlakozik.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Minden gomb', 'Iránygombok, OK, Vissza, Home, hangerő, csatornák, némítás és forrás.'),
       ('Érintőpad (Pro)', 'Húzd az ujjadat a menükben, anélkül hogy a nyílgombokat keresnéd.'),
-      ('Billentyűzet', 'Írd be a keresőszavakat és jelszavakat a telefonod billentyűzetével.'),
+      ('Két billentyűzet', 'Gépelj a tévé keresőjében és a legtöbb appban a telefonod billentyűzetével. A YouTube-billentyűzettel (Pro) írd be vagy mondd el, mit nézzél, és a YouTube megnyílik a tévén az eredményekkel.'),
       ('Appok', 'Nyisd meg a Netflixet, a YouTube-ot, a Prime Videót és a többi appodat egy koppintással.'),
       ('Tévé bekapcsolása', 'Ha ki van kapcsolva, a Mando TV a hálózaton keresztül bekapcsolja, és magától csatlakozik.'),
       ('Fiók nélkül', 'A kapcsolat közvetlenül a Wi-Fi-n megy, az internet érintése nélkül.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Roku bekapcsolása telefonnal', preguntas='Kérdések a Rokuról', guias='Útmutatók Rokuhoz'),
     funciones=[
       ('Minden gomb', 'Iránygombok, OK, Vissza, Home, hangerő, némítás, ismétlés és lejátszás.'),
-      ('Billentyűzet', 'Írd be a keresőszavakat a Roku csatornáin a telefonod billentyűzetével.'),
+      ('Két billentyűzet', 'Gépelj a Roku keresőjében és azokon a csatornákon, amelyek engedik, a telefonod billentyűzetével. A YouTube-billentyűzettel (Pro) írd be vagy mondd el, mit nézzél, és a YouTube megnyílik a tévén az eredményekkel.'),
       ('Csatornák', 'Nyisd meg a Netflixet, a YouTube-ot és a többi Roku-csatornádat egy koppintással.'),
       ('Bemenetek', 'Roku TV esetén az alkalmazásban válts HDMI-re, antennára vagy AV-re.'),
       ('Tévé bekapcsolása', 'Gyorsindítással rendelkező Roku TV készülékeket a Mando TV a telefonodról kapcsolja be.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Minden gomb', 'Iránygombok, OK, Vissza, Home, hangerő, némítás és lejátszás.'),
       ('Érintőpad (Pro)', 'Húzd az ujjadat, hogy gyorsan navigálj a Google TV menüiben.'),
-      ('Billentyűzet', 'Írd be a keresőszavakat és jelszavakat a telefonod billentyűzetével.'),
+      ('Két billentyűzet', 'Gépelj a tévé keresőjében és a legtöbb appban a telefonod billentyűzetével. A YouTube-billentyűzettel (Pro) írd be vagy mondd el, mit nézzél, és a YouTube megnyílik a tévén az eredményekkel.'),
       ('Appok', 'Nyisd meg a YouTube-ot, a Netflixet, a Disney+-t és a többi appodat egy koppintással.'),
       ('Tévé bekapcsolása', 'A hálózaton keresztüli bekapcsolást támogató modelleknél a Mando TV bekapcsolja a tévét, és magától csatlakozik.'),
       ('iPhone, Android és számítógép', 'Minden telefonon és számítógépen ugyanúgy működik.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Kell a távirányító a telefonom párosításához?', 'Nem. A kód a tévé képernyőjén jelenik meg, te pedig beírod a telefonodon. Csak a tévét kell bekapcsolnod, szükség esetén a készüléken lévő gombbal.'),
       ('Működik Hisense-szel?', 'Android TV-s vagy Google TV-s Hisense tévékkel igen. A más rendszerű Hisense tévék nem kompatibilisek.'),
-      ('Gépelhetek a telefonom billentyűzetével?', 'Igen. A billentyűzet ingyenes, és a YouTube, a Netflix és a többi app keresőjében működik.'),
+      ('Gépelhetek a telefonom billentyűzetével?', 'Igen, kettő van. Az ingyenes billentyűzet a tévé és a legtöbb app keresőjébe és szövegmezőibe gépel. A YouTube és a Netflix csak a saját képernyőn megjelenő billentyűzetét fogadja el, ezért a YouTube-hoz ott van a YouTube-billentyűzet (Pro): írd be vagy mondd el, mit szeretnél nézni, és a YouTube megnyílik a tévén az eredményekkel. A Netflixet az iránygombokkal és az OK-val használod.'),
     ]),
   dict(clave='lg-on', corto='LG tévé bekapcsolása telefonnal',
     titulo='LG tévé bekapcsolása telefonnal (útmutató)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV vagy LG ThinQ: melyik mire jó', 'A ThinQ-t használd, ha LG háztartási gépeket, például mosógépet, hűtőszekrényt vagy légkondicionálót akarsz kezelni, vagy LG-fiókfunkciókra van szükséged. A Mando TV-t használd, ha gyors, egyszerű távirányítót akarsz a tévéhez, amely ugyanabban az alkalmazásban Samsunghoz, Rokuhoz és Google TV-hez is működik. Sokan mindkettőt megtartják: a ThinQ-t a háztartási gépekhez, a Mando TV-t a tévéhez.'),
-      ('Mit tud a Mando TV LG tévén', 'Működik webOS-es LG okostévékkel, vagyis a legtöbb modellel 2014 óta, beleértve a LED, NanoCell, QNED és OLED tévéket. Kínálja az iránygombokat, az OK-t, a Vissza, a Home gombot, a hangerőt, a csatornákat, a némítást, a lejátszásvezérlőket és egy billentyűzetet a YouTube-on, a Netflixen vagy a böngészőben való gépeléshez. Az appok listája és a bemenetek listája szintén ingyenes. A Proval ráadásul kapsz egy mutatót, mint a Magic Remote-nál.'),
+      ('Mit tud a Mando TV LG tévén', 'Működik webOS-es LG okostévékkel, vagyis a legtöbb modellel 2014 óta, beleértve a LED, NanoCell, QNED és OLED tévéket. Kínálja az iránygombokat, az OK-t, a Vissza, a Home gombot, a hangerőt, a csatornákat, a némítást, a lejátszásvezérlőket és egy billentyűzetet a tévé keresőjében és a legtöbb appban való gépeléshez. Az appok listája és a bemenetek listája szintén ingyenes. A Proval ráadásul kapsz egy mutatót, mint a Magic Remote-nál.'),
       ('Mit nem csinál a Mando TV', 'Nem vezérel LG háztartási gépeket, nem használja az LG-fiókodat, és nem helyettesíti a tévén lévő LG-fiókszolgáltatásokat. Távirányító, nem okosotthon-központ.'),
       ('Adatvédelem és reklámok', 'A Mando TV-ben nincs reklám és nincs fiók. Csak az otthoni hálózaton belül kommunikál a tévével, és a csatlakozási kulcsot titkosítva tárolja az eszközödön. Az összes funkciót az [LG távirányító alkalmazás](@lg) oldalon találod.'),
       ('Ingyenes és Pro', 'Az iránygombok, az OK, a Vissza, a Home, a hangerő, a csatornák, a számgombok, a billentyűzet, az appok megnyitása, a bemenetek váltása és a be-/kikapcsolás ingyenes, reklámok és előfizetés nélkül. Az érintőpad, a hangparancsok, a kedvenc appok, a rutinok és a kikapcsolási időzítő a Mando TV Pro részei, amely egyszeri vásárlás előfizetés nélkül.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Működik a Mando TV Sony Bravia tévékkel?', 'Igen, a Google TV-t vagy Android TV-t használó Sony tévékkel. Ide tartozik a legtöbb 2015-től készült Sony okostévé.'),
       ('Kell Sony-alkalmazás vagy Google-fiók?', 'Nem. A Mando TV a tévé képernyőjén lévő kóddal párosít, és nem kér fiókot.'),
       ('Működik régebbi, Android nélküli Sony Bravia tévékkel?', 'Igen, bétaállapotban, a 2013 és 2015 közötti, Android nélküli Bravia modelleknél. A párosítás a tévén megjelenő 4 számjegyű PIN-nel történik.'),
-      ('Gépelhetek a Sony tévén a telefonomról?', 'Igen. A billentyűzet ingyenes, és a YouTube-on, a Netflixen és a tévé keresőjében működik.'),
+      ('Gépelhetek a Sony tévén a telefonomról?', 'Igen. A telefon billentyűzete ingyenes, és a tévé keresőjébe meg más szövegmezőkbe gépel. A YouTube-hoz a Mando TV-ben van YouTube-billentyűzet is: írd be vagy mondd el, mit nézzél, és a YouTube megnyílik a tévén az eredményekkel. A Netflix csak a saját képernyőn megjelenő billentyűzetét fogadja el, ezért ott az iránygombokat és az OK-t használd.'),
     ]),
   dict(clave='tcl', corto='TCL távirányító', fecha='2026-11-23',
     titulo='TCL távirányító alkalmazás telefonra és számítógépre',

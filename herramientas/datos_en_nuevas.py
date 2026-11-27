@@ -204,7 +204,7 @@ GUIAS_MARCAS = [
       ('Does Mando TV work with Sony Bravia TVs?', 'Yes, with Sony TVs that run Google TV or Android TV, which covers most Sony smart TVs since 2015.'),
       ('Do I need a Sony app or a Google account?', 'No. Mando TV pairs with the code on the TV screen and has no account.'),
       ('Does it work with older Sony Bravia TVs without Android?', 'In beta, yes, on Bravia models from 2013 to 2015 without Android. It pairs with a 4-digit PIN shown on the TV.'),
-      ('Can I type on my Sony TV from my phone?', 'Yes. The keyboard is free and types into YouTube, Netflix and the TV search box.'),
+      ('Can I type on my Sony TV from my phone?', 'Yes. The phone keyboard is free and types into the TV search box and other text boxes. For YouTube, Mando TV also has a YouTube Keyboard: type or say what to watch and YouTube opens on the TV with the results. Netflix only takes its own on-screen keyboard, so use the arrows and OK there.'),
     ]),
 
   dict(clave='insignia', corto='Insignia TV remote app',

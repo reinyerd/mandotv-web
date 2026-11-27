@@ -87,7 +87,7 @@ MARCAS = [
     funciones=[
       ('Toutes les touches', 'Croix directionnelle, OK, Retour, Accueil, volume, chaînes, muet et lecture.'),
       ('Pointeur comme la Magic Remote (Pro)', "Déplacez la flèche sur l'écran avec le doigt, comme avec la Magic Remote de LG."),
-      ('Clavier', "Écrivez dans YouTube, Netflix ou le navigateur de la TV avec le clavier de votre téléphone."),
+      ('Deux claviers', 'Écrivez dans la recherche de la TV et dans la plupart des applications avec le clavier de votre téléphone. Avec le Clavier YouTube (Pro), écrivez ou dites ce que vous voulez regarder et YouTube se lance sur la TV avec les résultats.'),
       ('Apps et sources', 'Ouvrez vos applications et passez à HDMI, la TV en direct, AirPlay ou Screen Share.'),
       ('Sortie audio (Pro)', 'Basculez entre les haut-parleurs de la TV et votre barre de son.'),
       ('Allumer la TV', "Si elle est éteinte, Mando TV l'allume par le réseau et se connecte tout seul."),
@@ -119,7 +119,7 @@ MARCAS = [
     funciones=[
       ('Toutes les touches', 'Croix directionnelle, OK, Retour, Accueil, volume, chaînes, muet et source.'),
       ('Pavé tactile (Pro)', 'Glissez le doigt pour vous déplacer dans les menus sans chercher les flèches.'),
-      ('Clavier', 'Écrivez vos recherches et vos mots de passe avec le clavier de votre téléphone.'),
+      ('Deux claviers', 'Écrivez dans la recherche de la TV et dans la plupart des applications avec le clavier de votre téléphone. Avec le Clavier YouTube (Pro), écrivez ou dites ce que vous voulez regarder et YouTube se lance sur la TV avec les résultats.'),
       ('Apps', "Ouvrez Netflix, YouTube, Prime Video et vos autres applications d'un seul geste."),
       ('Allumer la TV', "Si elle est éteinte, Mando TV l'allume par le réseau et se connecte tout seul."),
       ('Sans compte', 'La connexion se fait directement par votre Wi-Fi, sans passer par Internet.'),
@@ -150,7 +150,7 @@ MARCAS = [
             encender='Allumer votre Roku depuis le téléphone', preguntas='Questions sur Roku', guias='Guides pour Roku'),
     funciones=[
       ('Toutes les touches', 'Croix directionnelle, OK, Retour, Accueil, volume, muet, rejouer et lecture.'),
-      ('Clavier', 'Écrivez vos recherches dans les chaînes Roku avec le clavier de votre téléphone.'),
+      ('Deux claviers', 'Écrivez dans la recherche de Roku et dans les chaînes qui le permettent avec le clavier de votre téléphone. Avec le Clavier YouTube (Pro), écrivez ou dites ce que vous voulez regarder et YouTube se lance sur la TV avec les résultats.'),
       ('Chaînes', "Ouvrez Netflix, YouTube et vos autres chaînes Roku d'un seul geste."),
       ('Sources', "Sur un Roku TV, passez à HDMI, à l'antenne ou à AV depuis l'application."),
       ('Allumer la TV', 'Sur les Roku TV avec démarrage rapide, Mando TV les allume depuis votre téléphone.'),
@@ -185,7 +185,7 @@ MARCAS = [
     funciones=[
       ('Toutes les touches', 'Croix directionnelle, OK, Retour, Accueil, volume, muet et lecture.'),
       ('Pavé tactile (Pro)', 'Glissez le doigt pour vous déplacer rapidement dans les menus de Google TV.'),
-      ('Clavier', 'Écrivez vos recherches et vos mots de passe avec le clavier de votre téléphone.'),
+      ('Deux claviers', 'Écrivez dans la recherche de la TV et dans la plupart des applications avec le clavier de votre téléphone. Avec le Clavier YouTube (Pro), écrivez ou dites ce que vous voulez regarder et YouTube se lance sur la TV avec les résultats.'),
       ('Apps', "Ouvrez YouTube, Netflix, Disney+ et vos autres applications d'un seul geste."),
       ('Allumer la TV', "Sur les modèles qui peuvent s'allumer par le réseau, Mando TV allume la TV et se connecte tout seul."),
       ('iPhone, Android et PC', 'Elle fonctionne de la même façon depuis tout téléphone ou ordinateur.'),
@@ -311,7 +311,7 @@ GUIAS = [
     faq=[
       ("Ai-je besoin de la télécommande pour associer mon téléphone ?", "Non. Le code apparaît sur l'écran de la TV et vous le saisissez sur votre téléphone. Il suffit d'allumer la TV, si besoin avec le bouton de la TV."),
       ('Cela fonctionne-t-il avec une Hisense ?', "Sur les TV Hisense qui ont Android TV ou Google TV, oui. Les TV Hisense avec un autre système ne sont pas compatibles."),
-      ("Puis-je écrire avec le clavier de mon téléphone ?", "Oui. Le clavier est gratuit et fonctionne pour chercher dans YouTube, Netflix et les autres applications."),
+      ('Puis-je écrire avec le clavier de mon téléphone ?', 'Oui, il y en a deux. Le clavier gratuit écrit dans la recherche et dans les champs de texte de la TV et de la plupart des applications. YouTube et Netflix acceptent seulement leur propre clavier intégré, donc pour YouTube il existe le Clavier YouTube (Pro) : écrivez ou dites ce que vous voulez regarder et YouTube se lance sur la TV avec les résultats. Netflix se commande avec les flèches et OK.'),
     ]),
   dict(clave='lg-on', corto='Allumer une TV LG avec le téléphone',
     titulo='Allumer une TV LG avec son téléphone (pas à pas)',
@@ -778,7 +778,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV ou LG ThinQ : laquelle choisir', "Utilisez ThinQ si vous voulez gérer l'électroménager LG comme un lave-linge, un frigo ou une climatisation, ou les fonctionnalités du compte LG. Utilisez Mando TV si vous voulez une télécommande rapide et simple pour la TV qui fonctionne aussi avec Samsung, Roku et Google TV dans la même application. Beaucoup de gens gardent les deux : ThinQ pour l'électroménager, Mando TV pour la TV."),
-      ('Ce que fait Mando TV sur une TV LG', 'Elle fonctionne avec les Smart TV LG sous webOS, ce qui couvre la plupart des modèles depuis 2014, y compris LED, NanoCell, QNED et OLED. Elle vous donne le pavé directionnel, OK, Retour, Accueil, le volume, les chaînes, le muet, les contrôles de lecture et un clavier pour taper dans YouTube, Netflix ou le navigateur. La liste des applications et celle des entrées sont aussi gratuites. Avec Pro, vous avez aussi un pointeur comme la Magic Remote.'),
+      ('Ce que fait Mando TV sur une TV LG', 'Elle fonctionne avec les Smart TV LG sous webOS, ce qui couvre la plupart des modèles depuis 2014, y compris LED, NanoCell, QNED et OLED. Elle vous donne le pavé directionnel, OK, Retour, Accueil, le volume, les chaînes, le muet, les contrôles de lecture et un clavier pour taper dans la recherche de la TV et dans la plupart des applications. La liste des applications et celle des entrées sont aussi gratuites. Avec Pro, vous avez aussi un pointeur comme la Magic Remote.'),
       ('Ce que Mando TV ne fait pas', "Elle ne contrôle pas l'électroménager LG, elle n'utilise pas votre compte LG et elle ne remplace pas les services du compte LG sur la TV. C'est une télécommande, pas un hub domotique."),
       ('Confidentialité et publicité', "Mando TV n'a ni publicité ni compte. Elle communique avec la TV à l'intérieur de votre réseau domestique et garde la clé de connexion chiffrée sur votre propre appareil. La page [application télécommande LG](@lg) détaille toutes les fonctions."),
       ('Gratuit et Pro', "Les flèches, OK, Retour, Accueil, le volume, les chaînes, les touches numériques, le clavier, l'ouverture des applications, le changement d'entrées et la mise sous/hors tension sont gratuits, sans publicité ni abonnement. Le pavé tactile, les commandes vocales, les applications favorites, les routines et la minuterie d'extinction font partie de Mando TV Pro, un achat unique sans abonnement."),
@@ -991,7 +991,7 @@ GUIAS += [
       ('Mando TV fonctionne-t-elle avec les Sony Bravia ?', 'Oui, avec les Sony sous Google TV ou Android TV, ce qui couvre la plupart des Smart TV Sony depuis 2015.'),
       ("Ai-je besoin d'une appli Sony ou d'un compte Google ?", "Non. Mando TV s'appaire via le code affiché sur l'écran de la TV et ne demande aucun compte."),
       ('Cela fonctionne-t-il avec les anciennes Sony Bravia sans Android ?', "En bêta, oui, sur les modèles Bravia de 2013 à 2015 sans Android. L'appairage se fait via un code PIN à 4 chiffres affiché sur la TV."),
-      ('Puis-je taper du texte sur ma Sony depuis mon téléphone ?', 'Oui. Le clavier est gratuit et fonctionne dans YouTube, Netflix et la barre de recherche de la TV.'),
+      ('Puis-je taper du texte sur ma Sony depuis mon téléphone ?', 'Oui. Le clavier du téléphone est gratuit et écrit dans la barre de recherche de la TV et dans les autres champs de texte. Pour YouTube, Mando TV a aussi un Clavier YouTube : écrivez ou dites ce que vous voulez regarder et YouTube se lance sur la TV avec les résultats. Netflix accepte seulement son propre clavier intégré, utilisez donc les flèches et OK.'),
     ]),
   dict(clave='tcl', corto='Télécommande TCL', fecha='2026-11-23',
     titulo='Appli télécommande TCL pour iPhone, Android et PC',

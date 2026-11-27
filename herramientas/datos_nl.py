@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Alle toetsen', 'Richtingstoetsen, OK, Terug, Start, volume, zenders, dempen en afspelen.'),
       ('Aanwijzer zoals bij de Magic Remote (Pro)', 'Beweeg de pijl met je vinger over het scherm, precies zoals met de LG Magic Remote.'),
-      ('Toetsenbord', 'Typ in YouTube, Netflix of de browser van de tv met het toetsenbord van je telefoon.'),
+      ('Twee toetsenborden', 'Typ in het zoeken van de tv en in de meeste apps met het toetsenbord van je telefoon. Met het YouTube-toetsenbord (Pro) typ of zeg je wat je wilt kijken en YouTube opent op de tv met de resultaten.'),
       ('Apps en ingangen', 'Open je apps en wissel naar HDMI, live-tv, AirPlay of Screen Share.'),
       ('Geluidsuitvoer (Pro)', 'Wissel tussen de speakers van de tv en je soundbar.'),
       ('Tv aanzetten', 'Staat hij uit, dan zet Mando TV hem via het netwerk aan en maakt vanzelf verbinding.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Alle toetsen', 'Richtingstoetsen, OK, Terug, Start, volume, zenders, dempen en bron.'),
       ('Touchpad (Pro)', 'Veeg met je vinger door de menu’s zonder naar de pijltoetsen te zoeken.'),
-      ('Toetsenbord', 'Typ zoektermen en wachtwoorden met het toetsenbord van je telefoon.'),
+      ('Twee toetsenborden', 'Typ in het zoeken van de tv en in de meeste apps met het toetsenbord van je telefoon. Met het YouTube-toetsenbord (Pro) typ of zeg je wat je wilt kijken en YouTube opent op de tv met de resultaten.'),
       ('Apps', 'Open Netflix, YouTube, Prime Video en je andere apps met één tik.'),
       ('Tv aanzetten', 'Staat hij uit, dan zet Mando TV hem via het netwerk aan en maakt vanzelf verbinding.'),
       ('Zonder account', 'De verbinding loopt rechtstreeks via je wifi, zonder omweg via internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Roku aanzetten met je telefoon', preguntas='Vragen over Roku', guias='Gidsen voor Roku'),
     funciones=[
       ('Alle toetsen', 'Richtingstoetsen, OK, Terug, Start, volume, dempen, opnieuw afspelen en afspelen.'),
-      ('Toetsenbord', 'Typ zoektermen in Roku-kanalen met het toetsenbord van je telefoon.'),
+      ('Twee toetsenborden', 'Typ in het zoeken van Roku en in kanalen die het toestaan met het toetsenbord van je telefoon. Met het YouTube-toetsenbord (Pro) typ of zeg je wat je wilt kijken en YouTube opent op de tv met de resultaten.'),
       ('Kanalen', 'Open Netflix, YouTube en je andere Roku-kanalen met één tik.'),
       ('Ingangen', 'Wissel bij een Roku TV in de app naar HDMI, antenne of AV.'),
       ('Tv aanzetten', 'Bij Roku TV-toestellen met snelle start zet Mando TV ze vanaf je telefoon aan.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Alle toetsen', 'Richtingstoetsen, OK, Terug, Start, volume, dempen en afspelen.'),
       ('Touchpad (Pro)', 'Veeg met je vinger om snel door de menu’s van Google TV te navigeren.'),
-      ('Toetsenbord', 'Typ zoektermen en wachtwoorden met het toetsenbord van je telefoon.'),
+      ('Twee toetsenborden', 'Typ in het zoeken van de tv en in de meeste apps met het toetsenbord van je telefoon. Met het YouTube-toetsenbord (Pro) typ of zeg je wat je wilt kijken en YouTube opent op de tv met de resultaten.'),
       ('Apps', 'Open YouTube, Netflix, Disney+ en je andere apps met één tik.'),
       ('Tv aanzetten', 'Bij modellen met aanzetten via het netwerk zet Mando TV de tv aan en maakt vanzelf verbinding.'),
       ('iPhone, Android en pc', 'Het werkt op elke telefoon en elke computer hetzelfde.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Heb ik de afstandsbediening nodig om mijn telefoon te koppelen?', 'Nee. De code verschijnt op het scherm van de tv en jij typt hem op je telefoon in. Je hoeft alleen de tv aan te zetten, zo nodig met de knop op het toestel.'),
       ('Werkt het met een Hisense?', 'Bij Hisense-tv’s met Android TV of Google TV wel. Hisense-tv’s met een ander systeem zijn niet compatibel.'),
-      ('Kan ik typen met het toetsenbord van mijn telefoon?', 'Ja. Het toetsenbord is gratis en werkt om te zoeken in YouTube, Netflix en de andere apps.'),
+      ('Kan ik typen met het toetsenbord van mijn telefoon?', 'Ja, er zijn er twee. Het gratis toetsenbord typt in het zoekveld en de tekstvelden van de tv en van de meeste apps. YouTube en Netflix accepteren alleen hun eigen toetsenbord op het scherm, dus voor YouTube is er het YouTube-toetsenbord (Pro): typ of zeg wat je wilt kijken en YouTube opent op de tv met de resultaten. Netflix gebruik je met de pijltoetsen en OK.'),
     ]),
   dict(clave='lg-on', corto='LG tv aanzetten met je telefoon',
     titulo='LG tv aanzetten met je telefoon (handleiding)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV of LG ThinQ: wat waarvoor', 'Gebruik ThinQ als je LG-huishoudapparaten zoals een wasmachine, een koelkast of een airco wilt beheren of LG-accountfuncties nodig hebt. Gebruik Mando TV als je een snelle, eenvoudige afstandsbediening voor de tv wilt die ook voor Samsung, Roku en Google TV in dezelfde app werkt. Veel mensen houden beide: ThinQ voor de huishoudapparaten, Mando TV voor de tv.'),
-      ('Wat Mando TV op een LG-tv doet', 'Het werkt met LG Smart-tv’s met webOS, dus met de meeste modellen sinds 2014, inclusief LED, NanoCell, QNED en OLED. Het biedt je de pijltoetsen, OK, Terug, Start, volume, zenders, dempen, afspeelbediening en een toetsenbord om te typen in YouTube, Netflix of de browser. De lijst met apps en de lijst met ingangen zijn ook gratis. Met Pro krijg je er een aanwijzer bij zoals bij de Magic Remote.'),
+      ('Wat Mando TV op een LG-tv doet', 'Het werkt met LG Smart-tv’s met webOS, dus met de meeste modellen sinds 2014, inclusief LED, NanoCell, QNED en OLED. Het biedt je de pijltoetsen, OK, Terug, Start, volume, zenders, dempen, afspeelbediening en een toetsenbord om te typen in het zoeken van de tv en in de meeste apps. De lijst met apps en de lijst met ingangen zijn ook gratis. Met Pro krijg je er een aanwijzer bij zoals bij de Magic Remote.'),
       ('Wat Mando TV niet doet', 'Het bedient geen LG-huishoudapparaten, gebruikt je LG-account niet en vervangt de LG-accountdiensten op de tv niet. Het is een afstandsbediening, geen smarthome-hub.'),
       ('Privacy en advertenties', 'Mando TV heeft geen advertenties en geen account. Het praat alleen binnen je thuisnetwerk met de tv en slaat de verbindingssleutel versleuteld op je apparaat op. Alle functies vind je op de pagina [LG afstandsbediening-app](@lg).'),
       ('Gratis en Pro', 'Pijltoetsen, OK, Terug, Start, volume, zenders, cijfertoetsen, toetsenbord, apps openen, ingangen wisselen en aan-/uitzetten zijn gratis, zonder advertenties en zonder abonnement. Het touchpad, de spraakopdrachten, favoriete apps, routines en de slaaptimer horen bij Mando TV Pro, een eenmalige aankoop zonder abonnement.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Werkt Mando TV met Sony Bravia-tv’s?', 'Ja, met Sony-tv’s die Google TV of Android TV gebruiken. Dat omvat de meeste Sony Smart-tv’s vanaf bouwjaar 2015.'),
       ('Heb ik een Sony-app of een Google-account nodig?', 'Nee. Mando TV koppelt met de code op het tv-scherm en vraagt geen account.'),
       ('Werkt het met oudere Sony Bravia-tv’s zonder Android?', 'Ja, in de bèta, bij Bravia-modellen van 2013 tot 2015 zonder Android. Het koppelen gaat met een pincode van 4 cijfers die op de tv wordt getoond.'),
-      ('Kan ik op mijn Sony-tv typen vanaf mijn telefoon?', 'Ja. Het toetsenbord is gratis en werkt in YouTube, Netflix en het zoeken op de tv.'),
+      ('Kan ik op mijn Sony-tv typen vanaf mijn telefoon?', 'Ja. Het toetsenbord van je telefoon is gratis en typt in het zoekveld van de tv en in andere tekstvelden. Voor YouTube heeft Mando TV ook een YouTube-toetsenbord: typ of zeg wat je wilt kijken en YouTube opent op de tv met de resultaten. Netflix accepteert alleen zijn eigen toetsenbord op het scherm, dus gebruik daar de pijltoetsen en OK.'),
     ]),
   dict(clave='tcl', corto='TCL-afstandsbediening', fecha='2026-11-23',
     titulo='TCL afstandsbediening-app voor telefoon en pc',

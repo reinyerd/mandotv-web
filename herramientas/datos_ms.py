@@ -86,7 +86,7 @@ MARCAS = [
     funciones=[
       ('Semua butang', 'Pad arah, OK, Kembali, Utama, volum, saluran, senyap dan main semula.'),
       ('Penuding seperti Magic Remote (Pro)', 'Gerakkan anak panah dengan jari pada skrin, sama seperti dengan LG Magic Remote.'),
-      ('Papan kekunci', 'Taip dalam YouTube, Netflix atau pelayar TV dengan papan kekunci telefon anda.'),
+      ('Dua papan kekunci', 'Taip dalam carian TV dan kebanyakan apl dengan papan kekunci telefon anda. Dengan Papan kekunci YouTube (Pro), taip atau sebut apa yang mahu ditonton dan YouTube dibuka pada TV dengan hasilnya.'),
       ('Apl dan input', 'Buka apl anda dan tukar ke HDMI, TV langsung, AirPlay atau Screen Share.'),
       ('Output audio (Pro)', 'Tukar antara pembesar suara TV dan bar bunyi anda.'),
       ('Hidupkan TV', 'Jika TV dimatikan, Mando TV menghidupkannya melalui rangkaian dan menyambung sendiri.'),
@@ -118,7 +118,7 @@ MARCAS = [
     funciones=[
       ('Semua butang', 'Pad arah, OK, Kembali, Utama, volum, saluran, senyap dan sumber.'),
       ('Pad sentuh (Pro)', 'Leret jari anda melalui menu tanpa mencari butang anak panah.'),
-      ('Papan kekunci', 'Taip carian dan kata laluan dengan papan kekunci telefon anda.'),
+      ('Dua papan kekunci', 'Taip dalam carian TV dan kebanyakan apl dengan papan kekunci telefon anda. Dengan Papan kekunci YouTube (Pro), taip atau sebut apa yang mahu ditonton dan YouTube dibuka pada TV dengan hasilnya.'),
       ('Apl', 'Buka Netflix, YouTube, Prime Video dan apl lain anda dengan satu ketikan.'),
       ('Hidupkan TV', 'Jika TV dimatikan, Mando TV menghidupkannya melalui rangkaian dan menyambung sendiri.'),
       ('Tanpa akaun', 'Sambungan berlaku terus melalui Wi-Fi anda, tanpa melalui internet.'),
@@ -149,7 +149,7 @@ MARCAS = [
             encender='Hidupkan Roku dengan telefon', preguntas='Soalan tentang Roku', guias='Panduan untuk Roku'),
     funciones=[
       ('Semua butang', 'Pad arah, OK, Kembali, Utama, volum, senyap, main semula dan main.'),
-      ('Papan kekunci', 'Taip carian dalam saluran Roku dengan papan kekunci telefon anda.'),
+      ('Dua papan kekunci', 'Taip dalam carian Roku dan dalam saluran yang menerimanya dengan papan kekunci telefon anda. Dengan Papan kekunci YouTube (Pro), taip atau sebut apa yang mahu ditonton dan YouTube dibuka pada TV dengan hasilnya.'),
       ('Saluran', 'Buka Netflix, YouTube dan saluran Roku anda yang lain dengan satu ketikan.'),
       ('Input', 'Pada Roku TV, tukar ke HDMI, antena atau AV daripada aplikasi.'),
       ('Hidupkan TV', 'Pada peranti Roku TV dengan permulaan pantas, Mando TV menghidupkannya daripada telefon anda.'),
@@ -184,7 +184,7 @@ MARCAS = [
     funciones=[
       ('Semua butang', 'Pad arah, OK, Kembali, Utama, volum, senyap dan main semula.'),
       ('Pad sentuh (Pro)', 'Leret jari anda untuk menavigasi menu Google TV dengan pantas.'),
-      ('Papan kekunci', 'Taip carian dan kata laluan dengan papan kekunci telefon anda.'),
+      ('Dua papan kekunci', 'Taip dalam carian TV dan kebanyakan apl dengan papan kekunci telefon anda. Dengan Papan kekunci YouTube (Pro), taip atau sebut apa yang mahu ditonton dan YouTube dibuka pada TV dengan hasilnya.'),
       ('Apl', 'Buka YouTube, Netflix, Disney+ dan apl lain anda dengan satu ketikan.'),
       ('Hidupkan TV', 'Pada model yang boleh dihidupkan melalui rangkaian, Mando TV menghidupkan TV dan menyambung sendiri.'),
       ('iPhone, Android dan PC', 'Ia berfungsi sama sahaja pada mana-mana telefon dan mana-mana komputer.'),
@@ -310,7 +310,7 @@ GUIAS = [
     faq=[
       ('Adakah saya perlukan alat kawalan jauh untuk memasangkan telefon saya?', 'Tidak. Kod muncul pada skrin TV dan anda menaipnya pada telefon. Anda hanya perlu menghidupkan TV, dengan butang pada TV jika perlu.'),
       ('Adakah ia berfungsi dengan Hisense?', 'Pada TV Hisense dengan Android TV atau Google TV, ya. TV Hisense dengan sistem lain tidak serasi.'),
-      ('Bolehkah saya menaip dengan papan kekunci telefon saya?', 'Ya. Papan kekunci adalah percuma dan berfungsi untuk carian dalam YouTube, Netflix dan apl lain.'),
+      ('Bolehkah saya menaip dengan papan kekunci telefon saya?', 'Ya, ada dua. Papan kekunci percuma menaip dalam carian dan kotak teks TV serta kebanyakan apl. YouTube dan Netflix hanya menerima papan kekunci atas skrin mereka sendiri, jadi untuk YouTube ada Papan kekunci YouTube (Pro): taip atau sebut apa yang anda mahu tonton dan YouTube dibuka pada TV dengan hasilnya. Netflix digunakan dengan anak panah dan OK.'),
     ]),
   dict(clave='lg-on', corto='Hidupkan TV LG dengan telefon',
     titulo='Hidupkan TV LG dengan Telefon (Panduan)',
@@ -758,7 +758,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV atau LG ThinQ: untuk apa', 'Gunakan ThinQ jika anda mahu mengurus perkakas rumah LG seperti mesin basuh, peti sejuk atau penghawa dingin, atau memerlukan fungsi akaun LG. Gunakan Mando TV jika anda mahukan alat kawalan jauh TV yang pantas dan mudah, yang juga berfungsi untuk Samsung, Roku dan Google TV dalam aplikasi yang sama. Ramai yang mengekalkan kedua-duanya: ThinQ untuk perkakas rumah, Mando TV untuk TV.'),
-      ('Apa yang dilakukan oleh Mando TV pada TV LG', 'Ia berfungsi dengan TV pintar LG yang menggunakan webOS, iaitu kebanyakan model sejak 2014, termasuk LED, NanoCell, QNED dan OLED. Ia memberi anda anak panah, OK, Kembali, Utama, volum, saluran, senyap, kawalan main semula dan papan kekunci untuk menaip dalam YouTube, Netflix atau pelayar. Senarai apl dan senarai input juga percuma. Dengan Pro, anda mendapat penuding seperti pada Magic Remote.'),
+      ('Apa yang dilakukan oleh Mando TV pada TV LG', 'Ia berfungsi dengan TV pintar LG yang menggunakan webOS, iaitu kebanyakan model sejak 2014, termasuk LED, NanoCell, QNED dan OLED. Ia memberi anda anak panah, OK, Kembali, Utama, volum, saluran, senyap, kawalan main semula dan papan kekunci untuk menaip dalam carian TV dan kebanyakan apl. Senarai apl dan senarai input juga percuma. Dengan Pro, anda mendapat penuding seperti pada Magic Remote.'),
       ('Apa yang tidak dilakukan oleh Mando TV', 'Ia tidak mengawal perkakas rumah LG, tidak menggunakan akaun LG anda dan tidak menggantikan perkhidmatan akaun LG pada TV. Ia ialah alat kawalan jauh, bukan hab rumah pintar.'),
       ('Privasi dan iklan', 'Mando TV tiada iklan dan tiada akaun. Ia hanya berhubung dengan TV dalam rangkaian rumah anda dan menyimpan kunci sambungan secara disulitkan pada peranti anda. Semua fungsi ada pada halaman [Aplikasi alat kawalan jauh LG](@lg).'),
       ('Percuma dan Pro', 'Anak panah, OK, Kembali, Utama, volum, saluran, nombor, papan kekunci, membuka apl, menukar input dan hidupkan atau matikan adalah percuma, tanpa iklan dan tanpa langganan. Pad sentuh, arahan suara, apl kegemaran, rutin dan pemasa tidur ialah sebahagian daripada Mando TV Pro, pembelian sekali sahaja tanpa langganan.'),
@@ -971,7 +971,7 @@ GUIAS += [
       ('Adakah Mando TV berfungsi dengan TV Sony Bravia?', 'Ya, dengan TV Sony yang menggunakan Google TV atau Android TV. Ini termasuk kebanyakan TV pintar Sony buatan 2015 ke atas.'),
       ('Adakah saya perlukan aplikasi Sony atau akaun Google?', 'Tidak. Mando TV dipasangkan dengan kod pada skrin TV dan tidak meminta akaun.'),
       ('Adakah ia berfungsi dengan TV Sony Bravia yang lebih lama tanpa Android?', 'Ya, dalam status beta, pada model Bravia dari 2013 hingga 2015 tanpa Android. Pemasangan dibuat dengan PIN 4 digit yang dipaparkan pada TV.'),
-      ('Bolehkah saya menaip pada TV Sony saya dari telefon?', 'Boleh. Papan kekunci adalah percuma dan berfungsi dalam YouTube, Netflix dan carian TV.'),
+      ('Bolehkah saya menaip pada TV Sony saya dari telefon?', 'Boleh. Papan kekunci telefon adalah percuma dan menaip dalam kotak carian TV dan kotak teks lain. Untuk YouTube, Mando TV juga ada Papan kekunci YouTube: taip atau sebut apa yang mahu ditonton dan YouTube dibuka pada TV dengan hasilnya. Netflix hanya menerima papan kekunci atas skrinnya sendiri, jadi gunakan anak panah dan OK di situ.'),
     ]),
   dict(clave='tcl', corto='Alat kawalan jauh TCL', fecha='2026-11-23',
     titulo='Aplikasi Alat Kawalan Jauh TCL untuk Telefon dan PC',

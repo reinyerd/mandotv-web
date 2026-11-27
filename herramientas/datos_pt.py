@@ -95,7 +95,7 @@ MARCAS = [
     funciones=[
       ('Todas as teclas', 'Setas, OK, Voltar, Início, volume, canais, mudo e reprodução.'),
       ('Ponteiro como o Magic Remote (Pro)', 'Mova a seta na tela com o dedo, como no Magic Remote da LG.'),
-      ('Teclado', 'Digite no YouTube, na Netflix ou no navegador da TV com o teclado do celular.'),
+      ('Dois teclados', 'Digite na busca da TV e na maioria dos aplicativos com o teclado do celular. Com o Teclado do YouTube (Pro), digite ou diga o que quer assistir e o YouTube abre na TV com os resultados.'),
       ('Apps e entradas', 'Abra seus aplicativos e mude para HDMI, TV ao vivo, AirPlay ou Screen Share.'),
       ('Saída de áudio (Pro)', 'Alterne entre os alto-falantes da TV e a sua soundbar.'),
       ('Ligar a TV', 'Se estiver desligada, o Mando TV liga pela rede e conecta sozinho.'),
@@ -127,7 +127,7 @@ MARCAS = [
     funciones=[
       ('Todas as teclas', 'Setas, OK, Voltar, Início, volume, canais, mudo e fonte.'),
       ('Touchpad (Pro)', 'Deslize o dedo para se mover pelos menus sem procurar as setas.'),
-      ('Teclado', 'Digite buscas e senhas com o teclado do celular.'),
+      ('Dois teclados', 'Digite na busca da TV e na maioria dos aplicativos com o teclado do celular. Com o Teclado do YouTube (Pro), digite ou diga o que quer assistir e o YouTube abre na TV com os resultados.'),
       ('Apps', 'Abra Netflix, YouTube, Prime Video e seus outros aplicativos com um toque.'),
       ('Ligar a TV', 'Se estiver desligada, o Mando TV liga pela rede e conecta sozinho.'),
       ('Sem conta', 'A conexão é direta, pelo seu Wi-Fi, sem passar pela internet.'),
@@ -158,7 +158,7 @@ MARCAS = [
             encender='Ligar a Roku pelo celular', preguntas='Perguntas sobre Roku', guias='Guias para Roku'),
     funciones=[
       ('Todas as teclas', 'Setas, OK, Voltar, Início, volume, mudo, voltar 10 segundos e reprodução.'),
-      ('Teclado', 'Digite suas buscas nos canais da Roku com o teclado do celular.'),
+      ('Dois teclados', 'Digite na busca da Roku e nos canais que aceitam com o teclado do celular. Com o Teclado do YouTube (Pro), digite ou diga o que quer assistir e o YouTube abre na TV com os resultados.'),
       ('Canais', 'Abra Netflix, YouTube e seus outros canais da Roku com um toque.'),
       ('Entradas', 'Em uma Roku TV, mude para HDMI, antena ou AV pelo app.'),
       ('Ligar a TV', 'Nas Roku TV com início rápido, o Mando TV liga a TV pelo celular.'),
@@ -193,7 +193,7 @@ MARCAS = [
     funciones=[
       ('Todas as teclas', 'Setas, OK, Voltar, Início, volume, mudo e reprodução.'),
       ('Touchpad (Pro)', 'Deslize o dedo para se mover rápido pelos menus do Google TV.'),
-      ('Teclado', 'Digite buscas e senhas com o teclado do celular.'),
+      ('Dois teclados', 'Digite na busca da TV e na maioria dos aplicativos com o teclado do celular. Com o Teclado do YouTube (Pro), digite ou diga o que quer assistir e o YouTube abre na TV com os resultados.'),
       ('Apps', 'Abra YouTube, Netflix, Disney+ e seus outros aplicativos com um toque.'),
       ('Ligar a TV', 'Nos modelos que podem ser ligados pela rede, o Mando TV liga a TV e conecta sozinho.'),
       ('iPhone, Android e PC', 'Funciona do mesmo jeito em qualquer celular ou computador.'),
@@ -319,7 +319,7 @@ GUIAS = [
     faq=[
       ('Preciso do controle para parear o celular?', 'Não. O código aparece na tela da TV e você o digita no celular. Basta ligar a TV, se precisar pelo botão da própria TV.'),
       ('Funciona com TV Hisense?', 'Nas TVs Hisense que têm Android TV ou Google TV, sim. As Hisense com outro sistema não são compatíveis.'),
-      ('Posso digitar com o teclado do celular?', 'Pode. O teclado é grátis e serve para buscar no YouTube, na Netflix e em outros aplicativos.'),
+      ('Posso digitar com o teclado do celular?', 'Pode. São dois. O teclado grátis digita na busca e nos campos de texto da TV e da maioria dos aplicativos. YouTube e Netflix só aceitam o próprio teclado na tela, então para o YouTube existe o Teclado do YouTube (Pro): digite ou diga o que quer assistir e o YouTube abre na TV com os resultados. A Netflix é usada com as setas e o OK.'),
     ]),
   dict(clave='lg-on', corto='Ligar TV LG pelo celular',
     titulo='Como ligar a TV LG pelo celular (passo a passo)',
@@ -767,7 +767,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV ou LG ThinQ: qual usar', 'Use o ThinQ se quiser gerenciar eletrodomésticos LG como máquina de lavar, geladeira ou ar-condicionado, ou recursos da conta LG. Use o Mando TV se quiser um controle rápido e simples para a TV que também funciona com Samsung, Roku e Google TV no mesmo app. Muitas pessoas usam os dois: ThinQ para eletrodomésticos, Mando TV para a TV.'),
-      ('O que o Mando TV faz na TV LG', 'Funciona com Smart TVs LG com webOS, ou seja, a maioria dos modelos desde 2014, incluindo LED, NanoCell, QNED e OLED. Oferece as setas, OK, Voltar, Início, volume, canais, mudo, controles de reprodução e um teclado para digitar no YouTube, Netflix ou navegador. A lista de apps e a de entradas também são grátis. Com o Pro você ainda tem um ponteiro como o do Magic Remote.'),
+      ('O que o Mando TV faz na TV LG', 'Funciona com Smart TVs LG com webOS, ou seja, a maioria dos modelos desde 2014, incluindo LED, NanoCell, QNED e OLED. Oferece as setas, OK, Voltar, Início, volume, canais, mudo, controles de reprodução e um teclado para digitar na busca da TV e na maioria dos aplicativos. A lista de apps e a de entradas também são grátis. Com o Pro você ainda tem um ponteiro como o do Magic Remote.'),
       ('O que o Mando TV não faz', 'Não controla eletrodomésticos LG, não usa sua conta LG e não substitui os serviços da conta LG na TV. É só um controle remoto, não um hub de casa inteligente.'),
       ('Privacidade e anúncios', 'O Mando TV não tem anúncios nem pede conta. Ele se comunica com a TV dentro da sua rede doméstica e guarda a chave de conexão criptografada no seu dispositivo. A [página do app de controle remoto para LG](@lg) tem a lista completa de recursos.'),
       ('Grátis e Pro', 'As setas, OK, Voltar, Início, volume, canais, números, teclado, abrir apps, trocar entradas e ligar ou desligar são grátis, sem anúncios nem assinatura. O touchpad, os comandos de voz, os apps favoritos, as rotinas e o timer para desligar fazem parte do Mando TV Pro, uma compra única sem assinatura.'),
@@ -980,7 +980,7 @@ GUIAS += [
       ('O Mando TV funciona com Smart TVs Sony Bravia?', 'Sim, com TVs que rodam Google TV ou Android TV, o que cobre a maioria das Smart TVs Sony desde 2015.'),
       ('Preciso de app da Sony ou conta Google?', 'Não. O Mando TV pareia pelo código na tela da TV e não pede conta.'),
       ('Funciona com Bravia antigas sem Android?', 'Em beta, sim, em modelos de 2013 a 2015 sem Android. Pareia com um PIN de 4 dígitos mostrado na TV.'),
-      ('Dá para digitar na Sony pelo celular?', 'Sim. O teclado é grátis e digita no YouTube, Netflix e na busca da TV.'),
+      ('Dá para digitar na Sony pelo celular?', 'Sim. O teclado do celular é grátis e digita na busca da TV e em outros campos de texto. Para o YouTube, o Mando TV também tem um Teclado do YouTube: digite ou diga o que quer assistir e o YouTube abre na TV com os resultados. A Netflix só aceita o próprio teclado na tela, então use as setas e o OK lá.'),
     ]),
   dict(clave='tcl', corto='Controle remoto TCL', fecha='2026-11-23',
     titulo='Controle remoto TCL no celular: iPhone, Android e PC',

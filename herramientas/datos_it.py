@@ -95,7 +95,7 @@ MARCAS = [
     funciones=[
       ('Tutti i tasti', 'Frecce, OK, Indietro, Home, volume, canali, muto e riproduzione.'),
       ('Puntatore come il Magic Remote (Pro)', 'Sposta la freccia sullo schermo con il dito, come con il Magic Remote di LG.'),
-      ('Tastiera', 'Scrivi su YouTube, Netflix o nel browser della TV con la tastiera dello smartphone.'),
+      ('Due tastiere', 'Scrivi nella ricerca della TV e nella maggior parte delle app con la tastiera dello smartphone. Con la Tastiera YouTube (Pro) scrivi o pronuncia cosa vuoi guardare e YouTube si apre sulla TV con i risultati.'),
       ('App e ingressi', 'Apri le tue app e passa a HDMI, TV in diretta, AirPlay o Screen Share.'),
       ('Uscita audio (Pro)', 'Passa dagli altoparlanti della TV alla tua soundbar.'),
       ('Accendere la TV', "Se è spenta, Mando TV la accende tramite la rete e si collega da sola."),
@@ -127,7 +127,7 @@ MARCAS = [
     funciones=[
       ('Tutti i tasti', 'Frecce, OK, Indietro, Home, volume, canali, muto e sorgente.'),
       ('Touchpad (Pro)', 'Fai scorrere il dito per muoverti nei menu senza cercare le frecce.'),
-      ('Tastiera', 'Scrivi ricerche e password con la tastiera dello smartphone.'),
+      ('Due tastiere', 'Scrivi nella ricerca della TV e nella maggior parte delle app con la tastiera dello smartphone. Con la Tastiera YouTube (Pro) scrivi o pronuncia cosa vuoi guardare e YouTube si apre sulla TV con i risultati.'),
       ('App', 'Apri Netflix, YouTube, Prime Video e le altre app con un tocco.'),
       ('Accendere la TV', "Se è spenta, Mando TV la accende tramite la rete e si collega da sola."),
       ('Senza account', 'La connessione è diretta, tramite il tuo Wi-Fi, senza passare da Internet.'),
@@ -158,7 +158,7 @@ MARCAS = [
             encender='Accendere la Roku dallo smartphone', preguntas='Domande su Roku', guias='Guide per Roku'),
     funciones=[
       ('Tutti i tasti', 'Frecce, OK, Indietro, Home, volume, muto, replay e riproduzione.'),
-      ('Tastiera', 'Scrivi le ricerche nei canali Roku con la tastiera dello smartphone.'),
+      ('Due tastiere', 'Scrivi nella ricerca di Roku e nei canali che lo permettono con la tastiera dello smartphone. Con la Tastiera YouTube (Pro) scrivi o pronuncia cosa vuoi guardare e YouTube si apre sulla TV con i risultati.'),
       ('Canali', 'Apri Netflix, YouTube e gli altri canali Roku con un tocco.'),
       ('Ingressi', "Su una Roku TV passa a HDMI, antenna o AV direttamente dall'app."),
       ('Accendere la TV', "Sulle Roku TV con avvio rapido, Mando TV le accende dallo smartphone."),
@@ -193,7 +193,7 @@ MARCAS = [
     funciones=[
       ('Tutti i tasti', 'Frecce, OK, Indietro, Home, volume, muto e riproduzione.'),
       ('Touchpad (Pro)', 'Fai scorrere il dito per muoverti rapidamente nei menu di Google TV.'),
-      ('Tastiera', 'Scrivi ricerche e password con la tastiera dello smartphone.'),
+      ('Due tastiere', 'Scrivi nella ricerca della TV e nella maggior parte delle app con la tastiera dello smartphone. Con la Tastiera YouTube (Pro) scrivi o pronuncia cosa vuoi guardare e YouTube si apre sulla TV con i risultati.'),
       ('App', 'Apri YouTube, Netflix, Disney+ e le altre app con un tocco.'),
       ('Accendere la TV', "Sui modelli che si possono accendere tramite la rete, Mando TV accende la TV e si collega da sola."),
       ('iPhone, Android e PC', 'Funziona allo stesso modo da qualsiasi smartphone o computer.'),
@@ -319,7 +319,7 @@ GUIAS = [
     faq=[
       ("Mi serve il telecomando per associare lo smartphone?", "No. Il codice compare sullo schermo della TV e lo inserisci nello smartphone. Basta accendere la TV, se serve con il tasto della TV stessa."),
       ('Funziona con una Hisense?', "Sulle TV Hisense con Android TV o Google TV sì. Le TV Hisense con un altro sistema non sono compatibili."),
-      ("Posso scrivere con la tastiera dello smartphone?", "Sì. La tastiera è gratis e serve per cercare su YouTube, Netflix e le altre app."),
+      ('Posso scrivere con la tastiera dello smartphone?', 'Sì, ce ne sono due. La tastiera gratis scrive nella ricerca e nei campi di testo della TV e della maggior parte delle app. YouTube e Netflix accettano solo la loro tastiera sullo schermo, quindi per YouTube esiste la Tastiera YouTube (Pro): scrivi o pronuncia cosa vuoi guardare e YouTube si apre sulla TV con i risultati. Netflix si usa con le frecce e OK.'),
     ]),
   dict(clave='lg-on', corto='Accendere TV LG con lo smartphone',
     titulo='Accendere la TV LG con lo smartphone (passo dopo passo)',
@@ -767,7 +767,7 @@ GUIAS += [
     ],
     extra=[
       ('Mando TV o LG ThinQ: quale usare', "Usa ThinQ se vuoi gestire elettrodomestici LG come lavatrici, frigoriferi o condizionatori, o le funzioni legate all'account LG. Usa Mando TV se vuoi un telecomando veloce e semplice per la TV che funziona anche con Samsung, Roku e Google TV nella stessa app. Molti le tengono tutte e due: ThinQ per gli elettrodomestici, Mando TV per la TV."),
-      ('Cosa fa Mando TV su una TV LG', "Funziona con le Smart TV LG con webOS, cioè la maggior parte dei modelli dal 2014 in poi, inclusi LED, NanoCell, QNED e OLED. Ti dà le frecce, OK, Indietro, Home, volume, canali, muto, controlli di riproduzione e una tastiera per scrivere su YouTube, Netflix o nel browser. L'elenco delle app e quello degli ingressi sono gratis. Con Pro hai anche un puntatore come la Magic Remote."),
+      ('Cosa fa Mando TV su una TV LG', "Funziona con le Smart TV LG con webOS, cioè la maggior parte dei modelli dal 2014 in poi, inclusi LED, NanoCell, QNED e OLED. Ti dà le frecce, OK, Indietro, Home, volume, canali, muto, controlli di riproduzione e una tastiera per scrivere nella ricerca della TV e nella maggior parte delle app. L'elenco delle app e quello degli ingressi sono gratis. Con Pro hai anche un puntatore come la Magic Remote."),
       ('Cosa non fa Mando TV', "Non controlla gli elettrodomestici LG, non usa il tuo account LG e non sostituisce i servizi dell'account LG sulla TV. È un telecomando, non un hub per la casa intelligente."),
       ('Privacy e pubblicità', 'Mando TV non ha pubblicità né account. Comunica con la TV solo dentro la rete di casa e tiene la chiave di connessione crittografata sul tuo dispositivo. Tutte le funzioni sono nella pagina [app telecomando per LG](@lg).'),
       ('Gratis e Pro', 'Le frecce, OK, Indietro, Home, volume, canali, tasti numerici, tastiera, apertura app, cambio ingressi e accensione o spegnimento sono gratis, senza pubblicità né abbonamento. Il touchpad, i comandi vocali, le app preferite, le routine e il timer di spegnimento fanno parte di Mando TV Pro, un acquisto unico senza abbonamento.'),
@@ -980,7 +980,7 @@ GUIAS += [
       ('Mando TV funziona con le TV Sony Bravia?', 'Sì, con le TV che usano Google TV o Android TV, il che copre la maggior parte delle Smart TV Sony dal 2015 in poi.'),
       ("Mi serve un'app Sony o un account Google?", 'No. Mando TV si associa tramite il codice sullo schermo della TV e non richiede alcun account.'),
       ('Funziona con le vecchie Bravia senza Android?', 'In beta, sì, sui modelli dal 2013 al 2015 senza Android. Si associa con un PIN di 4 cifre mostrato sulla TV.'),
-      ('Posso scrivere sulla mia Sony dallo smartphone?', 'Sì. La tastiera è gratis e funziona su YouTube, Netflix e nella barra di ricerca della TV.'),
+      ('Posso scrivere sulla mia Sony dallo smartphone?', 'Sì. La tastiera dello smartphone è gratis e scrive nella barra di ricerca della TV e in altri campi di testo. Per YouTube, Mando TV ha anche una Tastiera YouTube: scrivi o pronuncia cosa vuoi guardare e YouTube si apre sulla TV con i risultati. Netflix accetta solo la sua tastiera sullo schermo, quindi lì usa le frecce e OK.'),
     ]),
   dict(clave='tcl', corto='App telecomando TCL', fecha='2026-11-23',
     titulo='App telecomando TCL per iPhone, Android e PC',
