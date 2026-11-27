@@ -5,6 +5,7 @@ Imprime las rutas que cambió, una por línea, relativas a la raíz y con /.
 """
 import datetime
 import html
+import json
 import pathlib
 import re
 import sys
@@ -31,6 +32,78 @@ IDIOMA_TEXTO = dict(
 
 for _k, _t in I.TEXTOS_NUEVOS.items():
     IDIOMA_TEXTO[_k] = tuple(_t['pie'])
+
+# Perfiles oficiales de Mando TV (comprobados en vivo el 26/27-nov-2026). Van en el pie de todas las páginas (íconos
+# sin scripts de terceros: el dibujo está en estilos.css como máscara) y en el "sameAs" de la Organization #org del
+# JSON-LD, para que Google y las IA sepan que esas cuentas son de la marca. Facebook va al final: todavía no permite
+# @mandotvapp y su dirección con número se ve menos oficial (revisión de Marketing, 27-nov).
+REDES = [
+    ('YouTube', 'https://www.youtube.com/@mandotvapp', 'youtube'),
+    ('Instagram', 'https://www.instagram.com/mandotvapp/', 'instagram'),
+    ('TikTok', 'https://www.tiktok.com/@mandotv.app', 'tiktok'),
+    ('X', 'https://x.com/MandoTvApp', 'x'),
+    ('Pinterest', 'https://www.pinterest.com/mandotvapp/', 'pinterest'),
+    ('Facebook', 'https://www.facebook.com/profile.php?id=61596966211877', 'facebook'),
+]
+
+# Nombre de la lista de íconos para lectores de pantalla.
+REDES_ETIQUETA = {
+    'es': 'Mando TV en redes sociales', 'en': 'Mando TV on social media', 'pt': 'Mando TV nas redes sociais',
+    'fr': 'Mando TV sur les réseaux sociaux', 'de': 'Mando TV in sozialen Netzwerken', 'it': 'Mando TV sui social',
+    'id': 'Mando TV di media sosial', 'ms': 'Mando TV di media sosial', 'cs': 'Mando TV na sociálních sítích',
+    'da': 'Mando TV på sociale medier', 'hu': 'Mando TV a közösségi médiában', 'nl': 'Mando TV op sociale media',
+    'nb': 'Mando TV på sosiale medier', 'pl': 'Mando TV w mediach społecznościowych',
+    'ro': 'Mando TV pe rețelele sociale', 'sk': 'Mando TV na sociálnych sieťach', 'fi': 'Mando TV sosiaalisessa mediassa',
+    'sv': 'Mando TV i sociala medier', 'vi': 'Mando TV trên mạng xã hội', 'tr': 'Sosyal medyada Mando TV',
+    'el': 'Το Mando TV στα μέσα κοινωνικής δικτύωσης', 'uk': 'Mando TV у соцмережах', 'he': 'Mando TV ברשתות החברתיות',
+    'ar': 'Mando TV على وسائل التواصل الاجتماعي', 'hi': 'सोशल मीडिया पर Mando TV', 'th': 'Mando TV บนโซเชียลมีเดีย',
+    'ko': '소셜 미디어의 Mando TV', 'ja': 'SNSのMando TV', 'zh': 'Mando TV 社交媒体', 'zh-hant': 'Mando TV 社群媒體',
+}
+
+ORG_ID = 'https://mandotv.app/#org'
+LDJSON_RE = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.DOTALL)
+
+
+def _serializar(datos, original):
+    """Escribe el JSON con el mismo formato del generador (compacto o con sangría de 2)."""
+    if '\n' not in original.strip():
+        return json.dumps(datos, ensure_ascii=False)
+    base = re.match(r' *', original.split('\n')[-1]).group(0)
+    cuerpo = json.dumps(datos, indent=2, ensure_ascii=False).split('\n')
+    return '\n' + '\n'.join(base + linea for linea in cuerpo) + '\n' + base
+
+
+def _org_con_redes(nodo):
+    cambio = False
+    if isinstance(nodo, dict):
+        if nodo.get('@type') == 'Organization' and nodo.get('@id') == ORG_ID:
+            same = nodo.get('sameAs', [])
+            same = [same] if isinstance(same, str) else list(same)
+            redes = [url for _, url, _ in REDES]
+            nuevo = [url for url in same if url not in redes] + redes  # tiendas primero, luego las redes en orden
+            if nuevo != same:
+                nodo['sameAs'] = nuevo
+                cambio = True
+        for v in nodo.values():
+            cambio = _org_con_redes(v) or cambio
+    elif isinstance(nodo, list):
+        for v in nodo:
+            cambio = _org_con_redes(v) or cambio
+    return cambio
+
+
+def redes_jsonld(texto):
+    """Agrega los perfiles al sameAs de la Organization #org de cada bloque JSON-LD (idempotente)."""
+    def cambiar(m):
+        original = m.group(2)
+        datos = json.loads(original)
+        if _serializar(datos, original) != original:
+            return m.group(0)  # formato distinto al del generador: no se toca a ciegas
+        if not _org_con_redes(datos):
+            return m.group(0)
+        return m.group(1) + _serializar(datos, original) + m.group(3)
+    return LDJSON_RE.sub(cambiar, texto)
+
 
 INICIO_LANG = {l: I.ruta('home', l) for l in IDIOMAS_ORDEN}  # 24-nov: inglés en la raíz (/), español en /es/
 
@@ -94,6 +167,11 @@ def bloque_nuevo(lenguaje, hreflangs, tiene_tiendas):
     bloque += '        <div class="pie-firma">\n'
     bloque += '          <a class="pie-logo" href="' + inicio_esc + '" aria-label="Mando TV"><img src="/icono.svg" alt="Mando TV" width="44" height="44" loading="lazy" decoding="async">Mando TV</a>\n'
     bloque += '          <p>' + lema_esc + '</p>\n'
+    bloque += '          <ul class="pie-redes" aria-label="' + html.escape(REDES_ETIQUETA[lenguaje]) + '">\n'
+    for nombre_red, url, clase in REDES:
+        bloque += ('            <li><a class="red-' + clase + '" href="' + html.escape(url) + '" rel="me noopener"'
+                   ' aria-label="' + nombre_red + '" title="' + nombre_red + '"></a></li>\n')
+    bloque += '          </ul>\n'
     bloque += '        </div>\n'
     bloque += '        <div class="pie-accion">\n'
     bloque += '          <a class="boton" href="' + descargar_href_esc + '">' + descargar_esc + '</a>\n'
@@ -149,6 +227,7 @@ def procesar(pagina):
     tiene_tiendas = 'id="tiendas"' in texto
     inicio = INICIO_LANG.get(lenguaje, '/')
     texto = barra_descargar(texto, IDIOMA_TEXTO[lenguaje][1], '#tiendas' if tiene_tiendas else inicio + '#tiendas')
+    texto = redes_jsonld(texto)
 
     match = BLOCK_INICIO.search(texto)
     if match:

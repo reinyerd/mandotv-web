@@ -1,5 +1,24 @@
 # Estado de la web mandotv.app
 
+## 27-nov: redes oficiales en el pie, en el sameAs y en llms.txt (PUBLICADO con el sí del fundador)
+
+- Perfiles (comprobados en vivo el 26/27-nov): YouTube @mandotvapp, Instagram mandotvapp, TikTok @mandotv.app,
+  X MandoTvApp, Pinterest mandotvapp y Facebook `profile.php?id=61596966211877` (todavía sin @mandotvapp; va al final
+  porque la dirección con número se ve menos oficial).
+- Lo hace `herramientas/pie_firma.py` en cada commit (lista `REDES`): fila de 6 íconos bajo el lema del pie en todas
+  las páginas (`ul.pie-redes` con nombre en el idioma de la página, enlaces `rel="me noopener"` con `aria-label`), y los
+  6 perfiles al final del `sameAs` de la Organization `#org` de cada bloque JSON-LD (las tiendas y AlternativeTo
+  quedan primero). Para agregar o cambiar una red se edita solo `REDES`. Íconos: Simple Icons (CC0) como máscara en
+  `estilos.css` (`.pie-redes`), sin scripts ni imágenes de terceros. `llms.txt`: línea "Official social profiles".
+- En el repo: 1064/1064 páginas con los 6 íconos en orden (30 idiomas) y 937/937 Organization `#org` con los 6.
+  CSP sin cambios (`csp.py --verificar` OK), sin desbordes a 320 px, sin bloqueos en consola.
+- Revisión (agentes con capturas): UX, diseñador web y visual aprueban (borde .18, 8 px de espacio bajo 360 px, efecto
+  al tocar); no se quitó el efecto con movimiento reducido (regla de Windows). Marketing: Facebook al final y pide
+  que cada perfil tenga bio con enlace a mandotv.app y algunas publicaciones (tarea de la sesión de redes). SEO/GEO:
+  sameAs en la Organization es lo correcto; Google Play se agrega cuando sea pública. Privacidad: sin terceros; se
+  quitó de este archivo el ID del canal personal del fundador (sigue en el historial de git).
+- Comparación lado a lado: https://claude.ai/code/artifact/d19032c4-d622-4661-9c53-7e5919581f1a
+
 ## 27-nov: el teclado ya no promete escribir en YouTube y Netflix; "Dos teclados" (PUBLICADO, `e42917d1`)
 
 - Origen: quejas de usuarios. YouTube y Netflix en el TV solo aceptan su propio teclado en pantalla. Enfoque del
@@ -200,8 +219,8 @@ páginas puente (refresh 0 s + canonical + noindex), generadas por `herramientas
 
 Todo video de Mando TV se sube **solo** al canal **Mando TV (@mandotvapp)**, ID `UCNlAqoB_UH4aurE1wMlIYYQ`
 (https://studio.youtube.com/channel/UCNlAqoB_UH4aurE1wMlIYYQ). Antes de subir, comprobar en YouTube Studio (menú de
-la cuenta > Cambiar de cuenta) que el canal activo es Mando TV. **Nunca** en el canal personal "Reinyerd Babinczuk"
-(`UCzHOi8TkbM1d3Lcda8L5MCg`), que es el que abre Studio por defecto. Ahí quedaron por error 2 Shorts del 21-nov
+la cuenta > Cambiar de cuenta) que el canal activo es Mando TV. **Nunca** en el canal personal del fundador,
+que es el que abre Studio por defecto. Ahí quedaron por error 2 Shorts del 21-nov
 (474 y 54 vistas al 25-nov); no se borran ni se ocultan sin el OK del fundador.
 ## 25-nov (noche): teléfono de la vitrina, clics que fallaban y pestañas vivas (publicado)
 

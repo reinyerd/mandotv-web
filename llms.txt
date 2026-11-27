@@ -14,6 +14,7 @@ Key facts:
 - Languages of the app: 30 since version 1.1 (already on the App Store for iPhone and iPad and on Microsoft Store for Windows; Android gets them with its 1.1 update, until then 13): Arabic, Chinese (Simplified and Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Norwegian, Polish, Portuguese, Romanian, Slovak, Spanish, Swedish, Thai, Turkish, Ukrainian and Vietnamese. Voice commands (Pro) are understood in 29 of them.
 - Privacy: the app controls the TV directly inside the home network, without going through the internet. The website counts visits with Cloudflare Web Analytics (no cookies) and uses Google Analytics only if the visitor accepts.
 - Contact: hola@mandotv.app
+- Official social profiles (the only accounts of Mando TV; checked on 27 Nov 2026): [YouTube](https://www.youtube.com/@mandotvapp), [Instagram](https://www.instagram.com/mandotvapp/), [TikTok](https://www.tiktok.com/@mandotv.app), [Facebook](https://www.facebook.com/profile.php?id=61596966211877), [X](https://x.com/MandoTvApp) and [Pinterest](https://www.pinterest.com/mandotvapp/).
 
 ## Main pages (English)
 
