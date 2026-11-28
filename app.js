@@ -1073,6 +1073,10 @@
       if (aviso) { vigia.disconnect(); subirAviso(aviso); }
     });
     vigia.observe(document.body, { childList: true, subtree: true });
-    setTimeout(function () { vigia.disconnect(); }, 15000);
+    setTimeout(function () {
+      vigia.disconnect();
+      // Si el aviso no llegó (sin red para las fuentes), se suelta el hueco reservado para no dejar una franja vacía.
+      if (!document.querySelector('.franja-idioma .aviso-idioma')) delete document.documentElement.dataset.avisoIdioma;
+    }, 15000);
   }
 })();

@@ -76,7 +76,11 @@
   };
 
   pais().then((p) => {
-    if (!p || !P[p]) return;
+    if (!p || !P[p]) {
+      const hero = document.querySelector('.ficha .precio');
+      if (hero) hero.classList.add('sin-precio');  // suelta la fila reservada para el precio
+      return;
+    }
     const [moneda, monto] = P[p];
     mostrar(formato(p, moneda, monto));
   });

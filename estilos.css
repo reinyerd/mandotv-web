@@ -5,6 +5,11 @@
 @font-face { font-family: "Archivo"; font-style: normal; font-weight: 600 900; font-stretch: 62% 100%; font-display: swap; src: url("/fuentes/archivo-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("/fuentes/inter-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("/fuentes/inter-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* Respaldo con las medidas de Inter (27-nov): mientras Inter carga se ve Arial ajustada al mismo ancho y alto de línea,
+   así el texto no cambia de tamaño ni de líneas al llegar la fuente (el salto movía la portada: CLS 0,05 en celular).
+   Valores medidos en la portada: mismas alturas y cortes de línea con Inter 400 (106 %) y 600 (101,2 %). */
+@font-face { font-family: "Inter Respaldo"; font-weight: 100 500; src: local("Arial"), local("ArialMT"), local("Arimo"), local("Liberation Sans"); size-adjust: 106%; ascent-override: 90.5%; descent-override: 22.5%; line-gap-override: 0%; }
+@font-face { font-family: "Inter Respaldo"; font-weight: 501 900; src: local("Arial Bold"), local("Arial-BoldMT"), local("Arimo Bold"), local("Liberation Sans Bold"); size-adjust: 101.2%; ascent-override: 90.5%; descent-override: 22.5%; line-gap-override: 0%; }
 
 :root {
   --marca: #3d7bff;          /* cambia con la marca de TV elegida */
@@ -20,7 +25,7 @@
   --ancho: 1240px;
   --t-marca: 600ms cubic-bezier(.2, .8, .2, 1);
   --titular: "Archivo", system-ui, sans-serif;
-  --texto: "Inter", system-ui, sans-serif;
+  --texto: "Inter", "Inter Respaldo", system-ui, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -143,7 +148,7 @@ a.oculto[href="#contenido"]:focus { position: fixed; z-index: 1000; top: calc(en
 .pausa .ico-play, .pausa[data-estado="pausa"] .ico-pausa { display: none; }
 .pausa[data-estado="pausa"] .ico-play { display: block; }
 .flechas { display: flex; gap: 8px; }
-.sin-js .vitrina-barras, .sin-js .pausa { display: none; }
+.sin-js:not(.js-pronto) .vitrina-barras, .sin-js:not(.js-pronto) .pausa { display: none; }
 .escaparate > .temas { position: absolute; top: 4px; right: 4px; z-index: 4; padding: 7px 12px 7px 8px; border-radius: 999px;
   background: rgba(255, 255, 255, .5); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6); }
 .escaparate > .temas .punto { width: 24px; height: 24px; }
@@ -367,7 +372,7 @@ a.oculto[href="#contenido"]:focus { position: fixed; z-index: 1000; top: calc(en
   .equipos button:hover { background: rgba(255, 255, 255, .5); }
   .marcas button[aria-pressed="true"]:hover, .equipos button[aria-pressed="true"]:hover { background: #0d0f17; }
 }
-.sin-js .grupo-equipos { display: none; }
+.sin-js:not(.js-pronto) .grupo-equipos { display: none; }
 .equipos:has(> :nth-child(5)) { grid-template-columns: repeat(5, 1fr); }
 .temas { display: flex; gap: 10px; align-items: center; font-size: 14px; font-weight: 600; }
 .punto {
@@ -793,7 +798,7 @@ details ol, details ul { padding-left: 1.3em; display: grid; gap: 6px; }
    propia (Inter), colores propios por marca de TV y la palabra MANDO como firma.
    ===================================================================================================================== */
 :root {
-  --titular: "Inter", system-ui, sans-serif;
+  --titular: "Inter", "Inter Respaldo", system-ui, sans-serif;
   --firma: "Archivo", "Inter", system-ui, sans-serif;
   --tinta: #111522; --suave: #f2f3f7; --tenue: #586074;
   /* Valores de la app (lib/ui/tema.dart): fondo #07080C, texto #F4F6FA, tenue #A9B0BE, claro #F2F3F7, vidrio blanco 12 %. */
@@ -1514,6 +1519,9 @@ ul.capturas { display: grid; grid-template-columns: repeat(2, clamp(140px, 13vw,
 .pro-precio { display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 14px; border-radius: 999px;
   background: color-mix(in srgb, currentColor 14%, transparent); color: inherit; font-weight: 700; }
 .pro-precio b { font-family: var(--titular); font-weight: 900; font-stretch: 85%; font-size: 20px; letter-spacing: -.01em; }
+/* Fila reservada (27-nov): el precio llega después de pintar (país por Cloudflare) y va en su propia fila de 40 px;
+   sin este hueco empujaba los botones de la portada (CLS). Si no se sabe el país, precio.js pone .sin-precio. */
+.ficha .precio:not(:has(.pro-precio)):not(.sin-precio)::after { content: ""; flex-basis: 100%; height: 40px; }
 .plan-monto { font-family: var(--titular); font-weight: 900; font-stretch: 80%; font-size: 40px; line-height: 1;
   letter-spacing: -.02em; margin: 14px 0 0; }
 .pro-linea { display: inline-block; margin-top: 10px; padding: 4px 12px; border-radius: 999px;
@@ -1651,6 +1659,17 @@ body:has(> .escena) .lista-funciones li:nth-child(10) { --ico: url("data:image/s
    La mueve app.js desde la pila de abajo; al cerrarla desaparece y el aviso de cookies queda solo abajo. */
 .franja-idioma { background: #12141c; color: var(--perla); box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08); }
 .franja-idioma:empty { display: none; }
+/* Hueco reservado (27-nov): tema.js decide antes de pintar si saldrá el aviso (html[data-aviso-idioma]) y la franja
+   ocupa desde el inicio su alto exacto; al llegar el aviso toma ese lugar y la portada no salta (CLS 0,07 en celular). */
+:root { --alto-franja-idioma: 60px; }
+@media (max-width: 560px) { :root { --alto-franja-idioma: 56px; } }
+body .franja-idioma .aviso-idioma { min-height: var(--alto-franja-idioma); }
+html[data-aviso-idioma] body:has(> .escena):not(:has(> .franja-idioma .aviso-idioma))::before {
+  content: ""; display: block; height: var(--alto-franja-idioma); background: #12141c; box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .08);
+}
+html[data-aviso-idioma][data-tema="claro"] body:has(> .escena):not(:has(> .franja-idioma .aviso-idioma))::before {
+  background: #e9eaef; box-shadow: inset 0 -1px 0 rgba(17, 21, 34, .08);
+}
 body .franja-idioma .aviso-idioma {
   display: flex; align-items: center; justify-content: center; gap: 12px; max-width: var(--ancho, 1240px); margin: 0 auto;
   padding: 8px var(--margen, 20px); background: none; border: 0; border-radius: 0; box-shadow: none; color: inherit;

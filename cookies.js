@@ -295,15 +295,22 @@ document.addEventListener('click', function (e) {
   document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
     gemelas[l.getAttribute('hreflang').toLowerCase()] = l.href;
   });
-  var preferidos = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+  var raiz = document.documentElement;
   var destino = null;
-  for (var i = 0; i < preferidos.length; i++) {
-    var c = codigoIdioma(preferidos[i]);
-    if (c === actual) return;                       // su idioma preferido es el de esta página
-    if (gemelas[c] && TEXTOS[c]) { destino = c; break; }
+  if (document.querySelector('script[src^="/tema.js"]')) {
+    // Portada: tema.js ya decidió antes de pintar y reservó el hueco de la franja; se usa esa misma decisión.
+    destino = raiz.dataset.avisoIdioma || null;
+    if (destino && !(gemelas[destino] && TEXTOS[destino])) { delete raiz.dataset.avisoIdioma; destino = null; }
+  } else {
+    var preferidos = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < preferidos.length; i++) {
+      var c = codigoIdioma(preferidos[i]);
+      if (c === actual) return;                       // su idioma preferido es el de esta página
+      if (gemelas[c] && TEXTOS[c]) { destino = c; break; }
+    }
+    // Idioma que el sitio no tiene (japonés, polaco...): se ofrece el inglés, como el x-default de los hreflang.
+    if (!destino && actual !== 'en' && gemelas.en) destino = 'en';
   }
-  // Idioma que el sitio no tiene (japonés, polaco...): se ofrece el inglés, como el x-default de los hreflang.
-  if (!destino && actual !== 'en' && gemelas.en) destino = 'en';
   if (!destino) return;
 
   var T = TEXTOS[destino];
@@ -330,7 +337,7 @@ document.addEventListener('click', function (e) {
       // Animación propia (con "reducir movimiento" de Windows las de CSS no corren).
       var salida = aviso.animate && aviso.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(10px) scale(.97)' }],
         { duration: 200, easing: 'cubic-bezier(.4, 0, 1, 1)', fill: 'forwards' });
-      var quitar = function () { aviso.remove(); siguienteAviso(); };
+      var quitar = function () { delete raiz.dataset.avisoIdioma; aviso.remove(); siguienteAviso(); };
       if (salida) salida.onfinish = quitar; else quitar();
     });
     var pila = pilaAvisos();
