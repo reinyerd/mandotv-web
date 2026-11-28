@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">TV’yi bulma</h2>
 
 PRIVACIDAD = dict(
   titulo='Gizlilik Politikası | Mando TV',
-  desc='Mando TV kişisel veri toplamaz: hesap, reklam ve izleyici yok. Uygulama yalnızca Wi-Fi ağının içinde TV’nle konuşur.',
+  desc='Mando TV hesap ya da kişisel veri istemez: reklam ve izleyici yok. Kumanda doğrudan Wi-Fi ağının içinde TV’nle konuşur.',
   h1='Gizlilik',
-  intro='Kısacası: Mando TV verilerini toplamaz. Hesap, reklam, izleyici ve yaptıklarını kaydeden kendi sunucularımız yok.',
+  intro='Kısacası: Mando TV hesap ya da kişisel veri istemez. Reklam ve izleyici yok.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">14 Kasım 2026’dan beri geçerlidir. Son güncelleme: 26 Kasım 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">14 Kasım 2026’dan beri geçerlidir. Son güncelleme: 28 Kasım 2026.</p>
 
       <h2>Biz kimiz</h2>
       <p>Mando TV, televizyonunu telefonundan ya da bilgisayarından kontrol etmeni sağlayan bir uygulamadır. Bu politika, uygulamanın hangi bilgileri kullandığını ve bunlarla ne yaptığını anlatır. Sorularında bize <a href="mailto:hola@mandotv.app">hola@mandotv.app</a> adresinden yazabilirsin.</p>
 
       <h2>Hangi verileri topluyoruz</h2>
-      <p>Uygulama: hiçbirini. Uygulama, senin hakkında ya da onu nasıl kullandığın hakkında bize veya üçüncü kişilere hiçbir bilgi göndermez. Analiz, reklam veya izleme aracı kullanmaz.</p>
+      <p>Uygulama: yalnızca Android ve Windows’taki ücretsiz Pro denemesi için gerekenler; <a href="#prueba">Ücretsiz Pro denemesi</a> bölümünde anlatılıyor. Bunun dışında uygulama, senin hakkında ya da onu nasıl kullandığın hakkında bize veya üçüncü kişilere hiçbir bilgi göndermez. Analiz, reklam veya izleme aracı kullanmaz.</p>
       <p>Bu web sitesi: Ziyaretleri, <a href="#cookies">Bu sitedeki çerezler</a> bölümünde açıklanan iki şekilde ölçüyoruz.</p>
 
       <h2>Uygulamanın cihazında sakladıkları</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">14 Kasım 2026’dan beri geçerlidi
         <li>İzni onayladığında her televizyonun verdiği bağlantı anahtarları. Bunlar sistemin güvenli deposunda şifreli olarak saklanır (iPhone ve Mac’te Anahtar Zinciri, Android’de Keystore, Windows’ta korumalı depolama).</li>
         <li>Ayarların: açık ya da koyu tema, arka plan rengi, titreşim ve kumanda türü.</li>
         <li>Pro özelliklerini kullanırsan: favori uygulamaların, rutinlerin ve son YouTube aramaların (bunları uygulamadan silebilirsin).</li>
+        <li>Kullanıyorsan: çocuk modu (PIN yalnızca korumalı bir kod olarak saklanır) ve başkalarının seninle paylaştığı kumandalar.</li>
       </ul>
-      <p>Uygulamayı sildiğinde bunların hepsi onunla birlikte silinir.</p>
+      <p>Uygulamayı sildiğinde bu veriler onunla birlikte silinir, iki istisna dışında. Android’de Google yedeklemesini kullanıyorsan uygulamanın tercihleri (TV listen ve ayarların gibi) kendi Google yedeğinde kalabilir ve uygulamayı yeniden kurduğunda geri gelebilir; bağlantı anahtarları bu yedeğe asla dahil olmaz. iPhone ve Mac’te bağlantı anahtarları sistemin Anahtar Zinciri’nde tutulur ve uygulamayı sildikten sonra orada kalabilir.</p>
 
       <h2>Uygulama kimlerle konuşur</h2>
       <p>Televizyonlarınla, evindeki Wi-Fi ağının içinde. Onları bulmak için uygulama yerel ağını tarar; bu yüzden iPhone’da “Yerel Ağ” izni ister. Uygulamanın klavyesiyle yazdığın metin doğrudan televizyona gider ve kaydedilmez.</p>
-      <p>Ayrıca uygulama açılırken bu web sitesinden küçük bir herkese açık dosya indirir (mandotv.app/app/config.json); amaç, kurman gereken yeni bir sürüm olup olmadığını ve hangi özelliklerin Mando TV Pro’ya ait olduğunu öğrenmektir. Bu, bir sayfayı açmak gibi bir indirmedir: uygulama ne verilerini, ne televizyonlarını ne de yaptığın şeyi gönderir. Yalnızca sana uygun bildirimi gösterebilmek için uygulama sürümünü ve sistemi (örneğin Android) belirtir. İnternetin yoksa uygulama en son indirdiği dosyayla çalışmaya devam eder; indirilemeden 30 günden fazla geçerse uygulama senden kısa bir süre internete bağlanmanı ister.</p>
+      <p>Ayrıca uygulama açılırken bu web sitesinden küçük bir herkese açık dosya indirir (mandotv.app/app/config.json); amaç, kurman gereken yeni bir sürüm olup olmadığını ve hangi özelliklerin Mando TV Pro’ya ait olduğunu öğrenmektir. Bu, bir sayfayı açmak gibi bir indirmedir: uygulama ne verilerini, ne televizyonlarını ne de yaptığın şeyi gönderir. Yalnızca sana uygun bildirimi gösterebilmek için uygulama sürümünü ve sistemi (örneğin Android) belirtir. İnternetin yoksa uygulama en son indirdiği dosyayla çalışmaya devam eder; indirilemeden 30 günden fazla geçerse uygulama senden kısa bir süre internete bağlanmanı ister. Her web sitesi ziyaretinde olduğu gibi, bu indirme sırasında site sağlayıcımız (Cloudflare) IP adresini de görür.</p>
 
-      <p>Televizyona fotoğraf ya da video gönderirsen (bir Pro özelliği), televizyon yalnızca seçtiğin dosyaları doğrudan telefonundan veya bilgisayarından evindeki Wi-Fi üzerinden indirir. Bunlar ne internetten ne de bizden geçer, uygulama diğer fotoğraflarını görmez ve paylaşım, o ekranı kapattığında sona erer.</p>
+      <p>Televizyona fotoğraf ya da video gönderirsen (bir Pro özelliği), televizyon yalnızca seçtiğin dosyaları doğrudan telefonundan veya bilgisayarından evindeki Wi-Fi üzerinden indirir. Bunlar ne internetten ne de bizden geçer, uygulama diğer fotoğraflarını görmez ve paylaşım, o ekranı kapattığında sona erer. Ev ağının içinde bu aktarım şifrelenmez.</p>
+      <p>“Ekranımı TV'de göster” özelliğini kullanırsan (bir Pro özelliği) uygulama ekranını yalnızca yansıtma sürerken yakalar, cihazında kodlar ve ev Wi-Fi’n üzerinden doğrudan seçtiğin televizyona gönderir. İnternetten ya da bizim üzerimizden geçmez, hiçbir şey kaydedilmez ya da saklanmaz ve sen durdurduğunda ya da uygulamayı kapattığında sona erer. Televizyon o ekranda görünen her şeyi, bildirimler dahil, gösterir ve ev ağının içinde yayın şifrelenmez.</p>
+      <h2 id="prueba">Ücretsiz Pro denemesi (Android ve Windows)</h2>
+      <p>Ücretsiz Pro denemesi cihaz başına bir tane olsun diye, deneme başlarken uygulama sunucumuza (api.mandotv.app, Cloudflare üzerinde) bir kez iki şey gönderir: sistemin uygulamaya o cihazda verdiği tanımlayıcının şifrelenmiş bir parmak izi (Android’de uygulamaya özel Android kimliği, Windows’ta uygulamalarımız için cihaz kimliği) ve denemenin ne kadardır sürdüğü. Parmak izi hangi cihaz olduğunu ya da senin kim olduğunu belli etmez; sunucu da onu kaydetmeden önce kendi anahtarıyla bir kez daha şifreler.</p>
+      <p>Yalnızca bu parmak izini, denemenin başladığı tarihi ve Android mi Windows mu olduğunu saklarız. IP adresini saklamayız (Cloudflare, her bağlantıda olduğu gibi yanıt verirken görür). Bunu yalnızca uygulamayı yeniden kurmak yeni bir deneme vermesin diye kullanırız; bu dolandırıcılığı önlemedir ve meşru menfaatimizdir. Asla reklam için ya da seni izlemek için kullanılmaz, kimseyle de paylaşılmaz. Her kayıt 24 ay sonra kendiliğinden silinir. İnternetin yoksa deneme yine de çalışır. iPhone ve Mac’te hiçbir şey gönderilmez: deneme App Store tarafından yönetilir.</p>
+
       <h2>Mikrofon ve ses</h2>
-      <p>iPhone, Mac ve Android’de sesli arama, mikrofonu yalnızca konuşma düğmesine dokunduğun sürece kullanır. Söylediklerin sistemin konuşma tanıma özelliği tarafından metne çevrilir: iPhone ve Mac’te Apple, Android’de Google tarafından, her biri kendi gizlilik koşullarına göre. Windows’ta konuşma kendi bilgisayarında tanınır ve cihazdan çıkmaz; yalnızca çok eski işlemcilerde uygulama Microsoft’un Windows ses girişini kullanır, onların gizlilik koşullarına göre. Windows’ta mikrofon, ses panelini açtığında açılır; kapattığında veya 30 saniye kullanılmadığında kapanır; konuşmadığın sürece hiçbir şey kaydedilmez ve saklanmaz. Mando TV sesi ne kaydeder ne de saklar ve ortaya çıkan metin, klavyeyle yazdığın gibi doğrudan televizyonuna gider.</p>
+      <p>iPhone, Mac ve Android’de sesli arama, mikrofonu yalnızca konuşma düğmesine dokunduğun sürece kullanır. Söylediklerin sistemin konuşma tanıma özelliği tarafından metne çevrilir: iPhone ve Mac’te Apple, Android’de Google tarafından, her biri kendi gizlilik koşullarına göre. Windows’ta konuşma kendi bilgisayarında tanınır ve bilgisayardan çıkmaz. Yalnızca cihazdaki bu motor başlayamazsa ya da sürekli hata verirse (örneğin eski bir işlemci ya da eksik bir konuşma modeli yüzünden) uygulama, Windows’ta çevrimiçi konuşma tanıma açıksa çevrimiçi çalışan Microsoft’un Windows sesle yazma özelliğini kullanır; bu durumda Microsoft’un gizlilik politikası geçerlidir. Windows’ta mikrofon, ses panelini açtığında açılır; kapattığında veya 30 saniye kullanılmadığında kapanır; konuşmadığın sürece hiçbir şey kaydedilmez ve saklanmaz. Mando TV sesi ne kaydeder ne de saklar ve ortaya çıkan metin, klavyeyle yazdığın gibi doğrudan televizyonuna gider.</p>
 
       <h2>Ev: Apple Home ve Google Home cihazları</h2>
       <p>Ev bölümünü (test aşamasında) açtığında uygulama, Apple’ın Ev uygulamasında (HomeKit) ya da Google Home’da zaten bulunan cihazları görmek için izin ister. Bu izinle adlarını, odalarını ve durumlarını (açık ya da kapalı, parlaklık, sıcaklık veya bir ev aletinin programının hangi aşamada olduğu) okur; bunları göstermek ve dokunduğunu onlara iletmek için. Her şey telefonun ile Apple ya da Google’ın sistemi arasında gerçekleşir: Mando TV bu listeyi saklamaz, ne bize ne üçüncü kişilere gönderir ve ne reklam ne de analiz için kullanır. Android’de Google Home, kendi Google hesabınla ve Google’ın gizlilik politikasına göre çalışır. İzni istediğin zaman geri alabilirsin: iPhone’da Ayarlar &gt; Gizlilik ve Güvenlik &gt; HomeKit’ten, Android’de Google hesabının ayarlarından.</p>
       <p>“Ev senin için nasıl çalıştı?”ya dokunduğunda e-posta uygulaman, hola@mandotv.app adresine teknik bir özet içeren bir mesajla açılır: uygulamanın sürümü, sistem ve her türden kaç cihazın göründüğü ve yanıt verip vermedikleri. Cihazların, odaların ya da evinin adları yer almaz ve mesaj yalnızca sen kendin gönderirsen gönderilir.</p>
 
+      <h2>Paylaştığın bağlantılar ve metinler</h2>
+      <p>Bir kumanda paylaştığında (mandotv.app/m/ bağlantısı), bağlantı kumandanın tasarımını ve televizyonunu bulmak için bir ipucu taşır: adı, markası, modeli ve ağındaki adresi. Hiçbir zaman bağlantı anahtarı, PIN ya da televizyonun donanım adresini taşımaz. Bu bilgiler # işaretinden sonra gider, bu yüzden sunucularımıza asla ulaşmaz; ama bağlantıyı gönderdiğin herkes, örneğin WhatsApp’ta, bunları okuyabilir. Paylaşılan bir rutin (mandotv.app/r/ bağlantısı) yalnızca adını ve adımlarını taşır.</p>
+      <p>Uygulama ayarlarından kopyalayabileceğin yedek metni favorilerini, rutinlerini ve ayarlarını içerir. Şifreli değildir ve yalnızca yapıştırdığın yere gider.</p>
+
       <h2>Test raporu</h2>
-      <p>Uygulamada, hataları gidermemize yardım eden bir “Test raporunu kopyala” düğmesi var. Rapor, uygulama açık olduğu sürece yalnızca uygulamanın belleğinde kalır ve kendiliğinden asla gönderilmez: kopyalayıp paylaşmak sana kalmış. Bağlantı anahtarlarını, eşleştirme kodlarını ve yazdığın hiçbir şeyi içermez; yalnızca uygulamanın attığı adımları içerir, örneğin aramalar, bağlantılar ve hatalar.</p>
+      <p>Uygulamada, hataları gidermemize yardım eden bir “Test raporunu kopyala” düğmesi var. Rapor, uygulama açık olduğu sürece yalnızca uygulamanın belleğinde kalır ve kendiliğinden asla gönderilmez: kopyalayıp paylaşmak sana kalmış. Bağlantı anahtarlarını, eşleştirme kodlarını ve yazdığın hiçbir şeyi içermez. Ama uygulamanın attığı adımları, örneğin arama, bağlanma ve hataları, ayrıca teknik bilgileri içerir: uygulama sürümü, sistemin ve televizyonunun markası, modeli ve ağındaki adresi.</p>
 
       <h2 id="cookies">Bu sitedeki çerezler</h2>
       <p>Bu yalnızca mandotv.app web sitesi için geçerlidir, uygulama için değil.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">14 Kasım 2026’dan beri geçerlidi
       <h3>Çerezli, yalnızca kabul edersen</h3>
       <p>Çerez bildiriminde “Kabul et”e dokunursan sitenin nasıl kullanıldığını daha iyi anlamak için (Google LLC’nin) Google Analytics’i etkinleştiririz: sayfa görüntülemeleri, kalış süresi, cihaz türü, yaklaşık şehir ve nereden geldiğin. Bunun için tarayıcında _ga ve _ga_* çerezlerini 2 yıla kadar saklar. Google bu verileri Şili dışındaki sunucularda işleyebilir. Reklam özelliklerini ve Google Signals’ı devre dışı bıraktık ve bu verileri sana reklam göstermek için kullanmıyoruz.</p>
       <p>“Reddet”e dokunursan ya da hiçbir şey seçmezsen Google Analytics yüklenmez ve hiçbir çerez saklanmaz. Kararını her sayfanın en altındaki “Çerezler” düğmesiyle istediğin zaman değiştirebilirsin; onayı geri çekersen bu çerezleri sileriz.</p>
-      <p>Seçimin, bir daha sormamamız için tarayıcında saklanır (yerel depolama, kimseye gönderilmez).</p>
+      <p>Seçimin, bir daha sormamamız için tarayıcında saklanır (yerel depolama, kimseye gönderilmez). Aynı depolama, sayfanın altında seçtiğin dili de saklar; böylece site bir dahaki sefere o dilde açılır. Ülkendeki Pro fiyatını göstermek için her sayfa, bu siteyi zaten sunan Cloudflare’e hangi ülkeden ziyaret ettiğini sorar ya da tarayıcı dilinin bölgesini kullanır; bu yanıtı saklamaz.</p>
 
       <h2>Satın alımlar</h2>
       <p>Mando TV Pro’yu satın aldığında ödemeyi uygulama mağazası işler (App Store, Google Play veya Microsoft Store). Kart bilgilerini almayız ve saklamayız. Mağaza uygulamaya yalnızca satın alımın var olduğunu bildirir.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">14 Kasım 2026’dan beri geçerlidi
       <p>Bize <a href="mailto:hola@mandotv.app">hola@mandotv.app</a> adresinden yazdığında e-posta adresini ve bize anlattıklarını yalnızca sana yanıt vermek için kullanırız. Onları paylaşmayız ve reklam için kullanmayız. İstediğin zaman mesajlarının silinmesini isteyebilirsin.</p>
 
       <h2>Çocuklar</h2>
-      <p>Uygulama hiç kimseden, çocuklardan da, veri toplamaz.</p>
+      <p>Uygulama hiç kimseden, çocuklardan da, kişisel veri toplamaz.</p>
 
       <h2>Bu politikadaki değişiklikler</h2>
       <p>Bir gün uygulamanın verilerinle yaptığı şey değişirse, değişiklik uygulamaya ulaşmadan önce bu sayfayı ve yukarıdaki tarihi güncelleriz.</p>
@@ -708,7 +718,7 @@ GUIAS += [
       nota='Mando TV belirli bir uygulamayla karşılaştırılmıyor. Güncel fiyatlar her uygulamanın mağaza sayfasında yer alır.'),
     extra=[
       ('Mando TV’nin yapmadıkları', 'iPhone ve iPad’de seni Denetim Merkezi’ndeki Ekran Yansıtma’ya yönlendirir; bu, iPhone’un kendi özelliğidir ve AirPlay’li televizyonlarla çalışır. Windows’ta Yayınla’yı (Windows + K) açar ve Mando TV Pro, bilgisayar ekranını Wi-Fi’ın üzerinden LG, Samsung, Hisense ve Android TV televizyonlara gönderebilir (beta, birkaç saniye gecikmeli ve sessiz). Mando TV Pro ile ayrıca fotoğrafları ve videoları Wi-Fi’ın üzerinden TV’ne gönderebilir. Akıllı TV’leri ev Wi-Fi’ı üzerinden kontrol eder. Akıllı TV özelliği olmayan televizyonlar, kızılötesi vericisi olan bir Android telefondan kızılötesiyle kontrol edilebilir. Android 9’dan itibaren telefon, Google TV, Android TV ve Fire TV’ye Wi-Fi’a hiç gerek kalmadan Bluetooth klavye ve kumanda olarak da bağlanabilir. Bu seçenek betadadır ve ücretsizdir.'),
-      ('Mando TV nasıl para kazanır', 'Reklamla değil, verilerinle de değil: uygulama hiç veri toplamaz. Mando TV, ekstralar için isteğe bağlı tek seferlik bir satın alım olan Pro ile finanse edilir. Temel kumanda ücretsizdir.'),
+      ('Mando TV nasıl para kazanır', 'Reklamla değil, verilerinle de değil: uygulamada reklam yok ve seni izlemez. Mando TV, ekstralar için isteğe bağlı tek seferlik bir satın alım olan Pro ile finanse edilir. Temel kumanda ücretsizdir.'),
       ('Zaten sahip olduğun cihazlarda', 'iPhone, iPad ve Mac için App Store’dan, Windows bilgisayarlar için Microsoft Store’dan ve Android için Google Play’deki ücretsiz erken erişimden. Bkz. [iPhone kumanda uygulaması](@iphone) ve [Windows kumanda uygulaması](@windows).'),
       ('Gizlilik', 'Uygulamada hesap ve izleme yok. TV’yle iletişim yalnızca yerel ağda gerçekleşir, bağlantı verileri cihazında şifreli olarak kalır. Ayrıntılar [Gizlilik Politikası](@privacidad) sayfasında.'),
     ],

@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Hitta tv:n</h2>
 
 PRIVACIDAD = dict(
   titulo='Integritetspolicy | Mando TV',
-  desc='Mando TV samlar inte in några personuppgifter: inga konton, ingen reklam, inga spårare. Appen pratar bara med din tv i ditt wifi.',
+  desc='Mando TV ber inte om något konto eller några personuppgifter: ingen reklam, inga spårare. Fjärrkontrollen pratar direkt med din tv i ditt wifi.',
   h1='Integritet',
-  intro='Kort sagt: Mando TV samlar inte in dina uppgifter. Det finns inga konton, ingen reklam, inga spårare och inga egna servrar som sparar vad du gör.',
+  intro='Kort sagt: Mando TV ber inte om något konto eller några personuppgifter. Det finns ingen reklam och inga spårare.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Gäller från den 14 november 2026. Senast uppdaterad den 26 november 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Gäller från den 14 november 2026. Senast uppdaterad den 28 november 2026.</p>
 
       <h2>Vilka vi är</h2>
       <p>Mando TV är en app som låter dig styra tv:n från mobilen eller datorn. Den här policyn beskriver vilken information appen använder och vad den gör med den. Har du frågor, skriv till oss på <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Vilka uppgifter vi samlar in</h2>
-      <p>Appen: inga. Appen skickar varken information om dig eller om hur du använder den till oss eller till tredje part. Den använder inga verktyg för analys, reklam eller spårning.</p>
+      <p>Appen: bara det som behövs för den kostnadsfria Pro-provperioden på Android och Windows, förklarad i <a href="#prueba">Kostnadsfri Pro-provperiod</a>. Utöver det skickar appen varken information om dig eller om hur du använder den till oss eller till tredje part. Den använder inga verktyg för analys, reklam eller spårning.</p>
       <p>Den här webbplatsen: vi mäter besök på två sätt, som förklaras i avsnittet <a href="#cookies">Cookies på den här webbplatsen</a>.</p>
 
       <h2>Vad appen sparar på din enhet</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gäller från den 14 november 2026. 
         <li>Anslutningsnycklarna som varje tv lämnar när du godkänner tillståndet. De sparas krypterade i systemets säkra lagring (Nyckelringen på iPhone och Mac, Keystore på Android, skyddad lagring i Windows).</li>
         <li>Dina inställningar: ljust eller mörkt tema, bakgrundsfärg, vibration och typ av fjärrkontroll.</li>
         <li>Om du använder Pro-funktionerna: dina favoritappar, dina rutiner och dina senaste YouTube-sökningar (du kan radera dem i appen).</li>
+        <li>Om du använder dem: barnläget (PIN-koden sparas bara som en skyddad kod) och de fjärrkontroller som andra har delat med dig.</li>
       </ul>
-      <p>Om du raderar appen raderas allt det med den.</p>
+      <p>Om du raderar appen raderas dessa uppgifter med den, med två undantag. På Android kan appens inställningar (som din tv-lista och dina val) ligga kvar i din egen Google-säkerhetskopia om du använder Googles backup och komma tillbaka när du installerar appen igen; anslutningsnycklarna ingår aldrig. På iPhone och Mac finns anslutningsnycklarna i systemets Nyckelring och kan finnas kvar där efter att du har raderat appen.</p>
 
       <h2>Vem appen pratar med</h2>
       <p>Med dina tv-apparater, inom ditt wifi hemma. För att hitta dem söker appen igenom ditt lokala nätverk; därför ber den på en iPhone om behörigheten "Lokalt nätverk". Texten du skriver med appens tangentbord går direkt till tv:n och sparas inte.</p>
-      <p>Dessutom hämtar appen vid start en liten offentlig fil från den här webbplatsen (mandotv.app/app/config.json) för att ta reda på om det finns en ny version som du bör installera och vilka funktioner som ingår i Mando TV Pro. Det är en nedladdning, som när man öppnar en sida: appen skickar varken dina uppgifter, dina tv-apparater eller vad du gör. Den anger bara appversionen och systemet (till exempel Android), så att den kan visa rätt meddelande. Har du inget internet fortsätter appen med den senast nedladdade filen; går det mer än 30 dagar utan att den kunnat laddas ner ber appen dig att ansluta till internet en stund.</p>
+      <p>Dessutom hämtar appen vid start en liten offentlig fil från den här webbplatsen (mandotv.app/app/config.json) för att ta reda på om det finns en ny version som du bör installera och vilka funktioner som ingår i Mando TV Pro. Det är en nedladdning, som när man öppnar en sida: appen skickar varken dina uppgifter, dina tv-apparater eller vad du gör. Den anger bara appversionen och systemet (till exempel Android), så att den kan visa rätt meddelande. Har du inget internet fortsätter appen med den senast nedladdade filen; går det mer än 30 dagar utan att den kunnat laddas ner ber appen dig att ansluta till internet en stund. Som vid varje webbplatsbesök ser även vår webbplatsleverantör (Cloudflare) din IP-adress vid den nedladdningen.</p>
 
-      <p>När du skickar foton eller videor till tv:n (en Pro-funktion) hämtar tv:n bara de filer du väljer, direkt från din mobil eller dator via ditt wifi hemma. De går varken via internet eller via oss, appen ser inte dina övriga foton, och delningen upphör så fort du stänger den skärmen.</p>
+      <p>När du skickar foton eller videor till tv:n (en Pro-funktion) hämtar tv:n bara de filer du väljer, direkt från din mobil eller dator via ditt wifi hemma. De går varken via internet eller via oss, appen ser inte dina övriga foton, och delningen upphör så fort du stänger den skärmen. Inom ditt hemnätverk är den här överföringen inte krypterad.</p>
+      <p>Om du använder "Visa min skärm på tv:n" (en Pro-funktion) fångar appen din skärm bara medan du speglar, kodar den på din enhet och skickar den över ditt wifi hemma direkt till den tv du valt. Den går varken via internet eller via oss, inget spelas in eller sparas, och den slutar när du stoppar den eller stänger appen. Tv:n visar allt som syns på skärmen, även aviseringar, och inom ditt hemnätverk är strömmen inte krypterad.</p>
+      <h2 id="prueba">Kostnadsfri Pro-provperiod (Android och Windows)</h2>
+      <p>För att den kostnadsfria Pro-provperioden bara ska gälla en gång per enhet skickar appen, när den börjar, en enda gång två saker till vår server (api.mandotv.app, hos Cloudflare): ett krypterat fingeravtryck av det id som systemet ger appen på den enheten (på Android appens eget Android-id, på Windows enhetens id för våra appar) och hur länge din provperiod har pågått. Fingeravtrycket avslöjar varken vilken enhet det är eller vem du är, och servern krypterar det en gång till med sin egen nyckel innan det sparas.</p>
+      <p>Vi sparar bara det fingeravtrycket, datumet då provperioden startade och om det är Android eller Windows. Vi sparar inte din IP-adress (Cloudflare ser den medan den svarar, som vid vilken anslutning som helst). Vi använder det bara för att en ominstallation av appen inte ska ge en ny provperiod. Det är bedrägeriförebyggande och vårt berättigade intresse; aldrig för reklam eller för att följa dig, och vi delar det inte med någon. Varje post raderas automatiskt efter 24 månader. Har du inget internet fungerar provperioden ändå. På iPhone och Mac skickas ingenting: App Store sköter provperioden.</p>
+
       <h2>Mikrofon och röst</h2>
-      <p>På iPhone, Mac och Android använder röstsökningen mikrofonen bara medan du trycker på talknappen. Det du säger omvandlas till text av systemets taligenkänning: av Apple på iPhone och Mac och av Google på Android, enligt deras egna integritetsvillkor. I Windows känns talet igen på din egen dator och lämnar inte enheten; bara på mycket gamla processorer använder appen röstinmatningen i Windows, från Microsoft, enligt deras integritetsvillkor. I Windows öppnas mikrofonen när du öppnar röstpanelen och stängs när du stänger den, eller efter 30 sekunder utan användning; medan du inte talar spelas och sparas ingenting. Mando TV spelar varken in eller sparar ljudet, och den text som uppstår går direkt till din tv, precis som det du skriver med tangentbordet.</p>
+      <p>På iPhone, Mac och Android använder röstsökningen mikrofonen bara medan du trycker på talknappen. Det du säger omvandlas till text av systemets taligenkänning: av Apple på iPhone och Mac och av Google på Android, enligt deras egna integritetsvillkor. I Windows känns talet igen på din egen dator och lämnar den inte. Bara om den motorn på enheten inte kan starta eller hela tiden misslyckas (till exempel med en gammal processor eller utan talmodell) använder appen Windows röstinmatning, från Microsoft, som fungerar online om du har slagit på taligenkänning online i Windows, enligt Microsofts integritetspolicy. I Windows öppnas mikrofonen när du öppnar röstpanelen och stängs när du stänger den, eller efter 30 sekunder utan användning; medan du inte talar spelas och sparas ingenting. Mando TV spelar varken in eller sparar ljudet, och den text som uppstår går direkt till din tv, precis som det du skriver med tangentbordet.</p>
 
       <h2>Hem: enheter från Apple Home och Google Home</h2>
       <p>När du öppnar området Hem (under test) ber appen om tillstånd att se de enheter du redan har i Apples Hem-app (HomeKit) eller i Google Home. Med det tillståndet läser den deras namn, deras rum och deras status (på eller av, ljusstyrka, temperatur eller var i sitt program en hushållsapparat befinner sig) för att visa dem och skicka dem det du trycker på. Allt sker mellan din mobil och Apples eller Googles system: Mando TV sparar inte den listan, skickar den varken till oss eller till tredje part och använder den varken för reklam eller analys. På Android fungerar Google Home med ditt eget Google-konto, enligt Googles integritetspolicy. Du kan när som helst dra tillbaka tillståndet: på iPhone under Inställningar &gt; Integritet och säkerhet &gt; HomeKit, på Android i inställningarna för ditt Google-konto.</p>
       <p>När du trycker på "Hur fungerade Hem för dig?" öppnas din mejlapp med ett meddelande till hola@mandotv.app som innehåller en teknisk sammanfattning: appens version, systemet och hur många enheter av varje slag som dök upp och om de svarar. Namn på enheter, rum eller ditt hem ingår inte, och meddelandet skickas bara om du själv skickar det.</p>
 
+      <h2>Länkar och texter du delar</h2>
+      <p>När du delar en fjärrkontroll (en länk mandotv.app/m/) innehåller länken fjärrkontrollens utseende och en ledtråd för att hitta din tv: namn, märke, modell och adress i ditt nätverk. Den innehåller aldrig anslutningsnycklar, PIN-koder eller tv:ns hårdvaruadress. Uppgifterna ligger efter #-tecknet och når därför aldrig våra servrar, men alla du skickar länken till, till exempel via WhatsApp, kan läsa dem. En delad rutin (en länk mandotv.app/r/) innehåller bara namn och steg.</p>
+      <p>Säkerhetskopieringstexten som du kan kopiera i appens inställningar innehåller dina favoriter, rutiner och inställningar. Den är inte krypterad och går bara dit du klistrar in den.</p>
+
       <h2>Testrapport</h2>
-      <p>Appen har en knapp "Kopiera testrapport" som hjälper oss att åtgärda fel. Rapporten finns bara i appens minne så länge den är öppen och skickas aldrig av sig själv: du bestämmer om du kopierar och delar den. Den innehåller inga anslutningsnycklar, inga kopplingskoder och inget du skriver; bara de steg appen har utfört, som sökningar, anslutningar och felen.</p>
+      <p>Appen har en knapp "Kopiera testrapport" som hjälper oss att åtgärda fel. Rapporten finns bara i appens minne så länge den är öppen och skickas aldrig av sig själv: du bestämmer om du kopierar och delar den. Den innehåller inga anslutningsnycklar, parkopplingskoder eller något du skriver. Den innehåller däremot stegen som appen tog, som sökning, anslutning och fel, och tekniska uppgifter: appens version, ditt system samt märke, modell och adress i ditt nätverk för din tv.</p>
 
       <h2 id="cookies">Cookies på den här webbplatsen</h2>
       <p>Det här gäller bara webbplatsen mandotv.app, inte appen.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gäller från den 14 november 2026. 
       <h3>Med cookies, bara om du samtycker</h3>
       <p>Om du trycker på "Acceptera" i cookiemeddelandet aktiverar vi Google Analytics (från Google LLC) för att bättre förstå hur webbplatsen används: sidvisningar, besökstid, typ av enhet, ungefärlig stad och varifrån du kommer. För det sparar den cookies som _ga och _ga_* i upp till 2 år i din webbläsare. Google kan behandla de här uppgifterna på servrar utanför Chile. Vi har stängt av reklamfunktionerna och Google Signals och använder inte de här uppgifterna för att visa dig reklam.</p>
       <p>Om du trycker på "Avvisa" eller inte väljer något laddas inte Google Analytics och ingen cookie sparas. Du kan ändra ditt val när som helst med knappen "Cookies" längst ner på varje sida; om du drar tillbaka samtycket raderar vi de här cookies.</p>
-      <p>Ditt val sparas i din webbläsare (lokal lagring, skickas inte till någon) så att vi inte frågar dig igen.</p>
+      <p>Ditt val sparas i din webbläsare (lokal lagring, skickas inte till någon) så att vi inte frågar dig igen. Samma lagring sparar språket du väljer längst ned på sidan, så att webbplatsen öppnas på det nästa gång. För att visa Pro-priset i ditt land frågar varje sida Cloudflare, som redan levererar den här webbplatsen, från vilket land du besöker oss, eller använder regionen i webbläsarens språk; svaret sparas inte.</p>
 
       <h2>Köp</h2>
       <p>När du köper Mando TV Pro hanteras betalningen av appbutiken (App Store, Google Play eller Microsoft Store). Vi tar inte emot och sparar inte dina kortuppgifter. Butiken bekräftar bara för appen att köpet finns.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gäller från den 14 november 2026. 
       <p>När du skriver till oss på <a href="mailto:hola@mandotv.app">hola@mandotv.app</a> använder vi din e-postadress och det du berättar bara för att svara dig. Vi lämnar inte ut dem och använder dem inte för reklam. Du kan när som helst begära att vi raderar dina meddelanden.</p>
 
       <h2>Barn</h2>
-      <p>Appen samlar inte in uppgifter från någon, inte heller från barn.</p>
+      <p>Appen samlar inte in personuppgifter från någon, inte heller från barn.</p>
 
       <h2>Ändringar i den här policyn</h2>
       <p>Om det en dag ändras vad appen gör med dina uppgifter uppdaterar vi den här sidan och datumet ovan innan ändringen når appen.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV jämförs inte med någon särskild app. De aktuella priserna står på butikssidan för respektive app.'),
     extra=[
       ('Vad Mando TV inte gör', 'På iPhone och iPad leder den dig till skärmsynkronisering i Kontrollcenter, iPhones egen funktion, som fungerar med tv med AirPlay. I Windows öppnar den Casta (Windows + K), och Mando TV Pro kan skicka datorns skärm via ditt wifi till tv från LG, Samsung, Hisense och Android TV (beta, med några sekunders fördröjning och utan ljud). Med Mando TV Pro kan den dessutom skicka foton och videor till tv:n via ditt wifi. Den styr smarta tv via hemmets wifi. Tv utan smart-funktion kan styras med infrarött från en Android-mobil med infraröd sändare. Från Android 9 kan mobilen också ansluta via Bluetooth som tangentbord och fjärrkontroll till Google TV, Android TV och Fire TV, helt utan wifi. Det alternativet finns i betan och är gratis.'),
-      ('Hur Mando TV tjänar pengar', 'Inte på reklam och inte på dina uppgifter: appen samlar inte in några. Mando TV finansieras av Pro, ett valfritt engångsköp för extrafunktioner. Den grundläggande fjärrkontrollen är gratis.'),
+      ('Hur Mando TV tjänar pengar', 'Inte på reklam och inte på dina uppgifter: appen har ingen reklam och spårar dig inte. Mando TV finansieras av Pro, ett valfritt engångsköp för extrafunktioner. Den grundläggande fjärrkontrollen är gratis.'),
       ('På de enheter du redan har', 'iPhone, iPad och Mac från App Store, Windows-datorer från Microsoft Store och Android via gratis tidig åtkomst i Google Play. Se [Fjärrkontrollsapp för iPhone](@iphone) och [Fjärrkontrollsapp för Windows](@windows).'),
       ('Integritet', 'Inget konto och ingen spårning i appen. Kommunikationen med tv:n sker bara i det lokala nätverket, anslutningsuppgifterna ligger krypterade kvar på din enhet. Detaljer finns i [integritetspolicyn](@privacidad).'),
     ],

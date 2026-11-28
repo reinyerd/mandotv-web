@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Znajdowanie telewizora</h2>
 
 PRIVACIDAD = dict(
   titulo='Polityka prywatności | Mando TV',
-  desc='Mando TV nie zbiera danych osobowych: bez kont, bez reklam, bez trackerów. Aplikacja rozmawia tylko z Twoim telewizorem w Twojej sieci Wi-Fi.',
+  desc='Mando TV nie wymaga konta ani danych osobowych: bez reklam, bez trackerów. Pilot rozmawia bezpośrednio z Twoim telewizorem w Twojej sieci Wi-Fi.',
   h1='Prywatność',
-  intro='Krótko: Mando TV nie zbiera Twoich danych. Nie ma kont, reklam, trackerów ani własnych serwerów, które zapisywałyby, co robisz.',
+  intro='Krótko: Mando TV nie wymaga konta ani danych osobowych. Nie ma reklam ani trackerów.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Obowiązuje od 14 listopada 2026. Ostatnia aktualizacja: 26 listopada 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Obowiązuje od 14 listopada 2026. Ostatnia aktualizacja: 28 listopada 2026.</p>
 
       <h2>Kim jesteśmy</h2>
       <p>Mando TV to aplikacja, która pozwala sterować telewizorem z telefonu lub komputera. Ta polityka opisuje, jakich informacji używa aplikacja i co z nimi robi. W razie pytań napisz do nas na <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Jakie dane zbieramy</h2>
-      <p>Aplikacja: żadnych. Aplikacja nie wysyła nam ani osobom trzecim żadnych informacji o Tobie ani o tym, jak z niej korzystasz. Nie używa narzędzi analitycznych, reklamowych ani śledzących.</p>
+      <p>Aplikacja: tylko to, co potrzebne do bezpłatnego okresu próbnego Pro na Androidzie i w Windowsie, opisane w sekcji <a href="#prueba">Bezpłatny okres próbny Pro</a>. Poza tym aplikacja nie wysyła nam ani osobom trzecim żadnych informacji o Tobie ani o tym, jak z niej korzystasz. Nie używa narzędzi analitycznych, reklamowych ani śledzących.</p>
       <p>Ta strona internetowa: mierzymy odwiedziny na dwa sposoby, opisane w sekcji <a href="#cookies">Pliki cookie na tej stronie</a>.</p>
 
       <h2>Co aplikacja zapisuje na Twoim urządzeniu</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Obowiązuje od 14 listopada 2026. Os
         <li>Klucze połączenia, które przekazuje każdy telewizor po potwierdzeniu zgody. Są zapisywane w zaszyfrowanej postaci w bezpiecznej pamięci systemu (Pęk kluczy na iPhone i Mac, Keystore na Androidzie, chroniona pamięć w Windows).</li>
         <li>Twoje ustawienia: jasny lub ciemny motyw, kolor tła, wibracja i rodzaj pilota.</li>
         <li>Jeśli korzystasz z funkcji Pro: ulubione aplikacje, rutyny i ostatnie wyszukiwania w YouTube (możesz je usunąć w aplikacji).</li>
+        <li>Jeśli z nich korzystasz: tryb dziecięcy (PIN jest przechowywany tylko jako chroniony kod) oraz piloty, które inne osoby ci udostępniły.</li>
       </ul>
-      <p>Gdy usuniesz aplikację, wszystko to zostaje usunięte razem z nią.</p>
+      <p>Gdy usuniesz aplikację, te dane zostają usunięte razem z nią, z dwoma wyjątkami. Na Androidzie ustawienia aplikacji (takie jak lista telewizorów i twoje wybory) mogą zostać w twojej własnej kopii zapasowej Google, jeśli korzystasz z kopii Google, i wrócić po ponownej instalacji aplikacji; klucze połączenia nigdy w niej nie są. Na iPhonie i Macu klucze połączenia są w Pęku kluczy systemu i mogą tam zostać po usunięciu aplikacji.</p>
 
       <h2>Z kim rozmawia aplikacja</h2>
       <p>Z Twoimi telewizorami, w Twojej domowej sieci Wi-Fi. Żeby je znaleźć, aplikacja przeszukuje Twoją sieć lokalną; dlatego na iPhone prosi o uprawnienie „Sieć lokalna”. Tekst, który wpisujesz na klawiaturze aplikacji, trafia bezpośrednio do telewizora i nie jest zapisywany.</p>
-      <p>Poza tym przy otwarciu aplikacja pobiera z tej strony mały publiczny plik (mandotv.app/app/config.json), żeby dowiedzieć się, czy jest nowa wersja, którą warto zainstalować, i które funkcje należą do Mando TV Pro. To zwykłe pobranie, jak przy otwarciu strony: aplikacja nie wysyła Twoich danych, telewizorów ani tego, co robisz. Podaje tylko wersję aplikacji i system (na przykład Android), żeby mogła pokazać odpowiedni komunikat. Jeśli nie masz internetu, aplikacja działa dalej z ostatnim pobranym plikiem; jeśli minie ponad 30 dni bez możliwości pobrania, aplikacja poprosi Cię o krótkie połączenie z internetem.</p>
+      <p>Poza tym przy otwarciu aplikacja pobiera z tej strony mały publiczny plik (mandotv.app/app/config.json), żeby dowiedzieć się, czy jest nowa wersja, którą warto zainstalować, i które funkcje należą do Mando TV Pro. To zwykłe pobranie, jak przy otwarciu strony: aplikacja nie wysyła Twoich danych, telewizorów ani tego, co robisz. Podaje tylko wersję aplikacji i system (na przykład Android), żeby mogła pokazać odpowiedni komunikat. Jeśli nie masz internetu, aplikacja działa dalej z ostatnim pobranym plikiem; jeśli minie ponad 30 dni bez możliwości pobrania, aplikacja poprosi Cię o krótkie połączenie z internetem. Jak przy każdej wizycie na stronie internetowej, przy tym pobieraniu nasz dostawca strony (Cloudflare) widzi też twój adres IP.</p>
 
-      <p>Gdy wysyłasz zdjęcia lub filmy do telewizora (funkcja Pro), telewizor pobiera tylko pliki, które wybierzesz, bezpośrednio z Twojego telefonu lub komputera przez domową sieć Wi-Fi. Nie przechodzą przez internet ani przez nas, aplikacja nie widzi pozostałych Twoich zdjęć, a udostępnianie kończy się, gdy zamkniesz ten ekran.</p>
+      <p>Gdy wysyłasz zdjęcia lub filmy do telewizora (funkcja Pro), telewizor pobiera tylko pliki, które wybierzesz, bezpośrednio z Twojego telefonu lub komputera przez domową sieć Wi-Fi. Nie przechodzą przez internet ani przez nas, aplikacja nie widzi pozostałych Twoich zdjęć, a udostępnianie kończy się, gdy zamkniesz ten ekran. W twojej sieci domowej to przesyłanie nie jest szyfrowane.</p>
+      <p>Jeśli korzystasz z funkcji „Pokaż mój ekran na telewizorze“ (funkcja Pro), aplikacja przechwytuje ekran tylko podczas duplikowania, koduje go na twoim urządzeniu i wysyła przez twoje domowe Wi-Fi bezpośrednio do wybranego telewizora. Nie przechodzi przez internet ani przez nas, nic nie jest nagrywane ani zapisywane, a duplikowanie kończy się, gdy je zatrzymasz lub zamkniesz aplikację. Telewizor pokazuje wszystko, co pojawia się na tym ekranie, także powiadomienia, a w twojej sieci domowej strumień nie jest szyfrowany.</p>
+      <h2 id="prueba">Bezpłatny okres próbny Pro (Android i Windows)</h2>
+      <p>Aby bezpłatny okres próbny Pro był jeden na urządzenie, po jego rozpoczęciu aplikacja jednorazowo wysyła na nasz serwer (api.mandotv.app, w Cloudflare) dwie rzeczy: zaszyfrowany odcisk identyfikatora, który system nadaje aplikacji na tym urządzeniu (w Androidzie jest to własny identyfikator Android aplikacji, w Windowsie identyfikator urządzenia dla naszych aplikacji), oraz informację, jak długo trwa Twój okres próbny. Odcisk nie pozwala ustalić, które to urządzenie ani kim jesteś, a serwer szyfruje go jeszcze raz własnym kluczem, zanim go zapisze.</p>
+      <p>Zapisujemy tylko ten odcisk, datę rozpoczęcia okresu próbnego oraz informację, czy to Android, czy Windows. Nie zapisujemy Twojego adresu IP (Cloudflare widzi go podczas odpowiadania, jak przy każdym połączeniu). Używamy tego wyłącznie po to, by ponowna instalacja aplikacji nie dawała kolejnego okresu próbnego, czyli do zapobiegania nadużyciom, co jest naszym uzasadnionym interesem; nigdy do reklam ani do śledzenia Cię, i nikomu tego nie udostępniamy. Każdy wpis jest automatycznie usuwany po 24 miesiącach. Bez internetu okres próbny i tak działa. Na iPhonie i Macu nic nie jest wysyłane: okresem próbnym zajmuje się App Store.</p>
+
       <h2>Mikrofon i głos</h2>
-      <p>Na iPhonie, Macu i Androidzie wyszukiwanie głosowe używa mikrofonu tylko wtedy, gdy trzymasz przycisk mówienia. To, co mówisz, zamienia na tekst rozpoznawanie mowy Twojego systemu: Apple na iPhone i Mac oraz Google na Androidzie, każde według własnej polityki prywatności. W Windows mowa jest rozpoznawana na Twoim własnym komputerze i nie opuszcza urządzenia; tylko w bardzo starych procesorach aplikacja używa pisania głosowego Windows, firmy Microsoft, według jej polityki prywatności. W Windows mikrofon włącza się po otwarciu panelu głosowego i wyłącza po jego zamknięciu albo po 30 sekundach bez użycia; gdy nie mówisz, nic nie jest nagrywane ani zapisywane. Mando TV nie nagrywa ani nie zapisuje dźwięku, a powstały tekst trafia bezpośrednio do Twojego telewizora, tak samo jak to, co wpisujesz na klawiaturze.</p>
+      <p>Na iPhonie, Macu i Androidzie wyszukiwanie głosowe używa mikrofonu tylko wtedy, gdy trzymasz przycisk mówienia. To, co mówisz, zamienia na tekst rozpoznawanie mowy Twojego systemu: Apple na iPhone i Mac oraz Google na Androidzie, każde według własnej polityki prywatności. W Windows mowa jest rozpoznawana na twoim własnym komputerze i nie opuszcza go. Tylko jeśli ten mechanizm na urządzeniu nie może się uruchomić lub ciągle zawodzi (na przykład przez stary procesor albo brak modelu mowy), aplikacja używa dyktowania Windows, od Microsoftu, które działa online, jeśli w Windows jest włączone rozpoznawanie mowy online, zgodnie z polityką prywatności Microsoftu. W Windows mikrofon włącza się po otwarciu panelu głosowego i wyłącza po jego zamknięciu albo po 30 sekundach bez użycia; gdy nie mówisz, nic nie jest nagrywane ani zapisywane. Mando TV nie nagrywa ani nie zapisuje dźwięku, a powstały tekst trafia bezpośrednio do Twojego telewizora, tak samo jak to, co wpisujesz na klawiaturze.</p>
 
       <h2>Dom: urządzenia z Apple Home i Google Home</h2>
       <p>Gdy otworzysz sekcję Dom (w fazie testów), aplikacja poprosi o zgodę na wyświetlanie urządzeń, które masz już w aplikacji Dom Apple (HomeKit) lub w Google Home. Dzięki tej zgodzie odczytuje ich nazwę, pomieszczenie i stan (włączone lub wyłączone, jasność, temperatura albo moment programu, w którym jest sprzęt AGD), żeby je pokazać i wysyłać im to, co stukniesz. Wszystko dzieje się między Twoim telefonem a systemem Apple lub Google: Mando TV nie zapisuje tej listy, nie wysyła jej ani nam, ani osobom trzecim i nie używa jej do reklam ani analiz. Na Androidzie Google Home działa z Twoim własnym kontem Google, według polityki prywatności Google. Zgodę możesz wycofać w dowolnym momencie: na iPhone w Ustawienia &gt; Prywatność i ochrona &gt; HomeKit, na Androidzie w ustawieniach konta Google.</p>
       <p>Gdy stukniesz „Jak Dom działał u Ciebie?”, otworzy się Twoja aplikacja poczty z wiadomością do hola@mandotv.app, która zawiera techniczne podsumowanie: wersję aplikacji, system oraz ile urządzeń każdego rodzaju się pojawiło i czy reagują. Nie ma w niej nazw urządzeń, pomieszczeń ani Twojego domu, a wiadomość zostanie wysłana tylko wtedy, gdy sam ją wyślesz.</p>
 
+      <h2>Linki i teksty, które udostępniasz</h2>
+      <p>Gdy udostępniasz pilota (link mandotv.app/m/), link zawiera wygląd pilota i wskazówkę, jak znaleźć twój telewizor: jego nazwę, markę, model i adres w twojej sieci. Nigdy nie zawiera kluczy połączenia, kodów PIN ani adresu sprzętowego telewizora. Te informacje są po znaku #, więc nigdy nie trafiają na nasze serwery, ale każdy, komu wyślesz link, na przykład przez WhatsApp, może je przeczytać. Udostępniona rutyna (link mandotv.app/r/) zawiera tylko nazwę i kroki.</p>
+      <p>Tekst kopii zapasowej, który możesz skopiować w ustawieniach aplikacji, zawiera twoje ulubione, rutyny i ustawienia. Nie jest szyfrowany i trafia tylko tam, gdzie go wkleisz.</p>
+
       <h2>Raport testowy</h2>
-      <p>Aplikacja ma przycisk „Kopiuj raport testowy”, który pomaga nam naprawiać błędy. Raport zostaje tylko w pamięci aplikacji, dopóki jest otwarta, i nigdy nie jest wysyłany automatycznie: to Ty decydujesz, czy go skopiujesz i komuś przekażesz. Nie zawiera kluczy połączenia, kodów parowania ani niczego, co wpisujesz; tylko kroki, które wykonała aplikacja, takie jak wyszukiwanie, łączenie i błędy.</p>
+      <p>Aplikacja ma przycisk „Kopiuj raport testowy”, który pomaga nam naprawiać błędy. Raport zostaje tylko w pamięci aplikacji, dopóki jest otwarta, i nigdy nie jest wysyłany automatycznie: to Ty decydujesz, czy go skopiujesz i komuś przekażesz. Nie zawiera kluczy połączenia, kodów parowania ani niczego, co wpisujesz. Zawiera za to kroki wykonane przez aplikację, takie jak wyszukiwanie, łączenie i błędy, oraz dane techniczne: wersję aplikacji, twój system oraz markę, model i adres twojego telewizora w twojej sieci.</p>
 
       <h2 id="cookies">Pliki cookie na tej stronie</h2>
       <p>Dotyczy to tylko strony mandotv.app, a nie aplikacji.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Obowiązuje od 14 listopada 2026. Os
       <h3>Z plikami cookie, tylko jeśli się zgodzisz</h3>
       <p>Jeśli w komunikacie o plikach cookie stukniesz „Akceptuj”, włączymy Google Analytics (firmy Google LLC), żeby lepiej rozumieć, jak strona jest używana: wyświetlenia stron, czas wizyty, typ urządzenia, przybliżone miasto i skąd przychodzisz. W tym celu zapisuje w Twojej przeglądarce pliki cookie _ga i _ga_* na okres do 2 lat. Google może przetwarzać te dane na serwerach poza Chile. Wyłączyliśmy funkcje reklamowe i Google Signals i nie używamy tych danych do wyświetlania Ci reklam.</p>
       <p>Jeśli stukniesz „Odrzuć” albo nic nie wybierzesz, Google Analytics nie zostanie załadowane i nie zostanie zapisany żaden plik cookie. Swoją decyzję możesz zmienić w dowolnym momencie przyciskiem „Cookies” na dole każdej strony; jeśli wycofasz zgodę, usuniemy te pliki cookie.</p>
-      <p>Twój wybór jest zapisywany w Twojej przeglądarce (pamięć lokalna, nikomu nie wysyłana), żebyśmy nie pytali Cię ponownie.</p>
+      <p>Twój wybór jest zapisywany w Twojej przeglądarce (pamięć lokalna, nikomu nie wysyłana), żebyśmy nie pytali Cię ponownie. To samo miejsce przechowuje język, który wybierzesz na dole strony, aby następnym razem witryna otworzyła się w nim. Aby pokazać cenę Pro w twoim kraju, każda strona pyta Cloudflare, który już obsługuje tę witrynę, z jakiego kraju ją odwiedzasz, albo używa regionu języka przeglądarki; tej odpowiedzi nie zapisuje.</p>
 
       <h2>Zakupy</h2>
       <p>Gdy kupujesz Mando TV Pro, płatność obsługuje sklep z aplikacjami (App Store, Google Play lub Microsoft Store). Nie otrzymujemy ani nie zapisujemy danych Twojej karty. Sklep tylko potwierdza aplikacji, że zakup istnieje.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Obowiązuje od 14 listopada 2026. Os
       <p>Gdy piszesz do nas na <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, używamy Twojego adresu e-mail i tego, co nam przekazujesz, wyłącznie po to, żeby Ci odpowiedzieć. Nie przekazujemy tego dalej ani nie używamy do reklam. W każdej chwili możesz zażądać usunięcia Twoich wiadomości.</p>
 
       <h2>Dzieci</h2>
-      <p>Aplikacja nie zbiera danych od nikogo, także od dzieci.</p>
+      <p>Aplikacja nie zbiera danych osobowych od nikogo, także od dzieci.</p>
 
       <h2>Zmiany tej polityki</h2>
       <p>Jeśli kiedyś zmieni się to, co aplikacja robi z Twoimi danymi, zaktualizujemy tę stronę i datę powyżej, zanim zmiana dotrze do aplikacji.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV nie jest porównywane z żadną konkretną aplikacją. Aktualne ceny są na stronie danej aplikacji w sklepie.'),
     extra=[
       ('Czego Mando TV nie robi', 'Na iPhone i iPad kieruje Cię do Powielania ekranu w Centrum sterowania, czyli funkcji samego iPhone, która działa z telewizorami z AirPlay. W Windows otwiera funkcję Prześlij (Windows + K), a Mando TV Pro może wysyłać ekran komputera przez Twoje Wi-Fi na telewizory LG, Samsung, Hisense i Android TV (beta, z kilkusekundowym opóźnieniem i bez dźwięku). Z Mando TV Pro może też wysyłać zdjęcia i filmy na telewizor przez Twoje Wi-Fi. Steruje smart TV przez domowe Wi-Fi. Telewizory bez funkcji smart TV można sterować podczerwienią z telefonu z Androidem z nadajnikiem podczerwieni. Od Androida 9 telefon może też połączyć się przez Bluetooth jako klawiatura i pilot z Google TV, Android TV i Fire TV, zupełnie bez Wi-Fi. Ta opcja jest w wersji beta i za darmo.'),
-      ('Jak Mando TV zarabia', 'Nie na reklamach i nie na Twoich danych: aplikacja żadnych nie zbiera. Mando TV utrzymuje się z Pro, opcjonalnego jednorazowego zakupu z dodatkami. Podstawowy pilot jest darmowy.'),
+      ('Jak Mando TV zarabia', 'Nie na reklamach i nie na Twoich danych: aplikacja nie ma reklam i Cię nie śledzi. Mando TV utrzymuje się z Pro, opcjonalnego jednorazowego zakupu z dodatkami. Podstawowy pilot jest darmowy.'),
       ('Na urządzeniach, które już masz', 'iPhone, iPad i Mac z App Store, komputery z Windows z Microsoft Store i Android przez darmowy wczesny dostęp w Google Play. Zobacz [Aplikacja pilot na iPhone](@iphone) i [Aplikacja pilot na Windows](@windows).'),
       ('Prywatność', 'Bez konta i bez śledzenia w aplikacji. Komunikacja z telewizorem odbywa się tylko w sieci lokalnej, a dane połączenia zostają zaszyfrowane na Twoim urządzeniu. Szczegóły w [Polityce prywatności](@privacidad).'),
     ],

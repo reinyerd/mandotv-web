@@ -180,7 +180,7 @@ GUIAS_EEUU = [
     ],
     extra=[
       ('Works with these TVs', 'LG webOS, Samsung Tizen (2016 and newer), Roku TV and Roku players, Google TV and Android TV, and Fire TV. The brand pages are [Samsung](/samsung-tv-remote/), [LG](/lg-tv-remote/), [Roku](/roku-remote/) and [Android TV](/android-tv-remote/).'),
-      ('Why it asks for Local Network', 'iPhone blocks apps from seeing devices on your home network unless you allow it. If the TV is missing from the list, open Settings, Mando TV and turn on Local Network. The app only talks to your TV inside your home network.'),
+      ('Why it asks for Local Network', 'iPhone blocks apps from seeing devices on your home network unless you allow it. If the TV is missing from the list, open Settings, Mando TV and turn on Local Network. The remote talks to your TV directly inside your home network.'),
       ('Why an iPhone and not the TV maker\'s app', 'Each TV brand has its own app, and each wants its own setup or account. Mando TV is one app for all of them, with no account.'),
       ('Free and Pro on iPhone', FREE_PRO + ' Pro is bought once inside the app, with no subscription.'),
     ],

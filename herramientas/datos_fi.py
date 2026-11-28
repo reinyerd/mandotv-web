@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Television löytäminen</h2>
 
 PRIVACIDAD = dict(
   titulo='Tietosuojaseloste | Mando TV',
-  desc='Mando TV ei kerää henkilötietoja: ei tilejä, ei mainoksia, ei seurantaa. Sovellus puhuu vain televisiosi kanssa wifisi sisällä.',
+  desc='Mando TV ei pyydä tiliä eikä henkilötietoja: ei mainoksia, ei seurantaa. Kaukosäädin puhuu suoraan televisiosi kanssa wifisi sisällä.',
   h1='Tietosuoja',
-  intro='Lyhyesti: Mando TV ei kerää tietojasi. Ei ole tilejä, mainoksia, seurantaa eikä omia palvelimia, jotka tallentaisivat, mitä teet.',
+  intro='Lyhyesti: Mando TV ei pyydä tiliä eikä henkilötietoja. Ei ole mainoksia eikä seurantaa.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen. Päivitetty viimeksi 26. marraskuuta 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen. Päivitetty viimeksi 28. marraskuuta 2026.</p>
 
       <h2>Keitä olemme</h2>
       <p>Mando TV on sovellus, jolla ohjaat televisiotasi puhelimellasi tai tietokoneellasi. Tässä selosteessa kerrotaan, mitä tietoja sovellus käyttää ja mitä se niillä tekee. Jos sinulla on kysyttävää, kirjoita meille osoitteeseen <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Mitä tietoja keräämme</h2>
-      <p>Sovellus: ei mitään. Sovellus ei lähetä meille eikä kolmansille osapuolille tietoja sinusta tai siitä, miten käytät sitä. Se ei käytä analytiikka-, mainonta- tai seurantatyökaluja.</p>
+      <p>Sovellus: vain se, mitä Androidin ja Windowsin ilmaiseen Pro-kokeilujaksoon tarvitaan, kuvattu kohdassa <a href="#prueba">Ilmainen Pro-kokeilujakso</a>. Sen lisäksi sovellus ei lähetä meille eikä kolmansille osapuolille tietoja sinusta tai siitä, miten käytät sitä. Se ei käytä analytiikka-, mainonta- tai seurantatyökaluja.</p>
       <p>Tämä verkkosivusto: mittaamme käyntejä kahdella tavalla, jotka selitetään kohdassa <a href="#cookies">Evästeet tällä verkkosivustolla</a>.</p>
 
       <h2>Mitä sovellus tallentaa laitteellesi</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen
         <li>Yhteysavaimet, jotka kukin televisio antaa, kun vahvistat luvan. Ne tallennetaan salattuina järjestelmän suojattuun tallennustilaan (iPhonen ja Macin avainnippu, Androidin Keystore, Windowsin suojattu tallennustila).</li>
         <li>Asetuksesi: vaalea tai tumma teema, taustaväri, värinä ja kaukosäätimen tyyppi.</li>
         <li>Jos käytät Pro-ominaisuuksia: suosikkisovelluksesi, rutiinisi ja viimeisimmät YouTube-hakusi (voit poistaa ne sovelluksessa).</li>
+        <li>Jos käytät niitä: lapsitila (PIN-koodi tallennetaan vain suojattuna koodina) ja kaukosäätimet, jotka muut ovat jakaneet sinulle.</li>
       </ul>
-      <p>Kun poistat sovelluksen, kaikki tämä poistuu sen mukana.</p>
+      <p>Kun poistat sovelluksen, nämä tiedot poistuvat sen mukana, kahta poikkeusta lukuun ottamatta. Androidissa sovelluksen asetukset (kuten televisioluettelosi ja valintasi) voivat jäädä omaan Google-varmuuskopioosi, jos käytät Googlen varmuuskopiointia, ja palata, kun asennat sovelluksen uudelleen; yhteysavaimet eivät koskaan kuulu siihen. iPhonessa ja Macissa yhteysavaimet säilyvät järjestelmän avainnipussa ja voivat jäädä sinne sovelluksen poistamisen jälkeen.</p>
 
       <h2>Kenen kanssa sovellus puhuu</h2>
       <p>Televisioidesi kanssa, kotisi wifin sisällä. Löytääkseen ne sovellus hakee paikallisesta verkostasi; siksi se pyytää iPhonella ”Lähiverkko”-lupaa. Teksti, jonka kirjoitat sovelluksen näppäimistöllä, menee suoraan televisioon eikä sitä tallenneta.</p>
-      <p>Lisäksi sovellus lataa avattaessa pienen julkisen tiedoston tältä verkkosivustolta (mandotv.app/app/config.json) saadakseen selville, onko olemassa uusi versio, jonka kannattaa asentaa, ja mitkä ominaisuudet kuuluvat Mando TV Pro -versioon. Se on lataus kuten sivun avaaminen: sovellus ei lähetä tietojasi, televisioitasi eikä sitä, mitä teet. Se ilmoittaa vain sovelluksen version ja järjestelmän (esimerkiksi Android), jotta se voi näyttää sinulle oikean ilmoituksen. Jos sinulla ei ole internetiä, sovellus jatkaa viimeksi ladatulla tiedostolla; jos kuluu yli 30 päivää ilman, että tiedostoa on voitu ladata, sovellus pyytää sinua yhdistämään hetkeksi internetiin.</p>
+      <p>Lisäksi sovellus lataa avattaessa pienen julkisen tiedoston tältä verkkosivustolta (mandotv.app/app/config.json) saadakseen selville, onko olemassa uusi versio, jonka kannattaa asentaa, ja mitkä ominaisuudet kuuluvat Mando TV Pro -versioon. Se on lataus kuten sivun avaaminen: sovellus ei lähetä tietojasi, televisioitasi eikä sitä, mitä teet. Se ilmoittaa vain sovelluksen version ja järjestelmän (esimerkiksi Android), jotta se voi näyttää sinulle oikean ilmoituksen. Jos sinulla ei ole internetiä, sovellus jatkaa viimeksi ladatulla tiedostolla; jos kuluu yli 30 päivää ilman, että tiedostoa on voitu ladata, sovellus pyytää sinua yhdistämään hetkeksi internetiin. Kuten minkä tahansa verkkosivun käynnissä, myös sivustomme palveluntarjoaja (Cloudflare) näkee IP-osoitteesi tämän lataamisen yhteydessä.</p>
 
-      <p>Kun lähetät valokuvia tai videoita televisioon (Pro-ominaisuus), televisio lataa vain valitsemasi tiedostot suoraan puhelimestasi tai tietokoneeltasi kotisi wifin kautta. Ne eivät kulje internetin eivätkä meidän kauttamme, sovellus ei näe muita kuviasi, ja jako päättyy heti, kun suljet tämän näytön.</p>
+      <p>Kun lähetät valokuvia tai videoita televisioon (Pro-ominaisuus), televisio lataa vain valitsemasi tiedostot suoraan puhelimestasi tai tietokoneeltasi kotisi wifin kautta. Ne eivät kulje internetin eivätkä meidän kauttamme, sovellus ei näe muita kuviasi, ja jako päättyy heti, kun suljet tämän näytön. Kotiverkossasi tämä siirto ei ole salattu.</p>
+      <p>Jos käytät toimintoa ”Näytä näyttöni TV:ssä” (Pro-toiminto), sovellus tallentaa näyttösi vain peilauksen ajan, koodaa sen laitteellasi ja lähettää sen kodin wifi-verkossa suoraan valitsemaasi televisioon. Se ei kulje internetin eikä meidän kauttamme, mitään ei tallenneta eikä säilytetä, ja peilaus päättyy, kun lopetat sen tai suljet sovelluksen. Televisio näyttää kaiken, mitä näytöllä näkyy, myös ilmoitukset, ja kotiverkossasi lähetys ei ole salattu.</p>
+      <h2 id="prueba">Ilmainen Pro-kokeilujakso (Android ja Windows)</h2>
+      <p>Jotta ilmainen Pro-kokeilujakso on vain yksi laitetta kohden, sovellus lähettää kokeilun alkaessa kerran palvelimellemme (api.mandotv.app, Cloudflaressa) kaksi asiaa: salatun sormenjäljen tunnisteesta, jonka järjestelmä antaa sovellukselle kyseisellä laitteella (Androidilla sovelluksen oma Android-tunniste, Windowsissa laitetunniste sovelluksillemme), sekä sen, kuinka kauan kokeilujaksosi on kestänyt. Sormenjälki ei paljasta, mikä laite on kyseessä tai kuka olet, ja palvelin salaa sen vielä kerran omalla avaimellaan ennen tallennusta.</p>
+      <p>Tallennamme vain tuon sormenjäljen, kokeilun alkamispäivän ja sen, onko kyseessä Android vai Windows. IP-osoitettasi emme tallenna (Cloudflare näkee sen vastatessaan, kuten missä tahansa yhteydessä). Käytämme tietoa vain siihen, ettei sovelluksen uudelleenasennus anna uutta kokeilujaksoa, eli väärinkäytösten ehkäisyyn, mikä on oikeutettu etumme; emme koskaan mainontaan tai sinun seuraamiseesi, emmekä jaa sitä kenellekään. Jokainen tietue poistuu automaattisesti 24 kuukauden kuluttua. Jos sinulla ei ole internetiä, kokeilujakso toimii silti. iPhonella ja Macilla ei lähetetä mitään: kokeilujaksosta huolehtii App Store.</p>
+
       <h2>Mikrofoni ja ääni</h2>
-      <p>iPhonella, Macilla ja Androidilla äänihaku käyttää mikrofonia vain, kun napautat puhepainiketta. Se, mitä sanot, muunnetaan tekstiksi järjestelmäsi puheentunnistuksella: Applen iPhonella ja Macilla ja Googlen Androidilla, kummankin omien tietosuojaehtojen mukaan. Windowsissa puhe tunnistetaan omalla tietokoneellasi eikä poistu laitteelta; vain hyvin vanhoilla suorittimilla sovellus käyttää Windowsin puhesyöttöä, Microsoftin tietosuojaehtojen mukaan. Windowsissa mikrofoni avautuu, kun avaat ääniruudun, ja sulkeutuu, kun suljet sen tai kun sitä ei ole käytetty 30 sekuntiin; kun et puhu, mitään ei tallenneta eikä säilytetä. Mando TV ei tallenna ääntä eikä säilytä sitä, ja syntynyt teksti menee suoraan televisioosi, aivan kuten se, mitä kirjoitat näppäimistöllä.</p>
+      <p>iPhonella, Macilla ja Androidilla äänihaku käyttää mikrofonia vain, kun napautat puhepainiketta. Se, mitä sanot, muunnetaan tekstiksi järjestelmäsi puheentunnistuksella: Applen iPhonella ja Macilla ja Googlen Androidilla, kummankin omien tietosuojaehtojen mukaan. Windowsissa puhe tunnistetaan omalla tietokoneellasi eikä poistu sieltä. Vain jos laitteen oma tunnistusmoottori ei käynnisty tai epäonnistuu jatkuvasti (esimerkiksi vanhan suorittimen tai puuttuvan puhemallin vuoksi), sovellus käyttää Windowsin puhesyöttöä, Microsoftin, joka toimii verkossa, jos olet ottanut Windowsissa käyttöön verkossa toimivan puheentunnistuksen, Microsoftin tietosuojaehtojen mukaan. Windowsissa mikrofoni avautuu, kun avaat ääniruudun, ja sulkeutuu, kun suljet sen tai kun sitä ei ole käytetty 30 sekuntiin; kun et puhu, mitään ei tallenneta eikä säilytetä. Mando TV ei tallenna ääntä eikä säilytä sitä, ja syntynyt teksti menee suoraan televisioosi, aivan kuten se, mitä kirjoitat näppäimistöllä.</p>
 
       <h2>Koti: Apple Homen ja Google Homen laitteet</h2>
       <p>Kun avaat Koti-osion (testivaiheessa), sovellus pyytää lupaa nähdä laitteet, jotka sinulla jo on Applen Koti-sovelluksessa (HomeKit) tai Google Homessa. Tällä luvalla se lukee niiden nimen, huoneen ja tilan (päällä vai pois, kirkkaus, lämpötila tai missä vaiheessa kodinkoneen ohjelma on), näyttääkseen ne ja lähettääkseen niille sen, mitä napautat. Kaikki tapahtuu puhelimesi ja Applen tai Googlen järjestelmän välillä: Mando TV ei tallenna tätä luetteloa, ei lähetä sitä meille eikä kolmansille osapuolille eikä käytä sitä mainontaan tai analytiikkaan. Androidilla Google Home toimii omalla Google-tililläsi Googlen tietosuojaselosteen mukaan. Voit peruuttaa luvan milloin tahansa: iPhonella kohdassa Asetukset &gt; Tietosuoja ja turvallisuus &gt; HomeKit, Androidilla Google-tilisi asetuksissa.</p>
       <p>Kun napautat ”Miten Koti toimi sinulla?”, sähköpostisovelluksesi avautuu viestillä osoitteeseen hola@mandotv.app, joka sisältää teknisen yhteenvedon: sovelluksen version, järjestelmän sekä sen, kuinka monta kunkin tyyppistä laitetta ilmestyi ja reagoivatko ne. Laitteiden, huoneiden tai kotisi nimiä ei sisällytetä, ja viesti lähetetään vain, jos lähetät sen itse.</p>
 
+      <h2>Jakamasi linkit ja tekstit</h2>
+      <p>Kun jaat kaukosäätimen (linkki mandotv.app/m/), linkki sisältää kaukosäätimen ulkoasun ja vihjeen television löytämiseksi: sen nimen, merkin, mallin ja osoitteen verkossasi. Se ei koskaan sisällä yhteysavaimia, PIN-koodeja tai television laiteosoitetta. Tiedot kulkevat #-merkin jälkeen, joten ne eivät koskaan päädy palvelimillemme, mutta jokainen, jolle linkin lähetät, esimerkiksi WhatsAppilla, voi lukea ne. Jaettu rutiini (linkki mandotv.app/r/) sisältää vain nimen ja vaiheet.</p>
+      <p>Varmuuskopioteksti, jonka voit kopioida sovelluksen asetuksista, sisältää suosikkisi, rutiinisi ja asetuksesi. Se ei ole salattu ja menee vain sinne, mihin sen liität.</p>
+
       <h2>Testiraportti</h2>
-      <p>Sovelluksessa on painike ”Kopioi testiraportti”, joka auttaa meitä korjaamaan virheitä. Raportti pysyy vain sovelluksen muistissa sen ollessa auki, eikä sitä koskaan lähetetä itsestään: sinä päätät, kopioitko ja jaatko sen. Se ei sisällä yhteysavaimia, pariliitoskoodeja eikä mitään, mitä kirjoitat; vain sovelluksen suorittamat vaiheet, kuten haut, yhdistämiset ja virheet.</p>
+      <p>Sovelluksessa on painike ”Kopioi testiraportti”, joka auttaa meitä korjaamaan virheitä. Raportti pysyy vain sovelluksen muistissa sen ollessa auki, eikä sitä koskaan lähetetä itsestään: sinä päätät, kopioitko ja jaatko sen. Se ei sisällä yhteysavaimia, parinmuodostuskoodeja eikä mitään, mitä kirjoitat. Se sisältää sovelluksen tekemät vaiheet, kuten haun, yhdistämisen ja virheet, sekä teknisiä tietoja: sovelluksen version, järjestelmäsi sekä televisiosi merkin, mallin ja osoitteen verkossasi.</p>
 
       <h2 id="cookies">Evästeet tällä verkkosivustolla</h2>
       <p>Tämä koskee vain mandotv.app-verkkosivustoa, ei sovellusta.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen
       <h3>Evästeillä, vain jos hyväksyt</h3>
       <p>Jos napautat evästeilmoituksessa ”Hyväksy”, otamme käyttöön Google Analyticsin (Google LLC:n palvelu) ymmärtääksemme paremmin, miten sivustoa käytetään: sivunäytöt, käyntien kesto, laitetyyppi, likimääräinen kaupunki ja mistä tulet. Sitä varten se tallentaa selaimeesi evästeet _ga ja _ga_* enintään 2 vuodeksi. Google voi käsitellä näitä tietoja Chilen ulkopuolella sijaitsevilla palvelimilla. Olemme poistaneet käytöstä mainontatoiminnot ja Google Signalsin emmekä käytä näitä tietoja mainosten näyttämiseen.</p>
       <p>Jos napautat ”Hylkää” tai et valitse mitään, Google Analyticsia ei ladata eikä mitään evästettä tallenneta. Voit muuttaa valintasi milloin tahansa jokaisen sivun lopussa olevalla ”Evästeet”-painikkeella; jos peruutat suostumuksesi, poistamme nämä evästeet.</p>
-      <p>Valintasi tallennetaan selaimeesi (paikallinen tallennustila, ei lähetetä kenellekään), jotta emme kysy sinulta uudelleen.</p>
+      <p>Valintasi tallennetaan selaimeesi (paikallinen tallennustila, ei lähetetä kenellekään), jotta emme kysy sinulta uudelleen. Samaan tallennustilaan tallentuu myös sivun alareunasta valitsemasi kieli, jotta sivusto aukeaa seuraavalla kerralla sillä kielellä. Näyttääkseen maasi Pro-hinnan jokainen sivu kysyy Cloudflarelta, joka jo palvelee tätä sivustoa, mistä maasta vierailet, tai käyttää selaimesi kielen aluetta; vastausta ei tallenneta.</p>
 
       <h2>Ostokset</h2>
       <p>Kun ostat Mando TV Pron, maksun käsittelee sovelluskauppa (App Store, Google Play tai Microsoft Store). Emme saa emmekä tallenna korttitietojasi. Kauppa vahvistaa sovellukselle vain sen, että osto on olemassa.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Voimassa 14. marraskuuta 2026 alkaen
       <p>Kun kirjoitat meille osoitteeseen <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, käytämme sähköpostiosoitettasi ja kertomaasi vain vastataksemme sinulle. Emme jaa niitä emmekä käytä niitä mainontaan. Voit milloin tahansa vaatia, että poistamme viestisi.</p>
 
       <h2>Lapset</h2>
-      <p>Sovellus ei kerää tietoja keneltäkään, ei myöskään lapsilta.</p>
+      <p>Sovellus ei kerää henkilötietoja keneltäkään, ei myöskään lapsilta.</p>
 
       <h2>Tämän selosteen muutokset</h2>
       <p>Jos sovelluksen tapa käsitellä tietojasi joskus muuttuu, päivitämme tämän sivun ja yllä olevan päivämäärän ennen kuin muutos tavoittaa sovelluksen.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV:tä ei verrata mihinkään tiettyyn sovellukseen. Ajankohtaiset hinnat näkyvät kunkin sovelluksen kauppasivulla.'),
     extra=[
       ('Mitä Mando TV ei tee', 'iPhonella ja iPadilla se ohjaa sinut Ohjauskeskuksen näytön peilaukseen, joka on iPhonen oma toiminto ja toimii televisioilla, joissa on AirPlay. Windowsissa se avaa Lähetä-toiminnon (Windows + K), ja Mando TV Pro voi lähettää tietokoneen näytön wifisi kautta LG:n, Samsungin, Hisensen ja Android TV:n televisioihin (beta, muutaman sekunnin viiveellä ja ilman ääntä). Mando TV Prolla se voi lisäksi lähettää kuvia ja videoita televisioon wifisi kautta. Se ohjaa älytelevisioita kotiwifin kautta. Televisioita, jotka eivät ole älytelevisioita, voi ohjata Android-puhelimella, jossa on infrapunalähetin, infrapunalla. Android 9:stä alkaen puhelin voi myös yhdistyä Bluetoothilla näppäimistönä ja kaukosäätimenä Google TV:hen, Android TV:hen ja Fire TV:hen kokonaan ilman wifiä. Tämä vaihtoehto on betassa ja ilmainen.'),
-      ('Miten Mando TV ansaitsee rahaa', 'Ei mainoksilla eikä tiedoillasi: sovellus ei kerää niitä. Mando TV rahoitetaan Prolla, valinnaisella kertaostolla lisäominaisuuksiin. Perus-kaukosäädin on ilmainen.'),
+      ('Miten Mando TV ansaitsee rahaa', 'Ei mainoksilla eikä tiedoillasi: sovelluksessa ei ole mainoksia, eikä se seuraa sinua. Mando TV rahoitetaan Prolla, valinnaisella kertaostolla lisäominaisuuksiin. Perus-kaukosäädin on ilmainen.'),
       ('Laitteilla, jotka sinulla jo on', 'iPhone, iPad ja Mac App Storesta, Windows-tietokoneet Microsoft Storesta ja Android ilmaisella ennakkokäytöllä Google Playssa. Katso [Kaukosäädinsovellus iPhonelle](@iphone) ja [Kaukosäädinsovellus Windowsille](@windows).'),
       ('Tietosuoja', 'Ei tiliä eikä seurantaa sovelluksessa. Yhteys televisioon tapahtuu vain paikallisessa verkossa, ja yhteystiedot pysyvät laitteellasi salattuina. Lisätietoja [tietosuojaselosteessa](@privacidad).'),
     ],

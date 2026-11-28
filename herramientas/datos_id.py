@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Menemukan TV</h2>
 
 PRIVACIDAD = dict(
   titulo='Kebijakan Privasi | Mando TV',
-  desc='Mando TV tidak mengumpulkan data pribadi: tanpa akun, tanpa iklan, tanpa pelacak. Aplikasi hanya berbicara dengan TV kamu di dalam Wi-Fi kamu.',
+  desc='Mando TV tidak meminta akun atau data pribadi: tanpa iklan, tanpa pelacak. Remote berbicara langsung dengan TV kamu di dalam Wi-Fi kamu.',
   h1='Privasi',
-  intro='Singkatnya: Mando TV tidak mengumpulkan datamu. Tidak ada akun, tidak ada iklan, tidak ada pelacak, dan tidak ada server milik kami yang menyimpan apa yang kamu lakukan.',
+  intro='Singkatnya: Mando TV tidak meminta akun atau data pribadi. Tidak ada iklan dan tidak ada pelacak.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Berlaku sejak 14 November 2026. Terakhir diperbarui pada 26 November 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Berlaku sejak 14 November 2026. Terakhir diperbarui pada 28 November 2026.</p>
 
       <h2>Siapa kami</h2>
       <p>Mando TV adalah aplikasi untuk mengontrol TV kamu dari HP atau komputer. Kebijakan ini menjelaskan informasi apa yang dipakai aplikasi dan apa yang dilakukannya dengan informasi itu. Kalau ada pertanyaan, tulis ke kami di <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Data apa yang kami kumpulkan</h2>
-      <p>Aplikasi: tidak ada. Aplikasi tidak mengirimkan informasi tentang kamu atau tentang cara kamu memakainya kepada kami maupun pihak ketiga. Aplikasi tidak memakai alat analitik, iklan, atau pelacakan.</p>
+      <p>Aplikasi: hanya yang diperlukan untuk uji coba Pro gratis di Android dan Windows, dijelaskan di <a href="#prueba">Uji coba Pro gratis</a>. Di luar itu, aplikasi tidak mengirimkan informasi tentang kamu atau tentang cara kamu memakainya kepada kami maupun pihak ketiga. Aplikasi tidak memakai alat analitik, iklan, atau pelacakan.</p>
       <p>Situs web ini: kami mengukur kunjungan dengan dua cara, yang dijelaskan di bagian <a href="#cookies">Cookie di situs ini</a>.</p>
 
       <h2>Apa yang disimpan aplikasi di perangkat kamu</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Berlaku sejak 14 November 2026. Tera
         <li>Kunci koneksi yang diberikan setiap TV saat kamu menyetujui izin. Kunci itu disimpan terenkripsi di penyimpanan aman sistem (Keychain di iPhone dan Mac, Keystore di Android, penyimpanan terlindungi di Windows).</li>
         <li>Pengaturan kamu: tema terang atau gelap, warna latar, getar, dan jenis remote.</li>
         <li>Kalau kamu memakai fitur Pro: aplikasi favorit, rutinitas, dan pencarian YouTube terakhir kamu (bisa kamu hapus di aplikasi).</li>
+        <li>Kalau kamu memakainya: mode anak (PIN hanya disimpan sebagai kode terlindungi) dan remote yang dibagikan orang lain kepadamu.</li>
       </ul>
-      <p>Kalau kamu menghapus aplikasi, semua itu ikut terhapus.</p>
+      <p>Kalau kamu menghapus aplikasi, data ini ikut terhapus, dengan dua pengecualian. Di Android, kalau kamu memakai pencadangan Google, preferensi aplikasi (seperti daftar TV dan pengaturanmu) bisa tetap ada di cadangan Google milikmu dan kembali saat kamu memasang ulang aplikasi; kunci koneksi tidak pernah termasuk di dalamnya. Di iPhone dan Mac, kunci koneksi disimpan di Keychain sistem dan bisa tetap ada di sana setelah kamu menghapus aplikasi.</p>
 
       <h2>Dengan siapa aplikasi berkomunikasi</h2>
       <p>Dengan TV kamu, di dalam Wi-Fi di rumah. Untuk menemukannya, aplikasi memindai jaringan lokal kamu; karena itu di iPhone aplikasi meminta izin "Jaringan Lokal". Teks yang kamu ketik dengan keyboard aplikasi langsung dikirim ke TV dan tidak disimpan.</p>
-      <p>Selain itu, saat dibuka, aplikasi mengunduh sebuah berkas publik kecil dari situs ini (mandotv.app/app/config.json) untuk mengetahui apakah ada versi baru yang sebaiknya kamu pasang dan fitur mana yang termasuk Mando TV Pro. Ini hanya sebuah unduhan, seperti saat membuka halaman: aplikasi tidak mengirim datamu, TV kamu, maupun apa yang kamu lakukan. Aplikasi hanya menyebutkan versi aplikasi dan sistemnya (misalnya Android) agar bisa menampilkan pemberitahuan yang sesuai. Kalau kamu tidak punya internet, aplikasi tetap bekerja dengan berkas yang terakhir diunduh; kalau lebih dari 30 hari berlalu tanpa berhasil mengunduhnya, aplikasi akan meminta kamu terhubung ke internet sebentar.</p>
+      <p>Selain itu, saat dibuka, aplikasi mengunduh sebuah berkas publik kecil dari situs ini (mandotv.app/app/config.json) untuk mengetahui apakah ada versi baru yang sebaiknya kamu pasang dan fitur mana yang termasuk Mando TV Pro. Ini hanya sebuah unduhan, seperti saat membuka halaman: aplikasi tidak mengirim datamu, TV kamu, maupun apa yang kamu lakukan. Aplikasi hanya menyebutkan versi aplikasi dan sistemnya (misalnya Android) agar bisa menampilkan pemberitahuan yang sesuai. Kalau kamu tidak punya internet, aplikasi tetap bekerja dengan berkas yang terakhir diunduh; kalau lebih dari 30 hari berlalu tanpa berhasil mengunduhnya, aplikasi akan meminta kamu terhubung ke internet sebentar. Seperti setiap kunjungan ke situs web, unduhan itu juga memperlihatkan alamat IP-mu kepada penyedia situs kami (Cloudflare).</p>
 
-      <p>Kalau kamu mengirim foto atau video ke TV (fitur Pro), TV hanya mengunduh berkas yang kamu pilih, langsung dari HP atau PC kamu lewat Wi-Fi di rumah. Berkas itu tidak lewat internet maupun kami, aplikasi tidak melihat foto kamu yang lain, dan pembagiannya berakhir begitu kamu menutup layar itu.</p>
+      <p>Kalau kamu mengirim foto atau video ke TV (fitur Pro), TV hanya mengunduh berkas yang kamu pilih, langsung dari HP atau PC kamu lewat Wi-Fi di rumah. Berkas itu tidak lewat internet maupun kami, aplikasi tidak melihat foto kamu yang lain, dan pembagiannya berakhir begitu kamu menutup layar itu. Di dalam jaringan rumahmu, transfer ini tidak dienkripsi.</p>
+      <p>Kalau kamu memakai "Tampilkan layar saya di TV" (fitur Pro), aplikasi menangkap layarmu hanya selama kamu menduplikasinya, mengodekannya di perangkatmu, lalu mengirimnya lewat Wi-Fi rumah langsung ke TV yang kamu pilih. Data itu tidak lewat internet maupun kami, tidak ada yang direkam atau disimpan, dan berhenti saat kamu menghentikannya atau menutup aplikasi. TV menampilkan semua yang muncul di layar itu, termasuk notifikasi, dan di dalam jaringan rumahmu siarannya tidak dienkripsi.</p>
+      <h2 id="prueba">Uji coba Pro gratis (Android dan Windows)</h2>
+      <p>Agar uji coba Pro gratis hanya satu kali per perangkat, saat dimulai aplikasi mengirim satu kali dua hal ke server kami (api.mandotv.app, di Cloudflare): sidik terenkripsi dari pengenal yang diberikan sistem kepada aplikasi di perangkat itu (di Android, ID Android milik aplikasi itu sendiri; di Windows, pengenal perangkat untuk aplikasi kami) dan sudah berapa lama uji cobamu berjalan. Sidik itu tidak menunjukkan perangkat mana itu atau siapa kamu, dan server mengenkripsinya sekali lagi dengan kunci sendiri sebelum menyimpannya.</p>
+      <p>Kami hanya menyimpan sidik itu, tanggal uji coba dimulai, dan apakah itu Android atau Windows. Kami tidak menyimpan alamat IP-mu (Cloudflare melihatnya saat menjawab, seperti pada sambungan apa pun). Kami memakainya hanya agar memasang ulang aplikasi tidak memberi uji coba lagi, yaitu pencegahan penipuan dan kepentingan sah kami; tidak pernah untuk iklan atau untuk mengikutimu, dan tidak kami bagikan kepada siapa pun. Setiap catatan terhapus otomatis setelah 24 bulan. Kalau kamu tidak punya internet, uji coba tetap berjalan. Di iPhone dan Mac tidak ada yang dikirim: uji coba diurus oleh App Store.</p>
+
       <h2>Mikrofon dan suara</h2>
-      <p>Di iPhone, Mac, dan Android, pencarian suara memakai mikrofon hanya selama kamu menekan tombol bicara. Apa yang kamu ucapkan diubah menjadi teks oleh pengenalan suara sistem kamu: oleh Apple di iPhone dan Mac serta oleh Google di Android, masing-masing sesuai kebijakan privasi mereka. Di Windows, suara dikenali di PC kamu sendiri dan tidak keluar dari perangkat; hanya pada prosesor yang sangat lama aplikasi memakai input suara Windows, dari Microsoft, sesuai kebijakan privasi mereka. Di Windows, mikrofon dibuka saat kamu membuka panel suara dan ditutup saat kamu menutupnya, atau setelah 30 detik tidak dipakai; selama kamu tidak berbicara, tidak ada yang direkam atau disimpan. Mando TV tidak merekam maupun menyimpan audio, dan teks hasilnya langsung dikirim ke TV kamu, sama seperti yang kamu ketik dengan keyboard.</p>
+      <p>Di iPhone, Mac, dan Android, pencarian suara memakai mikrofon hanya selama kamu menekan tombol bicara. Apa yang kamu ucapkan diubah menjadi teks oleh pengenalan suara sistem kamu: oleh Apple di iPhone dan Mac serta oleh Google di Android, masing-masing sesuai kebijakan privasi mereka. Di Windows, suara dikenali di PC-mu sendiri dan tidak keluar dari sana. Hanya kalau mesin di perangkat itu tidak bisa dimulai atau terus gagal (misalnya karena prosesor lama atau model suara yang tidak ada), aplikasi memakai pengetikan suara Windows dari Microsoft, yang bekerja secara online jika kamu mengaktifkan pengenalan suara online di Windows, sesuai kebijakan privasi Microsoft. Di Windows, mikrofon dibuka saat kamu membuka panel suara dan ditutup saat kamu menutupnya, atau setelah 30 detik tidak dipakai; selama kamu tidak berbicara, tidak ada yang direkam atau disimpan. Mando TV tidak merekam maupun menyimpan audio, dan teks hasilnya langsung dikirim ke TV kamu, sama seperti yang kamu ketik dengan keyboard.</p>
 
       <h2>Rumah: perangkat dari Apple Home dan Google Home</h2>
       <p>Kalau kamu membuka bagian Rumah (dalam pengujian), aplikasi meminta izin untuk melihat perangkat yang sudah kamu miliki di aplikasi Rumah milik Apple (HomeKit) atau di Google Home. Dengan izin itu, aplikasi membaca nama, ruangan, dan statusnya (menyala atau mati, kecerahan, suhu, atau sampai di bagian mana program sebuah peralatan rumah tangga) untuk menampilkannya dan mengirimkan apa yang kamu ketuk. Semuanya terjadi antara HP kamu dan sistem Apple atau Google: Mando TV tidak menyimpan daftar ini, tidak mengirimkannya kepada kami maupun pihak ketiga, dan tidak memakainya untuk iklan atau analitik. Di Android, Google Home berfungsi dengan akun Google kamu sendiri, sesuai kebijakan privasi Google. Kamu bisa mencabut izin kapan saja: di iPhone lewat Pengaturan &gt; Privasi &amp; Keamanan &gt; HomeKit, di Android lewat pengaturan akun Google kamu.</p>
       <p>Kalau kamu mengetuk "Bagaimana fitur Rumah bekerja untuk Anda?", aplikasi email kamu terbuka dengan pesan ke hola@mandotv.app yang berisi ringkasan teknis: versi aplikasi, sistem, serta berapa banyak perangkat dari setiap jenis yang muncul dan apakah merespons. Nama perangkat, ruangan, atau rumah kamu tidak disertakan, dan pesan hanya terkirim kalau kamu sendiri yang mengirimnya.</p>
 
+      <h2>Tautan dan teks yang kamu bagikan</h2>
+      <p>Saat kamu membagikan remote (tautan mandotv.app/m/), tautan itu berisi desain remote dan petunjuk untuk menemukan TV-mu: nama, merek, model, dan alamatnya di jaringanmu. Tautan itu tidak pernah berisi kunci koneksi, PIN, atau alamat perangkat keras TV. Informasi itu berada setelah tanda #, jadi tidak pernah sampai ke server kami, tetapi siapa pun yang kamu kirimi tautan, misalnya lewat WhatsApp, bisa membacanya. Rutinitas yang dibagikan (tautan mandotv.app/r/) hanya berisi nama dan langkahnya.</p>
+      <p>Teks cadangan yang bisa kamu salin di pengaturan aplikasi berisi favorit, rutinitas, dan pengaturanmu. Teks itu tidak dienkripsi dan hanya pergi ke tempat kamu menempelkannya.</p>
+
       <h2>Laporan pengujian</h2>
-      <p>Aplikasi punya tombol "Salin laporan pengujian" yang membantu kami memperbaiki kesalahan. Laporan itu hanya ada di memori aplikasi selama aplikasi terbuka dan tidak pernah dikirim otomatis: kamu yang memutuskan apakah akan menyalin dan membagikannya. Laporan itu tidak berisi kunci koneksi, kode pemasangan, atau apa pun yang kamu masukkan; hanya langkah-langkah yang dijalankan aplikasi, seperti pencarian, penyambungan, dan kesalahan.</p>
+      <p>Aplikasi punya tombol "Salin laporan pengujian" yang membantu kami memperbaiki kesalahan. Laporan itu hanya ada di memori aplikasi selama aplikasi terbuka dan tidak pernah dikirim otomatis: kamu yang memutuskan apakah akan menyalin dan membagikannya. Laporan itu tidak berisi kunci koneksi, kode pemasangan, atau apa pun yang kamu ketik. Laporan itu berisi langkah yang dijalankan aplikasi, seperti mencari, menyambung, dan error, serta data teknis: versi aplikasi, sistemmu, dan merek, model, serta alamat TV-mu di jaringanmu.</p>
 
       <h2 id="cookies">Cookie di situs ini</h2>
       <p>Ini hanya berlaku untuk situs mandotv.app, bukan untuk aplikasi.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Berlaku sejak 14 November 2026. Tera
       <h3>Dengan cookie, hanya kalau kamu setuju</h3>
       <p>Kalau di pemberitahuan cookie kamu mengetuk "Terima", kami mengaktifkan Google Analytics (dari Google LLC) untuk lebih memahami cara situs dipakai: tampilan halaman, lama kunjungan, jenis perangkat, perkiraan kota, dan dari mana kamu datang. Untuk itu layanan ini menyimpan cookie _ga dan _ga_* hingga 2 tahun di browser kamu. Google dapat memproses data ini di server di luar Chili. Kami menonaktifkan fitur iklan dan Google Signals, dan kami tidak memakai data ini untuk menampilkan iklan kepada kamu.</p>
       <p>Kalau kamu mengetuk "Tolak" atau tidak memilih apa pun, Google Analytics tidak dimuat dan tidak ada cookie yang disimpan. Kamu bisa mengubah keputusan kapan saja dengan tombol "Cookie" di bagian bawah setiap halaman; kalau kamu mencabut persetujuan, kami menghapus cookie tersebut.</p>
-      <p>Pilihan kamu disimpan di browser kamu (penyimpanan lokal, tidak dikirim ke siapa pun) agar kami tidak bertanya lagi.</p>
+      <p>Pilihan kamu disimpan di browser kamu (penyimpanan lokal, tidak dikirim ke siapa pun) agar kami tidak bertanya lagi. Penyimpanan yang sama menyimpan bahasa yang kamu pilih di bagian bawah halaman, supaya lain kali situs terbuka dalam bahasa itu. Untuk menampilkan harga Pro di negaramu, setiap halaman bertanya kepada Cloudflare, yang memang sudah melayani situs ini, kamu berkunjung dari negara mana, atau memakai wilayah bahasa browser-mu; jawaban itu tidak disimpan.</p>
 
       <h2>Pembelian</h2>
       <p>Kalau kamu membeli Mando TV Pro, pembayaran diproses oleh toko aplikasi (App Store, Google Play, atau Microsoft Store). Kami tidak menerima maupun menyimpan data kartu kamu. Toko aplikasi hanya mengonfirmasi kepada aplikasi bahwa pembelian itu ada.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Berlaku sejak 14 November 2026. Tera
       <p>Kalau kamu menulis ke kami di <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, kami memakai alamat email kamu dan apa yang kamu sampaikan hanya untuk membalasmu. Kami tidak membagikannya dan tidak memakainya untuk iklan. Kamu bisa meminta kami menghapus pesan kamu kapan saja.</p>
 
       <h2>Anak-anak</h2>
-      <p>Aplikasi tidak mengumpulkan data dari siapa pun, termasuk anak-anak.</p>
+      <p>Aplikasi tidak mengumpulkan data pribadi dari siapa pun, termasuk anak-anak.</p>
 
       <h2>Perubahan pada kebijakan ini</h2>
       <p>Kalau suatu hari apa yang dilakukan aplikasi dengan datamu berubah, kami akan memperbarui halaman ini dan tanggal di atas sebelum perubahan itu sampai ke aplikasi.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV tidak dibandingkan dengan aplikasi tertentu. Harga terkini ada di halaman toko masing-masing aplikasi.'),
     extra=[
       ('Yang tidak dilakukan Mando TV', 'Di iPhone dan iPad, aplikasi mengarahkan kamu ke Pencerminan Layar di Pusat Kontrol, fitur iPhone itu sendiri yang berfungsi dengan TV ber-AirPlay. Di Windows, aplikasi membuka Cast (Windows + K), dan Mando TV Pro bisa mengirim layar PC ke TV LG, Samsung, Hisense, dan Android TV lewat Wi-Fi kamu (beta, dengan jeda beberapa detik dan tanpa suara). Dengan Mando TV Pro, aplikasi juga bisa mengirim foto dan video ke TV lewat Wi-Fi kamu. Aplikasi ini mengontrol Smart TV lewat Wi-Fi rumah. TV yang bukan Smart TV bisa dikontrol lewat inframerah dari HP Android dengan pemancar inframerah. Mulai Android 9, HP juga bisa tersambung lewat Bluetooth sebagai keyboard dan remote ke Google TV, Android TV, dan Fire TV, tanpa Wi-Fi sama sekali. Opsi ini dalam versi beta dan gratis.'),
-      ('Bagaimana Mando TV menghasilkan uang', 'Bukan dari iklan dan bukan dari datamu: aplikasi ini tidak mengumpulkannya. Mando TV dibiayai oleh Pro, pembelian sekali bayar yang opsional untuk fitur ekstra. Remote dasarnya gratis.'),
+      ('Bagaimana Mando TV menghasilkan uang', 'Bukan dari iklan dan bukan dari datamu: aplikasi ini tidak punya iklan dan tidak melacakmu. Mando TV dibiayai oleh Pro, pembelian sekali bayar yang opsional untuk fitur ekstra. Remote dasarnya gratis.'),
       ('Di perangkat yang sudah kamu punya', 'iPhone, iPad, dan Mac dari App Store, PC Windows dari Microsoft Store, dan Android lewat akses awal gratis di Google Play. Lihat [Aplikasi remote TV untuk iPhone](@iphone) dan [Aplikasi remote TV untuk Windows](@windows).'),
       ('Privasi', 'Tanpa akun dan tanpa pelacakan di aplikasi. Komunikasi dengan TV hanya terjadi di jaringan lokal, dan data koneksi tetap tersimpan terenkripsi di perangkat kamu. Detailnya ada di [Kebijakan Privasi](@privacidad).'),
     ],

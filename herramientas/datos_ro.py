@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Găsirea televizorului</h2>
 
 PRIVACIDAD = dict(
   titulo='Politica de confidențialitate | Mando TV',
-  desc='Mando TV nu colectează date personale: fără conturi, fără reclame, fără trackere. Aplicația vorbește doar cu televizorul tău, în interiorul Wi-Fi-ului tău.',
+  desc='Mando TV nu cere cont și nici date personale: fără reclame, fără trackere. Telecomanda vorbește direct cu televizorul tău, în interiorul Wi-Fi-ului tău.',
   h1='Confidențialitate',
-  intro='Pe scurt: Mando TV nu îți colectează datele. Nu există conturi, reclame, trackere și nici servere proprii care să păstreze ce faci.',
+  intro='Pe scurt: Mando TV nu cere cont și nici date personale. Nu există reclame și nici trackere.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">În vigoare din 14 noiembrie 2026. Ultima actualizare: 26 noiembrie 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">În vigoare din 14 noiembrie 2026. Ultima actualizare: 28 noiembrie 2026.</p>
 
       <h2>Cine suntem</h2>
       <p>Mando TV este o aplicație cu care îți controlezi televizorul de pe telefon sau de pe computer. Această politică descrie ce informații folosește aplicația și ce face cu ele. Dacă ai întrebări, scrie-ne la <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Ce date colectăm</h2>
-      <p>Aplicația: niciuna. Aplicația nu trimite nici nouă, nici unor terți informații despre tine sau despre cum o folosești. Nu folosește instrumente de analiză, de publicitate sau de urmărire.</p>
+      <p>Aplicația: doar ce este necesar pentru perioada de probă gratuită Pro pe Android și Windows, explicată în <a href="#prueba">Perioada de probă gratuită Pro</a>. În afară de asta, aplicația nu trimite nici nouă, nici unor terți informații despre tine sau despre cum o folosești. Nu folosește instrumente de analiză, de publicitate sau de urmărire.</p>
       <p>Acest site: măsurăm vizitele în două moduri, explicate în secțiunea <a href="#cookies">Cookie-uri pe acest site</a>.</p>
 
       <h2>Ce păstrează aplicația pe dispozitivul tău</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">În vigoare din 14 noiembrie 2026. U
         <li>Cheile de conectare pe care le dă fiecare televizor când confirmi permisiunea. Sunt păstrate criptat în spațiul securizat al sistemului (Keychain pe iPhone și Mac, Keystore pe Android, spațiu protejat pe Windows).</li>
         <li>Setările tale: tema deschisă sau întunecată, culoarea de fundal, vibrația și tipul de telecomandă.</li>
         <li>Dacă folosești funcțiile Pro: aplicațiile tale favorite, rutinele tale și ultimele tale căutări în YouTube (le poți șterge din aplicație).</li>
+        <li>Dacă le folosești: modul copii (PIN-ul este păstrat doar ca un cod protejat) și telecomenzile pe care alte persoane le-au partajat cu tine.</li>
       </ul>
-      <p>Dacă ștergi aplicația, toate acestea se șterg odată cu ea.</p>
+      <p>Dacă ștergi aplicația, aceste date se șterg odată cu ea, cu două excepții. Pe Android, dacă folosești copia de rezervă Google, preferințele aplicației (precum lista ta de televizoare și setările) pot rămâne în propria ta copie Google și revin când reinstalezi aplicația; cheile de conectare nu fac niciodată parte din ea. Pe iPhone și Mac, cheile de conectare sunt păstrate în Keychain-ul sistemului și pot rămâne acolo după ce ștergi aplicația.</p>
 
       <h2>Cu cine vorbește aplicația</h2>
       <p>Cu televizoarele tale, în interiorul Wi-Fi-ului tău de acasă. Ca să le găsească, aplicația caută în rețeaua ta locală; de aceea, pe iPhone cere permisiunea „Rețea locală”. Textul pe care îl scrii cu tastatura aplicației merge direct la televizor și nu este păstrat.</p>
-      <p>În plus, la deschidere aplicația descarcă un mic fișier public de pe acest site (mandotv.app/app/config.json), ca să afle dacă există o versiune nouă pe care ar trebui să o instalezi și ce funcții fac parte din Mando TV Pro. Este o descărcare, ca atunci când deschizi o pagină: aplicația nu trimite datele tale, televizoarele tale sau ceea ce faci. Indică doar versiunea aplicației și sistemul (de exemplu Android), ca să îți poată arăta mesajul potrivit. Dacă nu ai internet, aplicația continuă cu ultimul fișier descărcat; dacă trec mai mult de 30 de zile fără să-l poată descărca, aplicația îți cere să te conectezi puțin la internet.</p>
+      <p>În plus, la deschidere aplicația descarcă un mic fișier public de pe acest site (mandotv.app/app/config.json), ca să afle dacă există o versiune nouă pe care ar trebui să o instalezi și ce funcții fac parte din Mando TV Pro. Este o descărcare, ca atunci când deschizi o pagină: aplicația nu trimite datele tale, televizoarele tale sau ceea ce faci. Indică doar versiunea aplicației și sistemul (de exemplu Android), ca să îți poată arăta mesajul potrivit. Dacă nu ai internet, aplicația continuă cu ultimul fișier descărcat; dacă trec mai mult de 30 de zile fără să-l poată descărca, aplicația îți cere să te conectezi puțin la internet. Ca la orice vizită pe un site, la acea descărcare furnizorul site-ului nostru (Cloudflare) vede și adresa ta IP.</p>
 
-      <p>Când trimiți fotografii sau videoclipuri la televizor (o funcție Pro), televizorul descarcă doar fișierele pe care le alegi, direct de pe telefonul sau PC-ul tău, prin Wi-Fi-ul de acasă. Acestea nu trec nici prin internet, nici prin noi, aplicația nu vede celelalte fotografii ale tale, iar partajarea se încheie îndată ce închizi acel ecran.</p>
+      <p>Când trimiți fotografii sau videoclipuri la televizor (o funcție Pro), televizorul descarcă doar fișierele pe care le alegi, direct de pe telefonul sau PC-ul tău, prin Wi-Fi-ul de acasă. Acestea nu trec nici prin internet, nici prin noi, aplicația nu vede celelalte fotografii ale tale, iar partajarea se încheie îndată ce închizi acel ecran. În interiorul rețelei tale de acasă, acest transfer nu este criptat.</p>
+      <p>Dacă folosești „Afișează ecranul meu pe televizor“ (o funcție Pro), aplicația captează ecranul doar cât timp îl duplici, îl codifică pe dispozitivul tău și îl trimite prin Wi-Fi-ul de acasă direct la televizorul pe care l-ai ales. Nu trece prin internet și nici pe la noi, nu se înregistrează și nu se păstrează nimic, iar duplicarea se oprește când o oprești sau închizi aplicația. Televizorul arată tot ce apare pe acel ecran, inclusiv notificările, iar în rețeaua ta de acasă transmisia nu este criptată.</p>
+      <h2 id="prueba">Perioada de probă gratuită Pro (Android și Windows)</h2>
+      <p>Pentru ca perioada de probă gratuită Pro să fie una singură pe dispozitiv, când începe, aplicația trimite o singură dată către serverul nostru (api.mandotv.app, la Cloudflare) două lucruri: o amprentă criptată a identificatorului pe care sistemul îl dă aplicației pe acel dispozitiv (pe Android, ID-ul Android propriu aplicației; pe Windows, identificatorul dispozitivului pentru aplicațiile noastre) și de cât timp rulează proba ta. Amprenta nu arată despre ce dispozitiv este vorba și nici cine ești, iar serverul o criptează încă o dată cu o cheie proprie înainte să o păstreze.</p>
+      <p>Păstrăm doar această amprentă, data la care a început proba și dacă este Android sau Windows. Nu păstrăm adresa ta IP (Cloudflare o vede cât timp răspunde, ca la orice conexiune). O folosim doar ca reinstalarea aplicației să nu dea o altă probă, adică pentru prevenirea fraudei, interesul nostru legitim; niciodată pentru publicitate sau ca să te urmărim, și nu o dăm nimănui. Fiecare înregistrare se șterge automat după 24 de luni. Dacă nu ai internet, proba funcționează oricum. Pe iPhone și Mac nu se trimite nimic: proba o gestionează App Store.</p>
+
       <h2>Microfon și voce</h2>
-      <p>Pe iPhone, Mac și Android, căutarea vocală folosește microfonul doar cât timp ții atins butonul de vorbit. Ce spui este transformat în text de recunoașterea vocală a sistemului tău: de Apple pe iPhone și Mac și de Google pe Android, conform propriilor lor politici de confidențialitate. Pe Windows, vocea este recunoscută chiar pe PC-ul tău și nu părăsește dispozitivul; doar la procesoarele foarte vechi aplicația folosește introducerea vocală din Windows, de la Microsoft, conform politicii lor de confidențialitate. Pe Windows, microfonul se deschide când deschizi panoul vocal și se închide când îl închizi sau după 30 de secunde fără folosire; cât timp nu vorbești, nu se înregistrează și nu se păstrează nimic. Mando TV nu înregistrează și nu păstrează sunetul, iar textul rezultat merge direct la televizorul tău, exact ca ceea ce scrii cu tastatura.</p>
+      <p>Pe iPhone, Mac și Android, căutarea vocală folosește microfonul doar cât timp ții atins butonul de vorbit. Ce spui este transformat în text de recunoașterea vocală a sistemului tău: de Apple pe iPhone și Mac și de Google pe Android, conform propriilor lor politici de confidențialitate. Pe Windows, vocea este recunoscută pe propriul tău PC și nu îl părăsește. Doar dacă acest motor de pe dispozitiv nu pornește sau eșuează în continuu (de exemplu din cauza unui procesor vechi sau a lipsei modelului vocal), aplicația folosește dictarea Windows, de la Microsoft, care funcționează online dacă ai activat recunoașterea vocală online în Windows, conform politicii de confidențialitate a Microsoft. Pe Windows, microfonul se deschide când deschizi panoul vocal și se închide când îl închizi sau după 30 de secunde fără folosire; cât timp nu vorbești, nu se înregistrează și nu se păstrează nimic. Mando TV nu înregistrează și nu păstrează sunetul, iar textul rezultat merge direct la televizorul tău, exact ca ceea ce scrii cu tastatura.</p>
 
       <h2>Acasă: dispozitive din Apple Home și Google Home</h2>
       <p>Când deschizi secțiunea Acasă (în testare), aplicația cere permisiunea de a vedea dispozitivele pe care le ai deja în aplicația Casă de la Apple (HomeKit) sau în Google Home. Cu această permisiune citește numele, camera și starea lor (pornit sau oprit, luminozitate, temperatură sau în ce punct al programului se află un electrocasnic), ca să le afișeze și să le trimită ce atingi. Totul se petrece între telefonul tău și sistemul Apple sau Google: Mando TV nu păstrează această listă, nu o trimite nici nouă, nici unor terți și nu o folosește pentru publicitate sau analiză. Pe Android, Google Home funcționează cu propriul tău cont Google, conform politicii de confidențialitate Google. Poți retrage permisiunea oricând: pe iPhone la Setări &gt; Confidențialitate și securitate &gt; HomeKit, pe Android în setările contului tău Google.</p>
       <p>Când atingi „Cum a mers Acasă la tine?”, se deschide aplicația ta de e-mail cu un mesaj către hola@mandotv.app care conține un rezumat tehnic: versiunea aplicației, sistemul și câte dispozitive de fiecare tip au apărut și dacă răspund. Nu include nume de dispozitive, de camere sau ale casei tale, iar mesajul se trimite doar dacă îl trimiți tu.</p>
 
+      <h2>Linkuri și texte pe care le partajezi</h2>
+      <p>Când partajezi o telecomandă (un link mandotv.app/m/), linkul conține designul telecomenzii și un indiciu pentru a găsi televizorul tău: numele, marca, modelul și adresa lui în rețeaua ta. Nu conține niciodată chei de conectare, PIN-uri sau adresa hardware a televizorului. Aceste informații se află după semnul #, deci nu ajung niciodată la serverele noastre, dar le poate citi oricine primește linkul de la tine, de exemplu pe WhatsApp. O rutină partajată (un link mandotv.app/r/) conține doar numele și pașii ei.</p>
+      <p>Textul copiei de rezervă, pe care îl poți copia din setările aplicației, conține favoritele, rutinele și setările tale. Nu este criptat și ajunge doar acolo unde îl lipești.</p>
+
       <h2>Raportul de test</h2>
-      <p>Aplicația are un buton „Copiază raportul de test” care ne ajută să rezolvăm erori. Raportul rămâne doar în memoria aplicației cât timp este deschisă și nu este trimis niciodată singur: tu decizi dacă îl copiezi și îl dai mai departe. Nu conține chei de conectare, coduri de asociere și nimic din ce introduci; doar pașii pe care i-a făcut aplicația, precum căutările, conectările și erorile.</p>
+      <p>Aplicația are un buton „Copiază raportul de test” care ne ajută să rezolvăm erori. Raportul rămâne doar în memoria aplicației cât timp este deschisă și nu este trimis niciodată singur: tu decizi dacă îl copiezi și îl dai mai departe. Nu include chei de conectare, coduri de asociere sau ceea ce scrii. Include pașii făcuți de aplicație, precum căutarea, conectarea și erorile, și date tehnice: versiunea aplicației, sistemul tău și marca, modelul și adresa televizorului tău în rețeaua ta.</p>
 
       <h2 id="cookies">Cookie-uri pe acest site</h2>
       <p>Aceasta se aplică doar site-ului mandotv.app, nu aplicației.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">În vigoare din 14 noiembrie 2026. U
       <h3>Cu cookie-uri, doar dacă accepți</h3>
       <p>Dacă atingi „Acceptă” în mesajul despre cookie-uri, activăm Google Analytics (de la Google LLC) ca să înțelegem mai bine cum este folosit site-ul: pagini vizualizate, timp petrecut, tipul de dispozitiv, orașul aproximativ și de unde vii. Pentru asta păstrează cookie-urile _ga și _ga_* până la 2 ani în browserul tău. Google poate prelucra aceste date pe servere din afara Chile. Am dezactivat funcțiile de publicitate și Google Signals și nu folosim aceste date ca să îți arătăm reclame.</p>
       <p>Dacă atingi „Refuză” sau nu alegi nimic, Google Analytics nu se încarcă și nu se păstrează niciun cookie. Poți schimba oricând decizia cu butonul „Cookie-uri” de la finalul fiecărei pagini; dacă retragi acordul, ștergem aceste cookie-uri.</p>
-      <p>Alegerea ta este păstrată în browserul tău (stocare locală, netrimisă nimănui), ca să nu te mai întrebăm încă o dată.</p>
+      <p>Alegerea ta este păstrată în browserul tău (stocare locală, netrimisă nimănui), ca să nu te mai întrebăm încă o dată. Același spațiu de stocare păstrează limba pe care o alegi în josul paginii, ca site-ul să se deschidă în ea data viitoare. Pentru a arăta prețul Pro din țara ta, fiecare pagină îl întreabă pe Cloudflare, care oricum servește acest site, din ce țară vizitezi, sau folosește regiunea limbii browserului; acest răspuns nu este păstrat.</p>
 
       <h2>Achiziții</h2>
       <p>Când cumperi Mando TV Pro, plata este procesată de magazinul de aplicații (App Store, Google Play sau Microsoft Store). Nu primim și nu păstrăm datele cardului tău. Magazinul confirmă aplicației doar că achiziția există.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">În vigoare din 14 noiembrie 2026. U
       <p>Dacă ne scrii la <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, folosim adresa ta de e-mail și ce ne spui doar ca să îți răspundem. Nu le dăm mai departe și nu le folosim pentru publicitate. Poți cere oricând să ștergem mesajele tale.</p>
 
       <h2>Copii</h2>
-      <p>Aplicația nu colectează date de la nimeni, nici de la copii.</p>
+      <p>Aplicația nu colectează date personale de la nimeni, nici de la copii.</p>
 
       <h2>Modificări ale acestei politici</h2>
       <p>Dacă într-o zi se schimbă ceea ce face aplicația cu datele tale, actualizăm această pagină și data de mai sus înainte ca schimbarea să ajungă în aplicație.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV nu este comparată cu o anumită aplicație. Prețurile actuale se află pe pagina din magazin a fiecărei aplicații.'),
     extra=[
       ('Ce nu face Mando TV', 'Pe iPhone și iPad te duce la Oglindirea ecranului din Centrul de control, funcția iPhone-ului însuși, care merge cu televizoare cu AirPlay. Pe Windows deschide Cast (Windows + K), iar Mando TV Pro poate trimite ecranul PC-ului la televizoare LG, Samsung, Hisense și Android TV prin Wi-Fi (beta, cu o întârziere de câteva secunde și fără sunet). Cu Mando TV Pro poate trimite și fotografii și videoclipuri la televizor prin Wi-Fi. Controlează Smart TV-uri prin Wi-Fi-ul de acasă. Televizoarele fără funcție Smart TV pot fi controlate prin infraroșu de pe un telefon Android cu emițător de infraroșu. De la Android 9, telefonul se poate conecta și prin Bluetooth, ca tastatură și telecomandă, la Google TV, Android TV și Fire TV, fără Wi-Fi. Această opțiune este în versiunea beta și gratuită.'),
-      ('Cum câștigă bani Mando TV', 'Nu din reclame și nu din datele tale: aplicația nu colectează niciuna. Mando TV se finanțează prin Pro, o achiziție unică opțională pentru extra. Telecomanda de bază este gratuită.'),
+      ('Cum câștigă bani Mando TV', 'Nu din reclame și nu din datele tale: aplicația nu are reclame și nu te urmărește. Mando TV se finanțează prin Pro, o achiziție unică opțională pentru extra. Telecomanda de bază este gratuită.'),
       ('Pe dispozitivele pe care le ai deja', 'iPhone, iPad și Mac din App Store, PC-uri cu Windows din Microsoft Store și Android prin accesul anticipat gratuit de pe Google Play. Vezi [Aplicație telecomandă pentru iPhone](@iphone) și [Aplicație telecomandă pentru Windows](@windows).'),
       ('Confidențialitate', 'Fără cont și fără urmărire în aplicație. Comunicarea cu televizorul are loc doar în rețeaua locală, iar datele de conectare rămân criptate pe dispozitivul tău. Detalii în [Politica de confidențialitate](@privacidad).'),
     ],

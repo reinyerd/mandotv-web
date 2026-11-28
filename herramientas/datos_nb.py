@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Finne TV-en</h2>
 
 PRIVACIDAD = dict(
   titulo='Personvernerklæring | Mando TV',
-  desc='Mando TV samler ikke inn personopplysninger: ingen kontoer, ingen reklame, ingen sporere. Appen snakker bare med TV-en din innenfor Wi-Fi-nettverket ditt.',
+  desc='Mando TV ber ikke om konto eller personopplysninger: ingen reklame, ingen sporere. Fjernkontrollen snakker direkte med TV-en din innenfor Wi-Fi-nettverket ditt.',
   h1='Personvern',
-  intro='Kort sagt: Mando TV samler ikke inn dataene dine. Det finnes ingen kontoer, ingen reklame, ingen sporere og ingen egne servere som lagrer det du gjør.',
+  intro='Kort sagt: Mando TV ber ikke om konto eller personopplysninger. Det finnes ingen reklame og ingen sporere.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Gyldig fra 14. november 2026. Sist oppdatert 26. november 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Gyldig fra 14. november 2026. Sist oppdatert 28. november 2026.</p>
 
       <h2>Hvem vi er</h2>
       <p>Mando TV er en app som lar deg styre TV-en fra mobilen eller datamaskinen. Denne erklæringen beskriver hvilken informasjon appen bruker og hva den gjør med den. Har du spørsmål, skriv til oss på <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Hvilke data vi samler inn</h2>
-      <p>Appen: ingen. Appen sender verken informasjon om deg eller om hvordan du bruker den til oss eller til tredjeparter. Den bruker ingen analyse-, reklame- eller sporingsverktøy.</p>
+      <p>Appen: bare det som trengs for den gratis Pro-prøveperioden på Android og Windows, forklart i <a href="#prueba">Gratis Pro-prøveperiode</a>. Utover det sender appen verken informasjon om deg eller om hvordan du bruker den til oss eller til tredjeparter. Den bruker ingen analyse-, reklame- eller sporingsverktøy.</p>
       <p>Dette nettstedet: Vi måler besøk på to måter, som er forklart i avsnittet <a href="#cookies">Informasjonskapsler på dette nettstedet</a>.</p>
 
       <h2>Hva appen lagrer på enheten din</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gyldig fra 14. november 2026. Sist o
         <li>Tilkoblingsnøklene som hver TV utleverer når du bekrefter tillatelsen. De lagres kryptert i systemets sikre lagring (nøkkelring på iPhone og Mac, Keystore på Android, beskyttet lagring på Windows).</li>
         <li>Innstillingene dine: lyst eller mørkt tema, bakgrunnsfarge, vibrasjon og type fjernkontroll.</li>
         <li>Hvis du bruker Pro-funksjonene: favorittappene dine, rutinene dine og de siste YouTube-søkene dine (du kan slette dem i appen).</li>
+        <li>Hvis du bruker dem: barnemodus (PIN-koden lagres bare som en beskyttet kode) og fjernkontrollene andre har delt med deg.</li>
       </ul>
-      <p>Når du sletter appen, slettes alt dette sammen med den.</p>
+      <p>Når du sletter appen, slettes disse dataene sammen med den, med to unntak. På Android kan appens innstillinger (som TV-listen din og valgene dine) bli liggende i din egen Google-sikkerhetskopi hvis du bruker Googles sikkerhetskopiering, og komme tilbake når du installerer appen på nytt; tilkoblingsnøklene er aldri med. På iPhone og Mac ligger tilkoblingsnøklene i systemets nøkkelring og kan bli der etter at du har slettet appen.</p>
 
       <h2>Hvem appen snakker med</h2>
       <p>Med TV-ene dine, innenfor Wi-Fi-nettverket ditt hjemme. For å finne dem søker appen gjennom det lokale nettverket ditt; derfor ber den om tillatelsen «Lokalt nettverk» på en iPhone. Teksten du skriver med tastaturet i appen går direkte til TV-en og blir ikke lagret.</p>
-      <p>I tillegg laster appen ned en liten offentlig fil fra dette nettstedet når den åpnes (mandotv.app/app/config.json), for å finne ut om det finnes en ny versjon du bør installere og hvilke funksjoner som hører til Mando TV Pro. Det er en nedlasting, som når man åpner en side: Appen sender verken dataene dine, TV-ene dine eller det du gjør. Den oppgir bare appversjonen og systemet (for eksempel Android), slik at den kan vise deg riktig melding. Har du ikke internett, fortsetter appen med den sist nedlastede filen; går det mer enn 30 dager uten at den har kunnet lastes ned, ber appen deg om å koble til internett en kort stund.</p>
+      <p>I tillegg laster appen ned en liten offentlig fil fra dette nettstedet når den åpnes (mandotv.app/app/config.json), for å finne ut om det finnes en ny versjon du bør installere og hvilke funksjoner som hører til Mando TV Pro. Det er en nedlasting, som når man åpner en side: Appen sender verken dataene dine, TV-ene dine eller det du gjør. Den oppgir bare appversjonen og systemet (for eksempel Android), slik at den kan vise deg riktig melding. Har du ikke internett, fortsetter appen med den sist nedlastede filen; går det mer enn 30 dager uten at den har kunnet lastes ned, ber appen deg om å koble til internett en kort stund. Som ved ethvert nettstedsbesøk ser også nettstedleverandøren vår (Cloudflare) IP-adressen din ved den nedlastingen.</p>
 
-      <p>Når du sender bilder eller videoer til TV-en (en Pro-funksjon), laster TV-en bare ned filene du velger, direkte fra mobilen eller PC-en via Wi-Fi-nettverket ditt hjemme. De går verken via internett eller via oss, appen ser ikke de andre bildene dine, og delingen tar slutt så snart du lukker denne skjermen.</p>
+      <p>Når du sender bilder eller videoer til TV-en (en Pro-funksjon), laster TV-en bare ned filene du velger, direkte fra mobilen eller PC-en via Wi-Fi-nettverket ditt hjemme. De går verken via internett eller via oss, appen ser ikke de andre bildene dine, og delingen tar slutt så snart du lukker denne skjermen. Innenfor hjemmenettverket ditt er denne overføringen ikke kryptert.</p>
+      <p>Hvis du bruker «Vis skjermen min på TV-en» (en Pro-funksjon), tar appen opp skjermen din bare mens du speiler, koder den på enheten din og sender den over wifi hjemme direkte til TV-en du valgte. Den går verken over internett eller via oss, ingenting tas opp eller lagres, og den stopper når du stopper den eller lukker appen. TV-en viser alt som vises på den skjermen, også varsler, og innenfor hjemmenettverket ditt er strømmen ikke kryptert.</p>
+      <h2 id="prueba">Gratis Pro-prøveperiode (Android og Windows)</h2>
+      <p>For at den gratis Pro-prøveperioden bare skal kunne brukes én gang per enhet, sender appen én gang to ting til serveren vår (api.mandotv.app, hos Cloudflare) når den starter: et kryptert fingeravtrykk av identifikatoren systemet gir appen på den enheten (på Android appens egen Android-ID, på Windows enhets-ID-en for appene våre) og hvor lenge prøveperioden din har pågått. Fingeravtrykket avslører verken hvilken enhet det er eller hvem du er, og serveren krypterer det en gang til med sin egen nøkkel før det lagres.</p>
+      <p>Vi lagrer bare dette fingeravtrykket, datoen prøveperioden startet og om det er Android eller Windows. Vi lagrer ikke IP-adressen din (Cloudflare ser den mens den svarer, som ved enhver tilkobling). Vi bruker det bare for at ominstallering av appen ikke skal gi en ny prøveperiode. Det er forebygging av svindel og vår berettigede interesse; aldri til reklame eller for å følge deg, og vi deler det ikke med noen. Hver post slettes automatisk etter 24 måneder. Har du ikke internett, fungerer prøveperioden likevel. På iPhone og Mac sendes ingenting: App Store håndterer prøveperioden.</p>
+
       <h2>Mikrofon og tale</h2>
-      <p>På iPhone, Mac og Android bruker talesøket mikrofonen bare så lenge du trykker på snakkeknappen. Det du sier, gjøres om til tekst av systemets talegjenkjenning: av Apple på iPhone og Mac og av Google på Android, i begge tilfeller etter deres egne personvernvilkår. På Windows gjenkjennes talen på din egen PC og forlater ikke enheten; bare på svært gamle prosessorer bruker appen taleinndata fra Windows, fra Microsoft, etter deres personvernvilkår. På Windows åpnes mikrofonen når du åpner stemmepanelet og lukkes når du lukker det, eller etter 30 sekunder uten bruk; mens du ikke snakker, blir ingenting tatt opp eller lagret. Mando TV tar verken opp eller lagrer lyden, og teksten som oppstår går direkte til TV-en din, akkurat som det du skriver med tastaturet.</p>
+      <p>På iPhone, Mac og Android bruker talesøket mikrofonen bare så lenge du trykker på snakkeknappen. Det du sier, gjøres om til tekst av systemets talegjenkjenning: av Apple på iPhone og Mac og av Google på Android, i begge tilfeller etter deres egne personvernvilkår. På Windows gjenkjennes talen på din egen PC og forlater den ikke. Bare hvis den motoren på enheten ikke kan starte eller stadig feiler (for eksempel med en gammel prosessor eller uten talemodell), bruker appen Windows-diktering, fra Microsoft, som fungerer på nett hvis du har slått på talegjenkjenning på nett i Windows, etter Microsofts personvernerklæring. På Windows åpnes mikrofonen når du åpner stemmepanelet og lukkes når du lukker det, eller etter 30 sekunder uten bruk; mens du ikke snakker, blir ingenting tatt opp eller lagret. Mando TV tar verken opp eller lagrer lyden, og teksten som oppstår går direkte til TV-en din, akkurat som det du skriver med tastaturet.</p>
 
       <h2>Hjem: enheter fra Apple Home og Google Home</h2>
       <p>Når du åpner området Hjem (i test), ber appen om tillatelse til å se enhetene du allerede har i Apples Hjem-app (HomeKit) eller i Google Home. Med denne tillatelsen leser den navnet, rommet og tilstanden deres (på eller av, lysstyrke, temperatur eller hvor et hvitevare er i programmet sitt) for å vise dem og sende dem det du trykker på. Alt skjer mellom mobilen din og systemet til Apple eller Google: Mando TV lagrer ikke denne listen, sender den verken til oss eller til tredjeparter og bruker den hverken til reklame eller analyse. På Android fungerer Google Home med din egen Google-konto, etter Googles personvernerklæring. Du kan trekke tilbake tillatelsen når som helst: på iPhone under Innstillinger &gt; Personvern og sikkerhet &gt; HomeKit, på Android i innstillingene til Google-kontoen din.</p>
       <p>Når du trykker på «Hvordan fungerte Hjem for deg?», åpnes e-postappen din med en melding til hola@mandotv.app som inneholder et teknisk sammendrag: versjonen av appen, systemet og hvor mange enheter av hver type som dukket opp og om de reagerer. Navn på enheter, rom eller hjemmet ditt er ikke med, og meldingen sendes bare hvis du selv sender den.</p>
 
+      <h2>Lenker og tekster du deler</h2>
+      <p>Når du deler en fjernkontroll (en lenke mandotv.app/m/), inneholder lenken utseendet på fjernkontrollen og et hint for å finne TV-en din: navn, merke, modell og adresse i nettverket ditt. Den inneholder aldri tilkoblingsnøkler, PIN-koder eller TV-ens maskinvareadresse. Informasjonen ligger etter #-tegnet og når derfor aldri serverne våre, men alle du sender lenken til, for eksempel på WhatsApp, kan lese den. En delt rutine (en lenke mandotv.app/r/) inneholder bare navn og trinn.</p>
+      <p>Sikkerhetskopiteksten du kan kopiere i innstillingene i appen, inneholder favorittene, rutinene og innstillingene dine. Den er ikke kryptert og går bare dit du limer den inn.</p>
+
       <h2>Testrapport</h2>
-      <p>Appen har en knapp «Kopier testrapport» som hjelper oss med å rette feil. Rapporten blir bare i appens minne så lenge den er åpen, og sendes aldri av seg selv: Du bestemmer om du kopierer og deler den. Den inneholder ingen tilkoblingsnøkler, ingen paringskoder og ingenting av det du skriver inn; bare stegene appen har utført, som søk, tilkobling og feilene.</p>
+      <p>Appen har en knapp «Kopier testrapport» som hjelper oss med å rette feil. Rapporten blir bare i appens minne så lenge den er åpen, og sendes aldri av seg selv: Du bestemmer om du kopierer og deler den. Den inneholder ingen tilkoblingsnøkler, paringskoder eller noe du skriver. Den inneholder derimot trinnene appen har tatt, som søk, tilkobling og feil, og tekniske opplysninger: appversjonen, systemet ditt og merke, modell og adresse i nettverket ditt for TV-en din.</p>
 
       <h2 id="cookies">Informasjonskapsler på dette nettstedet</h2>
       <p>Dette gjelder bare nettstedet mandotv.app, ikke appen.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gyldig fra 14. november 2026. Sist o
       <h3>Med informasjonskapsler, bare hvis du samtykker</h3>
       <p>Når du trykker på «Godta» i informasjonskapselvarselet, slår vi på Google Analytics (fra Google LLC) for å forstå bedre hvordan nettstedet brukes: sidevisninger, tid på siden, enhetstype, omtrentlig by og hvor du kommer fra. For dette lagrer det informasjonskapslene _ga og _ga_* i opptil 2 år i nettleseren din. Google kan behandle disse dataene på servere utenfor Chile. Vi har slått av reklamefunksjonene og Google Signals og bruker ikke disse dataene til å vise deg reklame.</p>
       <p>Når du trykker på «Avslå» eller ikke velger noe, lastes ikke Google Analytics, og det lagres ingen informasjonskapsel. Du kan endre valget når som helst med knappen «Informasjonskapsler» nederst på hver side; når du trekker tilbake samtykket, sletter vi disse informasjonskapslene.</p>
-      <p>Valget ditt lagres i nettleseren din (lokal lagring, sendes ikke til noen), slik at vi ikke spør deg igjen.</p>
+      <p>Valget ditt lagres i nettleseren din (lokal lagring, sendes ikke til noen), slik at vi ikke spør deg igjen. Den samme lagringen husker språket du velger nederst på siden, slik at nettstedet åpnes på det neste gang. For å vise Pro-prisen i landet ditt spør hver side Cloudflare, som allerede leverer dette nettstedet, hvilket land du besøker fra, eller bruker regionen i nettleserspråket ditt; svaret lagres ikke.</p>
 
       <h2>Kjøp</h2>
       <p>Når du kjøper Mando TV Pro, håndteres betalingen av appbutikken (App Store, Google Play eller Microsoft Store). Vi mottar og lagrer ikke kortopplysningene dine. Butikken bekrefter bare overfor appen at kjøpet finnes.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Gyldig fra 14. november 2026. Sist o
       <p>Når du skriver til oss på <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, bruker vi e-postadressen din og det du forteller oss bare til å svare deg. Vi gir dem ikke videre og bruker dem ikke til reklame. Du kan når som helst kreve at vi sletter meldingene dine.</p>
 
       <h2>Barn</h2>
-      <p>Appen samler ikke inn data fra noen, heller ikke fra barn.</p>
+      <p>Appen samler ikke inn personopplysninger fra noen, heller ikke fra barn.</p>
 
       <h2>Endringer i denne erklæringen</h2>
       <p>Skulle det en dag endre seg hva appen gjør med dataene dine, oppdaterer vi denne siden og datoen øverst før endringen når appen.</p>
@@ -710,7 +720,7 @@ GUIAS += [
       nota='Mando TV sammenlignes ikke med noen bestemt app. De gjeldende prisene står på butikksiden til hver enkelt app.'),
     extra=[
       ('Hva Mando TV ikke gjør', 'På iPhone og iPad leder den deg til skjermdeling i Kontrollsenter, en funksjon i selve iPhone som fungerer med TV-er med AirPlay. På Windows åpner den Cast (Windows + K), og Mando TV Pro kan sende PC-skjermen til TV-er fra LG, Samsung, Hisense og Android TV via Wi-Fi-nettverket ditt (beta, med noen sekunders forsinkelse og uten lyd). Med Mando TV Pro kan den dessuten sende bilder og videoer til TV-en via Wi-Fi-nettverket ditt. Den styrer smart-TV-er via Wi-Fi hjemme. TV-er uten smartfunksjon kan styres med infrarød fra en Android-mobil med infrarød sender. Fra Android 9 kan mobilen også koble seg til Google TV, Android TV og Fire TV via Bluetooth som tastatur og fjernkontroll, helt uten Wi-Fi. Dette alternativet er i beta og gratis.'),
-      ('Hvordan Mando TV tjener penger', 'Ikke på reklame og ikke på dataene dine: Appen samler ikke inn noen. Mando TV finansieres av Pro, et valgfritt engangskjøp for ekstrafunksjoner. Den grunnleggende fjernkontrollen er gratis.'),
+      ('Hvordan Mando TV tjener penger', 'Ikke på reklame og ikke på dataene dine: Appen har ingen reklame og sporer deg ikke. Mando TV finansieres av Pro, et valgfritt engangskjøp for ekstrafunksjoner. Den grunnleggende fjernkontrollen er gratis.'),
       ('På enhetene du allerede har', 'iPhone, iPad og Mac fra App Store, Windows-PC-er fra Microsoft Store og Android via gratis tidlig tilgang på Google Play. Se [Fjernkontroll-app for iPhone](@iphone) og [Fjernkontroll-app for Windows](@windows).'),
       ('Personvern', 'Ingen konto og ingen sporing i appen. Kommunikasjonen med TV-en skjer bare i det lokale nettverket, tilkoblingsdataene blir kryptert på enheten din. Detaljer i [personvernvilkårene](@privacidad).'),
     ],

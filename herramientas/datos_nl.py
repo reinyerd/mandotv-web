@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">De tv vinden</h2>
 
 PRIVACIDAD = dict(
   titulo='Privacyverklaring | Mando TV',
-  desc='Mando TV verzamelt geen persoonsgegevens: geen accounts, geen advertenties, geen trackers. De app praat alleen met je tv binnen je wifi-netwerk.',
+  desc='Mando TV vraagt geen account en geen persoonsgegevens: geen advertenties, geen trackers. De afstandsbediening praat rechtstreeks met je tv binnen je wifi-netwerk.',
   h1='Privacy',
-  intro='Kort gezegd: Mando TV verzamelt je gegevens niet. Er zijn geen accounts, geen advertenties, geen trackers en geen eigen servers die opslaan wat je doet.',
+  intro='Kort gezegd: Mando TV vraagt geen account en geen persoonsgegevens. Er zijn geen advertenties en geen trackers.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laatst bijgewerkt op 26 november 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laatst bijgewerkt op 28 november 2026.</p>
 
       <h2>Wie we zijn</h2>
       <p>Mando TV is een app waarmee je je tv bedient vanaf je telefoon of computer. Deze verklaring beschrijft welke informatie de app gebruikt en wat ze ermee doet. Heb je vragen, schrijf ons dan naar <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Welke gegevens we verzamelen</h2>
-      <p>De app: geen. De app stuurt geen informatie over jou of over hoe je haar gebruikt naar ons of naar derden. Ze gebruikt geen analyse-, advertentie- of trackingtools.</p>
+      <p>De app: alleen wat nodig is voor de gratis Pro-proefperiode op Android en Windows, uitgelegd in <a href="#prueba">Gratis Pro-proefperiode</a>. Verder stuurt de app geen informatie over jou of over hoe je haar gebruikt naar ons of naar derden. Ze gebruikt geen analyse-, advertentie- of trackingtools.</p>
       <p>Deze website: we meten bezoeken op twee manieren, die worden uitgelegd in het gedeelte <a href="#cookies">Cookies op deze website</a>.</p>
 
       <h2>Wat de app op je apparaat opslaat</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laats
         <li>De verbindingssleutels die elke tv doorgeeft als je de toestemming bevestigt. Ze worden versleuteld opgeslagen in de beveiligde opslag van het systeem (sleutelhanger op iPhone en Mac, Keystore op Android, beschermde opslag op Windows).</li>
         <li>Je instellingen: licht of donker thema, achtergrondkleur, trillen en type afstandsbediening.</li>
         <li>Als je de Pro-functies gebruikt: je favoriete apps, je routines en je laatste YouTube-zoekopdrachten (je kunt ze in de app wissen).</li>
+        <li>Als je ze gebruikt: de kindermodus (de pincode wordt alleen als beschermde code bewaard) en de afstandsbedieningen die anderen met je hebben gedeeld.</li>
       </ul>
-      <p>Als je de app verwijdert, wordt dit allemaal samen met de app gewist.</p>
+      <p>Als je de app verwijdert, wordt deze data samen met de app gewist, met twee uitzonderingen. Op Android kunnen de voorkeuren van de app (zoals je tv-lijst en instellingen) in je eigen Google-back-up blijven als je de back-up van Google gebruikt, en terugkomen als je de app opnieuw installeert; de verbindingssleutels maken daar nooit deel van uit. Op iPhone en Mac staan de verbindingssleutels in de sleutelhanger van het systeem en kunnen die daar blijven staan nadat je de app hebt verwijderd.</p>
 
       <h2>Met wie de app praat</h2>
       <p>Met je tv’s, binnen je wifi-netwerk thuis. Om ze te vinden doorzoekt de app je lokale netwerk; daarom vraagt ze op een iPhone om toestemming voor “Lokaal netwerk”. De tekst die je met het toetsenbord van de app typt, gaat rechtstreeks naar de tv en wordt niet opgeslagen.</p>
-      <p>Bovendien downloadt de app bij het openen een klein openbaar bestand van deze website (mandotv.app/app/config.json), om te weten of er een nieuwe versie is die je moet installeren en welke functies bij Mando TV Pro horen. Dat is een download, zoals wanneer je een pagina opent: de app stuurt noch je gegevens, noch je tv’s, noch wat je doet. Ze geeft alleen de appversie en het systeem door (bijvoorbeeld Android), zodat ze je de juiste melding kan tonen. Heb je geen internet, dan werkt de app verder met het laatst gedownloade bestand; gaan er meer dan 30 dagen voorbij zonder dat het kon worden gedownload, dan vraagt de app je even verbinding te maken met internet.</p>
+      <p>Bovendien downloadt de app bij het openen een klein openbaar bestand van deze website (mandotv.app/app/config.json), om te weten of er een nieuwe versie is die je moet installeren en welke functies bij Mando TV Pro horen. Dat is een download, zoals wanneer je een pagina opent: de app stuurt noch je gegevens, noch je tv’s, noch wat je doet. Ze geeft alleen de appversie en het systeem door (bijvoorbeeld Android), zodat ze je de juiste melding kan tonen. Heb je geen internet, dan werkt de app verder met het laatst gedownloade bestand; gaan er meer dan 30 dagen voorbij zonder dat het kon worden gedownload, dan vraagt de app je even verbinding te maken met internet. Zoals bij elk websitebezoek ziet ook onze websiteprovider (Cloudflare) bij die download je IP-adres.</p>
 
-      <p>Als je foto’s of video’s naar de tv stuurt (een Pro-functie), laadt de tv alleen de bestanden die je kiest, rechtstreeks van je telefoon of pc via je wifi thuis. Ze gaan niet via internet en niet via ons, de app ziet je overige foto’s niet, en het delen eindigt zodra je dit scherm sluit.</p>
+      <p>Als je foto’s of video’s naar de tv stuurt (een Pro-functie), laadt de tv alleen de bestanden die je kiest, rechtstreeks van je telefoon of pc via je wifi thuis. Ze gaan niet via internet en niet via ons, de app ziet je overige foto’s niet, en het delen eindigt zodra je dit scherm sluit. Binnen je thuisnetwerk is deze overdracht niet versleuteld.</p>
+      <p>Als je “Mijn scherm op de tv tonen” gebruikt (een Pro-functie), legt de app je scherm alleen vast zolang je spiegelt, codeert het op je toestel en stuurt het via je wifi thuis rechtstreeks naar de tv die je hebt gekozen. Het gaat niet via internet of via ons, er wordt niets opgenomen of bewaard, en het stopt als je het stopt of de app sluit. De tv toont alles wat op dat scherm verschijnt, ook meldingen, en binnen je thuisnetwerk is de stream niet versleuteld.</p>
+      <h2 id="prueba">Gratis Pro-proefperiode (Android en Windows)</h2>
+      <p>Zodat de gratis Pro-proefperiode maar één keer per apparaat kan, stuurt de app bij de start eenmalig twee dingen naar onze server (api.mandotv.app, bij Cloudflare): een versleutelde vingerafdruk van de identificatie die het systeem de app op dat apparaat geeft (op Android het eigen Android-ID van de app, op Windows de apparaat-ID voor onze apps) en hoe lang je proefperiode al loopt. De vingerafdruk laat niet zien welk apparaat het is of wie je bent, en de server versleutelt hem nog eens met een eigen sleutel voordat hij wordt opgeslagen.</p>
+      <p>We bewaren alleen die vingerafdruk, de startdatum van de proefperiode en of het Android of Windows is. Je IP-adres bewaren we niet (Cloudflare ziet het terwijl het antwoordt, zoals bij elke verbinding). We gebruiken dit alleen zodat opnieuw installeren van de app geen nieuwe proefperiode oplevert; dat is fraudepreventie en ons gerechtvaardigd belang. Nooit voor advertenties of om je te volgen, en we delen het met niemand. Elk record wordt na 24 maanden automatisch verwijderd. Heb je geen internet, dan werkt de proefperiode toch. Op iPhone en Mac wordt niets verstuurd: de App Store regelt de proefperiode.</p>
+
       <h2>Microfoon en spraak</h2>
-      <p>Op iPhone, Mac en Android gebruikt het spraakzoeken de microfoon alleen zolang je op de spreekknop tikt. Wat je zegt, wordt door de spraakherkenning van je systeem omgezet in tekst: door Apple op iPhone en Mac en door Google op Android, telkens volgens hun eigen privacyvoorwaarden. Op Windows wordt de spraak op je eigen pc herkend en verlaat het apparaat niet; alleen op zeer oude processors gebruikt de app de spraakinvoer van Windows, van Microsoft, volgens hun privacyvoorwaarden. Op Windows gaat de microfoon open wanneer je het spraakpaneel opent en dicht wanneer je het sluit, of na 30 seconden zonder gebruik; zolang je niet spreekt, wordt er niets opgenomen of opgeslagen. Mando TV neemt de audio niet op en slaat hem niet op, en de ontstane tekst gaat rechtstreeks naar je tv, precies zoals wat je met het toetsenbord typt.</p>
+      <p>Op iPhone, Mac en Android gebruikt het spraakzoeken de microfoon alleen zolang je op de spreekknop tikt. Wat je zegt, wordt door de spraakherkenning van je systeem omgezet in tekst: door Apple op iPhone en Mac en door Google op Android, telkens volgens hun eigen privacyvoorwaarden. Op Windows wordt de spraak op je eigen pc herkend en verlaat die niet. Alleen als die engine op het apparaat niet kan starten of steeds faalt (bijvoorbeeld door een oude processor of een ontbrekend spraakmodel), gebruikt de app de spraakinvoer van Windows, van Microsoft, die online werkt als je online spraakherkenning in Windows hebt aangezet, volgens het privacybeleid van Microsoft. Op Windows gaat de microfoon open wanneer je het spraakpaneel opent en dicht wanneer je het sluit, of na 30 seconden zonder gebruik; zolang je niet spreekt, wordt er niets opgenomen of opgeslagen. Mando TV neemt de audio niet op en slaat hem niet op, en de ontstane tekst gaat rechtstreeks naar je tv, precies zoals wat je met het toetsenbord typt.</p>
 
       <h2>Thuis: apparaten uit Apple Home en Google Home</h2>
       <p>Als je het onderdeel Thuis (in test) opent, vraagt de app om toestemming de apparaten te zien die je al hebt in de Woning-app van Apple (HomeKit) of in Google Home. Met die toestemming leest ze hun naam, hun ruimte en hun status (aan of uit, helderheid, temperatuur of op welk punt van zijn programma een huishoudapparaat zit) om ze te tonen en door te geven wat je aantikt. Alles gebeurt tussen je telefoon en het systeem van Apple of Google: Mando TV slaat deze lijst niet op, stuurt hem niet naar ons of naar derden en gebruikt hem niet voor advertenties of analyses. Op Android werkt Google Home met je eigen Google-account, volgens de privacyverklaring van Google. Je kunt de toestemming op elk moment intrekken: op de iPhone onder Instellingen &gt; Privacy en beveiliging &gt; HomeKit, op Android in de instellingen van je Google-account.</p>
       <p>Als je tikt op “Hoe werkte Thuis bij jou?”, opent je e-mailapp met een bericht aan hola@mandotv.app dat een technische samenvatting bevat: de versie van de app, het systeem en hoeveel apparaten van elk type zijn verschenen en of ze reageren. Namen van apparaten, ruimtes of van je huis zitten er niet in, en het bericht wordt alleen verstuurd als je het zelf verzendt.</p>
 
+      <h2>Links en teksten die je deelt</h2>
+      <p>Als je een afstandsbediening deelt (een link mandotv.app/m/), bevat de link het ontwerp van de afstandsbediening en een hint om je tv te vinden: naam, merk, model en adres in je netwerk. Er staan nooit verbindingssleutels, pincodes of het hardwareadres van de tv in. Die gegevens staan achter het #-teken en bereiken dus nooit onze servers, maar iedereen naar wie je de link stuurt, bijvoorbeeld via WhatsApp, kan ze lezen. Een gedeelde routine (een link mandotv.app/r/) bevat alleen de naam en de stappen.</p>
+      <p>De back-uptekst die je in de instellingen van de app kunt kopiëren, bevat je favorieten, routines en instellingen. Hij is niet versleuteld en gaat alleen naar de plek waar je hem plakt.</p>
+
       <h2>Testrapport</h2>
-      <p>De app heeft een knop “Testrapport kopiëren” die ons helpt fouten op te lossen. Het rapport blijft alleen in het geheugen van de app zolang ze openstaat en wordt nooit uit zichzelf verstuurd: jij beslist of je het kopieert en deelt. Het bevat geen verbindingssleutels, geen koppelcodes en niets wat je invoert; alleen de stappen die de app heeft uitgevoerd, zoals zoeken, verbinden en de fouten.</p>
+      <p>De app heeft een knop “Testrapport kopiëren” die ons helpt fouten op te lossen. Het rapport blijft alleen in het geheugen van de app zolang ze openstaat en wordt nooit uit zichzelf verstuurd: jij beslist of je het kopieert en deelt. Het bevat geen verbindingssleutels, koppelcodes of wat je typt. Wel bevat het de stappen die de app deed, zoals zoeken, verbinden en de fouten, en technische gegevens: de appversie, je systeem, en het merk, model en adres in je netwerk van je tv.</p>
 
       <h2 id="cookies">Cookies op deze website</h2>
       <p>Dit geldt alleen voor de website mandotv.app, niet voor de app.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laats
       <h3>Met cookies, alleen als je toestemming geeft</h3>
       <p>Als je in de cookiemelding op “Accepteren” tikt, activeren we Google Analytics (van Google LLC) om beter te begrijpen hoe de website wordt gebruikt: paginaweergaven, bezoekduur, soort apparaat, ongeveer de stad en waar je vandaan komt. Daarvoor slaat het de cookies _ga en _ga_* tot 2 jaar op in je browser. Google kan deze gegevens verwerken op servers buiten Chili. We hebben de advertentiefuncties en Google Signals uitgeschakeld en gebruiken deze gegevens niet om je advertenties te tonen.</p>
       <p>Als je op “Weigeren” tikt of niets kiest, wordt Google Analytics niet geladen en wordt er geen cookie opgeslagen. Je kunt je keuze op elk moment wijzigen met de knop “Cookies” onderaan elke pagina; als je de toestemming intrekt, wissen we deze cookies.</p>
-      <p>Je keuze wordt opgeslagen in je browser (lokale opslag, aan niemand verstuurd), zodat we het je niet nog een keer vragen.</p>
+      <p>Je keuze wordt opgeslagen in je browser (lokale opslag, aan niemand verstuurd), zodat we het je niet nog een keer vragen. Dezelfde opslag bewaart de taal die je onderaan de pagina kiest, zodat de site de volgende keer in die taal opent. Om de Pro-prijs van je land te tonen, vraagt elke pagina aan Cloudflare, dat deze site al levert, uit welk land je bezoekt, of gebruikt ze de regio van je browsertaal; dat antwoord wordt niet bewaard.</p>
 
       <h2>Aankopen</h2>
       <p>Als je Mando TV Pro koopt, wordt de betaling afgehandeld door de appstore (App Store, Google Play of Microsoft Store). Wij ontvangen en bewaren je kaartgegevens niet. De store bevestigt de app alleen dat de aankoop bestaat.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Geldig sinds 14 november 2026. Laats
       <p>Als je ons schrijft naar <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, gebruiken we je e-mailadres en wat je ons meedeelt alleen om je te antwoorden. We geven ze niet door en gebruiken ze niet voor reclame. Je kunt op elk moment vragen dat we je berichten wissen.</p>
 
       <h2>Kinderen</h2>
-      <p>De app verzamelt van niemand gegevens, ook niet van kinderen.</p>
+      <p>De app verzamelt van niemand persoonsgegevens, ook niet van kinderen.</p>
 
       <h2>Wijzigingen in deze verklaring</h2>
       <p>Mocht op een dag veranderen wat de app met je gegevens doet, dan werken we deze pagina en de datum bovenaan bij voordat de wijziging de app bereikt.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV wordt met geen enkele specifieke app vergeleken. De actuele prijzen staan op de storepagina van de betreffende app.'),
     extra=[
       ('Wat Mando TV niet doet', 'Op iPhone en iPad verwijst het je naar Schermspiegeling in het Control Center, de functie van de iPhone zelf, die werkt met tv’s met AirPlay. Op Windows opent het Casten (Windows + K), en Mando TV Pro kan het pc-scherm via je wifi naar tv’s van LG, Samsung, Hisense en Android TV sturen (bèta, met enkele seconden vertraging en zonder geluid). Met Mando TV Pro kan het bovendien foto’s en video’s via je wifi naar de tv sturen. Het bedient Smart-tv’s via het wifi-netwerk thuis. Tv’s zonder Smart-tv-functie kun je met een Android-telefoon met infraroodzender via infrarood bedienen. Vanaf Android 9 kan de telefoon ook via Bluetooth als toetsenbord en afstandsbediening verbinding maken met Google TV, Android TV en Fire TV, helemaal zonder wifi. Deze optie is in de bèta en gratis.'),
-      ('Hoe Mando TV geld verdient', 'Niet met advertenties en niet met jouw gegevens: de app verzamelt er geen. Mando TV wordt gefinancierd door Pro, een optionele eenmalige aankoop voor extra’s. De basisafstandsbediening is gratis.'),
+      ('Hoe Mando TV geld verdient', 'Niet met advertenties en niet met jouw gegevens: de app heeft geen advertenties en volgt je niet. Mando TV wordt gefinancierd door Pro, een optionele eenmalige aankoop voor extra’s. De basisafstandsbediening is gratis.'),
       ('Op de apparaten die je al hebt', 'iPhone, iPad en Mac uit de App Store, Windows-pc’s uit de Microsoft Store en Android via gratis vroege toegang op Google Play. Zie [Afstandsbediening-app voor iPhone](@iphone) en [Afstandsbediening-app voor Windows](@windows).'),
       ('Privacy', 'Geen account en geen tracking in de app. De communicatie met de tv vindt alleen plaats in het lokale netwerk, de verbindingsgegevens blijven versleuteld op je apparaat. Details in de [privacyverklaring](@privacidad).'),
     ],

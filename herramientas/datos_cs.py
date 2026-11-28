@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Nalezení televize</h2>
 
 PRIVACIDAD = dict(
   titulo='Zásady ochrany osobních údajů | Mando TV',
-  desc='Mando TV neshromažďuje osobní údaje: žádné účty, žádné reklamy, žádné sledovače. Aplikace komunikuje jen s vaší televizí uvnitř vaší sítě Wi-Fi.',
+  desc='Mando TV nevyžaduje účet ani osobní údaje: žádné reklamy, žádné sledovače. Ovladač komunikuje s vaší televizí přímo uvnitř vaší sítě Wi-Fi.',
   h1='Ochrana soukromí',
-  intro='Stručně: Mando TV vaše údaje neshromažďuje. Neexistují žádné účty, žádné reklamy, žádné sledovače ani vlastní servery, které by ukládaly, co děláte.',
+  intro='Stručně: Mando TV nevyžaduje účet ani osobní údaje. Neexistují žádné reklamy ani sledovače.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Naposledy aktualizováno 26. listopadu 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Naposledy aktualizováno 28. listopadu 2026.</p>
 
       <h2>Kdo jsme</h2>
       <p>Mando TV je aplikace, kterou ovládáte televizi z telefonu nebo počítače. Tyto zásady popisují, jaké informace aplikace používá a co s nimi dělá. S dotazy nám napište na <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Jaké údaje shromažďujeme</h2>
-      <p>Aplikace: žádné. Aplikace nám ani třetím stranám neposílá informace o vás ani o tom, jak ji používáte. Nepoužívá žádné analytické, reklamní ani sledovací nástroje.</p>
+      <p>Aplikace: jen to, co je potřeba pro bezplatnou zkušební dobu Pro na Androidu a ve Windows, popsanou v části <a href="#prueba">Bezplatná zkušební doba Pro</a>. Kromě toho nám ani třetím stranám aplikace neposílá informace o vás ani o tom, jak ji používáte. Nepoužívá žádné analytické, reklamní ani sledovací nástroje.</p>
       <p>Tento web: návštěvy měříme dvěma způsoby, které jsou vysvětleny v části <a href="#cookies">Soubory cookie na tomto webu</a>.</p>
 
       <h2>Co aplikace ukládá ve vašem zařízení</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Napos
         <li>Klíče připojení, které každá televize předá, když potvrdíte povolení. Ukládají se šifrovaně v zabezpečeném úložišti systému (Klíčenka na iPhonu a Macu, Keystore v Androidu, chráněné úložiště ve Windows).</li>
         <li>Vaše nastavení: světlý nebo tmavý motiv, barvu pozadí, vibrace a typ ovladače.</li>
         <li>Pokud používáte funkce Pro: oblíbené aplikace, rutiny a poslední hledání v YouTube (v aplikaci je můžete smazat).</li>
+        <li>Pokud je používáte: dětský režim (PIN se ukládá jen jako chráněný kód) a ovladače, které s vámi sdíleli jiní lidé.</li>
       </ul>
-      <p>Když aplikaci smažete, smaže se s ní všechno výše uvedené.</p>
+      <p>Když aplikaci smažete, smažou se s ní i tato data, až na dvě výjimky. V Androidu mohou předvolby aplikace (například seznam vašich televizí a nastavení) zůstat ve vaší vlastní záloze Google, pokud zálohování Google používáte, a vrátit se po opětovné instalaci aplikace; klíče připojení v ní nikdy nejsou. V iPhonu a Macu jsou klíče připojení uložené v systémové Klíčence a mohou tam po smazání aplikace zůstat.</p>
 
       <h2>S kým aplikace komunikuje</h2>
       <p>S vašimi televizemi, uvnitř vaší domácí sítě Wi-Fi. Aby je našla, prohledává aplikace vaši místní síť; proto na iPhonu žádá o oprávnění „Místní síť“. Text, který zadáváte na klávesnici aplikace, jde přímo do televize a neukládá se.</p>
-      <p>Aplikace navíc při otevření stáhne z tohoto webu malý veřejný soubor (mandotv.app/app/config.json), aby zjistila, zda existuje nová verze, kterou byste si měli nainstalovat, a které funkce patří do Mando TV Pro. Je to stažení, jako když otevřete stránku: aplikace neodesílá vaše údaje, vaše televize ani to, co děláte. Uvádí jen verzi aplikace a systém (například Android), aby vám mohla zobrazit správné upozornění. Pokud nemáte internet, aplikace pracuje dál s posledním staženým souborem; pokud uplyne více než 30 dní, aniž by se ho podařilo stáhnout, požádá vás, abyste se krátce připojili k internetu.</p>
+      <p>Aplikace navíc při otevření stáhne z tohoto webu malý veřejný soubor (mandotv.app/app/config.json), aby zjistila, zda existuje nová verze, kterou byste si měli nainstalovat, a které funkce patří do Mando TV Pro. Je to stažení, jako když otevřete stránku: aplikace neodesílá vaše údaje, vaše televize ani to, co děláte. Uvádí jen verzi aplikace a systém (například Android), aby vám mohla zobrazit správné upozornění. Pokud nemáte internet, aplikace pracuje dál s posledním staženým souborem; pokud uplyne více než 30 dní, aniž by se ho podařilo stáhnout, požádá vás, abyste se krátce připojili k internetu. Stejně jako při každé návštěvě webu vidí při tomto stažení vaši IP adresu i poskytovatel našeho webu (Cloudflare).</p>
 
-      <p>Pokud do televize odesíláte fotografie nebo videa (funkce Pro), televize stahuje jen soubory, které vyberete, přímo z vašeho telefonu nebo počítače přes domácí Wi-Fi. Neprocházejí internetem ani námi, aplikace nevidí vaše ostatní fotografie a sdílení skončí, jakmile tuto obrazovku zavřete.</p>
+      <p>Pokud do televize odesíláte fotografie nebo videa (funkce Pro), televize stahuje jen soubory, které vyberete, přímo z vašeho telefonu nebo počítače přes domácí Wi-Fi. Neprocházejí internetem ani námi, aplikace nevidí vaše ostatní fotografie a sdílení skončí, jakmile tuto obrazovku zavřete. Uvnitř vaší domácí sítě tento přenos není šifrovaný.</p>
+      <p>Pokud používáte funkci „Zobrazit mou obrazovku v televizoru“ (funkce Pro), aplikace zachycuje vaši obrazovku jen po dobu zrcadlení, kóduje ji ve vašem zařízení a posílá ji přes vaši domácí Wi-Fi přímo do televize, kterou jste vybrali. Nejde přes internet ani přes nás, nic se nenahrává ani neukládá a zrcadlení skončí, když ho zastavíte nebo aplikaci zavřete. Televize ukazuje všechno, co se na té obrazovce objeví, včetně oznámení, a uvnitř vaší domácí sítě není přenos šifrovaný.</p>
+      <h2 id="prueba">Bezplatná zkušební doba Pro (Android a Windows)</h2>
+      <p>Aby bezplatná zkušební doba Pro byla jen jedna na zařízení, aplikace při jejím začátku jednou odešle na náš server (api.mandotv.app, u Cloudflare) dvě věci: šifrovaný otisk identifikátoru, který systém přidělí aplikaci na tomto zařízení (v Androidu vlastní identifikátor Android aplikace, ve Windows identifikátor zařízení pro naše aplikace), a jak dlouho už vaše zkušební doba běží. Otisk neprozradí, o jaké zařízení jde ani kdo jste, a server jej před uložením znovu zašifruje vlastním klíčem.</p>
+      <p>Ukládáme jen tento otisk, datum začátku zkušební doby a to, zda jde o Android, nebo Windows. Vaši IP adresu neukládáme (Cloudflare ji vidí při odpovídání, jako u každého spojení). Používáme to jen proto, aby přeinstalování aplikace nedalo další zkušební dobu, tedy k prevenci podvodů, což je náš oprávněný zájem; nikdy k reklamě ani k tomu, abychom vás sledovali, a s nikým to nesdílíme. Každý záznam se po 24 měsících sám smaže. Bez internetu zkušební doba funguje i tak. Na iPhonu a Macu se neodesílá nic: zkušební dobu řeší App Store.</p>
+
       <h2>Mikrofon a hlas</h2>
-      <p>Na iPhonu, Macu a v Androidu hlasové vyhledávání používá mikrofon jen po dobu, kdy držíte tlačítko pro mluvení. To, co řeknete, převádí na text rozpoznávání řeči vašeho systému: společnost Apple na iPhonu a Macu a společnost Google v Androidu, vždy podle jejich vlastních zásad ochrany soukromí. Ve Windows se řeč rozpoznává přímo ve vašem počítači a zařízení neopouští; jen u velmi starých procesorů aplikace používá hlasový vstup Windows od společnosti Microsoft, podle jejích zásad ochrany soukromí. Ve Windows se mikrofon zapne, když otevřete hlasový panel, a vypne se, když ho zavřete, nebo po 30 sekundách nepoužívání; dokud nemluvíte, nic se nenahrává ani neukládá. Mando TV zvuk nenahrává ani neukládá a výsledný text jde přímo do vaší televize, stejně jako to, co píšete na klávesnici.</p>
+      <p>Na iPhonu, Macu a v Androidu hlasové vyhledávání používá mikrofon jen po dobu, kdy držíte tlačítko pro mluvení. To, co řeknete, převádí na text rozpoznávání řeči vašeho systému: společnost Apple na iPhonu a Macu a společnost Google v Androidu, vždy podle jejich vlastních zásad ochrany soukromí. Ve Windows se řeč rozpoznává přímo ve vašem počítači a zařízení neopouští. Jen pokud tento modul v zařízení nemůže naběhnout nebo opakovaně selhává (například kvůli starému procesoru nebo chybějícímu hlasovému modelu), použije aplikace hlasový vstup Windows od společnosti Microsoft, který funguje online, pokud máte ve Windows zapnuté online rozpoznávání řeči, podle jejích zásad ochrany soukromí. Ve Windows se mikrofon zapne, když otevřete hlasový panel, a vypne se, když ho zavřete, nebo po 30 sekundách nepoužívání; dokud nemluvíte, nic se nenahrává ani neukládá. Mando TV zvuk nenahrává ani neukládá a výsledný text jde přímo do vaší televize, stejně jako to, co píšete na klávesnici.</p>
 
       <h2>Domácnost: zařízení z Apple Home a Google Home</h2>
       <p>Když otevřete oddíl Domácnost (ve zkušebním provozu), aplikace požádá o povolení zobrazit zařízení, která už máte v aplikaci Domácnost od Applu (HomeKit) nebo v Google Home. S tímto povolením čte jejich název, místnost a stav (zapnuto nebo vypnuto, jas, teplota nebo v jaké fázi programu je spotřebič), aby je zobrazila a odeslala jim to, na co klepnete. Všechno probíhá mezi vaším telefonem a systémem Applu nebo Googlu: Mando TV tento seznam neukládá, neposílá ho nám ani třetím stranám a nepoužívá ho k reklamě ani k analýzám. V Androidu funguje Google Home s vaším vlastním účtem Google, podle zásad ochrany soukromí Googlu. Povolení můžete kdykoli odebrat: na iPhonu v Nastavení &gt; Soukromí a zabezpečení &gt; HomeKit, v Androidu v nastavení svého účtu Google.</p>
       <p>Když klepnete na „Jak vám Domácnost fungovala?“, otevře se vaše e-mailová aplikace se zprávou pro hola@mandotv.app, která obsahuje technické shrnutí: verzi aplikace, systém a kolik zařízení každého druhu se zobrazilo a zda reagují. Názvy zařízení, místností ani vaší domácnosti v něm nejsou a zpráva se odešle, jen když ji sami odešlete.</p>
 
+      <h2>Odkazy a texty, které sdílíte</h2>
+      <p>Když sdílíte ovladač (odkaz mandotv.app/m/), odkaz obsahuje vzhled ovladače a nápovědu, jak najít vaši televizi: její název, značku, model a adresu ve vaší síti. Nikdy neobsahuje klíče připojení, kódy PIN ani hardwarovou adresu televize. Tyto informace jsou za znakem #, takže se nikdy nedostanou na naše servery, ale může si je přečíst každý, komu odkaz pošlete, například přes WhatsApp. Sdílená rutina (odkaz mandotv.app/r/) obsahuje jen název a kroky.</p>
+      <p>Text zálohy, který můžete zkopírovat v nastavení aplikace, obsahuje vaše oblíbené, rutiny a nastavení. Není šifrovaný a jde jen tam, kam ho vložíte.</p>
+
       <h2>Testovací zpráva</h2>
-      <p>Aplikace má tlačítko „Kopírovat testovací zprávu“, které nám pomáhá opravovat chyby. Zpráva zůstává jen v paměti aplikace, dokud je otevřená, a nikdy se neodesílá sama: rozhodujete vy, zda ji zkopírujete a sdílíte. Neobsahuje klíče připojení, párovací kódy ani nic, co zadáváte; jen kroky, které aplikace provedla, jako je hledání, připojování a chyby.</p>
+      <p>Aplikace má tlačítko „Kopírovat testovací zprávu“, které nám pomáhá opravovat chyby. Zpráva zůstává jen v paměti aplikace, dokud je otevřená, a nikdy se neodesílá sama: rozhodujete vy, zda ji zkopírujete a sdílíte. Neobsahuje klíče připojení, párovací kódy ani nic, co píšete. Obsahuje však kroky, které aplikace provedla, například hledání, připojování a chyby, a technické údaje: verzi aplikace, váš systém a značku, model a adresu vaší televize ve vaší síti.</p>
 
       <h2 id="cookies">Soubory cookie na tomto webu</h2>
       <p>Týká se to jen webu mandotv.app, ne aplikace.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Napos
       <h3>Se soubory cookie, jen pokud souhlasíte</h3>
       <p>Pokud v upozornění na soubory cookie klepnete na „Přijmout“, zapneme Google Analytics (od společnosti Google LLC), abychom lépe porozuměli tomu, jak se web používá: zobrazení stránek, dobu návštěvy, typ zařízení, přibližné město a odkud přicházíte. K tomu ve vašem prohlížeči ukládá soubory cookie _ga a _ga_* až na 2 roky. Google může tyto údaje zpracovávat na serverech mimo Chile. Reklamní funkce a Google Signals jsme vypnuli a tyto údaje nepoužíváme k zobrazování reklam.</p>
       <p>Pokud klepnete na „Odmítnout“ nebo nevyberete nic, Google Analytics se nenačte a neuloží se žádný soubor cookie. Své rozhodnutí můžete kdykoli změnit tlačítkem „Cookies“ na konci každé stránky; pokud souhlas odvoláte, tyto soubory cookie smažeme.</p>
-      <p>Vaše volba se uloží ve vašem prohlížeči (místní úložiště, nikomu se neodesílá), abychom se vás znovu neptali.</p>
+      <p>Vaše volba se uloží ve vašem prohlížeči (místní úložiště, nikomu se neodesílá), abychom se vás znovu neptali. Stejné úložiště uchovává i jazyk, který zvolíte dole na stránce, aby se web příště otevřel v něm. Aby se zobrazila cena Pro ve vaší zemi, každá stránka se ptá Cloudflare, který tento web stejně obsluhuje, z jaké země ji navštěvujete, nebo použije oblast jazyka prohlížeče; tuto odpověď neukládá.</p>
 
       <h2>Nákupy</h2>
       <p>Když si koupíte Mando TV Pro, platbu zpracovává obchod s aplikacemi (App Store, Google Play nebo Microsoft Store). Údaje o vaší kartě nepřijímáme ani neukládáme. Obchod aplikaci jen potvrdí, že nákup existuje.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Platné od 14. listopadu 2026. Napos
       <p>Když nám napíšete na <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, použijeme vaši e-mailovou adresu a to, co nám sdělíte, jen k tomu, abychom vám odpověděli. Nesdílíme je a nepoužíváme je k reklamě. Můžete kdykoli požádat o smazání svých zpráv.</p>
 
       <h2>Děti</h2>
-      <p>Aplikace neshromažďuje údaje o nikom, ani o dětech.</p>
+      <p>Aplikace neshromažďuje osobní údaje o nikom, ani o dětech.</p>
 
       <h2>Změny těchto zásad</h2>
       <p>Pokud se jednoho dne změní to, co aplikace dělá s vašimi údaji, aktualizujeme tuto stránku a datum nahoře dříve, než změna do aplikace dorazí.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV nesrovnáváme s žádnou konkrétní aplikací. Aktuální ceny najdete na stránce dané aplikace v obchodě.'),
     extra=[
       ('Co Mando TV nedělá', 'Na iPhonu a iPadu vás nasměruje na Zrcadlení obrazovky v Ovládacím centru, funkci samotného iPhonu, která funguje s televizemi s AirPlay. Ve Windows otevře Vysílat (Windows + K) a Mando TV Pro dokáže odesílat obrazovku počítače přes vaši Wi-Fi na televize LG, Samsung, Hisense a Android TV (beta, s několikavteřinovým zpožděním a bez zvuku). S Mando TV Pro dokáže také odesílat fotografie a videa do televize přes Wi-Fi. Ovládá chytré televize přes domácí Wi-Fi. Televize bez chytrých funkcí lze ovládat z telefonu s Androidem s infračerveným vysílačem pomocí infračerveného signálu. Od Androidu 9 se telefon může k Google TV, Android TV a Fire TV připojit také přes Bluetooth jako klávesnice a ovladač, zcela bez Wi-Fi. Tato možnost je v betě a zdarma.'),
-      ('Jak Mando TV vydělává', 'Ne reklamami a ne vašimi údaji: aplikace žádné neshromažďuje. Mando TV se financuje z Pro, volitelného jednorázového nákupu za doplňky. Základní ovladač je zdarma.'),
+      ('Jak Mando TV vydělává', 'Ne reklamami a ne vašimi údaji: aplikace nemá reklamy a nesleduje vás. Mando TV se financuje z Pro, volitelného jednorázového nákupu za doplňky. Základní ovladač je zdarma.'),
       ('Na zařízeních, která už máte', 'iPhone, iPad a Mac z App Store, počítače s Windows z Microsoft Store a Android prostřednictvím bezplatného předběžného přístupu na Google Play. Viz [Ovládací aplikace pro iPhone](@iphone) a [Ovládací aplikace pro Windows](@windows).'),
       ('Ochrana soukromí', 'V aplikaci není žádný účet ani sledování. Komunikace s televizí probíhá jen v místní síti, údaje o připojení zůstávají šifrované ve vašem zařízení. Podrobnosti jsou v [Zásadách ochrany osobních údajů](@privacidad).'),
     ],

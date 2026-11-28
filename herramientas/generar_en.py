@@ -1017,22 +1017,22 @@ def pagina_soporte():
 def pagina_privacidad():
     url = URL + PRIVACIDAD[1]
     titulo = 'Privacy Policy | Mando TV'
-    desc = 'Mando TV collects no personal data: no accounts, no ads and no trackers. The app only talks to your TV inside your Wi-Fi network.'
+    desc = 'Mando TV asks for no account or personal data: no ads and no trackers. The remote talks to your TV directly inside your Wi-Fi network.'
     return (cabecera(titulo, desc, url, 'privacidad', '#e0457b', 'website', ld_simple('Privacy', url)) + f'''      {migas_simple('Privacy')}
       <h1>Privacy</h1>
-      <p>In short: Mando TV does not collect your data. There are no accounts, no ads, no trackers and no servers of ours that store what you do.</p>
+      <p>In short: Mando TV asks for no account or personal data. There are no ads and no trackers.</p>
     </div>
   </div>
 
   <main class="contenedor">
     <article class="documento">
-      <p class="fecha">Effective November 14, 2026. Last updated: November 26, 2026.</p>
+      <p class="fecha">Effective November 14, 2026. Last updated: November 28, 2026.</p>
 
       <h2>Who we are</h2>
       <p>Mando TV is an app to control your TV from your phone or computer. This policy explains what information the app uses and what it does with it. If you have questions, write to us at <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>What data we collect</h2>
-      <p>The app: none. The app does not send information about you or about how you use it to us or to third parties. It does not use analytics, advertising or tracking tools.</p>
+      <p>The app: only what is needed for the free Pro trial on Android and Windows, explained in <a href="#prueba">Free Pro trial</a>. Apart from that, the app does not send information about you or about how you use it to us or to third parties. It does not use analytics, advertising or tracking tools.</p>
       <p>This website: we measure visits in two ways, explained in the section <a href="#cookies">Cookies on this website</a>.</p>
 
       <h2>What the app stores on your device</h2>
@@ -1042,19 +1042,33 @@ def pagina_privacidad():
         <li>The connection keys that each TV hands over when you accept the permission. They are stored encrypted in the secure storage of the system (Keychain on iPhone and Mac, Keystore on Android, protected storage on Windows).</li>
         <li>Your preferences: light or dark theme, background color, vibration and type of remote.</li>
         <li>If you use the Pro features: your favorite apps, your routines and your latest YouTube searches (you can delete them from the app).</li>
+        <li>If you use them: Child mode (the PIN is kept only as a protected code) and the remotes other people shared with you.</li>
       </ul>
-      <p>If you delete the app, all of this is deleted with it.</p>
+      <p>If you delete the app, this data is deleted with it, with two exceptions. On Android, if you use Google's backup, the app's preferences (such as your TV list and settings) can be kept in your own Google backup and come back when you reinstall the app; the connection keys are never part of it. On iPhone and Mac, the connection keys are kept in the system Keychain and can remain there after you delete the app.</p>
 
       <h2>Who the app talks to</h2>
       <p>With your TVs, inside your home Wi-Fi network. To find them, the app searches your local network; that is why on an iPhone it asks for the "Local Network" permission. The text you type with the app keyboard goes straight to the TV and is not stored.</p>
-      <p>In addition, when it opens, the app downloads a small public file from this website (mandotv.app/app/config.json) to find out whether there is a new version you should install and which features belong to Mando TV Pro. It is a download, like opening a page: the app does not send your data, your TVs or what you do. It only states the app version and the system (for example, Android), so it can show you the right notice. If you have no internet, the app keeps working with the last file it downloaded; if more than 30 days pass without being able to download it, it will ask you to connect to the internet for a moment.</p>
+      <p>In addition, when it opens, the app downloads a small public file from this website (mandotv.app/app/config.json) to find out whether there is a new version you should install and which features belong to Mando TV Pro. It is a download, like opening a page: the app does not send your data, your TVs or what you do. It only states the app version and the system (for example, Android), so it can show you the right notice. If you have no internet, the app keeps working with the last file it downloaded; if more than 30 days pass without being able to download it, it will ask you to connect to the internet for a moment. Like any visit to a website, that download also shows your IP address to our website provider (Cloudflare).</p>
 
-      <p>If you send photos or videos to the TV (a Pro feature), the TV downloads only the files you pick, straight from your phone or PC over your home Wi-Fi. They do not go through the internet or through us, the app does not see the rest of your photos, and sharing stops when you close that screen.</p>
+      <p>If you send photos or videos to the TV (a Pro feature), the TV downloads only the files you pick, straight from your phone or PC over your home Wi-Fi. They do not go through the internet or through us, the app does not see the rest of your photos, and sharing stops when you close that screen. Inside your home network this transfer is not encrypted.</p>
+      <p>If you use "Show my screen on the TV" (a Pro feature), the app captures your screen only while you are mirroring, encodes it on your device and sends it over your home Wi-Fi straight to the TV you chose. It does not go through the internet or through us, nothing is recorded or stored, and it stops when you stop it or close the app. The TV shows everything that appears on that screen, including notifications, and inside your home network the stream is not encrypted.</p>
+      <h2 id="prueba">Free Pro trial (Android and Windows)</h2>
+      <p>So that the free Pro trial is one per device, when it starts the app sends our server (api.mandotv.app, on Cloudflare) two things once: an encrypted fingerprint of the identifier the system gives the app on that device (on Android, the app's own Android ID; on Windows, the device identifier for our apps) and how long your trial has been running. The fingerprint does not reveal which device it is or who you are, and the server encrypts it again with its own key before storing it.</p>
+      <p>We store only that fingerprint, the date the trial started and whether it is Android or Windows. We do not store your IP address (Cloudflare sees it while answering, as with any connection). We use it only so that reinstalling the app does not give another trial, which is fraud prevention and our legitimate interest; never for advertising or to follow you, and we share it with no one. Each record is deleted automatically after 24 months. If you have no internet, the trial works anyway. On iPhone and Mac nothing is sent: the App Store handles the trial.</p>
+
       <h2>Microphone and voice</h2>
-      <p>On iPhone, Mac and Android, voice search uses the microphone only while you tap the speak button. What you say is converted to text by the speech recognition of your system: Apple on iPhone and Mac and Google on Android, under their own privacy policies. On Windows, the voice is recognized on your own PC and never leaves it; only on very old processors does the app use Windows voice typing from Microsoft, under its privacy policy. On Windows, the microphone opens when you open the voice panel and closes when you close it, or after 30 seconds without use; while you are not speaking, nothing is recorded or stored. Mando TV does not record or store the audio, and the resulting text goes straight to your TV, just like what you type with the keyboard.</p>
+      <p>On iPhone, Mac and Android, voice search uses the microphone only while you tap the speak button. What you say is converted to text by the speech recognition of your system: Apple on iPhone and Mac and Google on Android, under their own privacy policies. On Windows, the voice is recognized on your own PC and does not leave it. Only if that on-device engine cannot start or keeps failing (for example, an old processor or a missing speech model) does the app use Windows voice typing from Microsoft, which works online if you have turned on online speech recognition in Windows, under Microsoft's privacy policy. On Windows, the microphone opens when you open the voice panel and closes when you close it, or after 30 seconds without use; while you are not speaking, nothing is recorded or stored. Mando TV does not record or store the audio, and the resulting text goes straight to your TV, just like what you type with the keyboard.</p>
+
+      <h2>Home: Apple Home and Google Home devices</h2>
+      <p>If you open the Home section (in testing), the app asks for permission to see the devices you already have in Apple's Home app (HomeKit) or in Google Home. With that permission it reads their name, room and status (on or off, brightness, temperature or where an appliance is in its cycle) to show them and send them what you tap. Everything happens between your phone and Apple's or Google's system: Mando TV does not store that list, does not send it to us or to third parties and does not use it for advertising or analytics. On Android, Google Home works with your own Google account, under Google's privacy policy. You can remove the permission at any time: on iPhone, in Settings &gt; Privacy &amp; Security &gt; HomeKit; on Android, in your Google account settings.</p>
+      <p>If you tap "How did Home work for you?", your email app opens with a message to hola@mandotv.app containing a technical summary: the app version, the system, and how many devices of each type appeared and whether they respond. It does not include device, room or home names, and it is only sent if you send it.</p>
+
+      <h2>Links and texts you share</h2>
+      <p>When you share a remote (a mandotv.app/m/ link), the link contains the design of the remote and a hint to find your TV: its name, brand, model and address inside your network. It never contains connection keys, PINs or the TV's hardware address. That information travels after the # sign, so it never reaches our servers, but anyone you send the link to, for example by WhatsApp, can read it. A shared routine (a mandotv.app/r/ link) contains only its name and steps.</p>
+      <p>The backup text you can copy in the app settings contains your favorites, routines and settings. It is not encrypted and goes only where you paste it.</p>
 
       <h2>Test report</h2>
-      <p>The app has a "Copy test report" button to help us fix errors. The report is kept only in the memory of the app while it is open and is never sent on its own: you decide whether to copy it and share it. It does not include connection keys, pairing codes or anything you type; only the steps the app took, such as searching, connecting and the errors.</p>
+      <p>The app has a "Copy test report" button to help us fix errors. The report is kept only in the memory of the app while it is open and is never sent on its own: you decide whether to copy it and share it. It does not include connection keys, pairing codes or anything you type. It does include the steps the app took, such as searching, connecting and the errors, and technical details: the app version, your system, and the brand, model and address inside your network of your TV.</p>
 
       <h2 id="cookies">Cookies on this website</h2>
       <p>This applies only to the mandotv.app website, not to the app.</p>
@@ -1063,7 +1077,7 @@ def pagina_privacidad():
       <h3>With cookies, only if you accept</h3>
       <p>If you tap "Accept" on the cookie notice, we turn on Google Analytics (from Google LLC) to better understand how the website is used: page views, time on the page, device type, approximate city and where you came from. To do this it stores the _ga and _ga_* cookies in your browser for up to 2 years. Google may process this data on servers outside Chile. We turned off the advertising features and Google Signals, and we do not use this data to show you ads.</p>
       <p>If you tap "Decline" or choose nothing, Google Analytics is not loaded and no cookie is stored. You can change your decision at any time with the "Cookies" button at the bottom of every page; if you withdraw permission, we delete those cookies.</p>
-      <p>Your choice is stored in your browser (local storage, not sent to anyone) so that we do not ask you again.</p>
+      <p>Your choice is stored in your browser (local storage, not sent to anyone) so that we do not ask you again. The same storage keeps the language you pick at the bottom of the page, so the site opens in it next time. To show the Pro price of your country, each page asks Cloudflare, which already serves this site, which country you visit from, or uses the region of your browser language; it does not store that answer.</p>
 
       <h2>Purchases</h2>
       <p>If you buy Mando TV Pro, the payment is processed by the app store (App Store, Google Play or Microsoft Store). We do not receive or store your card details. The store only confirms to the app that the purchase exists.</p>
@@ -1072,7 +1086,7 @@ def pagina_privacidad():
       <p>If you write to us at <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, we use your email address and what you tell us only to reply to you. We do not share it or use it for advertising. You can ask us to delete your messages at any time.</p>
 
       <h2>Children</h2>
-      <p>The app does not collect data from anyone, including children.</p>
+      <p>The app does not collect personal data from anyone, including children.</p>
 
       <h2>Changes to this policy</h2>
       <p>If one day what the app does with your data changes, we will update this page and the date above before the change reaches the app.</p>

@@ -616,17 +616,17 @@ SOPORTE_HTML = '''      <h2 id="encontrar">Tìm TV của bạn</h2>
 
 PRIVACIDAD = dict(
   titulo='Chính sách quyền riêng tư | Mando TV',
-  desc='Mando TV không thu thập dữ liệu cá nhân: không tài khoản, quảng cáo hay trình theo dõi. Ứng dụng chỉ nói chuyện với TV của bạn trong Wi-Fi của bạn.',
+  desc='Mando TV không yêu cầu tài khoản hay dữ liệu cá nhân: không quảng cáo, không trình theo dõi. Điều khiển nói chuyện trực tiếp với TV của bạn trong Wi-Fi của bạn.',
   h1='Quyền riêng tư',
-  intro='Nói ngắn gọn: Mando TV không thu thập dữ liệu của bạn. Không có tài khoản, không quảng cáo, không trình theo dõi và không có máy chủ riêng nào lưu lại những gì bạn làm.',
+  intro='Nói ngắn gọn: Mando TV không yêu cầu tài khoản hay dữ liệu cá nhân. Không có quảng cáo và không có trình theo dõi.',
 )
-PRIVACIDAD_HTML = '''      <p class="fecha">Có hiệu lực từ ngày 14 tháng 11 năm 2026. Cập nhật lần cuối ngày 26 tháng 11 năm 2026.</p>
+PRIVACIDAD_HTML = '''      <p class="fecha">Có hiệu lực từ ngày 14 tháng 11 năm 2026. Cập nhật lần cuối ngày 28 tháng 11 năm 2026.</p>
 
       <h2>Chúng tôi là ai</h2>
       <p>Mando TV là ứng dụng giúp bạn điều khiển TV từ điện thoại hoặc máy tính. Chính sách này mô tả ứng dụng sử dụng những thông tin nào và làm gì với chúng. Nếu có thắc mắc, hãy viết cho chúng tôi tại <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>.</p>
 
       <h2>Chúng tôi thu thập những dữ liệu nào</h2>
-      <p>Ứng dụng: không thu thập gì cả. Ứng dụng không gửi cho chúng tôi hay bên thứ ba bất kỳ thông tin nào về bạn hoặc cách bạn dùng ứng dụng. Ứng dụng không dùng công cụ phân tích, quảng cáo hay theo dõi.</p>
+      <p>Ứng dụng: chỉ những gì cần cho bản dùng thử Pro miễn phí trên Android và Windows, được giải thích trong mục <a href="#prueba">Dùng thử Pro miễn phí</a>. Ngoài ra, ứng dụng không gửi cho chúng tôi hay bên thứ ba bất kỳ thông tin nào về bạn hoặc cách bạn dùng ứng dụng. Ứng dụng không dùng công cụ phân tích, quảng cáo hay theo dõi.</p>
       <p>Trang web này: chúng tôi đo lượt truy cập theo hai cách, được giải thích trong phần <a href="#cookies">Cookie trên trang web này</a>.</p>
 
       <h2>Những gì ứng dụng lưu trên thiết bị của bạn</h2>
@@ -636,23 +636,33 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Có hiệu lực từ ngày 14 thán
         <li>Khóa kết nối mà mỗi TV cấp khi bạn xác nhận quyền. Khóa được mã hóa và lưu trong kho an toàn của hệ thống (Keychain trên iPhone và Mac, Keystore trên Android, kho được bảo vệ trên Windows).</li>
         <li>Cài đặt của bạn: giao diện sáng hoặc tối, màu nền, rung và kiểu điều khiển.</li>
         <li>Nếu bạn dùng các tính năng Pro: ứng dụng yêu thích, quy trình của bạn và các lần tìm kiếm YouTube gần đây (bạn có thể xóa chúng trong ứng dụng).</li>
+        <li>Nếu bạn dùng: chế độ trẻ em (mã PIN chỉ được lưu dưới dạng mã đã bảo vệ) và các điều khiển mà người khác đã chia sẻ cho bạn.</li>
       </ul>
-      <p>Khi bạn xóa ứng dụng, tất cả những thứ này cũng bị xóa theo.</p>
+      <p>Khi bạn xóa ứng dụng, dữ liệu này cũng bị xóa theo, trừ hai trường hợp. Trên Android, nếu bạn dùng sao lưu của Google, các tùy chọn của ứng dụng (như danh sách TV và cài đặt của bạn) có thể nằm lại trong bản sao lưu Google của chính bạn và quay lại khi bạn cài lại ứng dụng; khóa kết nối không bao giờ nằm trong đó. Trên iPhone và Mac, khóa kết nối được giữ trong Keychain của hệ thống và có thể vẫn còn đó sau khi bạn xóa ứng dụng.</p>
 
       <h2>Ứng dụng trò chuyện với ai</h2>
       <p>Với các TV của bạn, trong mạng Wi-Fi của bạn tại nhà. Để tìm TV, ứng dụng quét mạng cục bộ của bạn; vì vậy trên iPhone, ứng dụng xin quyền "Local Network". Văn bản bạn gõ bằng bàn phím trong ứng dụng đi thẳng đến TV và không được lưu.</p>
-      <p>Ngoài ra, khi mở, ứng dụng tải về một tệp công khai nhỏ từ trang web này (mandotv.app/app/config.json) để biết có phiên bản mới nào bạn nên cài hay không và những tính năng nào thuộc Mando TV Pro. Đây là một lượt tải xuống giống như khi mở một trang web: ứng dụng không gửi dữ liệu của bạn, TV của bạn hay những gì bạn làm. Ứng dụng chỉ cho biết phiên bản và hệ thống (ví dụ Android) để hiện đúng thông báo cho bạn. Nếu bạn không có internet, ứng dụng tiếp tục hoạt động với tệp tải về gần nhất; nếu quá 30 ngày mà không tải được, ứng dụng sẽ nhờ bạn kết nối internet trong chốc lát.</p>
+      <p>Ngoài ra, khi mở, ứng dụng tải về một tệp công khai nhỏ từ trang web này (mandotv.app/app/config.json) để biết có phiên bản mới nào bạn nên cài hay không và những tính năng nào thuộc Mando TV Pro. Đây là một lượt tải xuống giống như khi mở một trang web: ứng dụng không gửi dữ liệu của bạn, TV của bạn hay những gì bạn làm. Ứng dụng chỉ cho biết phiên bản và hệ thống (ví dụ Android) để hiện đúng thông báo cho bạn. Nếu bạn không có internet, ứng dụng tiếp tục hoạt động với tệp tải về gần nhất; nếu quá 30 ngày mà không tải được, ứng dụng sẽ nhờ bạn kết nối internet trong chốc lát. Như mọi lần truy cập một trang web, lần tải đó cũng cho nhà cung cấp trang web của chúng tôi (Cloudflare) thấy địa chỉ IP của bạn.</p>
 
-      <p>Khi bạn gửi ảnh hoặc video lên TV (tính năng Pro), TV chỉ tải các tệp bạn chọn, trực tiếp từ điện thoại hoặc máy tính của bạn qua Wi-Fi trong nhà. Chúng không đi qua internet hay qua chúng tôi, ứng dụng không thấy các ảnh còn lại của bạn, và việc chia sẻ kết thúc ngay khi bạn đóng màn hình đó.</p>
+      <p>Khi bạn gửi ảnh hoặc video lên TV (tính năng Pro), TV chỉ tải các tệp bạn chọn, trực tiếp từ điện thoại hoặc máy tính của bạn qua Wi-Fi trong nhà. Chúng không đi qua internet hay qua chúng tôi, ứng dụng không thấy các ảnh còn lại của bạn, và việc chia sẻ kết thúc ngay khi bạn đóng màn hình đó. Bên trong mạng gia đình của bạn, quá trình truyền này không được mã hóa.</p>
+      <p>Nếu bạn dùng "Hiển thị màn hình của tôi trên TV" (tính năng Pro), ứng dụng chỉ chụp màn hình của bạn trong lúc bạn đang phản chiếu, mã hóa video ngay trên thiết bị rồi gửi qua Wi-Fi nhà bạn thẳng tới chiếc TV bạn đã chọn. Dữ liệu không đi qua internet hay qua chúng tôi, không có gì được ghi hay lưu lại, và việc phản chiếu dừng khi bạn dừng nó hoặc đóng ứng dụng. TV hiển thị mọi thứ xuất hiện trên màn hình đó, kể cả thông báo, và bên trong mạng gia đình của bạn luồng này không được mã hóa.</p>
+      <h2 id="prueba">Dùng thử Pro miễn phí (Android và Windows)</h2>
+      <p>Để mỗi thiết bị chỉ được dùng thử Pro miễn phí một lần, khi bản dùng thử bắt đầu, ứng dụng gửi một lần hai thứ đến máy chủ của chúng tôi (api.mandotv.app, trên Cloudflare): một dấu vân tay đã mã hóa của mã định danh mà hệ thống cấp cho ứng dụng trên thiết bị đó (trên Android là ID Android riêng của ứng dụng; trên Windows là mã định danh thiết bị dành cho các ứng dụng của chúng tôi) và bản dùng thử của bạn đã chạy được bao lâu. Dấu vân tay này không cho biết đó là thiết bị nào hay bạn là ai, và máy chủ mã hóa nó thêm một lần nữa bằng khóa riêng trước khi lưu.</p>
+      <p>Chúng tôi chỉ lưu dấu vân tay đó, ngày bắt đầu dùng thử và thiết bị là Android hay Windows. Chúng tôi không lưu địa chỉ IP của bạn (Cloudflare nhìn thấy nó khi phản hồi, như mọi kết nối khác). Chúng tôi chỉ dùng để việc cài lại ứng dụng không mang lại thêm một lần dùng thử, tức là để phòng chống gian lận, đây là lợi ích hợp pháp của chúng tôi; không bao giờ dùng cho quảng cáo hay để theo dõi bạn, và chúng tôi không chia sẻ với ai. Mỗi bản ghi tự động bị xóa sau 24 tháng. Nếu bạn không có internet, bản dùng thử vẫn hoạt động. Trên iPhone và Mac không có gì được gửi đi: App Store quản lý bản dùng thử.</p>
+
       <h2>Micro và giọng nói</h2>
-      <p>Trên iPhone, Mac và Android, tìm kiếm bằng giọng nói chỉ dùng micro khi bạn đang chạm vào nút nói. Những gì bạn nói được chuyển thành văn bản bởi tính năng nhận dạng giọng nói của hệ thống: của Apple trên iPhone và Mac, của Google trên Android, theo chính sách quyền riêng tư của từng bên. Trên Windows, giọng nói được nhận dạng ngay trên máy tính của bạn và không rời khỏi thiết bị; chỉ với bộ xử lý rất cũ, ứng dụng mới dùng tính năng nhập bằng giọng nói của Windows, của Microsoft, theo chính sách quyền riêng tư của họ. Trên Windows, micro mở khi bạn mở bảng giọng nói và tắt khi bạn đóng bảng này, hoặc sau 30 giây không sử dụng; khi bạn không nói, không có gì được ghi hay lưu lại. Mando TV không ghi hay lưu âm thanh, và văn bản tạo ra đi thẳng đến TV của bạn, giống như những gì bạn gõ bằng bàn phím.</p>
+      <p>Trên iPhone, Mac và Android, tìm kiếm bằng giọng nói chỉ dùng micro khi bạn đang chạm vào nút nói. Những gì bạn nói được chuyển thành văn bản bởi tính năng nhận dạng giọng nói của hệ thống: của Apple trên iPhone và Mac, của Google trên Android, theo chính sách quyền riêng tư của từng bên. Trên Windows, giọng nói được nhận dạng ngay trên máy tính của bạn và không rời khỏi máy. Chỉ khi công cụ này trên thiết bị không thể khởi động hoặc liên tục gặp lỗi (ví dụ do bộ xử lý quá cũ hoặc thiếu mô hình giọng nói), ứng dụng mới dùng tính năng nhập bằng giọng nói của Windows, của Microsoft, hoạt động trực tuyến nếu bạn đã bật nhận dạng giọng nói trực tuyến trong Windows, theo chính sách quyền riêng tư của họ. Trên Windows, micro mở khi bạn mở bảng giọng nói và tắt khi bạn đóng bảng này, hoặc sau 30 giây không sử dụng; khi bạn không nói, không có gì được ghi hay lưu lại. Mando TV không ghi hay lưu âm thanh, và văn bản tạo ra đi thẳng đến TV của bạn, giống như những gì bạn gõ bằng bàn phím.</p>
 
       <h2>Nhà: thiết bị từ Apple Home và Google Home</h2>
       <p>Khi bạn mở mục Nhà (đang thử nghiệm), ứng dụng xin quyền xem các thiết bị bạn đã có trong ứng dụng Nhà của Apple (HomeKit) hoặc trong Google Home. Với quyền này, ứng dụng đọc tên, phòng và trạng thái của chúng (bật hay tắt, độ sáng, nhiệt độ, hoặc thiết bị gia dụng đang ở bước nào trong chương trình của nó) để hiển thị và gửi cho chúng những gì bạn chạm vào. Mọi thứ diễn ra giữa điện thoại của bạn và hệ thống của Apple hoặc Google: Mando TV không lưu danh sách này, không gửi cho chúng tôi hay bên thứ ba và không dùng cho quảng cáo hay phân tích. Trên Android, Google Home hoạt động với tài khoản Google của chính bạn, theo chính sách quyền riêng tư của Google. Bạn có thể thu hồi quyền bất cứ lúc nào: trên iPhone trong Cài đặt &gt; Quyền riêng tư &amp; Bảo mật &gt; HomeKit, trên Android trong cài đặt tài khoản Google của bạn.</p>
       <p>Khi bạn chạm vào "Mục Nhà hoạt động thế nào với bạn?", ứng dụng email của bạn mở ra với một thư gửi đến hola@mandotv.app, chứa bản tóm tắt kỹ thuật: phiên bản ứng dụng, hệ thống, mỗi loại thiết bị xuất hiện bao nhiêu cái và chúng có phản hồi không. Thư không có tên thiết bị, phòng hay nhà của bạn, và chỉ được gửi khi chính bạn gửi.</p>
 
+      <h2>Liên kết và văn bản bạn chia sẻ</h2>
+      <p>Khi bạn chia sẻ một điều khiển (liên kết mandotv.app/m/), liên kết chứa thiết kế của điều khiển và một gợi ý để tìm TV của bạn: tên, hãng, mẫu và địa chỉ của TV trong mạng của bạn. Liên kết không bao giờ chứa khóa kết nối, mã PIN hay địa chỉ phần cứng của TV. Thông tin này nằm sau dấu #, nên không bao giờ đến máy chủ của chúng tôi, nhưng bất kỳ ai bạn gửi liên kết, ví dụ qua WhatsApp, đều có thể đọc được. Một quy trình được chia sẻ (liên kết mandotv.app/r/) chỉ chứa tên và các bước.</p>
+      <p>Văn bản sao lưu bạn có thể sao chép trong phần cài đặt của ứng dụng chứa mục yêu thích, quy trình và cài đặt của bạn. Văn bản này không được mã hóa và chỉ đến nơi bạn dán nó.</p>
+
       <h2>Báo cáo kiểm tra</h2>
-      <p>Ứng dụng có nút "Sao chép báo cáo kiểm tra" giúp chúng tôi sửa lỗi. Báo cáo chỉ nằm trong bộ nhớ của ứng dụng khi ứng dụng đang mở và không bao giờ tự động gửi: bạn quyết định có sao chép và chia sẻ hay không. Báo cáo không chứa khóa kết nối, mã ghép nối hay bất cứ thứ gì bạn nhập; chỉ có các bước ứng dụng đã thực hiện, như tìm kiếm, kết nối và các lỗi.</p>
+      <p>Ứng dụng có nút "Sao chép báo cáo kiểm tra" giúp chúng tôi sửa lỗi. Báo cáo chỉ nằm trong bộ nhớ của ứng dụng khi ứng dụng đang mở và không bao giờ tự động gửi: bạn quyết định có sao chép và chia sẻ hay không. Báo cáo không chứa khóa kết nối, mã ghép đôi hay bất cứ thứ gì bạn gõ. Báo cáo có các bước ứng dụng đã làm, như tìm kiếm, kết nối và các lỗi, cùng thông tin kỹ thuật: phiên bản ứng dụng, hệ thống của bạn, và hãng, mẫu cùng địa chỉ của TV trong mạng của bạn.</p>
 
       <h2 id="cookies">Cookie trên trang web này</h2>
       <p>Phần này chỉ áp dụng cho trang web mandotv.app, không áp dụng cho ứng dụng.</p>
@@ -661,7 +671,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Có hiệu lực từ ngày 14 thán
       <h3>Có cookie, chỉ khi bạn đồng ý</h3>
       <p>Nếu bạn chạm vào "Chấp nhận" trong thông báo cookie, chúng tôi bật Google Analytics (của Google LLC) để hiểu rõ hơn cách trang web được sử dụng: lượt xem trang, thời gian ở lại, loại thiết bị, thành phố ước chừng và nơi bạn đến từ đâu. Để làm vậy, công cụ này lưu cookie _ga và _ga_* tới 2 năm trong trình duyệt của bạn. Google có thể xử lý dữ liệu này trên máy chủ bên ngoài Chile. Chúng tôi đã tắt các tính năng quảng cáo và Google Signals và không dùng dữ liệu này để hiện quảng cáo cho bạn.</p>
       <p>Nếu bạn chạm vào "Từ chối" hoặc không chọn gì, Google Analytics sẽ không được tải và không có cookie nào được lưu. Bạn có thể đổi quyết định bất cứ lúc nào bằng nút "Cookie" ở cuối mỗi trang; nếu bạn rút lại sự đồng ý, chúng tôi sẽ xóa các cookie này.</p>
-      <p>Lựa chọn của bạn được lưu trong trình duyệt của bạn (bộ nhớ cục bộ, không gửi cho ai) để chúng tôi không hỏi lại bạn.</p>
+      <p>Lựa chọn của bạn được lưu trong trình duyệt của bạn (bộ nhớ cục bộ, không gửi cho ai) để chúng tôi không hỏi lại bạn. Bộ nhớ này cũng lưu ngôn ngữ bạn chọn ở cuối trang, để lần sau trang web mở bằng ngôn ngữ đó. Để hiện giá Pro của nước bạn, mỗi trang hỏi Cloudflare, nơi vốn đã phục vụ trang web này, xem bạn truy cập từ nước nào, hoặc dùng vùng của ngôn ngữ trình duyệt; câu trả lời đó không được lưu.</p>
 
       <h2>Giao dịch mua</h2>
       <p>Khi bạn mua Mando TV Pro, khoản thanh toán do cửa hàng ứng dụng xử lý (App Store, Google Play hoặc Microsoft Store). Chúng tôi không nhận và không lưu thông tin thẻ của bạn. Cửa hàng chỉ xác nhận với ứng dụng rằng giao dịch mua tồn tại.</p>
@@ -670,7 +680,7 @@ PRIVACIDAD_HTML = '''      <p class="fecha">Có hiệu lực từ ngày 14 thán
       <p>Khi bạn viết cho chúng tôi tại <a href="mailto:hola@mandotv.app">hola@mandotv.app</a>, chúng tôi chỉ dùng địa chỉ email của bạn và nội dung bạn gửi để trả lời bạn. Chúng tôi không chia sẻ chúng và không dùng cho quảng cáo. Bạn có thể yêu cầu chúng tôi xóa thư của bạn bất cứ lúc nào.</p>
 
       <h2>Trẻ em</h2>
-      <p>Ứng dụng không thu thập dữ liệu của bất kỳ ai, kể cả trẻ em.</p>
+      <p>Ứng dụng không thu thập dữ liệu cá nhân của bất kỳ ai, kể cả trẻ em.</p>
 
       <h2>Thay đổi chính sách này</h2>
       <p>Nếu một ngày nào đó điều ứng dụng làm với dữ liệu của bạn thay đổi, chúng tôi sẽ cập nhật trang này và ngày ở trên trước khi thay đổi đến với ứng dụng.</p>
@@ -709,7 +719,7 @@ GUIAS += [
       nota='Mando TV không được so sánh với một ứng dụng cụ thể nào. Giá hiện hành có trên trang cửa hàng của từng ứng dụng.'),
     extra=[
       ('Những gì Mando TV không làm', 'Trên iPhone và iPad, ứng dụng hướng bạn đến tính năng Phản chiếu màn hình trong Trung tâm điều khiển, là tính năng của chính iPhone, dùng được với TV có AirPlay. Trên Windows, ứng dụng mở Cast (Windows + K), và Mando TV Pro có thể gửi màn hình máy tính lên TV LG, Samsung, Hisense và Android TV qua Wi-Fi của bạn (beta, trễ vài giây và không có âm thanh). Với Mando TV Pro, ứng dụng còn gửi được ảnh và video lên TV qua Wi-Fi của bạn. Ứng dụng điều khiển Smart TV qua Wi-Fi trong nhà. TV không phải Smart TV có thể được điều khiển bằng hồng ngoại từ điện thoại Android có bộ phát hồng ngoại. Từ Android 9, điện thoại cũng có thể kết nối qua Bluetooth như bàn phím và điều khiển với Google TV, Android TV và Fire TV, hoàn toàn không cần Wi-Fi. Tùy chọn này đang ở bản beta và miễn phí.'),
-      ('Mando TV kiếm tiền như thế nào', 'Không bằng quảng cáo và không bằng dữ liệu của bạn: ứng dụng không thu thập dữ liệu nào. Mando TV được duy trì nhờ Pro, gói mua một lần tùy chọn cho các tính năng bổ sung. Điều khiển cơ bản miễn phí.'),
+      ('Mando TV kiếm tiền như thế nào', 'Không bằng quảng cáo và không bằng dữ liệu của bạn: ứng dụng không có quảng cáo và không theo dõi bạn. Mando TV được duy trì nhờ Pro, gói mua một lần tùy chọn cho các tính năng bổ sung. Điều khiển cơ bản miễn phí.'),
       ('Trên những thiết bị bạn đã có', 'iPhone, iPad và Mac từ App Store, máy tính Windows từ Microsoft Store và Android qua truy cập sớm miễn phí trên Google Play. Xem [Ứng dụng điều khiển TV cho iPhone](@iphone) và [Ứng dụng điều khiển TV cho Windows](@windows).'),
       ('Quyền riêng tư', 'Không tài khoản và không theo dõi trong ứng dụng. Việc trao đổi với TV chỉ diễn ra trong mạng cục bộ, dữ liệu kết nối được mã hóa và lưu trên thiết bị của bạn. Chi tiết trong [Chính sách quyền riêng tư](@privacidad).'),
     ],
